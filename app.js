@@ -4,6 +4,14 @@
 
   // Day 0 of the rotation. Everyone on the same calendar date sees the same entry.
   const EPOCH = Date.UTC(2026, 0, 1);
+
+  // Which passage belongs to which day. Append-only: to add passages, append them to
+  // entries.json and add a block here starting on a FUTURE date. Days before that date
+  // keep the passage they always had. `start` is where in the list the block begins
+  // (use the previous count so new passages come first), then it cycles through `count`.
+  const SCHEDULE = [
+    { from: "2026-01-01", count: 365, start: 0 },
+  ];
   const DAY = 86400000;
   const JOURNAL_DAYS = 60;
 
@@ -45,9 +53,46 @@
   const utcToKey = (t) => new Date(t).toISOString().slice(0, 10);
   const dayNumber = (key) => Math.round((keyToUTC(key) - EPOCH) / DAY);
   const entryFor = (key) => {
-    const n = entries.length;
-    return entries[((dayNumber(key) % n) + n) % n];
+    const block = SCHEDULE.filter((b) => b.from <= key).pop() || SCHEDULE[0];
+    const days = Math.round((keyToUTC(key) - keyToUTC(block.from)) / DAY);
+    const n = block.count;
+    return entries[(((block.start + days) % n) + n) % n];
   };
+
+  // ---------- notes ----------
+  // Each note is stored with the id of the passage it was written about, so the pair
+  // stays together even if the schedule ever changes.
+  let entriesById = {};
+
+  function readNote(key) {
+    const raw = store.get("note:" + key);
+    if (!raw) return null;
+    try {
+      const n = JSON.parse(raw);
+      if (n && typeof n.text === "string") return n;
+    } catch {}
+    return { text: raw, id: null };  // older plain-text note
+  }
+
+  function writeNote(key, text, id) {
+    if (!text.trim()) { store.remove("note:" + key); return true; }
+    return store.set("note:" + key, JSON.stringify({ text, id }));
+  }
+
+  // The passage to show for a day: the one its note was written about, if any.
+  function entryShown(key) {
+    const note = readNote(key);
+    return (note && note.id && entriesById[note.id]) || entryFor(key);
+  }
+
+  // One-time upgrade: older notes (plain text) get the id of the passage they were written on.
+  function upgradeNotes() {
+    for (const k of store.keys("note:")) {
+      const key = k.slice(5);
+      const note = readNote(key);
+      if (note && !note.id) writeNote(key, note.text, entryFor(key).id);
+    }
+  }
   const formatDate = (key) =>
     new Date(keyToUTC(key)).toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" });
 
@@ -103,7 +148,7 @@
     // No peeking ahead.
     if (key > today) key = today;
     currentKey = key;
-    const e = entryFor(key);
+    const e = entryShown(key);
 
     const moon = moonPhase(key);
     $("day-date").innerHTML =
@@ -149,7 +194,7 @@
     $("day-context").hidden = true;
     $("context-toggle").setAttribute("aria-expanded", "false");
 
-    const note = store.get("note:" + key, "");
+    const note = (readNote(key) || { text: "" }).text;
     $("note-text").value = note;
     $("note").hidden = !note;
     $("note-done").hidden = !(note.trim() && key === today);
@@ -164,14 +209,14 @@
     $("note-status").textContent = "";
     saveTimer = setTimeout(() => {
       const text = $("note-text").value;
-      const ok = text.trim() ? store.set("note:" + currentKey, text) : (store.remove("note:" + currentKey), true);
+      const ok = writeNote(currentKey, text, entryShown(currentKey).id);
       $("note-status").textContent = ok ? "saved" : "could not save on this device";
     }, 600);
   }
 
   // Shares the passage and its source only; the reflection question stays personal.
   async function share() {
-    const e = entryFor(currentKey);
+    const e = entryShown(currentKey);
     const text = `“${e.text}”\n— ${e.source}`;
     if (await copyText(text)) toast("Copied to clipboard. Paste it anywhere you like.");
     else toast("Couldn't copy on this device.");
@@ -228,8 +273,8 @@
     for (let t = today; t >= start; t -= DAY) keys.add(utcToKey(t));
 
     [...keys].filter((k) => k <= todayKey()).sort().reverse().forEach((key) => {
-      const e = entryFor(key);
-      const note = store.get("note:" + key, "");
+      const e = entryShown(key);
+      const note = (readNote(key) || { text: "" }).text;
       const li = document.createElement("li");
       const a = document.createElement("a");
       a.href = "#/day/" + key;
@@ -251,8 +296,8 @@
     const keys = store.keys("note:").map((k) => k.slice(5)).sort();
     if (!keys.length) return flash($("export-notes"), "nothing yet");
     const body = keys.map((key) => {
-      const e = entryFor(key);
-      return `${key} — ${e.source} (${e.tradition})\n“${e.text}”\n${e.prompt}\n\n${store.get("note:" + key, "")}\n`;
+      const e = entryShown(key);
+      return `${key} — ${e.source} (${e.tradition})\n“${e.text}”\n${e.prompt}\n\n${readNote(key).text}\n`;
     }).join("\n---\n\n");
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([body], { type: "text/plain" }));
@@ -505,6 +550,10 @@
     setMinutes(store.get("minutes", "3"));
     const res = await fetch("entries.json", { cache: "no-cache" });
     entries = await res.json();
+    entriesById = Object.fromEntries(entries.map((e) => [e.id, e]));
+    const needed = Math.max(...SCHEDULE.map((b) => b.count));
+    if (entries.length < needed) console.error(`Schedule expects ${needed} passages, found ${entries.length}.`);
+    upgradeNotes();
     bind();
     markVisit();
     route();

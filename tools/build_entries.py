@@ -3,6 +3,13 @@ verbatim from a downloaded public-domain source text.
 
     python3 reflect/tools/fetch_sources.py <sources-dir>   # once
     python3 reflect/tools/build_entries.py <sources-dir>
+    python3 reflect/tools/build_entries.py <sources-dir> --freeze   # after a release
+
+Released passages never move. tools/released.json lists their ids in schedule
+order; the build keeps that order and appends anything new after it. To swap a
+released passage, give the new spec entry "replaces": "<old id>" and it takes the
+old one's slot. After adding passages, extend SCHEDULE in app.js with a block that
+starts on a future date, then run with --freeze to lock the new order.
 
 Each spec entry locates its passage in a source by reference (Bible-style
 "15:1" for verse-indexed sources) or by a start and end phrase. If a phrase
@@ -12,6 +19,7 @@ import json, os, re, sys, unicodedata
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(os.path.dirname(HERE), "entries.json")
+RELEASED = os.path.join(HERE, "released.json")
 
 # Rotation order: one tradition per day, cycling.
 ORDER = ["Stoicism", "Buddhism", "Christianity", "Epicureanism", "Hinduism",
@@ -253,9 +261,9 @@ def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
 
-def main(srcdir):
+def main(srcdir, freeze=False):
     specdir = os.path.join(HERE, "spec")
-    by_trad, errors = {t: [] for t in ORDER}, []
+    by_trad, errors, replaces = {t: [] for t in ORDER}, [], {}
     for fname in sorted(os.listdir(specdir)):
         if not fname.endswith(".json"):
             continue
@@ -274,7 +282,7 @@ def main(srcdir):
                 errors.append(f"{fname}: {e['source']}: {err}")
                 continue
             _, _, translation, url = SOURCES[e["from"]]
-            by_trad[e["tradition"]].append({
+            entry = {
                 "id": slug(e["tradition"] + " " + e["source"]),
                 "tradition": e["tradition"],
                 "text": text,
@@ -283,7 +291,10 @@ def main(srcdir):
                 "prompt": e["prompt"],
                 "translation": e.get("translation", translation),
                 "source_url": url,
-            })
+            }
+            by_trad[e["tradition"]].append(entry)
+            if "replaces" in e:
+                replaces[e["replaces"]] = entry
     if errors:
         print("\n".join(errors))
         sys.exit(f"{len(errors)} passage(s) could not be verified")
@@ -299,16 +310,40 @@ def main(srcdir):
     if dupes:
         sys.exit(f"duplicate passages: {sorted(dupes)}")
 
-    out, i = [], 0
-    while any(by_trad.values()):
+    # Released passages keep their slots; replacements take over their predecessor's.
+    by_id = {x["id"]: x for t in by_trad.values() for x in t}
+    released = json.load(open(RELEASED, encoding="utf-8")) if os.path.exists(RELEASED) else []
+    out, placed, missing = [], set(), []
+    for rid in released:
+        x = by_id.get(rid) or replaces.get(rid)
+        if x is None or x["id"] in placed:
+            missing.append(rid)
+            continue
+        out.append(x)
+        placed.add(x["id"])
+    if missing:
+        sys.exit("released passages missing from the specs (add a spec entry with "
+                 f"\"replaces\": \"<id>\" to swap one): {missing}")
+
+    # Everything new goes after the released ones, one tradition per day in turn.
+    fresh = {t: [x for x in by_trad[t] if x["id"] not in placed] for t in ORDER}
+    i = 0
+    while any(fresh.values()):
         t = ORDER[i % len(ORDER)]
-        if by_trad[t]:
-            out.append(by_trad[t].pop(0))
+        if fresh[t]:
+            out.append(fresh[t].pop(0))
         i += 1
+
     json.dump(out, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    if freeze:
+        json.dump([x["id"] for x in out], open(RELEASED, "w", encoding="utf-8"), indent=1)
+        print(f"froze {len(out)} released passages -> {RELEASED}")
+    elif len(out) > len(released):
+        print(f"{len(out) - len(released)} new passage(s) after the released ones")
     counts = {t: sum(1 for x in out if x["tradition"] == t) for t in ORDER}
     print(f"{len(out)} entries -> {OUT}\n{counts}")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "sources"))
+    args = [a for a in sys.argv[1:] if a != "--freeze"]
+    main(args[0] if args else os.path.join(HERE, "sources"), freeze="--freeze" in sys.argv)
