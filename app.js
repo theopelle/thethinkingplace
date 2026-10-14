@@ -340,10 +340,24 @@
     } catch { /* no audio, fine */ }
   }
 
+  // Full-screen moments (silence, closing, welcome): hide the page behind from screen
+  // readers and keyboards, move focus in, and give it back when the moment ends.
+  let overlayReturn = null;
+  function setOverlay(el, open, focusTarget) {
+    el.hidden = !open;
+    $("app").inert = open;
+    if (open) {
+      overlayReturn = document.activeElement;
+      if (focusTarget) focusTarget.focus({ preventScroll: true });
+    } else if (overlayReturn && document.contains(overlayReturn)) {
+      overlayReturn.focus({ preventScroll: true });
+    }
+  }
+
   function openSilence() {
     const minutes = Number(store.get("minutes", "3"));
     silence = { end: Date.now() + minutes * 60000, timers: [] };
-    $("silence").hidden = false;
+    setOverlay($("silence"), true, $("close-silence"));
     bell();
 
     const breath = $("breath"), cue = $("breath-cue");
@@ -373,7 +387,7 @@
     silence.timers.forEach(clearTimeout);
     $("breath").classList.remove("in", "out");
     if (close) {
-      $("silence").hidden = true;
+      setOverlay($("silence"), false);
       if (silence.audio) silence.audio.close().catch(() => {});
       silence = null;
     } else {
@@ -442,11 +456,16 @@
     card.style.left = left + "px";
     card.style.top = (below + h < window.innerHeight - 64 || above < 16 ? below : above) + "px";
     openTerm.from = btn;
+    // Move focus into the card so screen readers announce the definition.
+    card.focus({ preventScroll: true });
   }
 
   function closeTerm() {
     const card = $("term-card");
-    if (card && !card.hidden) card.hidden = true;
+    if (!card || card.hidden) return;
+    const hadFocus = card.contains(document.activeElement);
+    card.hidden = true;
+    if (hadFocus && openTerm.from && document.contains(openTerm.from)) openTerm.from.focus({ preventScroll: true });
   }
 
   // ---------- greeting ----------
@@ -461,12 +480,12 @@
   // First launch only: a calm welcome that asks for a name (optional).
   function maybeWelcome() {
     if (store.get("welcomed")) return;
-    $("welcome").hidden = false;
+    setOverlay($("welcome"), true, $("welcome-name"));
     $("welcome").addEventListener("submit", (ev) => {
       ev.preventDefault();
       saveName($("welcome-name").value);
       store.set("welcomed", "1");
-      $("welcome").hidden = true;
+      setOverlay($("welcome"), false);
       route();
     }, { once: true });
   }
@@ -497,11 +516,11 @@
     $("note-text").blur();
     $("closing-write").hidden = after === "writing";
     $("closing-silence").hidden = after === "silence";
-    $("closing").hidden = false;
+    setOverlay($("closing"), true, $("closing-back"));
   }
 
   function hideClosing() {
-    $("closing").hidden = true;
+    setOverlay($("closing"), false);
   }
 
   // A later visit on the same day (a fresh launch, or back after half an hour away)
@@ -602,6 +621,7 @@
       if (term) { ev.preventDefault(); openTerm.from === term && !$("term-card").hidden ? closeTerm() : openTerm(term); return; }
       if (!ev.target.closest("#term-card")) closeTerm();
     });
+    $("term-close").addEventListener("click", closeTerm);
     window.addEventListener("scroll", closeTerm, { passive: true });
     window.addEventListener("resize", closeTerm);
     document.addEventListener("keydown", (e) => {

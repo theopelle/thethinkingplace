@@ -154,10 +154,13 @@
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
   <!-- Glossary card -->
-  <div class="term-card" id="term-card" role="dialog" aria-labelledby="term-title" hidden>
+  <div class="term-card" id="term-card" role="dialog" aria-modal="false" aria-labelledby="term-title" aria-describedby="term-def" tabindex="-1" hidden>
     <p class="term-title" id="term-title"></p>
     <p class="term-def" id="term-def"></p>
-    <a class="term-wiki" id="term-wiki" target="_blank" rel="noopener">read more on Wikipedia</a>
+    <div class="term-foot">
+      <a class="term-wiki" id="term-wiki" target="_blank" rel="noopener">read more on Wikipedia</a>
+      <button type="button" class="term-close" id="term-close">close</button>
+    </div>
   </div>
 
   <!-- First launch -->
