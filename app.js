@@ -1,4 +1,4 @@
-// Reflect — one thought a day, the same for everyone.
+// Many Wells — one thought a day, the same for everyone.
 (() => {
   "use strict";
 
@@ -303,7 +303,7 @@
     }).join("\n---\n\n");
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([body], { type: "text/plain" }));
-    a.download = `reflect-notes-${todayKey()}.txt`;
+    a.download = `many-wells-notes-${todayKey()}.txt`;
     a.click();
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }
@@ -484,9 +484,9 @@
     const e = entryFor(todayKey());
     const mail = (subject, body) =>
       `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    $("report-link").href = mail("Reflect: an issue",
+    $("report-link").href = mail("Many Wells: an issue",
       `What happened?\n\n\nWhat did you expect?\n\n\n—\nDay: ${todayKey()} (${e.id})\nDevice: ${navigator.userAgent}`);
-    $("suggest-link").href = mail("Reflect: a reflection suggestion",
+    $("suggest-link").href = mail("Many Wells: a reflection suggestion",
       "The passage (with author, book and translation if you know it):\n\n\nWhich tradition is it from?\n\n\nWhy does it speak to you?\n\n");
   }
 
@@ -529,7 +529,7 @@
   async function renderOfflineStatus() {
     const el = $("offline-status");
     if (!("serviceWorker" in navigator) || !window.caches) {
-      el.textContent = "This browser can't keep Reflect offline.";
+      el.textContent = "This browser can't keep Many Wells offline.";
       return;
     }
     try {
@@ -538,7 +538,7 @@
       await Promise.race([navigator.serviceWorker.ready, timeout]);
       const ready = await caches.match("entries.json", { ignoreSearch: true });
       el.textContent = ready
-        ? "Ready. Reflect works without a connection, so you can switch off your network and read undisturbed."
+        ? "Ready. Many Wells works without a connection, so you can switch off your network and read undisturbed."
         : "Preparing… keep the app open for a moment.";
     } catch {
       el.textContent = "Offline mode is unavailable here.";
