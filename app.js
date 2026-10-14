@@ -116,10 +116,10 @@
     return { phase, label };
   }
 
-  // Shown under "about this passage" on full and new moon days, which Buddhist tradition keeps for reflection.
+  // A quiet line under "about this passage" on full and new moon days.
   const MOON_NOTES = {
-    "full moon": "Full moon: in Buddhist tradition, a day set aside for reflection (uposatha).",
-    "new moon": "New moon: in Buddhist tradition, also a day set aside for reflection (uposatha).",
+    "full moon": "Full moon: as Kenkō noticed, the perfect circle lasts only a very short time before it begins to wane.",
+    "new moon": "New moon: the moon is between cycles tonight, a natural moment for a fresh start.",
   };
 
   // A small line drawing of tonight's moon (as seen from the northern hemisphere).
