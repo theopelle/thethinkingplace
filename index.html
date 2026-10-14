@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Reflect</title>
+  <meta name="description" content="One thought a day from the world's wisdom traditions.">
+  <meta name="theme-color" content="#f6f3ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1b1b1a" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+
+    <!-- Today / a single day -->
+    <section id="view-day" class="view" hidden>
+      <p class="date" id="day-date"></p>
+      <p class="returning" id="returning" hidden>You've read today's thought. The next one arrives tomorrow.</p>
+
+      <blockquote class="passage">
+        <p id="day-text"></p>
+      </blockquote>
+
+      <p class="source">
+        <span id="day-source"></span><br>
+        <span class="tradition" id="day-tradition"></span>
+      </p>
+
+      <button class="link quiet" id="context-toggle" aria-expanded="false">about this passage</button>
+      <div class="context" id="day-context" hidden>
+        <p id="day-context-text"></p>
+        <p class="moon-note" id="day-moon-note" hidden></p>
+        <p class="translation" id="day-translation"></p>
+      </div>
+
+      <p class="prompt" id="day-prompt"></p>
+
+      <div class="actions">
+        <button class="link" id="open-note">write about this</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" id="open-silence">sit in silence</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" id="share">share</button>
+      </div>
+
+      <div class="note" id="note" hidden>
+        <textarea id="note-text" rows="4" aria-label="Your reflection"
+          placeholder="We recommend a paper notebook for your thoughts. If you'd rather type, write here: your notes stay on this device, only you can see them, and you can come back to them in past thoughts."></textarea>
+        <div class="note-foot">
+          <button class="link quiet" id="note-done" hidden>I'm done writing for today</button>
+          <p class="note-status" id="note-status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <button class="link quiet back" id="back-to-today" hidden>← today</button>
+    </section>
+
+    <!-- Past thoughts -->
+    <section id="view-journal" class="view" hidden>
+      <h1>Past thoughts</h1>
+      <p class="muted">Earlier days, and anything you wrote about them.</p>
+      <ol class="journal" id="journal-list"></ol>
+    </section>
+
+    <!-- About / settings -->
+    <section id="view-about" class="view" hidden>
+      <h1>About</h1>
+      <p>One thought each day, the same for everyone, drawn in turn from nine traditions: Buddhism, Christianity, Hinduism, Islam, Judaism, Epicureanism, Existentialism, Platonism and Stoicism.</p>
+      <p>Read slowly. Sit with the question. Write if you like — your notes stay on this device.</p>
+
+      <h2>Appearance</h2>
+      <div class="choice" role="radiogroup" aria-label="Theme">
+        <button class="link" data-theme-choice="auto" role="radio">auto</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-theme-choice="light" role="radio">light</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-theme-choice="dark" role="radio">dark</button>
+      </div>
+
+      <h2>Silence</h2>
+      <div class="choice" role="radiogroup" aria-label="Silence length">
+        <button class="link" data-minutes="1" role="radio">1 min</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-minutes="3" role="radio">3 min</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-minutes="5" role="radio">5 min</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-minutes="10" role="radio">10 min</button>
+      </div>
+
+      <h2>Your notes</h2>
+      <div class="choice">
+        <button class="link" id="export-notes">export</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" id="clear-notes">erase all</button>
+      </div>
+
+      <h2>Offline</h2>
+      <p class="muted" id="offline-status">Checking…</p>
+
+      <p class="fine"><a href="#/terms">Terms &amp; privacy</a></p>
+    </section>
+
+    <!-- Terms & privacy -->
+    <section id="view-terms" class="view" hidden>
+      <h1>Terms &amp; privacy</h1>
+
+      <h2>Your notes are yours alone</h2>
+      <p>Everything you write in Reflect is stored only in this browser, on this device. It is never sent to us or to anyone else. There is no account and no server copy, so no one, not even the people who run Reflect, can read, recover or restore your notes.</p>
+      <p>This also means that if you clear this browser's data, uninstall the app or lose the device, your notes are gone. Use <em>export</em> on the About page to keep your own copy.</p>
+
+      <h2>What we collect</h2>
+      <p>Nothing. Reflect uses no analytics, no cookies and no tracking. Your theme and silence settings are stored on your device alongside your notes. Once loaded, the app works entirely offline.</p>
+
+      <h2>The texts</h2>
+      <p>Every passage is quoted from a public-domain translation, credited under "about this passage" with a link to its source. The short context notes and reflection questions are our own. Reflect presents these traditions side by side for personal reflection; it does not endorse or rank any of them.</p>
+
+      <h2>Not advice</h2>
+      <p>Reflect is a space for thought, not a substitute for medical, psychological or spiritual care. If you are struggling, please reach out to someone you trust or a professional.</p>
+
+      <button class="link quiet back" onclick="location.hash='#/about'">← about</button>
+    </section>
+
+    <nav class="nav" aria-label="Main">
+      <a href="#/" data-nav="day">today</a>
+      <a href="#/journal" data-nav="journal">past thoughts</a>
+      <a href="#/about" data-nav="about">about</a>
+    </nav>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- Closing moment -->
+  <div class="closing" id="closing" hidden>
+    <p>That's today's thought.<br>Carry it with you.</p>
+    <div class="closing-actions">
+      <button class="link quiet" id="closing-back">read it again</button>
+      <span class="dot" aria-hidden="true">·</span>
+      <button class="link quiet" id="closing-write">write about this</button>
+      <button class="link quiet" id="closing-silence">sit in silence</button>
+      <span class="dot" aria-hidden="true">·</span>
+      <button class="link quiet" id="closing-share">share today's thought</button>
+    </div>
+  </div>
+
+  <!-- Silence overlay -->
+  <div class="silence" id="silence" hidden>
+    <div class="breath" id="breath" aria-hidden="true"></div>
+    <p class="breath-cue" id="breath-cue">breathe in</p>
+    <p class="remaining" id="remaining"></p>
+    <button class="link quiet" id="close-silence">end</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

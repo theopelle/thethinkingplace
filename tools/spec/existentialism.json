@@ -1,0 +1,370 @@
+[
+ {
+  "tradition": "Existentialism",
+  "source": "Friedrich Nietzsche, Thus Spake Zarathustra I, 'The Way of the Creating One'",
+  "from": "zarathustra",
+  "start": "Ready must thou be to burn thyself in thine own flame",
+  "end": "first become ashes!",
+  "context": "Zarathustra speaks to someone setting out on their own path. Real renewal asks us to let an old self burn away.",
+  "prompt": "What old version of yourself might need to become ashes?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Friedrich Nietzsche, Thus Spake Zarathustra, Prologue 5",
+  "from": "zarathustra",
+  "start": "one must still have chaos in one",
+  "end": "dancing star.",
+  "context": "Zarathustra warns against a life made so comfortable and orderly that nothing new can arise from it. Inner turmoil can be the raw material of creation.",
+  "prompt": "What unsettled part of you might be the beginning of something?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Fyodor Dostoevsky, The Brothers Karamazov, Book II, ch. 2",
+  "from": "karamazov",
+  "start": "Above all, don't lie to yourself",
+  "end": "respect for himself and for others.",
+  "context": "Advice from the elder Zosima. Dostoevsky is often read as a forerunner of existentialism for his focus on freedom, conscience and self-deception.",
+  "prompt": "What small lie have you been telling yourself?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Blaise Pascal, Pensées 139",
+  "from": "pascal",
+  "start": "all the unhappiness of men arises from one single fact",
+  "end": "their own chamber.",
+  "context": "Pascal, a 17th-century mathematician and religious thinker, anticipated the existentialists' focus on restlessness and distraction.",
+  "prompt": "Could you sit quietly, alone, for ten minutes today?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Friedrich Nietzsche, Thus Spake Zarathustra I, 'The Friend'",
+  "from": "zarathustra",
+  "start": "In one’s friend one shall have one’s best enemy",
+  "end": "when thou withstandest him.",
+  "context": "For Nietzsche, a true friend challenges us rather than flatters us, and we are closest to them when we push back.",
+  "prompt": "Which friend challenges you, and do you challenge them?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Friedrich Nietzsche, Beyond Good and Evil 146",
+  "from": "bge",
+  "start": "He who fights with monsters",
+  "end": "gaze into thee.",
+  "context": "A warning to anyone fighting something they despise: the struggle can reshape us into what we oppose.",
+  "prompt": "Is something you are fighting changing you?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Friedrich Nietzsche, The Joyful Wisdom 290",
+  "from": "gaya",
+  "start": "To \"give style\" to one's character",
+  "end": "exercises that admirable art.",
+  "context": "Nietzsche imagines character as a work of art: survey your strengths and weaknesses, and shape them into a whole.",
+  "prompt": "If your character were a work of art, what would you refine?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Friedrich Nietzsche, The Joyful Wisdom 276",
+  "from": "gaya",
+  "start": "Amor fati",
+  "end": "only a yea-sayer!",
+  "context": "'Amor fati' means love of fate. Nietzsche's New Year's resolution: to accept, and even love, what is necessary in his life.",
+  "prompt": "What in your life could you say 'yes' to, rather than resist?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Friedrich Nietzsche, The Joyful Wisdom 270",
+  "from": "gaya",
+  "start": "Thou shalt become what thou art.",
+  "end": "what thou art.",
+  "context": "Nietzsche's answer to the question 'What saith thy conscience?' Borrowed from the Greek poet Pindar, it became his motto.",
+  "prompt": "Who are you becoming, and is it who you are?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Friedrich Nietzsche, The Joyful Wisdom 283",
+  "from": "gaya",
+  "start": "Build your cities on the slope of Vesuvius!",
+  "end": "with yourselves!",
+  "context": "A provocation against timid, comfortable living. 'Living in war with yourselves' means continual self-challenge, not violence.",
+  "prompt": "What unexplored sea have you been afraid to sail?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Friedrich Nietzsche, The Joyful Wisdom 272",
+  "from": "gaya",
+  "start": "What dost thou Love in others?",
+  "end": "My hopes.",
+  "context": "One of a series of short questions and answers in which Nietzsche examines himself.",
+  "prompt": "What do you love in the people closest to you?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Friedrich Nietzsche, Thus Spake Zarathustra, Prologue 4",
+  "from": "zarathustra",
+  "start": "Man is a rope stretched between the animal",
+  "end": "a rope over an abyss.",
+  "context": "Zarathustra speaks to a crowd waiting for a tightrope walker. Human life is a crossing, not a destination.",
+  "prompt": "What are you crossing toward?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Friedrich Nietzsche, Thus Spake Zarathustra I, 'The Flies in the Market-place'",
+  "from": "zarathustra",
+  "start": "Flee, my friend, into thy solitude! I see thee deafened",
+  "end": "stings of the little ones.",
+  "context": "The market-place is full of noise, fame and petty attacks. Zarathustra urges his friend to recover himself in solitude.",
+  "prompt": "Which noise could you step away from today?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Friedrich Nietzsche, Thus Spake Zarathustra III, 'Old and New Tables' 23",
+  "from": "zarathustra",
+  "start": "And lost be the day to us in which a measure hath not been danced",
+  "end": "laughter along with it!",
+  "context": "Nietzsche prized joy, lightness and dance as signs of a life fully affirmed.",
+  "prompt": "When did you last dance or laugh?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Friedrich Nietzsche, Thus Spake Zarathustra I, 'Reading and Writing'",
+  "from": "zarathustra",
+  "start": "Of all that is written, I love only what a person hath written with his blood",
+  "end": "blood is spirit.",
+  "context": "Nietzsche valued writing, and living, that come from genuine experience rather than borrowed opinion.",
+  "prompt": "What could you say, or do, today that comes from your own blood?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Friedrich Nietzsche, Thus Spake Zarathustra I, 'The Despisers of the Body'",
+  "from": "zarathustra",
+  "start": "There is more sagacity in thy body",
+  "end": "best wisdom.",
+  "context": "Against those who despise the body, Zarathustra insists it holds an intelligence of its own.",
+  "prompt": "What is your body trying to tell you?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Fyodor Dostoevsky, The Brothers Karamazov, Book VI, ch. 3",
+  "from": "karamazov",
+  "start": "What is hell?",
+  "end": "being unable to love.",
+  "context": "From the teachings of the elder Zosima, gathered after his death. Hell is not a place but a condition: the loss of the capacity to love.",
+  "prompt": "Where has your capacity to love grown thin?",
+  "prefix": "“"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Fyodor Dostoevsky, The Brothers Karamazov, Book II, ch. 4",
+  "from": "karamazov",
+  "start": "love in action is a harsh and dreadful thing",
+  "end": "love in dreams.",
+  "context": "Zosima to a woman who dreams of serving humanity but cannot bear ingratitude. Real love is slow, unglamorous and costly.",
+  "prompt": "Where is your love still in dreams, and where is it in action?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Fyodor Dostoevsky, The Brothers Karamazov, Book VI, ch. 2",
+  "from": "karamazov",
+  "start": "every one is really responsible to all men",
+  "end": "and for everything.",
+  "context": "Spoken by Zosima's dying brother Markel, who in his last days discovers a joyful sense of connection to everyone.",
+  "prompt": "What would change if you felt responsible for those around you?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Fyodor Dostoevsky, The Brothers Karamazov, Epilogue, ch. 3",
+  "from": "karamazov",
+  "start": "there is nothing higher and stronger and more wholesome",
+  "end": "the means of saving us.",
+  "context": "Alyosha's speech to a group of boys at the funeral of their friend. Good memories, he says, can carry us through a whole life.",
+  "prompt": "Which good memory from childhood do you carry with you?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Fyodor Dostoevsky, The Brothers Karamazov, Book II, ch. 4",
+  "from": "karamazov",
+  "start": "The more I love humanity in general",
+  "end": "man in particular.",
+  "context": "Zosima recalls a doctor's confession: loving humanity in the abstract is easy; loving the person in front of us is hard.",
+  "prompt": "Who is the particular person you find hardest to love?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Fyodor Dostoevsky, The Brothers Karamazov, Epilogue, ch. 3",
+  "from": "karamazov",
+  "start": "Let us be, first and above all, kind",
+  "end": "never forget each other!",
+  "context": "The closing scene of the novel. After all its darkness, Dostoevsky ends with a simple order of priorities.",
+  "prompt": "Who should you make sure never to forget?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Fyodor Dostoevsky, The Brothers Karamazov, Book II, ch. 4",
+  "from": "karamazov",
+  "start": "Above all, avoid falsehood",
+  "end": "observing it in yourself.",
+  "context": "Zosima's advice: honest self-observation, without scorn, is itself a kind of healing.",
+  "prompt": "What could you observe in yourself today without scorn?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Fyodor Dostoevsky, The Brothers Karamazov, Book VI, ch. 3",
+  "from": "karamazov",
+  "start": "Loving humility is marvelously strong",
+  "end": "nothing else like it.",
+  "context": "Zosima on humility: not weakness, but the strongest force there is.",
+  "prompt": "Where could humility be your strength today?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Fyodor Dostoevsky, Notes from Underground II, ch. 6",
+  "from": "underground",
+  "start": "man is fond of reckoning up his troubles",
+  "end": "happiness provided for it.",
+  "context": "Spoken by the bitter narrator of Notes from Underground, yet true: we tally our troubles and forget our joys.",
+  "prompt": "What joys could you count today?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Fyodor Dostoevsky, Notes from Underground I, ch. 7",
+  "from": "underground",
+  "start": "What man wants is simply",
+  "end": "wherever it may lead.",
+  "context": "The Underground Man argues that people are not calculating machines: above all, we want to choose for ourselves.",
+  "prompt": "Where are you choosing freely, and where just following?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Fyodor Dostoevsky, Notes from Underground I, ch. 9",
+  "from": "underground",
+  "start": "suffering is the sole origin of consciousness",
+  "end": "would not give it up for any satisfaction.",
+  "context": "A paradox from the Underground Man: awareness brings pain, yet no one would trade it for comfortable unawareness.",
+  "prompt": "What has a painful experience made you more aware of?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Blaise Pascal, Pensées 347",
+  "from": "pascal",
+  "start": "Man is but a reed",
+  "end": "he is a thinking reed.",
+  "context": "Perhaps Pascal's most famous line. Human beings are fragile, but our capacity to think gives us a dignity the universe lacks.",
+  "prompt": "How are you using your thinking today?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Blaise Pascal, Pensées 172",
+  "from": "pascal",
+  "start": "So we never live, but we hope to live",
+  "end": "never be so.",
+  "context": "We live in memories and plans, rarely in the present. Always preparing to be happy, we never are.",
+  "prompt": "What are you postponing being happy about?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Blaise Pascal, Pensées 277",
+  "from": "pascal",
+  "start": "The heart has its reasons, which reason does not know.",
+  "end": "which reason does not know.",
+  "context": "Pascal, a brilliant mathematician, insisted that not all knowing is logical. Some truths are felt before they are proven.",
+  "prompt": "What does your heart know that your reason can't explain?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Blaise Pascal, Pensées 358",
+  "from": "pascal",
+  "start": "Man is neither angel nor brute, and the unfortunate",
+  "end": "acts the brute.",
+  "context": "Trying to be more than human often makes us less. Pascal warns against spiritual pride.",
+  "prompt": "Where are you trying to be an angel instead of a human?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Blaise Pascal, Pensées 171",
+  "from": "pascal",
+  "start": "The only thing which consoles us for our miseries is diversion",
+  "end": "ruin ourselves.",
+  "fix": {
+   "this it the": "this is the"
+  },
+  "context": "Pascal saw distraction as both comfort and trap: it keeps us from reflecting on our lives. (A typo in the source edition, 'it' for 'is', is corrected here.)",
+  "prompt": "What distraction keeps you from reflecting on your life?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Blaise Pascal, Pensées 80",
+  "from": "pascal",
+  "start": "How comes it that a cripple does not offend us",
+  "end": "pity and not anger.",
+  "context": "We are angered not by others' limitations but by their claim that we are the ones who are wrong.",
+  "prompt": "Whose disagreement angers you, and why does it sting?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Blaise Pascal, Pensées 136",
+  "from": "pascal",
+  "start": "A mere trifle consoles us",
+  "end": "distresses us.",
+  "context": "Pascal on the fragility of our moods: small things lift us because small things also bring us down.",
+  "prompt": "What trifle upset you recently, and what trifle could lift you?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Blaise Pascal, Pensées 152",
+  "from": "pascal",
+  "start": "Curiosity is only vanity",
+  "end": "but to talk.",
+  "context": "A sharp observation: much of what we want to know, we want to know in order to tell others.",
+  "prompt": "What would you still want to experience if you could never tell anyone?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Blaise Pascal, Pensées 162",
+  "from": "pascal",
+  "start": "Cleopatra's nose",
+  "end": "would have been altered.",
+  "context": "History, and our own lives, turn on tiny details. Small causes can have enormous effects.",
+  "prompt": "What small thing changed the course of your life?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Blaise Pascal, Pensées 348",
+  "from": "pascal",
+  "start": "It is not from space that I must seek my dignity",
+  "end": "government of my thought.",
+  "context": "Our dignity lies not in what we possess or how much room we occupy, but in how we govern our minds.",
+  "prompt": "How well are you governing your thoughts?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Blaise Pascal, Pensées 347",
+  "from": "pascal",
+  "start": "Let us endeavour, then, to think well",
+  "end": "principle of morality.",
+  "context": "Pascal concludes that since thought is our dignity, thinking well is where ethics begins.",
+  "prompt": "Where would better thinking lead to better living?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Friedrich Nietzsche, Beyond Good and Evil 68",
+  "from": "bge",
+  "start": "\"I did that,\" says my memory",
+  "end": "the memory yields.",
+  "context": "A two-line portrait of self-deception: when memory and pride disagree, pride usually wins.",
+  "prompt": "What has your pride persuaded your memory to forget?",
+  "fix": {
+   "I did that,\" says my memory. \"I could not have done that,\" says": "I did that,” says my memory. “I could not have done that,” says"
+  },
+  "prefix": "“"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Fyodor Dostoevsky, The Brothers Karamazov, Book VI, ch. 3",
+  "from": "karamazov",
+  "start": "Every day and every hour, every minute, walk round",
+  "end": "your image is a seemly one.",
+  "context": "Zosima's counsel to watch how we carry ourselves, because others, especially children, are always watching.",
+  "prompt": "How do you appear to those who look up to you?"
+ }
+]

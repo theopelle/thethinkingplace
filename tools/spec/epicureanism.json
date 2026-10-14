@@ -1,0 +1,363 @@
+[
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 27",
+  "from": "epicurus",
+  "start": "Of all the means which are procured by wisdom",
+  "end": "the acquisition of friends.",
+  "context": "Epicurus lived with his friends in a community called the Garden. For him, friendship was not an extra in a good life but its foundation.",
+  "prompt": "Which friendship deserves more of your attention than it has been getting?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Letter to Menoeceus 125",
+  "from": "epicurus",
+  "start": "Death, therefore, the most awful of evils",
+  "end": "death is come, we are not.",
+  "context": "Epicurus wanted to free people from the fear of death, which he saw as poisoning ordinary life. Where we are, death is not; where death is, we are not.",
+  "prompt": "If fear of an ending were set aside, how would you spend this day?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Letter to Menoeceus 122",
+  "from": "epicurus",
+  "start": "Let no one be slow to seek wisdom",
+  "end": "health of the soul.",
+  "context": "The opening of Epicurus' letter summarising his ethics. Philosophy, for him, was a lifelong practice of caring for the soul, never too early and never too late.",
+  "prompt": "What are you still curious to learn about how to live?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 15",
+  "from": "epicurus",
+  "start": "Nature’s wealth at once has its bounds",
+  "end": "infinite distance.",
+  "context": "Natural needs are few and easily met. Desires born of imagination keep moving out of reach however much we acquire.",
+  "prompt": "Which of your wants keeps receding the closer you get?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Lucretius, On the Nature of Things II",
+  "from": "lucretius",
+  "start": "'Tis sweet, when, down the mighty main",
+  "end": "for the road of life",
+  "context": "Lucretius, a Roman poet, set Epicurus' philosophy to verse. Here he describes the calm of a mind that has found its footing, looking out on a restless world.",
+  "prompt": "Where is your 'serene plateau' when life gets stormy?",
+  "prefix": "'"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Letter to Menoeceus 124",
+  "from": "epicurus",
+  "start": "Accustom thyself to believe that death is nothing to us",
+  "end": "yearning after immortality.",
+  "context": "The goal is not to make life longer but to make mortal life enjoyable, by letting go of the craving to live forever.",
+  "prompt": "How would you live if you made peace with being mortal?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Letter to Menoeceus 126",
+  "from": "epicurus",
+  "start": "And even as men choose of food",
+  "end": "merely that which is longest.",
+  "context": "The quality of a life matters more than its length, just as we choose food for its taste, not its quantity.",
+  "prompt": "How could you make today sweeter rather than longer?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Letter to Menoeceus 127",
+  "from": "epicurus",
+  "start": "We must remember that the future is neither wholly ours",
+  "end": "quite certain not to come.",
+  "context": "A balanced stance toward the future: neither counting on it nor despairing of it.",
+  "prompt": "What are you either counting on or despairing of too much?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Letter to Menoeceus 128",
+  "from": "epicurus",
+  "start": "For the end of all our actions is to be free from pain and fear",
+  "end": "tempest of the soul is laid",
+  "context": "Epicurus' aim was ataraxia, a calm, untroubled mind. Once it is reached, there is nothing more to chase.",
+  "prompt": "What is stirring a tempest in your soul right now?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Letter to Menoeceus 129",
+  "from": "epicurus",
+  "start": "we do not choose every pleasure whatsoever",
+  "end": "brings us as a consequence a greater pleasure.",
+  "context": "Epicurus is often mistaken for a hedonist. In fact he taught careful weighing: some pleasures cost too much, some pains are worth it.",
+  "prompt": "Which pleasure costs you more than it gives?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Letter to Menoeceus 130",
+  "from": "epicurus",
+  "start": "we regard independence of outward things as a great good",
+  "end": "vain and worthless hard to win.",
+  "context": "The point is not to live with little, but to be able to be content with little, which makes us freer whatever we have.",
+  "prompt": "What could you happily do without?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Letter to Menoeceus 130–131",
+  "from": "epicurus",
+  "start": "Plain fare gives as much pleasure as a costly diet",
+  "end": "brought to hungry lips.",
+  "context": "Epicurus' own diet was famously simple. Bread and water, eaten when truly hungry, give the deepest pleasure.",
+  "prompt": "When did a simple thing last give you real pleasure?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Letter to Menoeceus 131",
+  "from": "epicurus",
+  "start": "When we say, then, that pleasure is the end and aim",
+  "end": "trouble in the soul.",
+  "context": "Epicurus corrects the caricature of his teaching. The pleasure he means is the absence of pain and inner trouble.",
+  "prompt": "What would bring a little more peace to your body and soul today?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Letter to Menoeceus 132",
+  "from": "epicurus",
+  "start": "It is not an unbroken succession of drinking-bouts",
+  "end": "take possession of the soul.",
+  "context": "A pleasant life comes from thinking clearly about what we choose and why, and from letting go of beliefs that disturb us.",
+  "prompt": "Which of your beliefs causes you the most unrest?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Letter to Menoeceus 132",
+  "from": "epicurus",
+  "start": "Wherefore prudence is a more precious thing even than philosophy",
+  "end": "inseparable from them.",
+  "context": "For Epicurus, a pleasant life and a good life are the same thing: you cannot have one without the other.",
+  "prompt": "Where do pleasure and goodness meet in your life?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Letter to Menoeceus 133",
+  "from": "epicurus",
+  "start": "some things happen of necessity, others by chance",
+  "end": "our own actions are free",
+  "context": "Against fatalism, Epicurus insists that much of life is up to us. Responsibility depends on it.",
+  "prompt": "What part of your situation is truly in your own hands?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 2",
+  "from": "epicurus",
+  "start": "Death is nothing to us; for the body",
+  "end": "is nothing to us.",
+  "context": "The second of Epicurus' forty core teachings, memorised by his followers. Death cannot harm one who no longer feels.",
+  "prompt": "What fear might shrink if you looked at it this plainly?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 3",
+  "from": "epicurus",
+  "start": "The magnitude of pleasure reaches its limit",
+  "end": "removal of all pain.",
+  "context": "Pleasure has a ceiling: once pain is gone, more does not mean better. This frees us from chasing endless increase.",
+  "prompt": "Where are you chasing 'more' past the point of enough?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 4",
+  "from": "epicurus",
+  "start": "Continuous pain does not last long in the flesh",
+  "end": "does not last for many days together.",
+  "context": "Epicurus himself suffered from painful illness. His teaching was that severe pain is brief and long pain is bearable.",
+  "prompt": "What pain have you endured that turned out more bearable than you feared?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 5",
+  "from": "epicurus",
+  "start": "It is impossible to live a pleasant life without living wisely",
+  "end": "without living pleasantly.",
+  "context": "Pleasure, wisdom and justice are bound together. None can be had fully without the others.",
+  "prompt": "Which of the three is weakest in your life right now?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 7",
+  "from": "epicurus",
+  "start": "Some men have sought to become famous and renowned",
+  "end": "originally sought.",
+  "context": "Fame is usually sought for security. Epicurus asks whether it ever really delivers it.",
+  "prompt": "What are you hoping recognition will give you?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 8",
+  "from": "epicurus",
+  "start": "No pleasure is in itself evil",
+  "end": "the pleasures themselves.",
+  "context": "The problem is never pleasure itself, but what certain pleasures bring along with them.",
+  "prompt": "Which pleasure brings trouble along with it?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 14",
+  "from": "epicurus",
+  "start": "When tolerable security against our fellow-men is attained",
+  "end": "withdrawn from the multitude.",
+  "context": "Epicurus advised his followers to 'live unnoticed', valuing a quiet life among friends over public ambition.",
+  "prompt": "Where could you choose quiet over attention?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 16",
+  "from": "epicurus",
+  "start": "Fortune but seldom interferes with the wise man",
+  "end": "course of his life.",
+  "context": "Luck affects the outer edges of a life. What matters most is guided by our own reasoning.",
+  "prompt": "What part of your life is governed by reason rather than luck?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 17",
+  "from": "epicurus",
+  "start": "The just man enjoys the greatest peace of mind",
+  "end": "utmost disquietude.",
+  "context": "For Epicurus, justice is valuable partly because it lets us sleep at night.",
+  "prompt": "Is there anything on your conscience disturbing your peace?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 19",
+  "from": "epicurus",
+  "start": "Unlimited time and limited time afford an equal amount of pleasure",
+  "end": "by reason.",
+  "context": "A complete life is not measured by its length. Understood rightly, a finite life can be whole.",
+  "prompt": "What would make your life feel complete, regardless of its length?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 21",
+  "from": "epicurus",
+  "start": "He who understands the limits of life",
+  "end": "labour and conflict.",
+  "context": "Knowing how little we truly need frees us from struggles that were never necessary.",
+  "prompt": "Which of your struggles is for something you don't really need?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 26",
+  "from": "epicurus",
+  "start": "All such desires as lead to no pain when they remain ungratified",
+  "end": "likely to produce harm.",
+  "context": "A test for any desire: would going without it actually hurt? If not, it can be let go.",
+  "prompt": "Which desire would cost you nothing to give up?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 28",
+  "from": "epicurus",
+  "start": "The same conviction which inspires confidence",
+  "end": "so much as friendship.",
+  "context": "In an uncertain world, nothing makes us more secure than friends.",
+  "prompt": "Who makes you feel safe, and do you make them feel the same?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Principal Doctrines 29",
+  "from": "epicurus",
+  "start": "Of our desires some are natural and necessary",
+  "end": "due to illusory opinion.",
+  "context": "Epicurus' famous threefold sorting of desires. An ancient commentator gives examples: drink when thirsty; fine food; crowns and statues in one's honour.",
+  "prompt": "Sort three of your current desires into these three kinds."
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Epicurus, Letter to Idomeneus",
+  "from": "epicurus",
+  "start": "On this blissful day, which is also the last of my life",
+  "end": "our past conversations.",
+  "context": "Written by Epicurus on the day he died, in great pain. Memories of friendship and conversation outweighed everything else.",
+  "prompt": "Which conversations would you want to remember at the end?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Lucretius, On the Nature of Things II",
+  "from": "lucretius",
+  "start": "The nations wax, the nations wane away",
+  "end": "One unto other.",
+  "context": "Lucretius pictures the generations as relay runners, each handing the torch of life to the next.",
+  "prompt": "What are you carrying that you hope to hand on?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Lucretius, On the Nature of Things III",
+  "from": "lucretius",
+  "start": "And in fee-simple life is given to none",
+  "end": "than any sleep?",
+  "context": "Life is lent, not owned. And the eternity after death, Lucretius argues, is no more frightening than the eternity before birth.",
+  "prompt": "If life is on loan, how do you want to use it?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Lucretius, On the Nature of Things III",
+  "from": "lucretius",
+  "start": "The man who sickens of his home goes out",
+  "end": "guessing not the cause of ail.",
+  "context": "A strikingly modern portrait of restlessness: the rich man rushing to his country house, bored on arrival, rushing back to town, always fleeing himself.",
+  "prompt": "What are you running from by keeping busy?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Lucretius, On the Nature of Things III",
+  "from": "lucretius",
+  "start": "why not, Even like a banqueter, depart the halls",
+  "end": "unafflicted rest?",
+  "context": "Nature speaks to someone afraid of dying: if your life has been good, why not leave it like a guest who has dined well?",
+  "prompt": "What would it mean to feel 'laden with life'?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Lucretius, On the Nature of Things III",
+  "from": "lucretius",
+  "start": "those tortures said to be In Acheron",
+  "end": "Here in this life.",
+  "context": "Lucretius reads the myths of the underworld as pictures of our own anxieties, which we suffer now, not after death.",
+  "prompt": "Which torment of yours lives only in your mind?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Lucretius, On the Nature of Things II",
+  "from": "lucretius",
+  "start": "O wretched minds of men!",
+  "end": "far from care and fear!",
+  "context": "Lucretius laments how people waste their short lives striving for power, when nature asks only for freedom from pain and a mind at ease.",
+  "prompt": "What does your nature actually ask of you today?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Lucretius, On the Nature of Things IV",
+  "from": "lucretius",
+  "start": "Since from amid the well-spring of delights",
+  "end": "Among the very flowers",
+  "context": "Even in the middle of pleasure, something bitter rises, often regret or unease of the mind.",
+  "prompt": "What bitterness rises in you even amid good things?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Lucretius, On the Nature of Things V",
+  "from": "lucretius",
+  "start": "But rather this: To look on all things",
+  "end": "mind at peace.",
+  "context": "Lucretius contrasts anxious rituals with what he sees as true reverence: looking on the world with calm and clarity.",
+  "prompt": "What would you see differently if you looked with a mind at peace?"
+ },
+ {
+  "tradition": "Epicureanism",
+  "source": "Lucretius, On the Nature of Things III",
+  "from": "lucretius",
+  "start": "Therefore death to us Is nothing",
+  "end": "concerns us in the least",
+  "context": "Lucretius restates Epicurus in verse, at the heart of his long argument against the fear of death.",
+  "prompt": "How much of your life is shaped by a fear of its ending?"
+ }
+]

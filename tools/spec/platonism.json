@@ -1,0 +1,393 @@
+[
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Apology 38a",
+  "from": "apology",
+  "start": "the unexamined life is not worth living",
+  "end": "not worth living",
+  "context": "Socrates says this at his trial in Athens, having been offered the chance to live if he stops questioning people. He chooses the examined life, even at the cost of his own.",
+  "prompt": "What part of your life have you stopped questioning?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Apology 21d",
+  "from": "apology",
+  "start": "he knows nothing, and thinks that he knows",
+  "end": "nor think that I know.",
+  "context": "Socrates explains why the oracle called him the wisest man in Athens: not because he knew more, but because he was honest about the limits of what he knew.",
+  "prompt": "Where are you most certain — and what would it cost to be less so?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Republic II, 377a",
+  "from": "republic",
+  "start": "the beginning is the most important part of any work",
+  "end": "more readily taken.",
+  "context": "Said in a discussion of how to educate the young: early impressions shape everything that follows. The point applies just as well to habits, projects and days.",
+  "prompt": "How do you want to begin what comes next?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Theaetetus 155d",
+  "from": "theaetetus",
+  "start": "wonder is the feeling of a philosopher",
+  "end": "philosophy begins in wonder.",
+  "context": "Socrates says this to the young Theaetetus, who admits he is dizzy with puzzlement. Confusion is not a failure; it is where real thinking starts.",
+  "prompt": "What has made you wonder recently?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Gorgias 469c",
+  "from": "gorgias",
+  "context": "Socrates shocks his companions by arguing that doing wrong damages the soul far more than being wronged does.",
+  "prompt": "Is there a wrong you could avoid doing, even at some cost to yourself?",
+  "parts": [
+   [
+    "Then would you rather suffer than do injustice?",
+    "than do injustice?"
+   ],
+   [
+    "I should not like either, but if I must choose",
+    "rather suffer than do."
+   ]
+  ],
+  "join": " — "
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Apology 41d",
+  "from": "apology",
+  "start": "be of good cheer about death, and know of a certainty",
+  "end": "in life or after death.",
+  "context": "Socrates' words to the jurors who voted to acquit him. A good person's integrity cannot be taken from them by anything that happens.",
+  "prompt": "What in you can no misfortune touch?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Apology 39a",
+  "from": "apology",
+  "start": "The difficulty, my friends, is not to avoid death",
+  "end": "runs faster than death.",
+  "context": "Sentenced to die, Socrates observes that wrongdoing is the swifter pursuer. His accusers, he says, have been overtaken by it.",
+  "prompt": "What wrong is easier to fall into than you'd like to admit?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Apology 42a",
+  "from": "apology",
+  "start": "The hour of departure has arrived",
+  "end": "and you to live.",
+  "context": "The final words of Socrates' defence, spoken with calm to the court that has condemned him.",
+  "prompt": "How would you want to speak if these were your last words?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Apology 38e",
+  "from": "apology",
+  "start": "I would rather die having spoken after my manner",
+  "end": "in your manner and live.",
+  "context": "Socrates refuses to beg for mercy or bring his weeping children to court. He would rather die true to himself than live by betraying himself.",
+  "prompt": "Where are you speaking in someone else's manner to stay comfortable?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Apology 30b",
+  "from": "apology",
+  "start": "For I do nothing but go about persuading you all",
+  "end": "public as well as private.",
+  "context": "Socrates describes the message he has spent his life repeating to the people of Athens: care first for your soul.",
+  "prompt": "How much of your care goes to your soul, compared with your possessions?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Crito 48b",
+  "from": "crito",
+  "start": "not life, but a good life, is to be chiefly valued",
+  "end": "chiefly valued",
+  "context": "In prison, his friend Crito urges Socrates to escape. Socrates insists the question is not how to live longer but how to live well.",
+  "prompt": "Are you living a long life, or a good one?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Crito 49c",
+  "from": "crito",
+  "start": "Then we ought not to retaliate or render evil for evil",
+  "end": "suffered from him.",
+  "context": "Socrates admits this view has never been popular. He holds to it anyway, even facing death.",
+  "prompt": "Whom are you tempted to repay in kind?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Crito 48a",
+  "from": "crito",
+  "start": "we must not regard what the many say of us",
+  "end": "what the truth will say.",
+  "context": "Public opinion is not the measure of right and wrong. Socrates asks what someone who truly understands would say, and what the truth would say.",
+  "prompt": "Whose opinion are you living by, the many's or the truth's?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Meno 86b",
+  "from": "meno",
+  "start": "we shall be better and braver and less helpless",
+  "end": "what we do not know",
+  "context": "Socrates is unsure of much, but of this he is certain: believing inquiry is worthwhile makes us better people.",
+  "prompt": "What question have you given up on that is still worth asking?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Laws I, 626e",
+  "from": "laws",
+  "start": "there is a victory and defeat",
+  "end": "within every one of us.",
+  "context": "From Plato's last and longest dialogue. The fiercest war is the one fought within each person.",
+  "prompt": "What inner battle are you fighting right now?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Gorgias 482b–c",
+  "from": "gorgias",
+  "start": "I would rather that my lyre should be inharmonious",
+  "end": "and contradict myself.",
+  "context": "Socrates would rather the whole world disagree with him than live in disagreement with himself.",
+  "prompt": "Where are you at odds with yourself?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Gorgias 527e",
+  "from": "gorgias",
+  "start": "Let us, then, take the argument as our guide",
+  "end": "in life and death.",
+  "context": "The closing words of the Gorgias. After a long and heated argument, Socrates concludes simply: practise justice and every virtue.",
+  "prompt": "What would it mean to follow the argument wherever it leads?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Republic VII, 514a",
+  "from": "republic",
+  "start": "Behold! human beings living in a underground den",
+  "end": "turning round their heads.",
+  "context": "The opening of the Allegory of the Cave. Prisoners mistake shadows on a wall for reality; philosophy is the slow, painful turn toward the light.",
+  "prompt": "What shadows might you be mistaking for the real thing?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Republic IV, 421e",
+  "from": "republic",
+  "near": "they will creep into the city unobserved",
+  "start": "Wealth, I said, and poverty",
+  "end": "both of discontent.",
+  "context": "Socrates names two dangers to a healthy community, and to a healthy soul: too much and too little.",
+  "prompt": "Has abundance or scarcity been shaping your character lately?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Republic VII, 536e",
+  "from": "republic",
+  "context": "Plato's view of education: learning forced on us does not last. Learning through play reveals who we really are.",
+  "prompt": "What would you love to learn if no one were making you?",
+  "parts": [
+   [
+    "Bodily exercise, when compulsory",
+    "no hold on the mind."
+   ],
+   [
+    "do not use compulsion",
+    "natural bent."
+   ]
+  ]
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Republic I, 329c",
+  "from": "republic",
+  "start": "old age has a great sense of calm and freedom",
+  "end": "but of many.",
+  "context": "The elderly Cephalus, at the opening of the Republic, finds that age has freed him from the tyranny of his passions.",
+  "prompt": "What passion would you be glad to be free of?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Republic I, 329d",
+  "from": "republic",
+  "start": "he who is of a calm and happy nature",
+  "end": "equally a burden.",
+  "context": "Cephalus again: what makes a life heavy is not age but temperament.",
+  "prompt": "What in your temperament makes life lighter, or heavier?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Republic VII, 518c",
+  "from": "republic",
+  "start": "the power and capacity of learning exists in the soul already",
+  "end": "into that of being",
+  "context": "Education, for Plato, is not pouring knowledge into an empty vessel but turning the whole soul toward the light.",
+  "prompt": "What understanding is already in you, waiting to be turned toward?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Republic IX, 592b",
+  "from": "republic",
+  "start": "In heaven, I replied, there is laid up a pattern of it",
+  "end": "set his own house in order.",
+  "context": "The ideal city may never exist on earth. But anyone can use it as a pattern for ordering their own life.",
+  "prompt": "What pattern are you ordering your inner house by?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Republic I, 335e",
+  "from": "republic",
+  "start": "Then to injure a friend or any one else is not the act of a just man",
+  "end": "who is the unjust?",
+  "context": "Against the common view that justice means helping friends and harming enemies, Socrates argues that a just person harms no one.",
+  "prompt": "Is there anyone you feel entitled to harm?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Republic II, 369b",
+  "from": "republic",
+  "start": "A State, I said, arises, as I conceive, out of the needs of mankind",
+  "end": "many wants.",
+  "context": "Plato begins his account of society with interdependence. No one is self-sufficient.",
+  "prompt": "Whom do you depend on that you rarely think about?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Republic VII, 520d",
+  "from": "republic",
+  "start": "the State in which the rulers are most reluctant to govern",
+  "end": "most eager, the worst.",
+  "context": "Those who crave power are often least fit for it.",
+  "prompt": "Where are you seeking power, and why?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Republic IV, 443d",
+  "from": "republic",
+  "start": "he sets in order his own inner life",
+  "end": "at peace with himself",
+  "context": "Plato's definition of justice in the soul: each part doing its own work, in harmony, like notes in a scale.",
+  "prompt": "What would it take to be at peace with yourself today?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Republic IX, 579d–e",
+  "from": "republic",
+  "start": "He who is the real tyrant, whatever men may think, is the real slave",
+  "end": "the real slave",
+  "context": "The tyrant seems to have everything, but is ruled by desires he can never satisfy.",
+  "prompt": "Which of your desires rules you more than you rule it?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Republic II, 360b",
+  "from": "republic",
+  "start": "No man would keep his hands off what was not his own",
+  "end": "what he liked",
+  "context": "From the story of the Ring of Gyges, which makes its wearer invisible. Glaucon challenges Socrates: would anyone stay just if no one could see?",
+  "prompt": "What would you do differently if no one could ever see?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Symposium 192e",
+  "from": "symposium",
+  "start": "human nature was originally one and we were a whole",
+  "end": "is called love.",
+  "context": "From Aristophanes' speech: humans were once whole beings, split in two, and love is the longing to be whole again.",
+  "prompt": "What makes you feel whole?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Symposium 211d",
+  "from": "symposium",
+  "start": "This, my dear Socrates,' said the stranger",
+  "end": "contemplation of beauty absolute",
+  "context": "The priestess Diotima teaches Socrates that love climbs from beautiful bodies to beautiful souls, ideas, and finally beauty itself.",
+  "prompt": "Where did you notice beauty today?",
+  "fix": {
+   "Socrates,' said the stranger of Mantineia, 'is": "Socrates,” said the stranger of Mantineia, “is"
+  },
+  "prefix": "“",
+  "suffix": "”"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Symposium 204b",
+  "from": "symposium",
+  "start": "For wisdom is a most beautiful thing",
+  "end": "between the wise and the ignorant.",
+  "context": "Love, in Diotima's account, is neither wise nor ignorant but always reaching: the very definition of a philosopher.",
+  "prompt": "What are you reaching for that you don't yet have?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Phaedrus 279b–c",
+  "from": "phaedrus",
+  "start": "give me beauty in the inward soul",
+  "end": "can bear and carry.",
+  "context": "Socrates' prayer at the end of the Phaedrus: inner beauty, harmony between inner and outer life, and only as much wealth as a temperate person can carry.",
+  "prompt": "How could your outward life better match your inward one?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Phaedrus 246a–b",
+  "from": "phaedrus",
+  "parts": [
+   [
+    "let the figure be composite",
+    "and a charioteer."
+   ],
+   [
+    "the human charioteer drives his in a pair",
+    "trouble to him."
+   ]
+  ],
+  "context": "Plato's image of the soul as a charioteer with two horses, one noble and one unruly. Reason must steer both.",
+  "prompt": "Which of your horses has been pulling harder lately?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Phaedrus 275a",
+  "from": "phaedrus",
+  "start": "this discovery of yours will create forgetfulness",
+  "end": "will have learned nothing",
+  "context": "An Egyptian king warns the inventor of writing that it will weaken memory and give only the appearance of wisdom. The worry sounds familiar today.",
+  "prompt": "What do you know only because it is stored somewhere, not in you?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Phaedo 60b",
+  "from": "phaedo",
+  "start": "How singular is the thing called pleasure",
+  "end": "joined by a single head",
+  "context": "Socrates, his chains just removed on the day of his death, rubs his leg and reflects on how pleasure and pain always follow each other.",
+  "prompt": "Which pleasure in your life always seems to bring its pain?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Phaedo 89d",
+  "from": "phaedo",
+  "start": "Lest we become misologists",
+  "end": "ignorance of the world.",
+  "context": "After an argument collapses, Socrates warns against giving up on reasoning altogether, just as disappointment can turn people against humanity.",
+  "prompt": "Where has disappointment made you cynical?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Phaedo 64a",
+  "from": "phaedo",
+  "start": "is not philosophy the practice of death?",
+  "end": "practice of death?",
+  "context": "For Plato, philosophy loosens our attachment to the body and its fears, a lifelong rehearsal for letting go.",
+  "prompt": "What would you practise letting go of today?"
+ },
+ {
+  "tradition": "Platonism",
+  "source": "Plato, Phaedo 118a",
+  "from": "phaedo",
+  "start": "of all the men of his time whom I have known",
+  "end": "justest and best.",
+  "context": "The last line of the Phaedo, Phaedo's tribute to Socrates after his death.",
+  "prompt": "What would you want those who knew you to say?"
+ }
+]
