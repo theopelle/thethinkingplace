@@ -66,6 +66,13 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
   margin: 0;
   text-wrap: balance;
 }
+/* Longer passages read better left-aligned, a touch smaller, with more air. */
+.passage.long { text-align: left; }
+.passage.long p { font-size: clamp(1.2rem, 4.4vw, 1.5rem); line-height: 1.55; text-wrap: pretty; }
+.passage.very-long p { font-size: clamp(1.1rem, 4vw, 1.3rem); line-height: 1.6; }
+.journal .j-text { white-space: pre-line; }  /* verse keeps its line breaks */
+.passage.verse p { font-size: clamp(1.05rem, 3.9vw, 1.25rem); line-height: 1.5; }
+.verse-line { display: block; padding-left: 1.4em; text-indent: -1.4em; }
 .source { text-align: center; color: var(--muted); font-size: .9rem; margin: 2rem 0 .5rem; }
 .tradition { font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; }
 
@@ -150,6 +157,23 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
   opacity: 0; transition: opacity .4s ease, transform .4s ease;
 }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* Greeting, name, support */
+.greeting { color: var(--muted); font: italic 400 1rem/1.4 var(--serif); text-align: center; margin: 0 0 .6rem; }
+.name-input {
+  width: 100%; max-width: 20rem;
+  background: transparent; color: var(--fg);
+  border: 0; border-bottom: 1px solid var(--faint);
+  padding: .4rem 0; font: 400 1.05rem/1.4 var(--serif);
+}
+.name-input:focus { outline: none; border-bottom-color: var(--muted); }
+.name-input::placeholder { color: var(--muted); font: 300 .9rem/1.4 var(--sans); }
+.support-link { color: var(--fg); }
+.fine { display: flex; flex-wrap: wrap; gap: .25rem .6rem; align-items: center; }
+.fine a { cursor: pointer; }
+.welcome .name-input { text-align: center; margin-bottom: .75rem; }
+.welcome p:first-child { margin-bottom: 2rem; }
+.welcome-hint { color: var(--muted); font: 300 .8rem/1.5 var(--sans) !important; margin: 0 0 2.5rem !important; }
 
 /* Closing moment */
 .closing {

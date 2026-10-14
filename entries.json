@@ -392,7 +392,7 @@
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-ii",
     "tradition": "Epicureanism",
-    "text": "'Tis sweet, when, down the mighty main, the winds Roll up its waste of waters, from the land To watch another's labouring anguish far, Not that we joyously delight that man Should thus be smitten, but because 'tis sweet To mark what evils we ourselves be spared; 'Tis sweet, again, to view the mighty strife Of armies embattled yonder o'er the plains, Ourselves no sharers in the peril; but naught There is more goodly than to hold the high Serene plateaus, well fortressed by the wise, Whence thou may'st look below on other men And see them ev'rywhere wand'ring, all dispersed In their lone seeking for the road of life.",
+    "text": "'Tis sweet, when, down the mighty main, the winds\nRoll up its waste of waters, from the land\nTo watch another's labouring anguish far,\nNot that we joyously delight that man\nShould thus be smitten, but because 'tis sweet\nTo mark what evils we ourselves be spared;\n'Tis sweet, again, to view the mighty strife\nOf armies embattled yonder o'er the plains,\nOurselves no sharers in the peril; but naught\nThere is more goodly than to hold the high\nSerene plateaus, well fortressed by the wise,\nWhence thou may'st look below on other men\nAnd see them ev'rywhere wand'ring, all dispersed\nIn their lone seeking for the road of life.",
     "source": "Lucretius, On the Nature of Things II",
     "context": "Lucretius, a Roman poet, set Epicurus' philosophy to verse. Here he describes the calm of a mind that has found its footing, looking out on a restless world.",
     "prompt": "Where is your 'serene plateau' when life gets stormy?",
@@ -2822,7 +2822,7 @@
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-ii-2",
     "tradition": "Epicureanism",
-    "text": "The nations wax, the nations wane away; In a brief space the generations pass, And like to runners hand the lamp of life One unto other.",
+    "text": "The nations wax, the nations wane away;\nIn a brief space the generations pass,\nAnd like to runners hand the lamp of life\nOne unto other.",
     "source": "Lucretius, On the Nature of Things II",
     "context": "Lucretius pictures the generations as relay runners, each handing the torch of life to the next.",
     "prompt": "What are you carrying that you hope to hand on?",
@@ -2912,7 +2912,7 @@
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-iii",
     "tradition": "Epicureanism",
-    "text": "And in fee-simple life is given to none, But unto all mere usufruct. Look back: Nothing to us was all fore-passed eld Of time the eternal, ere we had a birth. And Nature holds this like a mirror up Of time-to-be when we are dead and gone. And what is there so horrible appears? Now what is there so sad about it all? Is't not serener far than any sleep?",
+    "text": "And in fee-simple life is given to none,\nBut unto all mere usufruct. Look back:\nNothing to us was all fore-passed eld\nOf time the eternal, ere we had a birth.\nAnd Nature holds this like a mirror up\nOf time-to-be when we are dead and gone.\nAnd what is there so horrible appears?\nNow what is there so sad about it all?\nIs't not serener far than any sleep?",
     "source": "Lucretius, On the Nature of Things III",
     "context": "Life is lent, not owned. And the eternity after death, Lucretius argues, is no more frightening than the eternity before birth.",
     "prompt": "If life is on loan, how do you want to use it?",
@@ -3002,7 +3002,7 @@
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-iii-2",
     "tradition": "Epicureanism",
-    "text": "The man who sickens of his home goes out, Forth from his splendid halls, and straight—returns, Feeling i'faith no better off abroad. He races, driving his Gallic ponies along, Down to his villa, madly,—as in haste To hurry help to a house afire.—At once He yawns, as soon as foot has touched the threshold, Or drowsily goes off in sleep and seeks Forgetfulness, or maybe bustles about And makes for town again. In such a way Each human flees himself—a self in sooth, As happens, he by no means can escape; And willy-nilly he cleaves to it and loathes, Sick, sick, and guessing not the cause of ail.",
+    "text": "The man who sickens of his home goes out,\nForth from his splendid halls, and straight—returns,\nFeeling i'faith no better off abroad.\nHe races, driving his Gallic ponies along,\nDown to his villa, madly,—as in haste\nTo hurry help to a house afire.—At once\nHe yawns, as soon as foot has touched the threshold,\nOr drowsily goes off in sleep and seeks\nForgetfulness, or maybe bustles about\nAnd makes for town again. In such a way\nEach human flees himself—a self in sooth,\nAs happens, he by no means can escape;\nAnd willy-nilly he cleaves to it and loathes,\nSick, sick, and guessing not the cause of ail.",
     "source": "Lucretius, On the Nature of Things III",
     "context": "A strikingly modern portrait of restlessness: the rich man rushing to his country house, bored on arrival, rushing back to town, always fleeing himself.",
     "prompt": "What are you running from by keeping busy?",
@@ -3092,7 +3092,7 @@
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-iii-3",
     "tradition": "Epicureanism",
-    "text": "Why not, Even like a banqueter, depart the halls, Laden with life? why not with mind content Take now, thou fool, thy unafflicted rest?",
+    "text": "Why not,\nEven like a banqueter, depart the halls,\nLaden with life? why not with mind content\nTake now, thou fool, thy unafflicted rest?",
     "source": "Lucretius, On the Nature of Things III",
     "context": "Nature speaks to someone afraid of dying: if your life has been good, why not leave it like a guest who has dined well?",
     "prompt": "What would it mean to feel 'laden with life'?",
@@ -3182,7 +3182,7 @@
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-iii-4",
     "tradition": "Epicureanism",
-    "text": "Those tortures said to be In Acheron, the deep, they all are ours Here in this life.",
+    "text": "Those tortures said to be\nIn Acheron, the deep, they all are ours\nHere in this life.",
     "source": "Lucretius, On the Nature of Things III",
     "context": "Lucretius reads the myths of the underworld as pictures of our own anxieties, which we suffer now, not after death.",
     "prompt": "Which torment of yours lives only in your mind?",
@@ -3272,7 +3272,7 @@
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-ii-3",
     "tradition": "Epicureanism",
-    "text": "O wretched minds of men! O blinded hearts! In how great perils, in what darks of life Are spent the human years, however brief!— O not to see that nature for herself Barks after nothing, save that pain keep off, Disjoined from the body, and that mind enjoy Delightsome feeling, far from care and fear!",
+    "text": "O wretched minds of men! O blinded hearts!\nIn how great perils, in what darks of life\nAre spent the human years, however brief!—\nO not to see that nature for herself\nBarks after nothing, save that pain keep off,\nDisjoined from the body, and that mind enjoy\nDelightsome feeling, far from care and fear!",
     "source": "Lucretius, On the Nature of Things II",
     "context": "Lucretius laments how people waste their short lives striving for power, when nature asks only for freedom from pain and a mind at ease.",
     "prompt": "What does your nature actually ask of you today?",
@@ -3362,7 +3362,7 @@
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-iv",
     "tradition": "Epicureanism",
-    "text": "Since from amid the well-spring of delights Bubbles some drop of bitter to torment Among the very flowers…",
+    "text": "Since from amid the well-spring of delights\nBubbles some drop of bitter to torment\nAmong the very flowers…",
     "source": "Lucretius, On the Nature of Things IV",
     "context": "Even in the middle of pleasure, something bitter rises, often regret or unease of the mind.",
     "prompt": "What bitterness rises in you even amid good things?",
@@ -3452,7 +3452,7 @@
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-v",
     "tradition": "Epicureanism",
-    "text": "But rather this: To look on all things with a master eye And mind at peace.",
+    "text": "But rather this:\nTo look on all things with a master eye\nAnd mind at peace.",
     "source": "Lucretius, On the Nature of Things V",
     "context": "Lucretius contrasts anxious rituals with what he sees as true reverence: looking on the world with calm and clarity.",
     "prompt": "What would you see differently if you looked with a mind at peace?",
@@ -3542,7 +3542,7 @@
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-iii-5",
     "tradition": "Epicureanism",
-    "text": "Therefore death to us Is nothing, nor concerns us in the least.",
+    "text": "Therefore death to us\nIs nothing, nor concerns us in the least.",
     "source": "Lucretius, On the Nature of Things III",
     "context": "Lucretius restates Epicurus in verse, at the heart of his long argument against the fear of death.",
     "prompt": "How much of your life is shaped by a fear of its ending?",

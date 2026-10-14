@@ -7,6 +7,16 @@
   const DAY = 86400000;
   const JOURNAL_DAYS = 60;
 
+  // Where feedback and donations go. Fill these in before launch.
+  const CONTACT_EMAIL = "hello@example.com";          // TODO: real address
+  const DONATE_URL = "https://buymeacoffee.com/";     // TODO: your Buy Me a Coffee page
+
+  // Apple doesn't allow App Store apps to point to outside payment pages, so the
+  // support section is hidden inside the native iOS app (wrapped with Capacitor).
+  // Safari and home-screen installs from the website still show it.
+  const IN_IOS_APP = !!(window.Capacitor && window.Capacitor.getPlatform &&
+                        window.Capacitor.getPlatform() === "ios");
+
   const $ = (id) => document.getElementById(id);
   let entries = [];
 
@@ -99,7 +109,24 @@
     $("day-date").innerHTML =
       (key === today ? "Today · " : "") + formatDate(key) +
       ` · <span class="moon" title="${moon.label}">${moonIcon(moon.phase)}${moon.label}</span>`;
-    $("day-text").textContent = e.text;
+    // Verse (Lucretius) arrives with line breaks: one block per line, wrapped parts indented.
+    const textEl = $("day-text");
+    textEl.textContent = "";
+    if (e.text.includes("\n")) {
+      for (const line of e.text.split("\n")) {
+        const span = document.createElement("span");
+        span.className = "verse-line";
+        span.textContent = line;
+        textEl.appendChild(span);
+      }
+    } else {
+      textEl.textContent = e.text;
+    }
+    // Short passages stay centred; longer ones switch to left-aligned for easier reading.
+    const passage = $("day-text").parentElement;
+    passage.classList.toggle("long", e.text.length > 160);
+    passage.classList.toggle("very-long", e.text.length > 320);
+    passage.classList.toggle("verse", e.text.includes("\n"));
     $("day-source").textContent = e.source;
     $("day-tradition").textContent = e.tradition;
     $("day-context-text").textContent = e.context;
@@ -117,6 +144,7 @@
     $("day-moon-note").textContent = moonNote || "";
     $("day-moon-note").hidden = !moonNote;
     $("returning").hidden = !(key === today && returning);
+    renderGreeting(key === today);
 
     $("day-context").hidden = true;
     $("context-toggle").setAttribute("aria-expanded", "false");
@@ -306,6 +334,47 @@
     }
   }
 
+  // ---------- greeting ----------
+  function renderGreeting(show) {
+    const name = (store.get("name", "") || "").trim();
+    const h = new Date().getHours();
+    const part = h >= 5 && h < 12 ? "Good morning" : h >= 12 && h < 18 ? "Good afternoon" : "Good evening";
+    $("greeting").textContent = name ? `${part}, ${name}` : part;
+    $("greeting").hidden = !show;
+  }
+
+  // First launch only: a calm welcome that asks for a name (optional).
+  function maybeWelcome() {
+    if (store.get("welcomed")) return;
+    $("welcome").hidden = false;
+    $("welcome").addEventListener("submit", (ev) => {
+      ev.preventDefault();
+      saveName($("welcome-name").value);
+      store.set("welcomed", "1");
+      $("welcome").hidden = true;
+      route();
+    }, { once: true });
+  }
+
+  function saveName(value) {
+    const name = value.trim().slice(0, 40);
+    if (name) store.set("name", name); else store.remove("name");
+  }
+
+  // ---------- about links ----------
+  function renderAboutLinks() {
+    $("name-setting").value = store.get("name", "");
+    $("support").hidden = IN_IOS_APP;
+    $("donate-link").href = DONATE_URL;
+    const e = entryFor(todayKey());
+    const mail = (subject, body) =>
+      `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    $("report-link").href = mail("Reflect: an issue",
+      `What happened?\n\n\nWhat did you expect?\n\n\n—\nDay: ${todayKey()} (${e.id})\nDevice: ${navigator.userAgent}`);
+    $("suggest-link").href = mail("Reflect: a reflection suggestion",
+      "The passage (with author, book and translation if you know it):\n\n\nWhich tradition is it from?\n\n\nWhy does it speak to you?\n\n");
+  }
+
   // ---------- gentle ending ----------
   // The app has an end: after a full silence or a finished note, it says goodbye for the day.
   // `after` is what was just finished ("writing" or "silence"); the other one is offered next.
@@ -366,7 +435,7 @@
     const hash = location.hash.replace(/^#\/?/, "");
     let view = "day";
     if (hash === "journal") { view = "journal"; renderJournal(); }
-    else if (hash === "about") { view = "about"; renderOfflineStatus(); }
+    else if (hash === "about") { view = "about"; renderOfflineStatus(); renderAboutLinks(); }
     else if (hash === "terms") view = "terms";
     else {
       const m = hash.match(/^day\/(\d{4}-\d{2}-\d{2})$/);
@@ -420,6 +489,7 @@
     document.querySelectorAll("[data-minutes]").forEach((b) =>
       b.addEventListener("click", () => setMinutes(b.dataset.minutes)));
     $("export-notes").addEventListener("click", exportNotes);
+    $("name-setting").addEventListener("change", (ev) => saveName(ev.target.value));
     $("clear-notes").addEventListener("click", clearNotes);
 
     window.addEventListener("hashchange", route);
@@ -438,6 +508,7 @@
     bind();
     markVisit();
     route();
+    maybeWelcome();
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
   }
 

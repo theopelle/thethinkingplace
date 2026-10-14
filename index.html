@@ -17,6 +17,7 @@
 
     <!-- Today / a single day -->
     <section id="view-day" class="view" hidden>
+      <p class="greeting" id="greeting" hidden></p>
       <p class="date" id="day-date"></p>
       <p class="returning" id="returning" hidden>You've read today's thought. The next one arrives tomorrow.</p>
 
@@ -48,7 +49,7 @@
 
       <div class="note" id="note" hidden>
         <textarea id="note-text" rows="4" aria-label="Your reflection"
-          placeholder="We recommend a paper notebook for your thoughts. If you'd rather type, write here: your notes stay on this device, only you can see them, and you can come back to them in past thoughts."></textarea>
+          placeholder="Write freely. Only you can see this."></textarea>
         <div class="note-foot">
           <button class="link quiet" id="note-done" hidden>I'm done writing for today</button>
           <p class="note-status" id="note-status" aria-live="polite"></p>
@@ -69,7 +70,11 @@
     <section id="view-about" class="view" hidden>
       <h1>About</h1>
       <p>One thought each day, the same for everyone, drawn in turn from nine traditions: Buddhism, Christianity, Hinduism, Islam, Judaism, Epicureanism, Existentialism, Platonism and Stoicism.</p>
-      <p>Read slowly. Sit with the question. Write if you like — your notes stay on this device.</p>
+      <p>Read slowly. Sit with the question. Write if you like, in a paper notebook or here; anything you type stays on this device, and you'll find it again in past thoughts.</p>
+
+      <h2>Your name</h2>
+      <input class="name-input" id="name-setting" type="text" maxlength="40" autocomplete="given-name"
+             placeholder="Leaving it blank is fine" aria-label="What should Reflect call you?">
 
       <h2>Appearance</h2>
       <div class="choice" role="radiogroup" aria-label="Theme">
@@ -101,7 +106,19 @@
       <h2>Offline</h2>
       <p class="muted" id="offline-status">Checking…</p>
 
-      <p class="fine"><a href="#/terms">Terms &amp; privacy</a></p>
+      <div id="support">
+      <h2>Support Reflect</h2>
+      <p>Reflect is free, with no ads and no tracking, and it always will be. Keeping it online costs about 50€ a year for the domain and hosting. If it brings you something, a 1€ coffee is more than enough.</p>
+      <p><a class="support-link" id="donate-link" target="_blank" rel="noopener">buy me a coffee →</a></p>
+      </div>
+
+      <p class="fine">
+        <a id="report-link">report an issue</a>
+        <span class="dot" aria-hidden="true">·</span>
+        <a id="suggest-link">suggest a reflection</a>
+        <span class="dot" aria-hidden="true">·</span>
+        <a href="#/terms">terms &amp; privacy</a>
+      </p>
     </section>
 
     <!-- Terms & privacy -->
@@ -113,7 +130,7 @@
       <p>This also means that if you clear this browser's data, uninstall the app or lose the device, your notes are gone. Use <em>export</em> on the About page to keep your own copy.</p>
 
       <h2>What we collect</h2>
-      <p>Nothing. Reflect uses no analytics, no cookies and no tracking. Your theme and silence settings are stored on your device alongside your notes. Once loaded, the app works entirely offline.</p>
+      <p>Nothing. Reflect uses no analytics, no cookies and no tracking. Your name (if you give one), theme and silence settings are stored on your device alongside your notes. If you report an issue or suggest a reflection, your own email app sends exactly what you choose to write, and we only see that message. Once loaded, the app works entirely offline.</p>
 
       <h2>The texts</h2>
       <p>Every passage is quoted from a public-domain translation, credited under "about this passage" with a link to its source. The short context notes and reflection questions are our own. Reflect presents these traditions side by side for personal reflection; it does not endorse or rank any of them.</p>
@@ -132,6 +149,15 @@
   </main>
 
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- First launch -->
+  <form class="closing welcome" id="welcome" hidden>
+    <p>Welcome to Reflect.<br>What should I call you?</p>
+    <input class="name-input" id="welcome-name" type="text" maxlength="40" autocomplete="given-name"
+           placeholder="Your first name" aria-label="Your first name">
+    <p class="welcome-hint">Leaving it blank is fine. It stays on this device.</p>
+    <button class="link" type="submit">continue</button>
+  </form>
 
   <!-- Closing moment -->
   <div class="closing" id="closing" hidden>

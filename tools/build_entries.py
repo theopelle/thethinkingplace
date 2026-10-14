@@ -105,10 +105,15 @@ DIALOGUE_START = {
 }
 
 
-def normalize(s):
+VERSE = {"pg785.txt"}  # Lucretius: keep the poem's line breaks
+
+
+def normalize(s, verse=False):
     s = unicodedata.normalize("NFC", s)
+    if verse:  # single newlines are verse lines; mark them so they survive whitespace folding
+        s = re.sub(r"(?<!\n)\n(?!\n)", "\u2028", s.replace("\r", ""))
     s = s.replace("\r", "").replace("\u200b", "")
-    s = re.sub(r"\s+", " ", s)
+    s = re.sub(r"[^\S\u2028]+", " ", s)
     return s
 
 
@@ -127,10 +132,11 @@ def clean(s, key):
         s = re.sub(r"(\w)- (\w)", r"\1\2", s)           # OCR line-break hyphens
     s = s.replace("--", "—").replace("`", "‘")
     s = re.sub(r"\b([Tt]o)- (morrow|day|night)", r"\1-\2", s)
-    s = re.sub(r"\s+([,;:.!?])", r"\1", s)
+    s = re.sub(r"[^\S\u2028]+([,;:.!?])", r"\1", s)
     s = re.sub(r"([.!?])(\s*\.)+$", r"\1", s)
     s = re.sub(r"([?!])\.", r"\1", s)
-    s = re.sub(r"\s+", " ", s).strip()
+    s = re.sub(r"[^\S\u2028]+", " ", s).strip()
+    s = re.sub(r" ?\u2028 ?", "\n", s).strip()
     s = s.strip(" “”\"'‘’")
     s = re.sub(r"[;:,]?-+$", ".", s)
     if s.count("“") > s.count("”"):
@@ -156,7 +162,7 @@ def load(key, srcdir):
     if kind == "text":
         if fname in DIALOGUE_START:
             raw = raw[raw.rfind(DIALOGUE_START[fname]):]
-        data = normalize(raw)
+        data = normalize(raw, verse=fname in VERSE)
     elif kind == "refs":
         data = {}
         for line in raw.splitlines():
