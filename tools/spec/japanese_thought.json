@@ -331,5 +331,23 @@
   "end": "within their own minds",
   "context": "A classic Zen story: two monks argue whether the wind or the flag is moving. The master's answer points elsewhere.",
   "prompt": "What argument would dissolve if you looked at your own mind instead?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. IV",
+  "from": "tea",
+  "start": "The tea-room is unimpressive in appearance.",
+  "end": "refined poverty.",
+  "context": "The tea room is deliberately tiny and plain, built to suggest 'refined poverty', and every humble detail is carefully chosen.",
+  "prompt": "Where could plainness be a kind of refinement in your life?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kenkō, Essays in Idleness 112",
+  "from": "kenko",
+  "start": "Nothing is harder to forsake than the customs and conventionalities of life",
+  "end": "whatever they may be.",
+  "context": "Kenkō observes how hard it is to step away from social obligations, even when we know they keep us from what matters.",
+  "prompt": "Which convention are you keeping only out of habit?"
  }
 ]

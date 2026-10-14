@@ -244,24 +244,6 @@
  },
  {
   "tradition": "Platonism",
-  "source": "Plato, Republic II, 369b",
-  "from": "republic",
-  "start": "A State, I said, arises, as I conceive, out of the needs of mankind",
-  "end": "many wants.",
-  "context": "Plato begins his account of society with interdependence. No one is self-sufficient.",
-  "prompt": "Whom do you depend on that you rarely think about?"
- },
- {
-  "tradition": "Platonism",
-  "source": "Plato, Republic VII, 520d",
-  "from": "republic",
-  "start": "the State in which the rulers are most reluctant to govern",
-  "end": "most eager, the worst.",
-  "context": "Those who crave power are often least fit for it.",
-  "prompt": "Where are you seeking power, and why?"
- },
- {
-  "tradition": "Platonism",
   "source": "Plato, Republic IV, 443d",
   "from": "republic",
   "start": "he sets in order his own inner life",
@@ -371,15 +353,6 @@
   "end": "ignorance of the world.",
   "context": "After an argument collapses, Socrates warns against giving up on reasoning altogether, just as disappointment can turn people against humanity.",
   "prompt": "Where has disappointment made you cynical?"
- },
- {
-  "tradition": "Platonism",
-  "source": "Plato, Phaedo 64a",
-  "from": "phaedo",
-  "start": "is not philosophy the practice of death?",
-  "end": "practice of death?",
-  "context": "For Plato, philosophy loosens our attachment to the body and its fears, a lifelong rehearsal for letting go.",
-  "prompt": "What would you practise letting go of today?"
  },
  {
   "tradition": "Platonism",

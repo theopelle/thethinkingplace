@@ -15,7 +15,7 @@ Each spec entry locates its passage in a source by reference (Bible-style
 "15:1" for verse-indexed sources) or by a start and end phrase. If a phrase
 is not found, the build fails, so nothing is ever quoted from memory.
 """
-import json, os, re, sys, unicodedata, urllib.parse
+import hashlib, json, os, re, sys, unicodedata, urllib.parse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(os.path.dirname(HERE), "entries.json")
@@ -338,7 +338,9 @@ def main(srcdir, freeze=False):
                 continue
             _, _, translation, url = SOURCES[e["from"]]
             entry = {
-                "id": slug(e["tradition"] + " " + e["source"]),
+                # Stable id from the passage text itself, so correcting a citation
+                # never detaches notes from their passage.
+                "id": slug(e["tradition"]) + "-" + hashlib.sha1(text.encode("utf-8")).hexdigest()[:10],
                 "tradition": e["tradition"],
                 "text": text,
                 "source": e["source"],

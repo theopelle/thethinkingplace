@@ -307,5 +307,23 @@
   "end": "perfects the Working.",
   "context": "For Aristotle, pleasure is not opposed to good activity; it is what completes it and makes it whole.",
   "prompt": "Which of your good activities also bring you pleasure?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book III",
+  "from": "aristotle",
+  "start": "fear such things indeed he will, but he will stand up against them as he ought",
+  "end": "the end of the virtue.",
+  "context": "The brave person isn't fearless. They feel fear and act well anyway, for the sake of what is right.",
+  "prompt": "What are you afraid of that is still worth facing?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book I",
+  "from": "aristotle",
+  "start": "there are three lines of life which stand out prominently to view",
+  "end": "the life of contemplation.",
+  "context": "Aristotle's three kinds of life: pleasure, public life, and thought. He asks which one truly leads to happiness.",
+  "prompt": "Which of the three lives are you mostly living?"
  }
 ]

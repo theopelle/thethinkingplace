@@ -182,30 +182,12 @@
  },
  {
   "tradition": "Epicureanism",
-  "source": "Epicurus, Principal Doctrines 7",
-  "from": "epicurus",
-  "start": "Some men have sought to become famous and renowned",
-  "end": "originally sought.",
-  "context": "Fame is usually sought for security. Epicurus asks whether it ever really delivers it.",
-  "prompt": "What are you hoping recognition will give you?"
- },
- {
-  "tradition": "Epicureanism",
   "source": "Epicurus, Principal Doctrines 8",
   "from": "epicurus",
   "start": "No pleasure is in itself evil",
   "end": "the pleasures themselves.",
   "context": "The problem is never pleasure itself, but what certain pleasures bring along with them.",
   "prompt": "Which pleasure brings trouble along with it?"
- },
- {
-  "tradition": "Epicureanism",
-  "source": "Epicurus, Principal Doctrines 14",
-  "from": "epicurus",
-  "start": "When tolerable security against our fellow-men is attained",
-  "end": "withdrawn from the multitude.",
-  "context": "Epicurus advised his followers to 'live unnoticed', valuing a quiet life among friends over public ambition.",
-  "prompt": "Where could you choose quiet over attention?"
  },
  {
   "tradition": "Epicureanism",
@@ -350,14 +332,5 @@
   "end": "mind at peace.",
   "context": "Lucretius contrasts anxious rituals with what he sees as true reverence: looking on the world with calm and clarity.",
   "prompt": "What would you see differently if you looked with a mind at peace?"
- },
- {
-  "tradition": "Epicureanism",
-  "source": "Lucretius, On the Nature of Things III",
-  "from": "lucretius",
-  "start": "Therefore death to us Is nothing",
-  "end": "concerns us in the least",
-  "context": "Lucretius restates Epicurus in verse, at the heart of his long argument against the fear of death.",
-  "prompt": "How much of your life is shaped by a fear of its ending?"
  }
 ]

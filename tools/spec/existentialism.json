@@ -236,15 +236,6 @@
  },
  {
   "tradition": "Existentialism",
-  "source": "Fyodor Dostoevsky, Notes from Underground I, ch. 9",
-  "from": "underground",
-  "start": "suffering is the sole origin of consciousness",
-  "end": "would not give it up for any satisfaction.",
-  "context": "A paradox from the Underground Man: awareness brings pain, yet no one would trade it for comfortable unawareness.",
-  "prompt": "What has a painful experience made you more aware of?"
- },
- {
-  "tradition": "Existentialism",
   "source": "Blaise Pascal, Pensées 347",
   "from": "pascal",
   "start": "Man is but a reed",
@@ -293,39 +284,12 @@
  },
  {
   "tradition": "Existentialism",
-  "source": "Blaise Pascal, Pensées 80",
-  "from": "pascal",
-  "start": "How comes it that a cripple does not offend us",
-  "end": "pity and not anger.",
-  "context": "We are angered not by others' limitations but by their claim that we are the ones who are wrong.",
-  "prompt": "Whose disagreement angers you, and why does it sting?"
- },
- {
-  "tradition": "Existentialism",
-  "source": "Blaise Pascal, Pensées 136",
-  "from": "pascal",
-  "start": "A mere trifle consoles us",
-  "end": "distresses us.",
-  "context": "Pascal on the fragility of our moods: small things lift us because small things also bring us down.",
-  "prompt": "What trifle upset you recently, and what trifle could lift you?"
- },
- {
-  "tradition": "Existentialism",
   "source": "Blaise Pascal, Pensées 152",
   "from": "pascal",
   "start": "Curiosity is only vanity",
   "end": "but to talk.",
   "context": "A sharp observation: much of what we want to know, we want to know in order to tell others.",
   "prompt": "What would you still want to experience if you could never tell anyone?"
- },
- {
-  "tradition": "Existentialism",
-  "source": "Blaise Pascal, Pensées 162",
-  "from": "pascal",
-  "start": "Cleopatra's nose",
-  "end": "would have been altered.",
-  "context": "History, and our own lives, turn on tiny details. Small causes can have enormous effects.",
-  "prompt": "What small thing changed the course of your life?"
  },
  {
   "tradition": "Existentialism",

@@ -241,15 +241,6 @@
  },
  {
   "tradition": "Taoism",
-  "source": "Laozi, Tao Te Ching 63",
-  "from": "taote",
-  "start": "to consider what is small as great",
-  "end": "to recompense injury with kindness.",
-  "context": "Taking small things seriously, and answering harm with kindness, are presented as the natural way of things.",
-  "prompt": "Who could you answer with kindness instead of injury?"
- },
- {
-  "tradition": "Taoism",
   "source": "Zhuangzi, ch. 2",
   "from": "zhuangzi",
   "context": "Small knowledge sees a part and takes it for everything. Great knowledge keeps the whole in view.",
@@ -339,15 +330,6 @@
  },
  {
   "tradition": "Taoism",
-  "source": "Laozi, Tao Te Ching 22",
-  "from": "taote",
-  "start": "He is free from self-display, and therefore he shines",
-  "end": "therefore he is distinguished",
-  "context": "The sage stands out precisely because he isn't trying to.",
-  "prompt": "Where could you let your work speak instead of you?"
- },
- {
-  "tradition": "Taoism",
   "source": "Zhuangzi, ch. 18",
   "from": "zhuangzi",
   "start": "Life is a loan with which the borrower does but add more dust",
@@ -363,15 +345,6 @@
   "end": "on the eve of success",
   "context": "Many projects fail at the very end, through carelessness when success is near. Laozi asks for the same care at the end as at the beginning.",
   "prompt": "What nearly finished thing deserves your full care now?"
- },
- {
-  "tradition": "Taoism",
-  "source": "Laozi, Tao Te Ching 9",
-  "from": "taote",
-  "start": "When gold and jade fill the hall",
-  "end": "brings its evil on itself.",
-  "context": "Treasure must be guarded, and pride invites its own fall. Possessions can become a burden.",
-  "prompt": "What do you own that has started to own you?"
  },
  {
   "tradition": "Taoism",

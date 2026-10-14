@@ -223,5 +223,104 @@
   "end": "moral worth",
   "context": "Kant imagines a kind person whose own grief has numbed their sympathy, yet who helps others anyway. That, he says, is where moral worth truly shows.",
   "prompt": "Who could you help today even if you don't feel like it?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, First Section",
+  "from": "kant_g",
+  "start": "For love, as an affection, cannot be commanded",
+  "end": "which can be commanded.",
+  "context": "Feelings can't be ordered, says Kant, but kindness can. 'Practical love' lives in what we choose to do, not in what we happen to feel.",
+  "prompt": "Who could you treat with love today, even without feeling it?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, First Section",
+  "from": "kant_g",
+  "start": "Intelligence, wit, judgement, and the other talents of the mind",
+  "end": "is not good.",
+  "context": "Talents and courage are gifts, but in a bad will they become dangerous. Character is what decides how they're used.",
+  "prompt": "Which of your gifts depends on good will to stay good?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, First Section",
+  "from": "kant_g",
+  "start": "To secure one's own happiness is a duty, at least indirectly",
+  "end": "transgression of duty.",
+  "context": "Kant isn't against happiness: neglecting our own wellbeing makes it harder to act well.",
+  "prompt": "How is looking after yourself part of doing right?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, Second Section",
+  "from": "kant_g",
+  "start": "if we look closer at them we everywhere come upon the dear self",
+  "end": "would often require self-denial.",
+  "context": "Kant admits that most of our good actions are mixed with self-interest. 'The dear self' is always somewhere nearby.",
+  "prompt": "Where is the dear self hiding in your good deeds?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, Second Section",
+  "from": "kant_g",
+  "start": "Everything in nature works according to laws.",
+  "end": "have a will.",
+  "context": "Stones fall and rivers flow by law. People alone can act according to principles they understand, and that is what it means to have a will.",
+  "prompt": "Which principle do you choose to live by?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Critique of Practical Reason",
+  "from": "kant_p",
+  "start": "Tell him the history of an honest man",
+  "end": "he rejects them.",
+  "context": "Kant suggests teaching ethics to children through stories like this one, where an honest man refuses bribes to join in slandering an innocent person.",
+  "prompt": "Which story of honesty has stayed with you?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Critique of Practical Reason",
+  "from": "kant_p",
+  "start": "Has not every even moderately honourable man sometimes found",
+  "end": "in his own eyes?",
+  "context": "Sometimes the only thing stopping a convenient lie is that we couldn't respect ourselves afterwards.",
+  "prompt": "When did self-respect stop you from taking an easy way out?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Critique of Practical Reason",
+  "from": "kant_p",
+  "start": "When an upright man is in the greatest distress",
+  "end": "inward glance of self-examination?",
+  "context": "Doing right may cost us dearly. What remains is the dignity of being able to look at ourselves honestly.",
+  "prompt": "What would let you face your own honest gaze tonight?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Critique of Practical Reason",
+  "from": "kant_p",
+  "start": "this word is self-contentment",
+  "end": "conscious of needing nothing.",
+  "context": "Kant's word for the quiet satisfaction of a good conscience: not pleasure, but the sense of needing nothing more.",
+  "prompt": "When did you last feel that you needed nothing more?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Critique of Practical Reason",
+  "from": "kant_p",
+  "start": "Even the moral law itself in its solemn majesty",
+  "end": "yielding it respect.",
+  "context": "We often look for a flaw in good people, and even in the moral law, so we don't have to feel humbled by them.",
+  "prompt": "Whose goodness do you try to explain away?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Critique of Practical Reason",
+  "from": "kant_p",
+  "start": "persons who are passing judgement on others often reveal their own character",
+  "end": "reveal their own character",
+  "context": "How we judge others, generously or harshly, says a great deal about us.",
+  "prompt": "What does the way you judge others reveal about you?"
  }
 ]

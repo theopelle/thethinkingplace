@@ -269,5 +269,59 @@
   "end": "natural complements and correctives.",
   "context": "Mill, trained from childhood as a reasoning machine, discovered that constant analysis can dry up feeling unless balanced by other habits.",
   "prompt": "What are you over-analysing that might simply need feeling?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Utilitarianism, ch. II",
+  "from": "mill_u",
+  "start": "The utilitarian morality does recognise in human beings the power of sacrificing",
+  "end": "the sacrifice is itself a good.",
+  "context": "Mill honours self-sacrifice, but only when it actually helps someone. Suffering for its own sake, he says, is wasted.",
+  "prompt": "Is a sacrifice you're making actually helping anyone?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. III",
+  "from": "mill_l",
+  "start": "Eccentricity has always abounded when and where strength of character has abounded",
+  "end": "and moral courage which it contained.",
+  "context": "Mill sees a society's tolerance of odd people as a sign of its vitality.",
+  "prompt": "Where could you allow yourself to be a little more eccentric?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. III",
+  "from": "mill_l",
+  "start": "The demand that all other people shall resemble ourselves, grows by what it feeds on.",
+  "end": "grows by what it feeds on.",
+  "context": "The urge to make others like us never stops on its own; every concession feeds it.",
+  "prompt": "Where are you asking someone to be more like you?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. III",
+  "from": "mill_l",
+  "start": "even in what people do for pleasure, conformity is the first thing thought of",
+  "end": "they have no nature to follow",
+  "context": "Mill's warning: by never following our own nature, we can end up with none to follow.",
+  "prompt": "What would you enjoy if nobody else's taste mattered?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. III",
+  "from": "mill_l",
+  "start": "the only unfailing and permanent source of improvement is liberty",
+  "end": "as there are individuals.",
+  "context": "Freedom multiplies the places where new ideas can start: one for every person.",
+  "prompt": "What could you improve if you felt free to try?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Utilitarianism, ch. II",
+  "from": "mill_u",
+  "start": "education and opinion, which have so vast a power over human character",
+  "end": "the good of the whole",
+  "context": "Mill hoped people could be raised to feel their own happiness and everyone else's as bound together.",
+  "prompt": "Where is your happiness bound up with the good of others?"
  }
 ]
