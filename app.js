@@ -174,6 +174,8 @@
     passage.classList.toggle("very-long", e.text.length > 320);
     passage.classList.toggle("verse", e.text.includes("\n"));
     $("day-source").textContent = e.source;
+    $("day-full").hidden = !e.shortened;
+    if (e.shortened) $("day-full-link").href = e.full_url;
     $("day-tradition").textContent = e.tradition;
     $("day-context-text").textContent = e.context;
     const tr = $("day-translation");

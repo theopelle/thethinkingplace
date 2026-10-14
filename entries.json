@@ -22,12 +22,14 @@
   {
     "id": "christianity-matthew-7-1516",
     "tradition": "Christianity",
-    "text": "Beware of false prophets, which come to you in sheep’s clothing, but inwardly they are ravening wolves. Ye shall know them by their fruits.",
+    "text": "Beware of false prophets, which come to you in sheep’s clothing, but inwardly they are ravening wolves. Ye shall know them by their fruits…",
     "source": "Matthew 7:15–16",
     "context": "From the Sermon on the Mount. The test offered is practical: judge people not by how they present themselves but by what their lives actually produce.",
     "prompt": "Whose words do you trust more than their actions — and does that include your own?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=Matthew%207%3A15%E2%80%9316&version=KJV"
   },
   {
     "id": "epicureanism-epicurus-principal-doctrines-27",
@@ -382,12 +384,14 @@
   {
     "id": "christianity-james-1-19",
     "tradition": "Christianity",
-    "text": "Let every man be swift to hear, slow to speak, slow to wrath.",
+    "text": "…let every man be swift to hear, slow to speak, slow to wrath.",
     "source": "James 1:19",
     "context": "The Letter of James is the most practical book of the New Testament, close in spirit to the wisdom literature. This line is a whole ethic of conversation in nine words.",
     "prompt": "In your next conversation, what would it take to listen first?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=James%201%3A19&version=KJV"
   },
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-ii",
@@ -1012,12 +1016,14 @@
   {
     "id": "christianity-matthew-10-16",
     "tradition": "Christianity",
-    "text": "Be ye therefore wise as serpents, and harmless as doves.",
+    "text": "…be ye therefore wise as serpents, and harmless as doves.",
     "source": "Matthew 10:16",
     "context": "Said to disciples being sent into a hostile world. Innocence and shrewdness are not opposites; we need both.",
     "prompt": "Where do you need to be wiser, without becoming harder?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=Matthew%2010%3A16&version=KJV"
   },
   {
     "id": "epicureanism-epicurus-letter-to-menoeceus-130131",
@@ -1072,12 +1078,14 @@
   {
     "id": "islam-qur-an-3-134",
     "tradition": "Islam",
-    "text": "Those who spend (freely), whether in prosperity, or in adversity; who restrain anger, and pardon (all) men.",
+    "text": "Those who spend (freely), whether in prosperity, or in adversity; who restrain anger, and pardon (all) men…",
     "source": "Qur'an 3:134",
     "context": "A description of the people of good character: generous in good times and bad, holding back anger, forgiving others.",
     "prompt": "Which of these three would ask the most of you today?",
     "translation": "Abdullah Yusuf Ali (1934)",
-    "source_url": "https://tanzil.net/trans/en.yusufali"
+    "source_url": "https://tanzil.net/trans/en.yusufali",
+    "shortened": true,
+    "full_url": "https://quran.com/3/134"
   },
   {
     "id": "stoicism-marcus-aurelius-meditations-7-59",
@@ -1102,12 +1110,14 @@
   {
     "id": "christianity-matthew-12-34",
     "tradition": "Christianity",
-    "text": "For out of the abundance of the heart the mouth speaketh.",
+    "text": "…for out of the abundance of the heart the mouth speaketh.",
     "source": "Matthew 12:34",
     "context": "Speech reveals what fills us. What we say most easily shows what we carry inside.",
     "prompt": "What have your words revealed about your heart lately?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=Matthew%2012%3A34&version=KJV"
   },
   {
     "id": "epicureanism-epicurus-letter-to-menoeceus-131",
@@ -1197,7 +1207,9 @@
     "context": "A question that measures success against something deeper. Achievement that costs us ourselves is a bad bargain.",
     "prompt": "Is there something you are gaining at too high a cost?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=Matthew%2016%3A26&version=KJV"
   },
   {
     "id": "epicureanism-epicurus-letter-to-menoeceus-132",
@@ -1252,12 +1264,14 @@
   {
     "id": "islam-qur-an-4-86",
     "tradition": "Islam",
-    "text": "When a (courteous) greeting is offered you, meet it with a greeting still more courteous, or (at least) of equal courtesy.",
+    "text": "When a (courteous) greeting is offered you, meet it with a greeting still more courteous, or (at least) of equal courtesy…",
     "source": "Qur'an 4:86",
     "context": "Courtesy as a practice: answer kindness with a little more kindness.",
     "prompt": "How could you return a greeting a little more warmly today?",
     "translation": "Abdullah Yusuf Ali (1934)",
-    "source_url": "https://tanzil.net/trans/en.yusufali"
+    "source_url": "https://tanzil.net/trans/en.yusufali",
+    "shortened": true,
+    "full_url": "https://quran.com/4/86"
   },
   {
     "id": "stoicism-marcus-aurelius-meditations-10-16",
@@ -1282,12 +1296,14 @@
   {
     "id": "christianity-matthew-26-41",
     "tradition": "Christianity",
-    "text": "The spirit indeed is willing, but the flesh is weak.",
+    "text": "…the spirit indeed is willing, but the flesh is weak.",
     "source": "Matthew 26:41",
     "context": "Spoken in the garden of Gethsemane to disciples who kept falling asleep. A compassionate recognition of the gap between intention and strength.",
     "prompt": "Where are your intentions good but your follow-through tired?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=Matthew%2026%3A41&version=KJV"
   },
   {
     "id": "epicureanism-epicurus-letter-to-menoeceus-132-2",
@@ -1372,12 +1388,14 @@
   {
     "id": "christianity-mark-2-27",
     "tradition": "Christianity",
-    "text": "The sabbath was made for man, and not man for the sabbath.",
+    "text": "…The sabbath was made for man, and not man for the sabbath.",
     "source": "Mark 2:27",
     "context": "A reply to critics who objected to disciples picking grain on the day of rest. Rules exist to serve human life, not the other way round.",
     "prompt": "Which rule in your life has forgotten what it was for?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=Mark%202%3A27&version=KJV"
   },
   {
     "id": "epicureanism-epicurus-letter-to-menoeceus-133",
@@ -1552,12 +1570,14 @@
   {
     "id": "christianity-luke-10-4142",
     "tradition": "Christianity",
-    "text": "Martha, Martha, thou art careful and troubled about many things: But one thing is needful.",
+    "text": "…Martha, Martha, thou art careful and troubled about many things: But one thing is needful…",
     "source": "Luke 10:41–42",
     "context": "Martha is busy serving guests while her sister Mary sits and listens. The gentle rebuke is not against work, but against being scattered.",
     "prompt": "Among all the things troubling you, what is the one thing needful?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=Luke%2010%3A41%E2%80%9342&version=KJV"
   },
   {
     "id": "epicureanism-epicurus-principal-doctrines-3",
@@ -1642,12 +1662,14 @@
   {
     "id": "christianity-luke-12-15",
     "tradition": "Christianity",
-    "text": "Take heed, and beware of covetousness: for a man’s life consisteth not in the abundance of the things which he possesseth.",
+    "text": "…Take heed, and beware of covetousness: for a man’s life consisteth not in the abundance of the things which he possesseth.",
     "source": "Luke 12:15",
     "context": "Spoken before the parable of the rich fool, who builds bigger barns and dies that night.",
     "prompt": "What does your life consist of, if not your possessions?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=Luke%2012%3A15&version=KJV"
   },
   {
     "id": "epicureanism-epicurus-principal-doctrines-4",
@@ -1732,12 +1754,14 @@
   {
     "id": "christianity-luke-12-48",
     "tradition": "Christianity",
-    "text": "For unto whomsoever much is given, of him shall be much required.",
+    "text": "…For unto whomsoever much is given, of him shall be much required…",
     "source": "Luke 12:48",
     "context": "Gifts come with responsibility. The more we have received, the more is fairly asked of us.",
     "prompt": "What have you been given that asks something of you in return?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=Luke%2012%3A48&version=KJV"
   },
   {
     "id": "epicureanism-epicurus-principal-doctrines-5",
@@ -1912,12 +1936,14 @@
   {
     "id": "christianity-john-8-7",
     "tradition": "Christianity",
-    "text": "He that is without sin among you, let him first cast a stone at her.",
+    "text": "…He that is without sin among you, let him first cast a stone at her.",
     "source": "John 8:7",
     "context": "A crowd brings a woman accused of adultery, ready to stone her. One sentence disperses them, oldest first.",
     "prompt": "Who are you ready to condemn for something you might also have done?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=John%208%3A7&version=KJV"
   },
   {
     "id": "epicureanism-epicurus-principal-doctrines-8",
@@ -2092,12 +2118,14 @@
   {
     "id": "christianity-john-12-24",
     "tradition": "Christianity",
-    "text": "Except a corn of wheat fall into the ground and die, it abideth alone: but if it die, it bringeth forth much fruit.",
+    "text": "…Except a corn of wheat fall into the ground and die, it abideth alone: but if it die, it bringeth forth much fruit.",
     "source": "John 12:24",
     "context": "An image from farming: a seed must be buried and lose its form before it can grow into a harvest.",
     "prompt": "What might need to end in your life so that something new can grow?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=John%2012%3A24&version=KJV"
   },
   {
     "id": "epicureanism-epicurus-principal-doctrines-16",
@@ -2272,12 +2300,14 @@
   {
     "id": "christianity-acts-20-35",
     "tradition": "Christianity",
-    "text": "It is more blessed to give than to receive.",
+    "text": "…It is more blessed to give than to receive.",
     "source": "Acts 20:35",
     "context": "Paul quotes this saying in a farewell speech. It appears nowhere in the Gospels, so it was likely passed down by word of mouth.",
     "prompt": "When did giving last make you happier than receiving?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=Acts%2020%3A35&version=KJV"
   },
   {
     "id": "epicureanism-epicurus-principal-doctrines-19",
@@ -2332,12 +2362,14 @@
   {
     "id": "islam-qur-an-57-20",
     "tradition": "Islam",
-    "text": "Know ye (all), that the life of this world is but play and amusement, pomp and mutual boasting and multiplying, (in rivalry) among yourselves, riches and children.",
+    "text": "Know ye (all), that the life of this world is but play and amusement, pomp and mutual boasting and multiplying, (in rivalry) among yourselves, riches and children…",
     "source": "Qur'an 57:20",
     "context": "The verse goes on to compare worldly life to rain-fed crops that flourish, turn yellow and crumble.",
     "prompt": "Which of these 'amusements' takes up most of your attention?",
     "translation": "Abdullah Yusuf Ali (1934)",
-    "source_url": "https://tanzil.net/trans/en.yusufali"
+    "source_url": "https://tanzil.net/trans/en.yusufali",
+    "shortened": true,
+    "full_url": "https://quran.com/57/20"
   },
   {
     "id": "stoicism-epictetus-enchiridion-11",
@@ -2512,12 +2544,14 @@
   {
     "id": "islam-qur-an-2-216",
     "tradition": "Islam",
-    "text": "But it is possible that ye dislike a thing which is good for you, and that ye love a thing which is bad for you.",
+    "text": "…But it is possible that ye dislike a thing which is good for you, and that ye love a thing which is bad for you…",
     "source": "Qur'an 2:216",
     "context": "Our likes and dislikes are poor guides to what is truly good for us.",
     "prompt": "What did you once resist that turned out to be good for you?",
     "translation": "Abdullah Yusuf Ali (1934)",
-    "source_url": "https://tanzil.net/trans/en.yusufali"
+    "source_url": "https://tanzil.net/trans/en.yusufali",
+    "shortened": true,
+    "full_url": "https://quran.com/2/216"
   },
   {
     "id": "stoicism-epictetus-enchiridion-20",
@@ -2692,12 +2726,14 @@
   {
     "id": "islam-qur-an-6-164",
     "tradition": "Islam",
-    "text": "Every soul draws the meed of its acts on none but itself: no bearer of burdens can bear the burden of another.",
+    "text": "…Every soul draws the meed of its acts on none but itself: no bearer of burdens can bear the burden of another…",
     "source": "Qur'an 6:164",
     "context": "A statement of personal responsibility: each person answers for their own deeds.",
     "prompt": "What burden are you carrying that isn't yours, or avoiding that is?",
     "translation": "Abdullah Yusuf Ali (1934)",
-    "source_url": "https://tanzil.net/trans/en.yusufali"
+    "source_url": "https://tanzil.net/trans/en.yusufali",
+    "shortened": true,
+    "full_url": "https://quran.com/6/164"
   },
   {
     "id": "stoicism-epictetus-enchiridion-42",
@@ -2722,12 +2758,14 @@
   {
     "id": "christianity-1-corinthians-13-12",
     "tradition": "Christianity",
-    "text": "For now we see through a glass, darkly; but then face to face.",
+    "text": "For now we see through a glass, darkly; but then face to face…",
     "source": "1 Corinthians 13:12",
     "context": "Ancient mirrors were polished metal and gave a dim, distorted image. Our understanding now, Paul says, is partial.",
     "prompt": "Where might you be seeing only part of the picture?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=1%20Corinthians%2013%3A12&version=KJV"
   },
   {
     "id": "epicureanism-epicurus-letter-to-idomeneus",
@@ -2812,12 +2850,14 @@
   {
     "id": "christianity-galatians-6-7",
     "tradition": "Christianity",
-    "text": "Whatsoever a man soweth, that shall he also reap.",
+    "text": "…whatsoever a man soweth, that shall he also reap.",
     "source": "Galatians 6:7",
     "context": "A farming image of consequence: what we plant through our choices is what we will harvest.",
     "prompt": "What are you sowing now that you will want to reap later?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=Galatians%206%3A7&version=KJV"
   },
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-ii-2",
@@ -2902,12 +2942,14 @@
   {
     "id": "christianity-ephesians-4-26",
     "tradition": "Christianity",
-    "text": "Let not the sun go down upon your wrath.",
+    "text": "…let not the sun go down upon your wrath.",
     "source": "Ephesians 4:26",
     "context": "Anger itself is not condemned here, but anger left to settle overnight. Resolve it before the day ends.",
     "prompt": "Is there anger you could resolve before the sun goes down today?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=Ephesians%204%3A26&version=KJV"
   },
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-iii",
@@ -2992,12 +3034,14 @@
   {
     "id": "christianity-philippians-4-8",
     "tradition": "Christianity",
-    "text": "Whatsoever things are true, whatsoever things are honest, whatsoever things are just, whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report; if there be any virtue, and if there be any praise, think on these things.",
+    "text": "…whatsoever things are true, whatsoever things are honest, whatsoever things are just, whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report; if there be any virtue, and if there be any praise, think on these things.",
     "source": "Philippians 4:8",
     "context": "Written by Paul from prison. What we dwell on shapes our inner life, so he asks his readers to choose what they dwell on.",
     "prompt": "What lovely or true thing could you dwell on today?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=Philippians%204%3A8&version=KJV"
   },
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-iii-2",
@@ -3082,12 +3126,14 @@
   {
     "id": "christianity-philippians-4-11",
     "tradition": "Christianity",
-    "text": "For I have learned, in whatsoever state I am, therewith to be content.",
+    "text": "…for I have learned, in whatsoever state I am, therewith to be content.",
     "source": "Philippians 4:11",
     "context": "Also written in prison. Paul presents contentment not as a mood but as something learned.",
     "prompt": "What would help you learn contentment where you are now?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=Philippians%204%3A11&version=KJV"
   },
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-iii-3",
@@ -3142,12 +3188,14 @@
   {
     "id": "islam-qur-an-49-6",
     "tradition": "Islam",
-    "text": "If a wicked person comes to you with any news, ascertain the truth, lest ye harm people unwittingly, and afterwards become full of repentance for what ye have done.",
+    "text": "…If a wicked person comes to you with any news, ascertain the truth, lest ye harm people unwittingly, and afterwards become full of repentance for what ye have done.",
     "source": "Qur'an 49:6",
     "context": "From Surah Al-Hujurat, a chapter of social ethics. Verify before you act on news, especially news about other people.",
     "prompt": "What have you believed about someone without checking?",
     "translation": "Abdullah Yusuf Ali (1934)",
-    "source_url": "https://tanzil.net/trans/en.yusufali"
+    "source_url": "https://tanzil.net/trans/en.yusufali",
+    "shortened": true,
+    "full_url": "https://quran.com/49/6"
   },
   {
     "id": "stoicism-seneca-on-the-shortness-of-life-2",
@@ -3232,12 +3280,14 @@
   {
     "id": "islam-qur-an-49-12",
     "tradition": "Islam",
-    "text": "Avoid suspicion as much (as possible): for suspicion in some cases is a sin: And spy not on each other behind their backs.",
+    "text": "…Avoid suspicion as much (as possible): for suspicion in some cases is a sin: And spy not on each other behind their backs…",
     "source": "Qur'an 49:12",
     "context": "The same chapter continues: suspicion, spying and backbiting corrode a community from within.",
     "prompt": "Whom have you been suspicious of without real cause?",
     "translation": "Abdullah Yusuf Ali (1934)",
-    "source_url": "https://tanzil.net/trans/en.yusufali"
+    "source_url": "https://tanzil.net/trans/en.yusufali",
+    "shortened": true,
+    "full_url": "https://quran.com/49/12"
   },
   {
     "id": "stoicism-seneca-on-the-shortness-of-life-3",
@@ -3262,12 +3312,14 @@
   {
     "id": "christianity-james-4-14",
     "tradition": "Christianity",
-    "text": "For what is your life? It is even a vapour, that appeareth for a little time, and then vanisheth away.",
+    "text": "…For what is your life? It is even a vapour, that appeareth for a little time, and then vanisheth away.",
     "source": "James 4:14",
     "context": "Said to people confidently planning their next year of business. Life is like morning mist: real, and brief.",
     "prompt": "If your life is a vapour, what do you want it to carry?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=James%204%3A14&version=KJV"
   },
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-ii-3",
@@ -3322,12 +3374,14 @@
   {
     "id": "islam-qur-an-61-2",
     "tradition": "Islam",
-    "text": "Why say ye that which ye do not?",
+    "text": "…Why say ye that which ye do not?",
     "source": "Qur'an 61:2",
     "context": "A pointed question about the gap between words and deeds.",
     "prompt": "What have you said you would do, and not yet done?",
     "translation": "Abdullah Yusuf Ali (1934)",
-    "source_url": "https://tanzil.net/trans/en.yusufali"
+    "source_url": "https://tanzil.net/trans/en.yusufali",
+    "shortened": true,
+    "full_url": "https://quran.com/61/2"
   },
   {
     "id": "stoicism-seneca-on-the-shortness-of-life-3-2",
@@ -3352,12 +3406,14 @@
   {
     "id": "christianity-matthew-5-44",
     "tradition": "Christianity",
-    "text": "Love your enemies, bless them that curse you, do good to them that hate you, and pray for them which despitefully use you, and persecute you.",
+    "text": "…Love your enemies, bless them that curse you, do good to them that hate you, and pray for them which despitefully use you, and persecute you.",
     "source": "Matthew 5:44",
     "context": "Perhaps the most demanding line of the Sermon on the Mount: love that extends even to those who wish us harm.",
     "prompt": "What would one small act of goodwill toward a difficult person look like?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=Matthew%205%3A44&version=KJV"
   },
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-iv",
@@ -3392,12 +3448,14 @@
   {
     "id": "judaism-ecclesiastes-9-11",
     "tradition": "Judaism",
-    "text": "The race is not to the swift, nor the battle to the strong, neither yet bread to the wise, nor yet riches to men of understanding, nor yet favour to men of skill; but time and chance happeneth to them all.",
+    "text": "…the race is not to the swift, nor the battle to the strong, neither yet bread to the wise, nor yet riches to men of understanding, nor yet favour to men of skill; but time and chance happeneth to them all.",
     "source": "Ecclesiastes 9:11",
     "context": "Kohelet notices that talent does not guarantee success. Time and chance play their part in every life.",
     "prompt": "How might you hold your successes, and failures, more humbly?",
     "translation": "JPS Tanakh (1917)",
-    "source_url": "https://www.sefaria.org/Ecclesiastes"
+    "source_url": "https://www.sefaria.org/Ecclesiastes",
+    "shortened": true,
+    "full_url": "https://www.sefaria.org/Ecclesiastes.9.11"
   },
   {
     "id": "existentialism-blaise-pascal-pensees-347-2",
@@ -3442,12 +3500,14 @@
   {
     "id": "christianity-james-3-5",
     "tradition": "Christianity",
-    "text": "Behold, how great a matter a little fire kindleth!",
+    "text": "…Behold, how great a matter a little fire kindleth!",
     "source": "James 3:5",
     "context": "James compares the tongue to a small spark that sets a whole forest alight.",
     "prompt": "What small word could start a fire, or put one out, today?",
     "translation": "King James Version (1611)",
-    "source_url": "https://www.gutenberg.org/ebooks/10"
+    "source_url": "https://www.gutenberg.org/ebooks/10",
+    "shortened": true,
+    "full_url": "https://www.biblegateway.com/passage/?search=James%203%3A5&version=KJV"
   },
   {
     "id": "epicureanism-lucretius-on-the-nature-of-things-v",
@@ -3642,11 +3702,13 @@
   {
     "id": "islam-qur-an-2-263",
     "tradition": "Islam",
-    "text": "Kind words and the covering of faults are better than charity followed by injury.",
+    "text": "Kind words and the covering of faults are better than charity followed by injury…",
     "source": "Qur'an 2:263",
     "context": "Generosity that humiliates its receiver does more harm than good. A kind word and discretion are worth more.",
     "prompt": "Whose faults could you cover with kindness today?",
     "translation": "Abdullah Yusuf Ali (1934)",
-    "source_url": "https://tanzil.net/trans/en.yusufali"
+    "source_url": "https://tanzil.net/trans/en.yusufali",
+    "shortened": true,
+    "full_url": "https://quran.com/2/263"
   }
 ]

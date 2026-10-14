@@ -15,7 +15,7 @@ Each spec entry locates its passage in a source by reference (Bible-style
 "15:1" for verse-indexed sources) or by a start and end phrase. If a phrase
 is not found, the build fails, so nothing is ever quoted from memory.
 """
-import json, os, re, sys, unicodedata
+import json, os, re, sys, unicodedata, urllib.parse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(os.path.dirname(HERE), "entries.json")
@@ -256,6 +256,29 @@ def extract(e, srcdir):
         find_span(data, p[0], p[1], e.get("near"), final=(i == len(parts) - 1)) for i, p in enumerate(parts))
 
 
+# Verse-level reading links, used when a scripture verse is shortened.
+SCRIPTURE_URL = {
+    "kjv": lambda ref: "https://www.biblegateway.com/passage/?search="
+                       + urllib.parse.quote(ref.replace("-", "–")) + "&version=KJV",
+    "quran": lambda ref: "https://quran.com/" + ref.replace(":", "/"),
+    "proverbs": lambda ref: "https://www.sefaria.org/Proverbs." + ref.replace(":", "."),
+    "eccl": lambda ref: "https://www.sefaria.org/Ecclesiastes." + ref.replace(":", "."),
+}
+
+
+def verse_cuts(e, srcdir):
+    """For a scripture quote taken from part of a verse: (cut at start, cut at end)."""
+    if "ref" not in e or e["from"] not in SCRIPTURE_URL or ("start" not in e and "parts" not in e):
+        return False, False
+    full = normalize(by_ref(load(e["from"], srcdir), e["ref"])).strip()
+    parts = e.get("parts") or [[e["start"], e.get("end")]]
+    first = find_span(full, parts[0][0], parts[0][1], final=False)
+    last = find_span(full, parts[-1][0], parts[-1][1], final=False)
+    before = full[:full.index(first)].strip(" “\"‘'")
+    after = full[full.index(last) + len(last):].strip(" .,;:!?\"”’'-—")
+    return bool(before), bool(after)
+
+
 def slug(s):
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
@@ -278,6 +301,12 @@ def main(srcdir, freeze=False):
                 if re.search(r"[\u0900-\u097f<>{}]|\[\d", text):
                     raise LookupError(f"markup or untranslated text in passage: {text[:80]!r}")
                 text = e.get("prefix", "") + text + e.get("suffix", "")
+                cut_start, cut_end = verse_cuts(e, srcdir)
+                if cut_start:  # show where the verse was entered mid-way, keeping its own case
+                    first_raw = extract(e, srcdir).lstrip(" “\"‘'")[:1]
+                    text = "…" + (text[0].lower() if first_raw.islower() else text[0]) + text[1:]
+                if cut_end and text[-1:] not in "?!":  # after ? or ! the link alone shows the cut
+                    text = re.sub(r"[.,;:…]+$", "", text).rstrip() + "…"
             except (LookupError, KeyError) as err:
                 errors.append(f"{fname}: {e['source']}: {err}")
                 continue
@@ -292,6 +321,9 @@ def main(srcdir, freeze=False):
                 "translation": e.get("translation", translation),
                 "source_url": url,
             }
+            if cut_start or cut_end:
+                entry["shortened"] = True
+                entry["full_url"] = SCRIPTURE_URL[e["from"]](e["ref"])
             by_trad[e["tradition"]].append(entry)
             if "replaces" in e:
                 replaces[e["replaces"]] = entry

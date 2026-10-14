@@ -85,6 +85,8 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 .passage.verse p { font-size: clamp(1.05rem, 3.9vw, 1.25rem); line-height: 1.5; }
 .verse-line { display: block; padding-left: 1.4em; text-indent: -1.4em; }
 .source { text-align: center; color: var(--muted); font-size: .9rem; margin: 2rem 0 .5rem; }
+.full-verse { text-align: center; margin: 0 0 .5rem; font-size: .75rem; }
+.full-verse a { color: var(--muted); }
 .tradition { font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; }
 
 .context { max-width: 28rem; margin: .5rem auto 0; color: var(--muted); font-size: .92rem; text-align: center; }
