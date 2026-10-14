@@ -27,6 +27,7 @@
 
   const $ = (id) => document.getElementById(id);
   let entries = [];
+  let glossary = [];
 
   // ---------- storage (always guarded) ----------
   const store = {
@@ -117,8 +118,8 @@
 
   // Shown under "about this passage" on the few days a month the moon is marked by a tradition.
   const MOON_NOTES = {
-    "full moon": "Full moon: in Buddhism and Hinduism, a traditional day of reflection.",
-    "new moon": "New moon: a day of observance in Buddhism and Hinduism. The Jewish month begins at the new moon, and the Islamic month with the first crescent after it.",
+    "full moon": "Full moon: a traditional day of reflection in Buddhism (uposatha) and Hinduism (Purnima).",
+    "new moon": "New moon: a day of observance in Buddhism (uposatha) and Hinduism (Amavasya). The Jewish month begins at the new moon (Rosh Chodesh), and the Islamic month with the first crescent after it.",
   };
 
   // A small line drawing of tonight's moon (as seen from the northern hemisphere).
@@ -188,6 +189,7 @@
     const moonNote = MOON_NOTES[moon.label];
     $("day-moon-note").textContent = moonNote || "";
     $("day-moon-note").hidden = !moonNote;
+    markTerms(e.tradition, ["day-text", "day-tradition", "day-source", "day-context-text", "day-moon-note"]);
     $("returning").hidden = !(key === today && returning);
     renderGreeting(key === today);
 
@@ -379,6 +381,74 @@
     }
   }
 
+  // ---------- glossary ----------
+  // Key terms get a faint underline; tapping one opens a short explanation.
+  // Each term is marked once per page, at its first appearance.
+  const escapeRe = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+  function markTerms(tradition, ids) {
+    closeTerm();
+    const used = new Set();
+    const terms = glossary
+      .map((g, i) => ({ ...g, i }))
+      .filter((g) => !g.scope || g.scope.includes(tradition));
+    for (const id of ids) {
+      const root = $(id);
+      if (!root) continue;
+      for (const g of terms) {
+        if (used.has(g.i)) continue;
+        const alts = [...g.match].sort((a, b) => b.length - a.length).map(escapeRe).join("|");
+        // Whole words only, and not part of a hyphenated compound like "Self-existent".
+        const re = new RegExp(`(?<![\\p{L}\\p{N}-])(${alts})(?![\\p{L}\\p{N}]|-\\p{L})`, g.exact ? "u" : "iu");
+        if (wrapFirst(root, re, g.i)) used.add(g.i);
+      }
+    }
+  }
+
+  // Wraps the first match of `re` in a text node of `root` (outside existing terms).
+  function wrapFirst(root, re, index) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: (n) => n.parentElement.closest(".term") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT,
+    });
+    for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+      const m = re.exec(node.data);
+      if (!m) continue;
+      const word = node.splitText(m.index);
+      word.splitText(m[1].length);
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "term";
+      btn.dataset.term = index;
+      btn.setAttribute("aria-haspopup", "dialog");
+      word.replaceWith(btn);
+      btn.appendChild(word);
+      return true;
+    }
+    return false;
+  }
+
+  function openTerm(btn) {
+    const g = glossary[+btn.dataset.term];
+    if (!g) return;
+    const card = $("term-card");
+    $("term-title").textContent = g.term;
+    $("term-def").textContent = g.def;
+    $("term-wiki").href = "https://en.wikipedia.org/wiki/" + encodeURIComponent(g.wiki).replace(/%2F/g, "/");
+    card.hidden = false;
+    // Place the card just below the word, or above it if there is no room.
+    const r = btn.getBoundingClientRect(), w = card.offsetWidth, h = card.offsetHeight;
+    const left = Math.min(Math.max(16, r.left + r.width / 2 - w / 2), window.innerWidth - w - 16);
+    const below = r.bottom + 10, above = r.top - h - 10;
+    card.style.left = left + "px";
+    card.style.top = (below + h < window.innerHeight - 64 || above < 16 ? below : above) + "px";
+    openTerm.from = btn;
+  }
+
+  function closeTerm() {
+    const card = $("term-card");
+    if (card && !card.hidden) card.hidden = true;
+  }
+
   // ---------- greeting ----------
   function renderGreeting(show) {
     const name = (store.get("name", "") || "").trim();
@@ -527,7 +597,18 @@
     });
     $("closing-share").addEventListener("click", share);
     document.addEventListener("visibilitychange", onVisibility);
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && silence) finishSilence(true); });
+    document.addEventListener("click", (ev) => {
+      const term = ev.target.closest(".term");
+      if (term) { ev.preventDefault(); openTerm.from === term && !$("term-card").hidden ? closeTerm() : openTerm(term); return; }
+      if (!ev.target.closest("#term-card")) closeTerm();
+    });
+    window.addEventListener("scroll", closeTerm, { passive: true });
+    window.addEventListener("resize", closeTerm);
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      if (!$("term-card").hidden) closeTerm();
+      else if (silence) finishSilence(true);
+    });
 
     document.querySelectorAll("[data-theme-choice]").forEach((b) =>
       b.addEventListener("click", () => { store.set("theme", b.dataset.themeChoice); applyTheme(b.dataset.themeChoice); }));
@@ -554,6 +635,7 @@
     const needed = Math.max(...SCHEDULE.map((b) => b.count));
     if (entries.length < needed) console.error(`Schedule expects ${needed} passages, found ${entries.length}.`);
     upgradeNotes();
+    try { glossary = await fetch("glossary.json", { cache: "no-cache" }).then((r) => r.json()); } catch {}
     bind();
     markVisit();
     route();

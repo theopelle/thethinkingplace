@@ -1,8 +1,8 @@
 // Offline support. Everything the app needs is cached on first visit, so it
 // opens with no network at all. Cached files are refreshed in the background
 // whenever the network is available.
-const CACHE = "reflect-v10";
-const SHELL = ["./", "index.html", "style.css", "app.js", "entries.json", "manifest.webmanifest", "icon.svg"];
+const CACHE = "reflect-v11";
+const SHELL = ["./", "index.html", "style.css", "app.js", "entries.json", "glossary.json", "manifest.webmanifest", "icon.svg"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));

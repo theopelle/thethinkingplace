@@ -1,0 +1,1003 @@
+[
+ {
+  "term": "Stoicism",
+  "match": [
+   "Stoicism",
+   "Stoics",
+   "Stoic"
+  ],
+  "wiki": "Stoicism",
+  "def": "A school of philosophy founded in Athens around 300 BCE. It teaches that a good life comes from virtue and from accepting calmly what lies outside our control."
+ },
+ {
+  "term": "Buddhism",
+  "match": [
+   "Buddhism",
+   "Buddhist"
+  ],
+  "wiki": "Buddhism",
+  "def": "A tradition founded in India around the 5th century BCE on the teachings of the Buddha. It aims to end suffering by understanding its causes and training the mind."
+ },
+ {
+  "term": "Christianity",
+  "match": [
+   "Christianity",
+   "Christian"
+  ],
+  "wiki": "Christianity",
+  "def": "A religion based on the life and teachings of Jesus of Nazareth, who lived in the 1st century CE. Its scriptures are the Bible's Old and New Testaments."
+ },
+ {
+  "term": "Epicureanism",
+  "match": [
+   "Epicureanism",
+   "Epicurean"
+  ],
+  "wiki": "Epicureanism",
+  "def": "A school of philosophy founded by Epicurus in Athens around 307 BCE. It holds that a happy life comes from simple pleasures, friendship and freedom from fear."
+ },
+ {
+  "term": "Hinduism",
+  "match": [
+   "Hinduism",
+   "Hindu"
+  ],
+  "wiki": "Hinduism",
+  "def": "A family of religious and philosophical traditions that grew up in the Indian subcontinent over more than three thousand years. Its scriptures include the Vedas, the Upanishads and the Bhagavad Gita."
+ },
+ {
+  "term": "Platonism",
+  "match": [
+   "Platonism",
+   "Platonic"
+  ],
+  "wiki": "Platonism",
+  "def": "The philosophy of Plato and those who followed him. It holds that beyond the changing world we see lie unchanging truths, such as the Good and the Beautiful, that the mind can come to know."
+ },
+ {
+  "term": "Judaism",
+  "match": [
+   "Judaism",
+   "Jewish"
+  ],
+  "wiki": "Judaism",
+  "def": "The religion of the Jewish people, rooted in the covenant described in the Hebrew Bible. Alongside scripture, it treasures a long tradition of rabbinic teaching and debate."
+ },
+ {
+  "term": "Existentialism",
+  "match": [
+   "Existentialism",
+   "existentialist",
+   "existentialists"
+  ],
+  "wiki": "Existentialism",
+  "def": "A movement in modern philosophy concerned with individual freedom, choice and the search for meaning. Its forerunners include Kierkegaard, Dostoevsky and Nietzsche."
+ },
+ {
+  "term": "Islam",
+  "match": [
+   "Islam",
+   "Islamic",
+   "Muslim"
+  ],
+  "wiki": "Islam",
+  "def": "A religion founded in Arabia in the 7th century CE, based on the Qur'an and the example of the Prophet Muhammad. Its followers are called Muslims."
+ },
+ {
+  "term": "Bhagavad Gita",
+  "match": [
+   "Bhagavad Gita",
+   "Gita"
+  ],
+  "wiki": "Bhagavad_Gita",
+  "def": "A 700-verse Hindu scripture, part of the epic Mahabharata. In it, the god Krishna counsels the warrior Arjuna on duty, action and the self on the eve of battle."
+ },
+ {
+  "term": "Upanishads",
+  "match": [
+   "Upanishads",
+   "Upanishad"
+  ],
+  "wiki": "Upanishads",
+  "def": "Ancient Hindu texts, the oldest composed in the first millennium BCE, that explore the nature of the self and ultimate reality. They form the philosophical heart of the Vedas."
+ },
+ {
+  "term": "Arjuna",
+  "match": [
+   "Arjuna"
+  ],
+  "wiki": "Arjuna",
+  "def": "A warrior prince and hero of the Mahabharata epic. In the Bhagavad Gita, his doubts before battle prompt Krishna's teaching."
+ },
+ {
+  "term": "Krishna",
+  "match": [
+   "Krishna"
+  ],
+  "wiki": "Krishna",
+  "def": "A major figure in Hinduism, worshipped as a form of the god Vishnu. In the Bhagavad Gita he is Arjuna's charioteer and teacher."
+ },
+ {
+  "term": "Kunti",
+  "match": [
+   "Kuntî"
+  ],
+  "wiki": "Kunti",
+  "def": "Arjuna's mother. 'Son of Kunti' is one of the names by which Krishna addresses him."
+ },
+ {
+  "term": "Bharata",
+  "match": [
+   "Bhârata"
+  ],
+  "wiki": "Bharata_(Mahabharata)",
+  "def": "'Descendant of Bharata', an ancient king. Krishna uses it as a name for Arjuna, recalling his noble lineage."
+ },
+ {
+  "term": "Self (Atman)",
+  "match": [
+   "Self"
+  ],
+  "exact": true,
+  "scope": [
+   "Hinduism"
+  ],
+  "wiki": "Ātman_(Hinduism)",
+  "def": "In Hindu thought, the Self (Atman) is a person's deepest, unchanging essence, beyond body and mind. The Upanishads teach that it is one with Brahman, the ultimate reality."
+ },
+ {
+  "term": "Yoga",
+  "match": [
+   "yoga",
+   "Yogî"
+  ],
+  "scope": [
+   "Hinduism"
+  ],
+  "wiki": "Yoga",
+  "def": "In the Bhagavad Gita, yoga means a disciplined way of uniting action, mind and spirit, not mainly physical postures. A yogi is someone who practises it."
+ },
+ {
+  "term": "Svadharma",
+  "match": [
+   "svadharma"
+  ],
+  "wiki": "Svadharma",
+  "def": "One's own duty or path in life, suited to one's nature and situation. The Gita teaches it is better to follow it imperfectly than another's perfectly."
+ },
+ {
+  "term": "Sthitaprajna",
+  "match": [
+   "sthitaprajna"
+  ],
+  "wiki": "Sthitaprajna",
+  "def": "A Sanskrit term from the Bhagavad Gita for a person of steady wisdom. Such a person stays calm and clear through pleasure and pain alike."
+ },
+ {
+  "term": "Karma",
+  "match": [
+   "karma"
+  ],
+  "wiki": "Karma",
+  "def": "The principle that intentional actions shape a person's future experience, in this life or beyond. It is central to Hinduism, Buddhism and Jainism."
+ },
+ {
+  "term": "Brahmana",
+  "match": [
+   "Brâhmana"
+  ],
+  "wiki": "Brahmin",
+  "def": "A member of the priestly and learned class in traditional Hindu society. The Gita mentions one alongside animals and an outcaste to stress that the wise see all beings equally."
+ },
+ {
+  "term": "Nachiketas",
+  "match": [
+   "Nachiketas"
+  ],
+  "wiki": "Nachiketa",
+  "def": "A young seeker in the Katha Upanishad who meets Death and asks what happens after we die. He refuses every worldly reward in favour of true understanding."
+ },
+ {
+  "term": "Svetaketu",
+  "match": [
+   "Svetaketu"
+  ],
+  "wiki": "Shvetaketu",
+  "def": "A young student in the Chandogya Upanishad whose father teaches him that his deepest self is one with all reality. The lesson is summed up as 'thou art that'."
+ },
+ {
+  "term": "Tat tvam asi",
+  "match": [
+   "tat tvam asi"
+  ],
+  "wiki": "Tat_Tvam_Asi",
+  "def": "Sanskrit for 'thou art that', one of the great sayings of the Upanishads. It expresses the unity of the individual self with ultimate reality."
+ },
+ {
+  "term": "Mahabharata",
+  "match": [
+   "Mahabharata"
+  ],
+  "wiki": "Mahabharata",
+  "def": "One of the two great Sanskrit epics of ancient India, telling of a war between two branches of a royal family. The Bhagavad Gita is a short section within it."
+ },
+ {
+  "term": "Satyameva Jayate",
+  "match": [
+   "Satyameva jayate"
+  ],
+  "wiki": "Satyameva_Jayate",
+  "def": "Sanskrit for 'truth alone triumphs', from the Mundaka Upanishad. It is India's national motto."
+ },
+ {
+  "term": "Purnima",
+  "match": [
+   "Purnima"
+  ],
+  "wiki": "Purnima",
+  "def": "The full moon day in the Hindu calendar. Many festivals and religious observances fall on it."
+ },
+ {
+  "term": "Amavasya",
+  "match": [
+   "Amavasya"
+  ],
+  "wiki": "Amavasya",
+  "def": "The new moon day in the Hindu calendar. It is often a day for remembering ancestors and for quiet observance."
+ },
+ {
+  "term": "Dhammapada",
+  "match": [
+   "Dhammapada"
+  ],
+  "wiki": "Dhammapada",
+  "def": "A collection of 423 verses attributed to the Buddha, one of the best-loved Buddhist scriptures. Its name means roughly 'path of the teaching'."
+ },
+ {
+  "term": "Buddha",
+  "match": [
+   "Buddhas",
+   "Buddha"
+  ],
+  "wiki": "The_Buddha",
+  "def": "Siddhartha Gautama, a spiritual teacher in ancient India and the founder of Buddhism. 'Buddha' is a title meaning 'awakened one'."
+ },
+ {
+  "term": "Awakened",
+  "match": [
+   "the Awakened"
+  ],
+  "scope": [
+   "Buddhism"
+  ],
+  "wiki": "Buddhahood",
+  "def": "Those who have reached full enlightenment, the Buddhas. 'Buddha' itself means 'awakened one'."
+ },
+ {
+  "term": "Nirvana",
+  "match": [
+   "Nirvana"
+  ],
+  "wiki": "Nirvana_(Buddhism)",
+  "def": "In Buddhism, the final freedom from craving and suffering. The word means 'blowing out', as of a flame."
+ },
+ {
+  "term": "Tathagata",
+  "match": [
+   "Tathagatas",
+   "Tathagata"
+  ],
+  "wiki": "Tathāgata",
+  "def": "A title the Buddha used for himself, often understood as 'one who has thus gone' or 'thus come'. In the plural it refers to Buddhas in general."
+ },
+ {
+  "term": "Mara",
+  "match": [
+   "Mara"
+  ],
+  "scope": [
+   "Buddhism"
+  ],
+  "wiki": "Mara_(demon)",
+  "def": "In Buddhism, the tempter who tried to stop the Buddha's awakening. He stands for death, desire and the forces that keep us deluded."
+ },
+ {
+  "term": "Bhikshu",
+  "match": [
+   "Bhikshu"
+  ],
+  "wiki": "Bhikkhu",
+  "def": "A Buddhist monk, one who has left home life to follow the Buddha's path. The word originally means 'one who lives on alms'."
+ },
+ {
+  "term": "Dhamma (the law)",
+  "match": [
+   "the true law",
+   "the law",
+   "the laws"
+  ],
+  "scope": [
+   "Buddhism"
+  ],
+  "wiki": "Dharma_(Buddhism)",
+  "def": "In the Dhammapada, 'the law' translates Dhamma: the Buddha's teaching and the truth about how things are. It is not law in the legal sense."
+ },
+ {
+  "term": "Uposatha",
+  "match": [
+   "uposatha"
+  ],
+  "wiki": "Uposatha",
+  "def": "Buddhist observance days that fall on the full and new moon and the quarter moons. Lay people often keep extra precepts and spend time in reflection."
+ },
+ {
+  "term": "Pirkei Avot",
+  "match": [
+   "Pirkei Avot",
+   "Ethics of the Fathers"
+  ],
+  "wiki": "Pirkei_Avot",
+  "def": "A collection of ethical sayings by Jewish sages, part of the Mishnah, compiled around 200 CE. Its name means 'Chapters of the Fathers'."
+ },
+ {
+  "term": "Mishnah",
+  "match": [
+   "Mishnaic",
+   "Mishnah"
+  ],
+  "wiki": "Mishnah",
+  "def": "The first major written collection of Jewish oral law, compiled around 200 CE. It is the foundation of the Talmud."
+ },
+ {
+  "term": "Hillel",
+  "match": [
+   "Hillel the Elder",
+   "Hillel"
+  ],
+  "wiki": "Hillel_the_Elder",
+  "def": "A Jewish sage active around the turn of the 1st century BCE and CE, famous for his patience and humility. He is remembered for summing up the Torah as 'what is hateful to you, do not do to your neighbour'."
+ },
+ {
+  "term": "Shammai",
+  "match": [
+   "Shammai"
+  ],
+  "wiki": "Shammai",
+  "def": "A Jewish sage and Hillel's contemporary, active around the turn of the 1st century BCE and CE. His school was known for stricter rulings than Hillel's."
+ },
+ {
+  "term": "Rabbi",
+  "match": [
+   "Rabbi",
+   "rabbinic",
+   "Rabban"
+  ],
+  "wiki": "Rabbi",
+  "def": "A teacher of Jewish law and tradition. 'Rabban' was a higher honorific given to leaders of the community."
+ },
+ {
+  "term": "Hebrew Bible",
+  "match": [
+   "Hebrew Bible"
+  ],
+  "wiki": "Hebrew_Bible",
+  "def": "The Jewish scriptures, also called the Tanakh: the Torah, the Prophets and the Writings. Christians know these books as the Old Testament."
+ },
+ {
+  "term": "Ecclesiastes",
+  "match": [
+   "Ecclesiastes",
+   "Kohelet"
+  ],
+  "wiki": "Ecclesiastes",
+  "def": "A book of the Hebrew Bible, called Kohelet in Hebrew, that reflects on the meaning of life, work and time. It is known for its frank, questioning voice."
+ },
+ {
+  "term": "Book of Proverbs",
+  "match": [
+   "Book of Proverbs",
+   "Proverbs"
+  ],
+  "wiki": "Book_of_Proverbs",
+  "def": "A book of the Hebrew Bible made up of short sayings of practical wisdom. Tradition attributes much of it to King Solomon."
+ },
+ {
+  "term": "King Solomon",
+  "match": [
+   "King Solomon"
+  ],
+  "wiki": "Solomon",
+  "def": "A king of ancient Israel, son of David, remembered in the Bible for his wisdom. He is traditionally credited with Proverbs and Ecclesiastes."
+ },
+ {
+  "term": "Torah",
+  "match": [
+   "Torah"
+  ],
+  "wiki": "Torah",
+  "def": "The first five books of the Hebrew Bible, and more broadly all Jewish teaching. The word means 'instruction'."
+ },
+ {
+  "term": "Rosh Chodesh",
+  "match": [
+   "Rosh Chodesh"
+  ],
+  "wiki": "Rosh_Chodesh",
+  "def": "The start of each month in the Jewish calendar, which follows the moon. It is marked as a minor festival."
+ },
+ {
+  "term": "Sabbath",
+  "match": [
+   "sabbath"
+  ],
+  "wiki": "Sabbath",
+  "def": "The weekly day of rest from Friday evening to Saturday evening in Judaism, rooted in the creation story. Many Christians keep Sunday as their day of rest instead."
+ },
+ {
+  "term": "New Testament",
+  "match": [
+   "New Testament"
+  ],
+  "wiki": "New_Testament",
+  "def": "The second part of the Christian Bible, written in Greek in the 1st century CE. It contains the Gospels, the letters of the apostles and the Book of Revelation."
+ },
+ {
+  "term": "Gospels",
+  "match": [
+   "Gospels",
+   "Gospel"
+  ],
+  "wiki": "Gospel",
+  "def": "The four accounts of the life and teaching of Jesus: Matthew, Mark, Luke and John. They open the New Testament."
+ },
+ {
+  "term": "Sermon on the Mount",
+  "match": [
+   "Sermon on the Mount"
+  ],
+  "wiki": "Sermon_on_the_Mount",
+  "def": "A collection of Jesus' teachings in the Gospel of Matthew, chapters 5 to 7. It includes the Beatitudes and the Lord's Prayer."
+ },
+ {
+  "term": "Sermon on the Plain",
+  "match": [
+   "Sermon on the Plain"
+  ],
+  "wiki": "Sermon_on_the_Plain",
+  "def": "Luke's shorter counterpart to the Sermon on the Mount, in chapter 6 of his Gospel. Many of the same teachings appear in both."
+ },
+ {
+  "term": "Beatitudes",
+  "match": [
+   "Beatitudes"
+  ],
+  "wiki": "Beatitudes",
+  "def": "The blessings that open the Sermon on the Mount, such as 'Blessed are the meek'. Each names a quality and its reward."
+ },
+ {
+  "term": "Golden Rule",
+  "match": [
+   "Golden Rule"
+  ],
+  "wiki": "Golden_Rule",
+  "def": "The principle of treating others as you would want to be treated. Versions of it appear in nearly every religious and ethical tradition."
+ },
+ {
+  "term": "King James Version",
+  "match": [
+   "King James"
+  ],
+  "wiki": "King_James_Version",
+  "def": "An English translation of the Bible published in 1611 under King James I. Its language has deeply shaped English literature."
+ },
+ {
+  "term": "Charity (agape)",
+  "match": [
+   "Charity",
+   "charity"
+  ],
+  "scope": [
+   "Christianity"
+  ],
+  "wiki": "Agape",
+  "def": "In the King James Bible, 'charity' translates the Greek agape: selfless, unconditional love. It does not mean giving money."
+ },
+ {
+  "term": "Paul",
+  "match": [
+   "Paul"
+  ],
+  "scope": [
+   "Christianity"
+  ],
+  "wiki": "Paul_the_Apostle",
+  "def": "An early Christian missionary of the 1st century CE whose letters make up much of the New Testament. He wrote to communities in cities such as Corinth and Rome."
+ },
+ {
+  "term": "Gethsemane",
+  "match": [
+   "Gethsemane"
+  ],
+  "wiki": "Gethsemane",
+  "def": "A garden at the foot of the Mount of Olives in Jerusalem. According to the Gospels, Jesus prayed there on the night before his crucifixion."
+ },
+ {
+  "term": "Qur'an",
+  "match": [
+   "Qur'an"
+  ],
+  "wiki": "Quran",
+  "def": "The central scripture of Islam, believed by Muslims to have been revealed to the Prophet Muhammad in the 7th century CE. It is divided into 114 chapters called surahs."
+ },
+ {
+  "term": "Surah",
+  "match": [
+   "Surah"
+  ],
+  "wiki": "Surah",
+  "def": "A chapter of the Qur'an. There are 114, each with its own name, such as Al-Asr ('Time')."
+ },
+ {
+  "term": "Hadith",
+  "match": [
+   "Hadith",
+   "hadith"
+  ],
+  "wiki": "Hadith",
+  "def": "A report of the words or actions of the Prophet Muhammad, passed down by his companions. Collections of hadith guide Muslim life alongside the Qur'an."
+ },
+ {
+  "term": "Prophet Muhammad",
+  "match": [
+   "Prophet Muhammad",
+   "Muhammad"
+  ],
+  "wiki": "Muhammad",
+  "def": "The founder of Islam, born in Mecca around 570 CE. Muslims regard him as the last prophet, through whom the Qur'an was revealed."
+ },
+ {
+  "term": "Sahih al-Bukhari",
+  "match": [
+   "Sahih al-Bukhari"
+  ],
+  "wiki": "Sahih_al-Bukhari",
+  "def": "A collection of hadith compiled by the scholar al-Bukhari in the 9th century. Sunni Muslims regard it as the most reliable after the Qur'an."
+ },
+ {
+  "term": "Sahih Muslim",
+  "match": [
+   "Sahih Muslim"
+  ],
+  "wiki": "Sahih_Muslim",
+  "def": "A collection of hadith compiled by the scholar Muslim ibn al-Hajjaj in the 9th century. With al-Bukhari's, it is one of the two most trusted collections."
+ },
+ {
+  "term": "Jami' at-Tirmidhi",
+  "match": [
+   "Jami' at-Tirmidhi"
+  ],
+  "wiki": "Sunan_al-Tirmidhi",
+  "def": "A collection of hadith compiled by al-Tirmidhi in the 9th century. It is one of the six major Sunni collections."
+ },
+ {
+  "term": "Sunan Ibn Majah",
+  "match": [
+   "Sunan Ibn Majah"
+  ],
+  "wiki": "Sunan_Ibn_Majah",
+  "def": "A collection of hadith compiled by Ibn Majah in the 9th century. It is one of the six major Sunni collections."
+ },
+ {
+  "term": "an-Nawawi's Forty",
+  "match": [
+   "an-Nawawi's Forty",
+   "an-Nawawi's"
+  ],
+  "wiki": "Al-Nawawi's_Forty_Hadith",
+  "def": "A short collection of forty-two essential hadith gathered by the scholar an-Nawawi in the 13th century. It is widely memorised as a summary of Islamic ethics."
+ },
+ {
+  "term": "Mecca",
+  "match": [
+   "Meccan",
+   "Mecca"
+  ],
+  "wiki": "Mecca",
+  "def": "A city in western Arabia, Muhammad's birthplace and the holiest city in Islam. 'Meccan' surahs are those revealed before he moved to Medina in 622 CE."
+ },
+ {
+  "term": "Luqman",
+  "match": [
+   "Luqman"
+  ],
+  "wiki": "Luqman",
+  "def": "A wise man honoured in the Qur'an, which names a surah after him. It records his advice to his son on humility and gratitude."
+ },
+ {
+  "term": "Marcus Aurelius",
+  "match": [
+   "Marcus Aurelius",
+   "Marcus"
+  ],
+  "wiki": "Marcus_Aurelius",
+  "def": "Roman emperor from 161 to 180 CE and a devoted Stoic. His private notes to himself became the Meditations."
+ },
+ {
+  "term": "Meditations",
+  "match": [
+   "Meditations"
+  ],
+  "wiki": "Meditations",
+  "def": "The personal notebook of Marcus Aurelius, written in Greek during his military campaigns. It was never meant for publication."
+ },
+ {
+  "term": "Epictetus",
+  "match": [
+   "Epictetus"
+  ],
+  "wiki": "Epictetus",
+  "def": "A Stoic teacher (around 50–135 CE) who was born a slave and later freed. His teachings were written down by his student Arrian."
+ },
+ {
+  "term": "Enchiridion",
+  "match": [
+   "Enchiridion"
+  ],
+  "wiki": "Enchiridion_of_Epictetus",
+  "def": "A short 'handbook' of Epictetus' teachings, compiled by his student Arrian. Its title means 'ready at hand'."
+ },
+ {
+  "term": "Discourses",
+  "match": [
+   "Discourses"
+  ],
+  "scope": [
+   "Stoicism"
+  ],
+  "wiki": "Discourses_of_Epictetus",
+  "def": "Records of Epictetus' lectures, written down by his student Arrian in the 2nd century CE. Four of the original eight books survive."
+ },
+ {
+  "term": "Seneca",
+  "match": [
+   "Seneca"
+  ],
+  "wiki": "Seneca_the_Younger",
+  "def": "A Roman Stoic philosopher, statesman and playwright (around 4 BCE–65 CE). He advised the emperor Nero and wrote essays and letters on how to live."
+ },
+ {
+  "term": "Democritus",
+  "match": [
+   "Democritus"
+  ],
+  "wiki": "Democritus",
+  "def": "A Greek philosopher of the 5th century BCE who taught that everything is made of tiny atoms. He was known as 'the laughing philosopher' for his cheerfulness."
+ },
+ {
+  "term": "Epicurus",
+  "match": [
+   "Epicurus"
+  ],
+  "wiki": "Epicurus",
+  "def": "A Greek philosopher (341–270 BCE) who founded the school called the Garden in Athens. He taught that peace of mind and friendship are the heart of a happy life."
+ },
+ {
+  "term": "Principal Doctrines",
+  "match": [
+   "Principal Doctrines"
+  ],
+  "wiki": "Principal_Doctrines",
+  "def": "Forty short sayings summing up the philosophy of Epicurus and his school, which his followers memorised. They survive in Diogenes Laërtius' life of Epicurus."
+ },
+ {
+  "term": "Letter to Menoeceus",
+  "match": [
+   "Letter to Menoeceus"
+  ],
+  "wiki": "Letter_to_Menoeceus",
+  "def": "A letter in which Epicurus summarises his ethics for a student named Menoeceus. It covers death, desire and the good life."
+ },
+ {
+  "term": "The Garden",
+  "match": [
+   "the Garden"
+  ],
+  "scope": [
+   "Epicureanism"
+  ],
+  "wiki": "Epicureanism",
+  "def": "Epicurus' school and community in Athens, named after the garden where its members lived and studied. Unusually for its time, it welcomed women and slaves."
+ },
+ {
+  "term": "Ataraxia",
+  "match": [
+   "ataraxia"
+  ],
+  "wiki": "Ataraxia",
+  "def": "A Greek word for a calm, untroubled state of mind. For Epicureans and Stoics alike, it was a central aim of the good life."
+ },
+ {
+  "term": "Lucretius",
+  "match": [
+   "Lucretius"
+  ],
+  "wiki": "Lucretius",
+  "def": "A Roman poet of the 1st century BCE who set out Epicurus' philosophy in a long poem. Little is known about his life."
+ },
+ {
+  "term": "On the Nature of Things",
+  "match": [
+   "On the Nature of Things"
+  ],
+  "wiki": "De_rerum_natura",
+  "def": "Lucretius' poem explaining Epicurean philosophy, from atoms to the fear of death. Its Latin title is De rerum natura."
+ },
+ {
+  "term": "Usufruct",
+  "match": [
+   "usufruct"
+  ],
+  "wiki": "Usufruct",
+  "def": "A legal right to use something and enjoy its fruits without owning it. Lucretius uses it to say that life is lent to us, not owned."
+ },
+ {
+  "term": "Fee-simple",
+  "match": [
+   "fee-simple"
+  ],
+  "wiki": "Fee_simple",
+  "def": "Full, permanent ownership of property, in old English law. Lucretius says no one holds life this way."
+ },
+ {
+  "term": "Acheron",
+  "match": [
+   "Acheron"
+  ],
+  "wiki": "Acheron",
+  "def": "In Greek mythology, a river of the underworld that the dead had to cross. Lucretius reads such myths as pictures of our anxieties in this life."
+ },
+ {
+  "term": "Plato",
+  "match": [
+   "Plato"
+  ],
+  "wiki": "Plato",
+  "def": "An Athenian philosopher (around 428–348 BCE), student of Socrates and teacher of Aristotle. He wrote his philosophy as dialogues, usually starring Socrates; references like 38a are standard page numbers in his works."
+ },
+ {
+  "term": "Socrates",
+  "match": [
+   "Socrates"
+  ],
+  "wiki": "Socrates",
+  "def": "An Athenian philosopher (around 470–399 BCE) who wrote nothing, but questioned everyone. He was sentenced to death for impiety and corrupting the youth, and we know him mainly through Plato."
+ },
+ {
+  "term": "Apology",
+  "match": [
+   "Apology"
+  ],
+  "scope": [
+   "Platonism"
+  ],
+  "wiki": "Apology_(Plato)",
+  "def": "Plato's account of Socrates' speech in his own defence at his trial in 399 BCE. 'Apology' here means a defence, not saying sorry."
+ },
+ {
+  "term": "Crito",
+  "match": [
+   "Crito"
+  ],
+  "wiki": "Crito",
+  "def": "A dialogue set in Socrates' prison cell, where his friend Crito urges him to escape. Socrates explains why he will not."
+ },
+ {
+  "term": "Phaedo",
+  "match": [
+   "Phaedo"
+  ],
+  "wiki": "Phaedo",
+  "def": "A dialogue describing Socrates' last day and death, in which he discusses the soul with his friends. It is told by his follower Phaedo."
+ },
+ {
+  "term": "Republic",
+  "match": [
+   "Republic"
+  ],
+  "wiki": "Republic_(Plato)",
+  "def": "Plato's best-known dialogue, asking what justice is in a city and in a person. It contains the famous Allegory of the Cave."
+ },
+ {
+  "term": "Symposium",
+  "match": [
+   "Symposium"
+  ],
+  "wiki": "Symposium_(Plato)",
+  "def": "A dialogue set at a drinking party where the guests each give a speech in praise of love. Socrates retells what he learned from the wise woman Diotima."
+ },
+ {
+  "term": "Phaedrus",
+  "match": [
+   "Phaedrus"
+  ],
+  "wiki": "Phaedrus_(dialogue)",
+  "def": "A dialogue in which Socrates and Phaedrus discuss love, the soul and the art of speaking. It contains the image of the soul as a charioteer."
+ },
+ {
+  "term": "Gorgias",
+  "match": [
+   "Gorgias"
+  ],
+  "wiki": "Gorgias_(dialogue)",
+  "def": "A dialogue about rhetoric and how to live, named after a famous teacher of persuasion. Socrates argues that doing wrong is worse than suffering it."
+ },
+ {
+  "term": "Theaetetus",
+  "match": [
+   "Theaetetus"
+  ],
+  "wiki": "Theaetetus_(dialogue)",
+  "def": "A dialogue in which Socrates and the young mathematician Theaetetus ask: what is knowledge? It ends without a final answer."
+ },
+ {
+  "term": "Meno",
+  "match": [
+   "Meno"
+  ],
+  "wiki": "Meno",
+  "def": "A dialogue asking whether virtue can be taught. Socrates shows that learning may be a kind of remembering."
+ },
+ {
+  "term": "Laws",
+  "match": [
+   "Laws"
+  ],
+  "scope": [
+   "Platonism"
+  ],
+  "wiki": "Laws_(dialogue)",
+  "def": "Plato's last and longest dialogue, designing the laws of an imagined city. It is the only one in which Socrates does not appear."
+ },
+ {
+  "term": "Diotima",
+  "match": [
+   "Diotima"
+  ],
+  "wiki": "Diotima_of_Mantinea",
+  "def": "A priestess from Mantinea whom Socrates names as his teacher on love in the Symposium. Scholars debate whether she was a real person."
+ },
+ {
+  "term": "Allegory of the Cave",
+  "match": [
+   "Allegory of the Cave"
+  ],
+  "wiki": "Allegory_of_the_cave",
+  "def": "A story in Plato's Republic about prisoners who mistake shadows on a wall for reality. It pictures philosophy as the turn toward the light of truth."
+ },
+ {
+  "term": "Ring of Gyges",
+  "match": [
+   "Ring of Gyges"
+  ],
+  "wiki": "Ring_of_Gyges",
+  "def": "A legendary ring that makes its wearer invisible, described in Plato's Republic. It raises the question of whether anyone would stay just if they could never be caught."
+ },
+ {
+  "term": "Misologist",
+  "match": [
+   "misologists",
+   "misologist"
+  ],
+  "wiki": "Misology",
+  "def": "A hater of reasoning and argument. Socrates warns that disappointment with bad arguments can turn into distrust of all reasoning."
+ },
+ {
+  "term": "Friedrich Nietzsche",
+  "match": [
+   "Friedrich Nietzsche",
+   "Nietzsche"
+  ],
+  "wiki": "Friedrich_Nietzsche",
+  "def": "A German philosopher (1844–1900) who questioned traditional values and asked how to affirm life without them. His aphoristic style shaped existentialism."
+ },
+ {
+  "term": "Thus Spake Zarathustra",
+  "match": [
+   "Thus Spake Zarathustra",
+   "Zarathustra"
+  ],
+  "wiki": "Thus_Spoke_Zarathustra",
+  "def": "Nietzsche's philosophical novel (1883–85) about a prophet who comes down from the mountains to teach. Its Zarathustra is loosely named after the ancient Persian prophet."
+ },
+ {
+  "term": "Superman (Übermensch)",
+  "match": [
+   "Superman"
+  ],
+  "wiki": "Übermensch",
+  "def": "Nietzsche's Übermensch, often translated 'overman': a human being who creates their own values and fully affirms life. It has nothing to do with the comic-book hero."
+ },
+ {
+  "term": "Amor fati",
+  "match": [
+   "Amor fati"
+  ],
+  "wiki": "Amor_fati",
+  "def": "Latin for 'love of fate'. Nietzsche used it for embracing everything that happens, including suffering, as necessary and even good."
+ },
+ {
+  "term": "Beyond Good and Evil",
+  "match": [
+   "Beyond Good and Evil"
+  ],
+  "wiki": "Beyond_Good_and_Evil",
+  "def": "A book by Nietzsche (1886) that criticises past philosophers and conventional morality. It is written largely in short sections and aphorisms."
+ },
+ {
+  "term": "The Joyful Wisdom",
+  "match": [
+   "The Joyful Wisdom"
+  ],
+  "wiki": "The_Gay_Science",
+  "def": "A book by Nietzsche (1882), also translated as 'The Gay Science', where 'gay' means joyful. It contains his famous ideas of eternal recurrence and amor fati."
+ },
+ {
+  "term": "Fyodor Dostoevsky",
+  "match": [
+   "Fyodor Dostoevsky",
+   "Dostoevsky"
+  ],
+  "wiki": "Fyodor_Dostoevsky",
+  "def": "A Russian novelist (1821–1881) whose books explore freedom, faith, guilt and suffering. He is often seen as a forerunner of existentialism."
+ },
+ {
+  "term": "The Brothers Karamazov",
+  "match": [
+   "The Brothers Karamazov"
+  ],
+  "wiki": "The_Brothers_Karamazov",
+  "def": "Dostoevsky's final novel (1880), about three brothers and the murder of their father. It wrestles with faith, doubt, freedom and love."
+ },
+ {
+  "term": "Zosima",
+  "match": [
+   "Zosima"
+  ],
+  "wiki": "The_Brothers_Karamazov",
+  "def": "A wise and gentle elder monk in The Brothers Karamazov and spiritual guide to the youngest brother, Alyosha. His teachings centre on active love and humility."
+ },
+ {
+  "term": "Notes from Underground",
+  "match": [
+   "Notes from Underground",
+   "Underground Man"
+  ],
+  "wiki": "Notes_from_Underground",
+  "def": "A short novel by Dostoevsky (1864), the bitter confession of an unnamed narrator known as the Underground Man. It is often called the first existentialist novel."
+ },
+ {
+  "term": "Blaise Pascal",
+  "match": [
+   "Blaise Pascal",
+   "Pascal"
+  ],
+  "wiki": "Blaise_Pascal",
+  "def": "A French mathematician, physicist and religious thinker (1623–1662). His unfinished notes on the human condition became the Pensées."
+ },
+ {
+  "term": "Pensées",
+  "match": [
+   "Pensées"
+  ],
+  "wiki": "Pensées",
+  "def": "French for 'thoughts': the fragments Pascal left unfinished at his death, published in 1670. They explore human greatness, misery and the search for meaning."
+ },
+ {
+  "term": "Søren Kierkegaard",
+  "match": [
+   "Kierkegaard"
+  ],
+  "wiki": "Søren_Kierkegaard",
+  "def": "A Danish philosopher (1813–1855), often called the father of existentialism. He wrote about anxiety, choice and becoming oneself."
+ }
+]
