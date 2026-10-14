@@ -1,0 +1,227 @@
+[
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, Second Section",
+  "from": "kant_g",
+  "start": "Act only on that maxim whereby thou canst",
+  "end": "become a universal law.",
+  "context": "Kant's 'categorical imperative', the test at the heart of his ethics: could you want everyone to do what you are about to do?",
+  "prompt": "What would happen if everyone did what you are tempted to do today?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Critique of Practical Reason, Conclusion",
+  "from": "kant_p",
+  "start": "Two things fill the mind with ever new and increasing admiration and awe",
+  "end": "the moral law within.",
+  "context": "Kant's most famous sentence, later engraved on his tombstone. The vastness outside us and the sense of right within us are equally worthy of wonder.",
+  "prompt": "When did you last feel awe, at the sky or at someone's goodness?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, Second Section",
+  "from": "kant_g",
+  "start": "So act as to treat humanity, whether in thine own person",
+  "end": "never as means only.",
+  "context": "Kant's second formulation of the moral law: never use a person, including yourself, merely as a tool.",
+  "prompt": "Is there anyone you've been treating more as a means than as a person?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, First Section",
+  "from": "kant_g",
+  "start": "Nothing can possibly be conceived in the world, or even out of it",
+  "end": "except a good will.",
+  "context": "The opening of Kant's argument. Talents, courage and even happiness can be misused. Only a good will is good in every circumstance.",
+  "prompt": "What good quality of yours depends on good will to stay good?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, First Section",
+  "from": "kant_g",
+  "start": "like a jewel, it would still shine by its own light",
+  "end": "whole value in itself.",
+  "context": "Even if a good intention fails completely, says Kant, its worth is untouched. Its value doesn't depend on results.",
+  "prompt": "Which of your efforts failed, yet still shone by its own light?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, Second Section",
+  "from": "kant_g",
+  "start": "In the kingdom of ends everything has either value or dignity.",
+  "end": "has a dignity.",
+  "context": "Things have a price and can be swapped. People have dignity: they cannot be replaced by anything 'equivalent'.",
+  "prompt": "Where have you been putting a price on something that has dignity?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, First Section",
+  "from": "kant_g",
+  "start": "wherever there is much commerce the prudent tradesman does not overcharge",
+  "end": "his own advantage required it",
+  "context": "An honest shopkeeper may be honest only because it pays. Kant asks us to notice the difference between doing right and doing right for the right reason.",
+  "prompt": "Which of your good habits would survive if they stopped paying off?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, First Section",
+  "from": "kant_g",
+  "start": "Duty is the necessity of acting from respect for the law.",
+  "end": "respect for the law.",
+  "context": "For Kant, duty isn't blind obedience. It means acting from respect for a principle you recognise as right.",
+  "prompt": "Which principle do you keep even when nobody is watching?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, First Section",
+  "from": "kant_g",
+  "start": "Should I be content that my maxim",
+  "end": "as well as for others?",
+  "context": "Kant's test for a lie told to escape a difficulty: would you accept a world where everyone lied whenever it suited them?",
+  "prompt": "What small untruth would fail this test?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, First Section",
+  "from": "kant_g",
+  "start": "Whether it is prudent, or whether it is right, to make a false promise?",
+  "end": "to make a false promise?",
+  "context": "Two different questions that often get mixed up: is it clever, and is it right?",
+  "prompt": "Which decision have you been judging by 'clever' instead of 'right'?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, First Section",
+  "from": "kant_g",
+  "start": "if the proper object of nature were its conservation",
+  "end": "carry out this purpose.",
+  "context": "If we existed only to be happy, Kant argues, instinct would have served us better than reason. So reason must have a higher purpose: to make our will good.",
+  "prompt": "What is your reason for, if not only your comfort?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, Second Section",
+  "from": "kant_g",
+  "start": "But a man is not a thing",
+  "end": "end in himself.",
+  "context": "Every person is an end in themselves, never merely an object to be used, not even by themselves.",
+  "prompt": "Where are you treating yourself as a thing to be used?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, First Section",
+  "from": "kant_g",
+  "start": "To be beneficent when we can is a duty",
+  "end": "their own work.",
+  "context": "Kant admires naturally kind people, but makes a surprising claim: kindness that comes only from temperament has less moral worth than kindness done from principle, when it is hard.",
+  "prompt": "Where is kindness easy for you, and where would it take principle?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, Second Section",
+  "from": "kant_g",
+  "start": "By a kingdom I understand the union of different rational beings",
+  "end": "by common laws.",
+  "context": "Kant pictures an ideal community in which everyone treats everyone else as an end, as both lawmaker and citizen.",
+  "prompt": "How would your day change if you acted as a member of that kingdom?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, First Section",
+  "from": "kant_g",
+  "start": "a good will appears to constitute the indispensable condition even of being worthy of happiness",
+  "end": "worthy of happiness.",
+  "context": "We don't enjoy seeing a bad person flourish. Kant takes this as a sign that goodness is what makes us deserve happiness.",
+  "prompt": "What would make you feel you had earned your happiness?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Critique of Practical Reason",
+  "from": "kant_p",
+  "start": "Duty! Thou sublime and mighty name",
+  "end": "gains reluctant reverence",
+  "context": "A rare burst of lyricism from Kant. Duty doesn't charm or threaten us; it simply asks, and we can't help respecting it.",
+  "prompt": "Which duty do you respect, even when you don't feel like doing it?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Critique of Practical Reason",
+  "from": "kant_p",
+  "start": "He judges, therefore, that he can do a certain thing",
+  "end": "he recognizes that he is free",
+  "context": "Often summed up as 'ought implies can'. Knowing what we ought to do is how we discover that we are free to do it.",
+  "prompt": "What do you know you ought to do, and so know you can?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Critique of Practical Reason",
+  "from": "kant_p",
+  "start": "Fontenelle says,",
+  "end": "my superior rank.",
+  "context": "Rank and talent may impress us, but only good character commands real inner respect.",
+  "prompt": "Whose quiet goodness do you respect most?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Critique of Practical Reason",
+  "from": "kant_p",
+  "start": "Because his example exhibits to me a law",
+  "end": "before my eyes.",
+  "context": "A good person's example humbles us because it proves that goodness is possible.",
+  "prompt": "Whose example shows you what is possible?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Critique of Practical Reason",
+  "from": "kant_p",
+  "start": "morality is not properly the doctrine how we should make ourselves happy",
+  "end": "worthy of happiness.",
+  "context": "Ethics, for Kant, is not a recipe for happiness. It is about becoming the kind of person who deserves it.",
+  "prompt": "What would make you more worthy of the happiness you want?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Critique of Practical Reason",
+  "from": "kant_p",
+  "start": "Ask him, however- if his sovereign ordered him",
+  "end": "his love of life, however great it may be.",
+  "context": "Kant's thought experiment: ordered on pain of death to bear false witness against an innocent person, could you refuse? You may not know whether you would, but you know you could.",
+  "prompt": "What would you refuse to do, whatever it cost?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Critique of Practical Reason",
+  "from": "kant_p",
+  "start": "This is virtue, and virtue, at least as a naturally acquired faculty, can never be perfect",
+  "end": "can never be perfect",
+  "context": "Virtue, for Kant, is steady progress rather than a finished state.",
+  "prompt": "Where are you making steady progress, even if you're not perfect?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, Second Section",
+  "from": "kant_g",
+  "start": "the notion of happiness is so indefinite",
+  "end": "really wishes and wills.",
+  "context": "Everyone wants happiness, Kant observes, yet nobody can say exactly what it would consist of. It is too tied to changing experience to be a firm guide.",
+  "prompt": "If you had to say precisely what would make you happy, could you?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Critique of Practical Reason",
+  "from": "kant_p",
+  "start": "A man must first appreciate the importance of what we call duty",
+  "end": "in his own eyes",
+  "context": "The satisfaction of doing right only comes once we've recognised for ourselves why it matters.",
+  "prompt": "Which duty brings you a quiet sense of dignity?"
+ },
+ {
+  "tradition": "Duty Ethics",
+  "source": "Kant, Groundwork, First Section",
+  "from": "kant_g",
+  "start": "Put the case that the mind of that philanthropist were clouded by sorrow",
+  "end": "moral worth",
+  "context": "Kant imagines a kind person whose own grief has numbed their sympathy, yet who helps others anyway. That, he says, is where moral worth truly shows.",
+  "prompt": "Who could you help today even if you don't feel like it?"
+ }
+]

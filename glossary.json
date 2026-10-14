@@ -10,22 +10,14 @@
   "def": "A school of philosophy founded in Athens around 300 BCE. It teaches that a good life comes from virtue and from accepting calmly what lies outside our control."
  },
  {
-  "term": "Buddhism",
+  "term": "Buddhist Philosophy",
   "match": [
+   "Buddhist Philosophy",
    "Buddhism",
    "Buddhist"
   ],
   "wiki": "Buddhism",
-  "def": "A tradition founded in India around the 5th century BCE on the teachings of the Buddha. It aims to end suffering by understanding its causes and training the mind."
- },
- {
-  "term": "Christianity",
-  "match": [
-   "Christianity",
-   "Christian"
-  ],
-  "wiki": "Christianity",
-  "def": "A religion based on the life and teachings of Jesus of Nazareth, who lived in the 1st century CE. Its scriptures are the Bible's Old and New Testaments."
+  "def": "The teachings of the Buddha (India, around the 5th century BCE) read as practical philosophy: an ethics and a training of the mind aimed at ending suffering. Many Wells draws mainly on the Dhammapada."
  },
  {
   "term": "Epicureanism",
@@ -37,15 +29,6 @@
   "def": "A school of philosophy founded by Epicurus in Athens around 307 BCE. It holds that a happy life comes from simple pleasures, friendship and freedom from fear."
  },
  {
-  "term": "Hinduism",
-  "match": [
-   "Hinduism",
-   "Hindu"
-  ],
-  "wiki": "Hinduism",
-  "def": "A family of religious and philosophical traditions that grew up in the Indian subcontinent over more than three thousand years. Its scriptures include the Vedas, the Upanishads and the Bhagavad Gita."
- },
- {
   "term": "Platonism",
   "match": [
    "Platonism",
@@ -53,15 +36,6 @@
   ],
   "wiki": "Platonism",
   "def": "The philosophy of Plato and those who followed him. It holds that beyond the changing world we see lie unchanging truths, such as the Good and the Beautiful, that the mind can come to know."
- },
- {
-  "term": "Judaism",
-  "match": [
-   "Judaism",
-   "Jewish"
-  ],
-  "wiki": "Judaism",
-  "def": "The religion of the Jewish people, rooted in the covenant described in the Hebrew Bible. Alongside scripture, it treasures a long tradition of rabbinic teaching and debate."
  },
  {
   "term": "Existentialism",
@@ -72,178 +46,6 @@
   ],
   "wiki": "Existentialism",
   "def": "A movement in modern philosophy concerned with individual freedom, choice and the search for meaning. Its forerunners include Kierkegaard, Dostoevsky and Nietzsche."
- },
- {
-  "term": "Islam",
-  "match": [
-   "Islam",
-   "Islamic",
-   "Muslim"
-  ],
-  "wiki": "Islam",
-  "def": "A religion founded in Arabia in the 7th century CE, based on the Qur'an and the example of the Prophet Muhammad. Its followers are called Muslims."
- },
- {
-  "term": "Bhagavad Gita",
-  "match": [
-   "Bhagavad Gita",
-   "Gita"
-  ],
-  "wiki": "Bhagavad_Gita",
-  "def": "A 700-verse Hindu scripture, part of the epic Mahabharata. In it, the god Krishna counsels the warrior Arjuna on duty, action and the self on the eve of battle."
- },
- {
-  "term": "Upanishads",
-  "match": [
-   "Upanishads",
-   "Upanishad"
-  ],
-  "wiki": "Upanishads",
-  "def": "Ancient Hindu texts, the oldest composed in the first millennium BCE, that explore the nature of the self and ultimate reality. They form the philosophical heart of the Vedas."
- },
- {
-  "term": "Arjuna",
-  "match": [
-   "Arjuna"
-  ],
-  "wiki": "Arjuna",
-  "def": "A warrior prince and hero of the Mahabharata epic. In the Bhagavad Gita, his doubts before battle prompt Krishna's teaching."
- },
- {
-  "term": "Krishna",
-  "match": [
-   "Krishna"
-  ],
-  "wiki": "Krishna",
-  "def": "A major figure in Hinduism, worshipped as a form of the god Vishnu. In the Bhagavad Gita he is Arjuna's charioteer and teacher."
- },
- {
-  "term": "Kunti",
-  "match": [
-   "Kuntî"
-  ],
-  "wiki": "Kunti",
-  "def": "Arjuna's mother. 'Son of Kunti' is one of the names by which Krishna addresses him."
- },
- {
-  "term": "Bharata",
-  "match": [
-   "Bhârata"
-  ],
-  "wiki": "Bharata_(Mahabharata)",
-  "def": "'Descendant of Bharata', an ancient king. Krishna uses it as a name for Arjuna, recalling his noble lineage."
- },
- {
-  "term": "Self (Atman)",
-  "match": [
-   "Self"
-  ],
-  "exact": true,
-  "scope": [
-   "Hinduism"
-  ],
-  "wiki": "Ātman_(Hinduism)",
-  "def": "In Hindu thought, the Self (Atman) is a person's deepest, unchanging essence, beyond body and mind. The Upanishads teach that it is one with Brahman, the ultimate reality."
- },
- {
-  "term": "Yoga",
-  "match": [
-   "yoga",
-   "Yogî"
-  ],
-  "scope": [
-   "Hinduism"
-  ],
-  "wiki": "Yoga",
-  "def": "In the Bhagavad Gita, yoga means a disciplined way of uniting action, mind and spirit, not mainly physical postures. A yogi is someone who practises it."
- },
- {
-  "term": "Svadharma",
-  "match": [
-   "svadharma"
-  ],
-  "wiki": "Svadharma",
-  "def": "One's own duty or path in life, suited to one's nature and situation. The Gita teaches it is better to follow it imperfectly than another's perfectly."
- },
- {
-  "term": "Sthitaprajna",
-  "match": [
-   "sthitaprajna"
-  ],
-  "wiki": "Sthitaprajna",
-  "def": "A Sanskrit term from the Bhagavad Gita for a person of steady wisdom. Such a person stays calm and clear through pleasure and pain alike."
- },
- {
-  "term": "Karma",
-  "match": [
-   "karma"
-  ],
-  "wiki": "Karma",
-  "def": "The principle that intentional actions shape a person's future experience, in this life or beyond. It is central to Hinduism, Buddhism and Jainism."
- },
- {
-  "term": "Brahmana",
-  "match": [
-   "Brâhmana"
-  ],
-  "wiki": "Brahmin",
-  "def": "A member of the priestly and learned class in traditional Hindu society. The Gita mentions one alongside animals and an outcaste to stress that the wise see all beings equally."
- },
- {
-  "term": "Nachiketas",
-  "match": [
-   "Nachiketas"
-  ],
-  "wiki": "Nachiketa",
-  "def": "A young seeker in the Katha Upanishad who meets Death and asks what happens after we die. He refuses every worldly reward in favour of true understanding."
- },
- {
-  "term": "Svetaketu",
-  "match": [
-   "Svetaketu"
-  ],
-  "wiki": "Shvetaketu",
-  "def": "A young student in the Chandogya Upanishad whose father teaches him that his deepest self is one with all reality. The lesson is summed up as 'thou art that'."
- },
- {
-  "term": "Tat tvam asi",
-  "match": [
-   "tat tvam asi"
-  ],
-  "wiki": "Tat_Tvam_Asi",
-  "def": "Sanskrit for 'thou art that', one of the great sayings of the Upanishads. It expresses the unity of the individual self with ultimate reality."
- },
- {
-  "term": "Mahabharata",
-  "match": [
-   "Mahabharata"
-  ],
-  "wiki": "Mahabharata",
-  "def": "One of the two great Sanskrit epics of ancient India, telling of a war between two branches of a royal family. The Bhagavad Gita is a short section within it."
- },
- {
-  "term": "Satyameva Jayate",
-  "match": [
-   "Satyameva jayate"
-  ],
-  "wiki": "Satyameva_Jayate",
-  "def": "Sanskrit for 'truth alone triumphs', from the Mundaka Upanishad. It is India's national motto."
- },
- {
-  "term": "Purnima",
-  "match": [
-   "Purnima"
-  ],
-  "wiki": "Purnima",
-  "def": "The full moon day in the Hindu calendar. Many festivals and religious observances fall on it."
- },
- {
-  "term": "Amavasya",
-  "match": [
-   "Amavasya"
-  ],
-  "wiki": "Amavasya",
-  "def": "The new moon day in the Hindu calendar. It is often a day for remembering ancestors and for quiet observance."
  },
  {
   "term": "Dhammapada",
@@ -268,7 +70,7 @@
    "the Awakened"
   ],
   "scope": [
-   "Buddhism"
+   "Buddhist Philosophy"
   ],
   "wiki": "Buddhahood",
   "def": "Those who have reached full enlightenment, the Buddhas. 'Buddha' itself means 'awakened one'."
@@ -296,18 +98,10 @@
    "Mara"
   ],
   "scope": [
-   "Buddhism"
+   "Buddhist Philosophy"
   ],
   "wiki": "Mara_(demon)",
   "def": "In Buddhism, the tempter who tried to stop the Buddha's awakening. He stands for death, desire and the forces that keep us deluded."
- },
- {
-  "term": "Bhikshu",
-  "match": [
-   "Bhikshu"
-  ],
-  "wiki": "Bhikkhu",
-  "def": "A Buddhist monk, one who has left home life to follow the Buddha's path. The word originally means 'one who lives on alms'."
  },
  {
   "term": "Dhamma (the law)",
@@ -317,7 +111,7 @@
    "the laws"
   ],
   "scope": [
-   "Buddhism"
+   "Buddhist Philosophy"
   ],
   "wiki": "Dharma_(Buddhism)",
   "def": "In the Dhammapada, 'the law' translates Dhamma: the Buddha's teaching and the truth about how things are. It is not law in the legal sense."
@@ -329,289 +123,6 @@
   ],
   "wiki": "Uposatha",
   "def": "Buddhist observance days that fall on the full and new moon and the quarter moons. Lay people often keep extra precepts and spend time in reflection."
- },
- {
-  "term": "Pirkei Avot",
-  "match": [
-   "Pirkei Avot",
-   "Ethics of the Fathers"
-  ],
-  "wiki": "Pirkei_Avot",
-  "def": "A collection of ethical sayings by Jewish sages, part of the Mishnah, compiled around 200 CE. Its name means 'Chapters of the Fathers'."
- },
- {
-  "term": "Mishnah",
-  "match": [
-   "Mishnaic",
-   "Mishnah"
-  ],
-  "wiki": "Mishnah",
-  "def": "The first major written collection of Jewish oral law, compiled around 200 CE. It is the foundation of the Talmud."
- },
- {
-  "term": "Hillel",
-  "match": [
-   "Hillel the Elder",
-   "Hillel"
-  ],
-  "wiki": "Hillel_the_Elder",
-  "def": "A Jewish sage active around the turn of the 1st century BCE and CE, famous for his patience and humility. He is remembered for summing up the Torah as 'what is hateful to you, do not do to your neighbour'."
- },
- {
-  "term": "Shammai",
-  "match": [
-   "Shammai"
-  ],
-  "wiki": "Shammai",
-  "def": "A Jewish sage and Hillel's contemporary, active around the turn of the 1st century BCE and CE. His school was known for stricter rulings than Hillel's."
- },
- {
-  "term": "Rabbi",
-  "match": [
-   "Rabbi",
-   "rabbinic",
-   "Rabban"
-  ],
-  "wiki": "Rabbi",
-  "def": "A teacher of Jewish law and tradition. 'Rabban' was a higher honorific given to leaders of the community."
- },
- {
-  "term": "Hebrew Bible",
-  "match": [
-   "Hebrew Bible"
-  ],
-  "wiki": "Hebrew_Bible",
-  "def": "The Jewish scriptures, also called the Tanakh: the Torah, the Prophets and the Writings. Christians know these books as the Old Testament."
- },
- {
-  "term": "Ecclesiastes",
-  "match": [
-   "Ecclesiastes",
-   "Kohelet"
-  ],
-  "wiki": "Ecclesiastes",
-  "def": "A book of the Hebrew Bible, called Kohelet in Hebrew, that reflects on the meaning of life, work and time. It is known for its frank, questioning voice."
- },
- {
-  "term": "Book of Proverbs",
-  "match": [
-   "Book of Proverbs",
-   "Proverbs"
-  ],
-  "wiki": "Book_of_Proverbs",
-  "def": "A book of the Hebrew Bible made up of short sayings of practical wisdom. Tradition attributes much of it to King Solomon."
- },
- {
-  "term": "King Solomon",
-  "match": [
-   "King Solomon"
-  ],
-  "wiki": "Solomon",
-  "def": "A king of ancient Israel, son of David, remembered in the Bible for his wisdom. He is traditionally credited with Proverbs and Ecclesiastes."
- },
- {
-  "term": "Torah",
-  "match": [
-   "Torah"
-  ],
-  "wiki": "Torah",
-  "def": "The first five books of the Hebrew Bible, and more broadly all Jewish teaching. The word means 'instruction'."
- },
- {
-  "term": "Rosh Chodesh",
-  "match": [
-   "Rosh Chodesh"
-  ],
-  "wiki": "Rosh_Chodesh",
-  "def": "The start of each month in the Jewish calendar, which follows the moon. It is marked as a minor festival."
- },
- {
-  "term": "Sabbath",
-  "match": [
-   "sabbath"
-  ],
-  "wiki": "Sabbath",
-  "def": "The weekly day of rest from Friday evening to Saturday evening in Judaism, rooted in the creation story. Many Christians keep Sunday as their day of rest instead."
- },
- {
-  "term": "New Testament",
-  "match": [
-   "New Testament"
-  ],
-  "wiki": "New_Testament",
-  "def": "The second part of the Christian Bible, written in Greek in the 1st century CE. It contains the Gospels, the letters of the apostles and the Book of Revelation."
- },
- {
-  "term": "Gospels",
-  "match": [
-   "Gospels",
-   "Gospel"
-  ],
-  "wiki": "Gospel",
-  "def": "The four accounts of the life and teaching of Jesus: Matthew, Mark, Luke and John. They open the New Testament."
- },
- {
-  "term": "Sermon on the Mount",
-  "match": [
-   "Sermon on the Mount"
-  ],
-  "wiki": "Sermon_on_the_Mount",
-  "def": "A collection of Jesus' teachings in the Gospel of Matthew, chapters 5 to 7. It includes the Beatitudes and the Lord's Prayer."
- },
- {
-  "term": "Sermon on the Plain",
-  "match": [
-   "Sermon on the Plain"
-  ],
-  "wiki": "Sermon_on_the_Plain",
-  "def": "Luke's shorter counterpart to the Sermon on the Mount, in chapter 6 of his Gospel. Many of the same teachings appear in both."
- },
- {
-  "term": "Beatitudes",
-  "match": [
-   "Beatitudes"
-  ],
-  "wiki": "Beatitudes",
-  "def": "The blessings that open the Sermon on the Mount, such as 'Blessed are the meek'. Each names a quality and its reward."
- },
- {
-  "term": "Golden Rule",
-  "match": [
-   "Golden Rule"
-  ],
-  "wiki": "Golden_Rule",
-  "def": "The principle of treating others as you would want to be treated. Versions of it appear in nearly every religious and ethical tradition."
- },
- {
-  "term": "King James Version",
-  "match": [
-   "King James"
-  ],
-  "wiki": "King_James_Version",
-  "def": "An English translation of the Bible published in 1611 under King James I. Its language has deeply shaped English literature."
- },
- {
-  "term": "Charity (agape)",
-  "match": [
-   "Charity",
-   "charity"
-  ],
-  "scope": [
-   "Christianity"
-  ],
-  "wiki": "Agape",
-  "def": "In the King James Bible, 'charity' translates the Greek agape: selfless, unconditional love. It does not mean giving money."
- },
- {
-  "term": "Paul",
-  "match": [
-   "Paul"
-  ],
-  "scope": [
-   "Christianity"
-  ],
-  "wiki": "Paul_the_Apostle",
-  "def": "An early Christian missionary of the 1st century CE whose letters make up much of the New Testament. He wrote to communities in cities such as Corinth and Rome."
- },
- {
-  "term": "Gethsemane",
-  "match": [
-   "Gethsemane"
-  ],
-  "wiki": "Gethsemane",
-  "def": "A garden at the foot of the Mount of Olives in Jerusalem. According to the Gospels, Jesus prayed there on the night before his crucifixion."
- },
- {
-  "term": "Qur'an",
-  "match": [
-   "Qur'an"
-  ],
-  "wiki": "Quran",
-  "def": "The central scripture of Islam, believed by Muslims to have been revealed to the Prophet Muhammad in the 7th century CE. It is divided into 114 chapters called surahs."
- },
- {
-  "term": "Surah",
-  "match": [
-   "Surah"
-  ],
-  "wiki": "Surah",
-  "def": "A chapter of the Qur'an. There are 114, each with its own name, such as Al-Asr ('Time')."
- },
- {
-  "term": "Hadith",
-  "match": [
-   "Hadith",
-   "hadith"
-  ],
-  "wiki": "Hadith",
-  "def": "A report of the words or actions of the Prophet Muhammad, passed down by his companions. Collections of hadith guide Muslim life alongside the Qur'an."
- },
- {
-  "term": "Prophet Muhammad",
-  "match": [
-   "Prophet Muhammad",
-   "Muhammad"
-  ],
-  "wiki": "Muhammad",
-  "def": "The founder of Islam, born in Mecca around 570 CE. Muslims regard him as the last prophet, through whom the Qur'an was revealed."
- },
- {
-  "term": "Sahih al-Bukhari",
-  "match": [
-   "Sahih al-Bukhari"
-  ],
-  "wiki": "Sahih_al-Bukhari",
-  "def": "A collection of hadith compiled by the scholar al-Bukhari in the 9th century. Sunni Muslims regard it as the most reliable after the Qur'an."
- },
- {
-  "term": "Sahih Muslim",
-  "match": [
-   "Sahih Muslim"
-  ],
-  "wiki": "Sahih_Muslim",
-  "def": "A collection of hadith compiled by the scholar Muslim ibn al-Hajjaj in the 9th century. With al-Bukhari's, it is one of the two most trusted collections."
- },
- {
-  "term": "Jami' at-Tirmidhi",
-  "match": [
-   "Jami' at-Tirmidhi"
-  ],
-  "wiki": "Sunan_al-Tirmidhi",
-  "def": "A collection of hadith compiled by al-Tirmidhi in the 9th century. It is one of the six major Sunni collections."
- },
- {
-  "term": "Sunan Ibn Majah",
-  "match": [
-   "Sunan Ibn Majah"
-  ],
-  "wiki": "Sunan_Ibn_Majah",
-  "def": "A collection of hadith compiled by Ibn Majah in the 9th century. It is one of the six major Sunni collections."
- },
- {
-  "term": "an-Nawawi's Forty",
-  "match": [
-   "an-Nawawi's Forty",
-   "an-Nawawi's"
-  ],
-  "wiki": "Al-Nawawi's_Forty_Hadith",
-  "def": "A short collection of forty-two essential hadith gathered by the scholar an-Nawawi in the 13th century. It is widely memorised as a summary of Islamic ethics."
- },
- {
-  "term": "Mecca",
-  "match": [
-   "Meccan",
-   "Mecca"
-  ],
-  "wiki": "Mecca",
-  "def": "A city in western Arabia, Muhammad's birthplace and the holiest city in Islam. 'Meccan' surahs are those revealed before he moved to Medina in 622 CE."
- },
- {
-  "term": "Luqman",
-  "match": [
-   "Luqman"
-  ],
-  "wiki": "Luqman",
-  "def": "A wise man honoured in the Qur'an, which names a surah after him. It records his advice to his son on humility and gratitude."
  },
  {
   "term": "Marcus Aurelius",
@@ -993,11 +504,352 @@
   "def": "French for 'thoughts': the fragments Pascal left unfinished at his death, published in 1670. They explore human greatness, misery and the search for meaning."
  },
  {
-  "term": "Søren Kierkegaard",
+  "term": "Taoism",
   "match": [
-   "Kierkegaard"
+   "Taoism",
+   "Taoist"
   ],
-  "wiki": "Søren_Kierkegaard",
-  "def": "A Danish philosopher (1813–1855), often called the father of existentialism. He wrote about anxiety, choice and becoming oneself."
+  "wiki": "Taoism",
+  "def": "A Chinese tradition of thought going back to Laozi and Zhuangzi, in the 4th century BCE or earlier. It teaches living in harmony with the Tao, the natural way of things, through simplicity and effortless action."
+ },
+ {
+  "term": "Tao",
+  "match": [
+   "Tao"
+  ],
+  "wiki": "Tao",
+  "def": "Chinese for 'the Way': the natural order underlying all things. Taoists say it can be followed, but never fully put into words.",
+  "exact": true
+ },
+ {
+  "term": "Laozi",
+  "match": [
+   "Laozi",
+   "Lao Tzŭ",
+   "Laotse"
+  ],
+  "wiki": "Laozi",
+  "def": "A legendary Chinese sage, traditionally the author of the Tao Te Ching. Almost nothing is known of his life, and historians debate whether he was a single real person."
+ },
+ {
+  "term": "Tao Te Ching",
+  "match": [
+   "Tao Te Ching",
+   "Tao-teking"
+  ],
+  "wiki": "Tao_Te_Ching",
+  "def": "The founding text of Taoism: 81 short chapters, probably compiled around the 4th century BCE. It is one of the most translated books in the world."
+ },
+ {
+  "term": "Zhuangzi",
+  "match": [
+   "Zhuangzi",
+   "Chuang Tzŭ"
+  ],
+  "wiki": "Zhuangzi_(book)",
+  "def": "A Chinese philosopher of the 4th century BCE, and the book named after him, full of playful stories and paradoxes about freedom and the limits of knowledge."
+ },
+ {
+  "term": "Hui Shi",
+  "match": [
+   "Hui Tzŭ",
+   "Hui Shi"
+  ],
+  "wiki": "Hui_Shi",
+  "def": "A Chinese logician and statesman of the 4th century BCE. He was Zhuangzi's friend and favourite partner in debate."
+ },
+ {
+  "term": "Confucius",
+  "match": [
+   "Confucius",
+   "Confucians"
+  ],
+  "wiki": "Confucius",
+  "def": "A Chinese teacher and philosopher (551–479 BCE) whose teachings on virtue, family and good government shaped East Asian culture. Taoist writers often use him as a character in their stories."
+ },
+ {
+  "term": "Li",
+  "match": [
+   "li"
+  ],
+  "wiki": "Li_(unit)",
+  "def": "A traditional Chinese measure of distance. It varied over the centuries, but was usually about a third of a mile; today it is half a kilometre.",
+  "scope": [
+   "Taoism"
+  ],
+  "exact": true
+ },
+ {
+  "term": "Virtue Ethics",
+  "match": [
+   "Virtue Ethics"
+  ],
+  "wiki": "Virtue_ethics",
+  "def": "An approach to ethics rooted in Aristotle that asks not only 'what should I do?' but 'what kind of person should I become?'. Good character is built through practice."
+ },
+ {
+  "term": "Aristotle",
+  "match": [
+   "Aristotle"
+  ],
+  "wiki": "Aristotle",
+  "def": "A Greek philosopher (384–322 BCE), student of Plato and tutor of Alexander the Great. He wrote on nearly everything, from ethics and politics to biology and logic."
+ },
+ {
+  "term": "Nicomachean Ethics",
+  "match": [
+   "Nicomachean Ethics"
+  ],
+  "wiki": "Nicomachean_Ethics",
+  "def": "Aristotle's main work on ethics, traditionally said to be named after his son Nicomachus. It asks what a good human life is and how character is formed."
+ },
+ {
+  "term": "Eudaimonia",
+  "match": [
+   "eudaimonia"
+  ],
+  "wiki": "Eudaimonia",
+  "def": "Greek for flourishing or living well, usually translated 'happiness'. For Aristotle it is the aim of life, reached through a lifetime of virtuous activity."
+ },
+ {
+  "term": "Phronesis",
+  "match": [
+   "phronesis"
+  ],
+  "wiki": "Phronesis",
+  "def": "Greek for practical wisdom: the ability to judge well what to do in real situations."
+ },
+ {
+  "term": "Duty Ethics",
+  "match": [
+   "Duty Ethics"
+  ],
+  "wiki": "Deontology",
+  "def": "An approach to ethics, associated above all with Kant, that judges actions by the principles behind them rather than by their results. Philosophers call it deontology."
+ },
+ {
+  "term": "Immanuel Kant",
+  "match": [
+   "Kant"
+  ],
+  "wiki": "Immanuel_Kant",
+  "def": "A German philosopher (1724–1804), one of the most influential thinkers of modern times. He argued that morality rests on reason and on respect for every person."
+ },
+ {
+  "term": "Groundwork",
+  "match": [
+   "Groundwork"
+  ],
+  "wiki": "Groundwork_of_the_Metaphysics_of_Morals",
+  "def": "Kant's short book of 1785, the Groundwork of the Metaphysic of Morals, which sets out the foundations of his ethics, including the categorical imperative.",
+  "scope": [
+   "Duty Ethics"
+  ]
+ },
+ {
+  "term": "Critique of Practical Reason",
+  "match": [
+   "Critique of Practical Reason"
+  ],
+  "wiki": "Critique_of_Practical_Reason",
+  "def": "Kant's 1788 book on morality and freedom. It ends with his famous lines on the starry heavens and the moral law."
+ },
+ {
+  "term": "Categorical imperative",
+  "match": [
+   "categorical imperative"
+  ],
+  "wiki": "Categorical_imperative",
+  "def": "Kant's test for right action: act only on principles you could want everyone to follow, and treat people always as ends, never merely as means."
+ },
+ {
+  "term": "Kingdom of ends",
+  "match": [
+   "kingdom of ends"
+  ],
+  "wiki": "Kingdom_of_Ends",
+  "def": "Kant's ideal of a community in which everyone treats everyone else as an end in themselves, each being both lawmaker and citizen."
+ },
+ {
+  "term": "Maxim",
+  "match": [
+   "maxim"
+  ],
+  "wiki": "Maxim_(philosophy)",
+  "def": "In Kant's ethics, the personal rule behind an action, such as 'I will break promises when it suits me'. Kant asks whether your maxim could work as a law for everyone.",
+  "scope": [
+   "Duty Ethics"
+  ]
+ },
+ {
+  "term": "Fontenelle",
+  "match": [
+   "Fontenelle"
+  ],
+  "wiki": "Bernard_Le_Bovier_de_Fontenelle",
+  "def": "A French writer (1657–1757) known for making science and ideas accessible to a wide audience."
+ },
+ {
+  "term": "Utilitarianism",
+  "match": [
+   "Utilitarianism",
+   "utilitarian"
+  ],
+  "wiki": "Utilitarianism",
+  "def": "An approach to ethics, founded by Jeremy Bentham and developed by John Stuart Mill, that judges actions by the happiness and suffering they bring to everyone affected."
+ },
+ {
+  "term": "John Stuart Mill",
+  "match": [
+   "Mill"
+  ],
+  "wiki": "John_Stuart_Mill",
+  "def": "An English philosopher and reformer (1806–1873), a champion of individual liberty and of women's rights. A breakdown at twenty taught him the value of feeling alongside reason."
+ },
+ {
+  "term": "Jeremy Bentham",
+  "match": [
+   "Jeremy Bentham",
+   "Bentham"
+  ],
+  "wiki": "Jeremy_Bentham",
+  "def": "An English philosopher and reformer (1748–1832), the founder of modern utilitarianism."
+ },
+ {
+  "term": "On Liberty",
+  "match": [
+   "On Liberty"
+  ],
+  "wiki": "On_Liberty",
+  "def": "An 1859 essay on the limits of society's power over the individual, published under John Stuart Mill's name and written with his wife, Harriet Taylor Mill. It remains a classic defence of free speech and personal freedom."
+ },
+ {
+  "term": "Mill's Autobiography",
+  "match": [
+   "Autobiography"
+  ],
+  "wiki": "John_Stuart_Mill",
+  "def": "Mill's account of his unusual education and of the mental crisis he went through at twenty, published in 1873, the year he died.",
+  "scope": [
+   "Utilitarianism"
+  ]
+ },
+ {
+  "term": "Greatest Happiness Principle",
+  "match": [
+   "Greatest Happiness Principle"
+  ],
+  "wiki": "Utilitarianism",
+  "def": "The principle that the right action is the one that produces the most happiness for everyone affected."
+ },
+ {
+  "term": "Harm principle",
+  "match": [
+   "harm principle"
+  ],
+  "wiki": "Harm_principle",
+  "def": "Mill's idea that society may limit a person's freedom only to prevent harm to others."
+ },
+ {
+  "term": "Wordsworth",
+  "match": [
+   "Wordsworth"
+  ],
+  "wiki": "William_Wordsworth",
+  "def": "An English Romantic poet (1770–1850) who wrote about nature and feeling. His poems helped Mill recover from depression."
+ },
+ {
+  "term": "Japanese Thought",
+  "match": [
+   "Japanese Thought"
+  ],
+  "wiki": "Japanese_philosophy",
+  "def": "In Many Wells: classic Japanese reflections on impermanence, simplicity and beauty, by Kamo no Chōmei, Kenkō and Kakuzo Okakura."
+ },
+ {
+  "term": "Kakuzo Okakura",
+  "match": [
+   "Kakuzo Okakura",
+   "Okakura"
+  ],
+  "wiki": "Okakura_Kakuzō",
+  "def": "A Japanese scholar and art critic (1862–1913) who wrote The Book of Tea in English to introduce Japanese culture to the West."
+ },
+ {
+  "term": "The Book of Tea",
+  "match": [
+   "The Book of Tea",
+   "Book of Tea"
+  ],
+  "wiki": "The_Book_of_Tea",
+  "def": "Okakura's short book (1906) on the tea ceremony and the ideas behind it: simplicity, imperfection and beauty in everyday life."
+ },
+ {
+  "term": "Teaism",
+  "match": [
+   "Teaism"
+  ],
+  "wiki": "Japanese_tea_ceremony",
+  "def": "Okakura's word for the philosophy of the Japanese tea ceremony: finding beauty and harmony in simple, everyday acts."
+ },
+ {
+  "term": "Sen no Rikyū",
+  "match": [
+   "Rikiu",
+   "Rikyū"
+  ],
+  "wiki": "Sen_no_Rikyū",
+  "def": "Sen no Rikyū (1522–1591), the most celebrated Japanese tea master, who shaped the tea ceremony's ideal of rustic simplicity."
+ },
+ {
+  "term": "Zen",
+  "match": [
+   "Zennism",
+   "Zen"
+  ],
+  "wiki": "Zen",
+  "def": "A school of Buddhism that began in China and flourished in Japan, emphasising meditation and direct insight over study.",
+  "exact": true
+ },
+ {
+  "term": "Huineng",
+  "match": [
+   "Yeno"
+  ],
+  "wiki": "Huineng",
+  "def": "Huineng (638–713), called Yeno in Japanese, the Sixth Patriarch of Zen Buddhism, famous for teaching that insight can come suddenly."
+ },
+ {
+  "term": "Kenkō",
+  "match": [
+   "Kenkō"
+  ],
+  "wiki": "Yoshida_Kenkō",
+  "def": "Yoshida Kenkō (around 1283–1350), a Japanese poet and Buddhist monk whose Essays in Idleness reflect on beauty, impermanence and everyday life."
+ },
+ {
+  "term": "Essays in Idleness",
+  "match": [
+   "Essays in Idleness"
+  ],
+  "wiki": "Tsurezuregusa",
+  "def": "Kenkō's collection of short essays (Tsurezuregusa), written around 1330 and one of the classics of Japanese literature."
+ },
+ {
+  "term": "Kamo no Chōmei",
+  "match": [
+   "Kamo no Chōmei",
+   "Chōmei"
+  ],
+  "wiki": "Kamo_no_Chōmei",
+  "def": "A Japanese poet (around 1155–1216) who, after years of disaster and disappointment, withdrew to a tiny hut in the hills near Kyoto."
+ },
+ {
+  "term": "Hōjōki",
+  "match": [
+   "Hōjōki"
+  ],
+  "wiki": "Hōjōki",
+  "def": "Chōmei's short book of 1212, 'An Account of My Ten-Foot Hut', on impermanence and the joys of a simple life."
  }
 ]

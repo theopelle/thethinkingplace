@@ -22,8 +22,8 @@ OUT = os.path.join(os.path.dirname(HERE), "entries.json")
 RELEASED = os.path.join(HERE, "released.json")
 
 # Rotation order: one tradition per day, cycling.
-ORDER = ["Stoicism", "Buddhism", "Christianity", "Epicureanism", "Hinduism",
-         "Platonism", "Judaism", "Existentialism", "Islam"]
+ORDER = ["Stoicism", "Taoism", "Virtue Ethics", "Buddhist Philosophy", "Epicureanism",
+         "Duty Ethics", "Japanese Thought", "Platonism", "Utilitarianism", "Existentialism"]
 
 G = "https://www.gutenberg.org/ebooks/"
 SOURCES = {
@@ -61,6 +61,19 @@ SOURCES = {
     "karamazov":  ("pg28054.txt", "text", "Constance Garnett (1912)", G + "28054"),
     "underground":("pg600.txt", "text", "Constance Garnett (1918)", G + "600"),
     "pascal":     ("pg18269.txt", "text", "W. F. Trotter (1910)", G + "18269"),
+    "taote":      ("pg216.txt", "text", "James Legge (1891)", G + "216"),
+    "zhuangzi":   ("pg59709.txt", "text", "Herbert A. Giles (1889)", G + "59709"),
+    "aristotle":  ("pg8438.txt", "text", "D. P. Chase (1847)", G + "8438"),
+    "kant_g":     ("pg5682.txt", "text", "Thomas Kingsmill Abbott (1873)", G + "5682"),
+    "kant_p":     ("pg5683.txt", "text", "Thomas Kingsmill Abbott (1873)", G + "5683"),
+    "mill_u":     ("pg11224.txt", "text", "Written in English (1863)", G + "11224"),
+    "mill_l":     ("pg34901.txt", "text", "Written in English (1859)", G + "34901"),
+    "mill_a":     ("pg10378.txt", "text", "Written in English (1873)", G + "10378"),
+    "tea":        ("pg769.txt", "text", "Written in English (1906)", G + "769"),
+    "aston":      ("aston_b4c3.txt", "text", "W. G. Aston (1899)",
+                   "https://en.wikisource.org/wiki/A_History_of_Japanese_Literature/Book_4/Chapter_3"),
+    "kenko":      ("porter_kenko.txt", "text", "William N. Porter (1914)",
+                   "https://archive.org/details/miscellanyofjapa00yosh"),
     **{f"gita{i}": (f"gita_{i}.txt", "text", "Annie Besant (1922 ed.)",
                     f"https://en.wikisource.org/wiki/Bhagavad-Gita_(Besant_4th)/Discourse_{i}") for i in range(1, 19)},
     "katha":      ("up_katha.txt", "text", "F. Max Müller (1884)",
@@ -107,6 +120,7 @@ KJV_BOOKS = {
 
 DIALOGUE_START = {
     "pg1656.txt": "How you, O Athenians",
+    "pg59709.txt": "CHAPTER I.",   # Giles: skip his introduction, which quotes passages
     **{f: "PERSONS OF THE DIALOGUE" for f in
        ["pg1657.txt", "pg1658.txt", "pg1497.txt", "pg1600.txt", "pg1636.txt",
         "pg1672.txt", "pg1726.txt", "pg1643.txt", "pg1750.txt"]},
@@ -114,6 +128,9 @@ DIALOGUE_START = {
 
 
 VERSE = {"pg785.txt"}  # Lucretius: keep the poem's line breaks
+
+
+SOURCE_END = {"pg8438.txt": "NOTES"}
 
 
 def normalize(s, verse=False):
@@ -127,7 +144,7 @@ def normalize(s, verse=False):
 
 def clean(s, key):
     """Tidy an extracted passage without changing its wording."""
-    s = re.sub(r"\[\d+\]|\[[A-Z]\]|\{\d+\}", "", s)        # footnote and page markers
+    s = re.sub(r"\[\d+\]|\[[A-Z]\]|\{[^{}]*\}", "", s)     # footnote, page and paragraph markers
     s = re.sub(r"\s*\(\[Greek:[^\]]*\]\)", "", s)        # inline Greek glosses
     s = re.sub(r"\b\d+:\d+ ", "", s)                    # KJV verse numbers
     s = re.sub(r"\(\d+\)", "", s)                       # Besant verse numbers
@@ -136,7 +153,7 @@ def clean(s, key):
     s = s.replace("_", "")                              # Gutenberg italics
     if key == "epicurus":
         s = re.sub(r"\s\d{2,3}\.\s(?=[a-z])", " ", s)   # Diogenes Laertius section numbers
-    if key == "hadith":
+    if key in ("hadith", "kenko"):
         s = re.sub(r"(\w)- (\w)", r"\1\2", s)           # OCR line-break hyphens
     s = s.replace("--", "—").replace("`", "‘")
     s = re.sub(r"\b([Tt]o)- (morrow|day|night)", r"\1-\2", s)
@@ -170,6 +187,8 @@ def load(key, srcdir):
     if kind == "text":
         if fname in DIALOGUE_START:
             raw = raw[raw.rfind(DIALOGUE_START[fname]):]
+        if fname in SOURCE_END:  # stop before an editor's endnotes
+            raw = raw[:raw.rfind(SOURCE_END[fname])]
         data = normalize(raw, verse=fname in VERSE)
     elif kind == "refs":
         data = {}
@@ -301,6 +320,13 @@ def main(srcdir, freeze=False):
                 if re.search(r"[\u0900-\u097f<>{}]|\[\d", text):
                     raise LookupError(f"markup or untranslated text in passage: {text[:80]!r}")
                 text = e.get("prefix", "") + text + e.get("suffix", "")
+                # Re-balance quote marks now that any opening quote has been added.
+                if text.count('"') % 2:
+                    text = text[:-1] if text.endswith('"') and not e.get("suffix") else text + '"'
+                if text.count("“") > text.count("”"):
+                    text += "”"
+                elif text.count("”") > text.count("“") and text.endswith("”") and not e.get("suffix"):
+                    text = text[:-1]
                 cut_start, cut_end = verse_cuts(e, srcdir)
                 if cut_start:  # show where the verse was entered mid-way, keeping its own case
                     first_raw = extract(e, srcdir).lstrip(" “\"‘'")[:1]
@@ -357,14 +383,19 @@ def main(srcdir, freeze=False):
         sys.exit("released passages missing from the specs (add a spec entry with "
                  f"\"replaces\": \"<id>\" to swap one): {missing}")
 
-    # Everything new goes after the released ones, one tradition per day in turn.
+    # Everything new goes after the released ones. Schools are spread in proportion to
+    # their size (some have fewer passages), never the same school two days running.
     fresh = {t: [x for x in by_trad[t] if x["id"] not in placed] for t in ORDER}
-    i = 0
+    total = {t: len(v) for t, v in fresh.items()}
+    last = out[-1]["tradition"] if out else None
     while any(fresh.values()):
-        t = ORDER[i % len(ORDER)]
-        if fresh[t]:
-            out.append(fresh[t].pop(0))
-        i += 1
+        def lag(t):  # how far behind its fair share this school is
+            done = total[t] - len(fresh[t])
+            return (done + 1) / total[t]
+        options = [t for t in ORDER if fresh[t] and t != last] or [t for t in ORDER if fresh[t]]
+        t = min(options, key=lambda t: (lag(t), ORDER.index(t)))
+        out.append(fresh[t].pop(0))
+        last = t
 
     json.dump(out, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     if freeze:

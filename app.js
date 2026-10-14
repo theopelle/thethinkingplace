@@ -116,10 +116,10 @@
     return { phase, label };
   }
 
-  // Shown under "about this passage" on the few days a month the moon is marked by a tradition.
+  // Shown under "about this passage" on full and new moon days, which Buddhist tradition keeps for reflection.
   const MOON_NOTES = {
-    "full moon": "Full moon: a traditional day of reflection in Buddhism (uposatha) and Hinduism (Purnima).",
-    "new moon": "New moon: a day of observance in Buddhism (uposatha) and Hinduism (Amavasya). The Jewish month begins at the new moon (Rosh Chodesh), and the Islamic month with the first crescent after it.",
+    "full moon": "Full moon: in Buddhist tradition, a day set aside for reflection (uposatha).",
+    "new moon": "New moon: in Buddhist tradition, also a day set aside for reflection (uposatha).",
   };
 
   // A small line drawing of tonight's moon (as seen from the northern hemisphere).
@@ -179,7 +179,7 @@
     $("day-tradition").textContent = e.tradition;
     $("day-context-text").textContent = e.context;
     const tr = $("day-translation");
-    tr.textContent = "Translation: " + e.translation + " · ";
+    tr.textContent = (/^Written in English/.test(e.translation) ? "" : "Translation: ") + e.translation + " · ";
     const link = document.createElement("a");
     link.href = e.source_url;
     link.target = "_blank";
@@ -508,7 +508,7 @@
     $("report-link").href = mail("Many Wells: an issue",
       `What happened?\n\n\nWhat did you expect?\n\n\n—\nDay: ${todayKey()} (${e.id})\nDevice: ${navigator.userAgent}`);
     $("suggest-link").href = mail("Many Wells: a reflection suggestion",
-      "The passage (with author, book and translation if you know it):\n\n\nWhich tradition is it from?\n\n\nWhy does it speak to you?\n\n");
+      "The passage (with author, book and translation if you know it):\n\n\nWhich school of thought is it from?\n\n\nWhy does it speak to you?\n\n");
   }
 
   // ---------- gentle ending ----------

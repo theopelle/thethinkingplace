@@ -1,0 +1,273 @@
+[
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Utilitarianism, ch. II",
+  "from": "mill_u",
+  "start": "It is better to be a human being dissatisfied than a pig satisfied",
+  "end": "a fool satisfied.",
+  "context": "Mill's answer to critics who called utilitarianism a 'philosophy for pigs'. Not all pleasures are equal: the pleasures of thought and feeling are worth more.",
+  "prompt": "Which of your pleasures are 'higher', and which are just easy?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Autobiography, ch. V",
+  "from": "mill_a",
+  "start": "Ask yourself whether you are happy, and you cease to be so.",
+  "end": "as the purpose of life.",
+  "context": "Mill learned this from his own depression at twenty. Happiness, he concluded, comes most surely when we aim at something else.",
+  "prompt": "What could you care about today so much that you forget to check if you're happy?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. II",
+  "from": "mill_l",
+  "start": "If all mankind minus one, were of one opinion",
+  "end": "silencing mankind.",
+  "context": "Mill's classic defence of free expression. A lone dissenter may be right, and even if wrong, their challenge keeps the truth alive.",
+  "prompt": "Whose minority opinion deserves a fairer hearing from you?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Utilitarianism, ch. II",
+  "from": "mill_u",
+  "start": "The creed which accepts as the foundation of morals",
+  "end": "reverse of happiness.",
+  "context": "The founding principle of utilitarianism, developed by Jeremy Bentham and refined by Mill: judge actions by how much happiness and suffering they bring.",
+  "prompt": "Whose happiness will your choices touch today?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Utilitarianism, ch. II",
+  "from": "mill_u",
+  "start": "When people who are tolerably fortunate in their outward lot",
+  "end": "caring for nobody but themselves.",
+  "context": "Mill's diagnosis of why comfortable lives can feel empty: selfishness narrows life until little in it seems worth having.",
+  "prompt": "Who, beyond yourself, could you care more about?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. II",
+  "from": "mill_l",
+  "start": "He who knows only his own side of the case",
+  "end": "knows little of that.",
+  "context": "To hold an opinion well, you must understand the best arguments against it.",
+  "prompt": "Can you state the strongest case against a view you hold?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Autobiography, ch. V",
+  "from": "mill_a",
+  "start": "Those only are happy (I thought) who have their minds fixed on some object other than their own happiness",
+  "end": "find happiness by the way.",
+  "context": "Mill's own recipe after his crisis: devote yourself to others, to improving the world, or to an art for its own sake, and happiness arrives on the way.",
+  "prompt": "What could you fix your mind on that is bigger than your own happiness?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. III",
+  "from": "mill_l",
+  "start": "Human nature is not a machine to be built after a model",
+  "end": "make it a living thing.",
+  "context": "A plea for individuality: people are not machines to be standardised but trees that need room to grow in their own direction.",
+  "prompt": "In which direction does your tree want to grow?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Utilitarianism, ch. II",
+  "from": "mill_u",
+  "start": "Next to selfishness, the principal cause which makes life unsatisfactory",
+  "end": "all that surrounds it",
+  "context": "A cultivated mind, Mill insists, doesn't need to be a philosopher's: just one that has been opened to learning and finds endless interest in the world.",
+  "prompt": "What have you become curious about lately?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. III",
+  "from": "mill_l",
+  "start": "He who lets the world, or his own portion of it, choose his plan of life for him",
+  "end": "employs all his faculties.",
+  "context": "Copying the life others choose for us takes only imitation. Choosing for ourselves uses everything we've got.",
+  "prompt": "Which part of your life plan did you choose, and which did you inherit?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Utilitarianism, ch. II",
+  "from": "mill_u",
+  "start": "Capacity for the nobler feelings is in most natures a very tender plant",
+  "end": "want of sustenance",
+  "context": "Our finer capacities don't die only from hostility; they wither from neglect.",
+  "prompt": "Which of your finer capacities needs some nourishment?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. I",
+  "from": "mill_l",
+  "start": "The only freedom which deserves the name",
+  "end": "efforts to obtain it.",
+  "context": "Mill's definition of liberty: living your own way, as long as you don't stop others from living theirs.",
+  "prompt": "Are you pursuing your own good in your own way?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Autobiography, ch. V",
+  "from": "mill_a",
+  "start": "Suppose that all your objects in life were realized",
+  "end": "distinctly answered, \"No!",
+  "prefix": "\"",
+  "context": "The question that triggered Mill's breakdown. He had been raised to reform the world, and realised that achieving it all would not make him happy.",
+  "prompt": "If all your goals came true tomorrow, would it be enough?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Utilitarianism, ch. II",
+  "from": "mill_u",
+  "start": "The main constituents of a satisfied life appear to be two",
+  "end": "a considerable quantity of pain.",
+  "context": "Calm and stimulation: Mill thought most people need some balance of both to be content.",
+  "prompt": "Does your life need more tranquillity, or more excitement, right now?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. I",
+  "from": "mill_l",
+  "start": "Over himself, over his own body and mind, the individual is sovereign.",
+  "end": "is sovereign.",
+  "context": "Where our choices affect only ourselves, Mill argues, they are ours alone to make.",
+  "prompt": "Which decision about yourself are you letting others make?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Utilitarianism, ch. II",
+  "from": "mill_u",
+  "start": "All the grand sources, in short, of human suffering",
+  "end": "by human care and effort",
+  "context": "Mill's hope: poverty, disease and much misfortune are not fate. Most suffering can be reduced by human effort, slowly but surely.",
+  "prompt": "What suffering near you could your care and effort reduce?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Autobiography, ch. V",
+  "from": "mill_a",
+  "start": "From this moment my burden grew lighter.",
+  "end": "capacity for happiness, are made.",
+  "context": "Mill describes the moment his depression began to lift: reading a moving story, he cried, and realised he could still feel.",
+  "prompt": "When did you last feel something deeply, and what did it tell you?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. I",
+  "from": "mill_l",
+  "start": "the only purpose for which power can be rightfully exercised",
+  "end": "prevent harm to others.",
+  "context": "Mill's 'harm principle', one of the most influential ideas in modern thought: freedom ends only where harm to others begins.",
+  "prompt": "Where are you trying to control what isn't harming anyone?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Utilitarianism, ch. II",
+  "from": "mill_u",
+  "start": "the happiness which forms the utilitarian standard of what is right in conduct",
+  "end": "benevolent spectator.",
+  "context": "Utilitarianism counts everyone's happiness equally, your own included but no more than anyone else's.",
+  "prompt": "How would you decide if your own happiness counted no more than another's?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. III",
+  "from": "mill_l",
+  "start": "A person whose desires and impulses are his own",
+  "end": "a steam-engine has a character.",
+  "context": "Character, for Mill, means desires that are genuinely your own, developed by your own reflection.",
+  "prompt": "Which of your desires are truly your own?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Autobiography, ch. V",
+  "from": "mill_a",
+  "start": "In them I seemed to draw from a source of inward joy",
+  "end": "shared in by all human beings",
+  "context": "Wordsworth's poems helped heal Mill. In them he found a joy that excluded no one.",
+  "prompt": "What gives you a joy that anyone could share?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. I",
+  "from": "mill_l",
+  "start": "A person may cause evil to others not only by his actions but by his inaction",
+  "end": "accountable to them for the injury.",
+  "context": "Doing nothing is also a choice, and it can harm others too.",
+  "prompt": "Where is your inaction affecting someone?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Utilitarianism, ch. II",
+  "from": "mill_u",
+  "start": "Few human creatures would consent to be changed into any of the lower animals",
+  "end": "beast's pleasures",
+  "context": "Mill's argument for higher pleasures: almost nobody would trade a human life for an animal's, however comfortable.",
+  "prompt": "What makes your life worth more to you than comfort?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. II",
+  "from": "mill_l",
+  "start": "the dictum that truth always triumphs over persecution",
+  "end": "all experience refutes.",
+  "context": "It's comforting to believe truth always wins. Mill warns that history says otherwise: it needs defending.",
+  "prompt": "Which truth could use your defending?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Utilitarianism, ch. II",
+  "from": "mill_u",
+  "start": "its most appropriate appellation is a sense of dignity",
+  "end": "one form or other",
+  "context": "Why would anyone prefer a harder, nobler life? Mill's answer: a sense of dignity that every human being has in some form.",
+  "prompt": "What would you never do because of your own sense of dignity?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. II",
+  "from": "mill_l",
+  "start": "however true it may be, if it is not fully, frequently, and fearlessly discussed",
+  "end": "not a living truth.",
+  "context": "Even true beliefs go stale when they're never questioned. Discussion keeps them alive.",
+  "prompt": "Which of your beliefs have you not examined in a long time?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Autobiography, ch. V",
+  "from": "mill_a",
+  "start": "The maintenance of a due balance among the faculties",
+  "end": "philosophical creed.",
+  "context": "After his crisis, Mill decided that reason alone was not enough; feelings needed cultivating too, through poetry, art and nature.",
+  "prompt": "Which side of you, thinking or feeling, needs more attention?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, On Liberty, ch. II",
+  "from": "mill_l",
+  "start": "All silencing of discussion is an assumption of infallibility.",
+  "end": "an assumption of infallibility.",
+  "context": "Shutting down a conversation assumes we cannot be wrong.",
+  "prompt": "Which conversation have you shut down because you were sure?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Utilitarianism, ch. III",
+  "from": "mill_u",
+  "start": "The internal sanction of duty, whatever our standard of duty may be",
+  "end": "attendant on violation of duty",
+  "context": "Beyond laws and reputation, our strongest guard is conscience: the inner discomfort we feel when we fall short.",
+  "prompt": "What is your conscience telling you at the moment?"
+ },
+ {
+  "tradition": "Utilitarianism",
+  "source": "Mill, Autobiography, ch. V",
+  "from": "mill_a",
+  "start": "the habit of analysis has a tendency to wear away the feelings",
+  "end": "natural complements and correctives.",
+  "context": "Mill, trained from childhood as a reasoning machine, discovered that constant analysis can dry up feeling unless balanced by other habits.",
+  "prompt": "What are you over-analysing that might simply need feeling?"
+ }
+]

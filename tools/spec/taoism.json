@@ -1,0 +1,394 @@
+[
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 8",
+  "from": "taote",
+  "start": "The highest excellence is like (that of) water",
+  "end": "the low place which all men dislike.",
+  "context": "Water is Taoism's favourite teacher: it nourishes everything, never fights, and settles where nobody else wants to be.",
+  "prompt": "Where could you be more like water today?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Zhuangzi, ch. 17",
+  "from": "zhuangzi",
+  "start": "You cannot speak of ocean to a well-frog",
+  "end": "the creature of a season.",
+  "context": "The Spirit of the Ocean speaks to a river god who thought himself great. A frog at the bottom of a well takes its circle of sky for the whole sky.",
+  "prompt": "Which well are you looking up from, and how big is the sky beyond it?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 33",
+  "from": "taote",
+  "start": "He who knows other men is discerning",
+  "end": "has a (firm) will.",
+  "context": "Four short contrasts between outer and inner achievement. Self-knowledge and self-mastery come out ahead every time.",
+  "prompt": "Which kind of strength are you building: over others, or over yourself?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 11",
+  "from": "taote",
+  "start": "The thirty spokes unite in the one nave",
+  "end": "it is on the empty space (within), that its use depends.",
+  "context": "Wheels, bowls and rooms are useful because of what is empty in them. Emptiness is not nothing; it is room.",
+  "prompt": "Where could some emptiness make your life more useful, not less?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Zhuangzi, ch. 2",
+  "from": "zhuangzi",
+  "start": "Once upon a time, I, Chuang Tzŭ, dreamt I was a butterfly",
+  "end": "dreaming I am a man.",
+  "context": "The most famous passage in Taoist literature. Zhuangzi wonders how firm the line really is between who we think we are and what we experience.",
+  "prompt": "What are you sure about that might be less solid than it seems?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 64",
+  "from": "taote",
+  "start": "The tree which fills the arms grew from the tiniest sprout",
+  "end": "commenced with a single step.",
+  "context": "The source of the saying 'a journey of a thousand miles begins with a single step'. A li is a traditional Chinese measure of distance.",
+  "prompt": "What is the single step you could take today?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 81",
+  "from": "taote",
+  "start": "Sincere words are not fine; fine words are not sincere.",
+  "end": "fine words are not sincere.",
+  "context": "The opening line of the last chapter. Polish can be a sign that something is being sold rather than said.",
+  "prompt": "Whose plain words have you overlooked because they weren't polished?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 9",
+  "from": "taote",
+  "start": "It is better to leave a vessel unfilled",
+  "end": "preserve its sharpness.",
+  "context": "Overfilling and oversharpening both defeat their purpose. Knowing when to stop is a skill.",
+  "prompt": "What are you filling to the brim that would be better left with room?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Zhuangzi, ch. 17",
+  "from": "zhuangzi",
+  "parts": [
+   [
+    "See how the minnows are darting about!",
+    "how can you know that I do not know?"
+   ]
+  ],
+  "context": "Zhuangzi and his friend, the logician Hui Shi, argue on a bridge. Is delight in the world something we can share, or only argue about?",
+  "prompt": "Where could you simply enjoy something instead of proving it?",
+  "prefix": "\"",
+  "suffix": "\""
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 22",
+  "from": "taote",
+  "start": "The partial becomes complete",
+  "end": "goes astray.",
+  "context": "A string of paradoxes: what bends survives, what is emptied gets filled. Wanting less is a way of receiving more.",
+  "prompt": "What in your life is 'crooked' now and might yet become straight?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 24",
+  "from": "taote",
+  "start": "He who stands on his tiptoes does not stand firm",
+  "end": "has no superiority allowed to him.",
+  "context": "Straining to look taller only makes us wobble. The same is true of showing off.",
+  "prompt": "Where are you standing on tiptoe?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 15",
+  "from": "taote",
+  "start": "Who can (make) the muddy water (clear)?",
+  "end": "will gradually become clear.",
+  "context": "Stirring muddy water only clouds it more. Left alone, the sediment settles by itself.",
+  "prompt": "What might become clear if you simply stopped stirring it?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Zhuangzi, ch. 3",
+  "from": "zhuangzi",
+  "parts": [
+   [
+    "When I first began to cut up bullocks",
+    "no more whole animals."
+   ],
+   [
+    "And now I work with my mind and not with my eye.",
+    "with my eye."
+   ]
+  ],
+  "context": "Prince Hui's cook has used the same knife for nineteen years because he follows the natural gaps instead of forcing his way. Mastery means working with the grain.",
+  "prompt": "Where are you hacking at something that has a natural opening?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 78",
+  "from": "taote",
+  "start": "There is nothing in the world more soft and weak than water",
+  "end": "no one is able to carry it out in practice.",
+  "context": "Water wears down stone. Everyone knows that softness can win, says Laozi, yet hardly anyone lives by it.",
+  "prompt": "Where could softness achieve what force has not?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 71",
+  "from": "taote",
+  "start": "To know and yet (think) we do not know",
+  "end": "is a disease.",
+  "context": "An echo of Socrates, a world away: the wise hold their knowledge lightly; the sick mind is the one that is sure.",
+  "prompt": "What do you think you know that you might not?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Zhuangzi, ch. 26",
+  "from": "zhuangzi",
+  "start": "The _raison d'être_ of a fish-trap is the fish.",
+  "end": "the language may be ignored.",
+  "context": "Words, methods and rules are tools for catching something else. Once you have the fish, you need not cling to the trap.",
+  "prompt": "Which tool or rule are you holding onto after it has done its job?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 46",
+  "from": "taote",
+  "start": "There is no guilt greater than to sanction ambition",
+  "end": "enduring and unchanging sufficiency.",
+  "context": "Discontent, says Laozi, is the deepest misfortune. Knowing when you have enough is a lasting wealth.",
+  "prompt": "What would be enough for you, really?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 48",
+  "from": "taote",
+  "start": "He who devotes himself to learning",
+  "end": "to diminish (his doing).",
+  "context": "Learning adds; the Tao subtracts. Some growth comes from doing less, not more.",
+  "prompt": "What could you take away from your days rather than add?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Zhuangzi, ch. 5",
+  "from": "zhuangzi",
+  "start": "A man,\" replied Confucius, \"does not seek",
+  "end": "instil stillness into others.",
+  "context": "Zhuangzi puts these words in the mouth of Confucius. We can only see ourselves clearly in water that is still.",
+  "prompt": "How could you become still enough to see yourself clearly?",
+  "prefix": "\""
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 2",
+  "from": "taote",
+  "start": "All in the world know the beauty of the beautiful",
+  "end": "what the want of skill is.",
+  "context": "Every idea of 'good' quietly creates its opposite. Labels divide the world as much as they describe it.",
+  "prompt": "Which label you use creates the very thing you dislike?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 16",
+  "from": "taote",
+  "start": "All things alike go through their processes of activity",
+  "end": "the state of stillness",
+  "context": "Everything grows, flourishes and returns to its root, like plants through the seasons. Stillness is the return, not the absence of life.",
+  "prompt": "What root do you need to return to?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 43",
+  "from": "taote",
+  "start": "The softest thing in the world dashes against",
+  "end": "where there is no crevice.",
+  "context": "What is soft finds its way where the hard cannot. Gentleness has its own power.",
+  "prompt": "Where could you go further by being gentler?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Zhuangzi, ch. 4",
+  "from": "zhuangzi",
+  "start": "It is wood of no quality, and of no use.",
+  "end": "attained its present age.",
+  "context": "A carpenter dismisses a huge old tree as worthless. That evening the tree appears in his dream: being 'useless' is what let it grow so old.",
+  "prompt": "What 'useless' thing in your life is actually keeping you whole?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 56",
+  "from": "taote",
+  "start": "He who knows (the Tao) does not (care to) speak",
+  "end": "does not know it.",
+  "context": "Often quoted as 'those who know do not speak; those who speak do not know'. Deep understanding tends to be quiet.",
+  "prompt": "What do you understand best, and how little do you need to say about it?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 63",
+  "from": "taote",
+  "start": "anticipates things that are difficult while they are easy",
+  "end": "while they are small.",
+  "context": "Big problems start small. Attending to things early is the quiet secret of handling them well.",
+  "prompt": "What small thing could you deal with now, before it grows?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 63",
+  "from": "taote",
+  "start": "to consider what is small as great",
+  "end": "to recompense injury with kindness.",
+  "context": "Taking small things seriously, and answering harm with kindness, are presented as the natural way of things.",
+  "prompt": "Who could you answer with kindness instead of injury?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Zhuangzi, ch. 2",
+  "from": "zhuangzi",
+  "context": "Small knowledge sees a part and takes it for everything. Great knowledge keeps the whole in view.",
+  "prompt": "What part of a situation have you been mistaking for the whole?",
+  "parts": [
+   [
+    "Great knowledge embraces the whole:",
+    "embraces the whole:"
+   ],
+   [
+    "small knowledge, a part only.",
+    "a part only."
+   ]
+  ],
+  "join": " "
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 67",
+  "from": "taote",
+  "start": "But I have three precious things",
+  "end": "shrinking from taking precedence of others.",
+  "context": "Laozi's three treasures: gentleness, frugality, and not needing to be first.",
+  "prompt": "Which of the three treasures could you practise today?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 76",
+  "from": "taote",
+  "start": "Man at his birth is supple and weak",
+  "end": "the concomitants of life.",
+  "context": "Living things bend; dead things are rigid. Flexibility is a sign of life, in bodies and in minds.",
+  "prompt": "Where have you grown rigid, and how could you soften?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Zhuangzi, ch. 3",
+  "from": "zhuangzi",
+  "start": "My life has a limit, but my knowledge is without limit.",
+  "end": "is fatally lost.",
+  "context": "Zhuangzi's warning against trying to know everything. A finite life spent chasing the infinite runs out.",
+  "prompt": "What are you trying to master that could never be finished?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 47",
+  "from": "taote",
+  "start": "The farther that one goes out (from himself), the less he knows.",
+  "end": "the less he knows.",
+  "context": "Laozi's paradox for a restless age: understanding is not always found by going further.",
+  "prompt": "What could you understand by staying where you are?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Zhuangzi, ch. 18",
+  "from": "zhuangzi",
+  "parts": [
+   [
+    "When she died, I could not help being affected by her death.",
+    "affected by her death."
+   ],
+   [
+    "passing from one phase to another like the sequence of spring, summer, autumn, and winter.",
+    "autumn, and winter."
+   ]
+  ],
+  "context": "When Zhuangzi's wife dies, his friend finds him singing and drumming on a bowl. He grieved, he explains, and then saw her death as part of nature's turning seasons.",
+  "prompt": "Which ending in your life could you see as a change of season?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 81",
+  "from": "taote",
+  "start": "The more that he expends for others",
+  "end": "the more does he possess of his own",
+  "context": "Generosity, says Laozi, does not empty us. What we give away somehow enlarges what we have.",
+  "prompt": "What could you give today that would leave you richer?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Zhuangzi, ch. 7",
+  "from": "zhuangzi",
+  "start": "For the perfect man employs his mind as a mirror.",
+  "end": "receives, but does not keep.",
+  "context": "A mirror reflects whatever comes and holds onto nothing. Zhuangzi offers it as a picture of a free mind.",
+  "prompt": "What are you still holding that you could simply let pass through?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 22",
+  "from": "taote",
+  "start": "He is free from self-display, and therefore he shines",
+  "end": "therefore he is distinguished",
+  "context": "The sage stands out precisely because he isn't trying to.",
+  "prompt": "Where could you let your work speak instead of you?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Zhuangzi, ch. 18",
+  "from": "zhuangzi",
+  "start": "Life is a loan with which the borrower does but add more dust",
+  "end": "as day and night",
+  "context": "Two disfigured men look at old tombs and talk calmly about mortality. Life, says one, is borrowed, and life and death follow each other like day and night.",
+  "prompt": "If your life is a loan, what are you doing with it?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 64",
+  "from": "taote",
+  "start": "people in their conduct of affairs are constantly ruining them when they are on the eve of success",
+  "end": "on the eve of success",
+  "context": "Many projects fail at the very end, through carelessness when success is near. Laozi asks for the same care at the end as at the beginning.",
+  "prompt": "What nearly finished thing deserves your full care now?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 9",
+  "from": "taote",
+  "start": "When gold and jade fill the hall",
+  "end": "brings its evil on itself.",
+  "context": "Treasure must be guarded, and pride invites its own fall. Possessions can become a burden.",
+  "prompt": "What do you own that has started to own you?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Zhuangzi, ch. 1",
+  "from": "zhuangzi",
+  "start": "The mushroom of a morning knows not",
+  "end": "spring and autumn.",
+  "context": "Every creature measures the world by its own lifespan. Zhuangzi invites us to imagine much longer and shorter scales than our own.",
+  "prompt": "How would today's worry look on the scale of a hundred years?"
+ },
+ {
+  "tradition": "Taoism",
+  "source": "Laozi, Tao Te Ching 27",
+  "from": "taote",
+  "start": "The skilful traveller leaves no traces of his wheels or footsteps",
+  "end": "can be found fault with or blamed",
+  "context": "True skill is so natural that it leaves no marks of effort.",
+  "prompt": "What do you do so naturally that nobody sees the effort?"
+ }
+]

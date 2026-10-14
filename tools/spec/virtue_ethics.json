@@ -1,0 +1,311 @@
+[
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book II",
+  "from": "aristotle",
+  "start": "by doing just actions we come to be just",
+  "end": "by doing brave actions brave.",
+  "context": "The heart of virtue ethics: we are not born good or bad; we become what we practise, the way a harpist becomes a harpist by playing.",
+  "prompt": "What quality are you practising, whether you mean to or not?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book I",
+  "from": "aristotle",
+  "start": "for as it is not one swallow or one fine day that makes a spring",
+  "end": "blessed and happy.",
+  "context": "Aristotle's happiness (eudaimonia) is not a mood but a whole life lived well. One good day doesn't make it, and one bad day doesn't break it.",
+  "prompt": "What would a good life look like if you judged it by years, not days?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book II",
+  "from": "aristotle",
+  "start": "to be angry, to give money, and be expensive, is what any man can do",
+  "end": "praiseworthy, and noble.",
+  "context": "Anyone can feel anger or give money. Doing it to the right person, in the right measure, at the right time and in the right way is the real skill.",
+  "prompt": "Where does a feeling of yours need better aim rather than suppression?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book VIII",
+  "from": "aristotle",
+  "start": "no one would choose to live without friends",
+  "end": "all the other good things in the world",
+  "context": "Two of the ten books of the Ethics are about friendship. For Aristotle it is not a luxury of the good life but part of what makes it good.",
+  "prompt": "Who would make your life poorer if they were gone?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book II",
+  "from": "aristotle",
+  "start": "easy to miss the mark, but hard to hit it",
+  "end": "But good in one alone.”",
+  "context": "Virtue lies in a 'mean' between too much and too little, and there are many ways to miss it, but only one way to hit it.",
+  "prompt": "Where are you erring on the side of too much, or too little?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book II",
+  "from": "aristotle",
+  "start": "The Virtues then come to be in us neither by nature",
+  "end": "perfected in them through custom.",
+  "fix": {
+   "themu": "them"
+  },
+  "context": "We have a natural capacity for goodness, but it only becomes real through practice, the way a seed needs tending.",
+  "prompt": "Which of your good capacities is waiting for practice?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book I",
+  "from": "aristotle",
+  "start": "Every art, and every science reduced to a teachable form",
+  "end": "that which all things aim at.”",
+  "context": "The first sentence of the Ethics. Everything we do aims at some good, so the real question is: what is the highest good, the one we want for its own sake?",
+  "prompt": "What are your daily actions ultimately aiming at?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book II",
+  "from": "aristotle",
+  "start": "whether we are accustomed this way or that straight from childhood",
+  "end": "all the difference.",
+  "context": "Habits formed early shape the person we become. The same is true of the habits we form now.",
+  "prompt": "Which habit from your childhood still shapes you, for better or worse?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book II",
+  "from": "aristotle",
+  "start": "for we are enquiring not merely that we may know what virtue is",
+  "end": "that we may become virtuous",
+  "context": "Aristotle reminds his students that ethics is not a theory to admire but a practice to live.",
+  "prompt": "What do you know about being good that you are not yet doing?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book IX",
+  "from": "aristotle",
+  "start": "a friend feels towards a friend as towards himself",
+  "end": "another Self)",
+  "context": "One of Aristotle's most famous ideas: a true friend is 'another self', someone whose good we want as we want our own.",
+  "prompt": "Who is another self to you?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book VIII",
+  "from": "aristotle",
+  "start": "That then is perfect Friendship which subsists between those who are good",
+  "end": "for their sakes",
+  "context": "Aristotle distinguishes friendships of usefulness, of pleasure, and of goodness. Only the last lasts, because it loves the person, not what they provide.",
+  "prompt": "Which of your friendships rest on usefulness, pleasure, or goodness?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book I",
+  "from": "aristotle",
+  "start": "exactness must not be looked for in all discussions alike",
+  "end": "works of handicraft.",
+  "context": "Ethics, says Aristotle, can't be as precise as mathematics. Wisdom includes knowing how much certainty a question allows.",
+  "prompt": "Where are you demanding more certainty than the situation can give?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book II",
+  "from": "aristotle",
+  "start": "he is perfected in Self-Mastery who not only abstains from the bodily pleasures but is glad to do so",
+  "end": "is glad to do so",
+  "context": "The test of a real virtue is pleasure in acting well. If doing the right thing still feels like a grim effort, the habit is not yet formed.",
+  "prompt": "Which good habit has started to feel natural, and which still feels forced?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book I",
+  "from": "aristotle",
+  "start": "the starting-point or principle is more than half the whole matter",
+  "end": "more than half the whole matter",
+  "context": "Getting the starting point right shapes everything that follows.",
+  "prompt": "What are you starting now, and is the starting point right?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book I",
+  "from": "aristotle",
+  "start": "to upset if need be even our own theories",
+  "end": "we are bound to prefer the truth.",
+  "context": "Aristotle disagrees with his own teacher, Plato, here. Later summed up as 'Plato is dear, but truth is dearer'.",
+  "prompt": "Which of your own ideas would you be willing to upset for the truth?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book IV",
+  "from": "aristotle",
+  "start": "it is no easy matter to define how, and with what persons",
+  "end": "right or is wrong.",
+  "context": "No rulebook can say exactly when anger is justified. That judgement has to be developed through experience.",
+  "prompt": "When was your anger last right, and when was it not?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book I",
+  "from": "aristotle",
+  "start": "And of this nature Happiness is mostly thought to be",
+  "end": "never with a view to anything further",
+  "context": "We want money, honour and even pleasure partly for what they bring. Happiness is the one thing we want simply for itself.",
+  "prompt": "What do you chase as a means that you have started treating as an end?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book VIII",
+  "from": "aristotle",
+  "start": "where is the use of such prosperity",
+  "end": "commendable objects?",
+  "context": "Wealth and power are worth little without friends to do good to, and are harder to keep without them.",
+  "prompt": "What could you share today with someone you care about?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book VIII",
+  "from": "aristotle",
+  "start": "it is requisite that they have kindly feelings towards one another",
+  "end": "mutually known.",
+  "context": "Goodwill isn't enough for friendship; it has to be mutual, and both people have to know it.",
+  "prompt": "Who might not know how much goodwill you feel toward them?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book IX",
+  "from": "aristotle",
+  "start": "they improve also, as it seems, by repeated acts",
+  "end": "good things shalt surely learn.”",
+  "context": "Good friends make each other better, through time together and honest correction. Aristotle closes his books on friendship with this thought.",
+  "prompt": "Who makes you better, and how?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book I",
+  "from": "aristotle",
+  "start": "time is a good discoverer and co-operator in such matters",
+  "end": "any man may fill up a deficiency.",
+  "context": "Aristotle sketches his ideas and leaves room for others to improve them. Understanding grows over time and through many hands.",
+  "prompt": "What idea of yours could someone else help you improve?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book I",
+  "from": "aristotle",
+  "start": "man is by nature adapted to a social existence",
+  "end": "adapted to a social existence",
+  "context": "A good life is never lived entirely alone. For Aristotle, our nature is social.",
+  "prompt": "Which relationships are part of your good life?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book I",
+  "from": "aristotle",
+  "start": "the young man is not a fit student of Moral Philosophy",
+  "end": "not mere knowledge.",
+  "context": "Ethics is learned through living. Aristotle thought the young simply lacked enough experience of life to follow it, and that its aim is practice.",
+  "prompt": "What has life taught you that no book could have?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book II",
+  "from": "aristotle",
+  "start": "the man who flies from and fears all things",
+  "end": "comes to be rash.",
+  "context": "Courage is the mean between cowardice and recklessness, and both extremes are formed by habit.",
+  "prompt": "Are you leaning toward fear or toward recklessness lately?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book IX",
+  "from": "aristotle",
+  "start": "For the very presence of friends is pleasant even in adversity",
+  "end": "sympathy of their friends.",
+  "context": "Aristotle wonders whether friends really share our burdens, or whether their company simply makes the pain lighter. Either way, they help.",
+  "prompt": "Whose presence could you offer to someone going through a hard time?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book X",
+  "from": "aristotle",
+  "start": "whatever is proper to each is naturally best and pleasantest to him",
+  "end": "it is also the happiest.",
+  "context": "Each creature flourishes by doing what is most its own. For humans, Aristotle thought, that means a life of thought and understanding.",
+  "prompt": "What activity makes you feel most yourself?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book VI",
+  "from": "aristotle",
+  "start": "It is thought then to be the property of the Practically Wise man",
+  "end": "what to living well.",
+  "context": "Practical wisdom (phronesis) is the skill of judging well about life as a whole, not just about one narrow goal.",
+  "prompt": "What decision are you facing that calls for wisdom about life as a whole?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book I",
+  "from": "aristotle",
+  "start": "the happy man lives well and does well",
+  "end": "living well and doing well.",
+  "context": "Happiness, for Aristotle, is active: something we do, not just something we feel.",
+  "prompt": "What would living well and doing well mean for you this week?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book IV",
+  "from": "aristotle",
+  "start": "neither in prosperity will he be overjoyed",
+  "end": "unduly pained.",
+  "context": "From the portrait of the 'great-souled' person, who is steady because they know what really matters.",
+  "prompt": "What would it take to be steadier through ups and downs?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book VI",
+  "from": "aristotle",
+  "start": "to be a good man one must do each act in a particular frame of mind",
+  "end": "which are done.",
+  "context": "Doing the right thing for the wrong reason isn't quite virtue. Goodness includes choosing the good for its own sake.",
+  "prompt": "What good thing are you doing, and why are you really doing it?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book III",
+  "from": "aristotle",
+  "start": "we deliberate not about Ends, but Means to Ends.",
+  "end": "Means to Ends.",
+  "context": "A doctor doesn't debate whether to heal, only how. Clear aims leave our deliberation for the path.",
+  "prompt": "Is your problem the goal, or the way to reach it?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book II",
+  "from": "aristotle",
+  "start": "men should have been trained straight from their childhood",
+  "end": "the right education",
+  "context": "Aristotle quotes his teacher Plato: a good education teaches us to enjoy the right things, not just to know them.",
+  "prompt": "Which good things have you learned to enjoy?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book II",
+  "from": "aristotle",
+  "start": "For Moral Virtue has for its object-matter pleasures and pains",
+  "end": "decline doing what is right",
+  "context": "Most of our failures come from chasing pleasure or avoiding discomfort. That's why virtue is mainly about training our likes and dislikes.",
+  "prompt": "Which discomfort are you avoiding at the cost of doing right?"
+ },
+ {
+  "tradition": "Virtue Ethics",
+  "source": "Aristotle, Nicomachean Ethics, Book X",
+  "from": "aristotle",
+  "start": "And Pleasure perfects the Working.",
+  "end": "perfects the Working.",
+  "context": "For Aristotle, pleasure is not opposed to good activity; it is what completes it and makes it whole.",
+  "prompt": "Which of your good activities also bring you pleasure?"
+ }
+]

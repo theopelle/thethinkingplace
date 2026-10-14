@@ -1,0 +1,335 @@
+[
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kamo no Chōmei, Hōjōki",
+  "from": "aston",
+  "start": "The current of a running stream flows on unceasingly",
+  "end": "Such are mankind and their habitations.",
+  "context": "The famous opening of Hōjōki ('An Account of My Ten-Foot Hut', 1212), written by a poet who withdrew to a tiny mountain hut after years of fire, famine and earthquake.",
+  "prompt": "What in your life is the same river, but different water?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. I",
+  "from": "tea",
+  "start": "Those who cannot feel the littleness of great things in themselves",
+  "end": "greatness of little things in others.",
+  "context": "Okakura wrote The Book of Tea in English in 1906 to explain Japanese culture to the West through the humble act of drinking tea.",
+  "prompt": "What small thing in someone else have you overlooked?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kenkō, Essays in Idleness 241",
+  "from": "kenko",
+  "start": "The perfect circle of the full moon lasts only for a very short time",
+  "end": "little or no change perceptible.",
+  "context": "Kenkō was a 14th-century poet and monk whose short essays on beauty and impermanence remain beloved in Japan. Change, he notes, is often too slow to see.",
+  "prompt": "What is quietly changing in your life, too slowly to notice?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. I",
+  "from": "tea",
+  "start": "Teaism is a cult founded on the adoration of the beautiful",
+  "end": "this impossible thing we know as life.",
+  "context": "Okakura's definition of the tea ceremony's spirit: finding beauty in ordinary life, and honouring what is imperfect.",
+  "prompt": "Where could you find beauty in the ordinary today?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kenkō, Essays in Idleness 92",
+  "from": "kenko",
+  "start": "A certain man who was learning archery",
+  "end": "this particular shaft at any cost.",
+  "fix": {
+   "said, c A beginner": "said, ‘A beginner"
+  },
+  "context": "A teacher tells his student to carry only one arrow, because a second one makes the first careless. Kenkō applies it to every moment of life.",
+  "prompt": "What 'second arrow' is making you careless with the first?",
+  "suffix": "’"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. I",
+  "from": "tea",
+  "start": "Let us dream of evanescence",
+  "end": "foolishness of things.",
+  "context": "The closing line of Okakura's first chapter: an invitation to slow down and savour what passes.",
+  "prompt": "What passing thing could you linger over today?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kenkō, Essays in Idleness 137",
+  "from": "kenko",
+  "parts": [
+   [
+    "Is it only when the flowers are in full bloom",
+    "gaze at them?"
+   ],
+   [
+    "The twigs which bear no blossoms as yet",
+    "equally to be admired."
+   ]
+  ],
+  "context": "Kenkō's most famous essay. Beauty isn't only in the peak moment, but in anticipation, in absence, and in what has already passed.",
+  "prompt": "What 'not yet' or 'no longer' could you admire today?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. III",
+  "from": "tea",
+  "start": "The art of life lies in a constant readjustment to our surroundings.",
+  "end": "to our surroundings.",
+  "context": "Okakura draws on Taoism: there is no fixed recipe for living well, only continual, graceful adjustment.",
+  "prompt": "What change around you are you resisting instead of adjusting to?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kenkō, Essays in Idleness 7",
+  "from": "kenko",
+  "start": "The dew upon Adashi Moor never fades away",
+  "end": "the length of life.",
+  "fix": {
+   "Toribe Moor 7 ever": "Toribe Moor ever"
+  },
+  "context": "Adashi Moor and Toribe Moor were burial grounds near Kyoto. If life never ended, Kenkō says, we would lose our tenderness. Not knowing how long we have is a gift.",
+  "prompt": "How does knowing life is uncertain make it more precious to you?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. II",
+  "from": "tea",
+  "start": "Perhaps we reveal ourselves too much in small things",
+  "end": "so little of the great to conceal.",
+  "context": "Our daily habits say more about who we are than our grand statements.",
+  "prompt": "What do your small daily habits say about you?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kenkō, Essays in Idleness 108",
+  "from": "kenko",
+  "start": "Nobody ever grudges a moment of time",
+  "end": "life's end comes all too suddenly.",
+  "context": "Like a merchant careful with each coin, Kenkō asks us to value each moment, since moments are what a life is made of.",
+  "prompt": "Which moments are you spending without noticing?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. III",
+  "from": "tea",
+  "parts": [
+   [
+    "The usefulness of a water pitcher dwelt in the emptiness",
+    "of which it was made."
+   ],
+   [
+    "One who could make of himself a vacuum into which others might freely enter",
+    "master of all situations."
+   ]
+  ],
+  "context": "Okakura echoes Laozi: emptiness is what makes things useful, and a person who leaves room for others can meet any situation.",
+  "prompt": "How could you leave more room for others to enter?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kenkō, Essays in Idleness 13",
+  "from": "kenko",
+  "start": "Nothing is more refreshing than to make friends with those who are no longer",
+  "end": "a lamp, and solitude.",
+  "context": "Kenkō's picture of reading: a quiet evening spent in conversation with the long dead.",
+  "prompt": "Which writer from the past would you like to spend an evening with?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. IV",
+  "from": "tea",
+  "start": "True beauty could be discovered only by one who mentally completed the incomplete.",
+  "end": "possibilities for growth.",
+  "context": "In the tea room, things are left deliberately unfinished so that each guest completes them in their own imagination.",
+  "prompt": "What unfinished thing could you appreciate as it is?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kenkō, Essays in Idleness 155",
+  "from": "kenko",
+  "start": "the order of the four seasons is fixed, while none know the time of death",
+  "end": "presses on from behind.",
+  "context": "Seasons arrive in order; death doesn't announce itself. Kenkō's image: the tide comes in while the beach still looks dry.",
+  "prompt": "What would you stop postponing if you felt time pressing from behind?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. III",
+  "from": "tea",
+  "start": "In leaving something unsaid the beholder is given a chance to complete the idea",
+  "end": "a part of it.",
+  "context": "Great art suggests rather than spells everything out, and that space is where we enter it.",
+  "prompt": "What could you leave unsaid today, and let someone else complete?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kenkō, Essays in Idleness 38",
+  "from": "kenko",
+  "start": "He who afflicts his whole life by spending it in the pursuit of riches and fame",
+  "end": "is but a fool.",
+  "context": "Kenkō's verdict on a life spent chasing wealth and reputation with no time left for stillness.",
+  "prompt": "Is there enough leisure for quiet in your life?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kamo no Chōmei, Hōjōki",
+  "from": "aston",
+  "start": "It is barely ten feet square, and only seven feet high.",
+  "end": "rebuild it in another place!",
+  "context": "Chōmei's last home was a hut small enough to take apart and move on two carts. Owning little, he could not lose much.",
+  "prompt": "What could you live without, and how would that lighten you?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. V",
+  "from": "tea",
+  "start": "Nothing is more hallowing than the union of kindred spirits in art.",
+  "end": "the eye has no tongue.",
+  "context": "Okakura describes the moment when a work of art and its viewer truly meet, beyond words.",
+  "prompt": "When did a piece of art last leave you without words?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kenkō, Essays in Idleness 75",
+  "from": "kenko",
+  "start": "How can a man ever find it wearisome to live at leisure?",
+  "end": "merely to be alone.",
+  "context": "Kenkō defends solitude: away from the noise of the world, we stop being blown about by everyone else's moods.",
+  "prompt": "When did you last enjoy being alone?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. III",
+  "from": "tea",
+  "start": "The Present is the moving Infinity",
+  "end": "Adjustment is Art.",
+  "context": "Okakura's Taoist view of the present moment: always moving, always relative, and so always calling for fresh adjustment, which is itself an art.",
+  "prompt": "How could you treat today's adjustments as an art?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. VII",
+  "from": "tea",
+  "start": "He only who has lived with the beautiful can die beautifully.",
+  "end": "can die beautifully.",
+  "context": "Okakura writes of the great tea masters, who met even their deaths with the grace they had practised all their lives.",
+  "prompt": "What beauty are you living with every day?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kenkō, Essays in Idleness 150",
+  "from": "kenko",
+  "start": "He who mixes with the experts while he is himself still stiff and imperfect",
+  "end": "not lag far behind the others.",
+  "context": "Waiting until we're good before practising in public means never getting good. Kenkō recommends being a beginner openly.",
+  "prompt": "What are you avoiding because you're not good at it yet?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. IV",
+  "from": "tea",
+  "start": "Young fool,\" chided the tea-master",
+  "end": "brocade of autumn!",
+  "prefix": "\"",
+  "context": "The tea master Rikyū's lesson to a son who had swept the garden perfectly clean: real beauty needs a touch of the natural.",
+  "prompt": "Where could you allow a few leaves to fall?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kenkō, Essays in Idleness 189",
+  "from": "kenko",
+  "start": "You may propose to do a certain thing to-day",
+  "end": "only the unlooked for that actually happens.",
+  "fix": {
+   " ON THE UNCERTAINTY OF THE FUTURE 147": ""
+  },
+  "context": "Kenkō on plans: the day rarely goes as expected, and neither do years. Better to hold plans lightly.",
+  "prompt": "What unexpected thing happened today, and what did it bring?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. IV",
+  "from": "tea",
+  "start": "One cannot listen to different pieces of music at the same time",
+  "end": "some central motive.",
+  "context": "The tea room displays one beautiful object at a time. Okakura's point applies to attention in general.",
+  "prompt": "What one thing deserves your full attention today?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kenkō, Essays in Idleness 211",
+  "from": "kenko",
+  "start": "Many are the things on which we should place no reliance",
+  "end": "they may all be lost.",
+  "context": "Kenkō lists the things we lean on (power, wealth, cleverness) and reminds us how quickly each can fail.",
+  "prompt": "What are you relying on that could change in an instant?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. V",
+  "from": "tea",
+  "start": "The masterpiece is a symphony played upon our finest feelings.",
+  "end": "we gaze upon the unseen.",
+  "context": "For Okakura, appreciating art is a two-way meeting: the work plays on us like a musician on an instrument.",
+  "prompt": "What has played on your finest feelings lately?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kamo no Chōmei, Hōjōki",
+  "from": "aston",
+  "start": "When I first took up my abode in this place, I thought it was only for a little while.",
+  "end": "moss has gathered on the earthen floor.",
+  "context": "Chōmei meant his hut to be temporary. Five years later, moss covers the floor. Life settles in while we're still telling ourselves it's for a little while.",
+  "prompt": "What 'temporary' arrangement in your life has quietly become permanent?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kenkō, Essays in Idleness 82",
+  "from": "kenko",
+  "start": "Generally speaking, uniformity in anything at all is bad",
+  "end": "leave a little imperfection",
+  "context": "Kenkō praises frayed silk covers and mismatched books. Perfection, he suggests, leaves nothing to grow into.",
+  "prompt": "Where could a little imperfection make something better?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. I",
+  "from": "tea",
+  "start": "It is hygiene, for it enforces cleanliness",
+  "end": "proportion to the universe.",
+  "context": "Okakura describes the tea ceremony as a whole way of life: cleanliness, simplicity, and a sense of our place in things.",
+  "prompt": "Where could you choose the simple over the complex and costly?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kenkō, Essays in Idleness 83",
+  "from": "kenko",
+  "start": "The moon when full begins to wane",
+  "end": "soon gets a set-back.",
+  "context": "Kenkō on the danger of reaching the top: every peak is also the beginning of a descent.",
+  "prompt": "Where could you be content with less than the very top?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kamo no Chōmei, Hōjōki",
+  "from": "aston",
+  "start": "When on a calm night the moon shines in at my window",
+  "end": "the men of old",
+  "context": "Alone in his hut, Chōmei finds company in the moon and in the memory of those who lived before him.",
+  "prompt": "Who from the past do you feel close to on a quiet night?"
+ },
+ {
+  "tradition": "Japanese Thought",
+  "source": "Kakuzo Okakura, The Book of Tea, ch. III",
+  "from": "tea",
+  "start": "Yeno, the sixth patriarch, once saw two monks",
+  "end": "within their own minds",
+  "context": "A classic Zen story: two monks argue whether the wind or the flag is moving. The master's answer points elsewhere.",
+  "prompt": "What argument would dissolve if you looked at your own mind instead?"
+ }
+]

@@ -2,24 +2,18 @@
 
     python3 reflect/tools/fetch_sources.py <sources-dir>
 
-Everything is fetched from Project Gutenberg, Wikisource, Sefaria, Tanzil and
-archive.org. Wikisource rate-limits bursts, so re-run if a page comes back empty.
+Everything is fetched from Project Gutenberg, Wikisource and archive.org. Wikisource rate-limits bursts, so re-run if a page comes back empty.
 """
 import html, json, os, re, sys, time, urllib.parse, urllib.request
 
 UA = {"User-Agent": "Reflect-factcheck/1.0"}
-GUTENBERG = [10, 15877, 10661, 64576, 2017, 785, 1998, 4363, 52881, 38145,
-             28054, 600, 18269, 8547, 1656, 1657, 1658, 1497, 1600, 1636, 1672, 1726, 1643, 1750]
+GUTENBERG = [15877, 10661, 64576, 2017, 785, 1998, 4363, 52881, 38145, 28054, 600, 18269,
+             1656, 1657, 1658, 1497, 1600, 1636, 1672, 1726, 1643, 1750,
+             216, 59709, 8438, 5682, 5683, 11224, 34901, 10378, 769]
 WIKISOURCE = {
-    **{f"gita_{i}": f"Bhagavad-Gita (Besant 4th)/Discourse {i}" for i in range(1, 19)},
-    "up_katha": "Sacred Books of the East/Volume 15/Katha-upanishad",
-    "up_mundaka": "Sacred Books of the East/Volume 15/Mundaka-upanishad",
-    "up_isa": "Sacred Books of the East/Volume 1/Vâgasaneyi-samhitâ-upanishad",
-    "up_chand_Sixth": "Sacred Books of the East/Volume 1/Khândogya-upanishad/Sixth Prapâthaka",
-    "up_chand_Seventh": "Sacred Books of the East/Volume 1/Khândogya-upanishad/Seventh Prapâthaka",
     "dl10": "Lives of the Eminent Philosophers/Book X",
+    "aston_b4c3": "A History of Japanese Literature/Book 4/Chapter 3",
 }
-JPS = "The Holy Scriptures: A New Translation (JPS 1917)"
 
 
 def get(url):
@@ -48,17 +42,8 @@ def main(out):
         w(f"{name}.txt", html_to_text(get(f"https://en.wikisource.org/w/index.php?{q}")))
         time.sleep(1)
 
-    for name, book, chapters in [("proverbs", "Proverbs", 31), ("eccl", "Ecclesiastes", 12)]:
-        q = urllib.parse.urlencode({"version": f"english|{JPS}"})
-        data = json.loads(get(f"https://www.sefaria.org/api/v3/texts/{book}.1-{chapters}?{q}"))
-        lines = [f"{book} {c}:{v}\t{re.sub(r'<[^>]+>', '', t)}"
-                 for c, ch in enumerate(data["versions"][0]["text"], 1)
-                 for v, t in enumerate(ch, 1)]
-        w(f"{name}.tsv", "\n".join(lines) + "\n")
-
-    w("quran_yusufali.txt", get("https://tanzil.net/trans/?transID=en.yusufali&type=txt-2"))
-    w("suhrawardy.txt", get("https://archive.org/download/the-sayings-of-muhammad_202401/"
-                            "The%20Sayings%20of%20%27Muhammad_djvu.txt"))
+    w("porter_kenko.txt", get("https://archive.org/download/miscellanyofjapa00yosh/"
+                               "miscellanyofjapa00yosh_djvu.txt"))
     print(f"sources written to {out}")
 
 
