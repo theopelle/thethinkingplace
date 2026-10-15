@@ -845,6 +845,40 @@
   "def": "Chōmei's short book of 1212, 'An Account of My Ten-Foot Hut', on impermanence and the joys of a simple life."
  },
  {
+  "term": "Confucianism",
+  "match": [
+   "Confucianism",
+   "Confucian"
+  ],
+  "wiki": "Confucianism",
+  "def": "A Chinese tradition of thought founded on the teachings of Confucius in the 5th century BCE. It centres on cultivating good character, learning, and harmony in families and society."
+ },
+ {
+  "term": "Analects",
+  "match": [
+   "Analects"
+  ],
+  "wiki": "Analects",
+  "def": "The sayings of Confucius and his students, collected by his followers after his death: short conversations and maxims, arranged in twenty books."
+ },
+ {
+  "term": "Søren Kierkegaard",
+  "match": [
+   "Søren Kierkegaard",
+   "Kierkegaard"
+  ],
+  "wiki": "Søren_Kierkegaard",
+  "def": "A Danish philosopher (1813–1855), widely considered the first existentialist. He wrote about how a single individual lives, chooses and finds a truth to live by, often under playful pen names."
+ },
+ {
+  "term": "Either/Or",
+  "match": [
+   "Either/Or"
+  ],
+  "wiki": "Either/Or_(Kierkegaard_book)",
+  "def": "Kierkegaard's first book (1843), in two volumes: the papers of a young aesthete who lives for enjoyment, and letters from an older friend who argues for a committed, ethical life. The reader is left to choose."
+ },
+ {
   "term": "Judgment",
   "match": [
    "judgment",
@@ -1491,5 +1525,109 @@
   ],
   "wiki": "Wabi-sabi",
   "def": "The tea room is deliberately plain. Wabi, the beauty of simple, quiet and unadorned things, values having enough over having more."
+ },
+ {
+  "term": "Bad faith",
+  "match": [
+   "bad faith"
+  ],
+  "scope": [
+   "Existentialism"
+  ],
+  "wiki": "Bad_faith_(existentialism)",
+  "def": "Sartre's term for lying to ourselves about our freedom: telling ourselves we have no choice, or hiding behind a role, so that we don't have to own our decisions."
+ },
+ {
+  "term": "The absurd",
+  "match": [
+   "the absurd"
+  ],
+  "scope": [
+   "Existentialism"
+  ],
+  "wiki": "Absurdism",
+  "def": "Camus' name for the clash between our longing for meaning and a world that gives no answer. He did not think we should despair, but live fully and honestly in spite of it."
+ },
+ {
+  "term": "Anxiety",
+  "match": [
+   "anxiety"
+  ],
+  "scope": [
+   "Existentialism"
+  ],
+  "wiki": "The_Concept_of_Anxiety",
+  "def": "For Kierkegaard, anxiety is not just nerves but the dizziness we feel before our own freedom: the awareness that we could choose otherwise. He saw it as a sign that we are free."
+ },
+ {
+  "term": "Superior man",
+  "match": [
+   "superior man"
+  ],
+  "scope": [
+   "Confucianism"
+  ],
+  "wiki": "Junzi",
+  "def": "Legge's translation of junzi, a person of noble character. For Confucius, nobility comes not from birth but from cultivating virtue, learning and integrity, so anyone can become one."
+ },
+ {
+  "term": "Mean man",
+  "match": [
+   "mean man",
+   "small man"
+  ],
+  "scope": [
+   "Confucianism"
+  ],
+  "wiki": "Junzi",
+  "def": "Legge's translation of xiaoren, the 'small person': not poor or low-born, but petty, concerned with gain and comfort, and quick to blame others. The opposite of the superior man."
+ },
+ {
+  "term": "Virtue",
+  "match": [
+   "perfect virtue",
+   "virtuous",
+   "virtue"
+  ],
+  "scope": [
+   "Confucianism"
+  ],
+  "wiki": "Ren_(philosophy)",
+  "def": "Often Legge's word for ren, Confucius' highest virtue: humaneness, the goodness that shows in how we treat others. It includes kindness, trustworthiness, courage and reciprocity."
+ },
+ {
+  "term": "Reciprocity",
+  "match": [
+   "reciprocity"
+  ],
+  "scope": [
+   "Confucianism"
+  ],
+  "wiki": "Golden_Rule",
+  "def": "Shu in Chinese: treating others as you would wish to be treated or, as Confucius put it, not doing to others what you would not want done to yourself."
+ },
+ {
+  "term": "Learning",
+  "match": [
+   "learning",
+   "learn"
+  ],
+  "scope": [
+   "Confucianism"
+  ],
+  "wiki": "Analects",
+  "def": "For Confucius, learning is the path to becoming fully human: not collecting facts, but studying, reflecting and practising until what we know shapes who we are."
+ },
+ {
+  "term": "The mean",
+  "match": [
+   "due mean",
+   "balanced middle"
+  ],
+  "scope": [
+   "Confucianism"
+  ],
+  "wiki": "Doctrine_of_the_Mean",
+  "def": "The Confucian ideal of zhongyong, steady balance in feeling and action: neither too much nor too little. Aristotle reached a similar idea in Greece."
  }
 ]

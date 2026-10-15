@@ -19,11 +19,20 @@
  },
  {
   "tradition": "Existentialism",
+  "source": "Søren Kierkegaard, Journals, 1835",
+  "from": "swenson",
+  "start": "I need to discover a Truth which is a Truth for me",
+  "end": "for which I can live and die.",
+  "context": "Written at twenty-two, on a summer stay by the sea. Kierkegaard, often called the first existentialist, wanted not a system to admire but a truth he could live by.",
+  "prompt": "What idea would you be willing to build your life around?"
+ },
+ {
+  "tradition": "Existentialism",
   "source": "Fyodor Dostoevsky, The Brothers Karamazov, Book II, ch. 2",
   "from": "karamazov",
   "start": "Above all, don't lie to yourself",
   "end": "respect for himself and for others.",
-  "context": "Advice from the elder Zosima. Dostoevsky is often read as a forerunner of existentialism for his focus on freedom, conscience and self-deception.",
+  "context": "Advice from the elder Zosima. Dostoevsky is often read as a forerunner of existentialism for his focus on freedom, conscience and self-deception. A century later, Sartre called this kind of self-deception 'bad faith': pretending we have no choice.",
   "prompt": "What small lie have you been telling yourself?"
  },
  {
@@ -52,6 +61,18 @@
   "end": "gaze into thee.",
   "context": "A warning to anyone fighting something they despise: the struggle can reshape us into what we oppose.",
   "prompt": "Is something you are fighting changing you?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Søren Kierkegaard, Journals, 1835",
+  "from": "swenson",
+  "start": "What I need is the power to live a complete human life",
+  "end": "something not my own.",
+  "fix": {
+   "so-cabled": "so-called"
+  },
+  "context": "From the same journal entry. Knowing about life, he warns, is not the same as living it.",
+  "prompt": "Where are you collecting knowledge about life instead of living it?"
  },
  {
   "tradition": "Existentialism",
@@ -91,12 +112,21 @@
  },
  {
   "tradition": "Existentialism",
-  "source": "Friedrich Nietzsche, The Joyful Wisdom 272",
-  "from": "gaya",
-  "start": "What dost thou Love in others?",
-  "end": "My hopes.",
-  "context": "One of a series of short questions and answers in which Nietzsche examines himself.",
-  "prompt": "What do you love in the people closest to you?"
+  "source": "Søren Kierkegaard, Journals, 1835",
+  "from": "swenson",
+  "parts": [
+   [
+    "My misfortune",
+    null
+   ],
+   [
+    "is that I am interested in too many things",
+    "everything else."
+   ]
+  ],
+  "join": " ",
+  "context": "Kierkegaard at twenty-two, torn between law, theatre, science and theology. He later described the dizziness of facing too many possibilities as anxiety, the feeling that comes with freedom.",
+  "prompt": "Which of your many interests deserves to come first?"
  },
  {
   "tradition": "Existentialism",
@@ -118,15 +148,6 @@
  },
  {
   "tradition": "Existentialism",
-  "source": "Friedrich Nietzsche, Thus Spake Zarathustra III, 'Old and New Tables' 23",
-  "from": "zarathustra",
-  "start": "And lost be the day to us in which a measure hath not been danced",
-  "end": "laughter along with it!",
-  "context": "Nietzsche prized joy, lightness and dance as signs of a life fully affirmed.",
-  "prompt": "When did you last dance or laugh?"
- },
- {
-  "tradition": "Existentialism",
   "source": "Friedrich Nietzsche, Thus Spake Zarathustra I, 'Reading and Writing'",
   "from": "zarathustra",
   "start": "Of all that is written, I love only what a person hath written with his blood",
@@ -142,6 +163,15 @@
   "end": "best wisdom.",
   "context": "Against those who despise the body, Zarathustra insists it holds an intelligence of its own.",
   "prompt": "What is your body trying to tell you?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Søren Kierkegaard, Journals, 1835",
+  "from": "swenson",
+  "start": "In a particular flower I may train myself to see the whole world",
+  "end": "with respect to human life.",
+  "context": "The young Kierkegaard decides he does not need to master science to learn from nature. One flower, looked at closely, can teach a great deal.",
+  "prompt": "What small thing near you could you look at long enough to learn from?"
  },
  {
   "tradition": "Existentialism",
@@ -173,15 +203,6 @@
  },
  {
   "tradition": "Existentialism",
-  "source": "Fyodor Dostoevsky, The Brothers Karamazov, Epilogue, ch. 3",
-  "from": "karamazov",
-  "start": "there is nothing higher and stronger and more wholesome",
-  "end": "the means of saving us.",
-  "context": "Alyosha's speech to a group of boys at the funeral of their friend. Good memories, he says, can carry us through a whole life.",
-  "prompt": "Which good memory from childhood do you carry with you?"
- },
- {
-  "tradition": "Existentialism",
   "source": "Fyodor Dostoevsky, The Brothers Karamazov, Book II, ch. 4",
   "from": "karamazov",
   "start": "The more I love humanity in general",
@@ -191,30 +212,21 @@
  },
  {
   "tradition": "Existentialism",
+  "source": "Søren Kierkegaard, Either/Or I, 'Diapsalmata'",
+  "from": "swenson",
+  "start": "What is a poet?",
+  "end": "a sound of beautiful music.",
+  "context": "The opening aphorism of Either/Or (1843), in the voice of a young aesthete. Beautiful art can hide real pain, and admirers rarely ask what it costs.",
+  "prompt": "Whose cheerful surface might be hiding something you haven't asked about?"
+ },
+ {
+  "tradition": "Existentialism",
   "source": "Fyodor Dostoevsky, The Brothers Karamazov, Epilogue, ch. 3",
   "from": "karamazov",
   "start": "Let us be, first and above all, kind",
   "end": "never forget each other!",
   "context": "The closing scene of the novel. After all its darkness, Dostoevsky ends with a simple order of priorities.",
   "prompt": "Who should you make sure never to forget?"
- },
- {
-  "tradition": "Existentialism",
-  "source": "Fyodor Dostoevsky, The Brothers Karamazov, Book II, ch. 4",
-  "from": "karamazov",
-  "start": "Above all, avoid falsehood",
-  "end": "observing it in yourself.",
-  "context": "Zosima's advice: honest self-observation, without scorn, is itself a kind of healing.",
-  "prompt": "What could you observe in yourself today without scorn?"
- },
- {
-  "tradition": "Existentialism",
-  "source": "Fyodor Dostoevsky, The Brothers Karamazov, Book VI, ch. 3",
-  "from": "karamazov",
-  "start": "Loving humility is marvelously strong",
-  "end": "nothing else like it.",
-  "context": "Zosima on humility: not weakness, but the strongest force there is.",
-  "prompt": "Where could humility be your strength today?"
  },
  {
   "tradition": "Existentialism",
@@ -231,7 +243,7 @@
   "from": "underground",
   "start": "What man wants is simply",
   "end": "wherever it may lead.",
-  "context": "The Underground Man argues that people are not calculating machines: above all, we want to choose for ourselves.",
+  "context": "The Underground Man argues that people are not calculating machines: above all, we want to choose for ourselves. Sartre would later argue that freedom is not optional: we cannot avoid choosing, even by doing nothing.",
   "prompt": "Where are you choosing freely, and where just following?"
  },
  {
@@ -240,8 +252,17 @@
   "from": "pascal",
   "start": "Man is but a reed",
   "end": "he is a thinking reed.",
-  "context": "Perhaps Pascal's most famous line. Human beings are fragile, but our capacity to think gives us a dignity the universe lacks.",
+  "context": "Perhaps Pascal's most famous line. Human beings are fragile, but our capacity to think gives us a dignity the universe lacks. Camus would later call the clash between our need for meaning and a silent universe 'the absurd'.",
   "prompt": "How are you using your thinking today?"
+ },
+ {
+  "tradition": "Existentialism",
+  "source": "Søren Kierkegaard, Concluding Unscientific Postscript",
+  "from": "swenson",
+  "start": "We smile at the life of the cloister",
+  "end": "he did not abstract from himself.",
+  "context": "Kierkegaard mocks thinkers who build grand systems and forget that they are living people too. The hermit leaves the world; the pure thinker leaves himself.",
+  "prompt": "Where do you think about life in a way that leaves you out of it?"
  },
  {
   "tradition": "Existentialism",
@@ -263,15 +284,6 @@
  },
  {
   "tradition": "Existentialism",
-  "source": "Blaise Pascal, Pensées 358",
-  "from": "pascal",
-  "start": "Man is neither angel nor brute, and the unfortunate",
-  "end": "acts the brute.",
-  "context": "Trying to be more than human often makes us less. Pascal warns against spiritual pride.",
-  "prompt": "Where are you trying to be an angel instead of a human?"
- },
- {
-  "tradition": "Existentialism",
   "source": "Blaise Pascal, Pensées 171",
   "from": "pascal",
   "start": "The only thing which consoles us for our miseries is diversion",
@@ -281,33 +293,6 @@
   },
   "context": "Pascal saw distraction as both comfort and trap: it keeps us from reflecting on our lives. (A typo in the source edition, 'it' for 'is', is corrected here.)",
   "prompt": "What distraction keeps you from reflecting on your life?"
- },
- {
-  "tradition": "Existentialism",
-  "source": "Blaise Pascal, Pensées 152",
-  "from": "pascal",
-  "start": "Curiosity is only vanity",
-  "end": "but to talk.",
-  "context": "A sharp observation: much of what we want to know, we want to know in order to tell others.",
-  "prompt": "What would you still want to experience if you could never tell anyone?"
- },
- {
-  "tradition": "Existentialism",
-  "source": "Blaise Pascal, Pensées 348",
-  "from": "pascal",
-  "start": "It is not from space that I must seek my dignity",
-  "end": "government of my thought.",
-  "context": "Our dignity lies not in what we possess or how much room we occupy, but in how we govern our minds.",
-  "prompt": "How well are you governing your thoughts?"
- },
- {
-  "tradition": "Existentialism",
-  "source": "Blaise Pascal, Pensées 347",
-  "from": "pascal",
-  "start": "Let us endeavour, then, to think well",
-  "end": "principle of morality.",
-  "context": "Pascal concludes that since thought is our dignity, thinking well is where ethics begins.",
-  "prompt": "Where would better thinking lead to better living?"
  },
  {
   "tradition": "Existentialism",
@@ -324,11 +309,20 @@
  },
  {
   "tradition": "Existentialism",
-  "source": "Fyodor Dostoevsky, The Brothers Karamazov, Book VI, ch. 3",
-  "from": "karamazov",
-  "start": "Every day and every hour, every minute, walk round",
-  "end": "your image is a seemly one.",
-  "context": "Zosima's counsel to watch how we carry ourselves, because others, especially children, are always watching.",
-  "prompt": "How do you appear to those who look up to you?"
+  "source": "Søren Kierkegaard, Stages on Life's Way",
+  "from": "swenson",
+  "parts": [
+   [
+    "What you have vainly sought for in books",
+    null
+   ],
+   [
+    "is suddenly illuminated for you",
+    "how rich he is."
+   ]
+  ],
+  "join": " ",
+  "context": "Kierkegaard spent his afternoons walking Copenhagen and talking with anyone he met. Some of his best words, he says, came from overhearing ordinary people.",
+  "prompt": "What could you learn today by listening to someone you would usually pass by?"
  }
 ]

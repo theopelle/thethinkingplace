@@ -202,15 +202,6 @@
  },
  {
   "tradition": "Virtue Ethics",
-  "source": "Aristotle, Nicomachean Ethics, Book I",
-  "from": "aristotle",
-  "start": "the young man is not a fit student of Moral Philosophy",
-  "end": "not mere knowledge.",
-  "context": "Ethics is learned through living. Aristotle thought the young simply lacked enough experience of life to follow it, and that its aim is practice.",
-  "prompt": "What has life taught you that no book could have?"
- },
- {
-  "tradition": "Virtue Ethics",
   "source": "Aristotle, Nicomachean Ethics, Book II",
   "from": "aristotle",
   "start": "the man who flies from and fears all things",
@@ -274,15 +265,6 @@
  },
  {
   "tradition": "Virtue Ethics",
-  "source": "Aristotle, Nicomachean Ethics, Book III",
-  "from": "aristotle",
-  "start": "we deliberate not about Ends, but Means to Ends.",
-  "end": "Means to Ends.",
-  "context": "A doctor doesn't debate whether to heal, only how. Clear aims leave our deliberation for the path.",
-  "prompt": "Is your problem the goal, or the way to reach it?"
- },
- {
-  "tradition": "Virtue Ethics",
   "source": "Aristotle, Nicomachean Ethics, Book II",
   "from": "aristotle",
   "start": "men should have been trained straight from their childhood",
@@ -316,14 +298,5 @@
   "end": "the end of the virtue.",
   "context": "The brave person isn't fearless. They feel fear and act well anyway, for the sake of what is right.",
   "prompt": "What are you afraid of that is still worth facing?"
- },
- {
-  "tradition": "Virtue Ethics",
-  "source": "Aristotle, Nicomachean Ethics, Book I",
-  "from": "aristotle",
-  "start": "there are three lines of life which stand out prominently to view",
-  "end": "the life of contemplation.",
-  "context": "Aristotle's three kinds of life: pleasure, public life, and thought. He asks which one truly leads to happiness.",
-  "prompt": "Which of the three lives are you mostly living?"
  }
 ]

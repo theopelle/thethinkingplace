@@ -121,28 +121,10 @@
   "tradition": "Epicureanism",
   "source": "Epicurus, Letter to Menoeceus 132",
   "from": "epicurus",
-  "start": "It is not an unbroken succession of drinking-bouts",
-  "end": "take possession of the soul.",
-  "context": "A pleasant life comes from thinking clearly about what we choose and why, and from letting go of beliefs that disturb us.",
-  "prompt": "Which of your beliefs causes you the most unrest?"
- },
- {
-  "tradition": "Epicureanism",
-  "source": "Epicurus, Letter to Menoeceus 132",
-  "from": "epicurus",
   "start": "Wherefore prudence is a more precious thing even than philosophy",
   "end": "inseparable from them.",
   "context": "For Epicurus, a pleasant life and a good life are the same thing: you cannot have one without the other.",
   "prompt": "Where do pleasure and goodness meet in your life?"
- },
- {
-  "tradition": "Epicureanism",
-  "source": "Epicurus, Letter to Menoeceus 133",
-  "from": "epicurus",
-  "start": "some things happen of necessity, others by chance",
-  "end": "our own actions are free",
-  "context": "Against fatalism, Epicurus insists that much of life is up to us. Responsibility depends on it.",
-  "prompt": "What part of your situation is truly in your own hands?"
  },
  {
   "tradition": "Epicureanism",
@@ -236,15 +218,6 @@
  },
  {
   "tradition": "Epicureanism",
-  "source": "Epicurus, Principal Doctrines 28",
-  "from": "epicurus",
-  "start": "The same conviction which inspires confidence",
-  "end": "so much as friendship.",
-  "context": "In an uncertain world, nothing makes us more secure than friends.",
-  "prompt": "Who makes you feel safe, and do you make them feel the same?"
- },
- {
-  "tradition": "Epicureanism",
   "source": "Epicurus, Principal Doctrines 29",
   "from": "epicurus",
   "start": "Of our desires some are natural and necessary",
@@ -296,15 +269,6 @@
   "end": "unafflicted rest?",
   "context": "Nature speaks to someone afraid of dying: if your life has been good, why not leave it like a guest who has dined well?",
   "prompt": "What would it mean to feel 'laden with life'?"
- },
- {
-  "tradition": "Epicureanism",
-  "source": "Lucretius, On the Nature of Things III",
-  "from": "lucretius",
-  "start": "those tortures said to be In Acheron",
-  "end": "Here in this life.",
-  "context": "Lucretius reads the myths of the underworld as pictures of our own anxieties, which we suffer now, not after death.",
-  "prompt": "Which torment of yours lives only in your mind?"
  },
  {
   "tradition": "Epicureanism",

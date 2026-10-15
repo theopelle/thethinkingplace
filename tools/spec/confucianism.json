@@ -1,0 +1,321 @@
+[
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 1.1",
+  "from": "analects",
+  "parts": [
+   [
+    "Is it not pleasant to learn",
+    "application?"
+   ],
+   [
+    "Is it not delightful",
+    "distant quarters?"
+   ],
+   [
+    "Is he not a man of complete virtue",
+    "take no note of him?"
+   ]
+  ],
+  "join": " ",
+  "context": "The opening lines of the Analects, the sayings of Confucius collected by his students. Learning, friendship and not needing recognition: the whole book in three questions.",
+  "prompt": "Which of the three would make today a good day: learning something, seeing a friend, or not needing to be noticed?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Analects 1.4",
+  "from": "analects",
+  "start": "I daily examine myself on three points",
+  "end": "instructions of my teacher.",
+  "context": "Zengzi, one of Confucius' students, describes his daily review: Was I reliable for others? Was I sincere with friends? Did I practise what I was taught?",
+  "prompt": "Run through Zengzi's three questions for today. Which one makes you pause?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 1.16",
+  "from": "analects",
+  "start": "I will not be afflicted at men's not knowing me",
+  "end": "that I do not know men.",
+  "context": "Confucius turns a common worry around. Instead of fretting that others don't understand us, he asks whether we understand them.",
+  "prompt": "Who in your life might you not yet really know?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 2.11",
+  "from": "analects",
+  "start": "If a man keeps cherishing his old knowledge",
+  "end": "a teacher of others.",
+  "context": "Good teachers keep returning to what they know until it yields something new. Old knowledge is not a shelf but a garden.",
+  "prompt": "What do you already know that might teach you something new if you went back to it?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 2.15",
+  "from": "analects",
+  "start": "Learning without thought is labour lost",
+  "end": "thought without learning is perilous.",
+  "context": "Reading without reflecting changes nothing; reflecting without learning goes round in circles. Confucius wants both, together.",
+  "prompt": "Are you lately more at risk of learning without thinking, or thinking without learning?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 2.17",
+  "from": "analects",
+  "start": "When you know a thing, to hold that you know it",
+  "end": "this is knowledge.",
+  "context": "Spoken to Zilu, a bold student who was quick to speak. Like Socrates, Confucius places wisdom in being honest about where our knowledge ends.",
+  "prompt": "Where do you pretend to know more than you do?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 2.13",
+  "from": "analects",
+  "start": "He acts before he speaks",
+  "end": "according to his actions.",
+  "context": "Asked what makes a person of true quality, Confucius points to the order of things: first do it, then talk about it.",
+  "prompt": "What are you talking about doing that you could simply start?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 4.14",
+  "from": "analects",
+  "start": "I am not concerned that I have no place",
+  "end": "worthy to be known.",
+  "context": "Confucius spent years without the position he hoped for. He suggests turning the worry about recognition into work on oneself.",
+  "prompt": "What would make you worthy of the place you want, whether or not you get it?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 4.17",
+  "from": "analects",
+  "start": "When we see men of worth",
+  "end": "examine ourselves.",
+  "context": "Everyone we meet is a lesson: the admirable show us what to aim for, the others what to look for in ourselves.",
+  "prompt": "Whose behaviour annoyed you recently, and is any of it in you too?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 4.25",
+  "from": "analects",
+  "start": "Virtue is not left to stand alone",
+  "end": "will have neighbors.",
+  "context": "Goodness can feel lonely at first, but it draws others to it. Character attracts company of its own kind.",
+  "prompt": "Who has your kindness quietly drawn closer to you?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 6.9",
+  "from": "analects",
+  "start": "Admirable indeed was the virtue of Hui!",
+  "end": "affected by it.",
+  "context": "Yan Hui was Confucius' favourite student, poor all his life and dead young. His joy did not depend on what he owned.",
+  "prompt": "What joy of yours would survive losing your comforts?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 6.18",
+  "from": "analects",
+  "start": "They who know the truth are not equal to those who love it",
+  "end": "delight in it.",
+  "context": "Three stages in our relationship with anything worth learning: knowing it, loving it, and finally delighting in it.",
+  "prompt": "What do you know well but no longer delight in?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 6.21",
+  "from": "analects",
+  "start": "The wise find pleasure in water",
+  "end": "the virtuous are long-lived.",
+  "context": "Water moves and adapts; hills stay put. Confucius sees two temperaments, the quick mind and the steady heart, and honours both.",
+  "prompt": "Are you more water or hill these days, and what could the other teach you?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 7.15",
+  "from": "analects",
+  "start": "With coarse rice to eat",
+  "end": "as a floating cloud.",
+  "context": "Confucius on simple living. Wealth gained wrongly means as little to him as a cloud drifting past.",
+  "prompt": "What simple thing gives you joy that money couldn't improve?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 7.21",
+  "from": "analects",
+  "start": "When I walk along with two others",
+  "end": "avoid them.",
+  "context": "Any two companions can be teachers: one shows us what to follow, the other what to avoid.",
+  "prompt": "What did the last two people you spent time with teach you?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 7.29",
+  "from": "analects",
+  "start": "Is virtue a thing remote?",
+  "end": "virtue is at hand.",
+  "context": "Goodness is not far away, waiting for the perfect moment. It begins the instant we genuinely want it.",
+  "prompt": "What good thing are you postponing that you could begin right now?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 8.17",
+  "from": "analects",
+  "start": "Learn as if you could not reach your object",
+  "end": "lest you should lose it.",
+  "context": "Confucius describes the eager student: always reaching ahead, and holding on to what was learned as if it might slip away.",
+  "prompt": "What are you learning that deserves this kind of eagerness?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Analects 9.4",
+  "from": "analects",
+  "start": "There were four things from which the Master was entirely free",
+  "end": "no egoism.",
+  "context": "His students' portrait of Confucius: no fixed conclusions, no rigid plans, no stubbornness and no ego.",
+  "prompt": "Which of the four do you hold on to most tightly?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 9.16",
+  "from": "analects",
+  "start": "It passes on just like this",
+  "end": "day or night!",
+  "context": "Confucius, standing by a river. Like Heraclitus in Greece, he sees life flowing on without pause.",
+  "prompt": "What is flowing past you right now that you would like to notice?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 9.18",
+  "from": "analects",
+  "start": "The prosecution of learning may be compared",
+  "end": "my own going forward.",
+  "context": "Building a mound one basket at a time: whether we stop just short or keep adding, the choice is always ours.",
+  "prompt": "What are you one basket away from finishing, or from starting?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 9.25",
+  "from": "analects",
+  "start": "The commander of the forces of a large state",
+  "end": "cannot be taken from him.",
+  "context": "An army can lose its general, but no one can take away a person's will. Even the most ordinary life holds this inner freedom.",
+  "prompt": "What choice is entirely yours today, whatever happens around you?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 9.27",
+  "from": "analects",
+  "start": "When the year becomes cold",
+  "end": "the last to lose their leaves.",
+  "context": "Pines and cypresses stay green through winter. Character, like an evergreen, shows itself in the hard seasons.",
+  "prompt": "Who stayed green for you during a hard winter?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 11.15",
+  "from": "analects",
+  "start": "To go beyond is as wrong",
+  "end": "to fall short.",
+  "context": "Asked which of two students was better, one who overdid things and one who fell short, Confucius refused to choose. The ideal is the balanced middle, the due mean, much like Aristotle's.",
+  "prompt": "Where are you overdoing something, and where falling short?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 12.4",
+  "from": "analects",
+  "start": "When internal examination discovers nothing wrong",
+  "end": "what is there to fear?",
+  "context": "Asked about the person of true quality, Confucius says they live without anxiety or fear, not because life is safe but because their conscience is clear.",
+  "prompt": "What would clear your conscience enough to let a worry go?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 14.11",
+  "from": "analects",
+  "start": "To be poor without murmuring is difficult",
+  "end": "is easy.",
+  "context": "Confucius is honest about which test is harder. Grace in hardship asks far more of us than modesty in comfort.",
+  "prompt": "What difficulty could you carry today without complaining about it?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 14.25",
+  "from": "analects",
+  "start": "In ancient times, men learned with a view to their own improvement",
+  "end": "approbation of others.",
+  "context": "A complaint from 2,500 years ago that sounds very modern: learning to grow, versus learning to impress.",
+  "prompt": "Is there something you study mainly so that others will notice?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 14.36",
+  "from": "analects",
+  "parts": [
+   [
+    "With what then will you recompense kindness?",
+    null
+   ],
+   [
+    "Recompense injury with justice",
+    "kindness with kindness."
+   ]
+  ],
+  "join": " ",
+  "context": "Someone asks whether we should repay injury with kindness. Confucius replies with a question: then what is left for those who are kind to us? Fairness for harm, kindness for kindness.",
+  "prompt": "Where would fairness serve better than forced kindness, or the other way round?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 15.14",
+  "from": "analects",
+  "start": "He who requires much from himself and little from others",
+  "end": "object of resentment.",
+  "context": "High standards for ourselves, generous ones for others: a simple recipe for fewer grudges, in both directions.",
+  "prompt": "Whom are you holding to a higher standard than you hold yourself?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 15.20",
+  "from": "analects",
+  "start": "What the superior man seeks, is in himself",
+  "end": "is in others.",
+  "context": "The person of quality looks inward for causes and remedies; the petty person looks for someone else to blame.",
+  "prompt": "What are you seeking from others that you could find in yourself?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 15.23",
+  "from": "analects",
+  "start": "What you do not want done to yourself",
+  "end": "do not do to others.",
+  "context": "Asked for one word to live by, Confucius chose shu, reciprocity, and summed it up in this line: a version of the golden rule found in many cultures.",
+  "prompt": "Where today could you treat someone the way you would want to be treated?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 17.2",
+  "from": "analects",
+  "start": "By nature, men are nearly alike",
+  "end": "wide apart.",
+  "context": "We start out much the same; what we do again and again makes us different. Aristotle would have agreed.",
+  "prompt": "Which daily habit is quietly shaping who you are becoming?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Analects 19.21",
+  "from": "analects",
+  "start": "The faults of the superior man are like the eclipses",
+  "end": "all men look up to him.",
+  "context": "Zigong, a student of Confucius, on how a good person handles mistakes: openly, in full view, and then changed.",
+  "prompt": "Which mistake of yours could you own more openly?"
+ },
+ {
+  "tradition": "Confucianism",
+  "source": "Confucius, Analects 15.29",
+  "from": "analects",
+  "start": "To have faults and not to reform them",
+  "end": "having faults.",
+  "context": "Mistakes are human. The real fault, Confucius says, is refusing to correct them.",
+  "prompt": "Which of your faults have you made peace with that you could still change?"
+ }
+]

@@ -129,14 +129,6 @@
  },
  {
   "tradition": "Buddhist Philosophy",
-  "source": "Dhammapada 76",
-  "from": "dhammapada",
-  "ref": "76",
-  "context": "A person who corrects us honestly is described as someone pointing to buried treasure.",
-  "prompt": "Who tells you hard truths, and how do you receive them?"
- },
- {
-  "tradition": "Buddhist Philosophy",
   "source": "Dhammapada 80",
   "from": "dhammapada",
   "ref": "80",
@@ -201,22 +193,6 @@
  },
  {
   "tradition": "Buddhist Philosophy",
-  "source": "Dhammapada 170",
-  "from": "dhammapada",
-  "ref": "170",
-  "context": "Seeing the world as a bubble or a mirage is not despair but freedom: what passes cannot hold us.",
-  "prompt": "What would you stop clinging to if you saw it as a passing bubble?"
- },
- {
-  "tradition": "Buddhist Philosophy",
-  "source": "Dhammapada 183",
-  "from": "dhammapada",
-  "ref": "183",
-  "context": "Often called the heart of the Buddha's teaching in a single verse: avoid harm, do good, clarify the mind.",
-  "prompt": "Which of the three do you most need today?"
- },
- {
-  "tradition": "Buddhist Philosophy",
   "source": "Dhammapada 197",
   "from": "dhammapada",
   "ref": "197",
@@ -254,14 +230,6 @@
   "ref": "223",
   "context": "Each quality is overcome by its opposite: anger by love, evil by good, greed by generosity, lies by truth.",
   "prompt": "Which opposite does a situation in your life call for?"
- },
- {
-  "tradition": "Buddhist Philosophy",
-  "source": "Dhammapada 227–228",
-  "from": "dhammapada",
-  "ref": "227-228",
-  "context": "Addressed to a disciple named Atula. Whatever we do, someone will criticise it; whatever we do, someone will praise it.",
-  "prompt": "Whose criticism have you been trying to avoid at the cost of being yourself?"
  },
  {
   "tradition": "Buddhist Philosophy",

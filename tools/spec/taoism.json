@@ -97,15 +97,6 @@
  },
  {
   "tradition": "Taoism",
-  "source": "Laozi, Tao Te Ching 24",
-  "from": "taote",
-  "start": "He who stands on his tiptoes does not stand firm",
-  "end": "has no superiority allowed to him.",
-  "context": "Straining to look taller only makes us wobble. The same is true of showing off.",
-  "prompt": "Where are you standing on tiptoe?"
- },
- {
-  "tradition": "Taoism",
   "source": "Laozi, Tao Te Ching 15",
   "from": "taote",
   "start": "Who can (make) the muddy water (clear)?",
@@ -147,15 +138,6 @@
   "end": "is a disease.",
   "context": "An echo of Socrates, a world away: the wise hold their knowledge lightly; the sick mind is the one that is sure.",
   "prompt": "What do you think you know that you might not?"
- },
- {
-  "tradition": "Taoism",
-  "source": "Zhuangzi, ch. 26",
-  "from": "zhuangzi",
-  "start": "The _raison d'être_ of a fish-trap is the fish.",
-  "end": "the language may be ignored.",
-  "context": "Words, methods and rules are tools for catching something else. Once you have the fish, you need not cling to the trap.",
-  "prompt": "Which tool or rule are you holding onto after it has done its job?"
  },
  {
   "tradition": "Taoism",
@@ -229,15 +211,6 @@
   "end": "does not know it.",
   "context": "Often quoted as 'those who know do not speak; those who speak do not know'. Deep understanding tends to be quiet.",
   "prompt": "What do you understand best, and how little do you need to say about it?"
- },
- {
-  "tradition": "Taoism",
-  "source": "Laozi, Tao Te Ching 63",
-  "from": "taote",
-  "start": "anticipates things that are difficult while they are easy",
-  "end": "while they are small.",
-  "context": "Big problems start small. Attending to things early is the quiet secret of handling them well.",
-  "prompt": "What small thing could you deal with now, before it grows?"
  },
  {
   "tradition": "Taoism",

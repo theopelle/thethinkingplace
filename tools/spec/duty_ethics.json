@@ -57,15 +57,6 @@
   "tradition": "Duty Ethics",
   "source": "Kant, Groundwork, First Section",
   "from": "kant_g",
-  "start": "wherever there is much commerce the prudent tradesman does not overcharge",
-  "end": "his own advantage required it",
-  "context": "An honest shopkeeper may be honest only because it pays. Kant asks us to notice the difference between doing right and doing right for the right reason.",
-  "prompt": "Which of your good habits would survive if they stopped paying off?"
- },
- {
-  "tradition": "Duty Ethics",
-  "source": "Kant, Groundwork, First Section",
-  "from": "kant_g",
   "start": "Duty is the necessity of acting from respect for the law.",
   "end": "respect for the law.",
   "context": "For Kant, duty isn't blind obedience. It means acting from respect for a principle you recognise as right.",
@@ -79,15 +70,6 @@
   "end": "as well as for others?",
   "context": "Kant's test for a lie told to escape a difficulty: would you accept a world where everyone lied whenever it suited them?",
   "prompt": "What small untruth would fail this test?"
- },
- {
-  "tradition": "Duty Ethics",
-  "source": "Kant, Groundwork, First Section",
-  "from": "kant_g",
-  "start": "Whether it is prudent, or whether it is right, to make a false promise?",
-  "end": "to make a false promise?",
-  "context": "Two different questions that often get mixed up: is it clever, and is it right?",
-  "prompt": "Which decision have you been judging by 'clever' instead of 'right'?"
  },
  {
   "tradition": "Duty Ethics",
@@ -115,15 +97,6 @@
   "end": "their own work.",
   "context": "Kant admires naturally kind people, but makes a surprising claim: kindness that comes only from temperament has less moral worth than kindness done from principle, when it is hard.",
   "prompt": "Where is kindness easy for you, and where would it take principle?"
- },
- {
-  "tradition": "Duty Ethics",
-  "source": "Kant, Groundwork, Second Section",
-  "from": "kant_g",
-  "start": "By a kingdom I understand the union of different rational beings",
-  "end": "by common laws.",
-  "context": "Kant pictures an ideal community in which everyone treats everyone else as an end, as both lawmaker and citizen.",
-  "prompt": "How would your day change if you acted as a member of that kingdom?"
  },
  {
   "tradition": "Duty Ethics",

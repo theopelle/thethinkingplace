@@ -23,7 +23,8 @@ RELEASED = os.path.join(HERE, "released.json")
 
 # Rotation order: one tradition per day, cycling.
 ORDER = ["Stoicism", "Taoism", "Virtue Ethics", "Buddhist Philosophy", "Epicureanism",
-         "Duty Ethics", "Japanese Thought", "Platonism", "Utilitarianism", "Existentialism"]
+         "Duty Ethics", "Japanese Thought", "Platonism", "Utilitarianism", "Existentialism",
+         "Confucianism"]
 
 G = "https://www.gutenberg.org/ebooks/"
 SOURCES = {
@@ -62,6 +63,10 @@ SOURCES = {
     "underground":("pg600.txt", "text", "Constance Garnett (1918)", G + "600"),
     "pascal":     ("pg18269.txt", "text", "W. F. Trotter (1910)", G + "18269"),
     "taote":      ("pg216.txt", "text", "James Legge (1891)", G + "216"),
+    "analects":   ("pg3330.txt", "text", "James Legge (1861)", G + "3330"),
+    # Swenson quotes Kierkegaard throughout this essay, translating from the Danish himself.
+    "swenson":    ("swenson_kierkegaard.txt", "text", "David F. Swenson (1920)",
+                   "https://en.wikisource.org/wiki/S%C3%B6ren_Kierkegaard"),
     "zhuangzi":   ("pg59709.txt", "text", "Herbert A. Giles (1889)", G + "59709"),
     "aristotle":  ("pg8438.txt", "text", "D. P. Chase (1847)", G + "8438"),
     "kant_g":     ("pg5682.txt", "text", "Thomas Kingsmill Abbott (1873)", G + "5682"),

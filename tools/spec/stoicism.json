@@ -108,15 +108,6 @@
  },
  {
   "tradition": "Stoicism",
-  "source": "Marcus Aurelius, Meditations 7.8",
-  "from": "marcus",
-  "start": "Let not future things disturb thee",
-  "end": "for present things.",
-  "context": "Anxiety imagines the future without the resources we will actually have when we get there. The same reason that serves us now will serve us then.",
-  "prompt": "What future worry would feel smaller if you trusted your future self?"
- },
- {
-  "tradition": "Stoicism",
   "source": "Marcus Aurelius, Meditations 7.59",
   "from": "marcus",
   "start": "Look within. Within is the fountain",
@@ -159,15 +150,6 @@
   "end": "or it is uncertain.",
   "context": "The past is gone and the future unknown; the only life anyone actually lives is the present moment.",
   "prompt": "What would change if you gave this moment your whole attention?"
- },
- {
-  "tradition": "Stoicism",
-  "source": "Marcus Aurelius, Meditations 7.69",
-  "from": "marcus",
-  "start": "The perfection of moral character consists in this",
-  "end": "playing the hypocrite.",
-  "context": "Living each day as if it were the last, in the Stoic sense, means neither frantic nor numb, but awake and sincere.",
-  "prompt": "If today were your last, what would you stop pretending?"
  },
  {
   "tradition": "Stoicism",
@@ -302,15 +284,6 @@
   "end": "that which he thinks that he knows.",
   "context": "Learning begins with humility. Whatever we think we already understand, we stop examining.",
   "prompt": "What do you think you already know that might be worth relearning?"
- },
- {
-  "tradition": "Stoicism",
-  "source": "Epictetus, Discourses 3.24",
-  "from": "epictetus",
-  "start": "So if you wish for your son or friend when",
-  "end": "wishing for a fig in winter.",
-  "context": "A hard but tender image: the people we love are given to us for a season, like fruit. Wishing them permanent is wishing for figs in winter.",
-  "prompt": "Who is in season in your life right now, and how will you enjoy them?"
  },
  {
   "tradition": "Stoicism",

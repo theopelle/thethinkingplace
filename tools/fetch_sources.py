@@ -9,10 +9,12 @@ import html, json, os, re, sys, time, urllib.parse, urllib.request
 UA = {"User-Agent": "Reflect-factcheck/1.0"}
 GUTENBERG = [15877, 10661, 64576, 2017, 785, 1998, 4363, 52881, 38145, 28054, 600, 18269,
              1656, 1657, 1658, 1497, 1600, 1636, 1672, 1726, 1643, 1750,
-             216, 59709, 8438, 5682, 5683, 11224, 34901, 10378, 769]
+             216, 59709, 8438, 5682, 5683, 11224, 34901, 10378, 769, 3330]
 WIKISOURCE = {
     "dl10": "Lives of the Eminent Philosophers/Book X",
     "aston_b4c3": "A History of Japanese Literature/Book 4/Chapter 3",
+    # Swenson's 1920 essay, which quotes Kierkegaard in his own translations
+    "swenson_kierkegaard": "Sören Kierkegaard",
 }
 
 

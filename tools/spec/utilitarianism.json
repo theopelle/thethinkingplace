@@ -155,15 +155,6 @@
  },
  {
   "tradition": "Utilitarianism",
-  "source": "Mill, On Liberty, ch. I",
-  "from": "mill_l",
-  "start": "the only purpose for which power can be rightfully exercised",
-  "end": "prevent harm to others.",
-  "context": "Mill's 'harm principle', one of the most influential ideas in modern thought: freedom ends only where harm to others begins.",
-  "prompt": "Where are you trying to control what isn't harming anyone?"
- },
- {
-  "tradition": "Utilitarianism",
   "source": "Mill, Utilitarianism, ch. II",
   "from": "mill_u",
   "start": "the happiness which forms the utilitarian standard of what is right in conduct",
@@ -188,15 +179,6 @@
   "end": "shared in by all human beings",
   "context": "Wordsworth's poems helped heal Mill. In them he found a joy that excluded no one.",
   "prompt": "What gives you a joy that anyone could share?"
- },
- {
-  "tradition": "Utilitarianism",
-  "source": "Mill, On Liberty, ch. I",
-  "from": "mill_l",
-  "start": "A person may cause evil to others not only by his actions but by his inaction",
-  "end": "accountable to them for the injury.",
-  "context": "Doing nothing is also a choice, and it can harm others too.",
-  "prompt": "Where is your inaction affecting someone?"
  },
  {
   "tradition": "Utilitarianism",
@@ -314,14 +296,5 @@
   "end": "as there are individuals.",
   "context": "Freedom multiplies the places where new ideas can start: one for every person.",
   "prompt": "What could you improve if you felt free to try?"
- },
- {
-  "tradition": "Utilitarianism",
-  "source": "Mill, Utilitarianism, ch. II",
-  "from": "mill_u",
-  "start": "education and opinion, which have so vast a power over human character",
-  "end": "the good of the whole",
-  "context": "Mill hoped people could be raised to feel their own happiness and everyone else's as bound together.",
-  "prompt": "Where is your happiness bound up with the good of others?"
  }
 ]
