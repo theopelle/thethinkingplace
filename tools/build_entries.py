@@ -69,6 +69,9 @@ SOURCES = {
                    "https://en.wikisource.org/wiki/S%C3%B6ren_Kierkegaard"),
     "zhuangzi":   ("pg59709.txt", "text", "Herbert A. Giles (1889)", G + "59709"),
     "aristotle":  ("pg8438.txt", "text", "D. P. Chase (1847)", G + "8438"),
+    # Rackham's Loeb translation (1926), as transcribed by the Perseus Digital Library.
+    "rackham":    ("rackham_ne.txt", "text", "H. Rackham (1926)",
+                   "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"),
     "kant_g":     ("pg5682.txt", "text", "Thomas Kingsmill Abbott (1873)", G + "5682"),
     "kant_p":     ("pg5683.txt", "text", "Thomas Kingsmill Abbott (1873)", G + "5683"),
     "mill_u":     ("pg11224.txt", "text", "Written in English (1863)", G + "11224"),
@@ -303,6 +306,39 @@ def verse_cuts(e, srcdir):
     return bool(before), bool(after)
 
 
+# Light modernisation: archaic second-person forms and a few old words, applied as fixed,
+# documented substitutions to the verified text (never rewritten from memory). Passages that
+# use it say so in their translation credit ("lightly modernised").
+MODERN_PAIRS = [
+    ("thou art", "you are"), ("thou wert", "you were"), ("thou wilt", "you will"),
+    ("thou shalt", "you shall"), ("thou canst", "you can"), ("thou wouldst", "you would"),
+    ("thou couldst", "you could"), ("thou hast", "you have"), ("thou dost", "you do"),
+    ("thou mayest", "you may"), ("thou livest", "you live"), ("thou risest", "you rise"),
+    ("thou wishest", "you wish"), ("thou withstandest", "you withstand"),
+    ("couldst thou", "could you"), ("must thou", "must you"), ("art thou", "are you"),
+]
+MODERN_WORDS = {"thou": "you", "thee": "you", "thy": "your", "thine": "your", "thyself": "yourself",
+                "hath": "has", "doth": "does", "dost": "do", "unto": "to", "ofttimes": "often",
+                "'tis": "it is", "listeth": "likes"}
+
+
+def modernise(text, extra, drop_parens):
+    def swap(old, new):
+        def keep_case(m):
+            first = next((c for c in m.group(0) if c.isalpha()), "")
+            return new[0].upper() + new[1:] if first.isupper() else new
+        return lambda t: re.sub(r"(?<![\w'])" + re.escape(old) + r"(?!\w)", keep_case, t, flags=re.I)
+    for old, new in extra.items():  # passage-specific changes first, so they can see the original
+        if old not in text:
+            raise LookupError(f"modernise target not found: {old!r}")
+        text = text.replace(old, new)
+    for old, new in MODERN_PAIRS + list(MODERN_WORDS.items()):
+        text = swap(old, new)(text)
+    if drop_parens:  # Legge's words added for sense stay, his brackets go
+        text = re.sub(r"\(([^()]*)\)", r"\1", text)
+    return re.sub(r"  +", " ", text)
+
+
 def slug(s):
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
@@ -324,6 +360,8 @@ def main(srcdir, freeze=False):
                 text = clean(text, e["from"])
                 if re.search(r"[\u0900-\u097f<>{}]|\[\d", text):
                     raise LookupError(f"markup or untranslated text in passage: {text[:80]!r}")
+                if "modernise" in e:
+                    text = modernise(text, e["modernise"], e.get("drop_parens", False))
                 text = e.get("prefix", "") + text + e.get("suffix", "")
                 # Re-balance quote marks now that any opening quote has been added.
                 if text.count('"') % 2:
@@ -351,7 +389,7 @@ def main(srcdir, freeze=False):
                 "source": e["source"],
                 "context": e["context"],
                 "prompt": e["prompt"],
-                "translation": e.get("translation", translation),
+                "translation": e.get("translation", translation) + (", lightly modernised" if "modernise" in e else ""),
                 "source_url": url,
             }
             if cut_start or cut_end:

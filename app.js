@@ -150,7 +150,7 @@
     const moon = moonPhase(key);
     $("day-date").innerHTML =
       (key === today ? "Today · " : "") + formatDate(key) +
-      ` · <button type="button" class="moon moon-btn" aria-haspopup="dialog" aria-label="Moon: ${moon.label}. Tap for details.">${moonIcon(moon.phase)}${moon.label}</button>`;
+      ` · <span class="moon">${moonIcon(moon.phase)}${moon.label}</span>`;
     // Verse (Lucretius) arrives with line breaks: one block per line, wrapped parts indented.
     const textEl = $("day-text");
     textEl.textContent = "";
@@ -188,8 +188,7 @@
     $("returning").hidden = !(key === today && returning);
     renderGreeting(key === today);
 
-    $("day-context").hidden = true;
-    $("context-toggle").setAttribute("aria-expanded", "false");
+    showContext(store.get("context", "shown") !== "hidden");
 
     const note = (readNote(key) || { text: "" }).text;
     $("note-text").value = note;
@@ -462,31 +461,37 @@
 
   function openTerm(btn) {
     const g = glossary[+btn.dataset.term];
-    if (g) showCard(btn, g.term, g.def, g.wiki);
+    if (!g) return;
+    showCard(btn, g.term, g.def, g.wiki, g.school && schoolDetails(g));
   }
 
-  // The moon card: plain facts about the moon on the day shown, and Kenkō's line on full moons.
-  function openMoon(btn) {
-    const key = currentKey, { phase, label } = moonPhase(key);
-    const lit = Math.round((1 - Math.cos(2 * Math.PI * phase)) / 2 * 100);
-    const isToday = key === todayKey();
-    const next = (target) => {
-      const days = Math.round((((target - phase) % 1) + 1) % 1 * LUNATION);
-      const date = new Date(keyToUTC(key) + days * DAY).toLocaleDateString(undefined, { day: "numeric", month: "long", timeZone: "UTC" });
-      if (days === 0) return isToday ? "tonight" : "that night";
-      return isToday ? `in ${days} day${days === 1 ? "" : "s"} (${date})` : date;
-    };
-    const lines = [`About ${lit}% of the moon is lit${isToday ? " tonight" : ""}.`];
-    if (label !== "full moon") lines.push(`Next full moon: ${next(0.5)}.`);
-    if (label !== "new moon") lines.push(`Next new moon: ${next(0)}.`);
-    if (label === "full moon") lines.push("“The perfect circle of the full moon lasts only for a very short time; soon it begins to wane…” (Kenkō, Essays in Idleness 241)");
-    showCard(btn, label[0].toUpperCase() + label.slice(1), lines.join("\n"), "Lunar_phase");
+  // A school's card is a small introduction: who we read, where it began, its key ideas
+  // (the concepts scoped to it in the glossary) and a free book to start with.
+  function schoolDetails(g) {
+    const ideas = glossary.filter((t) => t.scope && t.scope.includes(g.term)).map((t) => t.term);
+    const rows = [["We read", g.school.who], ["Began", g.school.began]];
+    if (ideas.length) rows.push(["Key ideas", ideas.join(", ")]);
+    const frag = document.createDocumentFragment();
+    for (const [label, value] of rows) {
+      const dt = document.createElement("dt"), dd = document.createElement("dd");
+      dt.textContent = label; dd.textContent = value;
+      frag.append(dt, dd);
+    }
+    const dt = document.createElement("dt"), dd = document.createElement("dd"), a = document.createElement("a");
+    dt.textContent = "Start reading";
+    a.href = g.school.read.url; a.target = "_blank"; a.rel = "noopener";
+    a.textContent = g.school.read.title + " (free)";
+    dd.append(a);
+    frag.append(dt, dd);
+    return frag;
   }
 
-  function showCard(btn, title, text, wiki) {
+  function showCard(btn, title, text, wiki, more) {
     const card = $("term-card");
     $("term-title").textContent = title;
     $("term-def").textContent = text;
+    $("term-more").replaceChildren(...(more ? [more] : []));
+    $("term-more").hidden = !more;
     $("term-wiki").href = "https://en.wikipedia.org/wiki/" + encodeURIComponent(wiki).replace(/%2F/g, "/");
     card.hidden = false;
     // Place the card just below the word, or above it if there is no room.
@@ -494,7 +499,8 @@
     const left = Math.min(Math.max(16, r.left + r.width / 2 - w / 2), window.innerWidth - w - 16);
     const below = r.bottom + 10, above = r.top - h - 10;
     card.style.left = left + "px";
-    card.style.top = (below + h < window.innerHeight - 64 || above < 16 ? below : above) + "px";
+    const top = below + h < window.innerHeight - 64 || above < 16 ? below : above;
+    card.style.top = Math.max(16, Math.min(top, window.innerHeight - h - 16)) + "px";  // keep it on screen
     openTerm.from = btn;
     // Move focus into the card so screen readers announce the definition.
     card.focus({ preventScroll: true });
@@ -650,12 +656,19 @@
     window.scrollTo(0, 0);
   }
 
+  // The note under each thought is the lesson, so it shows by default; hiding it is remembered.
+  function showContext(open) {
+    $("day-context").hidden = !open;
+    $("context-toggle").setAttribute("aria-expanded", String(open));
+    $("context-toggle").textContent = open ? "hide note" : "about this thought";
+  }
+
   // ---------- wire up ----------
   function bind() {
     $("context-toggle").addEventListener("click", () => {
       const open = $("day-context").hidden;
-      $("day-context").hidden = !open;
-      $("context-toggle").setAttribute("aria-expanded", String(open));
+      showContext(open);
+      store.set("context", open ? "shown" : "hidden");
     });
     $("open-note").addEventListener("click", () => setWriting($("note").hidden));
     $("note-edit").addEventListener("click", () => setWriting(true));
@@ -682,11 +695,10 @@
     $("closing-share").addEventListener("click", share);
     document.addEventListener("visibilitychange", onVisibility);
     document.addEventListener("click", (ev) => {
-      const term = ev.target.closest(".term, .moon-btn, .map-dot");
+      const term = ev.target.closest(".term, .map-dot");
       if (term) {
         ev.preventDefault();
         if (openTerm.from === term && !$("term-card").hidden) closeTerm();
-        else if (term.classList.contains("moon-btn")) openMoon(term);
         else if (term.classList.contains("map-dot")) openPlace(term);
         else openTerm(term);
         return;

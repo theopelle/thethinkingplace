@@ -24,7 +24,9 @@
   "start": "Begin the morning by saying to thyself",
   "end": "envious, unsocial.",
   "context": "Written by a Roman emperor in a private notebook. Not cynicism but preparation: he goes on to say such people act from ignorance, and that he cannot be harmed by them or angry with his own kin.",
-  "prompt": "Who might test your patience today, and how do you want to meet them?"
+  "prompt": "Who might test your patience today, and how do you want to meet them?",
+  "modernise": {},
+  "replaces": "stoicism-c0f1196946"
  },
  {
   "tradition": "Stoicism",
@@ -33,7 +35,9 @@
   "start": "The best way of avenging thyself is not",
   "end": "wrong-doer].",
   "context": "One of the shortest entries in the Meditations. Being wronged offers a choice: to copy the wrong, or to remain who you are.",
-  "prompt": "Has someone's behaviour been quietly changing yours?"
+  "prompt": "Has someone's behaviour been quietly changing yours?",
+  "modernise": {},
+  "replaces": "stoicism-f2aab2f997"
  },
  {
   "tradition": "Stoicism",
@@ -59,7 +63,12 @@
   "start": "Men seek retreats for themselves",
   "end": "retire into thyself.",
   "context": "Marcus reminds himself that the quiet he longs for in the countryside is always available within. The retreat is a practice, not a place.",
-  "prompt": "Where in yourself can you retreat to, right now, for a minute?"
+  "prompt": "Where in yourself can you retreat to, right now, for a minute?",
+  "modernise": {
+   "thou too art wont": "you too are wont",
+   "whenever thou shalt choose": "whenever you choose"
+  },
+  "replaces": "stoicism-02abed2ea2"
  },
  {
   "tradition": "Stoicism",
@@ -68,7 +77,9 @@
   "start": "Take away thy opinion, and then",
   "end": "the harm is taken away.",
   "context": "A compressed version of the Stoic method: the injury we feel is bound up with the judgment that we have been injured.",
-  "prompt": "Which 'I have been harmed' could you set down today?"
+  "prompt": "Which 'I have been harmed' could you set down today?",
+  "modernise": {},
+  "replaces": "stoicism-91243fc30c"
  },
  {
   "tradition": "Stoicism",
@@ -77,7 +88,9 @@
   "start": "Do not act as if thou wert going to live ten thousand years",
   "end": "be good.",
   "context": "The Stoics used the awareness of death not to frighten but to focus: the time to be good is now, while it is still possible.",
-  "prompt": "What good thing have you been postponing as if you had endless time?"
+  "prompt": "What good thing have you been postponing as if you had endless time?",
+  "modernise": {},
+  "replaces": "stoicism-44ed558cab"
  },
  {
   "tradition": "Stoicism",
@@ -86,7 +99,9 @@
   "start": "Occupy thyself with few things",
   "end": "wouldst be tranquil.",
   "context": "Marcus quotes Democritus, then refines the advice: do what is necessary, and you gain the calm of doing few things and doing them well.",
-  "prompt": "What could you stop doing to make room for what matters?"
+  "prompt": "What could you stop doing to make room for what matters?",
+  "modernise": {},
+  "replaces": "stoicism-60882d0393"
  },
  {
   "tradition": "Stoicism",
@@ -104,7 +119,9 @@
   "start": "Such as are thy habitual thoughts",
   "end": "dyed by the thoughts.",
   "context": "Just as cloth takes on the colour it soaks in, the mind takes on the colour of what it repeatedly thinks.",
-  "prompt": "What colour is your mind being dyed by lately?"
+  "prompt": "What colour is your mind being dyed by lately?",
+  "modernise": {},
+  "replaces": "stoicism-6a7a472dd3"
  },
  {
   "tradition": "Stoicism",
@@ -113,7 +130,9 @@
   "start": "Look within. Within is the fountain",
   "end": "if thou wilt ever dig.",
   "context": "Goodness is not imported from outside; it is a spring to be uncovered, again and again.",
-  "prompt": "What good in you needs digging out today?"
+  "prompt": "What good in you needs digging out today?",
+  "modernise": {},
+  "replaces": "stoicism-ed4698f3a7"
  },
  {
   "tradition": "Stoicism",
@@ -122,7 +141,9 @@
   "start": "If thou art pained by any external thing",
   "end": "wipe out this judgment now.",
   "context": "One of the clearest statements of Stoic freedom: the judgment is ours, so we can revise it, not someday but now.",
-  "prompt": "Which judgment about your situation could you revise right now?"
+  "prompt": "Which judgment about your situation could you revise right now?",
+  "modernise": {},
+  "replaces": "stoicism-fb78baca9d"
  },
  {
   "tradition": "Stoicism",
@@ -158,7 +179,9 @@
   "start": "When thou art offended with any man's shameless conduct",
   "end": "require what is impossible.",
   "context": "Expecting a world without difficult people only guarantees frustration. Marcus asks himself to expect them, and so to meet them calmly.",
-  "prompt": "What are you demanding of others that is simply impossible?"
+  "prompt": "What are you demanding of others that is simply impossible?",
+  "modernise": {},
+  "replaces": "stoicism-8fd1af4a1d"
  },
  {
   "tradition": "Stoicism",
@@ -176,7 +199,9 @@
   "start": "In the morning when thou risest unwillingly",
   "end": "the work of a human being.",
   "context": "Even an emperor struggled to get out of bed. His answer was to remember what he was for.",
-  "prompt": "What work, worthy of a human being, is waiting for you today?"
+  "prompt": "What work, worthy of a human being, is waiting for you today?",
+  "modernise": {},
+  "replaces": "stoicism-1a5aa06c7e"
  },
  {
   "tradition": "Stoicism",
@@ -185,7 +210,9 @@
   "start": "When thou wishest to delight thyself",
   "end": "good quality of a fourth.",
   "context": "A simple exercise in gratitude: notice the particular virtues of the people around you.",
-  "prompt": "Name one good quality in each of three people close to you."
+  "prompt": "Name one good quality in each of three people close to you.",
+  "modernise": {},
+  "replaces": "stoicism-077feeca8a"
  },
  {
   "tradition": "Stoicism",
@@ -194,7 +221,9 @@
   "start": "Since it is possible",
   "end": "every act and thought accordingly.",
   "context": "Not a counsel of fear, but of seriousness: live as one who knows life is not guaranteed.",
-  "prompt": "Which of today's acts would you do differently in that light?"
+  "prompt": "Which of today's acts would you do differently in that light?",
+  "modernise": {},
+  "replaces": "stoicism-02fc7455b0"
  },
  {
   "tradition": "Stoicism",

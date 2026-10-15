@@ -6,7 +6,10 @@
   "start": "The highest excellence is like (that of) water",
   "end": "the low place which all men dislike.",
   "context": "Water is Taoism's favourite teacher: it nourishes everything, never fights, and settles where nobody else wants to be.",
-  "prompt": "Where could you be more like water today?"
+  "prompt": "Where could you be more like water today?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "taoism-92119d0fbd"
  },
  {
   "tradition": "Taoism",
@@ -24,7 +27,10 @@
   "start": "He who knows other men is discerning",
   "end": "has a (firm) will.",
   "context": "Four short contrasts between outer and inner achievement. Self-knowledge and self-mastery come out ahead every time.",
-  "prompt": "Which kind of strength are you building: over others, or over yourself?"
+  "prompt": "Which kind of strength are you building: over others, or over yourself?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "taoism-2d89dc9337"
  },
  {
   "tradition": "Taoism",
@@ -33,7 +39,10 @@
   "start": "The thirty spokes unite in the one nave",
   "end": "it is on the empty space (within), that its use depends.",
   "context": "Wheels, bowls and rooms are useful because of what is empty in them. Emptiness is not nothing; it is room.",
-  "prompt": "Where could some emptiness make your life more useful, not less?"
+  "prompt": "Where could some emptiness make your life more useful, not less?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "taoism-8d4af8c5a8"
  },
  {
   "tradition": "Taoism",
@@ -51,7 +60,10 @@
   "start": "The tree which fills the arms grew from the tiniest sprout",
   "end": "commenced with a single step.",
   "context": "The source of the saying 'a journey of a thousand miles begins with a single step'. A li is a traditional Chinese measure of distance.",
-  "prompt": "What is the single step you could take today?"
+  "prompt": "What is the single step you could take today?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "taoism-2b4d44eb90"
  },
  {
   "tradition": "Taoism",
@@ -93,7 +105,10 @@
   "start": "The partial becomes complete",
   "end": "goes astray.",
   "context": "A string of paradoxes: what bends survives, what is emptied gets filled. Wanting less is a way of receiving more.",
-  "prompt": "What in your life is 'crooked' now and might yet become straight?"
+  "prompt": "What in your life is 'crooked' now and might yet become straight?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "taoism-014e7db9ab"
  },
  {
   "tradition": "Taoism",
@@ -102,7 +117,10 @@
   "start": "Who can (make) the muddy water (clear)?",
   "end": "will gradually become clear.",
   "context": "Stirring muddy water only clouds it more. Left alone, the sediment settles by itself.",
-  "prompt": "What might become clear if you simply stopped stirring it?"
+  "prompt": "What might become clear if you simply stopped stirring it?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "taoism-0ba07551a4"
  },
  {
   "tradition": "Taoism",
@@ -128,7 +146,10 @@
   "start": "There is nothing in the world more soft and weak than water",
   "end": "no one is able to carry it out in practice.",
   "context": "Water wears down stone. Everyone knows that softness can win, says Laozi, yet hardly anyone lives by it.",
-  "prompt": "Where could softness achieve what force has not?"
+  "prompt": "Where could softness achieve what force has not?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "taoism-dc1d4bcb25"
  },
  {
   "tradition": "Taoism",
@@ -137,7 +158,10 @@
   "start": "To know and yet (think) we do not know",
   "end": "is a disease.",
   "context": "An echo of Socrates, a world away: the wise hold their knowledge lightly; the sick mind is the one that is sure.",
-  "prompt": "What do you think you know that you might not?"
+  "prompt": "What do you think you know that you might not?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "taoism-adbce30219"
  },
  {
   "tradition": "Taoism",
@@ -155,7 +179,10 @@
   "start": "He who devotes himself to learning",
   "end": "to diminish (his doing).",
   "context": "Learning adds; the Tao subtracts. Some growth comes from doing less, not more.",
-  "prompt": "What could you take away from your days rather than add?"
+  "prompt": "What could you take away from your days rather than add?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "taoism-8543db129b"
  },
  {
   "tradition": "Taoism",
@@ -174,7 +201,10 @@
   "start": "All in the world know the beauty of the beautiful",
   "end": "what the want of skill is.",
   "context": "Every idea of 'good' quietly creates its opposite. Labels divide the world as much as they describe it.",
-  "prompt": "Which label you use creates the very thing you dislike?"
+  "prompt": "Which label you use creates the very thing you dislike?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "taoism-8db262c825"
  },
  {
   "tradition": "Taoism",
@@ -183,7 +213,10 @@
   "start": "All things alike go through their processes of activity",
   "end": "the state of stillness",
   "context": "Everything grows, flourishes and returns to its root, like plants through the seasons. Stillness is the return, not the absence of life.",
-  "prompt": "What root do you need to return to?"
+  "prompt": "What root do you need to return to?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "taoism-1918cfcf28"
  },
  {
   "tradition": "Taoism",
@@ -192,7 +225,10 @@
   "start": "The softest thing in the world dashes against",
   "end": "where there is no crevice.",
   "context": "What is soft finds its way where the hard cannot. Gentleness has its own power.",
-  "prompt": "Where could you go further by being gentler?"
+  "prompt": "Where could you go further by being gentler?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "taoism-ce8ec82b3b"
  },
  {
   "tradition": "Taoism",
@@ -210,7 +246,10 @@
   "start": "He who knows (the Tao) does not (care to) speak",
   "end": "does not know it.",
   "context": "Often quoted as 'those who know do not speak; those who speak do not know'. Deep understanding tends to be quiet.",
-  "prompt": "What do you understand best, and how little do you need to say about it?"
+  "prompt": "What do you understand best, and how little do you need to say about it?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "taoism-bf6f2909dc"
  },
  {
   "tradition": "Taoism",
@@ -246,7 +285,10 @@
   "start": "Man at his birth is supple and weak",
   "end": "the concomitants of life.",
   "context": "Living things bend; dead things are rigid. Flexibility is a sign of life, in bodies and in minds.",
-  "prompt": "Where have you grown rigid, and how could you soften?"
+  "prompt": "Where have you grown rigid, and how could you soften?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "taoism-39efb6c2a9"
  },
  {
   "tradition": "Taoism",
@@ -264,7 +306,10 @@
   "start": "The farther that one goes out (from himself), the less he knows.",
   "end": "the less he knows.",
   "context": "Laozi's paradox for a restless age: understanding is not always found by going further.",
-  "prompt": "What could you understand by staying where you are?"
+  "prompt": "What could you understand by staying where you are?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "taoism-d063326f48"
  },
  {
   "tradition": "Taoism",

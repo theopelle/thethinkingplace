@@ -41,11 +41,11 @@
         <a id="day-full-link" target="_blank" rel="noopener">shortened · read it in full</a>
       </p>
 
-      <button class="link quiet" id="context-toggle" aria-expanded="false">about this thought</button>
-      <div class="context" id="day-context" hidden>
+      <div class="context" id="day-context">
         <p id="day-context-text"></p>
         <p class="translation" id="day-translation"></p>
       </div>
+      <button class="link quiet" id="context-toggle" aria-expanded="true" aria-controls="day-context">hide note</button>
 
       <div class="question">
         <p class="question-label">A question to sit with</p>
@@ -89,11 +89,11 @@
     <section id="view-about" class="view" hidden>
       <h1>About</h1>
       <p>One thought each day, the same for everyone, drawn in turn from eleven schools of thought: Stoicism, Epicureanism, Socrates and Plato, Aristotle's virtue ethics, Kant's duty ethics, Mill's utilitarianism, Existentialism, Buddhist philosophy, Taoism, Confucianism and Japanese aesthetics.</p>
-      <p>Each day's thought is chosen for its everyday wisdom and is usually an excerpt; "…" marks where a text has been shortened. The source link under "about this thought" lets you read it in full, in its own context.</p>
+      <p>Each day's thought is chosen for its everyday wisdom and is usually an excerpt; "…" marks where a text has been shortened, and a few older translations are lightly modernised ("thou" becomes "you"), which is noted under the thought. The source link under each thought lets you read it in full, in its own context.</p>
       <p>Read slowly. Sit with the question. Write if you like, in a paper notebook or here; anything you type stays on this device, and you'll find it again in past thoughts.</p>
 
       <h2>Why Many Wells</h2>
-      <p>For thousands of years, wells were where people gathered and where water was drawn up from the depths. Many thinkers have pictured wisdom the same way, as something deep that has to be drawn up with patience. Each day, Many Wells draws from a different one, from Laozi to the Stoics, and leaves you with a question to sit with. The deepest well, as Marcus Aurelius wrote, is within: "if thou wilt ever dig."</p>
+      <p>For thousands of years, wells were where people gathered and where water was drawn up from the depths. Many thinkers have pictured wisdom the same way, as something deep that has to be drawn up with patience. Each day, Many Wells draws from a different one, from Laozi to the Stoics, and leaves you with a question to sit with. The deepest well, as Marcus Aurelius wrote, is within: "if you will ever dig."</p>
 
       <h2>Where the wells are</h2>
       <p>Each dot marks where a school began. Tap one to see which.</p>
@@ -189,7 +189,7 @@ Chōmei and Kenkō wrote in and around the old capital; Okakura carried these id
       <p>Nothing. Many Wells uses no analytics, no cookies and no tracking. Your name (if you give one), theme and silence settings are stored on your device alongside your notes. If you report an issue or suggest a reflection, your own email app sends exactly what you choose to write, and we only see that message. Once loaded, the app works entirely offline.</p>
 
       <h2>The texts</h2>
-      <p>Every quotation comes from a public-domain text or translation, credited under "about this thought" with a link to its source. The short context notes and reflection questions are our own. Many Wells presents these schools of thought side by side for personal reflection; it does not endorse or rank any of them.</p>
+      <p>Every quotation comes from a public-domain text or translation, credited under each thought with a link to its source. Where an old translation has been lightly modernised (archaic forms such as "thou" or a translator's brackets updated, the meaning unchanged), the credit says so. The short context notes and reflection questions are our own. Many Wells presents these schools of thought side by side for personal reflection; it does not endorse or rank any of them.</p>
 
       <h2>Not advice</h2>
       <p>Many Wells is a space for thought, not a substitute for medical or psychological care. If you are struggling, please reach out to someone you trust or a professional.</p>
@@ -210,6 +210,7 @@ Chōmei and Kenkō wrote in and around the old capital; Okakura carried these id
   <div class="term-card" id="term-card" role="dialog" aria-modal="false" aria-labelledby="term-title" aria-describedby="term-def" tabindex="-1" hidden>
     <p class="term-title" id="term-title"></p>
     <p class="term-def" id="term-def"></p>
+    <dl class="term-more" id="term-more" hidden></dl>
     <div class="term-foot">
       <a class="term-wiki" id="term-wiki" target="_blank" rel="noopener">read more on Wikipedia</a>
       <button type="button" class="term-close" id="term-close">close</button>

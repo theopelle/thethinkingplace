@@ -7,7 +7,15 @@
    "Stoic"
   ],
   "wiki": "Stoicism",
-  "def": "A school of philosophy founded in Athens around 300 BCE. It teaches that a good life comes from virtue and from accepting calmly what lies outside our control."
+  "def": "A school of philosophy founded in Athens around 300 BCE. It teaches that a good life comes from virtue and from accepting calmly what lies outside our control.",
+  "school": {
+   "who": "Marcus Aurelius, Epictetus, Seneca",
+   "began": "Athens, around 300 BCE",
+   "read": {
+    "title": "Marcus Aurelius, Meditations",
+    "url": "https://www.gutenberg.org/ebooks/15877"
+   }
+  }
  },
  {
   "term": "Buddhist Philosophy",
@@ -17,7 +25,15 @@
    "Buddhist"
   ],
   "wiki": "Buddhism",
-  "def": "The teachings of the Buddha (India, around the 5th century BCE) read as practical philosophy: an ethics and a training of the mind aimed at ending suffering. Many Wells draws mainly on the Dhammapada."
+  "def": "The teachings of the Buddha (India, around the 5th century BCE) read as practical philosophy: an ethics and a training of the mind aimed at ending suffering.",
+  "school": {
+   "who": "The Buddha, through the Dhammapada",
+   "began": "Northern India, 5th century BCE",
+   "read": {
+    "title": "The Dhammapada",
+    "url": "https://www.gutenberg.org/ebooks/2017"
+   }
+  }
  },
  {
   "term": "Epicureanism",
@@ -26,7 +42,15 @@
    "Epicurean"
   ],
   "wiki": "Epicureanism",
-  "def": "A school of philosophy founded by Epicurus in Athens around 307 BCE. It holds that a happy life comes from simple pleasures, friendship and freedom from fear."
+  "def": "A school of philosophy founded by Epicurus in Athens around 307 BCE. It holds that a happy life comes from simple pleasures, friendship and freedom from fear.",
+  "school": {
+   "who": "Epicurus, Lucretius",
+   "began": "Athens, around 307 BCE",
+   "read": {
+    "title": "Epicurus, Letter to Menoeceus",
+    "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X"
+   }
+  }
  },
  {
   "term": "Platonism",
@@ -35,7 +59,15 @@
    "Platonic"
   ],
   "wiki": "Platonism",
-  "def": "The philosophy of Plato and those who followed him. It holds that beyond the changing world we see lie unchanging truths, such as the Good and the Beautiful, that the mind can come to know."
+  "def": "The philosophy of Plato and those who followed him. It holds that beyond the changing world we see lie unchanging truths, such as the Good and the Beautiful, that the mind can come to know.",
+  "school": {
+   "who": "Socrates and Plato",
+   "began": "Athens, 4th century BCE",
+   "read": {
+    "title": "Plato, Apology",
+    "url": "https://www.gutenberg.org/ebooks/1656"
+   }
+  }
  },
  {
   "term": "Existentialism",
@@ -45,7 +77,15 @@
    "existentialists"
   ],
   "wiki": "Existentialism",
-  "def": "A movement in modern philosophy concerned with individual freedom, choice and the search for meaning. Its forerunners include Kierkegaard, Dostoevsky and Nietzsche."
+  "def": "A movement in modern philosophy concerned with individual freedom, choice and the search for meaning. Its forerunners include Kierkegaard, Dostoevsky and Nietzsche.",
+  "school": {
+   "who": "Kierkegaard, Nietzsche, Dostoevsky, Pascal",
+   "began": "Copenhagen, 1840s, then across Europe",
+   "read": {
+    "title": "Dostoevsky, Notes from Underground",
+    "url": "https://www.gutenberg.org/ebooks/600"
+   }
+  }
  },
  {
   "term": "Dhammapada",
@@ -65,17 +105,6 @@
   "def": "Siddhartha Gautama, a spiritual teacher in ancient India and the founder of Buddhism. 'Buddha' is a title meaning 'awakened one'."
  },
  {
-  "term": "Awakened",
-  "match": [
-   "the Awakened"
-  ],
-  "scope": [
-   "Buddhist Philosophy"
-  ],
-  "wiki": "Buddhahood",
-  "def": "Those who have reached full enlightenment, the Buddhas. 'Buddha' itself means 'awakened one'."
- },
- {
   "term": "Nirvana",
   "match": [
    "Nirvana"
@@ -91,17 +120,6 @@
   ],
   "wiki": "Tathāgata",
   "def": "A title the Buddha used for himself, often understood as 'one who has thus gone' or 'thus come'. In the plural it refers to Buddhas in general."
- },
- {
-  "term": "Mara",
-  "match": [
-   "Mara"
-  ],
-  "scope": [
-   "Buddhist Philosophy"
-  ],
-  "wiki": "Mara_(demon)",
-  "def": "In Buddhism, the tempter who tried to stop the Buddha's awakening. He stands for death, desire and the forces that keep us deluded."
  },
  {
   "term": "Dhamma (the law)",
@@ -502,7 +520,15 @@
    "Taoist"
   ],
   "wiki": "Taoism",
-  "def": "A Chinese tradition of thought going back to Laozi and Zhuangzi, in the 4th century BCE or earlier. It teaches living in harmony with the Tao, the natural way of things, through simplicity and effortless action."
+  "def": "A Chinese tradition of thought going back to Laozi and Zhuangzi, in the 4th century BCE or earlier. It teaches living in harmony with the Tao, the natural way of things, through simplicity and effortless action.",
+  "school": {
+   "who": "Laozi, Zhuangzi",
+   "began": "Central China, 4th century BCE or earlier",
+   "read": {
+    "title": "Laozi, Tao Te Ching",
+    "url": "https://www.gutenberg.org/ebooks/216"
+   }
+  }
  },
  {
   "term": "Tao",
@@ -577,7 +603,15 @@
    "Virtue Ethics"
   ],
   "wiki": "Virtue_ethics",
-  "def": "An approach to ethics rooted in Aristotle that asks not only 'what should I do?' but 'what kind of person should I become?'. Good character is built through practice."
+  "def": "An approach to ethics rooted in Aristotle that asks not only 'what should I do?' but 'what kind of person should I become?'. Good character is built through practice.",
+  "school": {
+   "who": "Aristotle",
+   "began": "Athens, 4th century BCE",
+   "read": {
+    "title": "Aristotle, Nicomachean Ethics",
+    "url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
+   }
+  }
  },
  {
   "term": "Aristotle",
@@ -617,7 +651,15 @@
    "Duty Ethics"
   ],
   "wiki": "Deontology",
-  "def": "An approach to ethics, associated above all with Kant, that judges actions by the principles behind them rather than by their results. Philosophers call it deontology."
+  "def": "An approach to ethics, associated above all with Kant, that judges actions by the principles behind them rather than by their results. Philosophers call it deontology.",
+  "school": {
+   "who": "Immanuel Kant",
+   "began": "Königsberg, 1780s",
+   "read": {
+    "title": "Kant, Groundwork of the Metaphysics of Morals",
+    "url": "https://www.gutenberg.org/ebooks/5682"
+   }
+  }
  },
  {
   "term": "Immanuel Kant",
@@ -688,7 +730,15 @@
    "utilitarian"
   ],
   "wiki": "Utilitarianism",
-  "def": "An approach to ethics, founded by Jeremy Bentham and developed by John Stuart Mill, that judges actions by the happiness and suffering they bring to everyone affected."
+  "def": "An approach to ethics, founded by Jeremy Bentham and developed by John Stuart Mill, that judges actions by the happiness and suffering they bring to everyone affected.",
+  "school": {
+   "who": "John Stuart Mill",
+   "began": "London, 18th–19th century",
+   "read": {
+    "title": "Mill, On Liberty",
+    "url": "https://www.gutenberg.org/ebooks/34901"
+   }
+  }
  },
  {
   "term": "John Stuart Mill",
@@ -756,7 +806,15 @@
    "Japanese Aesthetics"
   ],
   "wiki": "Japanese_aesthetics",
-  "def": "Japanese ideals of beauty: finding it in what is simple, imperfect and passing. In Many Wells, the reflections of Kamo no Chōmei, Kenkō and Kakuzo Okakura."
+  "def": "Japanese ideals of beauty: finding it in what is simple, imperfect and passing, and paying full attention to small moments.",
+  "school": {
+   "who": "Kamo no Chōmei, Kenkō, Kakuzo Okakura",
+   "began": "Kyoto, from the 13th century",
+   "read": {
+    "title": "Okakura, The Book of Tea",
+    "url": "https://www.gutenberg.org/ebooks/769"
+   }
+  }
  },
  {
   "term": "Kakuzo Okakura",
@@ -851,7 +909,15 @@
    "Confucian"
   ],
   "wiki": "Confucianism",
-  "def": "A Chinese tradition of thought founded on the teachings of Confucius in the 5th century BCE. It centres on cultivating good character, learning, and harmony in families and society."
+  "def": "A Chinese tradition of thought founded on the teachings of Confucius in the 5th century BCE. It centres on cultivating good character, learning, and harmony in families and society.",
+  "school": {
+   "who": "Confucius and his students",
+   "began": "Qufu, China, 6th–5th century BCE",
+   "read": {
+    "title": "Confucius, Analects",
+    "url": "https://www.gutenberg.org/ebooks/3330"
+   }
+  }
  },
  {
   "term": "Analects",
@@ -896,7 +962,8 @@
   "term": "What is in our power",
   "match": [
    "in our power",
-   "in thy power"
+   "in thy power",
+   "in your power"
   ],
   "scope": [
    "Stoicism"
@@ -1292,7 +1359,7 @@
  {
   "term": "Become who you are",
   "match": [
-   "become what thou art"
+   "become what you are"
   ],
   "scope": [
    "Existentialism"

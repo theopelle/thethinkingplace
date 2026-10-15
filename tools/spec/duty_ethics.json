@@ -6,7 +6,9 @@
   "start": "Act only on that maxim whereby thou canst",
   "end": "become a universal law.",
   "context": "Kant's 'categorical imperative', the test at the heart of his ethics: could you want everyone to do what you are about to do?",
-  "prompt": "What would happen if everyone did what you are tempted to do today?"
+  "prompt": "What would happen if everyone did what you are tempted to do today?",
+  "modernise": {},
+  "replaces": "duty-ethics-14a237115c"
  },
  {
   "tradition": "Duty Ethics",
@@ -24,7 +26,11 @@
   "start": "So act as to treat humanity, whether in thine own person",
   "end": "never as means only.",
   "context": "Kant's second formulation of the moral law: never use a person, including yourself, merely as a tool.",
-  "prompt": "Is there anyone you've been treating more as a means than as a person?"
+  "prompt": "Is there anyone you've been treating more as a means than as a person?",
+  "modernise": {
+   "as an end withal": "as an end too"
+  },
+  "replaces": "duty-ethics-d24836547d"
  },
  {
   "tradition": "Duty Ethics",
@@ -114,7 +120,16 @@
   "start": "Duty! Thou sublime and mighty name",
   "end": "gains reluctant reverence",
   "context": "A rare burst of lyricism from Kant. Duty doesn't charm or threaten us; it simply asks, and we can't help respecting it.",
-  "prompt": "Which duty do you respect, even when you don't feel like doing it?"
+  "prompt": "Which duty do you respect, even when you don't feel like doing it?",
+  "modernise": {
+   "Thou sublime": "Sublime",
+   "that dost embrace": "that embraces",
+   "but requirest submission": "but requires submission",
+   "and yet seekest not": "and yet seeks not",
+   "threatening aught": "threatening anything",
+   "but merely holdest forth": "but merely holds forth"
+  },
+  "replaces": "duty-ethics-882473d7d8"
  },
  {
   "tradition": "Duty Ethics",

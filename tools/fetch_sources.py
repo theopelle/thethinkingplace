@@ -44,6 +44,13 @@ def main(out):
         w(f"{name}.txt", html_to_text(get(f"https://en.wikisource.org/w/index.php?{q}")))
         time.sleep(1)
 
+    # Rackham's Nicomachean Ethics (Loeb, 1926) from the Perseus Digital Library's TEI file.
+    tei = get("https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/"
+              "tlg0086/tlg010/tlg0086.tlg010.perseus-eng2.xml")
+    tei = re.sub(r"(?s)<note\b.*?</note>", "", tei[tei.find("<body"):])
+    tei = re.sub(r"</p>", "\n\n", tei)
+    w("rackham_ne.txt", re.sub(r"[ \t]+", " ", html.unescape(re.sub(r"<[^>]+>", "", tei))))
+
     w("porter_kenko.txt", get("https://archive.org/download/miscellanyofjapa00yosh/"
                                "miscellanyofjapa00yosh_djvu.txt"))
     print(f"sources written to {out}")

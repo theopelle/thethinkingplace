@@ -43,7 +43,14 @@
   "end": "for the road of life",
   "context": "Lucretius, a Roman poet, set Epicurus' philosophy to verse. Here he describes the calm of a mind that has found its footing, looking out on a restless world.",
   "prompt": "Where is your 'serene plateau' when life gets stormy?",
-  "prefix": "'"
+  "modernise": {
+   "Tis sweet, when": "It is sweet, when",
+   "because 'tis sweet": "because it is sweet",
+   "but naught": "but nothing",
+   "thou may'st": "you may",
+   "ev'rywhere wand'ring": "everywhere wandering"
+  },
+  "replaces": "epicureanism-6f903acd04"
  },
  {
   "tradition": "Epicureanism",
@@ -52,7 +59,9 @@
   "start": "Accustom thyself to believe that death is nothing to us",
   "end": "yearning after immortality.",
   "context": "The goal is not to make life longer but to make mortal life enjoyable, by letting go of the craving to live forever.",
-  "prompt": "How would you live if you made peace with being mortal?"
+  "prompt": "How would you live if you made peace with being mortal?",
+  "modernise": {},
+  "replaces": "epicureanism-3a5f777701"
  },
  {
   "tradition": "Epicureanism",
@@ -88,7 +97,9 @@
   "start": "we do not choose every pleasure whatsoever",
   "end": "brings us as a consequence a greater pleasure.",
   "context": "Epicurus is often mistaken for a hedonist. In fact he taught careful weighing: some pleasures cost too much, some pains are worth it.",
-  "prompt": "Which pleasure costs you more than it gives?"
+  "prompt": "Which pleasure costs you more than it gives?",
+  "modernise": {},
+  "replaces": "epicureanism-3ec826406f"
  },
  {
   "tradition": "Epicureanism",
@@ -241,7 +252,11 @@
   "start": "The nations wax, the nations wane away",
   "end": "One unto other.",
   "context": "Lucretius pictures the generations as relay runners, each handing the torch of life to the next.",
-  "prompt": "What are you carrying that you hope to hand on?"
+  "prompt": "What are you carrying that you hope to hand on?",
+  "modernise": {
+   "One unto other": "One to another"
+  },
+  "replaces": "epicureanism-0fd660d90d"
  },
  {
   "tradition": "Epicureanism",
@@ -250,7 +265,11 @@
   "start": "And in fee-simple life is given to none",
   "end": "than any sleep?",
   "context": "Life is lent, not owned. And the eternity after death, Lucretius argues, is no more frightening than the eternity before birth.",
-  "prompt": "If life is on loan, how do you want to use it?"
+  "prompt": "If life is on loan, how do you want to use it?",
+  "modernise": {
+   "Is't not": "Is it not"
+  },
+  "replaces": "epicureanism-888ccc3793"
  },
  {
   "tradition": "Epicureanism",
@@ -268,7 +287,9 @@
   "start": "why not, Even like a banqueter, depart the halls",
   "end": "unafflicted rest?",
   "context": "Nature speaks to someone afraid of dying: if your life has been good, why not leave it like a guest who has dined well?",
-  "prompt": "What would it mean to feel 'laden with life'?"
+  "prompt": "What would it mean to feel 'laden with life'?",
+  "modernise": {},
+  "replaces": "epicureanism-9002a3e56e"
  },
  {
   "tradition": "Epicureanism",

@@ -10,24 +10,24 @@
     "source_url": "https://www.gutenberg.org/ebooks/10661"
   },
   {
-    "id": "taoism-92119d0fbd",
+    "id": "taoism-bd8dc05578",
     "tradition": "Taoism",
-    "text": "The highest excellence is like (that of) water. The excellence of water appears in its benefiting all things, and in its occupying, without striving (to the contrary), the low place which all men dislike.",
+    "text": "The highest excellence is like that of water. The excellence of water appears in its benefiting all things, and in its occupying, without striving to the contrary, the low place which all men dislike.",
     "source": "Laozi, Tao Te Ching 8",
     "context": "Water is Taoism's favourite teacher: it nourishes everything, never fights, and settles where nobody else wants to be.",
     "prompt": "Where could you be more like water today?",
-    "translation": "James Legge (1891)",
+    "translation": "James Legge (1891), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-99bece9884",
+    "id": "virtue-ethics-f95dc1d4b1",
     "tradition": "Virtue Ethics",
-    "text": "By doing just actions we come to be just; by doing the actions of self-mastery we come to be perfected in self-mastery; and by doing brave actions brave.",
+    "text": "We become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts.",
     "source": "Aristotle, Nicomachean Ethics, Book II",
     "context": "The heart of virtue ethics: we are not born good or bad; we become what we practise, the way a harpist becomes a harpist by playing.",
     "prompt": "What quality are you practising, whether you mean to or not?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-e58c9608bc",
@@ -50,13 +50,13 @@
     "source_url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X"
   },
   {
-    "id": "duty-ethics-14a237115c",
+    "id": "duty-ethics-b82a42f9e5",
     "tradition": "Duty Ethics",
-    "text": "Act only on that maxim whereby thou canst at the same time will that it should become a universal law.",
+    "text": "Act only on that maxim whereby you can at the same time will that it should become a universal law.",
     "source": "Kant, Groundwork, Second Section",
     "context": "Kant's 'categorical imperative', the test at the heart of his ethics: could you want everyone to do what you are about to do?",
     "prompt": "What would happen if everyone did what you are tempted to do today?",
-    "translation": "Thomas Kingsmill Abbott (1873)",
+    "translation": "Thomas Kingsmill Abbott (1873), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/5682"
   },
   {
@@ -90,13 +90,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/11224"
   },
   {
-    "id": "existentialism-72711c6ada",
+    "id": "existentialism-034783b6fc",
     "tradition": "Existentialism",
-    "text": "Ready must thou be to burn thyself in thine own flame; how couldst thou become new if thou have not first become ashes!",
+    "text": "Ready must you be to burn yourself in your own flame; how could you become new if you have not first become ashes!",
     "source": "Friedrich Nietzsche, Thus Spake Zarathustra I, 'The Way of the Creating One'",
     "context": "Zarathustra speaks to someone setting out on their own path. Real renewal asks us to let an old self burn away.",
     "prompt": "What old version of yourself might need to become ashes?",
-    "translation": "Thomas Common (1909)",
+    "translation": "Thomas Common (1909), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/1998"
   },
   {
@@ -130,14 +130,14 @@
     "source_url": "https://www.gutenberg.org/ebooks/59709"
   },
   {
-    "id": "virtue-ethics-d4f65b304a",
+    "id": "virtue-ethics-abdcd0632f",
     "tradition": "Virtue Ethics",
-    "text": "For as it is not one swallow or one fine day that makes a spring, so it is not one day or a short time that makes a man blessed and happy.",
+    "text": "To be happy takes a complete lifetime; for one swallow does not make spring, nor does one fine day; and similarly one day or a brief period of happiness does not make a man supremely blessed and happy.",
     "source": "Aristotle, Nicomachean Ethics, Book I",
     "context": "Aristotle's happiness (eudaimonia) is not a mood but a whole life lived well. One good day doesn't make it, and one bad day doesn't break it.",
     "prompt": "What would a good life look like if you judged it by years, not days?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-9ef58266f7",
@@ -220,34 +220,34 @@
     "source_url": "https://www.gutenberg.org/ebooks/3330"
   },
   {
-    "id": "stoicism-c0f1196946",
+    "id": "stoicism-0f3f972cf6",
     "tradition": "Stoicism",
-    "text": "Begin the morning by saying to thyself, I shall meet with the busybody, the ungrateful, arrogant, deceitful, envious, unsocial.",
+    "text": "Begin the morning by saying to yourself, I shall meet with the busybody, the ungrateful, arrogant, deceitful, envious, unsocial.",
     "source": "Marcus Aurelius, Meditations 2.1",
     "context": "Written by a Roman emperor in a private notebook. Not cynicism but preparation: he goes on to say such people act from ignorance, and that he cannot be harmed by them or angry with his own kin.",
     "prompt": "Who might test your patience today, and how do you want to meet them?",
-    "translation": "George Long (1862)",
+    "translation": "George Long (1862), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
-    "id": "taoism-2d89dc9337",
+    "id": "taoism-648bf6ab1f",
     "tradition": "Taoism",
-    "text": "He who knows other men is discerning; he who knows himself is intelligent. He who overcomes others is strong; he who overcomes himself is mighty. He who is satisfied with his lot is rich; he who goes on acting with energy has a (firm) will.",
+    "text": "He who knows other men is discerning; he who knows himself is intelligent. He who overcomes others is strong; he who overcomes himself is mighty. He who is satisfied with his lot is rich; he who goes on acting with energy has a firm will.",
     "source": "Laozi, Tao Te Ching 33",
     "context": "Four short contrasts between outer and inner achievement. Self-knowledge and self-mastery come out ahead every time.",
     "prompt": "Which kind of strength are you building: over others, or over yourself?",
-    "translation": "James Legge (1891)",
+    "translation": "James Legge (1891), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-1eb53f9b6c",
+    "id": "virtue-ethics-9e046ad9d3",
     "tradition": "Virtue Ethics",
-    "text": "To be angry, to give money, and be expensive, is what any man can do, and easy: but to do these to the right person, in due proportion, at the right time, with a right object, and in the right manner, this is not as before what any man can do, nor is it easy; and for this cause goodness is rare, and praiseworthy, and noble.",
+    "text": "Anybody can become angry—that is easy, and so it is to give and spend money; but to be angry with or give money to the right person, and to the right amount, and at the right time, and for the right purpose, and in the right way—this is not within everybody’s power and is not easy; so that to do these things properly is rare, praiseworthy, and noble.",
     "source": "Aristotle, Nicomachean Ethics, Book II",
     "context": "Anyone can feel anger or give money. Doing it to the right person, in the right measure, at the right time and in the right way is the real skill.",
     "prompt": "Where does a feeling of yours need better aim rather than suppression?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-f1d17068d0",
@@ -270,13 +270,13 @@
     "source_url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X"
   },
   {
-    "id": "duty-ethics-d24836547d",
+    "id": "duty-ethics-42ee71e960",
     "tradition": "Duty Ethics",
-    "text": "So act as to treat humanity, whether in thine own person or in that of any other, in every case as an end withal, never as means only.",
+    "text": "So act as to treat humanity, whether in your own person or in that of any other, in every case as an end too, never as means only.",
     "source": "Kant, Groundwork, Second Section",
     "context": "Kant's second formulation of the moral law: never use a person, including yourself, merely as a tool.",
     "prompt": "Is there anyone you've been treating more as a means than as a person?",
-    "translation": "Thomas Kingsmill Abbott (1873)",
+    "translation": "Thomas Kingsmill Abbott (1873), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/5682"
   },
   {
@@ -330,34 +330,34 @@
     "source_url": "https://www.gutenberg.org/ebooks/3330"
   },
   {
-    "id": "stoicism-f2aab2f997",
+    "id": "stoicism-e2bac6c74e",
     "tradition": "Stoicism",
-    "text": "The best way of avenging thyself is not to become like the wrong-doer.",
+    "text": "The best way of avenging yourself is not to become like the wrong-doer.",
     "source": "Marcus Aurelius, Meditations 6.6",
     "context": "One of the shortest entries in the Meditations. Being wronged offers a choice: to copy the wrong, or to remain who you are.",
     "prompt": "Has someone's behaviour been quietly changing yours?",
-    "translation": "George Long (1862)",
+    "translation": "George Long (1862), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
-    "id": "taoism-8d4af8c5a8",
+    "id": "taoism-bad1abc1cf",
     "tradition": "Taoism",
-    "text": "The thirty spokes unite in the one nave; but it is on the empty space (for the axle), that the use of the wheel depends. Clay is fashioned into vessels; but it is on their empty hollowness, that their use depends. The door and windows are cut out (from the walls) to form an apartment; but it is on the empty space (within), that its use depends.",
+    "text": "The thirty spokes unite in the one nave; but it is on the empty space for the axle, that the use of the wheel depends. Clay is fashioned into vessels; but it is on their empty hollowness, that their use depends. The door and windows are cut out from the walls to form an apartment; but it is on the empty space within, that its use depends.",
     "source": "Laozi, Tao Te Ching 11",
     "context": "Wheels, bowls and rooms are useful because of what is empty in them. Emptiness is not nothing; it is room.",
     "prompt": "Where could some emptiness make your life more useful, not less?",
-    "translation": "James Legge (1891)",
+    "translation": "James Legge (1891), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-c1c77a2cb5",
+    "id": "virtue-ethics-721e14d355",
     "tradition": "Virtue Ethics",
-    "text": "No one would choose to live without friends though he should have all the other good things in the world.",
+    "text": "No one would choose to live without friends, but possessing all other good things.",
     "source": "Aristotle, Nicomachean Ethics, Book VIII",
     "context": "Two of the ten books of the Ethics are about friendship. For Aristotle it is not a luxury of the good life but part of what makes it good.",
     "prompt": "Who would make your life poorer if they were gone?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-cf19b80a3e",
@@ -460,33 +460,33 @@
     "source_url": "https://www.gutenberg.org/ebooks/59709"
   },
   {
-    "id": "virtue-ethics-9aff636237",
+    "id": "virtue-ethics-29bea1ceb1",
     "tradition": "Virtue Ethics",
-    "text": "Easy to miss the mark, but hard to hit it: and for these reasons, therefore, both the excess and defect belong to Vice, and the mean state to Virtue; for, as the poet has it, “Men may be bad in many ways, But good in one alone.”",
+    "text": "It is easy to fail and difficult to succeed—easy to miss the target and difficult to hit it … Goodness is simple, badness manifold.",
     "source": "Aristotle, Nicomachean Ethics, Book II",
     "context": "Virtue lies in a 'mean' between too much and too little, and there are many ways to miss it, but only one way to hit it.",
     "prompt": "Where are you erring on the side of too much, or too little?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
-    "id": "buddhist-philosophy-35fd88fbb7",
+    "id": "buddhist-philosophy-37453dabf9",
     "tradition": "Buddhist Philosophy",
-    "text": "Let no man think lightly of evil, saying in his heart, It will not come nigh unto me. Even by the falling of water-drops a water-pot is filled; the fool becomes full of evil, even if he gather it little by little.",
+    "text": "Let no man think lightly of evil, saying in his heart, It will not come near me. Even by the falling of water-drops a water-pot is filled; the fool becomes full of evil, even if he gather it little by little.",
     "source": "Dhammapada 121",
     "context": "The verse that follows makes the same point about good. Character is built drop by drop, through small acts we hardly notice.",
     "prompt": "What small habit is slowly filling your pot?",
-    "translation": "F. Max Müller (1881)",
+    "translation": "F. Max Müller (1881), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/2017"
   },
   {
-    "id": "epicureanism-6f903acd04",
+    "id": "epicureanism-1298c4a30e",
     "tradition": "Epicureanism",
-    "text": "'Tis sweet, when, down the mighty main, the winds\nRoll up its waste of waters, from the land\nTo watch another's labouring anguish far,\nNot that we joyously delight that man\nShould thus be smitten, but because 'tis sweet\nTo mark what evils we ourselves be spared;\n'Tis sweet, again, to view the mighty strife\nOf armies embattled yonder o'er the plains,\nOurselves no sharers in the peril; but naught\nThere is more goodly than to hold the high\nSerene plateaus, well fortressed by the wise,\nWhence thou may'st look below on other men\nAnd see them ev'rywhere wand'ring, all dispersed\nIn their lone seeking for the road of life.",
+    "text": "It is sweet, when, down the mighty main, the winds\nRoll up its waste of waters, from the land\nTo watch another's labouring anguish far,\nNot that we joyously delight that man\nShould thus be smitten, but because it is sweet\nTo mark what evils we ourselves be spared;\nIt is sweet, again, to view the mighty strife\nOf armies embattled yonder o'er the plains,\nOurselves no sharers in the peril; but nothing\nThere is more goodly than to hold the high\nSerene plateaus, well fortressed by the wise,\nWhence you may look below on other men\nAnd see them everywhere wandering, all dispersed\nIn their lone seeking for the road of life.",
     "source": "Lucretius, On the Nature of Things II",
     "context": "Lucretius, a Roman poet, set Epicurus' philosophy to verse. Here he describes the calm of a mind that has found its footing, looking out on a restless world.",
     "prompt": "Where is your 'serene plateau' when life gets stormy?",
-    "translation": "William Ellery Leonard (1916)",
+    "translation": "William Ellery Leonard (1916), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/785"
   },
   {
@@ -550,34 +550,34 @@
     "source_url": "https://www.gutenberg.org/ebooks/3330"
   },
   {
-    "id": "stoicism-02abed2ea2",
+    "id": "stoicism-d70473449b",
     "tradition": "Stoicism",
-    "text": "Men seek retreats for themselves, houses in the country, sea-shores, and mountains; and thou too art wont to desire such things very much. But this is altogether a mark of the most common sort of men, for it is in thy power whenever thou shalt choose to retire into thyself.",
+    "text": "Men seek retreats for themselves, houses in the country, sea-shores, and mountains; and you too are wont to desire such things very much. But this is altogether a mark of the most common sort of men, for it is in your power whenever you choose to retire into yourself.",
     "source": "Marcus Aurelius, Meditations 4.3",
     "context": "Marcus reminds himself that the quiet he longs for in the countryside is always available within. The retreat is a practice, not a place.",
     "prompt": "Where in yourself can you retreat to, right now, for a minute?",
-    "translation": "George Long (1862)",
+    "translation": "George Long (1862), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
-    "id": "taoism-2b4d44eb90",
+    "id": "taoism-a83c70fb61",
     "tradition": "Taoism",
-    "text": "The tree which fills the arms grew from the tiniest sprout; the tower of nine storeys rose from a (small) heap of earth; the journey of a thousand li commenced with a single step.",
+    "text": "The tree which fills the arms grew from the tiniest sprout; the tower of nine storeys rose from a small heap of earth; the journey of a thousand li commenced with a single step.",
     "source": "Laozi, Tao Te Ching 64",
     "context": "The source of the saying 'a journey of a thousand miles begins with a single step'. A li is a traditional Chinese measure of distance.",
     "prompt": "What is the single step you could take today?",
-    "translation": "James Legge (1891)",
+    "translation": "James Legge (1891), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-741b825a4a",
+    "id": "virtue-ethics-e092c6b9ce",
     "tradition": "Virtue Ethics",
-    "text": "The Virtues then come to be in us neither by nature, nor in despite of nature, but we are furnished by nature with a capacity for receiving them and are perfected in them through custom.",
+    "text": "The virtues therefore are engendered in us neither by nature nor yet in violation of nature; nature gives us the capacity to receive them, and this capacity is brought to maturity by habit.",
     "source": "Aristotle, Nicomachean Ethics, Book II",
     "context": "We have a natural capacity for goodness, but it only becomes real through practice, the way a seed needs tending.",
     "prompt": "Which of your good capacities is waiting for practice?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-a53e87b839",
@@ -590,13 +590,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/2017"
   },
   {
-    "id": "epicureanism-3a5f777701",
+    "id": "epicureanism-8d959e5a1e",
     "tradition": "Epicureanism",
-    "text": "Accustom thyself to believe that death is nothing to us, for good and evil imply sentience, and death is the privation of all sentience; therefore a right understanding that death is nothing to us makes the mortality of life enjoyable, not by adding to life an illimitable time, but by taking away the yearning after immortality.",
+    "text": "Accustom yourself to believe that death is nothing to us, for good and evil imply sentience, and death is the privation of all sentience; therefore a right understanding that death is nothing to us makes the mortality of life enjoyable, not by adding to life an illimitable time, but by taking away the yearning after immortality.",
     "source": "Epicurus, Letter to Menoeceus 124",
     "context": "The goal is not to make life longer but to make mortal life enjoyable, by letting go of the craving to live forever.",
     "prompt": "How would you live if you made peace with being mortal?",
-    "translation": "R. D. Hicks (1925)",
+    "translation": "R. D. Hicks (1925), lightly modernised",
     "source_url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X"
   },
   {
@@ -640,13 +640,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/34901"
   },
   {
-    "id": "existentialism-42afeb6d98",
+    "id": "existentialism-8434db9f02",
     "tradition": "Existentialism",
-    "text": "In one’s friend one shall have one’s best enemy. Thou shalt be closest unto him with thy heart when thou withstandest him.",
+    "text": "In one’s friend one shall have one’s best enemy. You shall be closest to him with your heart when you withstand him.",
     "source": "Friedrich Nietzsche, Thus Spake Zarathustra I, 'The Friend'",
     "context": "For Nietzsche, a true friend challenges us rather than flatters us, and we are closest to them when we push back.",
     "prompt": "Which friend challenges you, and do you challenge them?",
-    "translation": "Thomas Common (1909)",
+    "translation": "Thomas Common (1909), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/1998"
   },
   {
@@ -660,13 +660,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/3330"
   },
   {
-    "id": "stoicism-91243fc30c",
+    "id": "stoicism-8b41c588b9",
     "tradition": "Stoicism",
-    "text": "Take away thy opinion, and then there is taken away the complaint, \"I have been harmed.\" Take away the complaint, \"I have been harmed,\" and the harm is taken away.",
+    "text": "Take away your opinion, and then there is taken away the complaint, \"I have been harmed.\" Take away the complaint, \"I have been harmed,\" and the harm is taken away.",
     "source": "Marcus Aurelius, Meditations 4.7",
     "context": "A compressed version of the Stoic method: the injury we feel is bound up with the judgment that we have been injured.",
     "prompt": "Which 'I have been harmed' could you set down today?",
-    "translation": "George Long (1862)",
+    "translation": "George Long (1862), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
@@ -680,14 +680,14 @@
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-87753644bf",
+    "id": "virtue-ethics-5e72fd2c34",
     "tradition": "Virtue Ethics",
-    "text": "Every art, and every science reduced to a teachable form, and in like manner every action and moral choice, aims, it is thought, at some good: for which reason a common and by no means a bad description of the Chief Good is, “that which all things aim at.”",
+    "text": "Every art and every investigation, and likewise every practical pursuit or undertaking, seems to aim at some good: hence it has been well said that the Good is That at which all things aim.",
     "source": "Aristotle, Nicomachean Ethics, Book I",
     "context": "The first sentence of the Ethics. Everything we do aims at some good, so the real question is: what is the highest good, the one we want for its own sake?",
     "prompt": "What are your daily actions ultimately aiming at?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-7a30d488a0",
@@ -750,13 +750,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/10378"
   },
   {
-    "id": "existentialism-a43a3dfddd",
+    "id": "existentialism-a0ad8e8f7b",
     "tradition": "Existentialism",
-    "text": "He who fights with monsters should be careful lest he thereby become a monster. And if thou gaze long into an abyss, the abyss will also gaze into thee.",
+    "text": "He who fights with monsters should be careful lest he thereby become a monster. And if you gaze long into an abyss, the abyss will also gaze into you.",
     "source": "Friedrich Nietzsche, Beyond Good and Evil 146",
     "context": "A warning to anyone fighting something they despise: the struggle can reshape us into what we oppose.",
     "prompt": "Is something you are fighting changing you?",
-    "translation": "Helen Zimmern (1906)",
+    "translation": "Helen Zimmern (1906), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/4363"
   },
   {
@@ -770,13 +770,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/3330"
   },
   {
-    "id": "stoicism-44ed558cab",
+    "id": "stoicism-8c71f2a6f5",
     "tradition": "Stoicism",
-    "text": "Do not act as if thou wert going to live ten thousand years. Death hangs over thee. While thou livest, while it is in thy power, be good.",
+    "text": "Do not act as if you were going to live ten thousand years. Death hangs over you. While you live, while it is in your power, be good.",
     "source": "Marcus Aurelius, Meditations 4.17",
     "context": "The Stoics used the awareness of death not to frighten but to focus: the time to be good is now, while it is still possible.",
     "prompt": "What good thing have you been postponing as if you had endless time?",
-    "translation": "George Long (1862)",
+    "translation": "George Long (1862), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
@@ -790,14 +790,14 @@
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-327e54f2e5",
+    "id": "virtue-ethics-a4ef030025",
     "tradition": "Virtue Ethics",
-    "text": "Whether we are accustomed this way or that straight from childhood, makes not a small but an important difference, or rather I would say it makes all the difference.",
+    "text": "It is therefore not of small moment whether we are trained from childhood in one set of habits or another; on the contrary it is of very great, or rather of supreme, importance.",
     "source": "Aristotle, Nicomachean Ethics, Book II",
     "context": "Habits formed early shape the person we become. The same is true of the habits we form now.",
     "prompt": "Which habit from your childhood still shapes you, for better or worse?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-16a0a83a4e",
@@ -880,13 +880,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/3330"
   },
   {
-    "id": "stoicism-60882d0393",
+    "id": "stoicism-6f84af8d14",
     "tradition": "Stoicism",
-    "text": "Occupy thyself with few things, says the philosopher, if thou wouldst be tranquil.",
+    "text": "Occupy yourself with few things, says the philosopher, if you would be tranquil.",
     "source": "Marcus Aurelius, Meditations 4.24",
     "context": "Marcus quotes Democritus, then refines the advice: do what is necessary, and you gain the calm of doing few things and doing them well.",
     "prompt": "What could you stop doing to make room for what matters?",
-    "translation": "George Long (1862)",
+    "translation": "George Long (1862), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
@@ -900,14 +900,14 @@
     "source_url": "https://www.gutenberg.org/ebooks/59709"
   },
   {
-    "id": "virtue-ethics-a91f38ad24",
+    "id": "virtue-ethics-72ac6f1abe",
     "tradition": "Virtue Ethics",
-    "text": "For we are enquiring not merely that we may know what virtue is but that we may become virtuous.",
+    "text": "We are not investigating the nature of virtue for the sake of knowing what it is, but in order that we may become good.",
     "source": "Aristotle, Nicomachean Ethics, Book II",
     "context": "Aristotle reminds his students that ethics is not a theory to admire but a practice to live.",
     "prompt": "What do you know about being good that you are not yet doing?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-c9ade89804",
@@ -1000,43 +1000,43 @@
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
-    "id": "taoism-014e7db9ab",
+    "id": "taoism-e4aee907b1",
     "tradition": "Taoism",
-    "text": "The partial becomes complete; the crooked, straight; the empty, full; the worn out, new. He whose (desires) are few gets them; he whose (desires) are many goes astray.",
+    "text": "The partial becomes complete; the crooked, straight; the empty, full; the worn out, new. He whose desires are few gets them; he whose desires are many goes astray.",
     "source": "Laozi, Tao Te Ching 22",
     "context": "A string of paradoxes: what bends survives, what is emptied gets filled. Wanting less is a way of receiving more.",
     "prompt": "What in your life is 'crooked' now and might yet become straight?",
-    "translation": "James Legge (1891)",
+    "translation": "James Legge (1891), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-42c0834a7a",
+    "id": "virtue-ethics-935edbcc30",
     "tradition": "Virtue Ethics",
-    "text": "A friend feels towards a friend as towards himself (a friend being in fact another Self)…",
+    "text": "He feels towards his friend in the same way as towards himself (for a friend is another self)…",
     "source": "Aristotle, Nicomachean Ethics, Book IX",
     "context": "One of Aristotle's most famous ideas: a true friend is 'another self', someone whose good we want as we want our own.",
     "prompt": "Who is another self to you?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
-    "id": "buddhist-philosophy-cf75676097",
+    "id": "buddhist-philosophy-51ac2ec282",
     "tradition": "Buddhist Philosophy",
-    "text": "It is good to tame the mind, which is difficult to hold in and flighty, rushing wherever it listeth; a tamed mind brings happiness.",
+    "text": "It is good to tame the mind, which is difficult to hold in and flighty, rushing wherever it likes; a tamed mind brings happiness.",
     "source": "Dhammapada 35",
     "context": "The untrained mind rushes wherever it likes. Taming it is not suppression but steadiness, and steadiness brings ease.",
     "prompt": "Where did your mind rush off to today?",
-    "translation": "F. Max Müller (1881)",
+    "translation": "F. Max Müller (1881), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/2017"
   },
   {
-    "id": "epicureanism-3ec826406f",
+    "id": "epicureanism-e81ec1ddaf",
     "tradition": "Epicureanism",
-    "text": "We do not choose every pleasure whatsoever, but ofttimes pass over many pleasures when a greater annoyance ensues from them. And ofttimes we consider pains superior to pleasures when submission to the pains for a long time brings us as a consequence a greater pleasure.",
+    "text": "We do not choose every pleasure whatsoever, but often pass over many pleasures when a greater annoyance ensues from them. And often we consider pains superior to pleasures when submission to the pains for a long time brings us as a consequence a greater pleasure.",
     "source": "Epicurus, Letter to Menoeceus 129",
     "context": "Epicurus is often mistaken for a hedonist. In fact he taught careful weighing: some pleasures cost too much, some pains are worth it.",
     "prompt": "Which pleasure costs you more than it gives?",
-    "translation": "R. D. Hicks (1925)",
+    "translation": "R. D. Hicks (1925), lightly modernised",
     "source_url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X"
   },
   {
@@ -1100,34 +1100,34 @@
     "source_url": "https://www.gutenberg.org/ebooks/3330"
   },
   {
-    "id": "stoicism-6a7a472dd3",
+    "id": "stoicism-370cd2ab44",
     "tradition": "Stoicism",
-    "text": "Such as are thy habitual thoughts, such also will be the character of thy mind; for the soul is dyed by the thoughts.",
+    "text": "Such as are your habitual thoughts, such also will be the character of your mind; for the soul is dyed by the thoughts.",
     "source": "Marcus Aurelius, Meditations 5.16",
     "context": "Just as cloth takes on the colour it soaks in, the mind takes on the colour of what it repeatedly thinks.",
     "prompt": "What colour is your mind being dyed by lately?",
-    "translation": "George Long (1862)",
+    "translation": "George Long (1862), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
-    "id": "taoism-0ba07551a4",
+    "id": "taoism-4a4e48e031",
     "tradition": "Taoism",
-    "text": "Who can (make) the muddy water (clear)? Let it be still, and it will gradually become clear.",
+    "text": "Who can make the muddy water clear? Let it be still, and it will gradually become clear.",
     "source": "Laozi, Tao Te Ching 15",
     "context": "Stirring muddy water only clouds it more. Left alone, the sediment settles by itself.",
     "prompt": "What might become clear if you simply stopped stirring it?",
-    "translation": "James Legge (1891)",
+    "translation": "James Legge (1891), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-d3b5e23609",
+    "id": "virtue-ethics-f210346428",
     "tradition": "Virtue Ethics",
-    "text": "That then is perfect Friendship which subsists between those who are good and whose similarity consists in their goodness: for these men wish one another’s good in similar ways; in so far as they are good (and good they are in themselves); and those are specially friends who wish good to their friends for their sakes.",
+    "text": "The perfect form of friendship is that between the good, and those who resemble each other in virtue. For these friends wish each alike the other’s good in respect of their goodness, and they are good in themselves; but it is those who wish the good of their friends for their friends’ sake who are friends in the fullest sense.",
     "source": "Aristotle, Nicomachean Ethics, Book VIII",
     "context": "Aristotle distinguishes friendships of usefulness, of pleasure, and of goodness. Only the last lasts, because it loves the person, not what they provide.",
     "prompt": "Which of your friendships rest on usefulness, pleasure, or goodness?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-205e629ad8",
@@ -1190,13 +1190,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/11224"
   },
   {
-    "id": "existentialism-b378347e38",
+    "id": "existentialism-6d9e51d08a",
     "tradition": "Existentialism",
-    "text": "Thou shalt become what thou art.",
+    "text": "You shall become what you are.",
     "source": "Friedrich Nietzsche, The Joyful Wisdom 270",
     "context": "Nietzsche's answer to the question 'What saith thy conscience?' Borrowed from the Greek poet Pindar, it became his motto.",
     "prompt": "Who are you becoming, and is it who you are?",
-    "translation": "Thomas Common (1910)",
+    "translation": "Thomas Common (1910), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/52881"
   },
   {
@@ -1210,13 +1210,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/3330"
   },
   {
-    "id": "stoicism-ed4698f3a7",
+    "id": "stoicism-3ec86c3bb4",
     "tradition": "Stoicism",
-    "text": "Look within. Within is the fountain of good, and it will ever bubble up, if thou wilt ever dig.",
+    "text": "Look within. Within is the fountain of good, and it will ever bubble up, if you will ever dig.",
     "source": "Marcus Aurelius, Meditations 7.59",
     "context": "Goodness is not imported from outside; it is a spring to be uncovered, again and again.",
     "prompt": "What good in you needs digging out today?",
-    "translation": "George Long (1862)",
+    "translation": "George Long (1862), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
@@ -1230,14 +1230,14 @@
     "source_url": "https://www.gutenberg.org/ebooks/59709"
   },
   {
-    "id": "virtue-ethics-0478c9e874",
+    "id": "virtue-ethics-f2519e4dcc",
     "tradition": "Virtue Ethics",
-    "text": "Exactness must not be looked for in all discussions alike, any more than in all works of handicraft.",
+    "text": "The same exactness must not be expected in all departments of philosophy alike, any more than in all the products of the arts and crafts.",
     "source": "Aristotle, Nicomachean Ethics, Book I",
     "context": "Ethics, says Aristotle, can't be as precise as mathematics. Wisdom includes knowing how much certainty a question allows.",
     "prompt": "Where are you demanding more certainty than the situation can give?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-60ad2ebf21",
@@ -1320,34 +1320,34 @@
     "source_url": "https://www.gutenberg.org/ebooks/3330"
   },
   {
-    "id": "stoicism-fb78baca9d",
+    "id": "stoicism-9803b61bb3",
     "tradition": "Stoicism",
-    "text": "If thou art pained by any external thing, it is not this thing that disturbs thee, but thy own judgment about it. And it is in thy power to wipe out this judgment now.",
+    "text": "If you are pained by any external thing, it is not this thing that disturbs you, but your own judgment about it. And it is in your power to wipe out this judgment now.",
     "source": "Marcus Aurelius, Meditations 8.47",
     "context": "One of the clearest statements of Stoic freedom: the judgment is ours, so we can revise it, not someday but now.",
     "prompt": "Which judgment about your situation could you revise right now?",
-    "translation": "George Long (1862)",
+    "translation": "George Long (1862), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
-    "id": "taoism-dc1d4bcb25",
+    "id": "taoism-ed03a34056",
     "tradition": "Taoism",
-    "text": "There is nothing in the world more soft and weak than water, and yet for attacking things that are firm and strong there is nothing that can take precedence of it;—for there is nothing (so effectual) for which it can be changed. Every one in the world knows that the soft overcomes the hard, and the weak the strong, but no one is able to carry it out in practice.",
+    "text": "There is nothing in the world more soft and weak than water, and yet for attacking things that are firm and strong there is nothing that can take precedence of it;—for there is nothing so effectual for which it can be changed. Every one in the world knows that the soft overcomes the hard, and the weak the strong, but no one is able to carry it out in practice.",
     "source": "Laozi, Tao Te Ching 78",
     "context": "Water wears down stone. Everyone knows that softness can win, says Laozi, yet hardly anyone lives by it.",
     "prompt": "Where could softness achieve what force has not?",
-    "translation": "James Legge (1891)",
+    "translation": "James Legge (1891), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-0be82b2ab9",
+    "id": "virtue-ethics-3fd384b924",
     "tradition": "Virtue Ethics",
-    "text": "He is perfected in Self-Mastery who not only abstains from the bodily pleasures but is glad to do so.",
+    "text": "A man is temperate if he abstains from bodily pleasures and finds this abstinence itself enjoyable, profligate if he feels it irksome.",
     "source": "Aristotle, Nicomachean Ethics, Book II",
     "context": "The test of a real virtue is pleasure in acting well. If doing the right thing still feels like a grim effort, the habit is not yet formed.",
     "prompt": "Which good habit has started to feel natural, and which still feels forced?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-3dfb21de43",
@@ -1370,13 +1370,13 @@
     "source_url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X"
   },
   {
-    "id": "duty-ethics-882473d7d8",
+    "id": "duty-ethics-3cf7696028",
     "tradition": "Duty Ethics",
-    "text": "Duty! Thou sublime and mighty name that dost embrace nothing charming or insinuating, but requirest submission, and yet seekest not to move the will by threatening aught that would arouse natural aversion or terror, but merely holdest forth a law which of itself finds entrance into the mind, and yet gains reluctant reverence.",
+    "text": "Duty! Sublime and mighty name that embraces nothing charming or insinuating, but requires submission, and yet seeks not to move the will by threatening anything that would arouse natural aversion or terror, but merely holds forth a law which of itself finds entrance into the mind, and yet gains reluctant reverence.",
     "source": "Kant, Critique of Practical Reason",
     "context": "A rare burst of lyricism from Kant. Duty doesn't charm or threaten us; it simply asks, and we can't help respecting it.",
     "prompt": "Which duty do you respect, even when you don't feel like doing it?",
-    "translation": "Thomas Kingsmill Abbott (1873)",
+    "translation": "Thomas Kingsmill Abbott (1873), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/5683"
   },
   {
@@ -1440,24 +1440,24 @@
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
-    "id": "taoism-adbce30219",
+    "id": "taoism-7c192ed8e4",
     "tradition": "Taoism",
-    "text": "To know and yet (think) we do not know is the highest (attainment); not to know (and yet think) we do know is a disease.",
+    "text": "To know and yet think we do not know is the highest attainment; not to know and yet think we do know is a disease.",
     "source": "Laozi, Tao Te Ching 71",
     "context": "An echo of Socrates, a world away: the wise hold their knowledge lightly; the sick mind is the one that is sure.",
     "prompt": "What do you think you know that you might not?",
-    "translation": "James Legge (1891)",
+    "translation": "James Legge (1891), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-d041dbab62",
+    "id": "virtue-ethics-512361fd3f",
     "tradition": "Virtue Ethics",
-    "text": "The starting-point or principle is more than half the whole matter.",
+    "text": "The beginning is admittedly more than half of the whole.",
     "source": "Aristotle, Nicomachean Ethics, Book I",
     "context": "Getting the starting point right shapes everything that follows.",
     "prompt": "What are you starting now, and is the starting point right?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-c10b2cd7a3",
@@ -1560,14 +1560,14 @@
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-c378612fd0",
+    "id": "virtue-ethics-6cdca1e347",
     "tradition": "Virtue Ethics",
-    "text": "To upset if need be even our own theories, specially as we are lovers of wisdom: for since both are dear to us, we are bound to prefer the truth.",
+    "text": "It would seem to be obligatory, especially for a philosopher, to sacrifice even one’s closest personal ties in defense of the truth.",
     "source": "Aristotle, Nicomachean Ethics, Book I",
     "context": "Aristotle disagrees with his own teacher, Plato, here. Later summed up as 'Plato is dear, but truth is dearer'.",
     "prompt": "Which of your own ideas would you be willing to upset for the truth?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-36ac3ac70b",
@@ -1630,13 +1630,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/34901"
   },
   {
-    "id": "existentialism-dd3b15bec2",
+    "id": "existentialism-03851ecb84",
     "tradition": "Existentialism",
-    "text": "Flee, my friend, into thy solitude! I see thee deafened with the noise of the great men, and stung all over with the stings of the little ones.",
+    "text": "Flee, my friend, into your solitude! I see you deafened with the noise of the great men, and stung all over with the stings of the little ones.",
     "source": "Friedrich Nietzsche, Thus Spake Zarathustra I, 'The Flies in the Market-place'",
     "context": "The market-place is full of noise, fame and petty attacks. Zarathustra urges his friend to recover himself in solitude.",
     "prompt": "Which noise could you step away from today?",
-    "translation": "Thomas Common (1909)",
+    "translation": "Thomas Common (1909), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/1998"
   },
   {
@@ -1660,24 +1660,24 @@
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
-    "id": "taoism-8543db129b",
+    "id": "taoism-df99f04288",
     "tradition": "Taoism",
-    "text": "He who devotes himself to learning (seeks) from day to day to increase (his knowledge); he who devotes himself to the Tao (seeks) from day to day to diminish (his doing).",
+    "text": "He who devotes himself to learning seeks from day to day to increase his knowledge; he who devotes himself to the Tao seeks from day to day to diminish his doing.",
     "source": "Laozi, Tao Te Ching 48",
     "context": "Learning adds; the Tao subtracts. Some growth comes from doing less, not more.",
     "prompt": "What could you take away from your days rather than add?",
-    "translation": "James Legge (1891)",
+    "translation": "James Legge (1891), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-c58067be19",
+    "id": "virtue-ethics-db9af320fb",
     "tradition": "Virtue Ethics",
-    "text": "It is no easy matter to define how, and with what persons, and at what kind of things, and how long one ought to be angry, and up to what point a person is right or is wrong.",
+    "text": "It is not easy to define in what manner and with whom and on what grounds and how long one ought to be angry, and up to what point one does right in so doing and where error begins.",
     "source": "Aristotle, Nicomachean Ethics, Book IV",
     "context": "No rulebook can say exactly when anger is justified. That judgement has to be developed through experience.",
     "prompt": "When was your anger last right, and when was it not?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-0ef20dba3b",
@@ -1740,13 +1740,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/11224"
   },
   {
-    "id": "existentialism-69398166e7",
+    "id": "existentialism-7659b01cc4",
     "tradition": "Existentialism",
-    "text": "Of all that is written, I love only what a person hath written with his blood. Write with blood, and thou wilt find that blood is spirit.",
+    "text": "Of all that is written, I love only what a person has written with his blood. Write with blood, and you will find that blood is spirit.",
     "source": "Friedrich Nietzsche, Thus Spake Zarathustra I, 'Reading and Writing'",
     "context": "Nietzsche valued writing, and living, that come from genuine experience rather than borrowed opinion.",
     "prompt": "What could you say, or do, today that comes from your own blood?",
-    "translation": "Thomas Common (1909)",
+    "translation": "Thomas Common (1909), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/1998"
   },
   {
@@ -1760,13 +1760,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/3330"
   },
   {
-    "id": "stoicism-8fd1af4a1d",
+    "id": "stoicism-8daa607e1e",
     "tradition": "Stoicism",
-    "text": "When thou art offended with any man's shameless conduct, immediately ask thyself, Is it possible, then, that shameless men should not be in the world? It is not possible. Do not, then, require what is impossible.",
+    "text": "When you are offended with any man's shameless conduct, immediately ask yourself, Is it possible, then, that shameless men should not be in the world? It is not possible. Do not, then, require what is impossible.",
     "source": "Marcus Aurelius, Meditations 9.42",
     "context": "Expecting a world without difficult people only guarantees frustration. Marcus asks himself to expect them, and so to meet them calmly.",
     "prompt": "What are you demanding of others that is simply impossible?",
-    "translation": "George Long (1862)",
+    "translation": "George Long (1862), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
@@ -1780,23 +1780,23 @@
     "source_url": "https://www.gutenberg.org/ebooks/59709"
   },
   {
-    "id": "virtue-ethics-daed2f0a75",
+    "id": "virtue-ethics-044bdb7cd6",
     "tradition": "Virtue Ethics",
-    "text": "And of this nature Happiness is mostly thought to be, for this we choose always for its own sake, and never with a view to anything further.",
+    "text": "Happiness above all else appears to be absolutely final in this sense, since we always choose it for its own sake and never as a means to something else.",
     "source": "Aristotle, Nicomachean Ethics, Book I",
     "context": "We want money, honour and even pleasure partly for what they bring. Happiness is the one thing we want simply for itself.",
     "prompt": "What do you chase as a means that you have started treating as an end?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
-    "id": "buddhist-philosophy-bd603af014",
+    "id": "buddhist-philosophy-c7f9cb1a7b",
     "tradition": "Buddhist Philosophy",
-    "text": "Well-makers lead the water (wherever they like); fletchers bend the arrow; carpenters bend a log of wood; wise people fashion themselves.",
+    "text": "Well-makers lead the water wherever they like; fletchers bend the arrow; carpenters bend a log of wood; wise people fashion themselves.",
     "source": "Dhammapada 80",
     "context": "Every craft shapes its material. The wise treat their own character as the material to be shaped.",
     "prompt": "What part of yourself are you shaping right now?",
-    "translation": "F. Max Müller (1881)",
+    "translation": "F. Max Müller (1881), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/2017"
   },
   {
@@ -1850,13 +1850,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/10378"
   },
   {
-    "id": "existentialism-7c50d39a30",
+    "id": "existentialism-e0fb94a811",
     "tradition": "Existentialism",
-    "text": "There is more sagacity in thy body than in thy best wisdom.",
+    "text": "There is more sagacity in your body than in your best wisdom.",
     "source": "Friedrich Nietzsche, Thus Spake Zarathustra I, 'The Despisers of the Body'",
     "context": "Against those who despise the body, Zarathustra insists it holds an intelligence of its own.",
     "prompt": "What is your body trying to tell you?",
-    "translation": "Thomas Common (1909)",
+    "translation": "Thomas Common (1909), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/1998"
   },
   {
@@ -1880,24 +1880,24 @@
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
-    "id": "taoism-8db262c825",
+    "id": "taoism-201ac03f5b",
     "tradition": "Taoism",
-    "text": "All in the world know the beauty of the beautiful, and in doing this they have (the idea of) what ugliness is; they all know the skill of the skilful, and in doing this they have (the idea of) what the want of skill is.",
+    "text": "All in the world know the beauty of the beautiful, and in doing this they have the idea of what ugliness is; they all know the skill of the skilful, and in doing this they have the idea of what the want of skill is.",
     "source": "Laozi, Tao Te Ching 2",
     "context": "Every idea of 'good' quietly creates its opposite. Labels divide the world as much as they describe it.",
     "prompt": "Which label you use creates the very thing you dislike?",
-    "translation": "James Legge (1891)",
+    "translation": "James Legge (1891), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-f21254341e",
+    "id": "virtue-ethics-9dac1fb7e9",
     "tradition": "Virtue Ethics",
-    "text": "Where is the use of such prosperity if there be taken away the doing of kindnesses of which friends are the most usual and most commendable objects?",
+    "text": "Rich men, rulers and potentates are thought especially to require friends, since what would be the good of their prosperity without an outlet for beneficence, which is displayed in its fullest and most praiseworthy form towards friends?",
     "source": "Aristotle, Nicomachean Ethics, Book VIII",
     "context": "Wealth and power are worth little without friends to do good to, and are harder to keep without them.",
     "prompt": "What could you share today with someone you care about?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-4967efa336",
@@ -1980,43 +1980,43 @@
     "source_url": "https://www.gutenberg.org/ebooks/3330"
   },
   {
-    "id": "stoicism-1a5aa06c7e",
+    "id": "stoicism-7737f44824",
     "tradition": "Stoicism",
-    "text": "In the morning when thou risest unwillingly, let this thought be present,—I am rising to the work of a human being.",
+    "text": "In the morning when you rise unwillingly, let this thought be present,—I am rising to the work of a human being.",
     "source": "Marcus Aurelius, Meditations 5.1",
     "context": "Even an emperor struggled to get out of bed. His answer was to remember what he was for.",
     "prompt": "What work, worthy of a human being, is waiting for you today?",
-    "translation": "George Long (1862)",
+    "translation": "George Long (1862), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
-    "id": "taoism-1918cfcf28",
+    "id": "taoism-3a404b4ece",
     "tradition": "Taoism",
-    "text": "All things alike go through their processes of activity, and (then) we see them return (to their original state). When things (in the vegetable world) have displayed their luxuriant growth, we see each of them return to its root. This returning to their root is what we call the state of stillness.",
+    "text": "All things alike go through their processes of activity, and then we see them return to their original state. When things in the vegetable world have displayed their luxuriant growth, we see each of them return to its root. This returning to their root is what we call the state of stillness.",
     "source": "Laozi, Tao Te Ching 16",
     "context": "Everything grows, flourishes and returns to its root, like plants through the seasons. Stillness is the return, not the absence of life.",
     "prompt": "What root do you need to return to?",
-    "translation": "James Legge (1891)",
+    "translation": "James Legge (1891), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-518d57dd64",
+    "id": "virtue-ethics-809935373c",
     "tradition": "Virtue Ethics",
-    "text": "It is requisite that they have kindly feelings towards one another, and wish one another good from one of the aforementioned causes, and that these kindly feelings should be mutually known.",
+    "text": "Persons who wish another good for his own sake, if the feeling is not reciprocated, are merely said to feel goodwill for him: only when mutual is such goodwill termed friendship. And perhaps we should also add the qualification that the feeling of goodwill must be known to its object.",
     "source": "Aristotle, Nicomachean Ethics, Book VIII",
     "context": "Goodwill isn't enough for friendship; it has to be mutual, and both people have to know it.",
     "prompt": "Who might not know how much goodwill you feel toward them?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
-    "id": "buddhist-philosophy-729c91526a",
+    "id": "buddhist-philosophy-699b511615",
     "tradition": "Buddhist Philosophy",
-    "text": "Even though a speech be a thousand (of words), but made up of senseless words, one word of sense is better, which if a man hears, he becomes quiet.",
+    "text": "Even though a speech be a thousand words, but made up of senseless words, one word of sense is better, which if a man hears, he becomes quiet.",
     "source": "Dhammapada 100",
     "context": "Quantity of words is not the measure. One true word that brings peace outweighs a thousand empty ones.",
     "prompt": "What one word of sense do you need to hear, or to say?",
-    "translation": "F. Max Müller (1881)",
+    "translation": "F. Max Müller (1881), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/2017"
   },
   {
@@ -2090,43 +2090,43 @@
     "source_url": "https://www.gutenberg.org/ebooks/3330"
   },
   {
-    "id": "stoicism-077feeca8a",
+    "id": "stoicism-90c8a3db4f",
     "tradition": "Stoicism",
-    "text": "When thou wishest to delight thyself, think of the virtues of those who live with thee; for instance, the activity of one, and the modesty of another, and the liberality of a third, and some other good quality of a fourth.",
+    "text": "When you wish to delight yourself, think of the virtues of those who live with you; for instance, the activity of one, and the modesty of another, and the liberality of a third, and some other good quality of a fourth.",
     "source": "Marcus Aurelius, Meditations 6.48",
     "context": "A simple exercise in gratitude: notice the particular virtues of the people around you.",
     "prompt": "Name one good quality in each of three people close to you.",
-    "translation": "George Long (1862)",
+    "translation": "George Long (1862), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
-    "id": "taoism-ce8ec82b3b",
+    "id": "taoism-37c84ee5f2",
     "tradition": "Taoism",
-    "text": "The softest thing in the world dashes against and overcomes the hardest; that which has no (substantial) existence enters where there is no crevice.",
+    "text": "The softest thing in the world dashes against and overcomes the hardest; that which has no substantial existence enters where there is no crevice.",
     "source": "Laozi, Tao Te Ching 43",
     "context": "What is soft finds its way where the hard cannot. Gentleness has its own power.",
     "prompt": "Where could you go further by being gentler?",
-    "translation": "James Legge (1891)",
+    "translation": "James Legge (1891), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-89053d6d09",
+    "id": "virtue-ethics-45037f7c83",
     "tradition": "Virtue Ethics",
-    "text": "They improve also, as it seems, by repeated acts, and by mutual correction, for they receive impress from one another in the points which give them pleasure; whence says the Poet, “Thou from the good, good things shalt surely learn.”",
+    "text": "They seem actually to become better by putting their friendship into practice, and because they correct each other’s faults, for each takes the impress from the other of those traits in him that give him pleasure—whence the saying: Noble deeds from noble men.",
     "source": "Aristotle, Nicomachean Ethics, Book IX",
     "context": "Good friends make each other better, through time together and honest correction. Aristotle closes his books on friendship with this thought.",
     "prompt": "Who makes you better, and how?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
-    "id": "buddhist-philosophy-2764dbc142",
+    "id": "buddhist-philosophy-3cedb58d5a",
     "tradition": "Buddhist Philosophy",
-    "text": "All men tremble at punishment, all men fear death; remember that you are like unto them, and do not kill, nor cause slaughter.",
+    "text": "All men tremble at punishment, all men fear death; remember that you are like them, and do not kill, nor cause slaughter.",
     "source": "Dhammapada 129",
     "context": "The ethic of non-harm rests on a simple act of imagination: others fear pain and death just as we do.",
     "prompt": "Whose fear could you understand better by putting yourself in their place?",
-    "translation": "F. Max Müller (1881)",
+    "translation": "F. Max Müller (1881), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/2017"
   },
   {
@@ -2200,13 +2200,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/3330"
   },
   {
-    "id": "stoicism-02fc7455b0",
+    "id": "stoicism-29f3f054a3",
     "tradition": "Stoicism",
-    "text": "Since it is possible that thou mayest depart from life this very moment, regulate every act and thought accordingly.",
+    "text": "Since it is possible that you may depart from life this very moment, regulate every act and thought accordingly.",
     "source": "Marcus Aurelius, Meditations 2.11",
     "context": "Not a counsel of fear, but of seriousness: live as one who knows life is not guaranteed.",
     "prompt": "Which of today's acts would you do differently in that light?",
-    "translation": "George Long (1862)",
+    "translation": "George Long (1862), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
@@ -2220,23 +2220,23 @@
     "source_url": "https://www.gutenberg.org/ebooks/59709"
   },
   {
-    "id": "virtue-ethics-4712c5a20f",
+    "id": "virtue-ethics-26a837b3cf",
     "tradition": "Virtue Ethics",
-    "text": "Time is a good discoverer and co-operator in such matters: it is thus in fact that all improvements in the various arts have been brought about, for any man may fill up a deficiency.",
+    "text": "Time seems to be a good inventor or at all events coadjutor. This indeed is how advances in the arts have actually come about, since anyone can fill in the gaps.",
     "source": "Aristotle, Nicomachean Ethics, Book I",
     "context": "Aristotle sketches his ideas and leaves room for others to improve them. Understanding grows over time and through many hands.",
     "prompt": "What idea of yours could someone else help you improve?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
-    "id": "buddhist-philosophy-210cf16b87",
+    "id": "buddhist-philosophy-450c487f3b",
     "tradition": "Buddhist Philosophy",
-    "text": "Do not speak harshly to anybody; those who are spoken to will answer thee in the same way. Angry speech is painful, blows for blows will touch thee.",
+    "text": "Do not speak harshly to anybody; those who are spoken to will answer you in the same way. Angry speech is painful, blows for blows will touch you.",
     "source": "Dhammapada 133",
     "context": "Harsh speech returns to the speaker. The verse is practical before it is moral.",
     "prompt": "What tone have you been using with the people around you?",
-    "translation": "F. Max Müller (1881)",
+    "translation": "F. Max Müller (1881), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/2017"
   },
   {
@@ -2320,24 +2320,24 @@
     "source_url": "https://www.gutenberg.org/ebooks/15877"
   },
   {
-    "id": "taoism-bf6f2909dc",
+    "id": "taoism-e19eea3387",
     "tradition": "Taoism",
-    "text": "He who knows (the Tao) does not (care to) speak (about it); he who is (ever ready to) speak about it does not know it.",
+    "text": "He who knows the Tao does not care to speak about it; he who is ever ready to speak about it does not know it.",
     "source": "Laozi, Tao Te Ching 56",
     "context": "Often quoted as 'those who know do not speak; those who speak do not know'. Deep understanding tends to be quiet.",
     "prompt": "What do you understand best, and how little do you need to say about it?",
-    "translation": "James Legge (1891)",
+    "translation": "James Legge (1891), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-e2e4179743",
+    "id": "virtue-ethics-5839fffd9e",
     "tradition": "Virtue Ethics",
-    "text": "Man is by nature adapted to a social existence.",
+    "text": "Man is by nature a social being.",
     "source": "Aristotle, Nicomachean Ethics, Book I",
     "context": "A good life is never lived entirely alone. For Aristotle, our nature is social.",
     "prompt": "Which relationships are part of your good life?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-9dfc52894e",
@@ -2440,14 +2440,14 @@
     "source_url": "https://www.gutenberg.org/ebooks/59709"
   },
   {
-    "id": "virtue-ethics-7049d4aeec",
+    "id": "virtue-ethics-2aaa95f9f1",
     "tradition": "Virtue Ethics",
-    "text": "The man who flies from and fears all things, and never stands up against anything, comes to be a coward; and he who fears nothing, but goes at everything, comes to be rash.",
+    "text": "The man who runs away from everything in fear and never endures anything becomes a coward; the man who fears nothing whatsoever but encounters everything becomes rash.",
     "source": "Aristotle, Nicomachean Ethics, Book II",
     "context": "Courage is the mean between cowardice and recklessness, and both extremes are formed by habit.",
     "prompt": "Are you leaning toward fear or toward recklessness lately?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-1d21feaf9a",
@@ -2550,14 +2550,14 @@
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-14ed57ff99",
+    "id": "virtue-ethics-dc6b3580e4",
     "tradition": "Virtue Ethics",
-    "text": "For the very presence of friends is pleasant even in adversity: since men when grieved are comforted by the sympathy of their friends.",
+    "text": "The mere presence of friends is pleasant both in prosperity and adversity. Sorrow is lightened by the sympathy of friends.",
     "source": "Aristotle, Nicomachean Ethics, Book IX",
     "context": "Aristotle wonders whether friends really share our burdens, or whether their company simply makes the pain lighter. Either way, they help.",
     "prompt": "Whose presence could you offer to someone going through a hard time?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-8ad57e694e",
@@ -2650,24 +2650,24 @@
     "source_url": "https://www.gutenberg.org/ebooks/10661"
   },
   {
-    "id": "taoism-39efb6c2a9",
+    "id": "taoism-f59ba5a336",
     "tradition": "Taoism",
-    "text": "Man at his birth is supple and weak; at his death, firm and strong. (So it is with) all things. Trees and plants, in their early growth, are soft and brittle; at their death, dry and withered. Thus it is that firmness and strength are the concomitants of death; softness and weakness, the concomitants of life.",
+    "text": "Man at his birth is supple and weak; at his death, firm and strong. So it is with all things. Trees and plants, in their early growth, are soft and brittle; at their death, dry and withered. Thus it is that firmness and strength are the concomitants of death; softness and weakness, the concomitants of life.",
     "source": "Laozi, Tao Te Ching 76",
     "context": "Living things bend; dead things are rigid. Flexibility is a sign of life, in bodies and in minds.",
     "prompt": "Where have you grown rigid, and how could you soften?",
-    "translation": "James Legge (1891)",
+    "translation": "James Legge (1891), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-5fca8c6acb",
+    "id": "virtue-ethics-5a46d1b9cd",
     "tradition": "Virtue Ethics",
-    "text": "Whatever is proper to each is naturally best and pleasantest to him: such then is to Man the life in accordance with pure Intellect (since this Principle is most truly Man), and if so, then it is also the happiest.",
+    "text": "That which is best and most pleasant for each creature is that which is proper to the nature of each; accordingly the life of the intellect is the best and the pleasantest life for man, inasmuch as the intellect more than anything else is man; therefore this life will be the happiest.",
     "source": "Aristotle, Nicomachean Ethics, Book X",
     "context": "Each creature flourishes by doing what is most its own. For humans, Aristotle thought, that means a life of thought and understanding.",
     "prompt": "What activity makes you feel most yourself?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-1b3aa1bb35",
@@ -2770,14 +2770,14 @@
     "source_url": "https://www.gutenberg.org/ebooks/59709"
   },
   {
-    "id": "virtue-ethics-90553eaa49",
+    "id": "virtue-ethics-af513b6f4e",
     "tradition": "Virtue Ethics",
-    "text": "It is thought then to be the property of the Practically Wise man to be able to deliberate well respecting what is good and expedient for himself, not in any definite line, as what is conducive to health or strength, but what to living well.",
+    "text": "It is held to be the mark of a prudent man to be able to deliberate well about what is good and advantageous for himself, not in some one department, for instance what is good for his health or strength, but what is advantageous as a means to the good life in general.",
     "source": "Aristotle, Nicomachean Ethics, Book VI",
     "context": "Practical wisdom (phronesis) is the skill of judging well about life as a whole, not just about one narrow goal.",
     "prompt": "What decision are you facing that calls for wisdom about life as a whole?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-2b945d0a90",
@@ -2870,24 +2870,24 @@
     "source_url": "https://www.gutenberg.org/ebooks/10661"
   },
   {
-    "id": "taoism-d063326f48",
+    "id": "taoism-0863757626",
     "tradition": "Taoism",
-    "text": "The farther that one goes out (from himself), the less he knows.",
+    "text": "The farther that one goes out from himself, the less he knows.",
     "source": "Laozi, Tao Te Ching 47",
     "context": "Laozi's paradox for a restless age: understanding is not always found by going further.",
     "prompt": "What could you understand by staying where you are?",
-    "translation": "James Legge (1891)",
+    "translation": "James Legge (1891), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-e92b1fe82b",
+    "id": "virtue-ethics-8887b274b7",
     "tradition": "Virtue Ethics",
-    "text": "The happy man lives well and does well, for it has been stated by us to be pretty much a kind of living well and doing well.",
+    "text": "Our definition accords with the description of the happy man as one who lives well or does well; for it has virtually identified happiness with a form of good life or doing well.",
     "source": "Aristotle, Nicomachean Ethics, Book I",
     "context": "Happiness, for Aristotle, is active: something we do, not just something we feel.",
     "prompt": "What would living well and doing well mean for you this week?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-a730a16c79",
@@ -2900,13 +2900,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/2017"
   },
   {
-    "id": "epicureanism-0fd660d90d",
+    "id": "epicureanism-87e6178b3e",
     "tradition": "Epicureanism",
-    "text": "The nations wax, the nations wane away;\nIn a brief space the generations pass,\nAnd like to runners hand the lamp of life\nOne unto other.",
+    "text": "The nations wax, the nations wane away;\nIn a brief space the generations pass,\nAnd like to runners hand the lamp of life\nOne to another.",
     "source": "Lucretius, On the Nature of Things II",
     "context": "Lucretius pictures the generations as relay runners, each handing the torch of life to the next.",
     "prompt": "What are you carrying that you hope to hand on?",
-    "translation": "William Ellery Leonard (1916)",
+    "translation": "William Ellery Leonard (1916), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/785"
   },
   {
@@ -2990,14 +2990,14 @@
     "source_url": "https://www.gutenberg.org/ebooks/59709"
   },
   {
-    "id": "virtue-ethics-af09edd07e",
+    "id": "virtue-ethics-840375aee2",
     "tradition": "Virtue Ethics",
-    "text": "Neither in prosperity will he be overjoyed nor in adversity will he be unduly pained.",
+    "text": "He will not rejoice overmuch in prosperity, nor grieve overmuch at adversity.",
     "source": "Aristotle, Nicomachean Ethics, Book IV",
     "context": "From the portrait of the 'great-souled' person, who is steady because they know what really matters.",
     "prompt": "What would it take to be steadier through ups and downs?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-3b24b4e928",
@@ -3010,13 +3010,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/2017"
   },
   {
-    "id": "epicureanism-888ccc3793",
+    "id": "epicureanism-5d07b3101f",
     "tradition": "Epicureanism",
-    "text": "And in fee-simple life is given to none,\nBut unto all mere usufruct. Look back:\nNothing to us was all fore-passed eld\nOf time the eternal, ere we had a birth.\nAnd Nature holds this like a mirror up\nOf time-to-be when we are dead and gone.\nAnd what is there so horrible appears?\nNow what is there so sad about it all?\nIs't not serener far than any sleep?",
+    "text": "And in fee-simple life is given to none,\nBut to all mere usufruct. Look back:\nNothing to us was all fore-passed eld\nOf time the eternal, ere we had a birth.\nAnd Nature holds this like a mirror up\nOf time-to-be when we are dead and gone.\nAnd what is there so horrible appears?\nNow what is there so sad about it all?\nIs it not serener far than any sleep?",
     "source": "Lucretius, On the Nature of Things III",
     "context": "Life is lent, not owned. And the eternity after death, Lucretius argues, is no more frightening than the eternity before birth.",
     "prompt": "If life is on loan, how do you want to use it?",
-    "translation": "William Ellery Leonard (1916)",
+    "translation": "William Ellery Leonard (1916), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/785"
   },
   {
@@ -3100,14 +3100,14 @@
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-66fd5b31c1",
+    "id": "virtue-ethics-1776579dd6",
     "tradition": "Virtue Ethics",
-    "text": "To be a good man one must do each act in a particular frame of mind, I mean from Moral Choice and for the sake of the things themselves which are done.",
+    "text": "There is a state of mind in which a man may do these various acts with the result that he really is a good man: I mean when he does them from choice, and for the sake of the acts themselves.",
     "source": "Aristotle, Nicomachean Ethics, Book VI",
     "context": "Doing the right thing for the wrong reason isn't quite virtue. Goodness includes choosing the good for its own sake.",
     "prompt": "What good thing are you doing, and why are you really doing it?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-1c758c42a8",
@@ -3210,14 +3210,14 @@
     "source_url": "https://www.gutenberg.org/ebooks/59709"
   },
   {
-    "id": "virtue-ethics-eb664c6564",
+    "id": "virtue-ethics-baf2ca8e52",
     "tradition": "Virtue Ethics",
-    "text": "Men should have been trained straight from their childhood to receive pleasure and pain from proper objects, for this is the right education…",
+    "text": "Hence the importance, as Plato points out, of having been definitely trained from childhood to like and dislike the proper things; this is what good education means.",
     "source": "Aristotle, Nicomachean Ethics, Book II",
     "context": "Aristotle quotes his teacher Plato: a good education teaches us to enjoy the right things, not just to know them.",
     "prompt": "Which good things have you learned to enjoy?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-b729757ccc",
@@ -3230,13 +3230,13 @@
     "source_url": "https://www.gutenberg.org/ebooks/2017"
   },
   {
-    "id": "epicureanism-9002a3e56e",
+    "id": "epicureanism-e4b2c40416",
     "tradition": "Epicureanism",
-    "text": "Why not,\nEven like a banqueter, depart the halls,\nLaden with life? why not with mind content\nTake now, thou fool, thy unafflicted rest?",
+    "text": "Why not,\nEven like a banqueter, depart the halls,\nLaden with life? why not with mind content\nTake now, you fool, your unafflicted rest?",
     "source": "Lucretius, On the Nature of Things III",
     "context": "Nature speaks to someone afraid of dying: if your life has been good, why not leave it like a guest who has dined well?",
     "prompt": "What would it mean to feel 'laden with life'?",
-    "translation": "William Ellery Leonard (1916)",
+    "translation": "William Ellery Leonard (1916), lightly modernised",
     "source_url": "https://www.gutenberg.org/ebooks/785"
   },
   {
@@ -3320,14 +3320,14 @@
     "source_url": "https://www.gutenberg.org/ebooks/59709"
   },
   {
-    "id": "virtue-ethics-9364f74862",
+    "id": "virtue-ethics-0c8c379123",
     "tradition": "Virtue Ethics",
-    "text": "For Moral Virtue has for its object-matter pleasures and pains, because by reason of pleasure we do what is bad, and by reason of pain decline doing what is right.",
+    "text": "Pleasures and pains are the things with which moral virtue is concerned. For pleasure causes us to do base actions and pain causes us to abstain from doing noble actions.",
     "source": "Aristotle, Nicomachean Ethics, Book II",
     "context": "Most of our failures come from chasing pleasure or avoiding discomfort. That's why virtue is mainly about training our likes and dislikes.",
     "prompt": "Which discomfort are you avoiding at the cost of doing right?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-247b424bc8",
@@ -3430,14 +3430,14 @@
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-d2fda9a183",
+    "id": "virtue-ethics-782993b9dd",
     "tradition": "Virtue Ethics",
-    "text": "And Pleasure perfects the Working.",
+    "text": "The pleasure perfects the activity, not as the fixed disposition does, by being already present in the agent, but as a supervening perfection, like the bloom of health in the young and vigorous.",
     "source": "Aristotle, Nicomachean Ethics, Book X",
     "context": "For Aristotle, pleasure is not opposed to good activity; it is what completes it and makes it whole.",
     "prompt": "Which of your good activities also bring you pleasure?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-c2aa80d419",
@@ -3560,14 +3560,14 @@
     "source_url": "https://www.gutenberg.org/ebooks/216"
   },
   {
-    "id": "virtue-ethics-1e0eda5891",
+    "id": "virtue-ethics-ffd9cabe52",
     "tradition": "Virtue Ethics",
-    "text": "Fear such things indeed he will, but he will stand up against them as he ought and as right reason may direct, with a view to what is honourable, because this is the end of the virtue.",
+    "text": "Although he will sometimes fear even terrors not beyond man’s endurance, he will do so in the right way, and he will endure them as principle dictates, for the sake of what is noble; for that is the end at which virtue aims.",
     "source": "Aristotle, Nicomachean Ethics, Book III",
     "context": "The brave person isn't fearless. They feel fear and act well anyway, for the sake of what is right.",
     "prompt": "What are you afraid of that is still worth facing?",
-    "translation": "D. P. Chase (1847)",
-    "source_url": "https://www.gutenberg.org/ebooks/8438"
+    "translation": "H. Rackham (1926)",
+    "source_url": "https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg010.perseus-eng2/"
   },
   {
     "id": "buddhist-philosophy-424965d2b2",

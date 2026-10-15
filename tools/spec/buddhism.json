@@ -37,7 +37,11 @@
   "from": "dhammapada",
   "ref": "121",
   "context": "The verse that follows makes the same point about good. Character is built drop by drop, through small acts we hardly notice.",
-  "prompt": "What small habit is slowly filling your pot?"
+  "prompt": "What small habit is slowly filling your pot?",
+  "modernise": {
+   "nigh unto me": "near me"
+  },
+  "replaces": "buddhist-philosophy-35fd88fbb7"
  },
  {
   "tradition": "Buddhist Philosophy",
@@ -77,7 +81,9 @@
   "from": "dhammapada",
   "ref": "35",
   "context": "The untrained mind rushes wherever it likes. Taming it is not suppression but steadiness, and steadiness brings ease.",
-  "prompt": "Where did your mind rush off to today?"
+  "prompt": "Where did your mind rush off to today?",
+  "modernise": {},
+  "replaces": "buddhist-philosophy-cf75676097"
  },
  {
   "tradition": "Buddhist Philosophy",
@@ -133,7 +139,10 @@
   "from": "dhammapada",
   "ref": "80",
   "context": "Every craft shapes its material. The wise treat their own character as the material to be shaped.",
-  "prompt": "What part of yourself are you shaping right now?"
+  "prompt": "What part of yourself are you shaping right now?",
+  "modernise": {},
+  "drop_parens": true,
+  "replaces": "buddhist-philosophy-bd603af014"
  },
  {
   "tradition": "Buddhist Philosophy",
@@ -149,7 +158,12 @@
   "from": "dhammapada",
   "ref": "100",
   "context": "Quantity of words is not the measure. One true word that brings peace outweighs a thousand empty ones.",
-  "prompt": "What one word of sense do you need to hear, or to say?"
+  "prompt": "What one word of sense do you need to hear, or to say?",
+  "modernise": {
+   "a thousand (of words)": "a thousand words"
+  },
+  "drop_parens": true,
+  "replaces": "buddhist-philosophy-729c91526a"
  },
  {
   "tradition": "Buddhist Philosophy",
@@ -157,7 +171,11 @@
   "from": "dhammapada",
   "ref": "129",
   "context": "The ethic of non-harm rests on a simple act of imagination: others fear pain and death just as we do.",
-  "prompt": "Whose fear could you understand better by putting yourself in their place?"
+  "prompt": "Whose fear could you understand better by putting yourself in their place?",
+  "modernise": {
+   "like unto them": "like them"
+  },
+  "replaces": "buddhist-philosophy-2764dbc142"
  },
  {
   "tradition": "Buddhist Philosophy",
@@ -165,7 +183,9 @@
   "from": "dhammapada",
   "ref": "133",
   "context": "Harsh speech returns to the speaker. The verse is practical before it is moral.",
-  "prompt": "What tone have you been using with the people around you?"
+  "prompt": "What tone have you been using with the people around you?",
+  "modernise": {},
+  "replaces": "buddhist-philosophy-210cf16b87"
  },
  {
   "tradition": "Buddhist Philosophy",

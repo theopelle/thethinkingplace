@@ -6,7 +6,9 @@
   "start": "Ready must thou be to burn thyself in thine own flame",
   "end": "first become ashes!",
   "context": "Zarathustra speaks to someone setting out on their own path. Real renewal asks us to let an old self burn away.",
-  "prompt": "What old version of yourself might need to become ashes?"
+  "prompt": "What old version of yourself might need to become ashes?",
+  "modernise": {},
+  "replaces": "existentialism-72711c6ada"
  },
  {
   "tradition": "Existentialism",
@@ -51,7 +53,9 @@
   "start": "In one’s friend one shall have one’s best enemy",
   "end": "when thou withstandest him.",
   "context": "For Nietzsche, a true friend challenges us rather than flatters us, and we are closest to them when we push back.",
-  "prompt": "Which friend challenges you, and do you challenge them?"
+  "prompt": "Which friend challenges you, and do you challenge them?",
+  "modernise": {},
+  "replaces": "existentialism-42afeb6d98"
  },
  {
   "tradition": "Existentialism",
@@ -60,7 +64,9 @@
   "start": "He who fights with monsters",
   "end": "gaze into thee.",
   "context": "A warning to anyone fighting something they despise: the struggle can reshape us into what we oppose.",
-  "prompt": "Is something you are fighting changing you?"
+  "prompt": "Is something you are fighting changing you?",
+  "modernise": {},
+  "replaces": "existentialism-a43a3dfddd"
  },
  {
   "tradition": "Existentialism",
@@ -99,7 +105,9 @@
   "start": "Thou shalt become what thou art.",
   "end": "what thou art.",
   "context": "Nietzsche's answer to the question 'What saith thy conscience?' Borrowed from the Greek poet Pindar, it became his motto.",
-  "prompt": "Who are you becoming, and is it who you are?"
+  "prompt": "Who are you becoming, and is it who you are?",
+  "modernise": {},
+  "replaces": "existentialism-b378347e38"
  },
  {
   "tradition": "Existentialism",
@@ -144,7 +152,9 @@
   "start": "Flee, my friend, into thy solitude! I see thee deafened",
   "end": "stings of the little ones.",
   "context": "The market-place is full of noise, fame and petty attacks. Zarathustra urges his friend to recover himself in solitude.",
-  "prompt": "Which noise could you step away from today?"
+  "prompt": "Which noise could you step away from today?",
+  "modernise": {},
+  "replaces": "existentialism-dd3b15bec2"
  },
  {
   "tradition": "Existentialism",
@@ -153,7 +163,9 @@
   "start": "Of all that is written, I love only what a person hath written with his blood",
   "end": "blood is spirit.",
   "context": "Nietzsche valued writing, and living, that come from genuine experience rather than borrowed opinion.",
-  "prompt": "What could you say, or do, today that comes from your own blood?"
+  "prompt": "What could you say, or do, today that comes from your own blood?",
+  "modernise": {},
+  "replaces": "existentialism-69398166e7"
  },
  {
   "tradition": "Existentialism",
@@ -162,7 +174,9 @@
   "start": "There is more sagacity in thy body",
   "end": "best wisdom.",
   "context": "Against those who despise the body, Zarathustra insists it holds an intelligence of its own.",
-  "prompt": "What is your body trying to tell you?"
+  "prompt": "What is your body trying to tell you?",
+  "modernise": {},
+  "replaces": "existentialism-7c50d39a30"
  },
  {
   "tradition": "Existentialism",
