@@ -93,7 +93,7 @@
     "how can you know that I do not know?"
    ]
   ],
-  "context": "Zhuangzi and his friend, the logician Hui Shi, argue on a bridge. Is delight in the world something we can share, or only argue about?",
+  "context": "Zhuangzi and his friend, the logician Hui Shi, argue on a bridge. Hui Shi asks how anyone can know another creature's joy; Zhuangzi turns the same logic back on him. A playful reminder that strict proof is not the only way we know things, including how others feel.",
   "prompt": "Where could you simply enjoy something instead of proving it?",
   "prefix": "\"",
   "suffix": "\""
@@ -352,7 +352,7 @@
   "from": "zhuangzi",
   "start": "Life is a loan with which the borrower does but add more dust",
   "end": "as day and night",
-  "context": "Two disfigured men look at old tombs and talk calmly about mortality. Life, says one, is borrowed, and life and death follow each other like day and night.",
+  "context": "A hunchback and a one-legged man are looking at old tombs when sores suddenly break out on their elbows. Asked if he loathes this, one says no: life is only a loan, and life and death follow each other like day and night.",
   "prompt": "If your life is a loan, what are you doing with it?"
  },
  {

@@ -174,7 +174,7 @@
     "tradition": "Japanese Aesthetics",
     "text": "Those who cannot feel the littleness of great things in themselves are apt to overlook the greatness of little things in others.",
     "source": "Kakuzo Okakura, The Book of Tea, ch. I",
-    "context": "Okakura wrote The Book of Tea in English in 1906 to explain Japanese culture to the West through the humble act of drinking tea.",
+    "context": "Okakura aims this at Western readers who saw the tea ceremony as a quaint oddity. People too sure of their own importance miss the value of small things in others. Humility is what lets us see it.",
     "prompt": "What small thing in someone else have you overlooked?",
     "translation": "Written in English (1906)",
     "source_url": "https://www.gutenberg.org/ebooks/769"
@@ -424,7 +424,7 @@
     "tradition": "Existentialism",
     "text": "Above all, don’t lie to yourself. The man who lies to himself and listens to his own lie comes to such a pass that he cannot distinguish the truth within him, or around him, and so loses all respect for himself and for others.",
     "source": "Fyodor Dostoevsky, The Brothers Karamazov, Book II, ch. 2",
-    "context": "Advice from the elder Zosima. Dostoevsky is often read as a forerunner of existentialism for his focus on freedom, conscience and self-deception. A century later, Sartre called this kind of self-deception 'bad faith': pretending we have no choice.",
+    "context": "Advice from the elder Zosima to Fyodor Karamazov, a man who constantly plays the fool. Self-deception starts small, but over time it blinds us to the truth in ourselves and around us, and with it goes our respect for both.",
     "prompt": "What small lie have you been telling yourself?",
     "translation": "Constance Garnett (1912)",
     "source_url": "https://www.gutenberg.org/ebooks/28054"
@@ -534,7 +534,7 @@
     "tradition": "Existentialism",
     "text": "All the unhappiness of men arises from one single fact, that they cannot stay quietly in their own chamber.",
     "source": "Blaise Pascal, Pensées 139",
-    "context": "Pascal, a 17th-century mathematician and religious thinker, anticipated the existentialists' focus on restlessness and distraction.",
+    "context": "Pascal saw that we fill our days with work, games, and noise to avoid sitting alone with our thoughts. The trouble isn't the quiet room; it's what we're running from when we leave it.",
     "prompt": "Could you sit quietly, alone, for ten minutes today?",
     "translation": "W. F. Trotter (1910)",
     "source_url": "https://www.gutenberg.org/ebooks/18269"
@@ -864,7 +864,7 @@
     "tradition": "Existentialism",
     "text": "What I need is the power to live a complete human life, and not merely a life of knowledge; lest I come to base my thought upon something so-called objective, in any case something not my own.",
     "source": "Søren Kierkegaard, Journals, 1835",
-    "context": "From the same journal entry. Knowing about life, he warns, is not the same as living it.",
+    "context": "Written at twenty-two, in a journal kept during a summer by the sea. Kierkegaard warns that knowing about life is not the same as living it, and that borrowed ideas cannot carry a life.",
     "prompt": "Where are you collecting knowledge about life instead of living it?",
     "translation": "David F. Swenson (1920)",
     "source_url": "https://en.wikisource.org/wiki/S%C3%B6ren_Kierkegaard"
@@ -894,7 +894,7 @@
     "tradition": "Taoism",
     "text": "\"See how the minnows are darting about! That is the pleasure of fishes.\" \"You not being a fish yourself,\" said Hui Tzŭ, \"how can you possibly know in what consists the pleasure of fishes?\" \"And you not being I,\" retorted Chuang Tzŭ, \"how can you know that I do not know?\"",
     "source": "Zhuangzi, ch. 17",
-    "context": "Zhuangzi and his friend, the logician Hui Shi, argue on a bridge. Is delight in the world something we can share, or only argue about?",
+    "context": "Zhuangzi and his friend, the logician Hui Shi, argue on a bridge. Hui Shi asks how anyone can know another creature's joy; Zhuangzi turns the same logic back on him. A playful reminder that strict proof is not the only way we know things, including how others feel.",
     "prompt": "Where could you simply enjoy something instead of proving it?",
     "translation": "Herbert A. Giles (1889)",
     "source_url": "https://www.gutenberg.org/ebooks/59709"
@@ -1054,7 +1054,7 @@
     "tradition": "Japanese Aesthetics",
     "text": "Perhaps we reveal ourselves too much in small things because we have so little of the great to conceal.",
     "source": "Kakuzo Okakura, The Book of Tea, ch. II",
-    "context": "Our daily habits say more about who we are than our grand statements.",
+    "context": "A wry line. Our small, unconscious habits give us away, Okakura says, perhaps because we have less grandeur to hide than we like to think.",
     "prompt": "What do your small daily habits say about you?",
     "translation": "Written in English (1906)",
     "source_url": "https://www.gutenberg.org/ebooks/769"
@@ -1084,7 +1084,7 @@
     "tradition": "Existentialism",
     "text": "Amor fati: let that henceforth be my love! I do not want to wage war with the ugly. I do not want to accuse, I do not want even to accuse the accusers. Looking aside, let that be my sole negation! And all in all, to sum up: I wish to be at any time hereafter only a yea-sayer!",
     "source": "Friedrich Nietzsche, The Joyful Wisdom 276",
-    "context": "'Amor fati' means love of fate. Nietzsche's New Year's resolution: to accept, and even love, what is necessary in his life.",
+    "context": "'Amor fati' means 'love of fate'. In this New Year's entry, Nietzsche resolves to accept, and even love, what is necessary in his life, and to stop accusing.",
     "prompt": "What in your life could you say 'yes' to, rather than resist?",
     "translation": "Thomas Common (1910)",
     "source_url": "https://www.gutenberg.org/ebooks/52881"
@@ -2274,7 +2274,7 @@
     "tradition": "Platonism",
     "text": "He who is of a calm and happy nature will hardly feel the pressure of age, but to him who is of an opposite disposition youth and age are equally a burden.",
     "source": "Plato, Republic I, 329d",
-    "context": "Cephalus again: what makes a life heavy is not age but temperament.",
+    "context": "The elderly Cephalus, in the opening book of the Republic: what makes life heavy is not age but temperament.",
     "prompt": "What in your temperament makes life lighter, or heavier?",
     "translation": "Benjamin Jowett (1871)",
     "source_url": "https://www.gutenberg.org/ebooks/1497"
@@ -2844,7 +2844,7 @@
     "tradition": "Existentialism",
     "text": "What man wants is simply independent choice, whatever that independence may cost and wherever it may lead.",
     "source": "Fyodor Dostoevsky, Notes from Underground I, ch. 7",
-    "context": "The Underground Man argues that people are not calculating machines: above all, we want to choose for ourselves. Sartre would later argue that freedom is not optional: we cannot avoid choosing, even by doing nothing.",
+    "context": "The Underground Man rebels against the idea that people are calculating machines who always choose what is best for them. Above all, he says, we want to choose for ourselves, even against our own interest.",
     "prompt": "Where are you choosing freely, and where just following?",
     "translation": "Constance Garnett (1918)",
     "source_url": "https://www.gutenberg.org/ebooks/600"
@@ -2954,7 +2954,7 @@
     "tradition": "Existentialism",
     "text": "Man is but a reed, the most feeble thing in nature; but he is a thinking reed.",
     "source": "Blaise Pascal, Pensées 347",
-    "context": "Perhaps Pascal's most famous line. Human beings are fragile, but our capacity to think gives us a dignity the universe lacks. Camus would later call the clash between our need for meaning and a silent universe 'the absurd'.",
+    "context": "Perhaps Pascal's most famous line. A drop of water can kill us, he says, but we know that we die, and the universe knows nothing. Our fragility is real; so is the dignity that thinking gives us.",
     "prompt": "How are you using your thinking today?",
     "translation": "W. F. Trotter (1910)",
     "source_url": "https://www.gutenberg.org/ebooks/18269"
@@ -3314,7 +3314,7 @@
     "tradition": "Taoism",
     "text": "Life is a loan with which the borrower does but add more dust and dirt to the sum total of existence. Life and death are as day and night.",
     "source": "Zhuangzi, ch. 18",
-    "context": "Two disfigured men look at old tombs and talk calmly about mortality. Life, says one, is borrowed, and life and death follow each other like day and night.",
+    "context": "A hunchback and a one-legged man are looking at old tombs when sores suddenly break out on their elbows. Asked if he loathes this, one says no: life is only a loan, and life and death follow each other like day and night.",
     "prompt": "If your life is a loan, what are you doing with it?",
     "translation": "Herbert A. Giles (1889)",
     "source_url": "https://www.gutenberg.org/ebooks/59709"
@@ -3394,7 +3394,7 @@
     "tradition": "Existentialism",
     "text": "The only thing which consoles us for our miseries is diversion, and yet this is the greatest of our miseries. For it is this which principally hinders us from reflecting upon ourselves, and which makes us insensibly ruin ourselves.",
     "source": "Blaise Pascal, Pensées 171",
-    "context": "Pascal saw distraction as both comfort and trap: it keeps us from reflecting on our lives. (A typo in the source edition, 'it' for 'is', is corrected here.)",
+    "context": "Pascal saw distraction as both comfort and trap: it soothes our troubles, but it also keeps us from reflecting on our lives, so we drift into ruin without noticing.",
     "prompt": "What distraction keeps you from reflecting on your life?",
     "translation": "W. F. Trotter (1910)",
     "source_url": "https://www.gutenberg.org/ebooks/18269"

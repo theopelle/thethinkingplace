@@ -14,7 +14,7 @@
   "from": "tea",
   "start": "Those who cannot feel the littleness of great things in themselves",
   "end": "greatness of little things in others.",
-  "context": "Okakura wrote The Book of Tea in English in 1906 to explain Japanese culture to the West through the humble act of drinking tea.",
+  "context": "Okakura aims this at Western readers who saw the tea ceremony as a quaint oddity. People too sure of their own importance miss the value of small things in others. Humility is what lets us see it.",
   "prompt": "What small thing in someone else have you overlooked?"
  },
  {
@@ -101,7 +101,7 @@
   "from": "tea",
   "start": "Perhaps we reveal ourselves too much in small things",
   "end": "so little of the great to conceal.",
-  "context": "Our daily habits say more about who we are than our grand statements.",
+  "context": "A wry line. Our small, unconscious habits give us away, Okakura says, perhaps because we have less grandeur to hide than we like to think.",
   "prompt": "What do your small daily habits say about you?"
  },
  {

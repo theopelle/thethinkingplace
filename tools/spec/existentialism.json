@@ -34,7 +34,7 @@
   "from": "karamazov",
   "start": "Above all, don't lie to yourself",
   "end": "respect for himself and for others.",
-  "context": "Advice from the elder Zosima. Dostoevsky is often read as a forerunner of existentialism for his focus on freedom, conscience and self-deception. A century later, Sartre called this kind of self-deception 'bad faith': pretending we have no choice.",
+  "context": "Advice from the elder Zosima to Fyodor Karamazov, a man who constantly plays the fool. Self-deception starts small, but over time it blinds us to the truth in ourselves and around us, and with it goes our respect for both.",
   "prompt": "What small lie have you been telling yourself?"
  },
  {
@@ -43,7 +43,7 @@
   "from": "pascal",
   "start": "all the unhappiness of men arises from one single fact",
   "end": "their own chamber.",
-  "context": "Pascal, a 17th-century mathematician and religious thinker, anticipated the existentialists' focus on restlessness and distraction.",
+  "context": "Pascal saw that we fill our days with work, games, and noise to avoid sitting alone with our thoughts. The trouble isn't the quiet room; it's what we're running from when we leave it.",
   "prompt": "Could you sit quietly, alone, for ten minutes today?"
  },
  {
@@ -77,7 +77,7 @@
   "fix": {
    "so-cabled": "so-called"
   },
-  "context": "From the same journal entry. Knowing about life, he warns, is not the same as living it.",
+  "context": "Written at twenty-two, in a journal kept during a summer by the sea. Kierkegaard warns that knowing about life is not the same as living it, and that borrowed ideas cannot carry a life.",
   "prompt": "Where are you collecting knowledge about life instead of living it?"
  },
  {
@@ -95,7 +95,7 @@
   "from": "gaya",
   "start": "Amor fati",
   "end": "only a yea-sayer!",
-  "context": "'Amor fati' means love of fate. Nietzsche's New Year's resolution: to accept, and even love, what is necessary in his life.",
+  "context": "'Amor fati' means 'love of fate'. In this New Year's entry, Nietzsche resolves to accept, and even love, what is necessary in his life, and to stop accusing.",
   "prompt": "What in your life could you say 'yes' to, rather than resist?"
  },
  {
@@ -257,7 +257,7 @@
   "from": "underground",
   "start": "What man wants is simply",
   "end": "wherever it may lead.",
-  "context": "The Underground Man argues that people are not calculating machines: above all, we want to choose for ourselves. Sartre would later argue that freedom is not optional: we cannot avoid choosing, even by doing nothing.",
+  "context": "The Underground Man rebels against the idea that people are calculating machines who always choose what is best for them. Above all, he says, we want to choose for ourselves, even against our own interest.",
   "prompt": "Where are you choosing freely, and where just following?"
  },
  {
@@ -266,7 +266,7 @@
   "from": "pascal",
   "start": "Man is but a reed",
   "end": "he is a thinking reed.",
-  "context": "Perhaps Pascal's most famous line. Human beings are fragile, but our capacity to think gives us a dignity the universe lacks. Camus would later call the clash between our need for meaning and a silent universe 'the absurd'.",
+  "context": "Perhaps Pascal's most famous line. A drop of water can kill us, he says, but we know that we die, and the universe knows nothing. Our fragility is real; so is the dignity that thinking gives us.",
   "prompt": "How are you using your thinking today?"
  },
  {
@@ -305,7 +305,7 @@
   "fix": {
    "this it the": "this is the"
   },
-  "context": "Pascal saw distraction as both comfort and trap: it keeps us from reflecting on our lives. (A typo in the source edition, 'it' for 'is', is corrected here.)",
+  "context": "Pascal saw distraction as both comfort and trap: it soothes our troubles, but it also keeps us from reflecting on our lives, so we drift into ruin without noticing.",
   "prompt": "What distraction keeps you from reflecting on your life?"
  },
  {

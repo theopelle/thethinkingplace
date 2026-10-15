@@ -1594,28 +1594,6 @@
   "def": "The tea room is deliberately plain. Wabi, the beauty of simple, quiet and unadorned things, values having enough over having more."
  },
  {
-  "term": "Bad faith",
-  "match": [
-   "bad faith"
-  ],
-  "scope": [
-   "Existentialism"
-  ],
-  "wiki": "Bad_faith_(existentialism)",
-  "def": "Sartre's term for lying to ourselves about our freedom: telling ourselves we have no choice, or hiding behind a role, so that we don't have to own our decisions."
- },
- {
-  "term": "The absurd",
-  "match": [
-   "the absurd"
-  ],
-  "scope": [
-   "Existentialism"
-  ],
-  "wiki": "Absurdism",
-  "def": "Camus' name for the clash between our longing for meaning and a world that gives no answer. He did not think we should despair, but live fully and honestly in spite of it."
- },
- {
   "term": "Anxiety",
   "match": [
    "anxiety"
