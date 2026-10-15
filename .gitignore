@@ -1,2 +1,4 @@
 tools/sources/
 site/
+node_modules/
+*.apk

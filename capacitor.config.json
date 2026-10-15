@@ -1,0 +1,15 @@
+{
+  "appId": "app.manywells",
+  "appName": "Many Wells",
+  "webDir": "site",
+  "android": {
+    "backgroundColor": "#00000000"
+  },
+  "plugins": {
+    "SystemBars": {
+      "insetsHandling": "css",
+      "initialViewportFitValueHint": "cover",
+      "style": "DEFAULT"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "many-wells",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Many Wells: one thought a day. Capacitor wrapper for the Android (and later iOS) app.",
+  "scripts": {
+    "build": "sh tools/make_site.sh && npx cap sync android",
+    "apk": "sh tools/make_apk.sh"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/core": "^8.5.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.3"
+  }
+}

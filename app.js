@@ -718,7 +718,23 @@
     });
   }
 
+  // The launch screen stays for at least a moment on a fresh start, then fades into today's thought.
+  // Within a session (a refresh, or coming back to the app) it steps aside at once.
+  function endLaunch() {
+    const el = $("launch");
+    if (!el) return;
+    let seen = false;
+    try { seen = sessionStorage.getItem("reflect:launched") === "1"; sessionStorage.setItem("reflect:launched", "1"); } catch {}
+    const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const wait = seen ? 0 : Math.max(0, (calm ? 600 : 1800) - performance.now());
+    setTimeout(() => {
+      el.classList.add("done");
+      setTimeout(() => el.remove(), seen || calm ? 0 : 700);
+    }, wait);
+  }
+
   async function init() {
+    setTimeout(() => $("launch")?.classList.add("done"), 5000);  // never leave it up if loading fails
     applyTheme(store.get("theme", "auto"));
     setMinutes(store.get("minutes", "3"));
     const res = await fetch("entries.json", { cache: "no-cache" });
@@ -731,6 +747,7 @@
     bind();
     markVisit();
     route();
+    endLaunch();
     maybeWelcome();
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
   }

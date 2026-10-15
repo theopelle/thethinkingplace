@@ -53,7 +53,7 @@ body {
   max-width: 34rem;
   min-height: 100dvh;
   margin: 0 auto;
-  padding: max(10vh, 3rem) 1.5rem 6rem;
+  padding: max(10vh, 3rem, calc(env(safe-area-inset-top) + 2rem)) 1.5rem 6rem;
   display: flex;
   flex-direction: column;
 }
@@ -294,3 +294,19 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 .map-dot:hover::before, .map-dot[aria-expanded="true"]::before { transform: scale(1.35); }
 .map-dot:focus-visible { outline: none; }
 .map-dot:focus-visible::before { outline: 1px solid var(--fg); outline-offset: 3px; }
+
+/* Launch screen */
+.launch { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 1.25rem; background: var(--bg); transition: opacity .7s ease; }
+.launch.done { opacity: 0; pointer-events: none; }
+.launch-mark { width: 88px; height: 88px; animation: launch-in .8s ease both; }
+.launch-bricks { fill: var(--fg); stroke: var(--fg); stroke-width: 1.2; stroke-linejoin: round; }
+.launch-water { fill: var(--accent); }
+.launch-moon { fill: var(--bg); opacity: .92; }
+.launch-name { margin: 0; font: 400 1.35rem/1 var(--serif); letter-spacing: .04em; color: var(--fg);
+  animation: launch-in .8s .2s ease both; }
+@keyframes launch-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .launch, .launch-mark, .launch-name { animation: none; transition: none; }
+}
+
