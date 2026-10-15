@@ -311,18 +311,54 @@
     });
   }
 
-  function exportNotes() {
+  const NATIVE = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+
+  async function exportNotes() {
     const keys = store.keys("note:").map((k) => k.slice(5)).sort();
     if (!keys.length) return flash($("export-notes"), "nothing yet");
     const body = keys.map((key) => {
       const e = entryShown(key);
       return `${key} — ${e.source} (${e.tradition})\n“${e.text}”\n${e.prompt}\n\n${readNote(key).text}\n`;
     }).join("\n---\n\n");
+    const name = `many-wells-notes-${todayKey()}.txt`;
+    if (NATIVE) {
+      // Inside the app there are no browser downloads: write the file, then open the share
+      // sheet so it can be saved to Files or Drive, or sent to yourself.
+      try {
+        const { Filesystem, Share } = window.Capacitor.Plugins;
+        const { uri } = await Filesystem.writeFile({ path: name, data: body, directory: "CACHE", encoding: "utf8" });
+        await Share.share({ title: "Your notes", files: [uri] });
+      } catch { flash($("export-notes"), "couldn't export"); }
+      return;
+    }
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([body], { type: "text/plain" }));
-    a.download = `many-wells-notes-${todayKey()}.txt`;
+    a.download = name;
     a.click();
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+
+  // Reads a file made by export: entries separated by "---", each starting with its date;
+  // the note is everything after the first blank line. Existing notes are never overwritten:
+  // a different note for the same day is kept, with the imported one added below it.
+  async function importNotes(file) {
+    let added = 0;
+    try {
+      const text = (await file.text()).replace(/\r\n/g, "\n");
+      for (const block of text.split(/\n---\n/)) {
+        const key = (block.trim().match(/^(\d{4}-\d{2}-\d{2}) —/) || [])[1];
+        const gap = block.indexOf("\n\n");
+        if (!key || gap < 0) continue;
+        const note = block.slice(gap + 2).trim();
+        if (!note) continue;
+        const old = (readNote(key) || { text: "" }).text.trim();
+        if (old === note || old.includes(note)) continue;
+        writeNote(key, old ? old + "\n\n" + note : note, entryShown(key).id);
+        countDay(key);
+        added++;
+      }
+    } catch {}
+    flash($("import-notes"), added ? `imported ${added}` : "nothing new");
   }
 
   function clearNotes() {
@@ -549,10 +585,14 @@
   }
 
   // ---------- about links ----------
+  // The support block appears on both About and Settings (never inside the iOS app).
+  function renderSupport() {
+    document.querySelectorAll(".support-block").forEach((el) => (el.hidden = IN_IOS_APP));
+    document.querySelectorAll(".donate-link").forEach((a) => (a.href = DONATE_URL));
+  }
+
   function renderAboutLinks() {
-    $("name-setting").value = store.get("name", "");
-    $("support").hidden = IN_IOS_APP;
-    $("donate-link").href = DONATE_URL;
+    renderSupport();
     const e = entryFor(todayKey());
     const mail = (subject, body) =>
       `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -643,12 +683,14 @@
     const hash = location.hash.replace(/^#\/?/, "");
     let view = "day";
     if (hash === "journal") { view = "journal"; renderJournal(); }
-    else if (hash === "about") { view = "about"; renderOfflineStatus(); renderAboutLinks(); }
+    else if (hash === "about") { view = "about"; renderAboutLinks(); }
+    else if (hash === "settings") { view = "settings"; $("name-setting").value = store.get("name", ""); renderSupport(); renderOfflineStatus(); }
     else if (hash === "terms") view = "terms";
     else {
       const m = hash.match(/^day\/(\d{4}-\d{2}-\d{2})$/);
       renderDay(m ? m[1] : todayKey());
     }
+    if (view !== "day") $("view-day").style.animation = "";  // normal fade-in again next time
     document.querySelectorAll(".view").forEach((v) => (v.hidden = v.id !== "view-" + view));
     document.querySelectorAll("[data-nav]").forEach((a) => {
       if (a.dataset.nav === view) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
@@ -683,6 +725,11 @@
     });
     $("note-done").addEventListener("click", () => { setWriting(false); showClosing("writing"); });
     $("closing-back").addEventListener("click", () => { hideClosing(); window.scrollTo(0, 0); });
+    // Tapping anywhere outside the links closes the moment and returns to the top of today.
+    $("closing").addEventListener("click", (ev) => {
+      if (ev.target.closest("button")) return;
+      hideClosing(); window.scrollTo(0, 0);
+    });
     $("closing-write").addEventListener("click", () => {
       hideClosing();
       setWriting(true);
@@ -719,6 +766,12 @@
     document.querySelectorAll("[data-minutes]").forEach((b) =>
       b.addEventListener("click", () => setMinutes(b.dataset.minutes)));
     $("export-notes").addEventListener("click", exportNotes);
+    $("import-notes").addEventListener("click", () => $("import-file").click());
+    $("import-file").addEventListener("change", (ev) => {
+      const file = ev.target.files && ev.target.files[0];
+      if (file) importNotes(file);
+      ev.target.value = "";
+    });
     $("name-setting").addEventListener("change", (ev) => saveName(ev.target.value));
     $("clear-notes").addEventListener("click", clearNotes);
 
@@ -734,15 +787,49 @@
   // Within a session (a refresh, or coming back to the app) it steps aside at once.
   function endLaunch() {
     const el = $("launch");
-    if (!el) return;
+    if (!el) { startReveal(0); return; }
     let seen = false;
     try { seen = sessionStorage.getItem("reflect:launched") === "1"; sessionStorage.setItem("reflect:launched", "1"); } catch {}
     const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const wait = seen ? 0 : Math.max(0, (calm ? 600 : 1800) - performance.now());
     setTimeout(() => {
       el.classList.add("done");
-      setTimeout(() => el.remove(), seen || calm ? 0 : 700);
+      startReveal(seen ? 0 : 400);
+      setTimeout(() => el.remove(), seen || calm ? 0 : 900);
     }, wait);
+  }
+
+  // On opening, the day appears block by block: greeting and date line by line, the
+  // "already read" line if needed, then the thought with its source and note together,
+  // then the question and the actions line by line. Slow on purpose, so nothing flashes.
+  function prepareReveal() {
+    const view = $("view-day");
+    const groups = [["#greeting"], ["#day-date"], ["#returning"],
+      ["#pause-1", "#day-tradition", ".passage", "#view-day .source", "#day-full", "#day-context", "#context-toggle"],
+      ["#pause-2", ".question-label"], ["#day-prompt"], ["#view-day .actions", "#note-preview"]];
+    let step = 0;
+    for (const group of groups) {
+      const els = group.map((q) => view.querySelector(q)).filter((el) => el && !el.hidden);
+      if (!els.length) continue;
+      for (const el of els) { el.dataset.step = ""; el.style.setProperty("--step", step); }
+      step++;
+    }
+    view.classList.add("reveal");
+    prepareReveal.steps = step;
+  }
+
+  function startReveal(delay) {
+    const view = $("view-day");
+    if (!view.classList.contains("reveal")) return;
+    setTimeout(() => {
+      view.classList.add("go");
+      // Once everything is in, drop the markers so later visits render normally.
+      setTimeout(() => {
+        view.style.animation = "none";  // so the page's own fade-in doesn't replay now
+        view.classList.remove("reveal", "go");
+        view.querySelectorAll("[data-step]").forEach((el) => { delete el.dataset.step; el.style.removeProperty("--step"); });
+      }, prepareReveal.steps * 600 + 1300);
+    }, delay);
   }
 
   async function init() {
@@ -759,6 +846,7 @@
     bind();
     markVisit();
     route();
+    if (!$("view-day").hidden) prepareReveal();
     endLaunch();
     maybeWelcome();
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});

@@ -13,7 +13,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 INDEX = os.path.join(os.path.dirname(HERE), "index.html")
 W = 600  # viewBox width; height follows from the region's shape
 
-# One dot per place where a school began: (lon, lat), card title, card text, Wikipedia page.
+# One dot per place where our thinkers lived and taught: (lon, lat), card title, card text, Wikipedia page.
 MAPS = [
     {
         "id": "map-europe",
@@ -21,18 +21,31 @@ MAPS = [
         "box": (-11, 34, 37, 61),  # west, south, east, north
         "places": [
             ((23.73, 37.98), "Athens",
-             "Platonism, Virtue Ethics, Epicureanism and Stoicism, 4th–3rd c. BCE.\n"
-             "Plato's Academy, Aristotle's Lyceum, Epicurus' Garden and Zeno's Stoa all began in this one city, within a century.",
+             "Socrates and Plato · Platonism\nAristotle · Virtue Ethics\nEpicurus · Epicureanism\nZeno, the founder of Stoicism\n"
+             "Four schools began in this one city within a century. Epictetus later taught at Nicopolis, in north-western Greece.",
              "Ancient_Greek_philosophy"),
+            ((12.50, 41.90), "Rome",
+             "Seneca and Marcus Aurelius · Stoicism\nLucretius · Epicureanism\n"
+             "Epictetus also lived here, enslaved and later freed, until his banishment to Greece. Marcus wrote parts of his Meditations on campaign, far from the city.",
+             "Ancient_Roman_philosophy"),
+            ((2.35, 48.86), "Paris",
+             "Blaise Pascal · Existentialism (a forerunner)\nHe lived and worked here; his notes were published after his death as the Pensées.",
+             "Blaise_Pascal"),
+            ((9.76, 46.43), "Switzerland",
+             "Friedrich Nietzsche · Existentialism\nHe taught at the University of Basel from 1869 to 1879, then spent his summers writing in Sils-Maria, in the Alps.",
+             "Friedrich_Nietzsche"),
             ((-0.13, 51.51), "London",
-             "Utilitarianism, 18th–19th c.\nJeremy Bentham and John Stuart Mill both lived and wrote here.",
-             "Utilitarianism"),
+             "John Stuart Mill · Utilitarianism\nMill was born here in 1806; Jeremy Bentham, who founded the school, also lived and wrote here.",
+             "John_Stuart_Mill"),
             ((12.57, 55.68), "Copenhagen",
-             "Existentialism, 1840s.\nKierkegaard, often called the first existentialist, lived and wrote here.",
+             "Søren Kierkegaard · Existentialism\nOften called the first existentialist, he spent almost his whole life here.",
              "Søren_Kierkegaard"),
             ((20.51, 54.71), "Königsberg",
-             "Duty Ethics, 1780s.\nKant spent almost his whole life here. The city is now Kaliningrad.",
-             "Kantian_ethics"),
+             "Immanuel Kant · Duty Ethics\nKant spent almost his whole life here. The city is now Kaliningrad.",
+             "Immanuel_Kant"),
+            ((30.31, 59.94), "St Petersburg",
+             "Fyodor Dostoevsky · Existentialism\nDostoevsky lived much of his writing life here.",
+             "Fyodor_Dostoevsky"),
         ],
     },
     {
@@ -41,14 +54,15 @@ MAPS = [
         "box": (66, 10, 144, 47),
         "places": [
             ((84.99, 24.70), "Northern India",
-             "Buddhist Philosophy, 5th c. BCE.\nThe Buddha taught across the Ganges plain; tradition places his awakening at Bodh Gaya.",
+             "The Buddha · Buddhist Philosophy\nHe taught across the Ganges plain around the 5th century BCE; tradition places his awakening at Bodh Gaya.",
              "Buddhist_philosophy"),
             ((116.2, 34.7), "China",
-             "Confucianism, from Qufu, 6th–5th c. BCE.\nTaoism, from central China, 4th c. BCE or earlier.\n"
-             "Tradition places Confucius in the state of Lu, Laozi in Chu and Zhuangzi in Song, neighbouring states of ancient China.",
+             "Confucius · Confucianism\nLaozi and Zhuangzi · Taoism\n"
+             "Tradition places Confucius in the state of Lu, Laozi in Chu and Zhuangzi in Song, neighbouring states of ancient China, between the 6th and 4th centuries BCE.",
              "Hundred_Schools_of_Thought"),
-            ((135.77, 35.01), "Kyoto",
-             "Japanese Aesthetics, from the 13th c.\nChōmei and Kenkō wrote in and around the old capital; Okakura carried these ideals to the world in 1906.",
+            ((135.77, 35.01), "Japan",
+             "Kamo no Chōmei, Kenkō and Kakuzo Okakura · Japanese Aesthetics\n"
+             "Chōmei and Kenkō wrote in and around Kyoto in the 13th and 14th centuries. Okakura wrote The Book of Tea in English, published in New York in 1906.",
              "Japanese_aesthetics"),
         ],
     },

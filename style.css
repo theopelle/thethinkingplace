@@ -67,7 +67,7 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 .fine a, #view-terms a { color: var(--muted); }
 #view-terms p { font-size: .95rem; }
 
-.date { color: var(--muted); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; text-align: center; margin: 0 0 3rem; }
+.date { color: var(--muted); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; text-align: center; margin: 0; }
 
 .moon { white-space: nowrap; }
 .term-def { white-space: pre-line; }
@@ -99,7 +99,7 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 .translation { font-size: .8rem; font-style: italic; }
 .translation a { color: inherit; }
 
-.question { margin: 3.5rem auto 0; text-align: center; }
+.question { margin: 0 auto; text-align: center; }
 .question-label { color: var(--muted); font: 400 .7rem/1.4 var(--sans); letter-spacing: .18em; text-transform: uppercase; margin: 0 0 .7rem; }
 .prompt {
   font: italic 400 1.15rem/1.5 var(--serif);
@@ -108,7 +108,8 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
   text-wrap: balance;
 }
 
-.actions, .choice { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: .25rem .6rem; margin-top: 3rem; }
+.actions, .choice { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: .25rem .6rem; margin-top: 1.75rem; }
+.source .share-link { display: inline; margin: 0; font-size: inherit; }
 .choice { justify-content: flex-start; margin-top: 0; }
 .dot { color: var(--faint); }
 
@@ -150,7 +151,7 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 .note-foot { display: flex; justify-content: space-between; align-items: baseline; margin-top: .35rem; }
 .note-foot button.quiet { margin: 0; }
 .note-status { color: var(--muted); font-size: .75rem; text-align: right; margin: 0 0 0 auto; min-height: 1.2em; }
-.returning { color: var(--muted); font: italic 400 .95rem/1.5 var(--serif); text-align: center; margin: -2rem auto 2.5rem; max-width: 22rem; }
+.returning { color: var(--muted); font: italic 400 .95rem/1.5 var(--serif); text-align: center; margin: 1.1rem auto 0; max-width: 22rem; }
 
 .back { margin-top: 3rem; }
 
@@ -166,9 +167,12 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 .nav {
   position: fixed; left: 0; right: 0; bottom: 0;
   display: flex; justify-content: center; gap: 2rem;
-  padding: 1rem 1rem max(1rem, env(safe-area-inset-bottom));
-  background: linear-gradient(transparent, var(--bg) 40%);
+  padding: .9rem 1rem max(1rem, env(safe-area-inset-bottom));
+  background: var(--bg);
 }
+/* A short fade above the bar, so text scrolling under it never collides with the links */
+.nav::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 1.75rem;
+  background: linear-gradient(transparent, var(--bg)); pointer-events: none; }
 .nav a { color: var(--muted); font-size: .8rem; letter-spacing: .08em; }
 .nav a[aria-current="page"] { color: var(--fg); }
 
@@ -245,6 +249,9 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 .closing p { font: italic 400 1.3rem/1.6 var(--serif); margin: 0 0 3rem; }
 .closing-actions { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .25rem .6rem; }
 .closing-actions button.quiet { display: inline; margin: 0; }
+.closing { cursor: pointer; }
+.closing-hint { position: absolute; bottom: max(2rem, env(safe-area-inset-bottom)); left: 0; right: 0;
+  margin: 0; font: 400 .75rem/1 var(--sans) !important; letter-spacing: .08em; color: var(--muted); opacity: .7; }
 
 /* Silence */
 .silence {
@@ -284,9 +291,9 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 /* A slow, soft ring that draws the eye without blinking. */
 .map-dot::after { content: ""; position: absolute; inset: 17px; border-radius: 50%; border: 1px solid var(--accent);
   opacity: 0; animation: map-pulse 3.6s ease-out infinite; pointer-events: none; }
-.map-dot:nth-of-type(2)::after { animation-delay: .9s; }
-.map-dot:nth-of-type(3)::after { animation-delay: 1.8s; }
-.map-dot:nth-of-type(4)::after { animation-delay: 2.7s; }
+.map-dot:nth-of-type(4n+2)::after { animation-delay: .9s; }
+.map-dot:nth-of-type(4n+3)::after { animation-delay: 1.8s; }
+.map-dot:nth-of-type(4n)::after { animation-delay: 2.7s; }
 @keyframes map-pulse {
   0% { transform: scale(1); opacity: .7; }
   70%, 100% { transform: scale(2.6); opacity: 0; }
@@ -296,18 +303,46 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 .map-dot:focus-visible { outline: none; }
 .map-dot:focus-visible::before { outline: 1px solid var(--fg); outline-offset: 3px; }
 
-/* Launch screen */
-.launch { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; align-items: center;
-  justify-content: center; gap: 1.25rem; background: var(--bg); transition: opacity .7s ease; }
+/* Launch screen: the well sits exactly where Android's own splash icon was (a 288dp box,
+   centred), so the hand-over is invisible; only the name fades in. */
+.launch { position: fixed; inset: 0; z-index: 100; background: var(--bg); transition: opacity .9s ease; }
 .launch.done { opacity: 0; pointer-events: none; }
-.launch-mark { width: 88px; height: 88px; animation: launch-in .8s ease both; }
+.launch-mark { position: absolute; left: 50%; top: 50%; width: 288px; height: 288px; margin: -144px 0 0 -144px; }
 .launch-bricks { fill: var(--fg); stroke: var(--fg); stroke-width: 1.2; stroke-linejoin: round; }
 .launch-water { fill: var(--accent); }
 .launch-moon { fill: var(--bg); opacity: .92; }
-.launch-name { margin: 0; font: 400 1.35rem/1 var(--serif); letter-spacing: .04em; color: var(--fg);
-  animation: launch-in .8s .2s ease both; }
+.launch-name { position: absolute; left: 0; right: 0; top: calc(50% + 72px); margin: 0; text-align: center;
+  font: 400 1.35rem/1 var(--serif); letter-spacing: .04em; color: var(--fg); animation: launch-in 1s .3s ease both; }
 @keyframes launch-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+/* The day reveals itself gently on opening: greeting, date, the thought, then the question. */
+#view-day.reveal { animation: none; }
+#view-day.reveal [data-step] { opacity: 0; }
+#view-day.reveal.go [data-step] { animation: rise 1.1s ease both; animation-delay: calc(var(--step) * .6s); }
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* Origin maps: a soft line between the two */
+.map-figure + .map-figure { border-top: 1px solid var(--faint); padding-top: 1.5rem; }
+
 @media (prefers-reduced-motion: reduce) {
-  .launch, .launch-mark, .launch-name { animation: none; transition: none; }
+  .launch, .launch-name { animation: none; transition: none; }
+  #view-day.reveal [data-step] { opacity: 1; animation: none !important; }
 }
+
+.setting-help { font-size: .85rem; margin-top: .75rem; }
+
+/* Short pauses between the day's three blocks */
+.pause { width: 2.5rem; height: 0; border-top: 1px solid var(--faint); margin: 2.5rem auto; }
+
+/* Settings gear in the bottom bar */
+.nav { align-items: center; }
+.nav-gear { display: inline-flex; color: var(--muted); }
+.nav-gear svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linejoin: round; }
+.nav-gear[aria-current="page"] { color: var(--fg); }
+
+/* A large, soft opening quotation mark above each thought: a sign, not punctuation,
+   so it needs no closing partner. */
+.passage::before { content: "“"; display: block; font: 400 4rem/1 var(--serif); color: var(--accent);
+  opacity: .35; height: 2.1rem; margin-bottom: .2rem; }
+.passage.long::before { text-align: left; }
 
