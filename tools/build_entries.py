@@ -23,7 +23,7 @@ RELEASED = os.path.join(HERE, "released.json")
 
 # Rotation order: one tradition per day, cycling.
 ORDER = ["Stoicism", "Taoism", "Virtue Ethics", "Buddhist Philosophy", "Epicureanism",
-         "Duty Ethics", "Japanese Thought", "Platonism", "Utilitarianism", "Existentialism",
+         "Duty Ethics", "Japanese Aesthetics", "Platonism", "Utilitarianism", "Existentialism",
          "Confucianism"]
 
 G = "https://www.gutenberg.org/ebooks/"

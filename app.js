@@ -500,11 +500,18 @@
     card.focus({ preventScroll: true });
   }
 
+  // A dot on the About page maps: where a school began.
+  function openPlace(btn) {
+    showCard(btn, btn.dataset.title, btn.dataset.text, btn.dataset.wiki);
+    btn.setAttribute("aria-expanded", "true");
+  }
+
   function closeTerm() {
     const card = $("term-card");
     if (!card || card.hidden) return;
     const hadFocus = card.contains(document.activeElement);
     card.hidden = true;
+    if (openTerm.from) openTerm.from.removeAttribute("aria-expanded");
     if (hadFocus && openTerm.from && document.contains(openTerm.from)) openTerm.from.focus({ preventScroll: true });
   }
 
@@ -675,8 +682,15 @@
     $("closing-share").addEventListener("click", share);
     document.addEventListener("visibilitychange", onVisibility);
     document.addEventListener("click", (ev) => {
-      const term = ev.target.closest(".term, .moon-btn");
-      if (term) { ev.preventDefault(); openTerm.from === term && !$("term-card").hidden ? closeTerm() : term.classList.contains("moon-btn") ? openMoon(term) : openTerm(term); return; }
+      const term = ev.target.closest(".term, .moon-btn, .map-dot");
+      if (term) {
+        ev.preventDefault();
+        if (openTerm.from === term && !$("term-card").hidden) closeTerm();
+        else if (term.classList.contains("moon-btn")) openMoon(term);
+        else if (term.classList.contains("map-dot")) openPlace(term);
+        else openTerm(term);
+        return;
+      }
       if (!ev.target.closest("#term-card")) closeTerm();
     });
     $("term-close").addEventListener("click", closeTerm);

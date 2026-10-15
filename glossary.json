@@ -751,12 +751,12 @@
   "def": "An English Romantic poet (1770–1850) who wrote about nature and feeling. His poems helped Mill recover from depression."
  },
  {
-  "term": "Japanese Thought",
+  "term": "Japanese Aesthetics",
   "match": [
-   "Japanese Thought"
+   "Japanese Aesthetics"
   ],
-  "wiki": "Japanese_philosophy",
-  "def": "In Many Wells: classic Japanese reflections on impermanence, simplicity and beauty, by Kamo no Chōmei, Kenkō and Kakuzo Okakura."
+  "wiki": "Japanese_aesthetics",
+  "def": "Japanese ideals of beauty: finding it in what is simple, imperfect and passing. In Many Wells, the reflections of Kamo no Chōmei, Kenkō and Kakuzo Okakura."
  },
  {
   "term": "Kakuzo Okakura",
@@ -1474,7 +1474,7 @@
    "evanescence"
   ],
   "scope": [
-   "Japanese Thought"
+   "Japanese Aesthetics"
   ],
   "wiki": "Mono_no_aware",
   "def": "The passing of all things (mujō) runs through Japanese writing. Mono no aware, 'the pathos of things', is the gentle feeling it brings: things are dearer because they do not last."
@@ -1486,7 +1486,7 @@
    "beauty"
   ],
   "scope": [
-   "Japanese Thought"
+   "Japanese Aesthetics"
   ],
   "wiki": "The_Book_of_Tea",
   "def": "For Okakura, Teaism is the adoration of the beautiful in everyday life: beauty found in small, ordinary things given full attention, rather than in display."
@@ -1498,7 +1498,7 @@
    "imperfect"
   ],
   "scope": [
-   "Japanese Thought"
+   "Japanese Aesthetics"
   ],
   "wiki": "Wabi-sabi",
   "def": "Okakura calls Teaism a worship of the Imperfect. The related ideal of wabi-sabi finds beauty in what is incomplete, worn or passing, leaving room for the imagination to finish it."
@@ -1510,7 +1510,7 @@
    "vacant"
   ],
   "scope": [
-   "Japanese Thought"
+   "Japanese Aesthetics"
   ],
   "wiki": "Ma_(negative_space)",
   "def": "Okakura, echoing Laozi, says the use of a pitcher lies in its emptiness. Japanese aesthetics calls this meaningful open space or pause ma: room that lets things breathe."
@@ -1521,7 +1521,7 @@
    "simplicity"
   ],
   "scope": [
-   "Japanese Thought"
+   "Japanese Aesthetics"
   ],
   "wiki": "Wabi-sabi",
   "def": "The tea room is deliberately plain. Wabi, the beauty of simple, quiet and unadorned things, values having enough over having more."

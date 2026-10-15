@@ -268,3 +268,29 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
   .view, .silence, .closing { animation: none; }
   .breath { transition: none; }
 }
+
+/* Origin maps on the About page: bare coastlines, and dots that open a card */
+.map-figure { margin: 1.5rem 0; }
+.map-figure figcaption { font: 400 .7rem/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: .75rem; }
+.map-wrap { position: relative; }
+.map { display: block; width: 100%; height: auto; }
+.map-coast { fill: none; stroke: var(--fg); stroke-width: 1; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.map-dot { position: absolute; width: 44px; height: 44px; margin: -22px 0 0 -22px; padding: 0;
+  border: 0; background: none; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.map-dot::before { content: ""; position: absolute; inset: 17px; border-radius: 50%; background: var(--accent);
+  box-shadow: 0 0 0 3px var(--bg);  /* a halo that hides the coastline under the dot */
+  transition: transform .2s ease; }
+/* A slow, soft ring that draws the eye without blinking. */
+.map-dot::after { content: ""; position: absolute; inset: 17px; border-radius: 50%; border: 1px solid var(--accent);
+  opacity: 0; animation: map-pulse 3.6s ease-out infinite; pointer-events: none; }
+.map-dot:nth-of-type(2)::after { animation-delay: .9s; }
+.map-dot:nth-of-type(3)::after { animation-delay: 1.8s; }
+.map-dot:nth-of-type(4)::after { animation-delay: 2.7s; }
+@keyframes map-pulse {
+  0% { transform: scale(1); opacity: .7; }
+  70%, 100% { transform: scale(2.6); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .map-dot::after { animation: none; } }
+.map-dot:hover::before, .map-dot[aria-expanded="true"]::before { transform: scale(1.35); }
+.map-dot:focus-visible { outline: none; }
+.map-dot:focus-visible::before { outline: 1px solid var(--fg); outline-offset: 3px; }
