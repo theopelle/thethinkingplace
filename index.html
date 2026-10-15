@@ -42,11 +42,11 @@
         <a id="day-full-link" target="_blank" rel="noopener">shortened · read it in full</a>
       </p>
 
-      <div class="context" id="day-context">
+      <div class="context" id="day-context" hidden>
         <p id="day-context-text"></p>
         <p class="translation" id="day-translation"></p>
       </div>
-      <button class="link quiet" id="context-toggle" aria-expanded="true" aria-controls="day-context">hide note</button>
+      <button class="link quiet" id="context-toggle" aria-expanded="false" aria-controls="day-context">about this thought</button>
 
       <div class="pause" id="pause-2" aria-hidden="true"></div>
       <div class="question">
@@ -57,7 +57,7 @@
       <div class="actions">
         <button class="link" id="open-note" aria-pressed="false">write about this</button>
         <span class="dot" aria-hidden="true">·</span>
-        <button class="link" id="open-silence">sit in silence</button>
+        <button class="link" id="open-silence">sit and think</button>
       </div>
 
       <div class="note" id="note" hidden>
@@ -101,8 +101,13 @@
         <button class="link" data-theme-choice="dark" role="radio">dark</button>
       </div>
 
-      <h2>Silence</h2>
-      <div class="choice" role="radiogroup" aria-label="Silence length">
+      <h2>Sit and think</h2>
+      <div class="choice" role="radiogroup" aria-label="Starts with">
+        <button class="link" data-sit-mode="think" role="radio">think with the question</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-sit-mode="breathe" role="radio">guided breathing</button>
+      </div>
+      <div class="choice reminder-row" role="radiogroup" aria-label="Length">
         <button class="link" data-minutes="1" role="radio">1 min</button>
         <span class="dot" aria-hidden="true">·</span>
         <button class="link" data-minutes="3" role="radio">3 min</button>
@@ -110,6 +115,36 @@
         <button class="link" data-minutes="5" role="radio">5 min</button>
         <span class="dot" aria-hidden="true">·</span>
         <button class="link" data-minutes="10" role="radio">10 min</button>
+      </div>
+
+      <div id="reminder" hidden>
+      <h2>Reminder</h2>
+      <div class="choice" role="radiogroup" aria-label="How often">
+        <button class="link" data-reminder-freq="daily" role="radio">every day</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-reminder-freq="weekly" role="radio">once a week</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-reminder-freq="off" role="radio">off</button>
+      </div>
+      <div class="choice reminder-row" id="reminder-days" role="radiogroup" aria-label="Day of the week">
+        <button class="link" data-reminder-day="2" role="radio">Mon</button>
+        <button class="link" data-reminder-day="3" role="radio">Tue</button>
+        <button class="link" data-reminder-day="4" role="radio">Wed</button>
+        <button class="link" data-reminder-day="5" role="radio">Thu</button>
+        <button class="link" data-reminder-day="6" role="radio">Fri</button>
+        <button class="link" data-reminder-day="7" role="radio">Sat</button>
+        <button class="link" data-reminder-day="1" role="radio">Sun</button>
+      </div>
+      <div class="choice reminder-row" id="reminder-time" role="radiogroup" aria-label="Time">
+        <button class="link" data-reminder-hour="8" role="radio">8:00</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-reminder-hour="12" role="radio">12:00</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-reminder-hour="16" role="radio">16:00</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-reminder-hour="20" role="radio">20:00</button>
+      </div>
+      <p class="muted setting-help" id="reminder-status"></p>
       </div>
 
       <h2>Your notes</h2>
@@ -124,7 +159,7 @@
       <p class="muted setting-help">Your notes live only on this device. To move them to another phone or browser, export them here, then import the file there.</p>
 
       <h2>Offline</h2>
-      <p class="muted" id="offline-status">Checking…</p>
+      <p class="setting-text" id="offline-status">Checking…</p>
 
       <div class="support-block">
       <h2>Support Many Wells</h2>
@@ -213,7 +248,7 @@ Chōmei and Kenkō wrote in and around Kyoto in the 13th and 14th centuries. Oka
       <p>This also means that if you clear this browser's data, uninstall the app or lose the device, your notes are gone. Use <em>export</em> on the About page to keep your own copy.</p>
 
       <h2>What we collect</h2>
-      <p>Nothing. Many Wells uses no analytics, no cookies and no tracking. Your name (if you give one), theme and silence settings are stored on your device alongside your notes. If you report an issue or suggest a reflection, your own email app sends exactly what you choose to write, and we only see that message. Once loaded, the app works entirely offline.</p>
+      <p>Nothing. Many Wells uses no analytics, no cookies and no tracking. Your name (if you give one), theme and sit-and-think settings are stored on your device alongside your notes. If you report an issue or suggest a reflection, your own email app sends exactly what you choose to write, and we only see that message. Once loaded, the app works entirely offline.</p>
 
       <h2>The texts</h2>
       <p>Every quotation comes from a public-domain text or translation, credited under each thought with a link to its source. Where an old translation has been lightly modernised (archaic forms such as "thou" or a translator's brackets updated, the meaning unchanged), the credit says so. The short context notes and reflection questions are our own. Many Wells presents these schools of thought side by side for personal reflection; it does not endorse or rank any of them.</p>
@@ -225,9 +260,15 @@ Chōmei and Kenkō wrote in and around Kyoto in the 13th and 14th centuries. Oka
     </section>
 
     <nav class="nav" aria-label="Main">
+      <button type="button" class="more-below" id="more-below" aria-label="Scroll to today's question" tabindex="-1">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
       <a href="#/" data-nav="day">today</a>
+      <span class="dot" aria-hidden="true">·</span>
       <a href="#/journal" data-nav="journal">past thoughts</a>
+      <span class="dot" aria-hidden="true">·</span>
       <a href="#/about" data-nav="about">about</a>
+      <span class="dot" aria-hidden="true">·</span>
       <a href="#/settings" data-nav="settings" class="nav-gear" aria-label="Settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.06 10.57 L21.52 10.76 L21.52 13.24 L19.06 13.43 L18.00 15.98 L19.61 17.85 L17.85 19.61 L15.98 18.00 L13.43 19.06 L13.24 21.52 L10.76 21.52 L10.57 19.06 L8.02 18.00 L6.15 19.61 L4.39 17.85 L6.00 15.98 L4.94 13.43 L2.48 13.24 L2.48 10.76 L4.94 10.57 L6.00 8.02 L4.39 6.15 L6.15 4.39 L8.02 6.00 L10.57 4.94 L10.76 2.48 L13.24 2.48 L13.43 4.94 L15.98 6.00 L17.85 4.39 L19.61 6.15 L18.00 8.02 Z"/><circle cx="12" cy="12" r="3.2"/></svg></a>
     </nav>
   </main>
@@ -261,7 +302,7 @@ Chōmei and Kenkō wrote in and around Kyoto in the 13th and 14th centuries. Oka
       <button class="link quiet" id="closing-back">read it again</button>
       <span class="dot" aria-hidden="true">·</span>
       <button class="link quiet" id="closing-write">write about this</button>
-      <button class="link quiet" id="closing-silence">sit in silence</button>
+      <button class="link quiet" id="closing-silence">sit and think</button>
       <span class="dot" aria-hidden="true">·</span>
       <button class="link quiet" id="closing-share">share this thought</button>
     </div>
@@ -270,10 +311,16 @@ Chōmei and Kenkō wrote in and around Kyoto in the 13th and 14th centuries. Oka
 
   <!-- Silence overlay -->
   <div class="silence" id="silence" hidden>
+    <p class="sit-question" id="sit-question" hidden></p>
     <div class="breath" id="breath" aria-hidden="true"></div>
     <p class="breath-cue" id="breath-cue">breathe in</p>
     <p class="remaining" id="remaining"></p>
     <button class="link quiet" id="close-silence">end</button>
+    <div class="choice sit-mode" role="radiogroup" aria-label="Mode">
+      <button class="link" data-sit-mode="think" role="radio">think</button>
+      <span class="dot" aria-hidden="true">·</span>
+      <button class="link" data-sit-mode="breathe" role="radio">breathe</button>
+    </div>
   </div>
 
   <script src="app.js"></script>

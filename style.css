@@ -88,7 +88,7 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 .journal .j-text { white-space: pre-line; }  /* verse keeps its line breaks */
 .passage.verse p { font-size: clamp(1.05rem, 3.9vw, 1.25rem); line-height: 1.5; }
 .verse-line { display: block; padding-left: 1.4em; text-indent: -1.4em; }
-.school { text-align: center; color: var(--accent); font: 500 .72rem/1.4 var(--sans); letter-spacing: .2em; text-transform: uppercase; margin: 0 0 1.6rem; }
+.school { text-align: center; color: var(--accent); font: 600 .82rem/1.4 var(--sans); letter-spacing: .2em; text-transform: uppercase; margin: 0 0 1.6rem; }
 .source { text-align: center; color: var(--muted); font-size: .9rem; margin: 2rem 0 1rem; }
 .full-verse { text-align: center; margin: 0 0 .5rem; font-size: .75rem; }
 .full-verse a { color: var(--muted); }
@@ -111,7 +111,7 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 .actions, .choice { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: .25rem .6rem; margin-top: 1.75rem; }
 .source .share-link { display: inline; margin: 0; font-size: inherit; }
 .choice { justify-content: flex-start; margin-top: 0; }
-.dot { color: var(--faint); }
+.dot { color: color-mix(in srgb, var(--muted) 55%, var(--bg)); }
 
 button.link, .nav a {
   background: none; border: 0; padding: .35rem 0; margin: 0;
@@ -166,13 +166,15 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 
 .nav {
   position: fixed; left: 0; right: 0; bottom: 0;
-  display: flex; justify-content: center; gap: 2rem;
+  display: flex; justify-content: center; gap: .85rem;
   padding: .9rem 1rem max(1rem, env(safe-area-inset-bottom));
   background: var(--bg);
 }
 /* A short fade above the bar, so text scrolling under it never collides with the links */
 .nav::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 1.75rem;
-  background: linear-gradient(transparent, var(--bg)); pointer-events: none; }
+  background: linear-gradient(transparent, var(--bg)); pointer-events: none; transition: height .8s ease; }
+/* With the chevron showing, the fade grows so half-visible text sinks behind it */
+.nav.has-hint::before { height: 4.5rem; background: linear-gradient(transparent, var(--bg) 70%); }
 .nav a { color: var(--muted); font-size: .8rem; letter-spacing: .08em; }
 .nav a[aria-current="page"] { color: var(--fg); }
 
@@ -271,6 +273,12 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 .breath.out { transition-duration: 6s; }
 .breath-cue { color: var(--muted); font-size: .85rem; letter-spacing: .14em; margin: 2.5rem 0 .25rem; transition: opacity 1s; }
 .remaining { color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; margin: 0 0 2.5rem; }
+.sit-question { max-width: 22rem; margin: 0 1.5rem 2.5rem; text-align: center; color: var(--fg); opacity: .85;
+  font: italic 400 1.3rem/1.55 var(--serif); text-wrap: balance; animation: fade 2s ease; }
+.sit-question + .breath[hidden] + .breath-cue[hidden] + .remaining { margin-top: 0; }
+.sit-mode { position: absolute; bottom: max(2rem, env(safe-area-inset-bottom)); left: 0; right: 0; justify-content: center; }
+.sit-mode button.link { font-size: .8rem; color: var(--muted); }
+.sit-mode button.link[aria-checked="true"] { color: var(--fg); }
 
 @media (prefers-reduced-motion: reduce) {
   .view, .silence, .closing { animation: none; }
@@ -318,7 +326,7 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 /* The day reveals itself gently on opening: greeting, date, the thought, then the question. */
 #view-day.reveal { animation: none; }
 #view-day.reveal [data-step] { opacity: 0; }
-#view-day.reveal.go [data-step] { animation: rise 1.1s ease both; animation-delay: calc(var(--step) * .6s); }
+#view-day.reveal.go [data-step] { animation: rise 1.5s ease both; animation-delay: calc(var(--step) * .9s); }
 @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
 /* Origin maps: a soft line between the two */
@@ -329,7 +337,8 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
   #view-day.reveal [data-step] { opacity: 1; animation: none !important; }
 }
 
-.setting-help { font-size: .85rem; margin-top: .75rem; }
+.setting-help { font-size: .8rem; line-height: 1.5; margin-top: .75rem; }
+.setting-text { margin-top: 0; }
 
 /* Short pauses between the day's three blocks */
 .pause { width: 2.5rem; height: 0; border-top: 1px solid var(--faint); margin: 2.5rem auto; }
@@ -345,4 +354,17 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 .passage::before { content: "“"; display: block; font: 400 4rem/1 var(--serif); color: var(--accent);
   opacity: .35; height: 2.1rem; margin-bottom: .2rem; }
 .passage.long::before { text-align: left; }
+
+/* Reminder settings */
+.reminder-row { margin-top: .6rem; }
+
+/* A faint chevron when the day's question is out of sight on long thoughts */
+.more-below { position: absolute; left: 50%; bottom: calc(100% + .1rem); width: 44px; height: 32px; margin-left: -22px;
+  padding: 0; border: 0; background: none; color: var(--muted); cursor: pointer; opacity: 0; pointer-events: none;
+  transition: opacity .8s ease; }
+.more-below.show { opacity: .75; pointer-events: auto; }
+.more-below svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+  animation: nudge 2.8s ease-in-out infinite; }
+@keyframes nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
+@media (prefers-reduced-motion: reduce) { .more-below svg { animation: none; } }
 

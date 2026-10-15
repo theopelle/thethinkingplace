@@ -77,6 +77,7 @@
 
   function writeNote(key, text, id) {
     if (!text.trim()) { store.remove("note:" + key); return true; }
+    countDay(key);
     return store.set("note:" + key, JSON.stringify({ text, id }));
   }
 
@@ -188,7 +189,8 @@
     $("returning").hidden = !(key === today && returning);
     renderGreeting(key === today);
 
-    showContext(store.get("context", "shown") !== "hidden");
+    showContext(false);
+    countAfterReading(key);
 
     const note = (readNote(key) || { text: "" }).text;
     $("note-text").value = note;
@@ -338,6 +340,54 @@
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }
 
+  // ---------- reminder ----------
+  // A gentle daily (or weekly) notification, only in the installed app. Scheduled on the
+  // device itself: nothing is sent to or from a server.
+  const REMINDER_ID = 1;
+  const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  function reminderPrefs() {
+    let r = null;
+    try { r = JSON.parse(store.get("reminder", "null")); } catch {}
+    return Object.assign({ freq: "daily", hour: 8, weekday: 2 }, r || {});
+  }
+
+  async function applyReminder(ask) {
+    if (!NATIVE) return;
+    const LN = window.Capacitor.Plugins.LocalNotifications;
+    const r = reminderPrefs();
+    try {
+      await LN.cancel({ notifications: [{ id: REMINDER_ID }] });
+      if (r.freq === "off") return renderReminder("");
+      let perm = await LN.checkPermissions();
+      if (perm.display !== "granted" && ask) { store.set("reminderAsked", "1"); perm = await LN.requestPermissions(); }
+      if (perm.display !== "granted") return renderReminder("Notifications are turned off for this app in your phone's settings.");
+      const on = r.freq === "weekly" ? { weekday: r.weekday, hour: r.hour, minute: 0 } : { hour: r.hour, minute: 0 };
+      await LN.schedule({ notifications: [{
+        id: REMINDER_ID, title: "Many Wells", body: "Today's thought is waiting for you.",
+        schedule: { on, allowWhileIdle: true }, isExactNotification: false,
+        smallIcon: "ic_stat_well", iconColor: "#2F4B4C",
+      }] });
+      renderReminder("");
+    } catch { renderReminder("The reminder couldn't be set on this device."); }
+  }
+
+  function renderReminder(status) {
+    const r = reminderPrefs();
+    $("reminder").hidden = !NATIVE;
+    document.querySelectorAll("[data-reminder-freq]").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.reminderFreq === r.freq)));
+    document.querySelectorAll("[data-reminder-hour]").forEach((b) => b.setAttribute("aria-checked", String(+b.dataset.reminderHour === r.hour)));
+    document.querySelectorAll("[data-reminder-day]").forEach((b) => b.setAttribute("aria-checked", String(+b.dataset.reminderDay === r.weekday)));
+    $("reminder-time").hidden = r.freq === "off";
+    $("reminder-days").hidden = r.freq !== "weekly";
+    if (status !== undefined) $("reminder-status").textContent = status;
+  }
+
+  function setReminder(change) {
+    store.set("reminder", JSON.stringify(Object.assign(reminderPrefs(), change)));
+    renderReminder();
+    applyReminder(true);
+  }
+
   // Reads a file made by export: entries separated by "---", each starting with its date;
   // the note is everything after the first blank line. Existing notes are never overwritten:
   // a different note for the same day is kept, with the imported one added below it.
@@ -407,10 +457,27 @@
     }
   }
 
+  // Sit and think has two modes: thinking time with the day's question shown softly (the
+  // default), or guided breathing. The last one used is remembered, and Settings sets it too.
+  function sitMode() { return store.get("sitMode", "think"); }
+  function setSitMode(mode) {
+    store.set("sitMode", mode);
+    document.querySelectorAll("[data-sit-mode]").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.sitMode === mode)));
+    if (silence) showSitMode();
+  }
+  function showSitMode() {
+    const think = sitMode() === "think";
+    $("sit-question").textContent = entryShown(currentKey || todayKey()).prompt;
+    $("sit-question").hidden = !think || silence.completed;
+    $("breath").hidden = think;
+    $("breath-cue").hidden = think && !silence.completed;
+  }
+
   function openSilence() {
     const minutes = Number(store.get("minutes", "3"));
     silence = { end: Date.now() + minutes * 60000, timers: [] };
     setOverlay($("silence"), true, $("close-silence"));
+    setSitMode(sitMode());
     bell();
 
     const breath = $("breath"), cue = $("breath-cue");
@@ -428,7 +495,7 @@
       const left = Math.max(0, silence.end - Date.now());
       const s = Math.ceil(left / 1000);
       $("remaining").textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
-      if (left <= 0) { bell(); cue.textContent = "welcome back"; silence.completed = true; finishSilence(false); }
+      if (left <= 0) { bell(); cue.textContent = "welcome back"; silence.completed = true; showSitMode(); finishSilence(false); }
     };
     tick();
     silence.ticker = setInterval(tick, 250);
@@ -576,6 +643,7 @@
       store.set("welcomed", "1");
       setOverlay($("welcome"), false);
       route();
+      applyReminder(true);
     }, { once: true });
   }
 
@@ -639,6 +707,16 @@
   }
 
   // A quiet, guilt-free count of days the app was opened. It only grows; it never resets.
+  // A past day counts once it has been read for a while, not when merely scrolled past.
+  let countTimer = 0;
+  function countAfterReading(key) {
+    clearTimeout(countTimer);
+    if (key === todayKey()) return;  // today is counted when the app is opened
+    countTimer = setTimeout(() => {
+      if (currentKey === key && !document.hidden && !$("view-day").hidden) countDay(key);
+    }, 15000);
+  }
+
   function countDay(key) {
     let days = [];
     try { days = JSON.parse(store.get("days", "[]")) || []; } catch {}
@@ -684,7 +762,7 @@
     let view = "day";
     if (hash === "journal") { view = "journal"; renderJournal(); }
     else if (hash === "about") { view = "about"; renderAboutLinks(); }
-    else if (hash === "settings") { view = "settings"; $("name-setting").value = store.get("name", ""); renderSupport(); renderOfflineStatus(); }
+    else if (hash === "settings") { view = "settings"; $("name-setting").value = store.get("name", ""); renderSupport(); renderReminder(); renderOfflineStatus(); }
     else if (hash === "terms") view = "terms";
     else {
       const m = hash.match(/^day\/(\d{4}-\d{2}-\d{2})$/);
@@ -696,21 +774,39 @@
       if (a.dataset.nav === view) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
     window.scrollTo(0, 0);
+    if (watchQuestion.update) setTimeout(watchQuestion.update, 50);
   }
 
-  // The note under each thought is the lesson, so it shows by default; hiding it is remembered.
+  // The note under each thought opens on request and starts closed on every visit.
   function showContext(open) {
     $("day-context").hidden = !open;
     $("context-toggle").setAttribute("aria-expanded", String(open));
     $("context-toggle").textContent = open ? "hide note" : "about this thought";
   }
 
+  // On long thoughts the question can sit below the fold: a faint chevron above the bottom
+  // bar invites a scroll, and goes away once the question is in view or the page is scrolled.
+  function watchQuestion() {
+    const hint = $("more-below"), question = document.querySelector("#view-day .question");
+    const update = () => {
+      const r = $("day-prompt").getBoundingClientRect();  // the question itself, not just its label
+      const barTop = document.querySelector(".nav").getBoundingClientRect().top;
+      const view = $("view-day");
+      const hidden = !view.hidden && !view.classList.contains("reveal") && r.bottom > barTop - 8 && window.scrollY < 40;
+      hint.classList.toggle("show", hidden);
+      document.querySelector(".nav").classList.toggle("has-hint", hidden);
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    hint.addEventListener("click", () => question.scrollIntoView({ behavior: "smooth", block: "center" }));
+    watchQuestion.update = update;
+  }
+
   // ---------- wire up ----------
   function bind() {
+    watchQuestion();
     $("context-toggle").addEventListener("click", () => {
-      const open = $("day-context").hidden;
-      showContext(open);
-      store.set("context", open ? "shown" : "hidden");
+      showContext($("day-context").hidden);
     });
     $("open-note").addEventListener("click", () => setWriting($("note").hidden));
     $("note-edit").addEventListener("click", () => setWriting(true));
@@ -765,8 +861,13 @@
       b.addEventListener("click", () => { store.set("theme", b.dataset.themeChoice); applyTheme(b.dataset.themeChoice); }));
     document.querySelectorAll("[data-minutes]").forEach((b) =>
       b.addEventListener("click", () => setMinutes(b.dataset.minutes)));
+    document.querySelectorAll("[data-sit-mode]").forEach((b) =>
+      b.addEventListener("click", () => setSitMode(b.dataset.sitMode)));
     $("export-notes").addEventListener("click", exportNotes);
     $("import-notes").addEventListener("click", () => $("import-file").click());
+    document.querySelectorAll("[data-reminder-freq]").forEach((b) => b.addEventListener("click", () => setReminder({ freq: b.dataset.reminderFreq })));
+    document.querySelectorAll("[data-reminder-hour]").forEach((b) => b.addEventListener("click", () => setReminder({ hour: +b.dataset.reminderHour })));
+    document.querySelectorAll("[data-reminder-day]").forEach((b) => b.addEventListener("click", () => setReminder({ weekday: +b.dataset.reminderDay })));
     $("import-file").addEventListener("change", (ev) => {
       const file = ev.target.files && ev.target.files[0];
       if (file) importNotes(file);
@@ -791,7 +892,7 @@
     let seen = false;
     try { seen = sessionStorage.getItem("reflect:launched") === "1"; sessionStorage.setItem("reflect:launched", "1"); } catch {}
     const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const wait = seen ? 0 : Math.max(0, (calm ? 600 : 1800) - performance.now());
+    const wait = seen ? 0 : Math.max(0, (calm ? 600 : 2000) - performance.now());
     setTimeout(() => {
       el.classList.add("done");
       startReveal(seen ? 0 : 400);
@@ -827,8 +928,9 @@
       setTimeout(() => {
         view.style.animation = "none";  // so the page's own fade-in doesn't replay now
         view.classList.remove("reveal", "go");
+        if (watchQuestion.update) watchQuestion.update();
         view.querySelectorAll("[data-step]").forEach((el) => { delete el.dataset.step; el.style.removeProperty("--step"); });
-      }, prepareReveal.steps * 600 + 1300);
+      }, prepareReveal.steps * 900 + 1800);
     }, delay);
   }
 
@@ -836,6 +938,7 @@
     setTimeout(() => $("launch")?.classList.add("done"), 5000);  // never leave it up if loading fails
     applyTheme(store.get("theme", "auto"));
     setMinutes(store.get("minutes", "3"));
+    setSitMode(sitMode());
     const res = await fetch("entries.json", { cache: "no-cache" });
     entries = await res.json();
     entriesById = Object.fromEntries(entries.map((e) => [e.id, e]));
@@ -849,6 +952,7 @@
     if (!$("view-day").hidden) prepareReveal();
     endLaunch();
     maybeWelcome();
+    if (store.get("welcomed")) applyReminder(!store.get("reminderAsked"));  // ask once, never nag
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
   }
 
