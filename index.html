@@ -24,33 +24,34 @@
       <p class="date" id="day-date"></p>
       <p class="returning" id="returning" hidden>You've read today's thought. The next one arrives tomorrow.</p>
 
+      <p class="school" id="day-tradition"></p>
+
       <blockquote class="passage">
         <p id="day-text"></p>
       </blockquote>
 
-      <p class="source">
-        <span id="day-source"></span><br>
-        <span class="tradition" id="day-tradition"></span>
-      </p>
+      <p class="source" id="day-source"></p>
       <p class="full-verse" id="day-full" hidden>
         <a id="day-full-link" target="_blank" rel="noopener">shortened · read it in full</a>
       </p>
 
-      <button class="link quiet" id="context-toggle" aria-expanded="false">about this passage</button>
+      <button class="link quiet" id="context-toggle" aria-expanded="false">about this thought</button>
       <div class="context" id="day-context" hidden>
         <p id="day-context-text"></p>
-        <p class="moon-note" id="day-moon-note" hidden></p>
         <p class="translation" id="day-translation"></p>
       </div>
 
-      <p class="prompt" id="day-prompt"></p>
+      <div class="question">
+        <p class="question-label">A question to sit with</p>
+        <p class="prompt" id="day-prompt"></p>
+      </div>
 
       <div class="actions">
-        <button class="link" id="open-note">write about this</button>
+        <button class="link" id="open-note" aria-pressed="false">write about this</button>
         <span class="dot" aria-hidden="true">·</span>
         <button class="link" id="open-silence">sit in silence</button>
         <span class="dot" aria-hidden="true">·</span>
-        <button class="link" id="share">share</button>
+        <button class="link" id="share">share this thought</button>
       </div>
 
       <div class="note" id="note" hidden>
@@ -62,6 +63,11 @@
         </div>
       </div>
 
+      <p class="note-preview" id="note-preview" hidden>
+        <span class="note-preview-text" id="note-preview-text"></span>
+        <button class="link quiet" id="note-edit">edit your note</button>
+      </p>
+
       <button class="link quiet back" id="back-to-today" hidden>← today</button>
     </section>
 
@@ -69,6 +75,7 @@
     <section id="view-journal" class="view" hidden>
       <h1>Past thoughts</h1>
       <p class="muted">Earlier days, and anything you wrote about them.</p>
+      <p class="count" id="journal-count" hidden></p>
       <ol class="journal" id="journal-list"></ol>
     </section>
 
@@ -76,7 +83,7 @@
     <section id="view-about" class="view" hidden>
       <h1>About</h1>
       <p>One thought each day, the same for everyone, drawn in turn from ten schools of thought: Stoicism, Epicureanism, Socrates and Plato, Aristotle's virtue ethics, Kant's duty ethics, Mill's utilitarianism, Existentialism, Buddhist philosophy, Taoism and Japanese thought.</p>
-      <p>Passages are chosen for their everyday wisdom and are usually excerpts; "…" marks where one has been shortened. The source link under "about this passage" lets you read it in full, in its own context.</p>
+      <p>Each day's thought is chosen for its everyday wisdom and is usually an excerpt; "…" marks where a text has been shortened. The source link under "about this thought" lets you read it in full, in its own context.</p>
       <p>Read slowly. Sit with the question. Write if you like, in a paper notebook or here; anything you type stays on this device, and you'll find it again in past thoughts.</p>
 
       <h2>Why Many Wells</h2>
@@ -125,7 +132,7 @@
       <p class="fine">
         <a id="report-link">report an issue</a>
         <span class="dot" aria-hidden="true">·</span>
-        <a id="suggest-link">suggest a reflection</a>
+        <a id="suggest-link">suggest something</a>
         <span class="dot" aria-hidden="true">·</span>
         <a href="#/terms">terms &amp; privacy</a>
       </p>
@@ -143,7 +150,7 @@
       <p>Nothing. Many Wells uses no analytics, no cookies and no tracking. Your name (if you give one), theme and silence settings are stored on your device alongside your notes. If you report an issue or suggest a reflection, your own email app sends exactly what you choose to write, and we only see that message. Once loaded, the app works entirely offline.</p>
 
       <h2>The texts</h2>
-      <p>Every passage is quoted from a public-domain text or translation, credited under "about this passage" with a link to its source. The short context notes and reflection questions are our own. Many Wells presents these schools of thought side by side for personal reflection; it does not endorse or rank any of them.</p>
+      <p>Every quotation comes from a public-domain text or translation, credited under "about this thought" with a link to its source. The short context notes and reflection questions are our own. Many Wells presents these schools of thought side by side for personal reflection; it does not endorse or rank any of them.</p>
 
       <h2>Not advice</h2>
       <p>Many Wells is a space for thought, not a substitute for medical or psychological care. If you are struggling, please reach out to someone you trust or a professional.</p>
@@ -188,7 +195,7 @@
       <button class="link quiet" id="closing-write">write about this</button>
       <button class="link quiet" id="closing-silence">sit in silence</button>
       <span class="dot" aria-hidden="true">·</span>
-      <button class="link quiet" id="closing-share">share today's thought</button>
+      <button class="link quiet" id="closing-share">share this thought</button>
     </div>
   </div>
 

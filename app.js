@@ -116,11 +116,6 @@
     return { phase, label };
   }
 
-  // A quiet line under "about this passage" on full and new moon days.
-  const MOON_NOTES = {
-    "full moon": "Full moon: as Kenkō noticed, the perfect circle lasts only a very short time before it begins to wane.",
-    "new moon": "New moon: the moon is between cycles tonight, a natural moment for a fresh start.",
-  };
 
   // A small line drawing of tonight's moon (as seen from the northern hemisphere).
   function moonIcon(phase) {
@@ -145,6 +140,7 @@
   let currentKey = null;
 
   function renderDay(key) {
+    flushNote();  // save any pending typing to the day it belongs to before switching
     const today = todayKey();
     // No peeking ahead.
     if (key > today) key = today;
@@ -154,7 +150,7 @@
     const moon = moonPhase(key);
     $("day-date").innerHTML =
       (key === today ? "Today · " : "") + formatDate(key) +
-      ` · <span class="moon" title="${moon.label}">${moonIcon(moon.phase)}${moon.label}</span>`;
+      ` · <button type="button" class="moon moon-btn" aria-haspopup="dialog" aria-label="Moon: ${moon.label}. Tap for details.">${moonIcon(moon.phase)}${moon.label}</button>`;
     // Verse (Lucretius) arrives with line breaks: one block per line, wrapped parts indented.
     const textEl = $("day-text");
     textEl.textContent = "";
@@ -188,10 +184,7 @@
     tr.appendChild(link);
     $("day-prompt").textContent = e.prompt;
 
-    const moonNote = MOON_NOTES[moon.label];
-    $("day-moon-note").textContent = moonNote || "";
-    $("day-moon-note").hidden = !moonNote;
-    markTerms(e.tradition, ["day-text", "day-tradition", "day-source", "day-context-text", "day-moon-note"]);
+    markTerms(e.tradition, ["day-text", "day-tradition", "day-source", "day-context-text"]);
     $("returning").hidden = !(key === today && returning);
     renderGreeting(key === today);
 
@@ -200,10 +193,29 @@
 
     const note = (readNote(key) || { text: "" }).text;
     $("note-text").value = note;
-    $("note").hidden = !note;
     $("note-done").hidden = !(note.trim() && key === today);
     $("note-status").textContent = "";
+    setWriting(false);
     $("back-to-today").hidden = key === today;
+  }
+
+  // The note box is open only while writing; otherwise a saved note shows as a one-line preview.
+  function setWriting(open) {
+    if (!open) flushNote();
+    const text = $("note-text").value.trim();
+    $("note").hidden = !open;
+    $("note-preview").hidden = open || !text;
+    $("note-preview-text").textContent = text.split("\n")[0];
+    $("open-note").setAttribute("aria-pressed", String(open));
+    document.querySelector("#view-day .actions").classList.toggle("writing", open);
+    if (open) $("note-text").focus();
+  }
+
+  function flushNote() {
+    if (!saveTimer) return;
+    clearTimeout(saveTimer);
+    saveTimer = null;
+    writeNote(currentKey, $("note-text").value, entryShown(currentKey).id);
   }
 
   let saveTimer;
@@ -212,6 +224,7 @@
     $("note-done").hidden = !($("note-text").value.trim() && currentKey === todayKey());
     $("note-status").textContent = "";
     saveTimer = setTimeout(() => {
+      saveTimer = null;
       const text = $("note-text").value;
       const ok = writeNote(currentKey, text, entryShown(currentKey).id);
       $("note-status").textContent = ok ? "saved" : "could not save on this device";
@@ -267,6 +280,9 @@
 
   // ---------- journal ----------
   function renderJournal() {
+    const n = dayCount();
+    $("journal-count").textContent = n === 1 ? "You've sat with 1 thought so far." : `You've sat with ${n} thoughts so far.`;
+    $("journal-count").hidden = n < 1;
     const list = $("journal-list");
     list.textContent = "";
     const today = keyToUTC(todayKey());
@@ -364,6 +380,7 @@
 
     const breath = $("breath"), cue = $("breath-cue");
     const cycle = () => {
+      if (!silence) return;
       breath.classList.remove("out"); breath.classList.add("in"); cue.textContent = "breathe in";
       silence.timers.push(setTimeout(() => {
         breath.classList.add("out"); breath.classList.remove("in"); cue.textContent = "breathe out";
@@ -445,11 +462,32 @@
 
   function openTerm(btn) {
     const g = glossary[+btn.dataset.term];
-    if (!g) return;
+    if (g) showCard(btn, g.term, g.def, g.wiki);
+  }
+
+  // The moon card: plain facts about the moon on the day shown, and Kenkō's line on full moons.
+  function openMoon(btn) {
+    const key = currentKey, { phase, label } = moonPhase(key);
+    const lit = Math.round((1 - Math.cos(2 * Math.PI * phase)) / 2 * 100);
+    const isToday = key === todayKey();
+    const next = (target) => {
+      const days = Math.round((((target - phase) % 1) + 1) % 1 * LUNATION);
+      const date = new Date(keyToUTC(key) + days * DAY).toLocaleDateString(undefined, { day: "numeric", month: "long", timeZone: "UTC" });
+      if (days === 0) return isToday ? "tonight" : "that night";
+      return isToday ? `in ${days} day${days === 1 ? "" : "s"} (${date})` : date;
+    };
+    const lines = [`About ${lit}% of the moon is lit${isToday ? " tonight" : ""}.`];
+    if (label !== "full moon") lines.push(`Next full moon: ${next(0.5)}.`);
+    if (label !== "new moon") lines.push(`Next new moon: ${next(0)}.`);
+    if (label === "full moon") lines.push("“The perfect circle of the full moon lasts only for a very short time; soon it begins to wane…” (Kenkō, Essays in Idleness 241)");
+    showCard(btn, label[0].toUpperCase() + label.slice(1), lines.join("\n"), "Lunar_phase");
+  }
+
+  function showCard(btn, title, text, wiki) {
     const card = $("term-card");
-    $("term-title").textContent = g.term;
-    $("term-def").textContent = g.def;
-    $("term-wiki").href = "https://en.wikipedia.org/wiki/" + encodeURIComponent(g.wiki).replace(/%2F/g, "/");
+    $("term-title").textContent = title;
+    $("term-def").textContent = text;
+    $("term-wiki").href = "https://en.wikipedia.org/wiki/" + encodeURIComponent(wiki).replace(/%2F/g, "/");
     card.hidden = false;
     // Place the card just below the word, or above it if there is no room.
     const r = btn.getBoundingClientRect(), w = card.offsetWidth, h = card.offsetHeight;
@@ -507,8 +545,8 @@
       `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     $("report-link").href = mail("Many Wells: an issue",
       `What happened?\n\n\nWhat did you expect?\n\n\n—\nDay: ${todayKey()} (${e.id})\nDevice: ${navigator.userAgent}`);
-    $("suggest-link").href = mail("Many Wells: a reflection suggestion",
-      "The passage (with author, book and translation if you know it):\n\n\nWhich school of thought is it from?\n\n\nWhy does it speak to you?\n\n");
+    $("suggest-link").href = mail("Many Wells: a suggestion",
+      "What would you like to suggest? (an improvement, a thought to add, or anything else)\n\n\nIf it's a thought to add: who wrote it, in which book, and which school of thought is it from?\n\n\nWhy does it matter to you?\n\n");
   }
 
   // ---------- gentle ending ----------
@@ -534,14 +572,35 @@
     const today = todayKey();
     let fresh = false;
     try { fresh = !sessionStorage.getItem("reflect:session"); sessionStorage.setItem("reflect:session", "1"); } catch {}
-    returning = fresh && store.get("lastSeen") === today;
+    // Once shown, the "already read" line stays for the rest of the session (a refresh included).
+    let shown = false;
+    try { shown = sessionStorage.getItem("reflect:returning") === today; } catch {}
+    returning = shown || (fresh && store.get("lastSeen") === today);
+    if (returning) rememberReturning();
     store.set("lastSeen", today);
+    countDay(today);
+  }
+
+  function rememberReturning() {
+    try { sessionStorage.setItem("reflect:returning", todayKey()); } catch {}
+  }
+
+  // A quiet, guilt-free count of days the app was opened. It only grows; it never resets.
+  function countDay(key) {
+    let days = [];
+    try { days = JSON.parse(store.get("days", "[]")) || []; } catch {}
+    if (!days.includes(key)) { days.push(key); store.set("days", JSON.stringify(days)); }
+  }
+
+  function dayCount() {
+    try { return (JSON.parse(store.get("days", "[]")) || []).length; } catch { return 0; }
   }
 
   function onVisibility() {
     if (document.hidden) { hiddenAt = Date.now(); return; }
     if (hiddenAt && Date.now() - hiddenAt > AWAY_MS && store.get("lastSeen") === todayKey()) {
       returning = true;
+      rememberReturning();
       if (!location.hash.replace(/^#\/?/, "")) renderDay(todayKey());
     }
   }
@@ -591,10 +650,8 @@
       $("day-context").hidden = !open;
       $("context-toggle").setAttribute("aria-expanded", String(open));
     });
-    $("open-note").addEventListener("click", () => {
-      $("note").hidden = false;
-      $("note-text").focus();
-    });
+    $("open-note").addEventListener("click", () => setWriting($("note").hidden));
+    $("note-edit").addEventListener("click", () => setWriting(true));
     $("note-text").addEventListener("input", onNoteInput);
     $("share").addEventListener("click", share);
     $("back-to-today").addEventListener("click", () => (location.hash = "#/"));
@@ -604,12 +661,11 @@
       finishSilence(true);
       if (completed && currentKey === todayKey()) showClosing("silence");
     });
-    $("note-done").addEventListener("click", () => showClosing("writing"));
+    $("note-done").addEventListener("click", () => { setWriting(false); showClosing("writing"); });
     $("closing-back").addEventListener("click", () => { hideClosing(); window.scrollTo(0, 0); });
     $("closing-write").addEventListener("click", () => {
       hideClosing();
-      $("note").hidden = false;
-      $("note-text").focus();
+      setWriting(true);
     });
     $("closing-silence").addEventListener("click", () => {
       hideClosing();
@@ -619,8 +675,8 @@
     $("closing-share").addEventListener("click", share);
     document.addEventListener("visibilitychange", onVisibility);
     document.addEventListener("click", (ev) => {
-      const term = ev.target.closest(".term");
-      if (term) { ev.preventDefault(); openTerm.from === term && !$("term-card").hidden ? closeTerm() : openTerm(term); return; }
+      const term = ev.target.closest(".term, .moon-btn");
+      if (term) { ev.preventDefault(); openTerm.from === term && !$("term-card").hidden ? closeTerm() : term.classList.contains("moon-btn") ? openMoon(term) : openTerm(term); return; }
       if (!ev.target.closest("#term-card")) closeTerm();
     });
     $("term-close").addEventListener("click", closeTerm);

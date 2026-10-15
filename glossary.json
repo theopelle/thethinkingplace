@@ -843,5 +843,653 @@
   ],
   "wiki": "Hōjōki",
   "def": "Chōmei's short book of 1212, 'An Account of My Ten-Foot Hut', on impermanence and the joys of a simple life."
+ },
+ {
+  "term": "Judgment",
+  "match": [
+   "judgment",
+   "judgement",
+   "opinion",
+   "opinions"
+  ],
+  "scope": [
+   "Stoicism"
+  ],
+  "wiki": "Stoic_passions",
+  "def": "For the Stoics, what upsets us is not events but our judgment about them. An impression arrives and we decide whether to agree with it; fear and anger follow from that agreement, so changing the judgment changes the feeling."
+ },
+ {
+  "term": "What is in our power",
+  "match": [
+   "in our power",
+   "in thy power"
+  ],
+  "scope": [
+   "Stoicism"
+  ],
+  "wiki": "Enchiridion_of_Epictetus",
+  "def": "Epictetus' basic division of life. Our judgments, intentions and actions are up to us; our body, possessions, reputation and other people's choices are not. Peace comes from caring most about the first and accepting the second."
+ },
+ {
+  "term": "Virtue",
+  "match": [
+   "virtue",
+   "virtues"
+  ],
+  "scope": [
+   "Stoicism"
+  ],
+  "wiki": "Stoicism",
+  "def": "For the Stoics, virtue (wisdom, justice, courage and self-control) is the only true good. Health, wealth and reputation are 'indifferent': pleasant to have, but they cannot make a life good or bad."
+ },
+ {
+  "term": "Tranquillity",
+  "match": [
+   "tranquil",
+   "tranquillity"
+  ],
+  "scope": [
+   "Stoicism"
+  ],
+  "wiki": "De_Tranquillitate_Animi",
+  "def": "The steady, untroubled mind the Stoics aimed for. Seneca, in On Tranquillity of Mind, borrows the Greek word euthymia: a mind at peace with itself, reached through right judgment rather than outside comfort."
+ },
+ {
+  "term": "Death",
+  "match": [
+   "death"
+  ],
+  "scope": [
+   "Stoicism"
+  ],
+  "wiki": "Memento_mori",
+  "def": "The Stoics kept death in view on purpose. Remembering that life is short was meant not to frighten but to sharpen attention to the present and to what matters."
+ },
+ {
+  "term": "Pleasure",
+  "match": [
+   "pleasure",
+   "pleasures"
+  ],
+  "scope": [
+   "Epicureanism"
+  ],
+  "wiki": "Epicureanism",
+  "def": "For Epicurus, pleasure is the goal of life, but he meant above all the absence of pain in the body and of trouble in the mind, not indulgence. Simple pleasures, wisely chosen, are enough."
+ },
+ {
+  "term": "Desire",
+  "match": [
+   "desires",
+   "desire"
+  ],
+  "scope": [
+   "Epicureanism"
+  ],
+  "wiki": "Epicureanism",
+  "def": "Epicurus sorted desires into three kinds: natural and necessary (food, shelter, friends), natural but unnecessary (luxuries), and empty ones (fame, power, endless wealth). Only the first need satisfying; the empty ones never can be."
+ },
+ {
+  "term": "Friendship",
+  "match": [
+   "friendship",
+   "friends"
+  ],
+  "scope": [
+   "Epicureanism"
+  ],
+  "wiki": "Epicurus",
+  "def": "Epicurus counted friendship among the greatest goods of a pleasant life. He lived with his friends in a shared garden and saw them as our best security in an uncertain world."
+ },
+ {
+  "term": "Soul",
+  "match": [
+   "soul"
+  ],
+  "scope": [
+   "Epicureanism"
+  ],
+  "wiki": "Epicureanism",
+  "def": "For Epicurus and Lucretius, the soul is made of fine atoms spread through the body. It feels and thinks, but it scatters when we die, which is why death is 'nothing to us'."
+ },
+ {
+  "term": "Death",
+  "match": [
+   "death"
+  ],
+  "scope": [
+   "Epicureanism"
+  ],
+  "wiki": "Epicurus",
+  "def": "Epicurus' best-known teaching: death is nothing to us. Where death is, we are not; where we are, death is not. Fearing it only spoils the life we have now."
+ },
+ {
+  "term": "Soul",
+  "match": [
+   "soul"
+  ],
+  "scope": [
+   "Platonism"
+  ],
+  "wiki": "Plato's_theory_of_soul",
+  "def": "For Plato, the soul (psyche) is the true self: what thinks, chooses and, he believed, outlives the body. In the Republic he divides it into reason, spirit and appetite; a healthy soul is one where reason leads."
+ },
+ {
+  "term": "Justice",
+  "match": [
+   "justice",
+   "unjust",
+   "just man"
+  ],
+  "scope": [
+   "Platonism"
+  ],
+  "wiki": "Republic_(Plato)",
+  "def": "In the Republic, justice is not only fair dealing with others but order within: each part of the soul doing its own work, with reason in charge. Socrates argues it is better to suffer wrong than to do it."
+ },
+ {
+  "term": "Love",
+  "match": [
+   "love"
+  ],
+  "scope": [
+   "Platonism"
+  ],
+  "wiki": "Platonic_love",
+  "def": "Love (eros) in Plato's Symposium is a longing for what we lack. Diotima describes it as a ladder, from one beautiful body to beautiful souls and ideas, and finally to beauty itself. This is the origin of 'Platonic love'."
+ },
+ {
+  "term": "Philosophy",
+  "match": [
+   "philosophy",
+   "philosopher"
+  ],
+  "scope": [
+   "Platonism"
+  ],
+  "wiki": "Philosophy",
+  "def": "From the Greek for 'love of wisdom'. For Plato's Socrates, a philosopher does not possess wisdom but longs for it, and philosophy is a way of life: examining oneself and turning the soul toward what is true."
+ },
+ {
+  "term": "Socratic wisdom",
+  "match": [
+   "wisest"
+  ],
+  "scope": [
+   "Platonism"
+  ],
+  "wiki": "I_know_that_I_know_nothing",
+  "def": "When the oracle called Socrates the wisest man in Athens, he concluded that his only wisdom was knowing that he did not know. Others thought they knew; he did not pretend to."
+ },
+ {
+  "term": "Virtue",
+  "match": [
+   "virtue"
+  ],
+  "scope": [
+   "Platonism"
+  ],
+  "wiki": "Arete",
+  "def": "Virtue (aretē) means excellence: being good at being human. Socrates held that virtue is a kind of knowledge, so that no one does wrong knowingly, and that it matters more than wealth or fame."
+ },
+ {
+  "term": "Virtue",
+  "match": [
+   "virtue",
+   "virtues"
+  ],
+  "scope": [
+   "Virtue Ethics"
+  ],
+  "wiki": "Arete",
+  "def": "For Aristotle, a virtue is a settled trait of character: a disposition to feel and act well, built by practice the way a skill is. We become brave by doing brave things."
+ },
+ {
+  "term": "Happiness",
+  "match": [
+   "happiness"
+  ],
+  "scope": [
+   "Virtue Ethics"
+  ],
+  "wiki": "Eudaimonia",
+  "def": "Aristotle's word is eudaimonia, often translated 'flourishing'. It is not a passing mood but a whole life lived well, in line with virtue, and the one thing we want purely for its own sake."
+ },
+ {
+  "term": "The mean",
+  "match": [
+   "mean state",
+   "the mean",
+   "a 'mean'"
+  ],
+  "scope": [
+   "Virtue Ethics"
+  ],
+  "wiki": "Golden_mean_(philosophy)",
+  "def": "Aristotle's idea that each virtue lies between two vices, one of excess and one of deficiency: courage sits between recklessness and cowardice. The mean is not an exact midpoint but what fits the person and the moment."
+ },
+ {
+  "term": "Friendship",
+  "match": [
+   "friendship",
+   "friends",
+   "friend"
+  ],
+  "scope": [
+   "Virtue Ethics"
+  ],
+  "wiki": "Philia",
+  "def": "Aristotle's philia covers friendship and affection. He names three kinds: friendships of usefulness, of pleasure and of goodness. Only the last lasts, because each loves the other for who they are."
+ },
+ {
+  "term": "Pleasure",
+  "match": [
+   "pleasure",
+   "pleasures"
+  ],
+  "scope": [
+   "Virtue Ethics"
+  ],
+  "wiki": "Nicomachean_Ethics",
+  "def": "For Aristotle, pleasure is not the aim but what completes a good activity. A good person enjoys acting well, so training what we take pleasure and pain in lies at the heart of ethics."
+ },
+ {
+  "term": "Habit",
+  "match": [
+   "habit",
+   "habits"
+  ],
+  "scope": [
+   "Virtue Ethics"
+  ],
+  "wiki": "Hexis",
+  "def": "Aristotle held that character is formed by habit: we become just by doing just acts. The result is a hexis, a stable disposition, which is why early training matters so much."
+ },
+ {
+  "term": "Duty",
+  "match": [
+   "duty",
+   "duties"
+  ],
+  "scope": [
+   "Duty Ethics"
+  ],
+  "wiki": "Kantian_ethics",
+  "def": "For Kant, an action has moral worth only when done from duty, out of respect for the moral law, not merely from inclination or self-interest. Duty is what reason says we must do, whatever we happen to feel."
+ },
+ {
+  "term": "Good will",
+  "match": [
+   "good will"
+  ],
+  "scope": [
+   "Duty Ethics"
+  ],
+  "wiki": "Kantian_ethics",
+  "def": "Kant's starting point: nothing is good without qualification except a good will. Talents, courage and even happiness can be misused; a will set on doing right stays good even if it fails."
+ },
+ {
+  "term": "Moral law",
+  "match": [
+   "moral law",
+   "universal law"
+  ],
+  "scope": [
+   "Duty Ethics"
+  ],
+  "wiki": "Categorical_imperative",
+  "def": "The principle reason gives every rational being, which Kant calls the categorical imperative: act only on a rule you could will everyone to follow, and treat people always as ends, never merely as means."
+ },
+ {
+  "term": "Respect",
+  "match": [
+   "respect"
+  ],
+  "scope": [
+   "Duty Ethics"
+  ],
+  "wiki": "Kantian_ethics",
+  "def": "In Kant, respect is the feeling produced by reason itself: being humbled by the moral law, and by people who live up to it. Acting from duty means acting out of this respect."
+ },
+ {
+  "term": "Dignity",
+  "match": [
+   "dignity"
+  ],
+  "scope": [
+   "Duty Ethics"
+  ],
+  "wiki": "Dignity",
+  "def": "Kant distinguished price from dignity. Things have a price and can be replaced; persons, as rational beings who can give themselves the moral law, have dignity, a worth beyond any price."
+ },
+ {
+  "term": "Inclination",
+  "match": [
+   "inclination"
+  ],
+  "scope": [
+   "Duty Ethics"
+  ],
+  "wiki": "Kantian_ethics",
+  "def": "Kant's word for our natural desires and feelings. Inclinations are not bad, but acting from them alone, however kindly, is not yet acting from duty."
+ },
+ {
+  "term": "Happiness",
+  "match": [
+   "happiness"
+  ],
+  "scope": [
+   "Utilitarianism"
+  ],
+  "wiki": "Utilitarianism",
+  "def": "For Mill, happiness means pleasure and the absence of pain, and it is the measure of right and wrong, with everyone's counting equally. He also found it is best reached indirectly, by aiming at something else."
+ },
+ {
+  "term": "Higher pleasures",
+  "match": [
+   "higher pleasures",
+   "nobler feelings"
+  ],
+  "scope": [
+   "Utilitarianism"
+  ],
+  "wiki": "Utilitarianism",
+  "def": "Mill's answer to critics who called utilitarianism a philosophy for pigs: pleasures differ in quality, not only amount. Those of thought, feeling and imagination are higher, and people who know both kinds prefer them."
+ },
+ {
+  "term": "Utility",
+  "match": [
+   "utility"
+  ],
+  "scope": [
+   "Utilitarianism"
+  ],
+  "wiki": "Utilitarianism",
+  "def": "The capacity of an action to produce happiness and prevent suffering. Bentham and Mill made it the foundation of morals."
+ },
+ {
+  "term": "Liberty",
+  "match": [
+   "liberty",
+   "freedom"
+  ],
+  "scope": [
+   "Utilitarianism"
+  ],
+  "wiki": "On_Liberty",
+  "def": "In On Liberty, Mill argues that people should be free to think, speak and live as they choose, as long as they do not harm others. Freedom lets each person find their own way, and lets new ideas start anywhere."
+ },
+ {
+  "term": "Individuality",
+  "match": [
+   "individuality",
+   "individual"
+  ],
+  "scope": [
+   "Utilitarianism"
+  ],
+  "wiki": "On_Liberty",
+  "def": "Mill saw individuality, developing your own character, desires and judgment rather than copying custom, as part of happiness itself. People are not machines built to a pattern but trees that grow in their own way."
+ },
+ {
+  "term": "Self-deception",
+  "match": [
+   "self-deception",
+   "lie to yourself",
+   "lies to himself"
+  ],
+  "scope": [
+   "Existentialism"
+  ],
+  "wiki": "Self-deception",
+  "def": "Lying to oneself: hiding from a truth we half know. Dostoevsky saw it as a root of unhappiness, and later existentialists made it a central theme: we flee our freedom by pretending things are fixed."
+ },
+ {
+  "term": "Active love",
+  "match": [
+   "love in action"
+  ],
+  "scope": [
+   "Existentialism"
+  ],
+  "wiki": "The_Brothers_Karamazov",
+  "def": "Zosima's ideal in The Brothers Karamazov: love shown in patient, daily deeds toward real and difficult people, rather than in dreams of loving humanity. It is slow and costly, and it is what heals."
+ },
+ {
+  "term": "Become who you are",
+  "match": [
+   "become what thou art"
+  ],
+  "scope": [
+   "Existentialism"
+  ],
+  "wiki": "Ecce_Homo_(book)",
+  "def": "A line Nietzsche took from the Greek poet Pindar. It asks us to grow into our own nature instead of living by borrowed values. He later subtitled his autobiography 'How One Becomes What One Is'."
+ },
+ {
+  "term": "The heart's reasons",
+  "match": [
+   "the heart has its reasons"
+  ],
+  "scope": [
+   "Existentialism"
+  ],
+  "wiki": "Pensées",
+  "def": "Pascal's claim that not all knowing is logical: some truths are grasped by intuition and feeling, which he calls the heart, before reason can prove them."
+ },
+ {
+  "term": "Diversion",
+  "match": [
+   "diversion",
+   "distraction"
+  ],
+  "scope": [
+   "Existentialism"
+  ],
+  "wiki": "Pensées",
+  "def": "Pascal's word (divertissement) for everything we do to avoid being alone with our thoughts: games, busyness, noise. It consoles us, he says, but keeps us from facing our condition."
+ },
+ {
+  "term": "Mind",
+  "match": [
+   "mind"
+  ],
+  "scope": [
+   "Buddhist Philosophy"
+  ],
+  "wiki": "Citta",
+  "def": "In the Dhammapada the mind (citta) comes first: as we think, so we become. It is restless by nature but can be trained, and a well-trained mind is the greatest help we have."
+ },
+ {
+  "term": "Hatred",
+  "match": [
+   "hatred"
+  ],
+  "scope": [
+   "Buddhist Philosophy"
+  ],
+  "wiki": "Three_poisons",
+  "def": "One of the three 'poisons' or unwholesome roots in Buddhism, with greed and delusion. Hatred keeps the cycle of harm turning; the Dhammapada says it ends only through its opposite."
+ },
+ {
+  "term": "Craving",
+  "match": [
+   "craving"
+  ],
+  "scope": [
+   "Buddhist Philosophy"
+  ],
+  "wiki": "Taṇhā",
+  "def": "Taṇhā, literally 'thirst': the restless wanting of pleasure, of being, or of not-being. Buddhism names it as the main cause of suffering; letting it go is the way to peace."
+ },
+ {
+  "term": "Suffering",
+  "match": [
+   "suffers",
+   "suffer",
+   "pain"
+  ],
+  "scope": [
+   "Buddhist Philosophy"
+  ],
+  "wiki": "Dukkha",
+  "def": "Dukkha means suffering, but also unease and unsatisfactoriness: the sense that nothing we grasp stays or fully satisfies. Seeing it clearly is the first of the Four Noble Truths."
+ },
+ {
+  "term": "Self",
+  "match": [
+   "self"
+  ],
+  "scope": [
+   "Buddhist Philosophy"
+  ],
+  "wiki": "Anattā",
+  "def": "Buddhism teaches anattā, 'non-self': nothing in us is a fixed, permanent essence. When the Dhammapada calls the self its own master, it means our own effort and conduct, which no one else can tend for us."
+ },
+ {
+  "term": "The wise",
+  "match": [
+   "wise man",
+   "wise people",
+   "the wise",
+   "wise"
+  ],
+  "scope": [
+   "Buddhist Philosophy"
+  ],
+  "wiki": "Dhammapada",
+  "def": "A whole chapter of the Dhammapada is about the wise (paṇḍita). It means not the learned but those who see clearly, train themselves, stay steady through praise and blame, and do no harm."
+ },
+ {
+  "term": "Emptiness",
+  "match": [
+   "empty",
+   "emptiness"
+  ],
+  "scope": [
+   "Taoism"
+  ],
+  "wiki": "Tao_Te_Ching",
+  "def": "Laozi's image: a wheel, a bowl or a room is useful because of its empty space. Emptiness is not lack but room, an openness that lets things happen."
+ },
+ {
+  "term": "Softness",
+  "match": [
+   "softest",
+   "soft",
+   "weak"
+  ],
+  "scope": [
+   "Taoism"
+  ],
+  "wiki": "Tao_Te_Ching",
+  "def": "A recurring Taoist teaching: the soft and yielding outlast the hard and rigid. Water wears down stone; a living plant bends where a dead one breaks."
+ },
+ {
+  "term": "Water",
+  "match": [
+   "water"
+  ],
+  "scope": [
+   "Taoism"
+  ],
+  "wiki": "Tao_Te_Ching",
+  "def": "Taoism's favourite image of the Tao. Water benefits all things without competing, settles in the low places others avoid, and yet nothing overcomes the hard so well."
+ },
+ {
+  "term": "Stillness",
+  "match": [
+   "be still",
+   "still water",
+   "stillness"
+  ],
+  "scope": [
+   "Taoism"
+  ],
+  "wiki": "Wu_wei",
+  "def": "Muddy water clears when left alone. Taoists prize stillness and not forcing things, letting them settle by themselves, close to the ideal of wu wei, effortless action."
+ },
+ {
+  "term": "Great knowledge",
+  "match": [
+   "great knowledge",
+   "knowledge"
+  ],
+  "scope": [
+   "Taoism"
+  ],
+  "wiki": "Zhuangzi_(book)",
+  "def": "Zhuangzi distrusts knowledge that is sure of itself. Small knowledge sees a part and takes it for the whole; great knowledge holds its views lightly, knowing a limited life cannot master a limitless world."
+ },
+ {
+  "term": "The useless tree",
+  "match": [
+   "of no use",
+   "useless"
+  ],
+  "scope": [
+   "Taoism"
+  ],
+  "wiki": "Zhuangzi_(book)",
+  "def": "Zhuangzi's old tree is worthless to the carpenter, and that is why it lived so long. What the world calls useless may be what lets something flourish on its own terms."
+ },
+ {
+  "term": "Impermanence",
+  "match": [
+   "impermanence",
+   "evanescence"
+  ],
+  "scope": [
+   "Japanese Thought"
+  ],
+  "wiki": "Mono_no_aware",
+  "def": "The passing of all things (mujō) runs through Japanese writing. Mono no aware, 'the pathos of things', is the gentle feeling it brings: things are dearer because they do not last."
+ },
+ {
+  "term": "Beauty",
+  "match": [
+   "the beautiful",
+   "beauty"
+  ],
+  "scope": [
+   "Japanese Thought"
+  ],
+  "wiki": "The_Book_of_Tea",
+  "def": "For Okakura, Teaism is the adoration of the beautiful in everyday life: beauty found in small, ordinary things given full attention, rather than in display."
+ },
+ {
+  "term": "Imperfection",
+  "match": [
+   "imperfection",
+   "imperfect"
+  ],
+  "scope": [
+   "Japanese Thought"
+  ],
+  "wiki": "Wabi-sabi",
+  "def": "Okakura calls Teaism a worship of the Imperfect. The related ideal of wabi-sabi finds beauty in what is incomplete, worn or passing, leaving room for the imagination to finish it."
+ },
+ {
+  "term": "Emptiness",
+  "match": [
+   "emptiness",
+   "vacant"
+  ],
+  "scope": [
+   "Japanese Thought"
+  ],
+  "wiki": "Ma_(negative_space)",
+  "def": "Okakura, echoing Laozi, says the use of a pitcher lies in its emptiness. Japanese aesthetics calls this meaningful open space or pause ma: room that lets things breathe."
+ },
+ {
+  "term": "Simplicity",
+  "match": [
+   "simplicity"
+  ],
+  "scope": [
+   "Japanese Thought"
+  ],
+  "wiki": "Wabi-sabi",
+  "def": "The tea room is deliberately plain. Wabi, the beauty of simple, quiet and unadorned things, values having enough over having more."
  }
 ]

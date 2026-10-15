@@ -3,6 +3,7 @@
   --fg: #2b2a28;
   --muted: #6f6a62;  /* 4.9:1 on paper (WCAG AA) */
   --faint: #d9d3c9;
+  --accent: #2f4b4c;  /* the well water in the icon; 9:1 on paper */
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   color-scheme: light;
@@ -13,6 +14,7 @@
     --fg: #e6e1d8;
     --muted: #9a958c;
     --faint: #3a3835;
+    --accent: #9fc0bd;
     color-scheme: dark;
   }
 }
@@ -21,6 +23,7 @@
   --fg: #e6e1d8;
   --muted: #9a958c;
   --faint: #3a3835;
+  --accent: #9fc0bd;
   color-scheme: dark;
 }
 
@@ -67,6 +70,10 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 .date { color: var(--muted); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; text-align: center; margin: 0 0 3rem; }
 
 .moon { white-space: nowrap; }
+.moon-btn { font: inherit; color: inherit; letter-spacing: inherit; text-transform: inherit; background: none; border: 0; padding: 0;
+  cursor: pointer; border-bottom: 1px dotted color-mix(in srgb, var(--muted) 60%, transparent); }
+.moon-btn:focus-visible { outline: 1px solid var(--muted); outline-offset: 3px; }
+.term-def { white-space: pre-line; }
 .moon svg { width: 1.05em; height: 1.05em; vertical-align: -.2em; margin-right: .4em; }
 .moon circle { fill: none; stroke: var(--muted); stroke-width: 1.2; }
 .moon path { fill: var(--muted); }
@@ -84,7 +91,8 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 .journal .j-text { white-space: pre-line; }  /* verse keeps its line breaks */
 .passage.verse p { font-size: clamp(1.05rem, 3.9vw, 1.25rem); line-height: 1.5; }
 .verse-line { display: block; padding-left: 1.4em; text-indent: -1.4em; }
-.source { text-align: center; color: var(--muted); font-size: .9rem; margin: 2rem 0 .5rem; }
+.school { text-align: center; color: var(--accent); font: 500 .72rem/1.4 var(--sans); letter-spacing: .2em; text-transform: uppercase; margin: 0 0 1.6rem; }
+.source { text-align: center; color: var(--muted); font-size: .9rem; margin: 2rem 0 1rem; }
 .full-verse { text-align: center; margin: 0 0 .5rem; font-size: .75rem; }
 .full-verse a { color: var(--muted); }
 .tradition { font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; }
@@ -94,11 +102,12 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 .translation { font-size: .8rem; font-style: italic; }
 .translation a { color: inherit; }
 
+.question { margin: 3.5rem auto 0; text-align: center; }
+.question-label { color: var(--muted); font: 400 .7rem/1.4 var(--sans); letter-spacing: .18em; text-transform: uppercase; margin: 0 0 .7rem; }
 .prompt {
   font: italic 400 1.15rem/1.5 var(--serif);
   text-align: center;
-  margin: 3.5rem auto 0;
-  max-width: 24rem;
+  margin: 0 auto;
   text-wrap: balance;
 }
 
@@ -119,6 +128,15 @@ button.quiet { color: var(--muted); font-size: .8rem; display: block; margin: 0 
 button[aria-checked="true"] { border-bottom-color: var(--fg); }
 
 .note { margin-top: 2rem; }
+/* While writing, "write about this" reads as selected and the other actions step back. */
+.actions.writing button.link { color: var(--muted); }
+.actions.writing #open-note { color: var(--fg); border-bottom-color: var(--fg); }
+.note-preview { margin: 1.8rem auto 0; text-align: center; color: var(--muted); font-size: .85rem; }
+.note-preview-text { display: block; font: italic 400 1rem/1.5 var(--serif); color: var(--fg); margin-bottom: .2rem;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 26rem; margin-inline: auto; }
+.note-preview-text::before { content: "✎ "; color: var(--muted); }
+.note-preview button.quiet { display: inline; }
+.count { color: var(--muted); font: italic 400 .95rem/1.5 var(--serif); margin: -.25rem 0 0; }
 textarea {
   width: 100%;
   background: transparent;
