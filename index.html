@@ -37,7 +37,7 @@
         <p id="day-text"></p>
       </blockquote>
 
-      <p class="source"><span id="day-source"></span><span class="dot" aria-hidden="true"> · </span><button class="link quiet share-link" id="share" aria-label="Share this thought">share</button></p>
+      <p class="source"><span id="day-source"></span><span class="dot" aria-hidden="true"> · </span><button class="link quiet share-link" id="share" aria-label="Copy this thought to share it">share</button><span class="dot" aria-hidden="true"> · </span><button class="link quiet share-link" id="save" aria-pressed="false">save</button></p>
 
       <button class="link quiet" id="context-toggle" aria-expanded="false" aria-controls="day-context">about this thought</button>
       <div class="context" id="day-context" hidden>
@@ -49,6 +49,13 @@
       <div class="question">
         <p class="question-label">A question to sit with</p>
         <p class="prompt" id="day-prompt"></p>
+      </div>
+
+      <!-- When a thought comes back: when you first met it, and what you wrote then -->
+      <div class="memory" id="memory" hidden>
+        <p class="memory-when" id="memory-when"></p>
+        <p class="memory-note" id="memory-note" hidden></p>
+        <a class="memory-link" id="memory-link">read that day</a>
       </div>
 
       <div class="actions">
@@ -93,6 +100,8 @@
         <button type="button" class="filter" id="filter-path" data-filter="path" aria-haspopup="listbox" aria-expanded="false">all paths</button>
         <span class="dot" aria-hidden="true">·</span>
         <button type="button" class="filter" id="filter-theme" data-filter="theme" aria-haspopup="listbox" aria-expanded="false">all themes</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button type="button" class="filter filter-toggle" id="filter-saved" aria-pressed="false">saved</button>
       </div>
       <ol class="journal" id="journal-list"></ol>
       <p class="muted journal-empty" id="journal-empty" hidden>No past thoughts here yet.</p>
@@ -113,11 +122,22 @@
 
       <h2>Appearance</h2>
       <div class="choice" role="radiogroup" aria-label="Theme">
+        <span class="setting-label">theme</span>
         <button class="link" data-theme-choice="auto" role="radio">auto</button>
         <span class="dot" aria-hidden="true">·</span>
         <button class="link" data-theme-choice="light" role="radio">light</button>
         <span class="dot" aria-hidden="true">·</span>
         <button class="link" data-theme-choice="dark" role="radio">dark</button>
+      </div>
+      <div class="choice setting-row" role="radiogroup" aria-label="Text size">
+        <span class="setting-label">text size</span>
+        <button class="link" data-text-size="0.92" role="radio">small</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-text-size="1" role="radio">normal</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-text-size="1.12" role="radio">large</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-text-size="1.25" role="radio">larger</button>
       </div>
 
       <h2>Sit and think</h2>

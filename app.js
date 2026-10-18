@@ -228,6 +228,57 @@
       b.setAttribute("aria-checked", String(b.dataset[key] === String(value))));
   }
 
+  // ---------- saved thoughts ----------
+  // "save" keeps a thought (with the day it was read) to find it again in past thoughts.
+  function savedList() {
+    try { return JSON.parse(store.get("saved", "[]")) || []; } catch { return []; }
+  }
+  const isSaved = (id) => savedList().some((x) => x.id === id);
+  function toggleSaved() {
+    const e = entryShown(currentKey), list = savedList();
+    const next = isSaved(e.id) ? list.filter((x) => x.id !== e.id) : [...list, { id: e.id, key: currentKey }];
+    store.set("saved", JSON.stringify(next));
+    renderSaved(e);
+    if (!isSaved(e.id)) return;
+    toast("Saved. Find it again in past thoughts.");
+  }
+  function renderSaved(e) {
+    const on = isSaved(e.id);
+    $("save").textContent = on ? "saved" : "save";
+    $("save").setAttribute("aria-pressed", String(on));
+  }
+
+  // ---------- meeting a thought again ----------
+  // When a thought comes back (Sunday revisits, or a day reread), the page recalls when you
+  // first met it, and what you wrote then.
+  function firstMeeting(key, id) {
+    let days = [];
+    try { days = JSON.parse(store.get("days", "[]")) || []; } catch {}
+    const dates = [...new Set([...days, ...store.keys("note:").map((k) => k.slice(5))])].filter((d) => d < key).sort();
+    return dates.find((d) => entryShown(d).id === id) || null;
+  }
+  function renderMemory(key, e) {
+    const first = firstMeeting(key, e.id);
+    $("memory").hidden = !first;
+    if (!first) return;
+    const sameYear = first.slice(0, 4) === key.slice(0, 4);
+    const when = new Date(keyToUTC(first)).toLocaleDateString(undefined,
+      { weekday: "long", day: "numeric", month: "long", year: sameYear ? undefined : "numeric", timeZone: "UTC" });
+    const note = (readNote(first) || { text: "" }).text.trim();
+    $("memory-when").textContent = `You first met this thought on ${when}.` + (note ? " You wrote:" : "");
+    $("memory-note").hidden = !note;
+    $("memory-note").textContent = note.length > 280 ? note.slice(0, 280).trimEnd() + "…" : note;
+    $("memory-link").href = "#/day/" + first;
+    $("memory-link").textContent = note ? "read it all" : "read that day";
+  }
+
+  // ---------- text size ----------
+  function setTextSize(v) {
+    store.set("textSize", String(v));
+    document.documentElement.style.fontSize = Number(v) === 1 ? "" : `${Number(v) * 100}%`;
+    checkChoice("[data-text-size]", "textSize", v);
+  }
+
   // ---------- day view ----------
   let currentKey = null;
 
@@ -274,6 +325,8 @@
     link.textContent = "source";
     tr.appendChild(link);
     $("day-prompt").textContent = e.prompt;
+    renderSaved(e);
+    renderMemory(key, e);
 
     markTerms(e.path, ["day-text", "day-path", "day-source", "day-context-text"]);
     renderGreeting(key === today);
@@ -379,7 +432,7 @@
   // ---------- past thoughts ----------
   // Every day since the calendar began (plus any older day with a note), newest first,
   // ten at a time, optionally narrowed to one path or one theme.
-  const journal = { path: "", theme: "", shown: PAGE_DAYS };
+  const journal = { path: "", theme: "", saved: false, shown: PAGE_DAYS };
   const FILTER_ALL = { path: "all paths", theme: "all themes" };
   let filterLists = { path: [], theme: [] };
 
@@ -426,8 +479,9 @@
     for (let t = keyToUTC(today); t >= keyToUTC(calendar.start); t -= DAY) keys.add(utcToKey(t));
     return [...keys].sort().reverse().filter((key) => {
       const e = entryShown(key);
-      return (!journal.path || e.path === journal.path) && (!journal.theme || (e.themes || []).includes(journal.theme));
-    });
+      return (!journal.path || e.path === journal.path) && (!journal.theme || (e.themes || []).includes(journal.theme)) &&
+        (!journal.saved || isSaved(e.id));
+    }).filter((key, i, all) => !journal.saved || all.findIndex((k) => entryShown(k).id === entryShown(key).id) === i);
   }
 
   function renderJournal() {
@@ -435,6 +489,8 @@
     $("journal-count").textContent = n === 1 ? "You've sat with 1 thought so far." : `You've sat with ${n} thoughts so far.`;
     $("journal-count").hidden = n < 1;
     renderBackupNudge();
+    $("filter-saved").classList.toggle("active", journal.saved);
+    $("filter-saved").setAttribute("aria-pressed", String(journal.saved));
     for (const kind of ["path", "theme"]) {
       const btn = $("filter-" + kind);
       btn.textContent = journal[kind] || FILTER_ALL[kind];
@@ -462,6 +518,7 @@
       list.appendChild(li);
     }
     $("journal-empty").hidden = days.length > 0;
+    $("journal-empty").textContent = journal.saved ? "Nothing saved yet. Tap “save” under a thought to keep it here." : "No past thoughts here yet.";
     $("journal-more").hidden = days.length <= journal.shown;
   }
 
@@ -472,11 +529,14 @@
 
   // ---------- notes: export, import, erase ----------
   async function exportNotes(btn) {
-    const keys = store.keys("note:").map((k) => k.slice(5)).sort();
+    // Notes, and saved thoughts (marked "· saved"), so both survive a new phone.
+    const saved = savedList();
+    const keys = [...new Set([...store.keys("note:").map((k) => k.slice(5)), ...saved.map((x) => x.key)])].sort();
     if (!keys.length) return flash(btn, "nothing yet");
     const body = keys.map((key) => {
-      const e = entryShown(key);
-      return `${key} — ${e.source} (${e.path})\n“${e.text}”\n${e.prompt}\n\n${readNote(key).text}\n`;
+      const e = entryShown(key), note = readNote(key);
+      const mark = saved.some((x) => x.key === key && x.id === e.id) ? " · saved" : "";
+      return `${key} — ${e.source} (${e.path})${mark}\n“${e.text}”\n${e.prompt}\n\n${note ? note.text : ""}\n`;
     }).join("\n---\n\n");
     const name = `thinking-place-notes-${todayKey()}.txt`;
     if (NATIVE) {
@@ -511,11 +571,20 @@
         const key = (block.trim().match(/^(\d{4}-\d{2}-\d{2}) —/) || [])[1];
         const gap = block.indexOf("\n\n");
         if (!key || gap < 0) continue;
+        // The thought is recognised by its quoted text, so notes and saves
+        // stay with the right thought even when that day's calendar thought differs.
+        const head = block.slice(0, gap);
+        const match = entries.find((e) => head.includes(`“${e.text}”`));
+        const id = match ? match.id : entryShown(key).id;
+        if (/^[^\n]* · saved\n/.test(block.trim()) && !isSaved(id)) {
+          store.set("saved", JSON.stringify([...savedList(), { id, key }]));
+          added++;
+        }
         const note = block.slice(gap + 2).trim();
         if (!note) continue;
         const old = (readNote(key) || { text: "" }).text.trim();
         if (old === note || old.includes(note)) continue;
-        writeNote(key, old ? old + "\n\n" + note : note, entryShown(key).id);
+        writeNote(key, old ? old + "\n\n" + note : note, id);
         added++;
       }
     } catch {}
@@ -1162,7 +1231,7 @@
   // If not even the first line of the question fits above the bottom bar, the question
   // (with the actions under it) waits out of sight: a faint chevron invites a scroll, and
   // the question fades in as it comes into view. Otherwise it appears with the rest.
-  const QUESTION_PARTS = ["#pause-2", "#view-day .question", "#view-day .actions", "#note-preview"];
+  const QUESTION_PARTS = ["#pause-2", "#view-day .question", "#memory", "#view-day .actions", "#note-preview"];
   let questionHeld = false, questionObserver = null;
 
   function holdQuestion(opts = {}) {
@@ -1335,6 +1404,10 @@
 
     document.querySelectorAll("[data-filter]").forEach((b) => b.addEventListener("click", () => openPicker(b)));
     $("picker-back").addEventListener("click", closePicker);
+    $("filter-saved").addEventListener("click", () => setJournalFilter({ saved: !journal.saved }));
+    $("save").addEventListener("click", toggleSaved);
+    document.querySelectorAll("[data-text-size]").forEach((b) =>
+      b.addEventListener("click", () => setTextSize(b.dataset.textSize)));
     $("journal-more").addEventListener("click", () => { journal.shown += PAGE_DAYS; renderJournal(); });
 
     const App = plugin("App");
@@ -1392,7 +1465,7 @@
     view.querySelectorAll("[data-step]").forEach((el) => { delete el.dataset.step; el.style.removeProperty("--step"); });
     const groups = [["#greeting"], ["#day-date"], ["#teaser"],
       ["#pause-1", "#day-path", ".passage", "#view-day .source", "#context-toggle"],
-      ["#pause-2", ".question-label"], ["#day-prompt"], ["#view-day .actions", "#note-preview"]];
+      ["#pause-2", ".question-label"], ["#day-prompt"], ["#memory"], ["#view-day .actions", "#note-preview"]];
     let step = 0;
     for (const group of groups) {
       const els = group.map((q) => view.querySelector(q))
@@ -1449,6 +1522,7 @@
     setSitMode(sitMode());
     setSound(store.get("sound", "off"));
     setBackupEvery(store.get("backupEvery", "30"));
+    setTextSize(store.get("textSize", "1"));
     fillBlocks();
     const [e, c] = await Promise.all([
       fetch("entries.json", { cache: "no-cache" }).then((r) => r.json()),

@@ -399,7 +399,7 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 #context-toggle { margin-top: .25rem; }
 
 /* The question waits below the fold until it is scrolled into view */
-#view-day #pause-2, #view-day .question, #view-day .actions, #view-day #note-preview { transition: opacity 1.8s ease, transform 1.8s ease; }
+#view-day #pause-2, #view-day .question, #view-day #memory, #view-day .actions, #view-day #note-preview { transition: opacity 1.8s ease, transform 1.8s ease; }
 #view-day .held { opacity: 0; transform: translateY(6px); pointer-events: none; }
 
 /* Past thoughts: filters, more, and the backup nudge */
@@ -481,3 +481,13 @@ button.quiet-inline { color: var(--muted); }
 .start-choice { display: flex; flex-direction: column; align-items: center; gap: .6rem; margin-top: .25rem; }
 .start-choice button.link { font-size: 1rem; }
 .welcome .start-hint { margin: 1.5rem auto 0 !important; max-width: 18rem; }
+
+/* Meeting a thought again: when you first met it, and what you wrote then */
+.memory { max-width: 26rem; margin: 1.9rem auto 0; padding: .9rem 1rem; text-align: center; color: var(--muted);
+  font-size: .85rem; border: 1px solid var(--faint); border-radius: 14px; }
+.memory-when { margin: 0 0 .35rem; }
+.memory-note { margin: 0 0 .45rem; font: italic 400 1rem/1.5 var(--serif); color: var(--fg); white-space: pre-line; }
+.memory-link { color: var(--muted); font-size: .8rem; }
+
+/* "saved" in past thoughts is an on/off filter, not a list */
+.filter-toggle::after { content: none; }
