@@ -1,0 +1,36 @@
+{
+  "_about": "Light modernisation, passage by passage. Keys are thought ids (# in thoughts.xlsx); each maps words in the source to the words in our quote. The general rules (thou -> you, hath -> has, translator's brackets) live in tools/build_entries.py. check_quotes.py applies these to the source and the quote must then appear in it word for word.",
+  "30": {
+    "ye children of mortality, seek ye from without": "you children of mortality, do you seek from without"
+  },
+  "31": {
+    "verily striving to stay": "really striving to stop"
+  },
+  "372": {
+    "O Arguna! who eats too much, nor his who cats not": "O Arjuna! who eats too much, nor his who eats not"
+  },
+  "453": {
+    "Way (or Tao) of Heaven": "Way of Heaven"
+  },
+  "556": {
+    "Knowest thou why thy mirror reflects not?": "Do you know why your mirror does not reflect?"
+  },
+  "569": {
+    "It floweth past": "It flows past"
+  },
+  "574": {
+    "Sit not down": "Do not sit down"
+  },
+  "575": {
+    "If thou covetest riches, ask not but for contentment": "If you covet riches, ask only for contentment"
+  },
+  "576": {
+    "Be thou good thyself": "Be good yourself"
+  },
+  "600": {
+    "if thou knowest not thyself how canst thou know": "if you know not yourself how can you know"
+  },
+  "370": {
+    "loss of reason. he is utterly": "loss of reason, he is utterly"
+  }
+}

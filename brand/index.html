@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand guide · The Thinking Place</title>
+<style>
+  :root { --paper: #FBFAF7; --ink: #262626; --muted: #6B6862; --stone: #E3DFD7; --teal: #4E7378;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 300 15px/1.6 var(--sans); }
+  main { max-width: 56rem; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font: 400 2rem/1.2 var(--serif); margin: 0 0 .25rem; }
+  h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 3rem 0 1rem; }
+  p { max-width: 42rem; }
+  .row { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 16px; }
+  .tile { border: 1px solid var(--stone); border-radius: 14px; padding: 16px; }
+  .tile img { display: block; width: 100%; height: auto; }
+  .tile small { display: block; margin-top: 8px; color: var(--muted); }
+  .dark { background: var(--ink); color: #E3DFD7; border-color: var(--ink); }
+  .dark small { color: #A09B92; }
+  .sw { height: 72px; border-radius: 10px; margin-bottom: 8px; border: 1px solid rgba(0,0,0,.08); }
+  code { font: 13px/1.4 ui-monospace, Menlo, monospace; }
+  table { border-collapse: collapse; width: 100%; max-width: 42rem; }
+  td { padding: .4rem .6rem .4rem 0; border-top: 1px solid var(--stone); vertical-align: top; }
+  .serif { font: 400 1.6rem/1.3 var(--serif); }
+  .serif i { font-style: italic; }
+  .caps { font: 400 .75rem/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--teal); font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <h1>The Thinking Place</h1>
+  <p>Brand guide · October 2026. The logo, colours and type used in the app, the website and the store listings. Files are in this folder.</p>
+
+  <h2>Logo</h2>
+  <p>Twelve rays, one for each path, around a crescent moon: a thought rising, and a quiet moment at the end of the day. The single teal ray is today's path. The rays never change colour except that one.</p>
+  <div class="row">
+    <div class="tile"><img src="logo/logo-light.svg" alt=""><small>logo-light.svg · app icon, light</small></div>
+    <div class="tile dark"><img src="logo/logo-dark.svg" alt=""><small>logo-dark.svg · app icon, dark</small></div>
+    <div class="tile"><img src="logo/mark-light.svg" alt=""><small>mark-light.svg · on paper, no tile</small></div>
+    <div class="tile dark"><img src="logo/mark-dark.svg" alt=""><small>mark-dark.svg · on ink, no tile</small></div>
+  </div>
+  <table>
+    <tr><td>Clear space</td><td>Keep at least one ray's length free around the mark.</td></tr>
+    <tr><td>Smallest size</td><td>24 px on screen (status bar); below 48 px, use the mark without the tile.</td></tr>
+    <tr><td>Don't</td><td>Recolour the rays, add shadows or outlines, rotate it, or put it on a busy photo.</td></tr>
+    <tr><td>PNG versions</td><td><code>logo-light/dark-512/1024.png</code>, <code>mark-light/dark-512/1024.png</code>, <code>play-store-icon-512.png</code> (Google Play listing).</td></tr>
+    <tr><td>Generated</td><td>Every icon (Android, web, splash, status bar) is drawn from <code>logo-light.svg</code> by <code>tools/make_android_icons.py</code>, so a new logo file updates them all.</td></tr>
+  </table>
+
+  <h2>Colours</h2>
+  <p>The same values everywhere: logo, app, website (<code>colors.json</code>, <code>style.css</code>). All text pairs meet WCAG AA.</p>
+  <div class="row">
+    <div><div class="sw" style="background:#FBFAF7"></div><b>Paper</b> <code>#FBFAF7</code><br><small>light background</small></div>
+    <div><div class="sw" style="background:#262626"></div><b>Ink</b> <code>#262626</code><br><small>light text · dark background · 14.5:1</small></div>
+    <div><div class="sw" style="background:#E3DFD7"></div><b>Stone</b> <code>#E3DFD7</code><br><small>dark text (11.4:1) · light lines</small></div>
+    <div><div class="sw" style="background:#4E7378"></div><b>Teal</b> <code>#4E7378</code><br><small>today's ray · path names on paper (5:1)</small></div>
+    <div><div class="sw" style="background:#8FB2B6"></div><b>Teal on dark</b> <code>#8FB2B6</code><br><small>path names on ink (6.6:1)</small></div>
+    <div><div class="sw" style="background:#6B6862"></div><b>Muted</b> <code>#6B6862</code> / <code>#A09B92</code><br><small>secondary text, light / dark</small></div>
+  </div>
+
+  <h2>Type</h2>
+  <p class="serif">A thought is set in a book serif. <i>The question is in italics.</i></p>
+  <p>Body and interface text in the phone's own sans-serif (San Francisco on iPhone and Mac, Roboto on Android, Segoe UI on Windows), light weight.</p>
+  <p class="caps">Path names in spaced capitals</p>
+  <table>
+    <tr><td>Serif</td><td><code>"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif</code> · thoughts, titles, questions</td></tr>
+    <tr><td>Sans</td><td><code>-apple-system, "Segoe UI", system-ui, sans-serif</code> · everything else</td></tr>
+    <tr><td>Note</td><td>No font files are bundled, so the app stays small and offline. Android has none of the listed serifs and shows its own (Noto Serif). To look the same everywhere, we could bundle one open-licence serif (decision pending).</td></tr>
+  </table>
+
+  <h2>Voice</h2>
+  <table>
+    <tr><td>Calm</td><td>Short sentences, no exclamation marks in the interface (the goodbye lines are the exception).</td></tr>
+    <tr><td>Plain</td><td>Explain like a good teacher: no jargon without a note, no "unlock", "streak" or "level up".</td></tr>
+    <tr><td>Honest</td><td>Free, no ads, no tracking: say it simply, never as a sales pitch.</td></tr>
+    <tr><td>Names</td><td>"The Thinking Place" in full; "Thinking" only as the home-screen label. Schools of thought are "paths".</td></tr>
+  </table>
+</main>
+</body>
+</html>

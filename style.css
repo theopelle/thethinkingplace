@@ -1,35 +1,41 @@
 :root {
-  --bg: #f6f3ee;
-  --fg: #2b2a28;
-  --muted: #6f6a62;  /* 4.9:1 on paper (WCAG AA) */
-  --faint: #d9d3c9;
-  --accent: #2f4b4c;  /* the well water in the icon; 9:1 on paper */
+  /* Brand colours: see brand/colors.json and brand/index.html */
+  --bg: #FBFAF7;      /* paper */
+  --fg: #262626;      /* ink, 14.5:1 */
+  --muted: #6B6862;   /* 5.3:1 on paper (WCAG AA) */
+  --faint: #E3DFD7;   /* stone */
+  --accent: #4E7378;  /* teal, 5:1 on paper */
+  --logo-accent: #4E7378;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #1b1b1a;
-    --fg: #e6e1d8;
-    --muted: #9a958c;
-    --faint: #3a3835;
-    --accent: #9fc0bd;
+    --bg: #262626;
+    --fg: #E3DFD7;
+    --muted: #A09B92;   /* 5.5:1 */
+    --faint: #3D3B38;
+    --accent: #8FB2B6;  /* teal lifted for text on dark, 6.6:1 */
+    --logo-accent: #4E7378;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #1b1b1a;
-  --fg: #e6e1d8;
-  --muted: #9a958c;
-  --faint: #3a3835;
-  --accent: #9fc0bd;
+  --bg: #262626;
+  --fg: #E3DFD7;
+  --muted: #A09B92;
+  --faint: #3D3B38;
+  --accent: #8FB2B6;
+  --logo-accent: #4E7378;
   color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html, body { margin: 0; }
+/* No coloured flash on tap (Android paints the whole tapped area, e.g. a full-screen overlay) */
+* { -webkit-tap-highlight-color: transparent; }
 /* Follow the iPhone/iPad text-size setting (Dynamic Type). -webkit-touch-callout limits
    this to iOS: on Mac Safari the system body size is smaller and would shrink the app. */
 @supports (font: -apple-system-body) and (-webkit-touch-callout: none) {
@@ -53,7 +59,7 @@ body {
   max-width: 34rem;
   min-height: 100dvh;
   margin: 0 auto;
-  padding: max(10vh, 3rem, calc(env(safe-area-inset-top) + 2rem)) 1.5rem 6rem;
+  padding: max(10vh, 3rem, calc(env(safe-area-inset-top) + 2rem)) 1.5rem 8.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -120,10 +126,12 @@ button.link, .nav a {
   border-bottom: 1px solid transparent;
   transition: color .3s, border-color .3s;
 }
-button.link:hover, .nav a:hover { border-bottom-color: var(--faint); }
+/* Hover underlines only where there is a real pointer: on phones a tapped button stays
+   "hovered" and its grey line used to cover the white one of the chosen option. */
+@media (hover: hover) { button.link:hover, .nav a:hover { border-bottom-color: var(--faint); } }
 button.link:focus-visible, .nav a:focus-visible, textarea:focus-visible { outline: 1px solid var(--muted); outline-offset: 4px; }
 button.quiet { color: var(--muted); font-size: .8rem; display: block; margin: 0 auto; }
-button[aria-checked="true"] { border-bottom-color: var(--fg); }
+button[aria-checked="true"], button[aria-checked="true"]:hover { border-bottom-color: var(--fg); }
 
 .note { margin-top: 2rem; }
 /* While writing, "write about this" reads as selected and the other actions step back. */
@@ -151,7 +159,7 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 .note-foot { display: flex; justify-content: space-between; align-items: baseline; margin-top: .35rem; }
 .note-foot button.quiet { margin: 0; }
 .note-status { color: var(--muted); font-size: .75rem; text-align: right; margin: 0 0 0 auto; min-height: 1.2em; }
-.returning { color: var(--muted); font: italic 400 .95rem/1.5 var(--serif); text-align: center; margin: 1.1rem auto 0; max-width: 22rem; }
+.teaser { color: var(--muted); font: italic 400 .95rem/1.5 var(--serif); text-align: center; margin: 1.1rem auto 0; max-width: 22rem; }
 
 .back { margin-top: 3rem; }
 
@@ -247,6 +255,12 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
   padding: 1.5rem; text-align: center;
   animation: fade 2s ease;
 }
+/* The goodbye arrives slowly, and leaves softly when tapped. */
+#closing { animation: fade 3s ease .5s both; }
+#closing.leaving { animation: fadeout 1.2s ease both; pointer-events: none; }
+@keyframes fadeout { from { opacity: 1; } to { opacity: 0; } }
+.closing-backup { margin: 1.5rem 0 0 !important; }
+.closing-backup button.quiet { display: inline; }
 .closing[hidden] { display: none; }
 .closing p { font: italic 400 1.3rem/1.6 var(--serif); margin: 0 0 3rem; }
 .closing-actions { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .25rem .6rem; }
@@ -263,6 +277,10 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
   animation: fade 1.2s ease;
 }
 .silence[hidden] { display: none; }
+/* Fixed slots: the stage (intro, question or breathing), the time, then the foot. */
+.sit-stage { display: grid; place-items: center; width: min(22rem, calc(100% - 3rem)); height: 15rem; }
+.sit-stage > * { grid-area: 1 / 1; }
+.breath-box { display: flex; flex-direction: column; align-items: center; }
 .breath {
   width: 9rem; height: 9rem; border-radius: 50%;
   border: 1px solid var(--muted);
@@ -271,17 +289,16 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 }
 .breath.in { transform: scale(1); }
 .breath.out { transition-duration: 6s; }
-.breath-cue { color: var(--muted); font-size: .85rem; letter-spacing: .14em; margin: 2.5rem 0 .25rem; transition: opacity 1s; }
-.remaining { color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; margin: 0 0 2.5rem; }
-.sit-question { max-width: 22rem; margin: 0 1.5rem 2.5rem; text-align: center; color: var(--fg); opacity: .85;
+.breath-cue { color: var(--muted); font-size: .85rem; letter-spacing: .14em; margin: 1.25rem 0 0; min-height: 1.4em; }
+.remaining { color: var(--muted); font-size: .8rem; line-height: 1.3; font-variant-numeric: tabular-nums; margin: 1.5rem 0; height: 1.3em; }
+.sit-question { margin: 0; text-align: center; color: var(--fg); opacity: .85;
   font: italic 400 1.3rem/1.55 var(--serif); text-wrap: balance; animation: fade 2s ease; }
-.sit-question + .breath[hidden] + .breath-cue[hidden] + .remaining { margin-top: 0; }
 .sit-mode { position: absolute; bottom: max(2rem, env(safe-area-inset-bottom)); left: 0; right: 0; justify-content: center; }
 .sit-mode button.link { font-size: .8rem; color: var(--muted); }
 .sit-mode button.link[aria-checked="true"] { color: var(--fg); }
 
 @media (prefers-reduced-motion: reduce) {
-  .view, .silence, .closing { animation: none; }
+  .view, .silence, .closing, #closing { animation: none; }
   .breath { transition: none; }
 }
 
@@ -316,17 +333,14 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 .launch { position: fixed; inset: 0; z-index: 100; background: var(--bg); transition: opacity .9s ease; }
 .launch.done { opacity: 0; pointer-events: none; }
 .launch-mark { position: absolute; left: 50%; top: 50%; width: 288px; height: 288px; margin: -144px 0 0 -144px; }
-.launch-bricks { fill: var(--fg); stroke: var(--fg); stroke-width: 1.2; stroke-linejoin: round; }
-.launch-water { fill: var(--accent); }
-.launch-moon { fill: var(--bg); opacity: .92; }
-.launch-name { position: absolute; left: 0; right: 0; top: calc(50% + 72px); margin: 0; text-align: center;
+.launch-name { position: absolute; left: 0; right: 0; top: calc(50% + 92px); margin: 0; text-align: center;
   font: 400 1.35rem/1 var(--serif); letter-spacing: .04em; color: var(--fg); animation: launch-in 1s .3s ease both; }
 @keyframes launch-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 
 /* The day reveals itself gently on opening: greeting, date, the thought, then the question. */
 #view-day.reveal { animation: none; }
 #view-day.reveal [data-step] { opacity: 0; }
-#view-day.reveal.go [data-step] { animation: rise 1.5s ease both; animation-delay: calc(var(--step) * .9s); }
+#view-day.reveal.go [data-step] { animation: rise var(--rise-s, 2.2s) ease both; animation-delay: calc(var(--step) * var(--step-s, 1.4s)); }
 @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
 /* Origin maps: a soft line between the two */
@@ -355,8 +369,10 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
   opacity: .35; height: 2.1rem; margin-bottom: .2rem; }
 .passage.long::before { text-align: left; }
 
-/* Reminder settings */
-.reminder-row { margin-top: .6rem; }
+/* Second and third rows of a setting */
+.setting-row { margin-top: .6rem; }
+.setting-label { color: var(--muted); font-size: .8rem; margin-right: .35rem; }
+.setting-sub { margin: 1rem 0 .1rem; }
 
 /* A faint chevron when the day's question is out of sight on long thoughts */
 .more-below { position: absolute; left: 50%; bottom: calc(100% + .1rem); width: 44px; height: 32px; margin-left: -22px;
@@ -368,3 +384,85 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 @keyframes nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
 @media (prefers-reduced-motion: reduce) { .more-below svg { animation: none; } }
 
+
+/* The about-this-thought button sits above its note, so closing it stays one tap away */
+#context-toggle { margin-top: .25rem; }
+
+/* The question waits below the fold until it is scrolled into view */
+#view-day #pause-2, #view-day .question, #view-day .actions, #view-day #note-preview { transition: opacity 1.8s ease, transform 1.8s ease; }
+#view-day .held { opacity: 0; transform: translateY(6px); pointer-events: none; }
+
+/* Past thoughts: filters, more, and the backup nudge */
+.filters { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem .6rem; margin-top: 1.75rem; }
+.filter { background: none; border: 0; border-bottom: 1px solid var(--faint); padding: .35rem 0; margin: 0;
+  font: inherit; font-size: .85rem; color: var(--fg); cursor: pointer; }
+.filter::after { content: " ▾"; color: var(--muted); font-size: .7rem; }
+.filter.active { border-bottom-color: var(--fg); }
+.filter:focus-visible { outline: 1px solid var(--muted); outline-offset: 4px; }
+.picker-back { position: fixed; inset: 0; z-index: 29; }
+.picker { position: fixed; z-index: 30; margin: 0; padding: .35rem 0; list-style: none;
+  width: min(18rem, calc(100vw - 2rem)); max-height: 66vh; overflow-y: auto; overscroll-behavior: contain;
+  background: var(--bg); border: 1px solid var(--faint); border-radius: 14px; box-shadow: 0 8px 30px rgba(0, 0, 0, .14);
+  animation: fade .2s ease; }
+.picker li { padding: .6rem 1.1rem; font-size: .92rem; cursor: pointer; }
+.picker li[aria-selected="true"] { color: var(--accent); }
+.picker li:focus-visible { outline: none; background: var(--faint); }
+@media (hover: hover) { .picker li:hover { background: var(--faint); } }
+.filters + .journal { margin-top: 1.25rem; }
+.journal-more { margin-top: 1.5rem; }
+.journal-empty { margin-top: 1.5rem; font-size: .9rem; }
+.backup-card { margin-top: 1.5rem; padding: 1rem 1.1rem; border: 1px solid var(--faint); border-radius: 14px; font-size: .9rem; }
+.backup-card p { margin: 0 0 .5rem; }
+button.quiet-inline { color: var(--muted); }
+
+/* Links at the end of a block (feedback) */
+.block-links { margin-top: .5rem; }
+.block-links a { color: var(--fg); }
+
+/* The paths through time */
+.timeline { list-style: none; margin: 1.25rem 0 1.5rem; padding: 0 0 0 1.1rem; border-left: 1px solid var(--faint); }
+.tl-item { position: relative; }
+.tl-item::before { content: ""; position: absolute; left: calc(-1.1rem - 4px); top: .45rem; width: 7px; height: 7px;
+  border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); }
+.tl-year { display: block; color: var(--muted); font-size: .72rem; line-height: 1.4; letter-spacing: .06em; }
+.tl-path { display: block; background: none; border: 0; padding: .1rem 0 0; text-align: left; font: 400 1rem/1.4 var(--serif); color: var(--fg); cursor: pointer;
+  text-decoration: underline dotted 1px; text-decoration-color: color-mix(in srgb, var(--muted) 70%, transparent); text-underline-offset: .22em; }
+.tl-path:focus-visible { outline: 1px solid var(--muted); outline-offset: 2px; }
+.tl-break { position: relative; margin: 1.1rem 0 1.1rem -1.1rem; padding: .2rem 0 .2rem 0; background: var(--bg);
+  color: var(--muted); font-size: .75rem; display: flex; gap: .6rem; align-items: center; }
+.tl-mark { font: 400 1rem/1 var(--serif); letter-spacing: -.1em; margin-left: -.3rem; color: var(--muted); }
+.tl-gap { font-style: italic; }
+
+/* The world map marks the area the closer Europe map shows */
+.map-inset { fill: none; stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; opacity: .7; }
+
+/* First launch: the short tour */
+.welcome .tour-step { max-width: 22rem; }
+.welcome .tour-title { font: 400 1.45rem/1.35 var(--serif) !important; margin: 0 0 1rem !important; }
+.welcome .tour-text { font: 300 1rem/1.6 var(--sans) !important; color: var(--muted); margin: 0 !important; }
+.welcome .tour-step:not([hidden]) { animation: fade .8s ease; }
+.tour-foot { position: absolute; left: 0; right: 0; bottom: max(2rem, calc(env(safe-area-inset-bottom) + 1rem));
+  display: flex; justify-content: space-between; align-items: center; width: min(22rem, calc(100% - 3rem)); margin: 0 auto; }
+.tour-dots { color: var(--muted); font-size: .55rem; letter-spacing: .35em; }
+#welcome-form .name-input { text-align: center; margin: .5rem 0 .75rem; }
+
+/* Sit and think: a soft start, and a soft finish */
+.sit-intro { font: italic 400 1.4rem/1.5 var(--serif); color: var(--fg); margin: 0; animation: intro 3.5s ease both; }
+@keyframes intro { 0% { opacity: 0; } 30%, 70% { opacity: .9; } 100% { opacity: 0; } }
+.sit-question, .breath-box { transition: opacity 2s ease; }
+.silence.done .sit-question, .silence.done .breath-box { opacity: 0; }
+.sit-foot { display: grid; justify-items: center; align-items: start; min-height: 7rem; }
+.sit-foot > * { grid-area: 1 / 1; }
+.silence.done #close-silence { visibility: hidden; }
+.sit-done { text-align: center; display: grid; justify-items: center; }
+.sit-done-actions, .sit-goodbye { grid-area: 2 / 1; }
+.sit-goodbye { margin: .35rem 0 0; color: var(--muted); font: italic 400 1.05rem/1.5 var(--serif); animation: fade 1.5s ease .4s both; }
+.silence.bye .sit-done-actions { visibility: hidden; }
+.silence.bye { cursor: pointer; }
+.silence.leaving { animation: fadeout 1.2s ease both; pointer-events: none; }
+.sit-welcome { font: italic 400 1.3rem/1.5 var(--serif); margin: 0 0 1.5rem; animation: fade 2s ease 1.2s both; }
+.sit-done-actions { justify-content: center; animation: fade 2s ease 3s both; }
+@media (prefers-reduced-motion: reduce) {
+  .sit-intro, .sit-welcome, .sit-done-actions, .welcome .tour-step:not([hidden]) { animation: none; }
+  #view-day .held { transition: none; }
+}

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- The app's paper colour, so the system splash hands over without a flash -->
-    <color name="paper">#F6F3EE</color>
-    <color name="colorPrimary">#2F4B4C</color>
-    <color name="colorPrimaryDark">#F6F3EE</color>
-    <color name="colorAccent">#2F4B4C</color>
+    <!-- The app's paper colour, so the system splash hands over without a flash (see brand/) -->
+    <color name="paper">#FBFAF7</color>
+    <color name="colorPrimary">#4E7378</color>
+    <color name="colorPrimaryDark">#FBFAF7</color>
+    <color name="colorAccent">#4E7378</color>
 </resources>

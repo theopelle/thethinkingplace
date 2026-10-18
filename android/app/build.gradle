@@ -4,7 +4,7 @@ android {
     namespace = "app.manywells"
     compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "app.manywells"
+        applicationId "app.thethinkingplace"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

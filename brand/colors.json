@@ -1,0 +1,18 @@
+{
+  "_about": "The Thinking Place colours. The logo uses paper, ink, stone and teal; the app and website use the same values (style.css :root). Contrast ratios are against the paper of the same theme.",
+  "light": {
+    "paper": "#FBFAF7",
+    "ink": "#262626",
+    "muted": "#6B6862",
+    "stone": "#E3DFD7",
+    "teal": "#4E7378"
+  },
+  "dark": {
+    "paper": "#262626",
+    "ink": "#E3DFD7",
+    "muted": "#A09B92",
+    "stone": "#3D3B38",
+    "teal": "#4E7378",
+    "teal_text": "#8FB2B6"
+  }
+}

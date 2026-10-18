@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Many Wells</string>
-    <string name="title_activity_main">Many Wells</string>
-    <string name="package_name">app.manywells</string>
-    <string name="custom_url_scheme">app.manywells</string>
+    <string name="app_name">Thinking</string>
+    <string name="title_activity_main">Thinking</string>
+    <string name="package_name">app.thethinkingplace</string>
+    <string name="custom_url_scheme">app.thethinkingplace</string>
 </resources>

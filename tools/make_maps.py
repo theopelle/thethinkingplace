@@ -1,72 +1,85 @@
-"""Draw the two small origin maps on the About page and write them into index.html.
+"""Draw the maps on the About page and write them into index.html.
 
-    python3 reflect/tools/make_maps.py <ne_50m_land.geojson>
+    python3 tools/make_maps.py <ne_50m_land.geojson>
+
+A world map shows where our thinkers lived; Europe, where most of them did, gets a
+closer map of its own below it. The places and their card texts come from the
+content team's glossary (content/glossary.xlsx, sheet "Map cards"); their positions
+are in COORDS below. Dots too close to tell apart on a phone share one card.
 
 Coastlines come from Natural Earth (public domain):
 https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_land.geojson
 The maps are bare outlines in inline SVG, so the app needs no network to show them.
-Each dot is a button; tapping it opens the same small card as the glossary.
 """
-import html, json, math, os, re, sys
+import html, json, math, os, re, sys, urllib.parse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from content_io import read_glossary
+
 INDEX = os.path.join(os.path.dirname(HERE), "index.html")
 W = 600  # viewBox width; height follows from the region's shape
+MERGE = 26  # dots closer than this (in viewBox units) share one card
 
-# One dot per place where our thinkers lived and taught: (lon, lat), card title, card text, Wikipedia page.
+# Where each place on the Map cards sheet is: (longitude, latitude).
+COORDS = {
+    "Athens": (23.73, 37.98), "Rome": (12.50, 41.90), "Paris": (2.35, 48.86),
+    "Switzerland": (7.59, 47.56), "London": (-0.13, 51.51), "Königsberg": (20.51, 54.71),
+    "St Petersburg": (30.31, 59.94), "Ephesus": (27.34, 37.94), "Bordeaux": (-0.58, 44.84),
+    "Amsterdam": (4.90, 52.37), "Edinburgh": (-3.19, 55.95), "Frankfurt": (8.68, 50.11),
+    "Murcia": (-1.13, 37.99), "Rotterdam": (4.48, 51.92), "Arezzo": (11.88, 43.46),
+    "Yasnaya Polyana": (37.53, 54.07), "Konya": (32.49, 37.87), "Baghdad": (44.36, 33.31),
+    "Shiraz": (52.53, 29.59), "Nishapur": (58.80, 36.21), "Northern India": (84.99, 24.70),
+    "Kolkata": (88.36, 22.57), "China": (116.2, 34.7), "Japan": (135.77, 35.01),
+    "Concord, Massachusetts": (-71.35, 42.46), "Amherst, Massachusetts": (-72.52, 42.37),
+    "Cambridge, Massachusetts": (-71.11, 42.37),
+}
+
+EUROPE = (-11, 32, 48, 62)   # west, south, east, north
+WORLD = (-82, 14, 146, 63)
 MAPS = [
-    {
-        "id": "map-europe",
-        "title": "Europe & the Mediterranean",
-        "box": (-11, 34, 37, 61),  # west, south, east, north
-        "places": [
-            ((23.73, 37.98), "Athens",
-             "Socrates and Plato · Platonism\nAristotle · Virtue Ethics\nEpicurus · Epicureanism\nZeno, the founder of Stoicism\n"
-             "Four schools began in this one city within a century. Epictetus later taught at Nicopolis, in north-western Greece.",
-             "Ancient_Greek_philosophy"),
-            ((12.50, 41.90), "Rome",
-             "Seneca and Marcus Aurelius · Stoicism\nLucretius · Epicureanism\n"
-             "Epictetus also lived here, enslaved and later freed, until his banishment to Greece. Marcus wrote parts of his Meditations on campaign, far from the city.",
-             "Ancient_Roman_philosophy"),
-            ((2.35, 48.86), "Paris",
-             "Blaise Pascal · Existentialism (a forerunner)\nHe lived and worked here; his notes were published after his death as the Pensées.",
-             "Blaise_Pascal"),
-            ((9.76, 46.43), "Switzerland",
-             "Friedrich Nietzsche · Existentialism\nHe taught at the University of Basel from 1869 to 1879, then spent his summers writing in Sils-Maria, in the Alps.",
-             "Friedrich_Nietzsche"),
-            ((-0.13, 51.51), "London",
-             "John Stuart Mill · Utilitarianism\nMill was born here in 1806; Jeremy Bentham, who founded the school, also lived and wrote here.",
-             "John_Stuart_Mill"),
-            ((12.57, 55.68), "Copenhagen",
-             "Søren Kierkegaard · Existentialism\nOften called the first existentialist, he spent almost his whole life here.",
-             "Søren_Kierkegaard"),
-            ((20.51, 54.71), "Königsberg",
-             "Immanuel Kant · Duty Ethics\nKant spent almost his whole life here. The city is now Kaliningrad.",
-             "Immanuel_Kant"),
-            ((30.31, 59.94), "St Petersburg",
-             "Fyodor Dostoevsky · Existentialism\nDostoevsky lived much of his writing life here.",
-             "Fyodor_Dostoevsky"),
-        ],
-    },
-    {
-        "id": "map-asia",
-        "title": "Asia",
-        "box": (66, 10, 144, 47),
-        "places": [
-            ((84.99, 24.70), "Northern India",
-             "The Buddha · Buddhist Philosophy\nHe taught across the Ganges plain around the 5th century BCE; tradition places his awakening at Bodh Gaya.",
-             "Buddhist_philosophy"),
-            ((116.2, 34.7), "China",
-             "Confucius · Confucianism\nLaozi and Zhuangzi · Taoism\n"
-             "Tradition places Confucius in the state of Lu, Laozi in Chu and Zhuangzi in Song, neighbouring states of ancient China, between the 6th and 4th centuries BCE.",
-             "Hundred_Schools_of_Thought"),
-            ((135.77, 35.01), "Japan",
-             "Kamo no Chōmei, Kenkō and Kakuzo Okakura · Japanese Aesthetics\n"
-             "Chōmei and Kenkō wrote in and around Kyoto in the 13th and 14th centuries. Okakura wrote The Book of Tea in English, published in New York in 1906.",
-             "Japanese_aesthetics"),
-        ],
-    },
+    {"title": "The world", "box": WORLD, "inset": EUROPE, "tol": 0.7},
+    {"title": "Europe and the Mediterranean, closer", "box": EUROPE, "tol": 0.9},
 ]
+
+
+def inside(box, lon, lat):
+    w, s, e, n = box
+    return w <= lon <= e and s <= lat <= n
+
+
+def places():
+    cards = read_glossary()["Map cards"]
+    missing = [c["Place"] for c in cards if c["Place"] not in COORDS]
+    if missing:
+        sys.exit(f"add these places to COORDS in make_maps.py: {missing}")
+    wiki = lambda u: urllib.parse.unquote(u.rsplit("/wiki/", 1)[1]) if u and "/wiki/" in u else (u or "")
+    return [(COORDS[c["Place"]], c["Place"], c["Card text"], wiki(c["Wikipedia"])) for c in cards]
+
+
+def merged(points):
+    """Join places whose dots would overlap: one dot, one card listing them all."""
+    groups = []
+    for x, y, title, text, wiki in sorted(points, key=lambda p: (p[1], p[0])):
+        for g in groups:
+            if any(math.dist((x, y), (gx, gy)) < MERGE for gx, gy, *_ in g):
+                g.append((x, y, title, text, wiki))
+                break
+        else:
+            groups.append([(x, y, title, text, wiki)])
+    out = []
+    for g in groups:
+        x = sum(p[0] for p in g) / len(g)
+        y = sum(p[1] for p in g) / len(g)
+        titles = [p[2] for p in g]
+        tail = {t.rpartition(", ")[2] for t in titles}
+        if len(g) > 1 and len(tail) == 1 and all(", " in t for t in titles):  # same state: say it once
+            titles = [t.rpartition(", ")[0] for t in titles]
+            titles[-1] += ", " + tail.pop()
+        title = titles[0] if len(g) == 1 else ", ".join(titles[:-1]) + " and " + titles[-1]
+        text = "\n\n".join((p[2] + "\n" if len(g) > 1 else "") + p[3] for p in g)
+        out.append((x, y, title, text, g[0][4]))
+    return out
 
 
 def projector(box):
@@ -119,7 +132,7 @@ def simplify(pts, tol):
     return simplify(pts[:i + 1], tol)[:-1] + simplify(pts[i:], tol)
 
 
-def coast_path(features, proj, h):
+def coast_path(features, proj, h, tol=0.9):
     """Coastlines only: clipped rings, minus the straight cuts along the map's edges."""
     m = 2
     box = (-m, -m, W + m, h + m)
@@ -154,24 +167,34 @@ def coast_path(features, proj, h):
                 for r in runs:
                     if r[0] == r[-1] and len(r) > 3:  # a whole island: split for simplifying
                         k = max(range(len(r)), key=lambda i: math.dist(r[0], r[i]))
-                        r = simplify(r[:k + 1], 0.9)[:-1] + simplify(r[k:], 0.9)
+                        r = simplify(r[:k + 1], tol)[:-1] + simplify(r[k:], tol)
                     else:
-                        r = simplify(r, 0.9)
+                        r = simplify(r, tol)
                     if len(r) >= 2:
                         parts.append("M" + "L".join(f"{x:.0f} {y:.0f}" for x, y in r))
     return "".join(parts)
 
 
-def figure(m, features):
+def figure(m, features, all_places):
     proj, h = projector(m["box"])
     a = lambda s: html.escape(s, quote=True)
+    extra = ""
+    if "inset" in m:  # outline the area the closer map shows
+        w, s_, e, n = m["inset"]
+        (x1, y1), (x2, y2) = proj(w, n), proj(e, s_)
+        extra = f'<rect class="map-inset" x="{x1:.0f}" y="{y1:.0f}" width="{x2 - x1:.0f}" height="{y2 - y1:.0f}" rx="4"/>'
     out = ['      <figure class="map-figure">',
            f'        <figcaption>{m["title"]}</figcaption>',
            '        <div class="map-wrap">',
            f'          <svg class="map" viewBox="0 0 {W} {h:.0f}" aria-hidden="true">'
-           f'<path class="map-coast" d="{coast_path(features, proj, h)}"/></svg>']
-    for (lon, lat), title, text, wiki in m["places"]:
+           f'<path class="map-coast" d="{coast_path(features, proj, h, m["tol"])}"/>{extra}</svg>']
+    pts = []
+    for (lon, lat), title, text, wiki in all_places:
+        if not inside(m["box"], lon, lat) or ("inset" in m and inside(m["inset"], lon, lat)):
+            continue
         x, y = proj(lon, lat)
+        pts.append((x, y, title, text, wiki))
+    for x, y, title, text, wiki in merged(pts):
         out.append(f'          <button type="button" class="map-dot" style="left:{x / W * 100:.1f}%;top:{y / h * 100:.1f}%" '
                    f'aria-haspopup="dialog" aria-label="{a(title)}" data-title="{a(title)}" '
                    f'data-text="{a(text)}" data-wiki="{a(wiki)}"></button>')
@@ -181,7 +204,8 @@ def figure(m, features):
 
 def main(geojson):
     features = json.load(open(geojson, encoding="utf-8"))["features"]
-    block = "\n".join(figure(m, features) for m in MAPS)
+    all_places = places()
+    block = "\n".join(figure(m, features, all_places) for m in MAPS)
     page = open(INDEX, encoding="utf-8").read()
     start, end = "<!-- maps:start -->", "<!-- maps:end -->"
     if start not in page:

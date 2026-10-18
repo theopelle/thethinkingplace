@@ -1,7 +1,7 @@
 {
-  "appId": "app.manywells",
-  "appName": "Many Wells",
-  "webDir": "site",
+  "appId": "app.thethinkingplace",
+  "appName": "Thinking",
+  "webDir": "site/app",
   "android": {
     "backgroundColor": "#00000000"
   },
