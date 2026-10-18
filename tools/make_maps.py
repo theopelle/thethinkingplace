@@ -20,11 +20,13 @@ from content_io import read_glossary
 INDEX = os.path.join(os.path.dirname(HERE), "index.html")
 W = 600  # viewBox width; height follows from the region's shape
 MERGE = 26  # dots closer than this (in viewBox units) share one card
+# Places that always share a dot (too close to tap apart on a phone).
+JOIN = [{"Shiraz", "Nishapur"}]
 
 # Where each place on the Map cards sheet is: (longitude, latitude).
 COORDS = {
     "Athens": (23.73, 37.98), "Rome": (12.50, 41.90), "Paris": (2.35, 48.86),
-    "Switzerland": (7.59, 47.56), "London": (-0.13, 51.51), "Königsberg": (20.51, 54.71),
+    "Switzerland": (8.3, 46.6), "London": (-0.13, 51.51), "Königsberg": (20.51, 54.71),
     "St Petersburg": (30.31, 59.94), "Ephesus": (27.34, 37.94), "Bordeaux": (-0.58, 44.84),
     "Amsterdam": (4.90, 52.37), "Edinburgh": (-3.19, 55.95), "Frankfurt": (8.68, 50.11),
     "Murcia": (-1.13, 37.99), "Rotterdam": (4.48, 51.92), "Arezzo": (11.88, 43.46),
@@ -62,7 +64,8 @@ def merged(points):
     groups = []
     for x, y, title, text, wiki in sorted(points, key=lambda p: (p[1], p[0])):
         for g in groups:
-            if any(math.dist((x, y), (gx, gy)) < MERGE for gx, gy, *_ in g):
+            joined = any(title in j and g[0][2] in j for j in JOIN)
+            if joined or any(math.dist((x, y), (gx, gy)) < MERGE for gx, gy, *_ in g):
                 g.append((x, y, title, text, wiki))
                 break
         else:

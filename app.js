@@ -842,8 +842,9 @@
     const left = Math.min(Math.max(16, r.left + r.width / 2 - w / 2), window.innerWidth - w - 16);
     const below = r.bottom + 10, above = r.top - h - 10;
     card.style.left = left + "px";
+    const y = window.scrollY;
     const top = below + h < window.innerHeight - 64 || above < 16 ? below : above;
-    card.style.top = Math.max(16, Math.min(top, window.innerHeight - h - 16)) + "px";  // keep it on screen
+    card.style.top = y + Math.max(16, Math.min(top, window.innerHeight - h - 16)) + "px";  // on screen when it opens
     openTerm.from = btn;
     // Move focus into the card so screen readers announce the definition.
     card.focus({ preventScroll: true });
@@ -989,6 +990,10 @@
     renderBackupNudge();
     $("closing").classList.remove("leaving");
     setOverlay($("closing"), true, $("closing-back"));
+    // An open note closes only once the screen has fully covered the page, so the page
+    // doesn't jump (shrinking the note moves the scroll) before the goodbye appears.
+    clearTimeout(showClosing.collapse);
+    if (!$("note").hidden) showClosing.collapse = setTimeout(() => setWriting(false), 3600);
   }
 
   // Fades out softly, back to the top of today.
@@ -996,6 +1001,8 @@
     const el = $("closing");
     if (el.hidden || el.classList.contains("leaving")) return;
     el.classList.add("leaving");
+    clearTimeout(showClosing.collapse);
+    if (!$("note").hidden) setWriting(false);
     window.scrollTo(0, 0);
     setTimeout(() => { el.classList.remove("leaving"); setOverlay(el, false); }, 1200);
   }
@@ -1156,11 +1163,16 @@
     $("silence").addEventListener("click", (ev) => {
       if ($("silence").classList.contains("bye") && !ev.target.closest("button")) leaveSilence();
     });
-    $("note-done").addEventListener("click", () => { setWriting(false); showClosing(); });
+    $("note-done").addEventListener("click", () => { flushNote(); showClosing(); });
+    // Straight from the goodbye into sit and think: the sitting screen fades in on top,
+    // and the goodbye is removed behind it once covered, so today never flashes between.
     $("closing-sit").addEventListener("click", () => {
-      $("closing").classList.remove("leaving");
-      setOverlay($("closing"), false);
+      clearTimeout(showClosing.collapse);
       openSilence();
+      setTimeout(() => {
+        $("closing").hidden = true;
+        if (!$("note").hidden) setWriting(false);
+      }, 1300);
     });
 
     $("closing-back").addEventListener("click", hideClosing);
@@ -1190,8 +1202,12 @@
       if (!ev.target.closest("#term-card")) closeTerm();
     });
     $("term-close").addEventListener("click", closeTerm);
-    window.addEventListener("scroll", closeTerm, { passive: true });
-    window.addEventListener("resize", closeTerm);
+    // Cards move with the page, so a long one can be scrolled to its end; only a tap
+    // outside (or close) shuts it.
+    // Phones resize the page while scrolling (the address bar slides away): close the card
+    // only when the width changes, e.g. when the phone turns.
+    let lastWidth = window.innerWidth;
+    window.addEventListener("resize", () => { if (window.innerWidth !== lastWidth) { lastWidth = window.innerWidth; closeTerm(); } });
     document.addEventListener("keydown", (e) => {
       if (e.key !== "Escape") return;
       if (!$("term-card").hidden) closeTerm();
