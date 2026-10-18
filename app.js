@@ -579,7 +579,15 @@
       await LN.cancel({ notifications: [{ id: REMINDER_ID }] });
       if (r.freq === "off") return renderReminder("");
       let perm = await LN.checkPermissions();
-      if (perm.display !== "granted" && ask) { store.set("reminderAsked", "1"); perm = await LN.requestPermissions(); }
+      if (perm.display !== "granted" && ask) {
+        store.set("reminderAsked", "1");
+        perm = await LN.requestPermissions();
+        // Declined when asked: the reminder is off, and Settings says so.
+        if (perm.display !== "granted") {
+          store.set("reminder", JSON.stringify(Object.assign(reminderPrefs(), { freq: "off" })));
+          return renderReminder("");
+        }
+      }
       if (perm.display !== "granted") return renderReminder("Notifications are turned off for this app in your phone's settings.");
       const on = r.freq === "weekly" ? { weekday: r.weekday, hour: r.hour, minute: 0 } : { hour: r.hour, minute: 0 };
       await LN.schedule({ notifications: [{
