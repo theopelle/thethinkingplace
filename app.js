@@ -1086,6 +1086,7 @@
     const lineH = parseFloat(getComputedStyle(prompt).lineHeight) || 24;
     const fits = prompt.getBoundingClientRect().top + lineH <= barTop - 8;
     questionHeld = !fits;
+    holdQuestion.pending = false;
     // Hide at once (no fade-out), so the question never flashes before stepping aside.
     const parts = QUESTION_PARTS.map((q) => view.querySelector(q));
     parts.forEach((el) => { el.style.transition = "none"; el.classList.toggle("held", questionHeld); });
@@ -1093,10 +1094,15 @@
     parts.forEach((el) => el.style.removeProperty("transition"));
     if (questionObserver) questionObserver.disconnect();
     if (questionHeld) {
+      // Same rule as above: the question appears once its first line has come up above
+      // the bottom bar, never while the opening reveal is still running.
+      const below = Math.round(window.innerHeight - barTop + lineH + 8);
       questionObserver = new IntersectionObserver((list) => {
-        if (list.some((x) => x.isIntersecting)) showQuestion();
-      }, { rootMargin: "0px 0px -15% 0px" });
-      questionObserver.observe(view.querySelector(".question"));
+        if (!list.some((x) => x.isIntersecting)) return;
+        if ($("view-day").classList.contains("reveal")) holdQuestion.pending = true;
+        else showQuestion();
+      }, { rootMargin: `0px 0px -${below}px 0px` });
+      questionObserver.observe(prompt);
     }
     updateHint();
   }
@@ -1319,6 +1325,7 @@
     view.style.animation = "none";  // so the page's own fade-in doesn't replay now
     view.classList.remove("reveal", "go");
     view.querySelectorAll("[data-step]").forEach((el) => { delete el.dataset.step; el.style.removeProperty("--step"); });
+    if (holdQuestion.pending) { holdQuestion.pending = false; showQuestion(); }
     updateHint();
   }
 
