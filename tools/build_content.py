@@ -141,7 +141,7 @@ def main(srcdir):
     start = days[0]["date"]
     if PREVIEW_DAYS:
         start, rows = preview(entries, days, rows)
-    calendar = {"start": start, "days": rows}
+    calendar = {"start": start, "days": rows, "words": teaser_words(entries, days)}
 
     json.dump(entries, open(os.path.join(ROOT, "entries.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     json.dump(calendar, open(os.path.join(ROOT, "calendar.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
@@ -149,6 +149,22 @@ def main(srcdir):
     live = [e for e in entries if not e.get("retired")]
     print(f"{len(live)} thoughts (+{len(entries) - len(live)} retired) -> entries.json")
     print(f"{len(days)} days from {days[0]['date']} to {days[-1]['date']} -> calendar.json")
+
+
+def teaser_words(entries, days):
+    """How the content team's evening teasers name each path and theme ("a Stoic thought",
+    "pride and humility"), so the app can word reminders the same way."""
+    import collections
+    by_id = {e["id"]: e for e in entries}
+    paths, themes = collections.defaultdict(collections.Counter), collections.defaultdict(collections.Counter)
+    for prev, cur in zip(days, days[1:]):
+        m = re.match(r"Tomorrow: (.*) on (.*)\.$", prev["teaser"] or "")
+        if m and not cur["revisit"]:
+            e = by_id[cur["id"]]
+            paths[e["path"]][m.group(1)] += 1
+            themes[e["themes"][0]][m.group(2)] += 1
+    return {"paths": {k: v.most_common(1)[0][0] for k, v in paths.items()},
+            "themes": {k: v.most_common(1)[0][0] for k, v in themes.items()}}
 
 
 # TEST BUILDS ONLY: days before the calendar starts get easy thoughts from late in the

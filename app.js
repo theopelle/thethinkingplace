@@ -143,6 +143,7 @@
     plan.stop = todayKey();
     store.set("easy", JSON.stringify(plan));
     renderEasySetting();
+    applyReminder(false);  // the coming reminders now name the shared thoughts
   }
 
   // ---------- notes ----------
@@ -640,12 +641,41 @@
     return Object.assign({ freq: "daily", hour: 8, weekday: 2 }, r || {});
   }
 
+  // Each reminder says what kind of thought is waiting, in the content team's words:
+  // "A Buddhist thought on pride and humility, and on emotions." They are scheduled on the
+  // phone for the next 60 days (rescheduled at every opening); after that comes one last
+  // plain reminder, then quiet until the app is opened again.
+  const AHEAD_DAYS = 60, DAY_IDS = 100;
+  function reminderText(key) {
+    if (easyIndex(key) >= 0) return "A gentle thought for today.";
+    const info = dayInfo(key), e = entryFor(key), w = calendar.words || {};
+    if (info.revisit) return "A thought you may have met before.";
+    const who = (w.paths || {})[e.path];
+    const [t1, t2] = (e.themes || []).map((t) => (w.themes || {})[t]);
+    if (!who || !t1) return "Today's thought is waiting for you.";
+    const on = !t2 || t2 === t1 ? t1 : t1.includes(" and ") || t2.includes(" and ") ? `${t1}, and on ${t2}` : `${t1} and ${t2}`;
+    return `${who[0].toUpperCase()}${who.slice(1)} on ${on}.`;
+  }
+
+  function reminderSchedule(r) {
+    const now = new Date(), list = [];
+    const note = (id, at, body) => ({ id, title: APP_NAME, body, schedule: { at, allowWhileIdle: true },
+      isExactNotification: false, smallIcon: "ic_stat_well", iconColor: "#4E7378" });
+    for (let d = 0; d <= AHEAD_DAYS; d++) {
+      const at = new Date(now.getFullYear(), now.getMonth(), now.getDate() + d, r.hour, 0, 0);
+      if (at <= now || (r.freq === "weekly" && at.getDay() + 1 !== r.weekday)) continue;  // weekday: 1 = Sunday
+      const key = `${at.getFullYear()}-${String(at.getMonth() + 1).padStart(2, "0")}-${String(at.getDate()).padStart(2, "0")}`;
+      list.push(note(DAY_IDS + d, at, d === AHEAD_DAYS ? "Today's thought is waiting for you." : reminderText(key)));
+    }
+    return list;
+  }
+
   async function applyReminder(ask) {
     const LN = plugin("LocalNotifications");
     if (!LN) return;
     const r = reminderPrefs();
     try {
-      await LN.cancel({ notifications: [{ id: REMINDER_ID }] });
+      await LN.cancel({ notifications: [REMINDER_ID, ...Array.from({ length: AHEAD_DAYS + 1 }, (_, i) => DAY_IDS + i)].map((id) => ({ id })) });
       if (r.freq === "off") return renderReminder("");
       let perm = await LN.checkPermissions();
       if (perm.display !== "granted" && ask) {
@@ -658,12 +688,7 @@
         }
       }
       if (perm.display !== "granted") return renderReminder("Notifications are turned off for this app in your phone's settings.");
-      const on = r.freq === "weekly" ? { weekday: r.weekday, hour: r.hour, minute: 0 } : { hour: r.hour, minute: 0 };
-      await LN.schedule({ notifications: [{
-        id: REMINDER_ID, title: APP_NAME, body: "Today's thought is waiting for you.",
-        schedule: { on, allowWhileIdle: true }, isExactNotification: false,
-        smallIcon: "ic_stat_well", iconColor: "#4E7378",
-      }] });
+      await LN.schedule({ notifications: reminderSchedule(r) });
       renderReminder("");
     } catch { renderReminder("The reminder couldn't be set on this device."); }
   }
