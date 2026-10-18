@@ -490,6 +490,7 @@
     $("journal-count").textContent = n === 1 ? "You've sat with 1 thought so far." : `You've sat with ${n} thoughts so far.`;
     $("journal-count").hidden = n < 1;
     renderBackupNudge();
+    renderKeepsake();
     $("filter-saved").classList.toggle("active", journal.saved);
     $("filter-saved").setAttribute("aria-pressed", String(journal.saved));
     for (const kind of ["path", "theme"]) {
@@ -596,6 +597,163 @@
     if (!confirm("Erase all your notes from this device? This cannot be undone.")) return;
     store.keys("note:").forEach((k) => store.remove(k));
     flash($("clear-notes"), "erased");
+  }
+
+  // ---------- your year: a keepsake ----------
+  // A little book of the year, made on the phone as a PDF: a cover, then month by month
+  // the thoughts you sat with and what you wrote, the thoughts you saved, and a closing
+  // line. The PDF tool and its fonts load only when asked for. Nothing leaves the device
+  // until you choose where to save or send the file.
+  const keepsakeYear = () => { const d = new Date(); return d.getMonth() === 0 ? d.getFullYear() - 1 : d.getFullYear(); };
+
+  function yearDays(year) {
+    let days = [];
+    try { days = JSON.parse(store.get("days", "[]")) || []; } catch {}
+    const all = [...days, ...store.keys("note:").map((k) => k.slice(5)), ...savedList().map((x) => x.key)];
+    return [...new Set(all)].filter((k) => k.startsWith(String(year)) && k <= todayKey()).sort();
+  }
+
+  function renderKeepsake() {
+    const year = keepsakeYear(), month = new Date().getMonth();
+    document.querySelectorAll("#keepsake-setting").forEach((b) => (b.textContent = `make your ${year} keepsake`));
+    // From December to the end of January, a quiet line in past thoughts.
+    const show = (month === 11 || month === 0) && yearDays(year).length > 0;
+    $("keepsake-nudge").hidden = !show;
+    $("keepsake-nudge-btn").textContent = `Your ${year} in a little book: make your keepsake →`;
+  }
+
+  const loadScript = (src) => new Promise((resolve, reject) => {
+    if (document.querySelector(`script[src="${src}"]`)) return resolve();
+    const el = document.createElement("script");
+    el.src = src; el.onload = resolve; el.onerror = reject;
+    document.head.appendChild(el);
+  });
+
+  async function base64Of(url, asDataUrl) {
+    const blob = await (await fetch(url)).blob();
+    const data = await new Promise((resolve) => { const r = new FileReader(); r.onload = () => resolve(r.result); r.readAsDataURL(blob); });
+    return asDataUrl ? data : data.split(",")[1];
+  }
+
+  async function makeKeepsake(btn) {
+    const year = keepsakeYear(), days = yearDays(year);
+    if (!days.length) return flash(btn, "nothing yet this year");
+    const label = btn.textContent;
+    btn.textContent = "making your book…";
+    try {
+      await loadScript("vendor/jspdf.umd.min.js");
+      const doc = new window.jspdf.jsPDF({ unit: "mm", format: "a5" });
+      doc.addFileToVFS("Literata-Regular.ttf", await base64Of("fonts/literata-regular.ttf"));
+      doc.addFont("Literata-Regular.ttf", "Literata", "normal");
+      doc.addFileToVFS("Literata-Italic.ttf", await base64Of("fonts/literata-italic.ttf"));
+      doc.addFont("Literata-Italic.ttf", "Literata", "italic");
+      const mark = await base64Of("mark-400.png", true);
+      const blob = buildKeepsake(doc, year, days, mark);
+      const name = `the-thinking-place-${year}.pdf`;
+      if (NATIVE) {
+        const { Filesystem, Share } = window.Capacitor.Plugins;
+        const { uri } = await Filesystem.writeFile({ path: name, data: await base64Of(URL.createObjectURL(blob)), directory: "CACHE" });
+        await Share.share({ title: `Your ${year}`, files: [uri] });
+      } else {
+        doc.save(name);
+      }
+      btn.textContent = label;
+    } catch (err) {
+      console.error("keepsake", err);
+      btn.textContent = label;
+      flash(btn, "couldn't make it here");
+    }
+  }
+
+  function buildKeepsake(doc, year, days, mark) {
+    const W = 148, H = 210, M = 18, TW = W - 2 * M, BOTTOM = H - 18;
+    const PAPER = [251, 250, 247], INK = [38, 38, 38], MUTED = [107, 104, 98], TEAL = [78, 115, 120], STONE = [227, 223, 215];
+    const lh = (pt) => pt * 0.3528 * 1.45;
+    let y = 0, page = 0;
+    const paper = () => { doc.setFillColor(...PAPER); doc.rect(0, 0, W, H, "F"); };
+    const folio = () => {
+      doc.setFont("Literata", "normal"); doc.setFontSize(7); doc.setTextColor(...MUTED);
+      doc.text(String(page), W / 2, H - 9, { align: "center" });
+    };
+    const newPage = () => { doc.addPage(); page++; paper(); folio(); y = 22; };
+    const text = (str, { size = 10, style = "normal", color = INK, font = "Literata", gap = 0, indent = 0, center = false } = {}) => {
+      doc.setFont(font, style); doc.setFontSize(size); doc.setTextColor(...color);
+      const lines = doc.splitTextToSize(str, TW - indent);
+      for (const line of lines) {
+        if (y + lh(size) > BOTTOM) newPage();
+        y += lh(size);
+        doc.text(line, center ? W / 2 : M + indent, y, center ? { align: "center" } : undefined);
+      }
+      y += gap;
+      return lines.length;
+    };
+    const caps = (str, color = MUTED) => {
+      doc.setCharSpace(0.35);
+      text(str.toUpperCase(), { size: 6.5, font: "helvetica", color, gap: 1 });
+      doc.setCharSpace(0);
+    };
+
+    // Cover
+    paper();
+    doc.addImage(mark, "PNG", W / 2 - 17, 46, 34, 34);
+    y = 102;
+    text("Your year", { size: 24, center: true, gap: 2 });
+    text(String(year), { size: 30, center: true, color: TEAL, gap: 6 });
+    const name = (store.get("name", "") || "").trim();
+    if (name) text(name, { size: 12, style: "italic", center: true, color: MUTED, gap: 2 });
+    y = 176;
+    doc.setCharSpace(0.6);
+    text("THE THINKING PLACE", { size: 6.5, font: "helvetica", color: MUTED, center: true });
+    doc.setCharSpace(0);
+
+    // Month by month
+    let month = "";
+    const fmt = (key) => new Date(keyToUTC(key)).toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" });
+    for (const key of days) {
+      const m = new Date(keyToUTC(key)).toLocaleDateString("en-GB", { month: "long", timeZone: "UTC" });
+      if (m !== month) {
+        month = m;
+        newPage();
+        text(m, { size: 18, gap: 2 });
+        doc.setDrawColor(...STONE); doc.setLineWidth(0.3); doc.line(M, y, M + 24, y);
+        y += 7;
+      }
+      const e = entryShown(key), note = (readNote(key) || { text: "" }).text.trim();
+      if (y + 30 > BOTTOM) newPage();
+      caps(`${fmt(key)} · ${e.path}`);
+      text(e.text, { size: 10.5, gap: 1 });
+      text(e.source, { size: 7.5, color: MUTED, gap: note ? 2.5 : 6 });
+      if (note) {
+        const top = y + 1;
+        text(note, { size: 9.5, style: "italic", indent: 4, gap: 0 });
+        doc.setDrawColor(...TEAL); doc.setLineWidth(0.5); doc.line(M + 0.5, top, M + 0.5, y + 1);
+        y += 6;
+      }
+    }
+
+    // Saved thoughts
+    const saved = savedList().filter((x) => x.key.startsWith(String(year)));
+    if (saved.length) {
+      newPage();
+      text("Thoughts you saved", { size: 18, gap: 2 });
+      doc.setDrawColor(...STONE); doc.setLineWidth(0.3); doc.line(M, y, M + 24, y);
+      y += 7;
+      for (const x of saved) {
+        const e = entriesById[x.id];
+        if (!e) continue;
+        if (y + 22 > BOTTOM) newPage();
+        text(e.text, { size: 10.5, gap: 1 });
+        text(e.source, { size: 7.5, color: MUTED, gap: 6 });
+      }
+    }
+
+    // Closing
+    newPage();
+    y = 92;
+    const n = days.length;
+    text(n === 1 ? "You sat with one thought this year." : `You sat with ${n} thoughts this year.`, { size: 13, style: "italic", center: true, gap: 3 });
+    text(`See you in ${year + 1}.`, { size: 11, color: MUTED, center: true });
+    return doc.output("blob");
   }
 
   // ---------- backup reminder ----------
@@ -1227,6 +1385,7 @@
       view = "settings";
       $("name-setting").value = store.get("name", "");
       renderEasySetting();
+      renderKeepsake();
       renderLinks(); renderReminder(); renderOfflineStatus();
     }
     else if (hash === "terms") view = "terms";
@@ -1426,6 +1585,7 @@
     $("name-setting").addEventListener("change", (ev) => saveName(ev.target.value));
     $("clear-notes").addEventListener("click", clearNotes);
     $("easy-stop").addEventListener("click", stopEasy);
+    document.querySelectorAll(".keepsake-make").forEach((b) => b.addEventListener("click", () => makeKeepsake(b)));
 
     document.querySelectorAll("[data-filter]").forEach((b) => b.addEventListener("click", () => openPicker(b)));
     $("picker-back").addEventListener("click", closePicker);

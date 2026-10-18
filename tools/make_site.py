@@ -17,7 +17,7 @@ WEB = os.path.join(ROOT, "web")
 SITE = os.path.join(ROOT, "site")
 APP_FILES = ["index.html", "style.css", "app.js", "sw.js", "manifest.webmanifest", "entries.json",
              "calendar.json", "glossary.json", "icon.svg", "icon-180.png", "icon-192.png", "icon-512.png",
-             "icon-maskable-512.png"]
+             "icon-maskable-512.png", "mark-400.png"]
 PLAY_URL = "https://play.google.com/store/apps/details?id=app.thethinkingplace"  # live once published
 
 
@@ -34,6 +34,7 @@ def main():
     for f in APP_FILES:
         shutil.copy(os.path.join(ROOT, f), os.path.join(SITE, "app", f))
     shutil.copytree(os.path.join(ROOT, "fonts"), os.path.join(SITE, "app", "fonts"))
+    shutil.copytree(os.path.join(ROOT, "vendor"), os.path.join(SITE, "app", "vendor"))
     shutil.copy(os.path.join(WEB, "site.css"), SITE)
     shutil.copy(os.path.join(WEB, "iphone.html"), SITE)
 
