@@ -33,6 +33,7 @@ def main():
     os.makedirs(os.path.join(SITE, "app"))
     for f in APP_FILES:
         shutil.copy(os.path.join(ROOT, f), os.path.join(SITE, "app", f))
+    shutil.copytree(os.path.join(ROOT, "fonts"), os.path.join(SITE, "app", "fonts"))
     shutil.copy(os.path.join(WEB, "site.css"), SITE)
     shutil.copy(os.path.join(WEB, "iphone.html"), SITE)
 

@@ -1,3 +1,13 @@
+/* Literata (SIL Open Font License, fonts/OFL.txt): bundled so the type is the same on
+   every phone and works offline. Only regular and italic, Latin and Latin Extended. */
+@font-face { font-family: "Literata"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url(fonts/literata-latin-400-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Literata"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url(fonts/literata-latin-ext-400-normal.woff2) format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Literata"; font-style: italic; font-weight: 400; font-display: swap;
+  src: url(fonts/literata-latin-400-italic.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Literata"; font-style: italic; font-weight: 400; font-display: swap;
+  src: url(fonts/literata-latin-ext-400-italic.woff2) format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
 :root {
   /* Brand colours: see brand/colors.json and brand/index.html */
   --bg: #FBFAF7;      /* paper */
@@ -6,7 +16,7 @@
   --faint: #E3DFD7;   /* stone */
   --accent: #4E7378;  /* teal, 5:1 on paper */
   --logo-accent: #4E7378;
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --serif: "Literata", Georgia, serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   color-scheme: light;
 }
@@ -83,14 +93,14 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 
 .passage { margin: 0; text-align: center; }
 .passage p {
-  font: 400 clamp(1.4rem, 5vw, 1.85rem)/1.45 var(--serif);
+  font: 400 clamp(1.32rem, 4.7vw, 1.75rem)/1.45 var(--serif);  /* Literata runs large */
   margin: 0;
   text-wrap: balance;
 }
 /* Longer passages read better left-aligned, a touch smaller, with more air. */
 .passage.long { text-align: left; }
-.passage.long p { font-size: clamp(1.2rem, 4.4vw, 1.5rem); line-height: 1.55; text-wrap: pretty; }
-.passage.very-long p { font-size: clamp(1.1rem, 4vw, 1.3rem); line-height: 1.6; }
+.passage.long p { font-size: clamp(1.13rem, 4.15vw, 1.42rem); line-height: 1.55; text-wrap: pretty; }
+.passage.very-long p { font-size: clamp(1.04rem, 3.8vw, 1.23rem); line-height: 1.6; }
 .journal .j-text { white-space: pre-line; }  /* verse keeps its line breaks */
 .passage.verse p { font-size: clamp(1.05rem, 3.9vw, 1.25rem); line-height: 1.5; }
 .verse-line { display: block; padding-left: 1.4em; text-indent: -1.4em; }
@@ -108,7 +118,7 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 .question { margin: 0 auto; text-align: center; }
 .question-label { color: var(--muted); font: 400 .7rem/1.4 var(--sans); letter-spacing: .18em; text-transform: uppercase; margin: 0 0 .7rem; }
 .prompt {
-  font: italic 400 1.15rem/1.5 var(--serif);
+  font: italic 400 1.1rem/1.5 var(--serif);
   text-align: center;
   margin: 0 auto;
   text-wrap: balance;
