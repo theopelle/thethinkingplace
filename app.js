@@ -1276,7 +1276,13 @@
     }
     view.style.setProperty("--step-s", STEP_S + "s");
     view.style.setProperty("--rise-s", RISE_S + "s");
+    // Hide everything at once: the question block has its own fade (for scrolling into
+    // view), which would otherwise let it linger while the rest is already hidden.
+    const parts = QUESTION_PARTS.map((q) => view.querySelector(q));
+    parts.forEach((el) => (el.style.transition = "none"));
     view.classList.add("reveal");
+    void view.offsetHeight;
+    parts.forEach((el) => el.style.removeProperty("transition"));
     prepareReveal.steps = step;
     store.set("revealed", todayKey());
     return true;
