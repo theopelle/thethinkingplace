@@ -255,18 +255,12 @@
     }, 600);
   }
 
-  // Shares the thought, its author and the app's name; the question stays personal.
+  // Copies the thought, its author and the app's name, ready to paste anywhere; the
+  // question stays personal.
   async function share() {
     const e = entryShown(currentKey || todayKey());
     const text = `“${e.text.replace(/\n/g, " / ")}”\n— ${e.source}\n\nvia ${APP_NAME}`;
-    const Share = plugin("Share");
-    try {
-      if (Share) { await Share.share({ text, dialogTitle: "Share this thought" }); return; }
-      if (navigator.share) { await navigator.share({ text }); return; }
-    } catch (err) {
-      return;  // the share sheet was closed: nothing to do
-    }
-    if (await copyText(text)) toast("Copied to clipboard. Paste it anywhere you like.");
+    if (await copyText(text)) toast("Copied. Paste it anywhere you like.");
     else toast("Couldn't copy on this device.");
   }
 
