@@ -73,7 +73,77 @@
     const [id, teaser, revisit] = calendar.days[i % n];
     return { id, teaser, revisit: !!revisit };
   }
-  const entryFor = (key) => entriesById[dayInfo(key).id];
+  const entryFor = (key) => {
+    const i = easyIndex(key);
+    return (i >= 0 && entriesById[easyPlan().ids[i]]) || entriesById[dayInfo(key).id];
+  };
+
+  // ---------- easing in ----------
+  // A new reader can choose five easier thoughts before joining the shared calendar. They
+  // are picked once, at that moment: easy and valuable, from different paths, and not on
+  // the calendar for the year ahead (or, later on, not shown in the last six months), so
+  // nobody meets one twice soon.
+  const EASY_DAYS = 5;
+  function easyPlan() {
+    try { return JSON.parse(store.get("easy", "null")); } catch { return null; }
+  }
+  function easyIndex(key) {
+    const plan = easyPlan();
+    if (!plan) return -1;
+    const i = daysBetween(plan.start, key);
+    return i >= 0 && i < plan.ids.length && !(plan.stop && key >= plan.stop) ? i : -1;
+  }
+
+  function pickEasy(today) {
+    const n = calendar.days.length;
+    const shownBetween = (from, to) => {
+      const ids = new Set();
+      for (let i = Math.max(0, daysBetween(calendar.start, from)); i <= Math.min(n - 1, daysBetween(calendar.start, to)); i++) ids.add(calendar.days[i][0]);
+      return ids;
+    };
+    const shift = (days) => utcToKey(keyToUTC(today) + days * DAY);
+    const tries = [
+      [shownBetween(calendar.start, shift(365)), (e) => e.difficulty === 1 && e.value >= 4],
+      [shownBetween(calendar.start, shift(365)), (e) => e.difficulty <= 2 && e.value === 5],
+      [shownBetween(shift(-180), shift(180)), (e) => e.difficulty === 1 && e.value >= 4],
+      [shownBetween(shift(-60), shift(60)), (e) => e.difficulty <= 2 && e.value >= 4],
+    ];
+    // East and West in turn; within a path, the most valuable and then the shortest.
+    const order = ["Stoicism", "Buddhist Philosophy", "Classical Greek Philosophy", "Taoism",
+      "Humanists and Essayists", "Confucianism", "Epicureanism", "Japanese Aesthetics",
+      "Enlightenment Ethics", "Indian Philosophy", "Existential Thought", "Persian and Sufi Poetry"];
+    const live = entries.filter((e) => !e.retired).sort((a, b) => b.value - a.value || a.text.length - b.text.length);
+    const picks = [];
+    for (const path of order) {
+      if (picks.length === EASY_DAYS) break;
+      for (const [blocked, ok] of tries) {
+        const e = live.find((x) => x.path === path && ok(x) && !blocked.has(x.id));
+        if (e) { picks.push(e); break; }
+      }
+    }
+    return picks.map((e) => e.id);
+  }
+
+  function startEasy() {
+    const today = todayKey();
+    store.set("easy", JSON.stringify({ start: today, ids: pickEasy(today) }));
+  }
+
+  function renderEasySetting() {
+    const plan = easyPlan(), today = todayKey(), i = easyIndex(today);
+    $("easy-setting").hidden = i < 0;
+    if (i < 0) return;
+    const until = utcToKey(keyToUTC(plan.start) + plan.ids.length * DAY);
+    $("easy-status").textContent = `Day ${i + 1} of ${plan.ids.length}: easier thoughts first. From ${formatDate(until)}, you'll get the same thought as everyone.`;
+  }
+
+  function stopEasy() {
+    const plan = easyPlan();
+    if (!plan) return;
+    plan.stop = todayKey();
+    store.set("easy", JSON.stringify(plan));
+    renderEasySetting();
+  }
 
   // ---------- notes ----------
   // Each note is stored with the id of the thought it was written about, so the pair
@@ -208,7 +278,10 @@
     markTerms(e.path, ["day-text", "day-path", "day-source", "day-context-text"]);
     renderGreeting(key === today);
     // In the evening, a word about tomorrow.
-    const teaser = key === today && new Date().getHours() >= 20 ? dayInfo(today).teaser : "";
+    const tomorrow = utcToKey(keyToUTC(today) + DAY);
+    const teaser = key === today && new Date().getHours() >= 20
+      ? (easyIndex(tomorrow) >= 0 ? "Tomorrow: another gentle thought." : easyIndex(today) >= 0 ? "Tomorrow: the same thought as everyone." : dayInfo(today).teaser)
+      : "";
     $("teaser").textContent = teaser;
     $("teaser").hidden = !teaser;
 
@@ -895,11 +968,16 @@
     $("welcome-form").addEventListener("submit", (ev) => {
       ev.preventDefault();
       saveName($("welcome-name").value);
+      if (ev.submitter && ev.submitter.value === "easy") startEasy();
       store.set("welcomed", "1");
+      // The name keyboard is still open: hide the page for the reveal now, but measure
+      // it (does the question fit?) only once the keyboard has gone and the screen is full size.
+      document.activeElement && document.activeElement.blur();
       setOverlay($("welcome"), false);
       route();
-      prepareReveal();
-      startReveal(200);
+      if (prepareReveal()) {
+        afterResizeSettles().then(() => { holdQuestion(); assignSteps(); startReveal(200); });
+      }
       applyReminder(true);
     }, { once: true });
     return true;
@@ -1046,6 +1124,7 @@
     else if (hash === "settings") {
       view = "settings";
       $("name-setting").value = store.get("name", "");
+      renderEasySetting();
       renderLinks(); renderReminder(); renderOfflineStatus();
     }
     else if (hash === "terms") view = "terms";
@@ -1078,13 +1157,14 @@
   const QUESTION_PARTS = ["#pause-2", "#view-day .question", "#view-day .actions", "#note-preview"];
   let questionHeld = false, questionObserver = null;
 
-  function holdQuestion() {
+  function holdQuestion(opts = {}) {
     const view = $("view-day");
     if (view.hidden) return;
     const prompt = $("day-prompt");
     const barTop = document.querySelector(".nav").getBoundingClientRect().top;
     const lineH = parseFloat(getComputedStyle(prompt).lineHeight) || 24;
     const fits = prompt.getBoundingClientRect().top + lineH <= barTop - 8;
+    if (opts.fade && questionHeld && fits) return showQuestion();  // fades in, never pops
     questionHeld = !fits;
     holdQuestion.pending = false;
     // Hide at once (no fade-out), so the question never flashes before stepping aside.
@@ -1146,7 +1226,11 @@
       showQuestion();
       document.querySelector("#view-day .question").scrollIntoView({ behavior: "smooth", block: "center" });
     });
-    window.addEventListener("resize", () => { if (questionHeld) holdQuestion(); });
+    // Re-measure when the screen changes size (keyboard, rotation), but not during the
+    // opening reveal: that is settled when it ends.
+    window.addEventListener("resize", () => {
+      if (questionHeld && !$("view-day").classList.contains("reveal")) holdQuestion({ fade: true });
+    });
     $("context-toggle").addEventListener("click", () => showContext($("day-context").hidden));
     $("open-note").addEventListener("click", () => setWriting($("note").hidden));
     $("note-edit").addEventListener("click", () => setWriting(true));
@@ -1239,6 +1323,7 @@
     });
     $("name-setting").addEventListener("change", (ev) => saveName(ev.target.value));
     $("clear-notes").addEventListener("click", clearNotes);
+    $("easy-stop").addEventListener("click", stopEasy);
 
     document.querySelectorAll("[data-filter]").forEach((b) => b.addEventListener("click", () => openPicker(b)));
     $("picker-back").addEventListener("click", closePicker);
@@ -1279,6 +1364,24 @@
     const view = $("view-day");
     if (view.hidden || store.get("revealed") === todayKey()) return false;
     holdQuestion();
+    assignSteps();
+    view.style.setProperty("--step-s", STEP_S + "s");
+    view.style.setProperty("--rise-s", RISE_S + "s");
+    // Hide everything at once: the question block has its own fade (for scrolling into
+    // view), which would otherwise let it linger while the rest is already hidden.
+    const parts = QUESTION_PARTS.map((q) => view.querySelector(q));
+    parts.forEach((el) => (el.style.transition = "none"));
+    view.classList.add("reveal");
+    void view.offsetHeight;
+    parts.forEach((el) => el.style.removeProperty("transition"));
+    store.set("revealed", todayKey());
+    return true;
+  }
+
+  // Which block comes in at which step. A question waiting below the fold stays out of it.
+  function assignSteps() {
+    const view = $("view-day");
+    view.querySelectorAll("[data-step]").forEach((el) => { delete el.dataset.step; el.style.removeProperty("--step"); });
     const groups = [["#greeting"], ["#day-date"], ["#teaser"],
       ["#pause-1", "#day-path", ".passage", "#view-day .source", "#context-toggle"],
       ["#pause-2", ".question-label"], ["#day-prompt"], ["#view-day .actions", "#note-preview"]];
@@ -1290,18 +1393,19 @@
       for (const el of els) { el.dataset.step = ""; el.style.setProperty("--step", step); }
       step++;
     }
-    view.style.setProperty("--step-s", STEP_S + "s");
-    view.style.setProperty("--rise-s", RISE_S + "s");
-    // Hide everything at once: the question block has its own fade (for scrolling into
-    // view), which would otherwise let it linger while the rest is already hidden.
-    const parts = QUESTION_PARTS.map((q) => view.querySelector(q));
-    parts.forEach((el) => (el.style.transition = "none"));
-    view.classList.add("reveal");
-    void view.offsetHeight;
-    parts.forEach((el) => el.style.removeProperty("transition"));
     prepareReveal.steps = step;
-    store.set("revealed", todayKey());
-    return true;
+  }
+
+  // Resolves once the screen has stopped changing size (the keyboard closing), at most ~1s.
+  function afterResizeSettles() {
+    return new Promise((resolve) => {
+      let timer;
+      const done = () => { window.removeEventListener("resize", wait); clearTimeout(cap); resolve(); };
+      const wait = () => { clearTimeout(timer); timer = setTimeout(done, 250); };
+      const cap = setTimeout(done, 1000);
+      window.addEventListener("resize", wait);
+      timer = setTimeout(done, 400);  // give the keyboard time to start closing
+    });
   }
 
   let revealTimers = [];
@@ -1326,6 +1430,7 @@
     view.classList.remove("reveal", "go");
     view.querySelectorAll("[data-step]").forEach((el) => { delete el.dataset.step; el.style.removeProperty("--step"); });
     if (holdQuestion.pending) { holdQuestion.pending = false; showQuestion(); }
+    else if (questionHeld) holdQuestion({ fade: true });  // the screen may have grown meanwhile
     updateHint();
   }
 
