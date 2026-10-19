@@ -74,8 +74,8 @@
     return { id, teaser, revisit: !!revisit };
   }
   const entryFor = (key) => {
-    const i = easyIndex(key);
-    return (i >= 0 && entriesById[easyPlan().ids[i]]) || entriesById[dayInfo(key).id];
+    const a = easyAt(key);
+    return (a && entriesById[a.seg.ids[a.i]]) || entriesById[dayInfo(key).id];
   };
 
   // ---------- easing in ----------
@@ -83,16 +83,30 @@
   // are picked once, at that moment: easy and valuable, from different paths, and not on
   // the calendar for the year ahead (or, later on, not shown in the last six months), so
   // nobody meets one twice soon.
+  // Readers can switch easing in on and off during their first five days. Each stretch of
+  // easy days is kept (start, thoughts, and the day it stopped) so past days keep showing
+  // the thought that was read then; switching back on continues with the unused thoughts.
   const EASY_DAYS = 5;
-  function easyPlan() {
-    try { return JSON.parse(store.get("easy", "null")); } catch { return null; }
+  function easySegments() {
+    let v = null;
+    try { v = JSON.parse(store.get("easy", "null")); } catch {}
+    return !v ? [] : Array.isArray(v) ? v : [v];  // older builds stored one plan
   }
-  function easyIndex(key) {
-    const plan = easyPlan();
-    if (!plan) return -1;
-    const i = daysBetween(plan.start, key);
-    return i >= 0 && i < plan.ids.length && !(plan.stop && key >= plan.stop) ? i : -1;
+  function easyAt(key) {
+    for (const seg of easySegments()) {
+      const i = daysBetween(seg.start, key);
+      if (i >= 0 && i < seg.ids.length && !(seg.stop && key >= seg.stop)) return { seg, i };
+    }
+    return null;
   }
+  const easyIndex = (key) => { const a = easyAt(key); return a ? a.i : -1; };
+  function unusedEasy() {
+    const segs = easySegments(), last = segs[segs.length - 1];
+    if (!last) return null;  // never eased in
+    const used = last.stop ? Math.max(0, daysBetween(last.start, last.stop)) : last.ids.length;
+    return last.ids.slice(used);
+  }
+  const inFirstDays = () => daysBetween(store.get("installed", todayKey()), todayKey()) < EASY_DAYS;
 
   function pickEasy(today) {
     const n = calendar.days.length;
@@ -125,25 +139,36 @@
   }
 
   function startEasy() {
-    const today = todayKey();
-    store.set("easy", JSON.stringify({ start: today, ids: pickEasy(today) }));
+    const today = todayKey(), left = unusedEasy();
+    const ids = left && left.length ? left : pickEasy(today);
+    store.set("easy", JSON.stringify([...easySegments(), { start: today, ids }]));
   }
 
   function renderEasySetting() {
-    const plan = easyPlan(), today = todayKey(), i = easyIndex(today);
-    $("easy-setting").hidden = i < 0;
-    if (i < 0) return;
-    const until = utcToKey(keyToUTC(plan.start) + plan.ids.length * DAY);
-    $("easy-status").textContent = `Day ${i + 1} of ${plan.ids.length}: easier thoughts first. From ${formatDate(until)}, you'll get the same thought as everyone.`;
+    const today = todayKey(), a = easyAt(today), left = unusedEasy();
+    const offer = !a && inFirstDays() && (left === null || left.length > 0);
+    $("easy-setting").hidden = !a && !offer;
+    if (a) {
+      const until = utcToKey(keyToUTC(a.seg.start) + a.seg.ids.length * DAY);
+      $("easy-status").textContent = `Day ${a.i + 1} of ${a.seg.ids.length}: easier thoughts first. From ${formatDate(until)}, you'll get the same thought as everyone.`;
+      $("easy-toggle").textContent = "join everyone now";
+    } else if (offer) {
+      $("easy-status").textContent = "Prefer a gentler start? During your first days, you can have easier thoughts before joining everyone.";
+      $("easy-toggle").textContent = "ease in gently";
+    }
   }
 
-  function stopEasy() {
-    const plan = easyPlan();
-    if (!plan) return;
-    plan.stop = todayKey();
-    store.set("easy", JSON.stringify(plan));
+  function toggleEasy() {
+    const today = todayKey(), a = easyAt(today);
+    if (a) {
+      const segs = easySegments();
+      segs[segs.length - 1].stop = today;
+      store.set("easy", JSON.stringify(segs));
+    } else {
+      startEasy();
+    }
     renderEasySetting();
-    applyReminder(false);  // the coming reminders now name the shared thoughts
+    applyReminder(false);  // the coming reminders follow the change
   }
 
   // ---------- notes ----------
@@ -613,7 +638,10 @@
     return [...new Set(all)].filter((k) => k.startsWith(String(year)) && k <= todayKey()).sort();
   }
 
+  const KEEPSAKE_ON = false;  // built and tested; hidden until we decide to show it
   function renderKeepsake() {
+    document.querySelectorAll(".keepsake-row").forEach((el) => (el.hidden = !KEEPSAKE_ON));
+    if (!KEEPSAKE_ON) { $("keepsake-nudge").hidden = true; return; }
     const year = keepsakeYear(), month = new Date().getMonth();
     document.querySelectorAll("#keepsake-setting").forEach((b) => (b.textContent = `make your ${year} keepsake`));
     // From December to the end of January, a quiet line in past thoughts.
@@ -1228,6 +1256,7 @@
     $("welcome-form").addEventListener("submit", (ev) => {
       ev.preventDefault();
       saveName($("welcome-name").value);
+      store.set("installed", todayKey());
       if (ev.submitter && ev.submitter.value === "easy") startEasy();
       store.set("welcomed", "1");
       // The name keyboard is still open: hide the page for the reveal now, but measure
@@ -1584,7 +1613,7 @@
     });
     $("name-setting").addEventListener("change", (ev) => saveName(ev.target.value));
     $("clear-notes").addEventListener("click", clearNotes);
-    $("easy-stop").addEventListener("click", stopEasy);
+    $("easy-toggle").addEventListener("click", toggleEasy);
     document.querySelectorAll(".keepsake-make").forEach((b) => b.addEventListener("click", () => makeKeepsake(b)));
 
     document.querySelectorAll("[data-filter]").forEach((b) => b.addEventListener("click", () => openPicker(b)));
@@ -1717,6 +1746,7 @@
     entriesById = Object.fromEntries(entries.map((x) => [x.id, x]));
     calendar = c;
     upgradeNotes();
+    if (store.get("welcomed") && !store.get("installed")) store.set("installed", todayKey());
     try { glossary = await fetch("glossary.json", { cache: "no-cache" }).then((r) => r.json()); } catch {}
     fillFilters();
     renderTimeline();
