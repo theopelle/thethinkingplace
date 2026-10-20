@@ -225,7 +225,7 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 .term-more a { color: var(--fg); }
 .term-foot { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
 .term-wiki { font-size: .75rem; color: var(--muted); }
-.term-close { background: none; border: 0; padding: 0; font: inherit; font-size: .75rem; color: var(--muted); cursor: pointer; }
+.term-close { margin-left: auto; background: none; border: 0; padding: 0; font: inherit; font-size: .75rem; color: var(--muted); cursor: pointer; }
 
 /* Toast */
 .toast {
@@ -266,7 +266,7 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
   animation: fade 2s ease;
 }
 /* The goodbye arrives slowly, and leaves softly when tapped. */
-#closing { animation: fade 3s ease .5s both; }
+#closing { animation: fade 1.6s ease .2s both; }
 #closing.leaving { animation: fadeout 1.2s ease both; pointer-events: none; }
 @keyframes fadeout { from { opacity: 1; } to { opacity: 0; } }
 .closing-backup { margin: 1.5rem 0 0 !important; }
@@ -298,7 +298,6 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
   transition: transform 4s ease-in-out;
 }
 .breath.in { transform: scale(1); }
-.breath.out { transition-duration: 6s; }
 .breath-cue { color: var(--muted); font-size: .85rem; letter-spacing: .14em; margin: 1.25rem 0 0; min-height: 1.4em; }
 .remaining { color: var(--muted); font-size: .8rem; line-height: 1.3; font-variant-numeric: tabular-nums; margin: 1.5rem 0; height: 1.3em; }
 .sit-question { margin: 0; text-align: center; color: var(--fg); opacity: .85;
@@ -363,6 +362,8 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 
 .setting-help { font-size: .8rem; line-height: 1.5; margin-top: .75rem; }
 .setting-text { margin-top: 0; }
+#easy-status { transition: opacity .35s ease; }
+#easy-status.changing { opacity: 0; }
 
 /* Short pauses between the day's three blocks */
 .pause { width: 2.5rem; height: 0; border-top: 1px solid var(--faint); margin: 2.5rem auto; }
@@ -376,7 +377,8 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 /* A large, soft opening quotation mark above each thought: a sign, not punctuation,
    so it needs no closing partner. */
 .passage::before { content: "“"; display: block; font: 400 4rem/1 var(--serif); color: var(--accent);
-  opacity: .35; height: 2.1rem; margin-bottom: .2rem; }
+  opacity: .35; height: 2.1rem; margin-bottom: .2rem;
+  pointer-events: none; }  /* the glyph hangs over the first line: taps must reach its words */
 .passage.long::before { text-align: left; }
 
 /* Second and third rows of a setting */

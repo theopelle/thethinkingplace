@@ -148,32 +148,42 @@
     const today = todayKey(), a = easyAt(today), left = unusedEasy();
     const offer = !a && inFirstDays() && (left === null || left.length > 0);
     $("easy-setting").hidden = !a && !offer;
+    checkChoice("[data-easy]", "easy", a ? "on" : "off");
     if (a) {
       const until = utcToKey(keyToUTC(a.seg.start) + a.seg.ids.length * DAY);
       $("easy-status").textContent = `Day ${a.i + 1} of ${a.seg.ids.length}: easier thoughts first. From ${formatDate(until)}, you'll get the same thought as everyone.`;
-      $("easy-toggle").textContent = "join everyone now";
     } else if (offer) {
-      $("easy-status").textContent = "Prefer a gentler start? During your first days, you can have easier thoughts before joining everyone.";
-      $("easy-toggle").textContent = "ease in gently";
+      $("easy-status").textContent = "You're reading the same thought as everyone. During your first days, you can switch to easier thoughts first.";
     }
   }
 
-  function toggleEasy() {
-    const today = todayKey(), a = easyAt(today);
-    if (a) {
-      const segs = easySegments();
-      segs[segs.length - 1].stop = today;
-      store.set("easy", JSON.stringify(segs));
-    } else {
-      startEasy();
-    }
-    renderEasySetting();
-    applyReminder(false);  // the coming reminders follow the change
+  // Today's thought changes with the switch: the text fades out and back in, so the
+  // change is felt.
+  function setEasy(on) {
+    if (on === !!easyAt(todayKey())) return;
+    flushNote();
+    const status = $("easy-status");
+    status.classList.add("changing");
+    clearTimeout(setEasy.timer);
+    setEasy.timer = setTimeout(() => {
+      if (on) startEasy();
+      else {
+        const segs = easySegments();
+        segs[segs.length - 1].stop = todayKey();
+        store.set("easy", JSON.stringify(segs));
+      }
+      renderEasySetting();
+      status.classList.remove("changing");
+      applyReminder(false);  // the coming reminders follow the change
+    }, 350);
+    checkChoice("[data-easy]", "easy", on ? "on" : "off");
   }
 
   // ---------- notes ----------
   // Each note is stored with the id of the thought it was written about, so the pair
-  // stays together even if the calendar ever changes.
+  // stays together even if the calendar ever changes. A day can hold a second note
+  // (`other`): during the first days a reader can switch between the gentle thought and
+  // everyone's, and write about both.
   function readNote(key) {
     const raw = store.get("note:" + key);
     if (!raw) return null;
@@ -184,18 +194,33 @@
     return { text: raw, id: null };  // older plain-text note
   }
 
-  function writeNote(key, text, id) {
-    if (!text.trim()) { store.remove("note:" + key); return true; }
-    countDay(key);
-    store.set("noteChanged", todayKey());
-    return store.set("note:" + key, JSON.stringify({ text, id }));
+  // The note a day holds about one thought, if any.
+  function noteAbout(key, id) {
+    const n = readNote(key);
+    if (!n) return null;
+    if (n.id == null || n.id === id) return n;
+    return n.other && n.other.id === id ? n.other : null;
   }
 
-  // The thought to show for a day: the one its note was written about, if any.
+  function writeNote(key, text, id) {
+    const old = readNote(key), keep = [];
+    if (text.trim()) keep.push({ text, id });
+    for (const n of old ? [old, old.other] : [])
+      if (n && n.id != null && n.id !== id && n.text.trim() && keep.length < 2) keep.push({ text: n.text, id: n.id });
+    if (!keep.length) { store.remove("note:" + key); return true; }
+    if (text.trim()) { countDay(key); store.set("noteChanged", todayKey()); }
+    const [main, other] = keep;
+    return store.set("note:" + key, JSON.stringify(other ? { ...main, other } : main));
+  }
+
+  // The thought to show for a day: the one its note was written about, if any. Today,
+  // while the gentle start can still be switched, the switch decides.
   function entryShown(key) {
+    if (key === todayKey() && inFirstDays()) return entryFor(key);
     const note = readNote(key);
     return (note && note.id != null && entriesById[note.id]) || entryFor(key);
   }
+  const noteText = (key) => (noteAbout(key, entryShown(key).id) || { text: "" }).text;
 
   // Notes from the first version point at old text ids: move them to the new numbers.
   // Plain-text notes get the id of the thought shown that day.
@@ -290,7 +315,7 @@
     const sameYear = first.slice(0, 4) === key.slice(0, 4);
     const when = new Date(keyToUTC(first)).toLocaleDateString(undefined,
       { weekday: "long", day: "numeric", month: "long", year: sameYear ? undefined : "numeric", timeZone: "UTC" });
-    const note = (readNote(first) || { text: "" }).text.trim();
+    const note = noteText(first).trim();
     $("memory-when").textContent = `You first met this thought on ${when}.` + (note ? " You wrote:" : "");
     $("memory-note").hidden = !note;
     $("memory-note").textContent = note.length > 280 ? note.slice(0, 280).trimEnd() + "…" : note;
@@ -357,17 +382,14 @@
     markTerms(e.path, ["day-text", "day-path", "day-source", "day-context-text"]);
     renderGreeting(key === today);
     // In the evening, a word about tomorrow.
-    const tomorrow = utcToKey(keyToUTC(today) + DAY);
-    const teaser = key === today && new Date().getHours() >= 20
-      ? (easyIndex(tomorrow) >= 0 ? "Tomorrow: another gentle thought." : easyIndex(today) >= 0 ? "Tomorrow: the same thought as everyone." : dayInfo(today).teaser)
-      : "";
+    const teaser = key === today && new Date().getHours() >= 20 ? teaserFor(today) : "";
     $("teaser").textContent = teaser;
     $("teaser").hidden = !teaser;
 
     showContext(false);
     countAfterReading(key);
 
-    const note = (readNote(key) || { text: "" }).text;
+    const note = noteText(key);
     $("note-text").value = note;
     $("note-done").hidden = !(note.trim() && key === today);
     $("note-status").textContent = "";
@@ -528,7 +550,7 @@
     list.textContent = "";
     for (const key of days.slice(0, journal.shown)) {
       const e = entryShown(key);
-      const note = (readNote(key) || { text: "" }).text;
+      const note = noteText(key);
       const li = document.createElement("li");
       const a = document.createElement("a");
       a.href = "#/day/" + key;
@@ -559,12 +581,23 @@
     // Notes, and saved thoughts (marked "· saved"), so both survive a new phone.
     const saved = savedList();
     const keys = [...new Set([...store.keys("note:").map((k) => k.slice(5)), ...saved.map((x) => x.key)])].sort();
-    if (!keys.length) return flash(btn, "nothing yet");
-    const body = keys.map((key) => {
-      const e = entryShown(key), note = readNote(key);
-      const mark = saved.some((x) => x.key === key && x.id === e.id) ? " · saved" : "";
-      return `${key} — ${e.source} (${e.path})${mark}\n“${e.text}”\n${e.prompt}\n\n${note ? note.text : ""}\n`;
-    }).join("\n---\n\n");
+    let read = [];
+    try { read = JSON.parse(store.get("days", "[]")) || []; } catch {}
+    if (!keys.length && !read.length) return flash(btn, "nothing yet");
+    const blocks = keys.flatMap((key) => {
+      // A day's thought, then (rarely) the other thought written about that day.
+      const n = readNote(key), shown = entryShown(key);
+      const pairs = [[shown, noteText(key)]];
+      for (const x of n ? [n, n.other] : []) if (x && x.id != null && x.id !== shown.id && entriesById[x.id]) pairs.push([entriesById[x.id], x.text]);
+      return pairs.map(([e, text]) => {
+        const mark = saved.some((x) => x.key === key && x.id === e.id) ? " · saved" : "";
+        return `${key} — ${e.source} (${e.path})${mark}\n“${e.text}”\n${e.prompt}\n\n${text}\n`;
+      });
+    });
+    // Last, every day a thought was read (with or without a note), so the count and
+    // "you first met this thought" carry over to a new phone.
+    if (read.length) blocks.push(`Days you read: ${[...read].sort().join(", ")}\n`);
+    const body = blocks.join("\n---\n\n");
     const name = `thinking-place-notes-${todayKey()}.txt`;
     if (NATIVE) {
       // Inside the app there are no browser downloads: write the file, then open the share
@@ -595,6 +628,13 @@
     try {
       const text = (await file.text()).replace(/\r\n/g, "\n");
       for (const block of text.split(/\n---\n/)) {
+        const read = block.trim().match(/^Days you read: (.*)$/);
+        if (read) {
+          const before = dayCount();
+          for (const day of read[1].match(/\d{4}-\d{2}-\d{2}/g) || []) countDay(day);
+          added += dayCount() - before;
+          continue;
+        }
         const key = (block.trim().match(/^(\d{4}-\d{2}-\d{2}) —/) || [])[1];
         const gap = block.indexOf("\n\n");
         if (!key || gap < 0) continue;
@@ -609,7 +649,7 @@
         }
         const note = block.slice(gap + 2).trim();
         if (!note) continue;
-        const old = (readNote(key) || { text: "" }).text.trim();
+        const old = (noteAbout(key, id) || { text: "" }).text.trim();
         if (old === note || old.includes(note)) continue;
         writeNote(key, old ? old + "\n\n" + note : note, id);
         added++;
@@ -746,7 +786,7 @@
         doc.setDrawColor(...STONE); doc.setLineWidth(0.3); doc.line(M, y, M + 24, y);
         y += 7;
       }
-      const e = entryShown(key), note = (readNote(key) || { text: "" }).text.trim();
+      const e = entryShown(key), note = noteText(key).trim();
       if (y + 30 > BOTTOM) newPage();
       caps(`${fmt(key)} · ${e.path}`);
       text(e.text, { size: 10.5, gap: 1 });
@@ -817,6 +857,33 @@
     checkChoice("[data-backup]", "backup", v);
   }
 
+  // ---------- the evening teaser ----------
+  // "A Stoic thought on meaning", in the content team's words; "a gentle Stoic thought…"
+  // for the easier thoughts of a gentle start.
+  function thoughtKind(e, gentle) {
+    const w = calendar.words || {};
+    let who = (w.paths || {})[e.path];
+    const on = (w.themes || {})[(e.themes || [])[0]];
+    if (!who || !on) return "";
+    if (gentle) who = who.replace(/^an? /, "a gentle ");
+    return `${who} on ${on}`;
+  }
+
+  // The calendar holds a teaser for each evening; gentle days, and days without one,
+  // get theirs from tomorrow's thought.
+  function teaserFor(today) {
+    const tomorrow = utcToKey(keyToUTC(today) + DAY);
+    if (easyIndex(tomorrow) >= 0) {
+      const kind = thoughtKind(entryFor(tomorrow), true);
+      return kind ? `Tomorrow: ${kind}.` : "Tomorrow: another gentle thought.";
+    }
+    const info = dayInfo(tomorrow), kind = thoughtKind(entryFor(tomorrow));
+    const said = dayInfo(today).teaser || (info.revisit ? "Tomorrow: a thought you may have met before." : kind ? `Tomorrow: ${kind}.` : "");
+    // The last gentle evening says that tomorrow everyone reads the same thought.
+    if (easyIndex(today) >= 0) return said ? said.replace(/^Tomorrow: /, "Tomorrow, the same thought as everyone: ") : "Tomorrow: the same thought as everyone.";
+    return said;
+  }
+
   // ---------- reminder ----------
   // A gentle daily (or weekly) notification, only in the installed app. Scheduled on the
   // device itself: nothing is sent to or from a server.
@@ -833,7 +900,10 @@
   // plain reminder, then quiet until the app is opened again.
   const AHEAD_DAYS = 60, DAY_IDS = 100;
   function reminderText(key) {
-    if (easyIndex(key) >= 0) return "A gentle thought for today.";
+    if (easyIndex(key) >= 0) {
+      const kind = thoughtKind(entryFor(key), true);
+      return kind ? `${kind[0].toUpperCase()}${kind.slice(1)}.` : "A gentle thought for today.";
+    }
     const info = dayInfo(key), e = entryFor(key), w = calendar.words || {};
     if (info.revisit) return "A thought you may have met before.";
     const who = (w.paths || {})[e.path];
@@ -1004,6 +1074,23 @@
   // guided breathing. Each sitting starts in the default mode from Settings; switching on
   // the screen changes only that sitting.
   let sitNow = "think";
+
+  // Breathing patterns: [cue, seconds, circle open?] in turn. 5-5 is the default.
+  const BREATHS = {
+    "5-5": { help: "Five seconds in, five out. Steady and easy, a good place to start.",
+      steps: [["breathe in", 5, true], ["breathe out", 5, false]] },
+    "box": { help: "In for four, hold for four, out for four, hold for four. Even and focusing.",
+      steps: [["breathe in", 4, true], ["hold", 4, true], ["breathe out", 4, false], ["hold", 4, false]] },
+    "4-7-8": { help: "In for four, hold for seven, out for eight. A long out-breath for winding down.",
+      steps: [["breathe in", 4, true], ["hold", 7, true], ["breathe out", 8, false]] },
+  };
+  const breathPattern = () => BREATHS[store.get("breath", "5-5")] || BREATHS["5-5"];
+  function setBreath(kind) {
+    if (!BREATHS[kind]) kind = "5-5";
+    store.set("breath", kind);
+    checkChoice("[data-breath]", "breath", kind);
+    $("breath-help").textContent = BREATHS[kind].help;
+  }
   function sitMode() { return store.get("sitMode", "think"); }
   function setSitMode(mode) {
     store.set("sitMode", mode);
@@ -1047,16 +1134,20 @@
     $("sit-intro").hidden = true;
     showSitMode();
     bell();
-    const breath = $("breath"), cue = $("breath-cue");
-    const cycle = () => {
+    // The circle opens on the in-breath, stays still while holding, closes on the out-breath.
+    const breath = $("breath"), cue = $("breath-cue"), steps = breathPattern().steps;
+    let step = 0;
+    const next = () => {
       if (!silence || silence.completed) return;
-      breath.classList.remove("out"); breath.classList.add("in"); cue.textContent = "breathe in";
-      silence.timers.push(setTimeout(() => {
-        breath.classList.add("out"); breath.classList.remove("in"); cue.textContent = "breathe out";
-      }, 4000));
+      const [say, secs, open] = steps[step];
+      step = (step + 1) % steps.length;
+      breath.style.transitionDuration = secs + "s";
+      breath.classList.toggle("in", open);
+      breath.classList.toggle("out", !open);
+      cue.textContent = say;
+      silence.breathing = setTimeout(next, secs * 1000);
     };
-    silence.timers.push(setTimeout(cycle, 80));  // after the circle is on screen, so it eases in
-    silence.breathing = setInterval(cycle, 10000);
+    silence.timers.push(setTimeout(next, 80));  // after the circle is on screen, so it eases in
     const tick = () => {
       const left = Math.max(0, silence.end - Date.now());
       const s = Math.ceil(left / 1000);
@@ -1069,7 +1160,7 @@
 
   function complete() {
     clearInterval(silence.ticker);
-    clearInterval(silence.breathing);
+    clearTimeout(silence.breathing);
     silence.completed = true;
     bell();
     stopSound(6);
@@ -1101,7 +1192,7 @@
   function finishSilence() {
     if (!silence) return;
     clearInterval(silence.ticker);
-    clearInterval(silence.breathing);
+    clearTimeout(silence.breathing);
     silence.timers.forEach(clearTimeout);
     stopSound(0.8);
     $("breath").classList.remove("in", "out");
@@ -1158,6 +1249,9 @@
   }
 
   function openTerm(btn) {
+    // The tour's underlined word: a first card to try, about the cards themselves.
+    if (btn.dataset.tour != null) return showCard(btn, "Like this",
+      "In each day's thought, key ideas, authors and books are underlined. Tap one for a short explanation; tap anywhere else to close it.");
     const g = glossary[+btn.dataset.term];
     if (!g) return;
     showCard(btn, g.term, g.def, g.wiki, g.school && schoolDetails(g));
@@ -1190,7 +1284,8 @@
     $("term-def").textContent = text;
     $("term-more").replaceChildren(...(more ? [more] : []));
     $("term-more").hidden = !more;
-    $("term-wiki").href = "https://en.wikipedia.org/wiki/" + encodeURIComponent(wiki).replace(/%2F/g, "/");
+    $("term-wiki").hidden = !wiki;
+    if (wiki) $("term-wiki").href = "https://en.wikipedia.org/wiki/" + encodeURIComponent(wiki).replace(/%2F/g, "/");
     card.hidden = false;
     // Place the card just below the word, or above it if there is no room.
     const r = btn.getBoundingClientRect(), w = card.offsetWidth, h = card.offsetHeight;
@@ -1354,7 +1449,7 @@
     // An open note closes only once the screen has fully covered the page, so the page
     // doesn't jump (shrinking the note moves the scroll) before the goodbye appears.
     clearTimeout(showClosing.collapse);
-    if (!$("note").hidden) showClosing.collapse = setTimeout(() => setWriting(false), 3600);
+    if (!$("note").hidden) showClosing.collapse = setTimeout(() => setWriting(false), 1800);
   }
 
   // Fades out softly, back to the top of today.
@@ -1406,6 +1501,7 @@
 
   // ---------- routing ----------
   function route() {
+    closeTerm();  // an open card never follows to another page
     const hash = location.hash.replace(/^#\/?/, "");
     let view = "day";
     if (hash === "journal") { view = "journal"; renderJournal(); }
@@ -1593,6 +1689,8 @@
       b.addEventListener("click", () => { store.set("theme", b.dataset.themeChoice); applyTheme(b.dataset.themeChoice); }));
     document.querySelectorAll("[data-minutes]").forEach((b) =>
       b.addEventListener("click", () => setMinutes(b.dataset.minutes)));
+    document.querySelectorAll("[data-breath]").forEach((b) =>
+      b.addEventListener("click", () => setBreath(b.dataset.breath)));
     document.querySelectorAll("[data-sit-mode]").forEach((b) =>
       b.addEventListener("click", () => setSitMode(b.dataset.sitMode)));
     document.querySelectorAll("[data-sit-now]").forEach((b) =>
@@ -1613,7 +1711,7 @@
     });
     $("name-setting").addEventListener("change", (ev) => saveName(ev.target.value));
     $("clear-notes").addEventListener("click", clearNotes);
-    $("easy-toggle").addEventListener("click", toggleEasy);
+    document.querySelectorAll("[data-easy]").forEach((b) => b.addEventListener("click", () => setEasy(b.dataset.easy === "on")));
     document.querySelectorAll(".keepsake-make").forEach((b) => b.addEventListener("click", () => makeKeepsake(b)));
 
     document.querySelectorAll("[data-filter]").forEach((b) => b.addEventListener("click", () => openPicker(b)));
@@ -1734,6 +1832,7 @@
     applyTheme(store.get("theme", "auto"));
     setMinutes(store.get("minutes", "3"));
     setSitMode(sitMode());
+    setBreath(store.get("breath", "5-5"));
     setSound(store.get("sound", "off"));
     setBackupEvery(store.get("backupEvery", "30"));
     setTextSize(store.get("textSize", "1"));

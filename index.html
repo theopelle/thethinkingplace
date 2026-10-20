@@ -116,7 +116,11 @@
       <div id="easy-setting" hidden>
         <h2>A gentle start</h2>
         <p class="setting-text" id="easy-status"></p>
-        <div class="choice"><button class="link" id="easy-toggle">join everyone now</button></div>
+        <div class="choice" role="radiogroup" aria-label="A gentle start">
+          <button class="link" data-easy="on" role="radio">ease in gently</button>
+          <span class="dot" aria-hidden="true">·</span>
+          <button class="link" data-easy="off" role="radio">join everyone</button>
+        </div>
       </div>
       <h2>Your name</h2>
       <input class="name-input" id="name-setting" type="text" maxlength="40" autocomplete="given-name"
@@ -149,6 +153,15 @@
         <span class="dot" aria-hidden="true">·</span>
         <button class="link" data-sit-mode="breathe" role="radio">breathe</button>
       </div>
+      <div class="choice setting-row" role="radiogroup" aria-label="Breathing">
+        <span class="setting-label">breathing</span>
+        <button class="link" data-breath="5-5" role="radio">5-5</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-breath="box" role="radio">box</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-breath="4-7-8" role="radio">4-7-8</button>
+      </div>
+      <p class="muted setting-help" id="breath-help"></p>
       <div class="choice setting-row" role="radiogroup" aria-label="Duration">
         <span class="setting-label">duration</span>
         <button class="link" data-minutes="1" role="radio">1 min</button>
@@ -430,7 +443,7 @@ Al-Ghazali taught at the Nizamiyya college here from 1091, until a spiritual cri
     </section>
     <section class="tour-step" hidden>
       <p class="tour-title">Read, write, think, breathe</p>
-      <p class="tour-text">Read the thought slowly. Write about it, sit for a few minutes to think, or simply breathe for a moment. The goal of the app is to help you slow down and wonder. A concept is unclear? An author you're curious about? Tap an underlined word to see what it means.</p>
+      <p class="tour-text">Read the thought slowly. Write about it, sit for a few minutes to think, or simply breathe for a moment. The goal of the app is to help you slow down and wonder. A concept is unclear? An author you're curious about? Tap an <button type="button" class="term" data-tour aria-haspopup="dialog">underlined word</button> to see what it means.</p>
     </section>
     <section class="tour-step" hidden>
       <p class="tour-title">Your notes stay with you</p>
