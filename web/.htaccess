@@ -1,0 +1,16 @@
+# The Thinking Place on OVH (Apache). Copied to site/ by tools/make_site.py.
+
+# Always HTTPS, and thinkingplace.app without www.
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://thinkingplace.app%{REQUEST_URI} [L,R=301]
+
+# The offline helper and the app's page must always be fetched fresh, so a new version
+# reaches readers on their next visit. Everything else is versioned by the helper.
+<FilesMatch "^(sw\.js|index\.html|manifest\.webmanifest)$">
+  Header set Cache-Control "no-cache"
+</FilesMatch>
+
+AddType application/manifest+json .webmanifest
+AddDefaultCharset utf-8

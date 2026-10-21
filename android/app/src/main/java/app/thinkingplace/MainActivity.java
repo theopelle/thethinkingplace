@@ -1,4 +1,4 @@
-package app.manywells;
+package app.thinkingplace;
 
 import com.getcapacitor.BridgeActivity;
 

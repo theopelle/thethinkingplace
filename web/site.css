@@ -49,6 +49,10 @@ a { color: var(--fg); }
 .way span { font-size: .8rem; color: var(--muted); }
 .way:hover b, .way:focus-visible b { border-bottom-color: var(--accent); }
 .way:focus-visible { outline: none; }
+/* Not out yet: shown quietly, with a small note, and not clickable. */
+.way.soon b { color: var(--muted); border-bottom-style: dashed; }
+.way.soon em { font-style: normal; font-size: .65rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent); margin-left: .45rem; vertical-align: .12em; }
 .steps { padding-left: 1.2rem; }
 .steps li { margin-bottom: .75rem; }
 .share-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -.15em; }

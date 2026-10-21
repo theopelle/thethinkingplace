@@ -16,7 +16,7 @@ SITE = os.path.join(ROOT, "site")
 APP_FILES = ["index.html", "style.css", "app.js", "sw.js", "manifest.webmanifest", "entries.json",
              "calendar.json", "glossary.json", "icon.svg", "icon-180.png", "icon-192.png", "icon-512.png",
              "icon-maskable-512.png", "mark-400.png"]
-PLAY_URL = "https://play.google.com/store/apps/details?id=app.thethinkingplace"  # live once published
+PLAY_URL = "https://play.google.com/store/apps/details?id=app.thinkingplace"  # live once published
 
 
 def app_section(page, view):
@@ -35,6 +35,7 @@ def main():
     shutil.copytree(os.path.join(ROOT, "vendor"), os.path.join(SITE, "app", "vendor"))
     shutil.copy(os.path.join(WEB, "site.css"), SITE)
     shutil.copy(os.path.join(WEB, "iphone.html"), SITE)
+    shutil.copy(os.path.join(WEB, ".htaccess"), SITE)  # HTTPS and fresh updates on OVH
 
     # The home page has the logo drawn into it (from tools/logo.py), so it shows even when
     # web/index.html is opened on its own.
@@ -52,7 +53,7 @@ def main():
     terms_html = app_section(page, "terms").replace("Use <em>export</em> in Settings", "Use <em>export</em> in the app's Settings")
     for name, title, body in (("about.html", "About", about_html), ("terms.html", "Terms & privacy", terms_html)):
         open(os.path.join(SITE, name), "w", encoding="utf-8").write(
-            tpl.replace("{{TITLE}}", title.replace("&", "&amp;")).replace("{{BODY}}", body))
+            tpl.replace("{{TITLE}}", title.replace("&", "&amp;")).replace("{{PATH}}", name).replace("{{BODY}}", body))
     print(f"site/ ready: {sum(len(f) for _, _, f in os.walk(SITE))} files")
 
 

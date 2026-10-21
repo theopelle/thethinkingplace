@@ -6,10 +6,10 @@
   const DAY = 86400000;
   const PAGE_DAYS = 10;  // past thoughts shown at a time
 
-  // Where feedback and donations go. Fill these in before launch.
-  const CONTACT_EMAIL = "hello@example.com";           // TODO: real address
-  const FEEDBACK_FORM_URL = "https://example.com/form"; // TODO: the feedback form
-  const DONATE_URL = "https://buymeacoffee.com/";      // TODO: your Buy Me a Coffee page
+  // Where feedback goes.
+  const SITE = "thinkingplace.app";
+  const CONTACT_EMAIL = "hello@thinkingplace.app";
+  const FEEDBACK_FORM_URL = "https://forms.gle/CvrYFMvvinddBWut9";  // a Google Form
 
   // The goodbye on the closing screen depends on the moment. Edit freely.
   function goodbyeLine() {
@@ -22,11 +22,6 @@
     return "Sleep well! See you tomorrow.";
   }
 
-  // Apple doesn't allow App Store apps to point to outside payment pages, so the
-  // support section is hidden inside the native iOS app (wrapped with Capacitor).
-  // Safari and home-screen installs from the website still show it.
-  const IN_IOS_APP = !!(window.Capacitor && window.Capacitor.getPlatform &&
-                        window.Capacitor.getPlatform() === "ios");
   const NATIVE = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
   const plugin = (name) => NATIVE && window.Capacitor.Plugins && window.Capacitor.Plugins[name];
 
@@ -433,7 +428,7 @@
   // question stays personal.
   async function share() {
     const e = entryShown(currentKey || todayKey());
-    const text = `“${e.text.replace(/\n/g, " / ")}”\n— ${e.source}\n\nvia ${APP_NAME}`;
+    const text = `“${e.text.replace(/\n/g, " / ")}”\n— ${e.source}\n\nvia ${APP_NAME} · ${SITE}`;
     if (await copyText(text)) toast("Copied. Paste it anywhere you like.");
     else toast("Couldn't copy on this device.");
   }
@@ -1384,8 +1379,6 @@
     `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
   function renderLinks() {
-    document.querySelectorAll(".support-block").forEach((el) => (el.hidden = IN_IOS_APP));
-    document.querySelectorAll(".donate-link").forEach((a) => (a.href = DONATE_URL));
     document.querySelectorAll(".feedback-form").forEach((a) => (a.href = FEEDBACK_FORM_URL));
     document.querySelectorAll(".feedback-mail").forEach((a) => (a.href = mailto(`${APP_NAME}: feedback`,
       "What would you like to tell us? (something you like, something to improve, a thought to add, or anything else)\n\n")));

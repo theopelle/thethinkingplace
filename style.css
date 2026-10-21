@@ -240,7 +240,7 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
-/* Greeting, name, support */
+/* Greeting, name */
 .greeting { color: var(--muted); font: italic 400 1rem/1.4 var(--serif); text-align: center; margin: 0 0 .6rem; }
 .name-input {
   width: 100%; max-width: 20rem;
@@ -250,7 +250,6 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 }
 .name-input:focus { outline: none; border-bottom-color: var(--muted); }
 .name-input::placeholder { color: var(--muted); font: 300 .9rem/1.4 var(--sans); }
-.support-link { color: var(--fg); }
 .fine { display: flex; flex-wrap: wrap; gap: .25rem .6rem; align-items: center; }
 .fine a { cursor: pointer; }
 .welcome .name-input { text-align: center; margin-bottom: .75rem; }
