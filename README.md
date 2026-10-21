@@ -19,7 +19,6 @@ app works offline.
 | `web/` | The website pages, built into `site/` |
 | `android/` | The Android app (Capacitor) |
 | `brand/` | Logo, colours and brand guide |
-| `NEXT_STEPS.md` | Roadmap, test checklist and history of changes |
 
 ## Build
 
