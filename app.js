@@ -1749,10 +1749,10 @@
     }, wait);
   }
 
-  // The first opening of the day is slow on purpose: greeting and date line by line, then
-  // the thought with its source, then the question and the actions. Later openings that
-  // day simply fade in. A tap anywhere shows everything at once.
-  const STEP_S = 1.4, RISE_S = 2.2;
+  // The first opening of the day is slow on purpose, in three blocks: greeting and date,
+  // then the thought with its source, then the question and the actions (about 4 seconds
+  // in all). Later openings that day simply fade in. A tap anywhere shows everything at once.
+  const STEP_S = 1.1, RISE_S = 1.8;
   function prepareReveal() {
     const view = $("view-day");
     if (view.hidden || store.get("revealed") === todayKey()) return false;
@@ -1775,9 +1775,9 @@
   function assignSteps() {
     const view = $("view-day");
     view.querySelectorAll("[data-step]").forEach((el) => { delete el.dataset.step; el.style.removeProperty("--step"); });
-    const groups = [["#greeting"], ["#day-date"], ["#teaser"],
+    const groups = [["#greeting", "#day-date", "#teaser"],
       ["#pause-1", "#day-path", ".passage", "#view-day .source", "#context-toggle"],
-      ["#pause-2", ".question-label"], ["#day-prompt"], ["#memory"], ["#view-day .actions", "#note-preview"]];
+      ["#pause-2", ".question-label", "#day-prompt", "#memory", "#view-day .actions", "#note-preview"]];
     let step = 0;
     for (const group of groups) {
       const els = group.map((q) => view.querySelector(q))

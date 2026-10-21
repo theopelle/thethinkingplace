@@ -27,20 +27,28 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 p { margin: 0 0 1rem; }
 a { color: var(--fg); }
 .muted { color: var(--muted); }
-.logo-mark { display: block; width: 120px; height: 120px; margin: 0 auto 1.5rem; }
-.hero { text-align: center; }
-.hero h1 { font-size: 2.3rem; }
-.tagline { font: italic 400 1.15rem/1.5 var(--serif); color: var(--muted); margin-bottom: 2rem; }
-.welcome { text-align: left; }
-.ways { display: grid; gap: .75rem; margin: 2.25rem 0 1rem; }
-.way { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.15rem;
-  border: 1px solid var(--faint); border-radius: 14px; text-decoration: none; color: var(--fg); }
-.way:hover, .way:focus-visible { border-color: var(--muted); outline: none; }
-.way b { display: block; font: 400 1.05rem/1.35 var(--serif); }
-.way span { font-size: .85rem; color: var(--muted); }
-.way::after { content: "→"; color: var(--muted); }
-.way.primary { background: var(--fg); border-color: var(--fg); color: var(--bg); }
-.way.primary span, .way.primary::after { color: color-mix(in srgb, var(--bg) 75%, var(--fg)); }
+.logo-mark { display: block; width: 72px; height: 72px; margin: 0 0 1.5rem; }
+.small { font-size: .9rem; }
+
+/* Home: quiet like the app's daily page, read from the left. A small spaced label (like a
+   path's name), the line in serif, short paragraphs, the app's short divider, text links. */
+.home main { padding-top: max(10vh, 3rem); }
+.home .name { font: 400 .75rem/1.4 var(--sans); letter-spacing: .2em; text-transform: uppercase;
+  color: var(--accent); margin: 0 0 1rem; }
+.home h1 { font: 400 clamp(1.6rem, 6.5vw, 2.2rem)/1.3 var(--serif); margin: 0 0 2rem; text-wrap: balance; }
+.home .welcome p { max-width: 30rem; text-wrap: pretty; }
+.home h2 { margin-top: 0; letter-spacing: .18em; }
+.home .phone p { font: italic 400 1.1rem/1.5 var(--serif); max-width: 28rem; margin: 0; text-wrap: pretty; }
+.pause { width: 2.5rem; height: 0; border-top: 1px solid var(--faint); margin: 2.75rem 0; }
+
+.ways { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; margin: 2.25rem 0 1rem; }
+.way { display: flex; flex-direction: column; align-items: flex-start; gap: .3rem; text-decoration: none; color: var(--fg); }
+.way b { font: 400 1.05rem/1.35 var(--sans); padding-bottom: .2rem; border-bottom: 1px solid var(--faint);
+  transition: border-color .3s; }
+.way.primary b { border-bottom-color: var(--fg); }
+.way span { font-size: .8rem; color: var(--muted); }
+.way:hover b, .way:focus-visible b { border-bottom-color: var(--accent); }
+.way:focus-visible { outline: none; }
 .steps { padding-left: 1.2rem; }
 .steps li { margin-bottom: .75rem; }
 .share-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -.15em; }

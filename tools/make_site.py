@@ -6,11 +6,9 @@ top, and the web app itself in site/app/ (also what the Android app packages).
 About and Terms are taken from the app's own pages (index.html), so the text is written
 once. Upload the whole site/ folder to any static host.
 """
-import os, re, shutil, sys
+import os, re, shutil
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, HERE)
-from logo import mark
 
 ROOT = os.path.dirname(HERE)
 WEB = os.path.join(ROOT, "web")
@@ -38,11 +36,11 @@ def main():
     shutil.copy(os.path.join(WEB, "site.css"), SITE)
     shutil.copy(os.path.join(WEB, "iphone.html"), SITE)
 
-    svg = (mark("var(--fg)", "var(--logo-accent)", 1.0).replace(' width="365" height="365"', "", 1)
-           .replace("<svg ", '<svg class="logo-mark" aria-hidden="true" ', 1))
+    # The home page has the logo drawn into it (from tools/logo.py), so it shows even when
+    # web/index.html is opened on its own.
     home = open(os.path.join(WEB, "index.html"), encoding="utf-8").read()
     open(os.path.join(SITE, "index.html"), "w", encoding="utf-8").write(
-        home.replace("{{MARK}}", svg).replace("{{PLAY_URL}}", PLAY_URL))
+        home.replace("{{PLAY_URL}}", PLAY_URL))
 
     page = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
     tpl = open(os.path.join(WEB, "page.html"), encoding="utf-8").read()
