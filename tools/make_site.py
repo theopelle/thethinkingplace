@@ -36,6 +36,9 @@ def main():
     shutil.copy(os.path.join(WEB, "site.css"), SITE)
     shutil.copy(os.path.join(WEB, "iphone.html"), SITE)
     shutil.copy(os.path.join(WEB, ".htaccess"), SITE)  # HTTPS and fresh updates on OVH
+    # GitHub Pages: the custom domain, and no Jekyll processing (it would hide some files).
+    open(os.path.join(SITE, "CNAME"), "w").write("thinkingplace.app\n")
+    open(os.path.join(SITE, ".nojekyll"), "w").close()
 
     # The home page has the logo drawn into it (from tools/logo.py), so it shows even when
     # web/index.html is opened on its own.
