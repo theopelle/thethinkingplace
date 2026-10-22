@@ -39,9 +39,37 @@ a { color: var(--fg); }
 .home .welcome p { max-width: 30rem; text-wrap: pretty; }
 .home h2 { margin-top: 0; letter-spacing: .18em; }
 .home .phone p { font: italic 400 1.1rem/1.5 var(--serif); max-width: 28rem; margin: 0; text-wrap: pretty; }
+/* The ways in: one card per device, the reader's own first and marked. */
+.devices { margin-top: 2.5rem; }
+.device { border: 1px solid var(--faint); border-radius: 14px; padding: 1.2rem 1.25rem 1rem; margin: 0 0 1rem; }
+.device.mine { border-color: color-mix(in srgb, var(--accent) 55%, var(--faint)); }
+.device-head { display: flex; align-items: center; gap: .6rem; margin-bottom: .45rem; }
+.device-head h2 { font: 400 1.35rem/1.2 var(--serif); letter-spacing: 0; text-transform: none; color: var(--fg); margin: 0; }
+.device-icon { width: 1.35rem; height: 1.35rem; flex: none; }
+.device-icon rect, .device-icon path { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-linecap: round; }
+.yours { display: none; margin-left: auto; font-size: .62rem; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+.device.mine .yours { display: inline; }
+.device-sum { margin: 0 0 .8rem; }
+.device-fine { font-size: .8rem; line-height: 1.5; color: var(--muted); margin: .7rem 0 0; }
+.device .way { margin-bottom: .2rem; }
+.others { margin: 2.2rem 0 1rem; padding: 0 1.25rem; }  /* lines up with the text inside the cards */
+.others h2 { margin: 0 0 .5rem; }
+.perks { display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem .6rem; margin: 0; font-size: .92rem; }
+.guide { margin: .9rem 0 0; }
+.guide summary { display: inline-block; cursor: pointer; list-style: none; padding-bottom: .15rem;
+  border-bottom: 1px solid var(--faint); transition: border-color .3s; }
+.guide summary::-webkit-details-marker { display: none; }
+.guide summary::after { content: "  ▾"; color: var(--muted); font-size: .8em; }
+.guide[open] summary::after { content: "  ▴"; }
+.guide summary:hover, .guide summary:focus-visible { border-bottom-color: var(--accent); outline: none; }
+.guide[open] { animation: open .4s ease; }
+@keyframes open { from { opacity: 0; } to { opacity: 1; } }
+.guide .steps { margin: 1rem 0 .6rem; }
+.cta { display: inline-block; margin: .4rem 0 .4rem; padding: .6rem 1.2rem; border: 1px solid var(--fg); border-radius: 999px;
+  color: var(--fg); text-decoration: none; font-size: .95rem; transition: background .3s, color .3s; }
+.cta:hover, .cta:focus-visible { background: var(--fg); color: var(--bg); outline: none; }
 .pause { width: 2.5rem; height: 0; border-top: 1px solid var(--faint); margin: 2.75rem 0; }
 
-.ways { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; margin: 2.25rem 0 1rem; }
 .way { display: flex; flex-direction: column; align-items: flex-start; gap: .3rem; text-decoration: none; color: var(--fg); }
 .way b { font: 400 1.05rem/1.35 var(--sans); padding-bottom: .2rem; border-bottom: 1px solid var(--faint);
   transition: border-color .3s; }

@@ -240,6 +240,24 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
+/* Once, in a phone browser: keeping the app on the home screen */
+.home-note {
+  position: fixed; left: 50%; bottom: 4.75rem; z-index: 25;
+  width: min(22rem, calc(100% - 2rem)); transform: translate(-50%, .6rem);
+  padding: 1rem 1.15rem .8rem;
+  background: var(--bg); color: var(--fg);
+  border: 1px solid var(--faint); border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .12);
+  opacity: 0; transition: opacity .6s ease, transform .6s ease;
+}
+.home-note.show { opacity: 1; transform: translate(-50%, 0); }
+.home-note-title { font: 400 1.02rem/1.35 var(--serif); margin: 0 0 .4rem; }
+.home-note-text { font-size: .88rem; line-height: 1.55; color: var(--muted); margin: 0 0 .5rem; }
+.home-note-text b { font-weight: 500; color: var(--fg); }
+.home-note-actions { display: flex; justify-content: flex-end; align-items: center; gap: .6rem; }
+.home-note .share-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -.15em; }
+.home-note .share-icon path { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
 /* Greeting, name */
 .greeting { color: var(--muted); font: italic 400 1rem/1.4 var(--serif); text-align: center; margin: 0 0 .6rem; }
 .name-input {

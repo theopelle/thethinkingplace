@@ -34,20 +34,78 @@
 
     <div class="pause" aria-hidden="true"></div>
 
-    <section class="phone">
-      <h2>Best on your phone</h2>
-      <p>The app opens in one tap, works offline, and can send you a gentle reminder when the day's thought is ready.</p>
-    </section>
+    <!-- One card per device. A small script below puts the reader's own device first. -->
+    <div class="devices" id="devices">
+      <section class="device" data-device="desktop">
+        <div class="device-head"><svg class="device-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg><h2>Computer</h2><span class="yours">this device</span></div>
+        <p class="device-sum">Read it right here, in your browser. Nothing to install.</p>
+        <a class="cta" href="app/">Open The Thinking Place</a>
+        <p class="device-fine">No daily reminders in the browser. Notes stay in this browser: export them from Settings to keep a copy or move them.</p>
+      </section>
 
-    <nav class="ways" aria-label="Get The Thinking Place">
-      <!-- Until the app is on Google Play: shown, not a link. Then: <a class="way" href="{{PLAY_URL}}"> -->
-      <div class="way soon"><b>Get it on Google Play <em>coming soon</em></b><span>Currently in testing · for Android, with daily reminders</span></div>
-      <a class="way" href="iphone.html"><b>On iPhone</b><span>Add it to your home screen from Safari</span></a>
-      <a class="way" href="app/"><b>Use it on the web</b><span>Right here in your browser</span></a>
-    </nav>
+      <div class="others" id="others">
+        <h2>Best on your phone</h2>
+        <p class="perks"><span>Read anywhere</span><span class="dot" aria-hidden="true">·</span><span>Your notes at hand</span><span class="dot" aria-hidden="true">·</span><span>Reminders in the Android app</span></p>
+      </div>
+
+      <section class="device" data-device="android">
+        <div class="device-head"><svg class="device-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg><h2>Android</h2><span class="yours">this device</span></div>
+        <p class="device-sum">The app, with a daily reminder.</p>
+        <!-- Until the app is on Google Play: shown, not a link. Then: <a class="way" href="{{PLAY_URL}}"> -->
+        <div class="way soon"><b>Get it on Google Play <em>coming soon</em></b><span>Currently in testing</span></div>
+        <details class="guide" id="android">
+          <summary>Or install the web version now</summary>
+          <ol class="steps">
+            <li>Open The Thinking Place with the button below, in Chrome.</li>
+            <li>Tap <b>Install</b> when it offers. Otherwise, open the menu (⋮) and tap <b>Install app</b> or <b>Add to Home screen</b>.</li>
+          </ol>
+          <a class="cta" href="app/">Open The Thinking Place</a>
+          <p class="device-fine">The web version has no daily reminders, and its notes stay in it: to move them to the Google Play app later, export them from Settings, then import them there.</p>
+        </details>
+      </section>
+      <section class="device" data-device="ios">
+        <div class="device-head"><svg class="device-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg><h2>iPhone</h2><span class="yours">this device</span></div>
+        <p class="device-sum">Add it to your home screen: it opens like an app, full screen, and works offline.</p>
+        <details class="guide" id="iphone">
+          <summary>How to add it</summary>
+          <ol class="steps">
+            <li>Open The Thinking Place with the button below.</li>
+            <li class="ios-share">Tap the Share button <svg class="share-icon" viewBox="0 0 24 24" aria-label="Share"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M6 11H5v10h14V11h-1"/></svg> (in the ⋯ menu if you don't see it).</li>
+            <li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li>
+          </ol>
+          <p class="device-fine">The app shows these steps again when you open it.</p>
+          <a class="cta" href="app/">Open The Thinking Place</a>
+        </details>
+        <p class="device-fine">No daily reminders on iPhone for now. Notes stay on your phone: export them from Settings to keep a copy or move them.</p>
+      </section>
+
+    </div>
   </main>
   <footer>
     <a href="about.html">About</a><span class="dot" aria-hidden="true">·</span><a href="terms.html">Terms &amp; privacy</a><span class="dot" aria-hidden="true">·</span><a href="mailto:hello@thinkingplace.app">Contact</a>
   </footer>
+  <script>
+    // Puts the reader's own device first and opens its steps. The check is the browser's own
+    // description of itself, done here on the page: nothing is sent anywhere.
+    (function () {
+      var ua = navigator.userAgent, q = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) && new URLSearchParams(location.search).get("device");
+      var ios = q ? q === "ios" : /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+      var android = q ? q === "android" : /Android/.test(ua);
+      var mine = ios ? "ios" : android ? "android" : "desktop";
+      var order = ios ? ["ios", "desktop", "android"] : android ? ["android", "desktop", "ios"] : ["desktop", "android", "ios"];
+      var box = document.getElementById("devices"), others = document.getElementById("others");
+      order.forEach(function (d, i) {
+        box.appendChild(box.querySelector('[data-device="' + d + '"]'));
+        if (i === 0) box.appendChild(others);  // the heading for the other devices
+      });
+      box.querySelector('[data-device="' + mine + '"]').classList.add("mine");
+      if (mine !== "desktop") others.innerHTML = "<h2>Other devices</h2>";
+      if (ios) document.getElementById("iphone").open = true;
+      var share = document.querySelector(".ios-share"), icon = share.querySelector("svg").outerHTML;
+      if (/CriOS/.test(ua)) share.innerHTML = "Tap the Share button " + icon + " in the address bar.";
+      else if (/FxiOS/.test(ua)) share.innerHTML = "Open the menu and tap <b>Share</b>.";
+      if (location.hash === "#iphone" || location.hash === "#android") document.querySelector(location.hash).open = true;
+    })();
+  </script>
 </body>
 </html>

@@ -1564,6 +1564,7 @@
     });
     window.scrollTo(0, 0);
     if (view === "day") holdQuestion();
+    if (view === "day" && !$("view-day").classList.contains("reveal")) scheduleHomeNote();
   }
 
   // The note under each thought opens on request and starts closed on every visit.
@@ -1629,6 +1630,61 @@
     document.querySelector(".nav").classList.toggle("has-hint", show);
   }
 
+  // ---------- keeping it on the home screen ----------
+  // Read in a phone browser rather than from its home-screen icon, the app says once how to
+  // add it there (iPhone) or offers the browser's own install (Android), after the day's
+  // thought is in, never during it. The check is the browser's own description of itself:
+  // nothing leaves the phone. Never shown in the Android app or once installed.
+  const UA = navigator.userAgent;
+  const TEST_DEVICE = TEST && TEST.get("device");
+  const IOS = TEST_DEVICE ? TEST_DEVICE === "ios" : /iPhone|iPad|iPod/.test(UA) || (/Macintosh/.test(UA) && navigator.maxTouchPoints > 1);
+  const ANDROID = TEST_DEVICE ? TEST_DEVICE === "android" : /Android/.test(UA);
+  const INSTALLED = !TEST_DEVICE && (window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true);
+  const SHARE_ICON = '<svg class="share-icon" viewBox="0 0 24 24" aria-label="Share"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M6 11H5v10h14V11h-1"/></svg>';
+  let installPrompt = TEST && TEST.get("prompt") ? { prompt() {}, userChoice: Promise.resolve({ outcome: "accepted" }) } : null;
+  let homeNoteTimer = 0;
+  window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); installPrompt = e; });
+  window.addEventListener("appinstalled", () => closeHomeNote());
+
+  function scheduleHomeNote() {
+    clearTimeout(homeNoteTimer);
+    homeNoteTimer = setTimeout(showHomeNote, 4000);
+  }
+  function showHomeNote() {
+    const view = $("view-day");
+    if (NATIVE || INSTALLED || !(IOS || ANDROID) || store.get("homeNote") || !store.get("welcomed")) return;
+    if (view.hidden || view.classList.contains("reveal") || !$("closing").hidden || silence) return;
+    const install = ANDROID && !!installPrompt;
+    let steps;
+    if (IOS) {
+      steps = /CriOS/.test(UA) ? `Tap the Share button ${SHARE_ICON} in the address bar, then <b>Add to Home Screen</b>.`
+        : /FxiOS/.test(UA) ? `Open the menu, tap <b>Share</b>, then <b>Add to Home Screen</b>.`
+        : `Tap the Share button ${SHARE_ICON} (in the ⋯ menu if you don't see it), then <b>Add to Home Screen</b>.`;
+    } else {
+      steps = install ? "" : "Open the browser menu (⋮), then <b>Install app</b> or <b>Add to Home screen</b>.";
+    }
+    $("home-note-title").textContent = install ? "Install The Thinking Place" : "Keep The Thinking Place on your home screen";
+    $("home-note-text").innerHTML = (steps ? steps + " " : "") +
+      (IOS ? "It then opens like an app, full screen, and your notes are kept safely."
+        : `It ${steps ? "then " : ""}opens like an app, from its own icon, and works offline.`);
+    $("home-note-install").hidden = $("home-note-dot").hidden = !install;
+    $("home-note-close").textContent = install ? "not now" : "got it";
+    $("home-note").hidden = false;
+    requestAnimationFrame(() => $("home-note").classList.add("show"));
+  }
+  function closeHomeNote() {
+    store.set("homeNote", "done");  // once only
+    const el = $("home-note");
+    el.classList.remove("show");
+    setTimeout(() => (el.hidden = true), 400);
+  }
+  async function installApp() {
+    const p = installPrompt;
+    installPrompt = null;
+    closeHomeNote();
+    if (p) { p.prompt(); await p.userChoice.catch(() => {}); }
+  }
+
   // ---------- Android back button ----------
   // Closes whatever is open first, then goes back to today, then leaves the app.
   function onBack() {
@@ -1638,6 +1694,7 @@
     if (silence) return finishSilence();
     if (!$("closing").hidden) return hideClosing();
     if (!$("note").hidden) return setWriting(false);
+    if (!$("home-note").hidden) return closeHomeNote();
     const hash = location.hash.replace(/^#\/?/, "");
     if (hash === "terms") { location.hash = "#/about"; return; }
     if (hash) { location.hash = "#/"; return; }
@@ -1695,6 +1752,8 @@
     document.querySelectorAll(".backup-now").forEach((b) => b.addEventListener("click", () => exportNotes(b)));
     document.querySelectorAll(".backup-later").forEach((b) => b.addEventListener("click", snoozeBackup));
 
+    $("home-note-close").addEventListener("click", closeHomeNote);
+    $("home-note-install").addEventListener("click", installApp);
     $("tour-next").addEventListener("click", () => showTourStep(tourStep + 1));
     $("tour-skip").addEventListener("click", () => showTourStep(99));
 
@@ -1864,6 +1923,7 @@
     if (holdQuestion.pending) { holdQuestion.pending = false; showQuestion(); }
     else if (questionHeld) holdQuestion({ fade: true });  // the screen may have grown meanwhile
     updateHint();
+    scheduleHomeNote();
   }
 
   async function init() {
