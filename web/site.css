@@ -45,7 +45,6 @@ a { color: var(--fg); }
 .way { display: flex; flex-direction: column; align-items: flex-start; gap: .3rem; text-decoration: none; color: var(--fg); }
 .way b { font: 400 1.05rem/1.35 var(--sans); padding-bottom: .2rem; border-bottom: 1px solid var(--faint);
   transition: border-color .3s; }
-.way.primary b { border-bottom-color: var(--fg); }
 .way span { font-size: .8rem; color: var(--muted); }
 .way:hover b, .way:focus-visible b { border-bottom-color: var(--accent); }
 .way:focus-visible { outline: none; }
