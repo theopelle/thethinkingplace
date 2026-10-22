@@ -489,6 +489,8 @@ button.quiet-inline { color: var(--muted); }
 .memory-when { margin: 0 0 .35rem; }
 .memory-note { margin: 0 0 .45rem; font: italic 400 1rem/1.5 var(--serif); color: var(--fg); white-space: pre-line; }
 .memory-link { color: var(--muted); font-size: .8rem; }
+.memory-item + .memory-item { margin-top: 1rem; }
+.memory-date { margin: 0 0 .15rem; font-size: .75rem; letter-spacing: .06em; }
 
 /* "saved" in past thoughts is an on/off filter, not a list */
 .filter-toggle::after { content: none; }

@@ -62,14 +62,30 @@ def source_url(t):
 
 
 def read_calendar():
+    """The 728-day cycle (dates are those of cycle 1), read by column name."""
     ws = load_workbook(os.path.join(CONTENT, "calendar.xlsx"), data_only=True)["Calendar"]
+    head = [c.value for c in ws[1]]
+    col = lambda name: next(i for i, h in enumerate(head) if h and h.startswith(name))
+    d, i, rv, ts = col("Date"), col("Thought ID"), col("Revisit"), col("Evening teaser")
     days = []
     for r in ws.iter_rows(min_row=2, values_only=True):
         if r[0] is None:
             continue
-        days.append({"date": r[0].strftime("%Y-%m-%d"), "id": int(r[2]), "revisit": r[8] == "Yes",
-                     "special": r[10], "teaser": r[11]})
+        days.append({"date": r[d].strftime("%Y-%m-%d"), "id": int(r[i]), "revisit": r[rv] == "Yes",
+                     "teaser": r[ts]})
     return days
+
+
+def read_pinned():
+    """Pinned dates: {"MM-DD": {"id", "occasion", "teaser"}} (the sheet writes day-month)."""
+    ws = load_workbook(os.path.join(CONTENT, "calendar.xlsx"), data_only=True)["Pinned dates"]
+    out = {}
+    for r in ws.iter_rows(min_row=2, values_only=True):
+        if r[0] is None:
+            continue
+        day, month = str(r[0]).strip().split("-")
+        out[f"{int(month):02d}-{int(day):02d}"] = {"id": int(r[1]), "occasion": r[2], "teaser": r[3]}
+    return out
 
 
 def read_glossary():

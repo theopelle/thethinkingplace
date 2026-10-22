@@ -3,8 +3,8 @@
     python3 tools/fetch_content.py <sources-dir>    # once, downloads the source texts
     python3 tools/build_content.py <sources-dir>
 
-Writes entries.json (the thoughts), calendar.json (which thought on which day, with the
-evening teaser) and glossary.json. Every quote is first checked word for word against
+Writes entries.json (the thoughts), calendar.json (the 728-day cycle that loops forever,
+the pinned dates and the evening teasers; see calendar_rules.py) and glossary.json. Every quote is first checked word for word against
 its source by check_quotes.py; the build stops if any quote fails.
 
 Thought ids are the # column of thoughts.xlsx and never change. Thoughts from the first
@@ -15,7 +15,8 @@ import json, os, re, sys, urllib.parse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from content_io import ROOT, read_thoughts, read_calendar, read_glossary, translation, source_url
+from content_io import ROOT, read_thoughts, read_calendar, read_pinned, read_glossary, translation, source_url
+import calendar_rules
 import check_quotes
 
 PATHS = ["Stoicism", "Epicureanism", "Classical Greek Philosophy", "Enlightenment Ethics",
@@ -132,35 +133,50 @@ def main(srcdir):
 
     ids = {e["id"] for e in entries}
     days = read_calendar()
-    for prev_day, day in zip(days, days[1:]):
-        assert day["date"] > prev_day["date"], f"calendar out of order at {day['date']}"
-    missing = [d["date"] for d in days if d["id"] not in ids]
+    pinned = read_pinned()
+    import datetime
+    for k, d in enumerate(days):
+        assert d["date"] == str(calendar_rules.date_of(k)), f"calendar dates must run day by day from 20 October 2026 ({d['date']})"
+    missing = [d["date"] for d in days if d["id"] not in ids] + [md for md, p in pinned.items() if p["id"] not in ids]
     if missing:
         sys.exit(f"calendar days with unknown thought ids: {missing[:10]}")
-    rows = [[d["id"], d["teaser"] or ""] + ([1] if d["revisit"] else []) for d in days]
-    start = days[0]["date"]
+    cycle = [(d["id"], d["revisit"]) for d in days]
+    by_id = {e["id"]: e for e in entries}
+    problems, stats = calendar_rules.check(cycle, {md: p["id"] for md, p in pinned.items()}, by_id)
+    if problems:
+        sys.exit("calendar rules broken:\n" + "\n".join(problems[:30]) + f"\n({len(problems)} in all)")
+    # Each evening's teaser describes the next day's thought, and belongs to that thought.
+    teasers = {}
+    for k, d in enumerate(days):
+        nxt = days[(k + 1) % len(days)]
+        if not nxt["revisit"]:
+            if not d["teaser"]:
+                sys.exit(f"no evening teaser on {d['date']} (about #{nxt['id']})")
+            teasers[str(nxt["id"])] = d["teaser"]
+    calendar = {"start": days[0]["date"], "cycle": [[i, 1] if rev else [i] for i, rev in cycle],
+                "teasers": teasers, "revisitTeaser": calendar_rules.REVISIT_TEASER,
+                "pinned": {md: [p["id"], p["occasion"], p["teaser"]] for md, p in sorted(pinned.items())},
+                "words": teaser_words(by_id, teasers)}
     if PREVIEW_DAYS:
-        start, rows = preview(entries, days, rows)
-    calendar = {"start": start, "days": rows, "words": teaser_words(entries, days)}
-
+        calendar["preview"] = preview(entries, cycle, days[0]["date"])
     json.dump(entries, open(os.path.join(ROOT, "entries.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     json.dump(calendar, open(os.path.join(ROOT, "calendar.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     build_glossary()
     live = [e for e in entries if not e.get("retired")]
     print(f"{len(live)} thoughts (+{len(entries) - len(live)} retired) -> entries.json")
-    print(f"{len(days)} days from {days[0]['date']} to {days[-1]['date']} -> calendar.json")
+    print(f"{len(days)}-day cycle from {days[0]['date']} ({sum(r for _, r in cycle)} revisits), {len(pinned)} pinned dates "
+          f"-> calendar.json; shortest gap over {stats['years']} years: {stats['shortest_gap'][0]} days")
 
 
-def teaser_words(entries, days):
+def teaser_words(by_id, teasers):
     """How the content team's evening teasers name each path and theme ("a Stoic thought",
-    "pride and humility"), so the app can word reminders the same way."""
+    "pride and humility"), so the app can word reminders and new teasers the same way."""
     import collections
-    by_id = {e["id"]: e for e in entries}
     paths, themes = collections.defaultdict(collections.Counter), collections.defaultdict(collections.Counter)
-    for prev, cur in zip(days, days[1:]):
-        m = re.match(r"Tomorrow: (.*) on (.*)\.$", prev["teaser"] or "")
-        if m and not cur["revisit"]:
-            e = by_id[cur["id"]]
+    for i, text in teasers.items():
+        m = re.match(r"Tomorrow: (.*) on (.*)\.$", text)
+        if m:
+            e = by_id[int(i)]
             paths[e["path"]][m.group(1)] += 1
             themes[e["themes"][0]][m.group(2)] += 1
     return {"paths": {k: v.most_common(1)[0][0] for k, v in paths.items()},
@@ -172,17 +188,18 @@ def teaser_words(entries, days):
 PREVIEW_DAYS = 10
 
 
-def preview(entries, days, rows):
+def preview(entries, cycle, start):
+    """Test days before the cycle starts (outside the loop): easy thoughts from late in it."""
     import datetime
-    late = {d["id"] for d in days if d["date"] >= "2028-01-01" and not d["revisit"]}
+    late = {i for i, rev in cycle[len(cycle) // 2:] if not rev}
     picks, seen = [], set()
     for e in sorted((e for e in entries if not e.get("retired")), key=lambda e: e["id"]):
         if e["id"] in late and e.get("value") == 5 and e.get("difficulty", 9) <= 2 and e["path"] not in seen:
             picks.append(e["id"]); seen.add(e["path"])
         if len(picks) == PREVIEW_DAYS:
             break
-    first = datetime.date.fromisoformat(days[0]["date"]) - datetime.timedelta(days=len(picks))
-    return first.isoformat(), [[i, ""] for i in picks] + rows
+    first = datetime.date.fromisoformat(start) - datetime.timedelta(days=len(picks))
+    return {"start": first.isoformat(), "ids": picks}
 
 
 def build_glossary():

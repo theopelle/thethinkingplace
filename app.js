@@ -28,7 +28,7 @@
   const $ = (id) => document.getElementById(id);
   let entries = [];
   let entriesById = {};
-  let calendar = { start: "2026-10-20", days: [] };
+  let calendar = { start: "2026-10-20", cycle: [[1]], teasers: {}, pinned: {} };
   let glossary = [];
 
   // ---------- storage (always guarded) ----------
@@ -48,7 +48,13 @@
   };
 
   // ---------- dates ----------
+  // On a local preview only (never on the site or in the app), ?today=2028-01-01&hour=21
+  // pretends to be another day and time, to check the calendar years ahead.
+  const TEST = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? new URLSearchParams(location.search) : null;
+  const testToday = TEST && /^\d{4}-\d{2}-\d{2}$/.test(TEST.get("today") || "") ? TEST.get("today") : null;
+  const hourNow = () => (TEST && TEST.get("hour") ? Number(TEST.get("hour")) : new Date().getHours());
   const todayKey = () => {
+    if (testToday) return testToday;
     const d = new Date();
     return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
   };
@@ -59,14 +65,35 @@
     new Date(keyToUTC(key)).toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" });
 
   // ---------- the calendar ----------
-  // calendar.json lists one thought per day from its start date, with the teaser shown
-  // that evening about the next day. Past its end it starts again from the top; before
-  // its start (only while testing) it shows the first day.
+  // A cycle of 728 days (104 weeks) loops forever from calendar.start, so weekdays never
+  // move. Each thought appears once per cycle; the other days revisit a thought shown at
+  // least six months before. Pinned thoughts come back on their date every year; the
+  // cycle's thought of that day moves to the next revisit day within a week, or waits for
+  // the next cycle. tools/calendar_rules.py applies the same rules and checks them all at
+  // build time. Before the start (test builds only) come a few preview days.
+  const MOVE_WITHIN = 7;
+  const addDays = (key, n) => utcToKey(keyToUTC(key) + n * DAY);
+  function pinnedOn(key) {
+    const p = calendar.pinned[key.slice(5)];
+    return p ? { id: p[0], occasion: p[1], teaser: p[2] } : null;
+  }
   function dayInfo(key) {
-    const n = calendar.days.length;
-    const i = Math.max(0, daysBetween(calendar.start, key));
-    const [id, teaser, revisit] = calendar.days[i % n];
-    return { id, teaser, revisit: !!revisit };
+    const k = daysBetween(calendar.start, key), cyc = calendar.cycle, n = cyc.length;
+    if (k < 0) {
+      const pv = calendar.preview, j = pv ? daysBetween(pv.start, key) : -1;
+      return { id: pv && j >= 0 && j < pv.ids.length ? pv.ids[j] : cyc[0][0], revisit: false };
+    }
+    const pin = pinnedOn(key);
+    if (pin) return { id: pin.id, revisit: false, pinned: pin };
+    for (let s = 1; s <= MOVE_WITHIN && s <= k; s++) {
+      const j = (k - s) % n;
+      if (!pinnedOn(addDays(key, -s)) || cyc[j][1]) continue;
+      let t = 1;
+      while (t <= MOVE_WITHIN && !(j + t < n && cyc[j + t][1])) t++;
+      if (t === s) return { id: cyc[j][0], revisit: false, moved: true };
+    }
+    const [id, rev] = cyc[k % n];
+    return { id, revisit: !!rev };
   }
   const entryFor = (key) => {
     const a = easyAt(key);
@@ -75,9 +102,9 @@
 
   // ---------- easing in ----------
   // A new reader can choose five easier thoughts before joining the shared calendar. They
-  // are picked once, at that moment: easy and valuable, from different paths, and not on
-  // the calendar for the year ahead (or, later on, not shown in the last six months), so
-  // nobody meets one twice soon.
+  // are picked once, at that moment: easy and valuable, from different paths, and shown
+  // nowhere in the calendar within six months before or after the easy days, so nobody
+  // meets one twice soon.
   // Readers can switch easing in on and off during their first five days. Each stretch of
   // easy days is kept (start, thoughts, and the day it stopped) so past days keep showing
   // the thought that was read then; switching back on continues with the unused thoughts.
@@ -104,18 +131,17 @@
   const inFirstDays = () => daysBetween(store.get("installed", todayKey()), todayKey()) < EASY_DAYS;
 
   function pickEasy(today) {
-    const n = calendar.days.length;
     const shownBetween = (from, to) => {
       const ids = new Set();
-      for (let i = Math.max(0, daysBetween(calendar.start, from)); i <= Math.min(n - 1, daysBetween(calendar.start, to)); i++) ids.add(calendar.days[i][0]);
+      for (let key = from < calendar.start ? calendar.start : from; key <= to; key = addDays(key, 1)) ids.add(dayInfo(key).id);
       return ids;
     };
-    const shift = (days) => utcToKey(keyToUTC(today) + days * DAY);
+    const around = (days) => shownBetween(addDays(today, -days), addDays(today, EASY_DAYS - 1 + days));
+    const sixMonths = around(182);
     const tries = [
-      [shownBetween(calendar.start, shift(365)), (e) => e.difficulty === 1 && e.value >= 4],
-      [shownBetween(calendar.start, shift(365)), (e) => e.difficulty <= 2 && e.value === 5],
-      [shownBetween(shift(-180), shift(180)), (e) => e.difficulty === 1 && e.value >= 4],
-      [shownBetween(shift(-60), shift(60)), (e) => e.difficulty <= 2 && e.value >= 4],
+      [sixMonths, (e) => e.difficulty === 1 && e.value >= 4],
+      [sixMonths, (e) => e.difficulty <= 2 && e.value === 5],
+      [around(60), (e) => e.difficulty <= 2 && e.value >= 4],
     ];
     // East and West in turn; within a path, the most valuable and then the shortest.
     const order = ["Stoicism", "Buddhist Philosophy", "Classical Greek Philosophy", "Taoism",
@@ -295,27 +321,43 @@
   }
 
   // ---------- meeting a thought again ----------
-  // When a thought comes back (Sunday revisits, or a day reread), the page recalls when you
-  // first met it, and what you wrote then.
-  function firstMeeting(key, id) {
+  // When a thought comes back (a revisit, the next cycle, or a day reread), the page recalls
+  // when you first met it, and everything you wrote on it since, oldest first.
+  function meetings(key, id) {
     let days = [];
     try { days = JSON.parse(store.get("days", "[]")) || []; } catch {}
     const dates = [...new Set([...days, ...store.keys("note:").map((k) => k.slice(5))])].filter((d) => d < key).sort();
-    return dates.find((d) => entryShown(d).id === id) || null;
+    return dates.filter((d) => entryShown(d).id === id || noteAbout(d, id));
   }
   function renderMemory(key, e) {
-    const first = firstMeeting(key, e.id);
-    $("memory").hidden = !first;
-    if (!first) return;
-    const sameYear = first.slice(0, 4) === key.slice(0, 4);
-    const when = new Date(keyToUTC(first)).toLocaleDateString(undefined,
-      { weekday: "long", day: "numeric", month: "long", year: sameYear ? undefined : "numeric", timeZone: "UTC" });
-    const note = noteText(first).trim();
-    $("memory-when").textContent = `You first met this thought on ${when}.` + (note ? " You wrote:" : "");
-    $("memory-note").hidden = !note;
-    $("memory-note").textContent = note.length > 280 ? note.slice(0, 280).trimEnd() + "…" : note;
-    $("memory-link").href = "#/day/" + first;
-    $("memory-link").textContent = note ? "read it all" : "read that day";
+    const met = meetings(key, e.id);
+    $("memory").hidden = !met.length;
+    if (!met.length) return;
+    const when = (d) => new Date(keyToUTC(d)).toLocaleDateString(undefined,
+      { weekday: "long", day: "numeric", month: "long", year: d.slice(0, 4) === key.slice(0, 4) ? undefined : "numeric", timeZone: "UTC" });
+    const notes = met.map((d) => [d, (noteAbout(d, e.id) || { text: "" }).text.trim()]).filter(([, t]) => t);
+    $("memory-when").textContent = (met.length === 1 ? `You first met this thought on ${when(met[0])}.`
+      : `You've met this thought ${met.length === 2 ? "twice" : met.length + " times"}, first on ${when(met[0])}.`) +
+      (notes.length === 1 ? " You wrote:" : notes.length ? " What you wrote:" : "");
+    const list = $("memory-notes");
+    list.textContent = "";
+    for (const [d, text] of notes) {
+      const item = document.createElement("div");
+      item.className = "memory-item";
+      const date = document.createElement("p"), note = document.createElement("p"), link = document.createElement("a");
+      date.className = "memory-date";
+      date.textContent = when(d);
+      note.className = "memory-note";
+      note.textContent = text.length > 280 ? text.slice(0, 280).trimEnd() + "…" : text;
+      link.className = "memory-link";
+      link.href = "#/day/" + d;
+      link.textContent = "read it all";
+      if (notes.length > 1) item.append(date);
+      item.append(note, link);
+      list.append(item);
+    }
+    $("memory-link").hidden = notes.length > 0;
+    $("memory-link").href = "#/day/" + met[0];
   }
 
   // ---------- text size ----------
@@ -377,7 +419,7 @@
     markTerms(e.path, ["day-text", "day-path", "day-source", "day-context-text"]);
     renderGreeting(key === today);
     // In the evening, a word about tomorrow.
-    const teaser = key === today && new Date().getHours() >= 20 ? teaserFor(today) : "";
+    const teaser = key === today && hourNow() >= 20 ? teaserFor(today) : "";
     $("teaser").textContent = teaser;
     $("teaser").hidden = !teaser;
 
@@ -519,7 +561,8 @@
   function journalDays() {
     const today = todayKey();
     const keys = new Set(store.keys("note:").map((k) => k.slice(5)).filter((k) => k <= today));
-    for (let t = keyToUTC(today); t >= keyToUTC(calendar.start); t -= DAY) keys.add(utcToKey(t));
+    const first = calendar.preview ? calendar.preview.start : calendar.start;
+    for (let t = keyToUTC(today); t >= keyToUTC(first); t -= DAY) keys.add(utcToKey(t));
     return [...keys].sort().reverse().filter((key) => {
       const e = entryShown(key);
       return (!journal.path || e.path === journal.path) && (!journal.theme || (e.themes || []).includes(journal.theme)) &&
@@ -864,16 +907,18 @@
     return `${who} on ${on}`;
   }
 
-  // The calendar holds a teaser for each evening; gentle days, and days without one,
-  // get theirs from tomorrow's thought.
+  // Each thought has its teaser, in the content team's words; pinned dates have their own,
+  // revisits share one. Gentle days, and thoughts without one, get theirs from the thought.
   function teaserFor(today) {
-    const tomorrow = utcToKey(keyToUTC(today) + DAY);
+    const tomorrow = addDays(today, 1);
     if (easyIndex(tomorrow) >= 0) {
       const kind = thoughtKind(entryFor(tomorrow), true);
       return kind ? `Tomorrow: ${kind}.` : "Tomorrow: another gentle thought.";
     }
     const info = dayInfo(tomorrow), kind = thoughtKind(entryFor(tomorrow));
-    const said = dayInfo(today).teaser || (info.revisit ? "Tomorrow: a thought you may have met before." : kind ? `Tomorrow: ${kind}.` : "");
+    const said = info.pinned ? info.pinned.teaser
+      : info.revisit ? calendar.revisitTeaser || "Tomorrow: a thought you may have met before."
+      : calendar.teasers[info.id] || (kind ? `Tomorrow: ${kind}.` : "");
     // The last gentle evening says that tomorrow everyone reads the same thought.
     if (easyIndex(today) >= 0) return said ? said.replace(/^Tomorrow: /, "Tomorrow, the same thought as everyone: ") : "Tomorrow: the same thought as everyone.";
     return said;
@@ -900,6 +945,7 @@
       return kind ? `${kind[0].toUpperCase()}${kind.slice(1)}.` : "A gentle thought for today.";
     }
     const info = dayInfo(key), e = entryFor(key), w = calendar.words || {};
+    if (info.pinned) return `A thought for ${info.pinned.occasion}.`;
     if (info.revisit) return "A thought you may have met before.";
     const who = (w.paths || {})[e.path];
     const [t1, t2] = (e.themes || []).map((t) => (w.themes || {})[t]);
