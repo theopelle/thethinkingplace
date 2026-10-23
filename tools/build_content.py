@@ -185,7 +185,7 @@ def teaser_words(by_id, teasers):
 
 # TEST BUILDS ONLY: days before the calendar starts get easy thoughts from late in the
 # calendar, so past thoughts has something to show while testing. Set to 0 before launch.
-PREVIEW_DAYS = 10
+PREVIEW_DAYS = 0
 
 
 def preview(entries, cycle, start):

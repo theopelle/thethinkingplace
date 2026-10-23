@@ -6,3 +6,9 @@ node_modules/
 __pycache__/
 *.pyc
 .claude/
+
+# Google Play: the bundle, and the upload key with its passwords (never in git)
+*.aab
+*.jks
+*.keystore
+android/keystore.properties

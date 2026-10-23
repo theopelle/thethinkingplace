@@ -7,8 +7,8 @@ android {
         applicationId "app.thinkingplace"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "0.1.0"
+        versionCode 1          // +1 for every upload to Google Play
+        versionName "1.0.0"    // what readers see
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -16,8 +16,24 @@ android {
             ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    // Release signing (Google Play): the upload key's details live in android/keystore.properties,
+    // a private file on this Mac that is never in git. See tools/make_aab.sh.
+    def keystoreFile = rootProject.file("keystore.properties")
+    def keystore = new Properties()
+    if (keystoreFile.exists()) keystore.load(new FileInputStream(keystoreFile))
+    signingConfigs {
+        release {
+            if (keystoreFile.exists()) {
+                storeFile file(keystore["storeFile"])
+                storePassword keystore["storePassword"]
+                keyAlias keystore["keyAlias"]
+                keyPassword keystore["keyPassword"]
+            }
+        }
+    }
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
