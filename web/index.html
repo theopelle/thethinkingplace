@@ -26,15 +26,30 @@
       <h1>Philosophy, one day at a time.</h1>
     </section>
 
+    <!-- A thought from the app, one per weekday: written in by tools/make_site.py (Monday's),
+         then the script below shows the reader's own weekday. -->
+    <section class="today" id="today" aria-label="A thought from The Thinking Place">
+      <blockquote class="today-text" id="today-text">{{T_TEXT}}</blockquote>
+      <p class="today-source"><span id="today-source">{{T_SOURCE}}</span><span class="dot" aria-hidden="true"> · </span><span class="today-path" id="today-path">{{T_PATH}}</span></p>
+      <p class="today-links">
+        <button type="button" class="today-link" aria-expanded="false" aria-controls="today-context">about this thought</button><span class="dot" aria-hidden="true">·</span><button type="button" class="today-link" aria-expanded="false" aria-controls="today-question">a question to sit with</button>
+      </p>
+      <p class="today-panel" id="today-context" hidden>{{T_CONTEXT}}</p>
+      <p class="today-panel today-question" id="today-question" hidden>{{T_PROMPT}}</p>
+    </section>
+    <script type="application/json" id="week-thoughts">{{HOME_THOUGHTS}}</script>
+
     <section class="welcome">
-      <p>Every day, one short passage from the great thinkers of East and West. A note explains it in plain words, and a question stays with you.</p>
-      <p>Read it in a minute. Write down what it brings up, or sit with it for a while. Then get on with your day.</p>
-      <p class="muted small">Free, with no ads, no tracking, and no account. Your notes never leave your device.</p>
+      <p>A thought like this one, every day. The Thinking Place makes philosophy accessible: a short note gives each thought its context, and a question helps you think it through.</p>
+      <p>Read it in a minute, and give yourself the space to think: write down what comes to mind, or sit and wonder. Then get on with your day.</p>
+      <p class="muted small">Free. No ads, no tracking, no account. Your notes never leave your device.</p>
     </section>
 
     <div class="pause" aria-hidden="true"></div>
 
     <!-- One card per device. A small script below puts the reader's own device first. -->
+    <a class="more-below" id="more-below" href="#devices" aria-label="More below" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9.5l6 6 6-6"/></svg></a>
+
     <div class="devices" id="devices">
       <section class="device" data-device="desktop">
         <div class="device-head"><svg class="device-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg><h2>Computer</h2><span class="yours">this device</span></div>
@@ -53,30 +68,28 @@
         <p class="device-sum">The app, with a daily reminder.</p>
         <!-- Until the app is on Google Play: shown, not a link. Then: <a class="way" href="{{PLAY_URL}}"> -->
         <div class="way soon"><b>Get it on Google Play <em>coming soon</em></b><span>Currently in testing</span></div>
+        <!-- Once the app is on Google Play, "Until then" becomes "Or read it in your browser". -->
+        <p class="device-lead">Until then, read it in your browser:</p>
+        <a class="cta" href="app/">Open The Thinking Place</a>
         <details class="guide" id="android">
-          <summary>Or install the web version now</summary>
-          <ol class="steps">
-            <li>Open The Thinking Place with the button below, in Chrome.</li>
-            <li>Tap <b>Install</b> when it offers. Otherwise, open the menu (⋮) and tap <b>Install app</b> or <b>Add to Home screen</b>.</li>
-          </ol>
-          <a class="cta" href="app/">Open The Thinking Place</a>
-          <p class="device-fine">The web version has no daily reminders, and its notes stay in it: to move them to the Google Play app later, export them from Settings, then import them there.</p>
+          <summary>Keep it one tap away</summary>
+          <p class="guide-text">In Chrome, tap <b>Install</b> when it offers. Otherwise, open the menu (⋮) and tap <b>Add to Home screen</b>.</p>
         </details>
+        <p class="device-fine">The browser version has no daily reminders. To move your notes to the app later, export them from Settings, then import them there.</p>
       </section>
       <section class="device" data-device="ios">
         <div class="device-head"><svg class="device-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg><h2>iPhone</h2><span class="yours">this device</span></div>
-        <p class="device-sum">Add it to your home screen: it opens like an app, full screen, and works offline.</p>
+        <p class="device-sum">Read it in <span class="ios-browser">Safari</span>, then add it to your home screen if you like: it opens like an app, full screen, even offline.</p>
+        <a class="cta" href="app/">Open The Thinking Place</a>
         <details class="guide" id="iphone">
-          <summary>How to add it</summary>
+          <summary>Add it to your home screen</summary>
           <ol class="steps">
-            <li>Open The Thinking Place with the button below.</li>
             <li class="ios-share">Tap the Share button <svg class="share-icon" viewBox="0 0 24 24" aria-label="Share"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M6 11H5v10h14V11h-1"/></svg> (in the ⋯ menu if you don't see it).</li>
             <li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li>
           </ol>
-          <p class="device-fine">The app shows these steps again when you open it.</p>
-          <a class="cta" href="app/">Open The Thinking Place</a>
+          <p class="device-fine">You'll see these steps again inside.</p>
         </details>
-        <p class="device-fine">No daily reminders on iPhone for now. Notes stay on your phone: export them from Settings to keep a copy or move them.</p>
+        <p class="device-fine">No daily reminders on iPhone for now. Your notes stay on your phone: export them from Settings to keep a copy or move them.</p>
       </section>
 
     </div>
@@ -85,7 +98,47 @@
     <a href="about.html">About</a><span class="dot" aria-hidden="true">·</span><a href="terms.html">Terms &amp; privacy</a><span class="dot" aria-hidden="true">·</span><a href="mailto:hello@thinkingplace.app">Contact</a>
   </footer>
   <script>
-    // Puts the reader's own device first and opens its steps. The check is the browser's own
+    // The reader's weekday picks one of the seven thoughts (Monday first).
+    (function () {
+      var week = JSON.parse(document.getElementById("week-thoughts").textContent);
+      var t = week[(new Date().getDay() + 6) % 7];
+      var box = document.getElementById("today-text");
+      var lines = t.text.indexOf("\n") >= 0 ? t.text.split("\n") : t.text.indexOf(" / ") >= 0 ? t.text.split(" / ") : null;
+      box.textContent = "";
+      if (lines) lines.forEach(function (l) { var s = document.createElement("span"); s.className = "verse-line"; s.textContent = l; box.appendChild(s); });
+      else box.textContent = t.text;
+      box.classList.toggle("verse", !!lines);
+      box.classList.toggle("long", !lines && t.text.length > 240);
+      document.getElementById("today-source").textContent = t.source;
+      document.getElementById("today-path").textContent = t.path;
+      document.getElementById("today-context").textContent = t.context;
+      document.getElementById("today-question").textContent = t.prompt;
+
+      // "about this thought" and "a question to sit with": one open at a time.
+      document.querySelectorAll(".today-link").forEach(function (b) {
+        b.addEventListener("click", function () {
+          var open = b.getAttribute("aria-expanded") !== "true";
+          document.querySelectorAll(".today-link").forEach(function (o) {
+            o.setAttribute("aria-expanded", String(o === b && open));
+            document.getElementById(o.getAttribute("aria-controls")).hidden = !(o === b && open);
+          });
+        });
+      });
+
+      // A soft chevron while the cards are still below the first screen.
+      var more = document.getElementById("more-below");
+      function moreBelow() {
+        var first = document.querySelector("#devices > .device");
+        var hide = !first || first.getBoundingClientRect().top < innerHeight - 40 || scrollY > 40;
+        more.hidden = hide;
+      }
+      addEventListener("scroll", moreBelow, { passive: true });
+      addEventListener("resize", moreBelow);
+      moreBelow();
+    })();
+  </script>
+  <script>
+    // Puts the reader's own device first and words the iPhone steps for its browser. The check is the browser's own
     // description of itself, done here on the page: nothing is sent anywhere.
     (function () {
       var ua = navigator.userAgent, q = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) && new URLSearchParams(location.search).get("device");
@@ -100,8 +153,8 @@
       });
       box.querySelector('[data-device="' + mine + '"]').classList.add("mine");
       if (mine !== "desktop") others.innerHTML = "<h2>Other devices</h2>";
-      if (ios) document.getElementById("iphone").open = true;
       var share = document.querySelector(".ios-share"), icon = share.querySelector("svg").outerHTML;
+      if (/CriOS|FxiOS|EdgiOS/.test(ua)) document.querySelector(".ios-browser").textContent = "your browser";
       if (/CriOS/.test(ua)) share.innerHTML = "Tap the Share button " + icon + " in the address bar.";
       else if (/FxiOS/.test(ua)) share.innerHTML = "Open the menu and tap <b>Share</b>.";
       if (location.hash === "#iphone" || location.hash === "#android") document.querySelector(location.hash).open = true;

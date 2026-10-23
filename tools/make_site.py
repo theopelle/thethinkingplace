@@ -13,10 +13,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 WEB = os.path.join(ROOT, "web")
 SITE = os.path.join(ROOT, "site")
-APP_FILES = ["index.html", "style.css", "app.js", "sw.js", "manifest.webmanifest", "entries.json",
+APP_FILES = ["index.html", "style.css", "calendar.js", "app.js", "sw.js", "manifest.webmanifest", "entries.json",
              "calendar.json", "glossary.json", "icon.svg", "icon-180.png", "icon-192.png", "icon-512.png",
              "icon-maskable-512.png", "mark-400.png"]
 PLAY_URL = "https://play.google.com/store/apps/details?id=app.thinkingplace"  # live once published
+HOME_THOUGHTS = [15, 308, 78, 494, 288, 389, 236]  # Monday to Sunday, see below
 
 
 def app_section(page, view):
@@ -43,8 +44,19 @@ def main():
     # The home page has the logo drawn into it (from tools/logo.py), so it shows even when
     # web/index.html is opened on its own.
     home = open(os.path.join(WEB, "index.html"), encoding="utf-8").read()
-    open(os.path.join(SITE, "index.html"), "w", encoding="utf-8").write(
-        home.replace("{{PLAY_URL}}", PLAY_URL))
+    home = home.replace("{{PLAY_URL}}", PLAY_URL)
+
+    # The home page shows a thought from the app, one per weekday (Monday first), written into
+    # the page here. Chosen to be inviting: top-rated, the easiest level, seven paths, and none
+    # in the app during its first three months. Change the ids to change them.
+    import html, json
+    by_id = {e["id"]: e for e in json.load(open(os.path.join(ROOT, "entries.json"), encoding="utf-8"))}
+    week = [{k: by_id[i][k] for k in ("path", "text", "source", "context", "prompt")} for i in HOME_THOUGHTS]
+    home = home.replace("{{HOME_THOUGHTS}}", json.dumps(week, ensure_ascii=False).replace("</", "<\\/"))
+    first = week[0]  # what shows before the script picks today's weekday (and without scripts)
+    for key in ("text", "source", "path", "context", "prompt"):
+        home = home.replace("{{T_%s}}" % key.upper(), html.escape(first[key]))
+    open(os.path.join(SITE, "index.html"), "w", encoding="utf-8").write(home)
 
     page = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
     tpl = open(os.path.join(WEB, "page.html"), encoding="utf-8").read()

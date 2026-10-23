@@ -2,6 +2,16 @@
 (() => {
   "use strict";
 
+  // calendar.js comes first in index.html. Right after an update, a browser can briefly pair
+  // an older cached page (without it) with this newer file: load it, then start again.
+  if (!window.ThinkingCalendar) {
+    const cal = document.createElement("script");
+    cal.src = "calendar.js";
+    cal.onload = () => { const again = document.createElement("script"); again.src = "app.js?again"; document.body.appendChild(again); };
+    document.head.appendChild(cal);
+    return;
+  }
+
   const APP_NAME = "The Thinking Place";
   const DAY = 86400000;
   const PAGE_DAYS = 10;  // past thoughts shown at a time
@@ -53,48 +63,14 @@
   const TEST = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? new URLSearchParams(location.search) : null;
   const testToday = TEST && /^\d{4}-\d{2}-\d{2}$/.test(TEST.get("today") || "") ? TEST.get("today") : null;
   const hourNow = () => (TEST && TEST.get("hour") ? Number(TEST.get("hour")) : new Date().getHours());
-  const todayKey = () => {
-    if (testToday) return testToday;
-    const d = new Date();
-    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-  };
-  const keyToUTC = (key) => { const [y, m, d] = key.split("-").map(Number); return Date.UTC(y, m - 1, d); };
-  const utcToKey = (t) => new Date(t).toISOString().slice(0, 10);
-  const daysBetween = (a, b) => Math.round((keyToUTC(b) - keyToUTC(a)) / DAY);
-  const formatDate = (key) =>
-    new Date(keyToUTC(key)).toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" });
+  // Dates and the calendar's rules live in calendar.js, shared with the website.
+  const { keyToUTC, utcToKey, daysBetween, addDays, formatDate } = window.ThinkingCalendar;
+  const todayKey = () => testToday || window.ThinkingCalendar.localKey();
 
   // ---------- the calendar ----------
-  // A cycle of 728 days (104 weeks) loops forever from calendar.start, so weekdays never
-  // move. Each thought appears once per cycle; the other days revisit a thought shown at
-  // least six months before. Pinned thoughts come back on their date every year; the
-  // cycle's thought of that day moves to the next revisit day within a week, or waits for
-  // the next cycle. tools/calendar_rules.py applies the same rules and checks them all at
-  // build time. Before the start (test builds only) come a few preview days.
-  const MOVE_WITHIN = 7;
-  const addDays = (key, n) => utcToKey(keyToUTC(key) + n * DAY);
-  function pinnedOn(key) {
-    const p = calendar.pinned[key.slice(5)];
-    return p ? { id: p[0], occasion: p[1], teaser: p[2] } : null;
-  }
-  function dayInfo(key) {
-    const k = daysBetween(calendar.start, key), cyc = calendar.cycle, n = cyc.length;
-    if (k < 0) {
-      const pv = calendar.preview, j = pv ? daysBetween(pv.start, key) : -1;
-      return { id: pv && j >= 0 && j < pv.ids.length ? pv.ids[j] : cyc[0][0], revisit: false };
-    }
-    const pin = pinnedOn(key);
-    if (pin) return { id: pin.id, revisit: false, pinned: pin };
-    for (let s = 1; s <= MOVE_WITHIN && s <= k; s++) {
-      const j = (k - s) % n;
-      if (!pinnedOn(addDays(key, -s)) || cyc[j][1]) continue;
-      let t = 1;
-      while (t <= MOVE_WITHIN && !(j + t < n && cyc[j + t][1])) t++;
-      if (t === s) return { id: cyc[j][0], revisit: false, moved: true };
-    }
-    const [id, rev] = cyc[k % n];
-    return { id, revisit: !!rev };
-  }
+  // Which thought each day shows: see calendar.js (shared with the website).
+  const pinnedOn = (key) => window.ThinkingCalendar.pinnedOn(calendar, key);
+  const dayInfo = (key) => window.ThinkingCalendar.dayInfo(calendar, key);
   const entryFor = (key) => {
     const a = easyAt(key);
     return (a && entriesById[a.seg.ids[a.i]]) || entriesById[dayInfo(key).id];
@@ -333,8 +309,7 @@
     const met = meetings(key, e.id);
     $("memory").hidden = !met.length;
     if (!met.length) return;
-    const when = (d) => new Date(keyToUTC(d)).toLocaleDateString(undefined,
-      { weekday: "long", day: "numeric", month: "long", year: d.slice(0, 4) === key.slice(0, 4) ? undefined : "numeric", timeZone: "UTC" });
+    const when = (d) => formatDate(d, d.slice(0, 4) !== key.slice(0, 4));
     const notes = met.map((d) => [d, (noteAbout(d, e.id) || { text: "" }).text.trim()]).filter(([, t]) => t);
     $("memory-when").textContent = (met.length === 1 ? `You first met this thought on ${when(met[0])}.`
       : `You've met this thought ${met.length === 2 ? "twice" : met.length + " times"}, first on ${when(met[0])}.`) +
@@ -649,6 +624,19 @@
       renderBackupNudge();
       return;
     }
+    // In a phone browser, the same share sheet as the app (Save to Files, Drive, mail to
+    // yourself) is clearer than a download; a computer downloads the file as usual.
+    const file = typeof File === "function" ? new File([body], name, { type: "text/plain" }) : null;
+    if ((IOS || ANDROID) && file && navigator.canShare && navigator.canShare({ files: [file] })) {
+      try {
+        await navigator.share({ title: "Your notes", files: [file] });
+        store.set("lastExport", todayKey());
+      } catch (e) {
+        if (e && e.name !== "AbortError") flash(btn, "not saved");  // closing the sheet is fine
+      }
+      renderBackupNudge();
+      return;
+    }
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([body], { type: "text/plain" }));
     a.download = name;
@@ -814,7 +802,7 @@
 
     // Month by month
     let month = "";
-    const fmt = (key) => new Date(keyToUTC(key)).toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" });
+    const fmt = (key) => formatDate(key);
     for (const key of days) {
       const m = new Date(keyToUTC(key)).toLocaleDateString("en-GB", { month: "long", timeZone: "UTC" });
       if (m !== month) {

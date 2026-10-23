@@ -19,6 +19,7 @@
   :root { --bg: #262626; --fg: #E3DFD7; --muted: #A09B92; --faint: #3D3B38; --accent: #8FB2B6; color-scheme: dark; }
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+[hidden] { display: none !important; }
 html, body { margin: 0; }
 body { background: var(--bg); color: var(--fg); font: 300 1rem/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
 main { max-width: 34rem; margin: 0 auto; padding: max(8vh, 2.5rem) 16px 2rem; min-height: calc(100dvh - 5rem); }
@@ -50,6 +51,8 @@ a { color: var(--fg); }
 .yours { display: none; margin-left: auto; font-size: .62rem; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
 .device.mine .yours { display: inline; }
 .device-sum { margin: 0 0 .8rem; }
+.device-lead { margin: 1rem 0 .1rem; }
+.guide-text { margin: .8rem 0 .2rem; }
 .device-fine { font-size: .8rem; line-height: 1.5; color: var(--muted); margin: .7rem 0 0; }
 .device .way { margin-bottom: .2rem; }
 .others { margin: 2.2rem 0 1rem; padding: 0 1.25rem; }  /* lines up with the text inside the cards */
@@ -68,6 +71,43 @@ a { color: var(--fg); }
 .cta { display: inline-block; margin: .4rem 0 .4rem; padding: .6rem 1.2rem; border: 1px solid var(--fg); border-radius: 999px;
   color: var(--fg); text-decoration: none; font-size: .95rem; transition: background .3s, color .3s; }
 .cta:hover, .cta:focus-visible { background: var(--fg); color: var(--bg); outline: none; }
+/* A thought, as in the app: the passage with a soft quote mark, author and path, then the
+   note and the question folded away. */
+/* The top of the page is a centred cover (logo, name, line, the thought); what you read
+   and act on below stays left-aligned. */
+.home .hero { text-align: center; }
+.home .hero .logo-mark { margin-left: auto; margin-right: auto; }
+/* Set apart like the app's daily page: centred, between two short lines. */
+.today { margin: 0 0 2.25rem; padding: 2rem 0; text-align: center; position: relative; }
+.today::before, .today::after { content: ""; position: absolute; left: 50%; width: 2.5rem; margin-left: -1.25rem; border-top: 1px solid var(--faint); }
+.today::before { top: 0; }
+.today::after { bottom: 0; }
+.today .today-text { max-width: 30rem; margin: 0 auto; text-wrap: balance; }
+.today .today-text::before { margin-left: 0; }
+.today .today-links { justify-content: center; }
+.today .today-panel { margin-left: auto; margin-right: auto; text-wrap: pretty; }
+.today-text { margin: 0; font: 400 1.3rem/1.5 var(--serif); }
+/* The mark's own side bearing would push it right: pull it back to the text's left edge. */
+.today-text::before { content: "“"; display: block; height: 1.6rem; margin-left: -.06em; font: 400 3.2rem/1 var(--serif); color: var(--accent); opacity: .35; pointer-events: none; }
+.today-text.long { font-size: 1.12rem; line-height: 1.55; }
+.today-text.verse { font-size: clamp(1.02rem, 4.1vw, 1.2rem); line-height: 1.5; }
+.today-text .verse-line { display: block; }
+.today-source { margin: .9rem 0 .5rem; font-size: .85rem; color: var(--muted); }
+.today-path { color: var(--accent); }
+.today-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem .6rem; margin: 0; }
+.today-link { background: none; border: 0; padding: .2rem 0 .1rem; font: inherit; font-size: .85rem; color: var(--muted); cursor: pointer;
+  border-bottom: 1px solid var(--faint); }
+.today-link:hover, .today-link:focus-visible, .today-link[aria-expanded="true"] { color: var(--fg); border-bottom-color: var(--fg); outline: none; }
+.today-panel { margin: .8rem 0 0; font-size: .92rem; color: var(--muted); max-width: 32rem; animation: open .4s ease; }
+.today-question { font: italic 400 1.08rem/1.5 var(--serif); color: var(--fg); }
+
+/* While the cards are below the first screen, a soft chevron says there is more. */
+.more-below { position: fixed; left: 50%; bottom: max(1rem, env(safe-area-inset-bottom)); transform: translateX(-50%);
+  width: 2.5rem; height: 2.5rem; display: grid; place-items: center; color: var(--muted); z-index: 5;
+  animation: nudge 2.4s ease-in-out infinite; }
+.more-below svg { width: 1.4rem; height: 1.4rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+@keyframes nudge { 0%, 100% { transform: translate(-50%, 0); opacity: .55; } 50% { transform: translate(-50%, 4px); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .more-below { animation: none; } }
 .pause { width: 2.5rem; height: 0; border-top: 1px solid var(--faint); margin: 2.75rem 0; }
 
 .way { display: flex; flex-direction: column; align-items: flex-start; gap: .3rem; text-decoration: none; color: var(--fg); }
@@ -90,3 +130,13 @@ footer a { color: var(--muted); text-decoration: none; }
 footer a:hover { color: var(--fg); }
 .dot { color: color-mix(in srgb, var(--muted) 55%, var(--bg)); }
 .back { display: inline-block; margin-top: 2rem; font-size: .85rem; color: var(--muted); }
+
+/* Phones: tighter spacing above the cards, so the reader's own card starts on the first screen. */
+@media (max-width: 600px) {
+  .home main { padding-top: max(5vh, 1.75rem); }
+  .logo-mark { width: 60px; height: 60px; margin-bottom: 1rem; }
+  .home .name { margin-bottom: .75rem; }
+  .home h1 { margin-bottom: 1.25rem; }
+  .home .pause { margin: 1.5rem 0; }
+  .devices { margin-top: 0; }
+}
