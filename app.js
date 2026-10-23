@@ -1272,6 +1272,16 @@
       btn.setAttribute("aria-haspopup", "dialog");
       word.replaceWith(btn);
       btn.appendChild(word);
+      // Punctuation right after the word stays on its line (", and others are not." never
+      // starts a line on its own): the word is a button, so the browser could break there.
+      const next = btn.nextSibling, punct = next && next.nodeType === 3 && next.data.match(/^[,.;:!?…’”)\]]+/);
+      if (punct) {
+        const glue = document.createElement("span");
+        glue.className = "term-glue";
+        next.data = next.data.slice(punct[0].length);
+        btn.replaceWith(glue);
+        glue.append(btn, punct[0]);
+      }
       return true;
     }
     return false;
@@ -1355,7 +1365,7 @@
   // ---------- greeting ----------
   function renderGreeting(show) {
     const name = (store.get("name", "") || "").trim();
-    const h = new Date().getHours();
+    const h = hourNow();
     const part = h >= 5 && h < 12 ? "Good morning" : h >= 12 && h < 18 ? "Good afternoon" : "Good evening";
     $("greeting").textContent = name ? `${part}, ${name}` : part;
     $("greeting").hidden = !show;

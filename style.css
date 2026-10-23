@@ -205,6 +205,7 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
   text-underline-offset: .22em;
 }
 .term:focus-visible { outline: 1px solid var(--muted); outline-offset: 2px; }
+.term-glue { white-space: nowrap; }
 .term-card {
   position: absolute; z-index: 30;  /* scrolls with the page */
   width: min(20rem, calc(100vw - 2rem));
