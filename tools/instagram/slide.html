@@ -1,0 +1,108 @@
+<!doctype html>
+<!-- The Thinking Place: one Instagram slide at 1080×1350, filled by render() from
+     tools/make_instagram.js. Colours from brand/colors.json, type as in the app. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "Literata"; font-style: normal; src: url("../../fonts/literata-regular.ttf"); }
+  @font-face { font-family: "Literata"; font-style: italic; src: url("../../fonts/literata-italic.ttf"); }
+  :root { --paper: #FBFAF7; --ink: #262626; --muted: #6B6862; --stone: #E3DFD7; --teal: #4E7378;
+    --serif: "Literata", Georgia, serif; --sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+  .dark { --paper: #262626; --ink: #E3DFD7; --muted: #A09B92; --stone: #3D3B38; --teal: #8FB2B6; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1080px; height: 1350px; overflow: hidden; background: var(--paper); color: var(--ink); }
+  .slide { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 110px 120px 90px; }
+  .label { margin: 0; text-align: center; font: 600 24px/1.4 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--teal); }
+  .date { margin: 0 0 22px; text-align: center; font: 400 22px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; min-height: 0; padding: 40px 0 56px; }
+  .mark { display: block; height: 104px; margin: 0 auto -18px; font: 400 200px/1 var(--serif); color: var(--teal); opacity: .35; text-align: center; }
+  .quote { margin: 0; font-family: var(--serif); line-height: 1.5; text-align: center; white-space: pre-line; text-wrap: pretty; }
+  .quote.long { text-align: left; }
+  /* A poem: one block per line, a wrapped line indented under it, as verse is printed. */
+  .quote.poem { white-space: normal; }
+  .quote.poem span { display: block; padding-left: 1.2em; text-indent: -1.2em; }
+  .source { margin: 56px 0 0; text-align: center; font: 400 30px/1.45 var(--serif); color: var(--muted); }
+  .credit { margin: 10px 0 0; text-align: center; font: 400 22px/1.45 var(--sans); color: var(--muted); }
+  .rule { width: 72px; height: 2px; background: var(--stone); margin: 0 auto 48px; border: 0; }
+  .note { margin: 0; font: 400 44px/1.6 var(--serif); text-wrap: pretty; }
+  .question { margin: 0; font: italic 400 58px/1.5 var(--serif); text-align: center; text-wrap: balance; }
+  .foot { display: grid; grid-template-columns: 60px 1fr 60px; text-align: center; align-items: center; font: 400 22px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .foot img { height: 44px; width: 44px; }
+  .foot .next { text-align: right; font: 400 36px/1 var(--serif); letter-spacing: 0; color: var(--muted); opacity: .7; }
+  .from { margin: 64px 0 0; text-align: center; font: 400 28px/1.45 var(--serif); color: var(--muted); }
+  .end { align-items: center; justify-content: center; text-align: center; }
+  .end img { width: 300px; height: 300px; }
+  .end .name { margin: 56px 0 0; font: 600 24px/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--teal); }
+  .end .tagline { margin: 28px 0 0; font: 400 60px/1.3 var(--serif); }
+  .end .url { margin: 64px 0 0; font: 400 34px/1 var(--serif); color: var(--muted); }
+  .end .url::before { content: ""; display: block; width: 72px; height: 2px; background: var(--stone); margin: 0 auto 64px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const logo = (kind, dark) => `../../brand/logo/${kind}-${dark ? "dark" : "light"}.svg`;
+  let dark = false;
+
+  // A carousel slide points on (→); a single image names the website instead.
+  function foot(next) {
+    return `<div class="foot"><img src="${logo("mark", dark)}" alt="">` +
+      `<span>${next ? "The Thinking Place" : "thinkingplace.app"}</span><span class="next">${next ? "→" : ""}</span></div>`;
+  }
+
+  function fits() {
+    const body = document.querySelector(".body");
+    if (!body) return true;
+    const cs = getComputedStyle(body), room = body.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+    const used = [...body.children].reduce((h, el) => {
+      const m = getComputedStyle(el); return h + el.offsetHeight + parseFloat(m.marginTop) + parseFloat(m.marginBottom);
+    }, 0);
+    return used <= room;
+  }
+  // Largest quote size (from 58px down) that fits the space between label and footer.
+  function fitQuote() {
+    const q = document.querySelector(".quote");
+    if (!q) return;
+    for (let px = 58; px >= 32; px -= 2) { q.style.fontSize = px + "px"; if (fits()) return; }
+  }
+
+  // kind: quote, note, question, end (the four carousel slides) or card (a question on its own).
+  // d.single: a quote posted as one image, without the carousel's arrow.
+  window.render = function (d, kind) {
+    const root = document.getElementById("root");
+    dark = d.mode === "dark";
+    document.documentElement.classList.toggle("dark", dark);
+    if (kind === "quote") {
+      root.innerHTML = `<div class="slide">
+        <p class="date">${esc(d.date)}</p><p class="label">${esc(d.pathLabel)}</p>
+        <div class="body"><span class="mark">“</span>
+          ${d.text.includes("\n")
+            ? `<p class="quote long poem">${d.text.split("\n").map((l) => `<span>${esc(l)}</span>`).join("")}</p>`
+            : `<p class="quote${d.text.length > 260 ? " long" : ""}">${esc(d.text)}</p>`}
+          <p class="source">${esc(d.source)}</p>
+          <p class="credit">${esc(d.credit)}</p></div>
+        ${foot(!d.single)}</div>`;
+      fitQuote();
+    } else if (kind === "note") {
+      root.innerHTML = `<div class="slide"><p class="label">About this thought</p>
+        <div class="body"><hr class="rule"><p class="note">${esc(d.context)}</p></div>${foot(true)}</div>`;
+    } else if (kind === "question") {
+      root.innerHTML = `<div class="slide"><p class="label">A question to sit with</p>
+        <div class="body"><hr class="rule"><p class="question">${esc(d.prompt)}</p></div>${foot(true)}</div>`;
+    } else if (kind === "card") {
+      root.innerHTML = `<div class="slide"><p class="date">${esc(d.date)}</p><p class="label">A question to sit with</p>
+        <div class="body"><hr class="rule"><p class="question">${esc(d.prompt)}</p>
+          <p class="from">From today’s thought:<br>${esc(d.source)}</p></div>${foot(false)}</div>`;
+    } else {
+      root.innerHTML = `<div class="slide end"><img src="${logo("logo", dark)}" alt="">
+        <p class="name">The Thinking Place</p><p class="tagline">Philosophy,<br>one day at a time.</p>
+        <p class="url">thinkingplace.app</p></div>`;
+    }
+    return Promise.all([document.fonts.ready, ...[...document.images].map((i) => i.decode().catch(() => {}))])
+      .then(() => { fitQuote(); return fits(); });
+  };
+</script>
+</body>
+</html>
