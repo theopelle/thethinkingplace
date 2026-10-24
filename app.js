@@ -1,4 +1,4 @@
-// The Thinking Place — one thought a day, the same for everyone.
+// The Thinking Place — one thought a day.
 (() => {
   "use strict";
 
@@ -491,9 +491,10 @@
 
   // ---------- past thoughts ----------
   // Every day since the calendar began (plus any older day with a note), newest first,
-  // ten at a time, optionally narrowed to one path or one theme.
-  const journal = { path: "", theme: "", saved: false, shown: PAGE_DAYS };
+  // ten at a time, optionally narrowed to some paths and some themes.
+  const journal = { path: [], theme: [], saved: false, shown: PAGE_DAYS };
   const FILTER_ALL = { path: "all paths", theme: "all themes" };
+  const FILTER_SOME = { path: "paths", theme: "themes" };
   let filterLists = { path: [], theme: [] };
 
   function fillFilters() {
@@ -502,21 +503,32 @@
   }
 
   // A short list under the filter (at most two thirds of the screen), instead of the
-  // phone's full-screen picker. A tap outside or the back button closes it.
+  // phone's full-screen picker. Several can be ticked; "all" clears them and closes.
+  // A tap outside or the back button closes it.
   function openPicker(btn) {
     const kind = btn.dataset.filter, ul = $("picker");
     ul.textContent = "";
+    ul.setAttribute("aria-multiselectable", "true");
+    const mark = () => {
+      for (const li of ul.children) li.setAttribute("aria-selected", String(li.dataset.value ? journal[kind].includes(li.dataset.value) : !journal[kind].length));
+    };
     for (const [value, label] of [["", FILTER_ALL[kind]], ...filterLists[kind].map((v) => [v, v])]) {
       const li = document.createElement("li");
       li.setAttribute("role", "option");
-      li.setAttribute("aria-selected", String(journal[kind] === value));
+      li.dataset.value = value;
       li.tabIndex = 0;
       li.textContent = label;
-      const pick = () => { closePicker(); setJournalFilter({ [kind]: value }); };
+      const pick = () => {
+        if (!value) { closePicker(); return setJournalFilter({ [kind]: [] }); }
+        const now = journal[kind];
+        setJournalFilter({ [kind]: now.includes(value) ? now.filter((v) => v !== value) : [...now, value] });
+        mark();
+      };
       li.addEventListener("click", pick);
       li.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); } });
       ul.appendChild(li);
     }
+    mark();
     ul.hidden = false;
     $("picker-back").hidden = false;
     const r = btn.getBoundingClientRect(), w = ul.offsetWidth, h = ul.offsetHeight;
@@ -540,7 +552,8 @@
     for (let t = keyToUTC(today); t >= keyToUTC(first); t -= DAY) keys.add(utcToKey(t));
     return [...keys].sort().reverse().filter((key) => {
       const e = entryShown(key);
-      return (!journal.path || e.path === journal.path) && (!journal.theme || (e.themes || []).includes(journal.theme)) &&
+      return (!journal.path.length || journal.path.includes(e.path)) &&
+        (!journal.theme.length || (e.themes || []).some((t) => journal.theme.includes(t))) &&
         (!journal.saved || isSaved(e.id));
     }).filter((key, i, all) => !journal.saved || all.findIndex((k) => entryShown(k).id === entryShown(key).id) === i);
   }
@@ -555,8 +568,9 @@
     $("filter-saved").setAttribute("aria-pressed", String(journal.saved));
     for (const kind of ["path", "theme"]) {
       const btn = $("filter-" + kind);
-      btn.textContent = journal[kind] || FILTER_ALL[kind];
-      btn.classList.toggle("active", !!journal[kind]);
+      const picked = journal[kind];
+      btn.textContent = !picked.length ? FILTER_ALL[kind] : picked.length === 1 ? picked[0] : `${picked.length} ${FILTER_SOME[kind]}`;
+      btn.classList.toggle("active", picked.length > 0);
     }
     const days = journalDays();
     const list = $("journal-list");

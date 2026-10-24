@@ -295,7 +295,7 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 .closing-actions button.quiet { display: inline; margin: 0; }
 .closing { cursor: pointer; }
 .closing-hint { position: absolute; bottom: max(2rem, env(safe-area-inset-bottom)); left: 0; right: 0;
-  margin: 0; font: 400 .75rem/1 var(--sans) !important; letter-spacing: .08em; color: var(--muted); opacity: .7; }
+  margin: 0; font: 400 .75rem/1 var(--sans) !important; letter-spacing: .08em; color: var(--muted); }
 
 /* Silence */
 .silence {
@@ -436,6 +436,8 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
   animation: fade .2s ease; }
 .picker li { padding: .6rem 1.1rem; font-size: .92rem; cursor: pointer; }
 .picker li[aria-selected="true"] { color: var(--accent); }
+.picker li::after { content: "✓"; float: right; margin-left: .75rem; visibility: hidden; }
+.picker li[aria-selected="true"]::after { visibility: visible; }
 .picker li:focus-visible { outline: none; background: var(--faint); }
 @media (hover: hover) { .picker li:hover { background: var(--faint); } }
 .filters + .journal { margin-top: 1.25rem; }

@@ -1,7 +1,7 @@
 # The Thinking Place
 
 Philosophy, one day at a time. Every day, one short passage from the great thinkers of
-East and West, the same for everyone. A note explains it in plain words, and a question
+East and West. A note explains it in plain words, and a question
 stays with you.
 
 Free, with no ads, no tracking and no account. Notes stay on the reader's device, and the
