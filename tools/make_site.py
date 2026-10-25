@@ -64,8 +64,10 @@ def main():
     about = app_section(page, "about")
     keep = re.findall(r"\s*<h1>.*?</h1>|\s*<h2>(?:Why|About the voices).*?</h2>\s*<p>.*?</p>|\s*<p>(?:One thought|Each day's|Read slowly).*?</p>",
                       about, re.S)
-    about_html = "".join(keep) + '\n    <p><a href="app/#/about">More in the app: the paths through time and where our thinkers lived →</a></p>'
     terms_html = app_section(page, "terms").replace("Use <em>export</em> in Settings", "Use <em>export</em> in the app's Settings")
+    # Near the end of About too: where the notes live, and how they can be lost (from Terms).
+    notes = re.search(r"\s*<h2>Your notes are yours alone</h2>.*?(?=\s*<h2>)", terms_html, re.S).group(0)
+    about_html = "".join(keep) + notes + '\n    <p><a href="app/#/about">More in the app: the paths through time and where our thinkers lived →</a></p>'
     for name, title, body in (("about.html", "About", about_html), ("terms.html", "Terms & privacy", terms_html)):
         open(os.path.join(SITE, name), "w", encoding="utf-8").write(
             tpl.replace("{{TITLE}}", title.replace("&", "&amp;")).replace("{{PATH}}", name).replace("{{BODY}}", body))

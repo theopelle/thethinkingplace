@@ -17,6 +17,23 @@
   <link rel="icon" href="app/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="app/icon-180.png">
   <link rel="stylesheet" href="site.css">
+  <script>
+    // Someone who has already read a thought in the web app ("revealed" is set by the app) goes
+    // straight back to it when they arrive from outside: typed address, bookmark, another site.
+    // Coming from our own pages, going back or reloading, or ?home still shows this page.
+    // Checked in the browser only: nothing is sent anywhere.
+    (function () {
+      var playLive = false;  // true once the app is on Google Play: Android readers then see this page and its Play link
+      try {
+        if (!localStorage.getItem("reflect:revealed") || /[?&]home\b/.test(location.search)) return;
+        if (document.referrer && new URL(document.referrer).host === location.host) return;
+        var nav = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+        if (nav && nav.type !== "navigate") return;
+        if (playLive && /Android/.test(navigator.userAgent)) return;
+        location.replace("app/");
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body class="home">
   <main>
@@ -79,7 +96,7 @@
       </section>
       <section class="device" data-device="ios">
         <div class="device-head"><svg class="device-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg><h2>iPhone</h2><span class="yours">this device</span></div>
-        <p class="device-sum">Read it in <span class="ios-browser">Safari</span>, then add it to your home screen if you like: it opens like an app, full screen, even offline.</p>
+        <p class="device-sum">Read it in <span class="ios-browser">Safari</span>, then <b>add it to your home screen</b>: it opens like an app, full screen, even offline. It also keeps your notes safe: in a normal browser tab, they may be erased if you don't visit for a week.</p>
         <a class="cta" href="app/">Open The Thinking Place</a>
         <details class="guide" id="iphone">
           <summary>Add it to your home screen</summary>
