@@ -205,9 +205,18 @@
     for (const n of old ? [old, old.other] : [])
       if (n && n.id != null && n.id !== id && n.text.trim() && keep.length < 2) keep.push({ text: n.text, id: n.id });
     if (!keep.length) { store.remove("note:" + key); return true; }
-    if (text.trim()) { countDay(key); store.set("noteChanged", todayKey()); }
+    if (text.trim()) { countDay(key); store.set("noteChanged", todayKey()); askToKeep(); }
     const [main, other] = keep;
     return store.set("note:" + key, JSON.stringify(other ? { ...main, other } : main));
+  }
+
+  // In a browser, ask once, with the first note, that the browser never clears this site's
+  // data on its own when space runs low. A safety net, not a guarantee; the Android app
+  // doesn't need it. Firefox may ask the reader, which makes sense right after writing.
+  function askToKeep() {
+    if (NATIVE || store.get("persistAsked") || !navigator.storage || !navigator.storage.persist) return;
+    store.set("persistAsked", "1");
+    navigator.storage.persisted().then((yes) => yes || navigator.storage.persist()).catch(() => {});
   }
 
   // The thought to show for a day: the one its note was written about, if any. Today,
@@ -1676,8 +1685,13 @@
       steps = install ? "" : "Open the browser menu (⋮), then <b>Install app</b> or <b>Add to Home screen</b>.";
     }
     $("home-note-title").textContent = install ? "Install The Thinking Place" : "Keep The Thinking Place on your home screen";
+    // On iPhone, Safari may erase a tab's data after about a week without a visit, and notes
+    // written in a tab may not carry over to the home-screen version.
+    const keep = store.keys("note:").length
+      ? " Notes written here may not carry over, so export them first (in Settings) and import them there."
+      : " Best done now, before you write.";
     $("home-note-text").innerHTML = (steps ? steps + " " : "") +
-      (IOS ? "It then opens like an app, full screen, and your notes are kept safely."
+      (IOS ? "It then opens like an app, full screen, and keeps your notes safe: in a normal browser tab, they may be erased if you don't visit for a week." + keep
         : `It ${steps ? "then " : ""}opens like an app, from its own icon, and works offline.`);
     $("home-note-install").hidden = $("home-note-dot").hidden = !install;
     $("home-note-close").textContent = install ? "not now" : "got it";
@@ -1948,6 +1962,8 @@
     setBackupEvery(store.get("backupEvery", "30"));
     setTextSize(store.get("textSize", "1"));
     fillBlocks();
+    // Where the notes live, and what would lose them, worded for where the app runs.
+    if (NATIVE) $("notes-help").textContent = "Your notes live only in this app. If you uninstall the app or lose your phone, they're gone. Export them now and then to keep a copy, or to move them: export here, then import the file there.";
     const [e, c] = await Promise.all([
       fetch("entries.json", { cache: "no-cache" }).then((r) => r.json()),
       fetch("calendar.json", { cache: "no-cache" }).then((r) => r.json()),
