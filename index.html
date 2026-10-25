@@ -39,7 +39,7 @@
 
       <p class="source"><span id="day-source"></span><span class="dot" aria-hidden="true"> · </span><button class="link quiet share-link" id="share" aria-label="Copy this thought to share it">share</button><span class="dot" aria-hidden="true"> · </span><button class="link quiet share-link" id="save" aria-pressed="false">save</button></p>
 
-      <button class="link quiet" id="context-toggle" aria-expanded="false" aria-controls="day-context">about this thought</button>
+      <button class="link quiet about-toggle" id="context-toggle" aria-expanded="false" aria-controls="day-context">about this thought</button>
       <div class="context" id="day-context" hidden>
         <p id="day-context-text"></p>
         <p class="translation" id="day-translation"></p>
@@ -119,7 +119,7 @@
         <div class="choice" role="radiogroup" aria-label="A gentle start">
           <button class="link" data-easy="on" role="radio">ease in gently</button>
           <span class="dot" aria-hidden="true">·</span>
-          <button class="link" data-easy="off" role="radio">join everyone</button>
+          <button class="link" data-easy="off" role="radio">I'm ready</button>
         </div>
       </div>
       <h2>Your name</h2>
@@ -444,20 +444,33 @@ Al-Ghazali taught at the Nizamiyya college here from 1091, until a spiritual cri
   <!-- First launch: a short tour, then a name (optional) -->
   <div class="closing welcome" id="welcome" hidden>
     <section class="tour-step">
+      <div class="tour-mark" id="tour-mark" aria-hidden="true"><p class="tour-ray-name" id="tour-ray-name"></p></div>
       <p class="tour-title">Welcome to The Thinking Place</p>
-      <p class="tour-text">Each day brings one short thought from philosophy. Twelve paths take turns, from Athens to Kyoto, each with a note to explain it, and a question to guide your thinking.</p>
+      <p class="tour-text">One short thought from philosophy each day, to read slowly and wonder quietly about the world around us.</p>
     </section>
     <section class="tour-step" hidden>
-      <p class="tour-title">Read, write, think, breathe</p>
-      <p class="tour-text">Read the thought slowly. Write about it, sit for a few minutes to think, or simply breathe for a moment. The goal of the app is to help you slow down and wonder. A concept is unclear? An author you're curious about? Tap an <button type="button" class="term" data-tour aria-haspopup="dialog">underlined word</button> to see what it means.</p>
+      <p class="tour-title small">Here is what a day looks like</p>
+      <p class="tour-text tap-hint">Tap an underlined word to see what it means, and open “about this thought” for the story behind it.</p>
+      <div class="sample">
+        <p class="school" id="tour-path"></p>
+        <blockquote class="passage"><p id="tour-text"></p></blockquote>
+        <p class="source" id="tour-source"></p>
+        <button type="button" class="link quiet about-toggle" id="tour-about" aria-expanded="false">about this thought</button>
+        <div class="context" id="tour-context" hidden><p id="tour-context-text"></p></div>
+      </div>
     </section>
     <section class="tour-step" hidden>
-      <p class="tour-title">Your notes stay with you</p>
-      <p class="tour-text">What you write never leaves this device. Now and then, export your notes from your Settings, so a lost phone never means lost thoughts. You can also import your thoughts on another device.</p>
+      <p class="tour-title small">Give yourself space to think</p>
+      <div class="sample" aria-hidden="true">
+        <p class="question-label">A question to sit with</p>
+        <p class="prompt" id="tour-prompt"></p>
+        <div class="actions"><span class="link">write about this</span><span class="dot">·</span><span class="link">sit and think</span></div>
+      </div>
+      <p class="tour-text">Each thought comes with a question to frame your thinking for the day. Write about it here or in a notebook, or use sit and think for a few quiet minutes.</p>
     </section>
     <section class="tour-step" hidden>
       <p class="tour-title">Just you and your brain</p>
-      <p class="tour-text">No ads, no cookies, no tracking. The Thinking Place is free and will always be. Ready to get started?</p>
+      <p class="tour-text">What you write stays on this phone. No ads, no cookies, no tracking, and free for good. Now and then, save a copy of your notes from Settings.</p>
     </section>
     <form class="tour-step" id="welcome-form" hidden>
       <p class="tour-title">What should we call you?</p>
@@ -468,10 +481,11 @@ Al-Ghazali taught at the Nizamiyya college here from 1091, until a spiritual cri
         <button class="link" type="submit" value="now">Start with today's thought</button>
         <button class="link" type="submit" value="easy">Ease in gently</button>
       </div>
-      <p class="welcome-hint start-hint">Easing in gives you five easier thoughts first, then the same thought as everyone.</p>
+      <p class="welcome-hint start-hint">New to philosophy? Easing in gives you five gentler thoughts for your first days. You can change your mind in Settings.</p>
     </form>
+    <button type="button" class="link quiet-inline tour-skip" id="tour-skip">skip</button>
     <div class="tour-foot" id="tour-foot">
-      <button type="button" class="link quiet-inline" id="tour-skip">skip</button>
+      <button type="button" class="link quiet-inline" id="tour-back">back</button>
       <span class="tour-dots" id="tour-dots" aria-hidden="true"></span>
       <button type="button" class="link" id="tour-next">next</button>
     </div>

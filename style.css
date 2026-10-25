@@ -83,7 +83,8 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 .fine a, #view-terms a { color: var(--muted); }
 #view-terms p { font-size: .95rem; }
 
-.date { color: var(--muted); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; text-align: center; margin: 0; }
+.date { color: var(--muted); font-size: .85rem; letter-spacing: .01em; text-align: center; margin: 0; }
+.date .moon { text-transform: capitalize; }
 
 .moon { white-space: nowrap; }
 .term-def { white-space: pre-line; }
@@ -116,7 +117,7 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 .translation a { color: inherit; }
 
 .question { margin: 0 auto; text-align: center; }
-.question-label { color: var(--muted); font: 400 .7rem/1.4 var(--sans); letter-spacing: .18em; text-transform: uppercase; margin: 0 0 .7rem; }
+.question-label { color: var(--muted); font: 400 .8rem/1.4 var(--sans); letter-spacing: .01em; margin: 0 0 .5rem; }
 .prompt {
   font: italic 400 1.1rem/1.5 var(--serif);
   text-align: center;
@@ -165,6 +166,8 @@ textarea {
   resize: vertical;
 }
 textarea:focus { outline: none; }
+/* The note box grows with the text (app.js growNote): no inner scrolling, no resize corner */
+#note-text { resize: none; overflow: hidden; min-height: 8.5em; }
 textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); }
 .note-foot { display: flex; justify-content: space-between; align-items: baseline; margin-top: .35rem; }
 .note-foot button.quiet { margin: 0; }
@@ -177,7 +180,7 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 .journal li { border-top: 1px solid var(--faint); }
 .journal li:last-child { border-bottom: 1px solid var(--faint); }
 .journal a { display: block; padding: 1rem 0; color: inherit; text-decoration: none; }
-.journal .j-date { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.journal .j-date { font-size: .8rem; letter-spacing: .01em; color: var(--muted); }
 .journal .j-text { font: 400 1.02rem/1.45 var(--serif); margin: .25rem 0; }
 .journal .j-note { font-size: .85rem; color: var(--muted); margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .journal .j-note::before { content: "✎ "; }
@@ -193,7 +196,12 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
   background: linear-gradient(transparent, var(--bg)); pointer-events: none; transition: height .8s ease; }
 /* With the chevron showing, the fade grows so half-visible text sinks behind it */
 .nav.has-hint::before { height: 4.5rem; background: linear-gradient(transparent, var(--bg) 70%); }
-.nav a { color: var(--muted); font-size: .8rem; letter-spacing: .08em; }
+.nav a { color: var(--muted); font-size: .8rem; letter-spacing: .08em; white-space: nowrap; }
+/* Small screens with larger text: "past thoughts" never breaks onto two lines */
+@media (max-width: 380px) {
+  .nav { gap: .55rem; padding-left: .75rem; padding-right: .75rem; }
+  .nav a { letter-spacing: .03em; }
+}
 .nav a[aria-current="page"] { color: var(--fg); }
 
 /* Glossary terms: a faint dotted underline, tap for a short explanation */
@@ -417,6 +425,15 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 
 /* The about-this-thought button sits above its note, so closing it stays one tap away */
 #context-toggle { margin-top: .25rem; }
+/* "about this thought": a small arrow after the words, upside down while the note is open.
+   Drawn with ::before (row-reverse puts it after) because the app rewrites the text. */
+button.about-toggle { display: flex; width: fit-content; flex-direction: row-reverse; align-items: center; gap: .35em; margin-inline: auto; }
+.about-toggle::before {
+  content: ""; width: .7em; height: .7em; background: currentColor; transition: transform .3s ease;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.about-toggle[aria-expanded="true"]::before { transform: rotate(180deg); }
 
 /* The question waits below the fold until it is scrolled into view */
 #view-day #pause-2, #view-day .question, #view-day #memory, #view-day .actions, #view-day #note-preview { transition: opacity 1.8s ease, transform 1.8s ease; }
@@ -470,12 +487,33 @@ button.quiet-inline { color: var(--muted); }
 
 /* First launch: the short tour */
 .welcome .tour-step { max-width: 22rem; }
-.welcome .tour-title { font: 400 1.45rem/1.35 var(--serif) !important; margin: 0 0 1rem !important; }
+.welcome .tour-title { font: 400 1.45rem/1.35 var(--serif) !important; margin: 0 0 1rem !important; text-wrap: balance; }
 .welcome .tour-text { font: 300 1rem/1.6 var(--sans) !important; color: var(--muted); margin: 0 !important; }
 .welcome .tour-step:not([hidden]) { animation: fade .8s ease; }
 .tour-foot { position: absolute; left: 0; right: 0; bottom: max(2rem, calc(env(safe-area-inset-bottom) + 1rem));
   display: flex; justify-content: space-between; align-items: center; width: min(22rem, calc(100% - 3rem)); margin: 0 auto; }
 .tour-dots { color: var(--muted); font-size: .55rem; letter-spacing: .35em; }
+.welcome .tour-step { width: 100%; }
+.welcome .tour-step .tour-title.small { font-size: 1.2rem !important; margin-bottom: 1.2rem !important; }
+.welcome .tap-hint { font-size: .9rem !important; margin: 0 0 1rem !important; }
+/* The welcome mark: one ray at a time turns teal, with its path's name underneath */
+.tour-mark svg { width: 10rem; height: 10rem; margin: -1rem auto .4rem; display: block; }
+/* A day in miniature, between two faint lines like the note box. .closing p sets an italic
+   serif for the goodbye lines, so every text here gets its full font again. */
+.welcome .sample { margin: 0 auto 1.4rem; padding: 1.3rem 0 1.2rem; border-top: 1px solid var(--faint); border-bottom: 1px solid var(--faint); }
+.welcome .sample .school, .welcome .tour-ray-name { font: 600 .72rem/1.4 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin: 0 0 .9rem; }
+.welcome .tour-ray-name { min-height: 1.4em; margin: 0 0 2rem; }
+.welcome .sample .passage p { font: 400 1.22rem/1.45 var(--serif); margin: 0; }
+.welcome .sample .source { font: 300 .82rem/1.5 var(--sans); color: var(--muted); margin: .9rem 0 0; }
+.welcome .sample .prompt { font: italic 400 1rem/1.5 var(--serif); margin: 1rem auto 0; }
+.welcome .sample .question-label { font: 400 .8rem/1.4 var(--sans); letter-spacing: .01em; color: var(--muted); margin: 0 0 .5rem; }
+.welcome .sample .actions { margin-top: 1.2rem; }
+.welcome .sample .actions .link { font-size: .9rem; color: var(--fg); }
+.welcome .sample button.quiet { margin-top: .6rem; }
+.welcome .sample .context p { font: 300 .86rem/1.55 var(--sans); color: var(--muted); margin: .6rem auto 0; max-width: 20rem; }
+/* Skip sits quietly in the top corner; back, the dots and next share the bottom */
+.welcome button.tour-skip { position: absolute; top: max(1.25rem, calc(env(safe-area-inset-top) + .75rem)); right: 1.5rem; }
+.tour-foot .hide { visibility: hidden; }
 #welcome-form .name-input { text-align: center; margin: .5rem 0 .75rem; }
 
 /* Sit and think: a soft start, and a soft finish */

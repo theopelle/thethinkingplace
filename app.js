@@ -147,10 +147,12 @@
     $("easy-setting").hidden = !a && !offer;
     checkChoice("[data-easy]", "easy", a ? "on" : "off");
     if (a) {
-      const until = utcToKey(keyToUTC(a.seg.start) + a.seg.ids.length * DAY);
-      $("easy-status").textContent = `Day ${a.i + 1} of ${a.seg.ids.length}: easier thoughts first. From ${formatDate(until)}, you'll get the same thought as everyone.`;
+      const last = addDays(a.seg.start, a.seg.ids.length - 1);
+      $("easy-status").textContent = `Day ${a.i + 1} of ${a.seg.ids.length}: easier thoughts first. Easing in ends on ${formatDate(last)}.`;
     } else if (offer) {
-      $("easy-status").textContent = "You're reading the same thought as everyone. During your first days, you can switch to easier thoughts first.";
+      // No number of days on purpose: switching on, off and on again leaves fewer than five.
+      const until = addDays(store.get("installed", today), EASY_DAYS - 1);
+      $("easy-status").textContent = `Want a softer start? Until ${formatDate(until)}, you can switch to easier thoughts first.`;
     }
   }
 
@@ -349,6 +351,7 @@
     store.set("textSize", String(v));
     document.documentElement.style.fontSize = Number(v) === 1 ? "" : `${Number(v) * 100}%`;
     checkChoice("[data-text-size]", "textSize", v);
+    growNote();
   }
 
   // ---------- day view ----------
@@ -427,7 +430,16 @@
     $("note-preview-text").textContent = text.split("\n")[0];
     $("open-note").setAttribute("aria-pressed", String(open));
     document.querySelector("#view-day .actions").classList.toggle("writing", open);
-    if (open) { showQuestion(); $("note-text").focus(); }
+    if (open) { showQuestion(); growNote(); $("note-text").focus(); }
+  }
+
+  // The note box is as tall as its text (Safari can't do this in CSS yet): measured from
+  // "auto" each time, on typing, opening, and when the screen or text size changes.
+  function growNote() {
+    const ta = $("note-text");
+    if (ta.offsetParent === null) return;
+    ta.style.height = "auto";
+    ta.style.height = ta.scrollHeight + 2 + "px";
   }
 
   function flushNote() {
@@ -930,8 +942,6 @@
     const said = info.pinned ? info.pinned.teaser
       : info.revisit ? calendar.revisitTeaser || "Tomorrow: a thought you may have met before."
       : calendar.teasers[info.id] || (kind ? `Tomorrow: ${kind}.` : "");
-    // The last gentle evening says that tomorrow everyone reads the same thought.
-    if (easyIndex(today) >= 0) return said ? said.replace(/^Tomorrow: /, "Tomorrow, the same thought as everyone: ") : "Tomorrow: the same thought as everyone.";
     return said;
   }
 
@@ -1311,9 +1321,6 @@
   }
 
   function openTerm(btn) {
-    // The tour's underlined word: a first card to try, about the cards themselves.
-    if (btn.dataset.tour != null) return showCard(btn, "Like this",
-      "In each day's thought, key ideas, authors and books are underlined. Tap one for a short explanation; tap anywhere else to close it.");
     const g = glossary[+btn.dataset.term];
     if (!g) return;
     showCard(btn, g.term, g.def, g.wiki, g.school && schoolDetails(g));
@@ -1395,20 +1402,73 @@
   }
 
   // ---------- first launch: a short tour, then a name ----------
+  // Four cards (welcome, a day in miniature, space to think, privacy), then the name.
+  // Back, the dots and next sit at the bottom, skip in the top corner; Android's back
+  // gesture goes back a card.
   let tourStep = 0;
   function showTourStep(i) {
     const steps = [...document.querySelectorAll("#welcome .tour-step")];
-    tourStep = Math.min(i, steps.length - 1);
+    tourStep = Math.max(0, Math.min(i, steps.length - 1));
     steps.forEach((s, n) => (s.hidden = n !== tourStep));
     const last = tourStep === steps.length - 1;
-    $("tour-foot").hidden = last;
+    $("tour-back").classList.toggle("hide", tourStep === 0);  // hidden, but the dots stay put
+    $("tour-next").classList.toggle("hide", last);
+    $("tour-dots").classList.toggle("hide", last);
+    $("tour-skip").hidden = last;
     $("tour-dots").textContent = steps.slice(0, -1).map((_, n) => (n === tourStep ? "●" : "○")).join(" ");
+    closeTerm();
     if (last) $("welcome-name").focus({ preventScroll: true });
+  }
+
+  // The example day: always thought #97 (Plato, Theaetetus 155d), from entries.json,
+  // underlined like any day.
+  const TOUR_SAMPLE = 97;
+  function fillTourSample() {
+    const e = entriesById[TOUR_SAMPLE];
+    if (!e) return;
+    $("tour-path").textContent = e.path;
+    $("tour-text").textContent = e.text;
+    $("tour-source").textContent = e.source;
+    $("tour-context-text").textContent = e.context;
+    $("tour-prompt").textContent = e.prompt;
+    markTerms(e.path, ["tour-text", "tour-path", "tour-source", "tour-context-text"]);
+  }
+
+  // The welcome mark: the launch logo, its twelve rays turning teal one at a time, clockwise
+  // from the top, with the path's name underneath (About page order). One path every 2.6 s;
+  // the ray takes 0.9 s to change, the name fades 0.6 s in and out. Still with reduced motion.
+  const TOUR_PATHS = ["Stoicism", "Epicureanism", "Classical Greek Philosophy", "Enlightenment Ethics",
+    "Existential Thought", "Humanists and Essayists", "Buddhist Philosophy", "Indian Philosophy",
+    "Taoism", "Confucianism", "Japanese Aesthetics", "Persian and Sufi Poetry"];
+  function startTourMark() {
+    const svg = $("launch").querySelector("svg").cloneNode(true);
+    svg.removeAttribute("class");
+    svg.querySelector("mask").id = "tour-cut";
+    svg.querySelector("[mask]").setAttribute("mask", "url(#tour-cut)");
+    $("tour-mark").prepend(svg);
+    const rays = [...svg.querySelectorAll("path")].slice(0, 12), name = $("tour-ray-name");
+    const P = 2.6, RAY = 0.9, NAME = 0.6;
+    const ease = (x) => { x = Math.min(1, Math.max(0, x)); return x * x * (3 - 2 * x); };
+    function renderAt(t) {
+      const i = Math.floor(t / P) % 12, u = t % P, prev = (i + 11) % 12, k = ease(u / RAY);
+      rays.forEach((r, n) => {
+        const amt = n === i ? k : n === prev && t >= P ? 1 - k : 0;
+        r.style.fill = `color-mix(in srgb, var(--logo-accent) ${Math.round(amt * 100)}%, var(--fg))`;
+      });
+      name.textContent = TOUR_PATHS[i];
+      name.style.opacity = Math.min(ease(u / NAME), ease((P - u) / NAME));
+    }
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) { renderAt(RAY + .1); name.style.opacity = 1; return; }
+    const t0 = performance.now();
+    const tick = (now) => { if ($("welcome").hidden) return; renderAt((now - t0) / 1000); requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
   }
 
   function maybeWelcome() {
     if (store.get("welcomed")) return false;
     setOverlay($("welcome"), true);
+    fillTourSample();
+    startTourMark();
     showTourStep(0);
     $("welcome-form").addEventListener("submit", (ev) => {
       ev.preventDefault();
@@ -1714,8 +1774,8 @@
   // ---------- Android back button ----------
   // Closes whatever is open first, then goes back to today, then leaves the app.
   function onBack() {
-    if (!$("welcome").hidden) return;
     if (!$("term-card").hidden) return closeTerm();
+    if (!$("welcome").hidden) { if (tourStep > 0) showTourStep(tourStep - 1); return; }
     if (!$("picker").hidden) return closePicker();
     if (silence) return finishSilence();
     if (!$("closing").hidden) return hideClosing();
@@ -1743,6 +1803,8 @@
     $("open-note").addEventListener("click", () => setWriting($("note").hidden));
     $("note-edit").addEventListener("click", () => setWriting(true));
     $("note-text").addEventListener("input", onNoteInput);
+    $("note-text").addEventListener("input", growNote);
+    window.addEventListener("resize", growNote);
     $("share").addEventListener("click", share);
     $("back-to-today").addEventListener("click", () => (location.hash = "#/"));
     $("terms-back").addEventListener("click", () => (location.hash = "#/about"));
@@ -1781,7 +1843,14 @@
     $("home-note-close").addEventListener("click", closeHomeNote);
     $("home-note-install").addEventListener("click", installApp);
     $("tour-next").addEventListener("click", () => showTourStep(tourStep + 1));
+    $("tour-back").addEventListener("click", () => showTourStep(tourStep - 1));
     $("tour-skip").addEventListener("click", () => showTourStep(99));
+    $("tour-about").addEventListener("click", () => {
+      const open = $("tour-context").hidden;
+      $("tour-context").hidden = !open;
+      $("tour-about").setAttribute("aria-expanded", String(open));
+      $("tour-about").textContent = open ? "hide note" : "about this thought";
+    });
 
     document.addEventListener("click", (ev) => {
       const term = ev.target.closest(".term, .map-dot, .tl-path");
