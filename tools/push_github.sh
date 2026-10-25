@@ -10,7 +10,7 @@
 set -e
 cd "$(git -C "$(dirname "$0")" rev-parse --show-toplevel)"
 
-LEAVE_OUT="exports brand/drafts brand/names.html brand/names-round2.html brand/preview.html brand/quote-marks.html CLAUDE.md NEXT_STEPS.md DECISIONS.md"
+LEAVE_OUT="exports brand/drafts brand/names.html brand/names-round2.html brand/preview.html brand/quote-marks.html CLAUDE.md NEXT_STEPS.md DECISIONS.md IDEAS.md"
 NAME="theopelle"
 EMAIL="theopelle@users.noreply.github.com"
 REMOTE="https://github.com/theopelle/thethinkingplace.git"
