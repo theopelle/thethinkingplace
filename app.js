@@ -1320,7 +1320,14 @@
     return false;
   }
 
+  // The two actions in the tour's example open a short card about the feature.
+  const TOUR_FEATURES = {
+    write: ["Write about this", "Opens a notepad right under the question. Your notes stay on this phone, and you'll find them again in past thoughts."],
+    sit: ["Sit and think", "A few quiet minutes with the question on screen, to think or simply to breathe. In Settings, choose how long it lasts, and add a sound if you like: rain, waves or wind."],
+  };
+
   function openTerm(btn) {
+    if (btn.dataset.feature) return showCard(btn, ...TOUR_FEATURES[btn.dataset.feature]);
     const g = glossary[+btn.dataset.term];
     if (!g) return;
     showCard(btn, g.term, g.def, g.wiki, g.school && schoolDetails(g));

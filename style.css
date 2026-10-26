@@ -487,32 +487,34 @@ button.quiet-inline { color: var(--muted); }
 
 /* First launch: the short tour */
 .welcome .tour-step { max-width: 22rem; }
-.welcome .tour-title { font: 400 1.45rem/1.35 var(--serif) !important; margin: 0 0 1rem !important; text-wrap: balance; }
-.welcome .tour-text { font: 300 1rem/1.6 var(--sans) !important; color: var(--muted); margin: 0 !important; }
+/* Every card starts at the same height, so headlines line up and anything that opens grows
+   downwards; a long card scrolls inside, above the fixed bottom row. One size per kind of
+   text on every card: headline, description, then the example. */
+.welcome.closing { justify-content: flex-start; padding: max(15vh, 4.5rem) 1.5rem 6.5rem; overflow-y: auto; }
+.welcome .tour-title { font: 400 1.3rem/1.35 var(--serif) !important; margin: 0 0 .8rem !important; text-wrap: balance; }
+.welcome .tour-text { font: 300 .95rem/1.6 var(--sans) !important; color: var(--muted); margin: 0 0 1.6rem !important; text-wrap: pretty; }
 .welcome .tour-step:not([hidden]) { animation: fade .8s ease; }
-.tour-foot { position: absolute; left: 0; right: 0; bottom: max(2rem, calc(env(safe-area-inset-bottom) + 1rem));
+.tour-foot { position: fixed; left: 0; right: 0; bottom: max(2rem, calc(env(safe-area-inset-bottom) + 1rem));
   display: flex; justify-content: space-between; align-items: center; width: min(22rem, calc(100% - 3rem)); margin: 0 auto; }
 .tour-dots { color: var(--muted); font-size: .55rem; letter-spacing: .35em; }
 .welcome .tour-step { width: 100%; }
-.welcome .tour-step .tour-title.small { font-size: 1.2rem !important; margin-bottom: 1.2rem !important; }
-.welcome .tap-hint { font-size: .9rem !important; margin: 0 0 1rem !important; }
 /* The welcome mark: one ray at a time turns teal, with its path's name underneath */
-.tour-mark svg { width: 10rem; height: 10rem; margin: -1rem auto .4rem; display: block; }
+.tour-mark svg { width: 9rem; height: 9rem; margin: .2rem auto; display: block; }
 /* A day in miniature, between two faint lines like the note box. .closing p sets an italic
    serif for the goodbye lines, so every text here gets its full font again. */
 .welcome .sample { margin: 0 auto 1.4rem; padding: 1.3rem 0 1.2rem; border-top: 1px solid var(--faint); border-bottom: 1px solid var(--faint); }
 .welcome .sample .school, .welcome .tour-ray-name { font: 600 .72rem/1.4 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin: 0 0 .9rem; }
-.welcome .tour-ray-name { min-height: 1.4em; margin: 0 0 2rem; }
+.welcome .tour-ray-name { min-height: 1.4em; margin: 0; }
 .welcome .sample .passage p { font: 400 1.22rem/1.45 var(--serif); margin: 0; }
 .welcome .sample .source { font: 300 .82rem/1.5 var(--sans); color: var(--muted); margin: .9rem 0 0; }
 .welcome .sample .prompt { font: italic 400 1rem/1.5 var(--serif); margin: 1rem auto 0; }
 .welcome .sample .question-label { font: 400 .8rem/1.4 var(--sans); letter-spacing: .01em; color: var(--muted); margin: 0 0 .5rem; }
 .welcome .sample .actions { margin-top: 1.2rem; }
-.welcome .sample .actions .link { font-size: .9rem; color: var(--fg); }
+.welcome .sample .actions .term { font-size: .9rem; color: var(--fg); }
 .welcome .sample button.quiet { margin-top: .6rem; }
 .welcome .sample .context p { font: 300 .86rem/1.55 var(--sans); color: var(--muted); margin: .6rem auto 0; max-width: 20rem; }
 /* Skip sits quietly in the top corner; back, the dots and next share the bottom */
-.welcome button.tour-skip { position: absolute; top: max(1.25rem, calc(env(safe-area-inset-top) + .75rem)); right: 1.5rem; }
+.welcome button.tour-skip { position: fixed; top: max(1.25rem, calc(env(safe-area-inset-top) + .75rem)); right: 1.5rem; }
 .tour-foot .hide { visibility: hidden; }
 #welcome-form .name-input { text-align: center; margin: .5rem 0 .75rem; }
 
