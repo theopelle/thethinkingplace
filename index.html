@@ -13,6 +13,10 @@
   <meta name="apple-mobile-web-app-title" content="Thinking">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <!-- The two Literata files every day uses, fetched at once so the italic question never
+       first shows in the phone's own italic -->
+  <link rel="preload" href="fonts/literata-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/literata-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -153,6 +157,15 @@
         <span class="dot" aria-hidden="true">·</span>
         <button class="link" data-sit-mode="breathe" role="radio">breathe</button>
       </div>
+      <div class="choice setting-row" role="radiogroup" aria-label="Breathing rhythm">
+        <span class="setting-label">breathing rhythm</span>
+        <button class="link" data-breath="5-5" role="radio">5-5</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-breath="box" role="radio">box</button>
+        <span class="dot" aria-hidden="true">·</span>
+        <button class="link" data-breath="4-7-8" role="radio">4-7-8</button>
+      </div>
+      <p class="muted setting-help" id="breath-help"></p>
       <div class="choice setting-row" role="radiogroup" aria-label="Duration">
         <span class="setting-label">duration</span>
         <button class="link" data-minutes="1" role="radio">1 min</button>
@@ -173,15 +186,6 @@
         <span class="dot" aria-hidden="true">·</span>
         <button class="link" data-sound="wind" role="radio">wind</button>
       </div>
-      <div class="choice setting-row" role="radiogroup" aria-label="Breathing rhythm">
-        <span class="setting-label">breathing rhythm</span>
-        <button class="link" data-breath="5-5" role="radio">5-5</button>
-        <span class="dot" aria-hidden="true">·</span>
-        <button class="link" data-breath="box" role="radio">box</button>
-        <span class="dot" aria-hidden="true">·</span>
-        <button class="link" data-breath="4-7-8" role="radio">4-7-8</button>
-      </div>
-      <p class="muted setting-help" id="breath-help"></p>
 
       <div id="reminder" hidden>
       <h2>Reminder</h2>

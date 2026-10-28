@@ -135,9 +135,12 @@
     return picks.map((e) => e.id);
   }
 
+  // Easing in lives inside the first five days: its last day is the window's last day.
+  const easyLastDay = () => addDays(store.get("installed", todayKey()), EASY_DAYS - 1);
   function startEasy() {
     const today = todayKey(), left = unusedEasy();
-    const ids = left && left.length ? left : pickEasy(today);
+    const daysLeft = Math.max(1, daysBetween(today, easyLastDay()) + 1);
+    const ids = (left && left.length ? left : pickEasy(today)).slice(0, daysLeft);
     store.set("easy", JSON.stringify([...easySegments(), { start: today, ids }]));
   }
 
@@ -146,14 +149,10 @@
     const offer = !a && inFirstDays() && (left === null || left.length > 0);
     $("easy-setting").hidden = !a && !offer;
     checkChoice("[data-easy]", "easy", a ? "on" : "off");
-    if (a) {
-      const last = addDays(a.seg.start, a.seg.ids.length - 1);
-      $("easy-status").textContent = `Day ${a.i + 1} of ${a.seg.ids.length}: easier thoughts first. Easing in ends on ${formatDate(last)}.`;
-    } else if (offer) {
-      // No number of days on purpose: switching on, off and on again leaves fewer than five.
-      const until = addDays(store.get("installed", today), EASY_DAYS - 1);
-      $("easy-status").textContent = `Want a softer start? Until ${formatDate(until)}, you can switch to easier thoughts first.`;
-    }
+    // One date in both texts: the last day of the first five. No number of days on purpose.
+    const until = formatDate(easyLastDay());
+    if (a) $("easy-status").textContent = `Easier thoughts first, until ${until}.`;
+    else if (offer) $("easy-status").textContent = `Want a softer start? Until ${until}, you can switch to easier thoughts first.`;
   }
 
   // Today's thought changes with the switch: the text fades out and back in, so the
@@ -433,13 +432,18 @@
     if (open) { showQuestion(); growNote(); $("note-text").focus(); }
   }
 
-  // The note box is as tall as its text (Safari can't do this in CSS yet): measured from
-  // "auto" each time, on typing, opening, and when the screen or text size changes.
+  // The note box is as tall as its text (Safari can't do this in CSS yet), up to the space
+  // visible above the keyboard; past that it scrolls inside, where browsers keep the line
+  // being typed in view. Measured from "auto" each time, on typing, opening, and when the
+  // screen, keyboard or text size changes.
   function growNote() {
     const ta = $("note-text");
     if (ta.offsetParent === null) return;
+    const visible = (window.visualViewport ? visualViewport.height : window.innerHeight) - 16;
     ta.style.height = "auto";
-    ta.style.height = ta.scrollHeight + 2 + "px";
+    const full = ta.scrollHeight + 2, max = Math.max(ta.offsetHeight, visible);
+    ta.style.height = Math.min(full, max) + "px";
+    ta.style.overflowY = full > max ? "auto" : "hidden";
   }
 
   function flushNote() {
@@ -999,18 +1003,16 @@
       if (perm.display !== "granted" && ask) {
         store.set("reminderAsked", "1");
         perm = await LN.requestPermissions();
-        // Declined when asked: the reminder is off, and Settings says so.
-        if (perm.display !== "granted") {
-          store.set("reminder", JSON.stringify(Object.assign(reminderPrefs(), { freq: "off" })));
-          return renderReminder("");
-        }
       }
-      if (perm.display !== "granted") return renderReminder("Notifications are turned off for this app in your phone's settings.");
+      // Declined (now or before): Android won't ask again, so the reader's choice stays as it
+      // is and Settings offers a way to the phone's own settings. Checked again on return.
+      if (perm.display !== "granted") return renderReminder(BLOCKED);
       await LN.schedule({ notifications: reminderSchedule(r) });
       renderReminder("");
     } catch { renderReminder("The reminder couldn't be set on this device."); }
   }
 
+  const BLOCKED = "blocked";
   function renderReminder(status) {
     const r = reminderPrefs();
     $("reminder").hidden = !NATIVE;
@@ -1019,7 +1021,17 @@
     checkChoice("[data-reminder-day]", "reminderDay", r.weekday);
     $("reminder-time").hidden = r.freq === "off";
     $("reminder-days").hidden = r.freq !== "weekly";
-    if (status !== undefined) $("reminder-status").textContent = status;
+    if (status === BLOCKED) {
+      const link = document.createElement("button");
+      link.type = "button";
+      link.className = "link inline-link";
+      link.textContent = "open phone settings";
+      link.addEventListener("click", () => {
+        const PS = plugin("PhoneSettings") || (NATIVE && window.Capacitor.registerPlugin && window.Capacitor.registerPlugin("PhoneSettings"));
+        if (PS) PS.openNotifications().catch(() => {});
+      });
+      $("reminder-status").replaceChildren("Notifications are blocked for The Thinking Place on this phone. ", link);
+    } else if (status !== undefined) $("reminder-status").textContent = status;
   }
 
   function setReminder(change) {
@@ -1151,7 +1163,7 @@
     if (!BREATHS[kind]) kind = "5-5";
     store.set("breath", kind);
     checkChoice("[data-breath]", "breath", kind);
-    $("breath-help").textContent = BREATHS[kind].help;
+    $("breath-help").textContent = "Used whenever you breathe. " + BREATHS[kind].help;
   }
   function sitMode() { return store.get("sitMode", "think"); }
   function setSitMode(mode) {
@@ -1412,11 +1424,24 @@
   // Four cards (welcome, a day in miniature, space to think, privacy), then the name.
   // Back, the dots and next sit at the bottom, skip in the top corner; Android's back
   // gesture goes back a card.
-  let tourStep = 0;
+  // Cards change in two beats: the old one fades out (0.2 s), then the new one fades in
+  // (0.3 s), drifting 8px from the side it comes from.
+  let tourStep = 0, tourSwap = null;
   function showTourStep(i) {
     const steps = [...document.querySelectorAll("#welcome .tour-step")];
+    const from = tourStep;
     tourStep = Math.max(0, Math.min(i, steps.length - 1));
-    steps.forEach((s, n) => (s.hidden = n !== tourStep));
+    const old = steps.find((s) => !s.hidden), next = steps[tourStep];
+    clearTimeout(tourSwap);
+    steps.forEach((s) => s.classList.remove("tour-out", "tour-in-next", "tour-in-back"));
+    const enter = () => {
+      steps.forEach((s) => { s.hidden = s !== next; s.style.transform = ""; });
+      next.classList.add(tourStep >= from ? "tour-in-next" : "tour-in-back");
+      if (tourStep === 0) restartTourMark();
+      if (tourStep === steps.length - 1) $("welcome-name").focus({ preventScroll: true });
+    };
+    if (old && old !== next) { old.classList.add("tour-out"); tourSwap = setTimeout(enter, 200); }
+    else enter();
     const last = tourStep === steps.length - 1;
     $("tour-back").classList.toggle("hide", tourStep === 0);  // hidden, but the dots stay put
     $("tour-next").classList.toggle("hide", last);
@@ -1424,7 +1449,6 @@
     $("tour-skip").hidden = last;
     $("tour-dots").textContent = steps.slice(0, -1).map((_, n) => (n === tourStep ? "●" : "○")).join(" ");
     closeTerm();
-    if (last) $("welcome-name").focus({ preventScroll: true });
   }
 
   // The example day: always thought #97 (Plato, Theaetetus 155d), from entries.json,
@@ -1447,6 +1471,8 @@
   const TOUR_PATHS = ["Stoicism", "Epicureanism", "Classical Greek Philosophy", "Enlightenment Ethics",
     "Existential Thought", "Humanists and Essayists", "Buddhist Philosophy", "Indian Philosophy",
     "Taoism", "Confucianism", "Japanese Aesthetics", "Persian and Sufi Poetry"];
+  let tourClock = null;  // when the mark's clock started; null until the overlay has faded in
+  const restartTourMark = () => { if (tourClock !== null) tourClock = performance.now(); };
   function startTourMark() {
     const svg = $("launch").querySelector("svg").cloneNode(true);
     svg.removeAttribute("class");
@@ -1466,9 +1492,56 @@
       name.style.opacity = Math.min(ease(u / NAME), ease((P - u) / NAME));
     }
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) { renderAt(RAY + .1); name.style.opacity = 1; return; }
-    const t0 = performance.now();
-    const tick = (now) => { if ($("welcome").hidden) return; renderAt((now - t0) / 1000); requestAnimationFrame(tick); };
+    // The clock starts once the overlay has faded in, so nobody misses Stoicism, and starts
+    // again from it each time card 1 comes back.
+    renderAt(0);
+    $("welcome").addEventListener("animationend", (ev) => {
+      if (ev.target === $("welcome") && tourClock === null) tourClock = performance.now();
+    });
+    const tick = (now) => {
+      if ($("welcome").hidden) return;
+      if (tourClock !== null) renderAt((now - tourClock) / 1000);
+      requestAnimationFrame(tick);
+    };
     requestAnimationFrame(tick);
+  }
+
+  // Swipe left for the next card, right for the one before. The card follows the finger with
+  // some resistance and snaps back if the swipe doesn't count; vertical drags still scroll.
+  function bindTourSwipe() {
+    const el = $("welcome");
+    let start = null, swiped = false;
+    const card = () => el.querySelector(".tour-step:not([hidden])");
+    const last = () => el.querySelectorAll(".tour-step").length - 1;
+    el.addEventListener("pointerdown", (ev) => {
+      if (ev.target.closest("input, .term-card") || !ev.isPrimary) return;
+      start = { x: ev.clientX, y: ev.clientY, t: performance.now() };
+      swiped = false;
+    });
+    el.addEventListener("pointermove", (ev) => {
+      if (!start) return;
+      const dx = ev.clientX - start.x, dy = ev.clientY - start.y;
+      if (Math.abs(dx) < 10 || Math.abs(dx) < Math.abs(dy)) return;
+      const blocked = (dx > 0 && tourStep === 0) || (dx < 0 && tourStep === last());
+      const c = card();
+      if (c) { c.style.transition = "none"; c.style.transform = blocked ? "" : `translateX(${Math.max(-40, Math.min(40, dx * 0.3))}px)`; }
+    });
+    const end = (ev) => {
+      if (!start) return;
+      const dx = ev.clientX - start.x, dy = ev.clientY - start.y, dt = performance.now() - start.t;
+      start = null;
+      const c = card();
+      const counts = ev.type === "pointerup" &&
+        ((Math.abs(dx) > 50 && Math.abs(dx) > 1.5 * Math.abs(dy)) || (Math.abs(dx) > 20 && Math.abs(dx) / dt > 0.3 && Math.abs(dx) > Math.abs(dy)));
+      if (counts && dx < 0 && tourStep < last()) showTourStep(tourStep + 1);
+      else if (counts && dx > 0 && tourStep > 0) showTourStep(tourStep - 1);
+      else if (c) { c.style.transition = "transform .2s ease"; c.style.transform = ""; }
+      if (Math.abs(dx) > 10) { swiped = true; setTimeout(() => (swiped = false), 50); }  // only the tap that ends it
+    };
+    el.addEventListener("pointerup", end);
+    el.addEventListener("pointercancel", end);
+    // A swipe that starts on a link or an underlined word doesn't also tap it.
+    el.addEventListener("click", (ev) => { if (swiped) { ev.stopPropagation(); ev.preventDefault(); swiped = false; } }, true);
   }
 
   function maybeWelcome() {
@@ -1476,6 +1549,7 @@
     setOverlay($("welcome"), true);
     fillTourSample();
     startTourMark();
+    bindTourSwipe();
     showTourStep(0);
     $("welcome-form").addEventListener("submit", (ev) => {
       ev.preventDefault();
@@ -1812,6 +1886,10 @@
     $("note-text").addEventListener("input", onNoteInput);
     $("note-text").addEventListener("input", growNote);
     window.addEventListener("resize", growNote);
+    if (window.visualViewport) visualViewport.addEventListener("resize", growNote);
+    // While writing, the bottom bar steps aside; "I'm done for today" or back still leave.
+    $("note-text").addEventListener("focus", () => document.body.classList.add("typing"));
+    $("note-text").addEventListener("blur", () => document.body.classList.remove("typing"));
     $("share").addEventListener("click", share);
     $("back-to-today").addEventListener("click", () => (location.hash = "#/"));
     $("terms-back").addEventListener("click", () => (location.hash = "#/about"));
@@ -1924,6 +2002,8 @@
 
     const App = plugin("App");
     if (App) App.addListener("backButton", onBack);
+    // Back from the phone's settings: if notifications are now allowed, the reminder is set.
+    if (App) App.addListener("resume", () => applyReminder(false));
 
     window.addEventListener("hashchange", route);
     // Roll over to the new day if the app is left open past midnight.
@@ -2001,9 +2081,18 @@
     });
   }
 
+  // The slow first reveal waits for Literata (roman and italic), so the question never
+  // switches typeface as it appears; at most 1.5 s, then it goes ahead anyway.
+  const fontsReady = Promise.race([
+    document.fonts ? Promise.all([document.fonts.load("1em Literata"), document.fonts.load("italic 1em Literata")]) : null,
+    new Promise((r) => setTimeout(r, 1500)),
+  ]).catch(() => {});
+
   let revealTimers = [];
-  function startReveal(delay) {
+  async function startReveal(delay) {
     const view = $("view-day");
+    if (!view.classList.contains("reveal")) return;
+    await fontsReady;
     if (!view.classList.contains("reveal")) return;
     const skip = () => endReveal();
     revealTimers.push(setTimeout(() => {

@@ -388,6 +388,9 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 }
 
 .setting-help { font-size: .8rem; line-height: 1.5; margin-top: .75rem; }
+.setting-help button.inline-link { font-size: inherit; padding: 0; color: var(--fg); border-bottom-color: var(--faint); }
+/* While the note box has focus, the bottom bar steps aside (app.js) */
+body.typing .nav { display: none; }
 .setting-text { margin-top: 0; }
 #easy-status { transition: opacity .35s ease; }
 #easy-status.changing { opacity: 0; }
@@ -494,7 +497,14 @@ button.quiet-inline { color: var(--muted); }
 .welcome.closing { justify-content: flex-start; padding: max(15vh, 4.5rem) 1.5rem 6.5rem; overflow-y: auto; }
 .welcome .tour-title { font: 400 1.3rem/1.35 var(--serif) !important; margin: 0 0 .8rem !important; text-wrap: balance; }
 .welcome .tour-text { font: 300 .95rem/1.6 var(--sans) !important; color: var(--muted); margin: 0 0 1.6rem !important; text-wrap: pretty; }
-.welcome .tour-step:not([hidden]) { animation: fade .8s ease; }
+/* Card changes: the old card fades out (0.2 s), the new one fades in (0.3 s), drifting 8px
+   from the side it comes from; only the fade with reduced motion. Swipes pan sideways. */
+.welcome { touch-action: pan-y; --drift: 8px; }
+.welcome .tour-step.tour-out { animation: tour-out .2s ease-out forwards; }
+.welcome .tour-step.tour-in-next { animation: tour-in .3s ease-out; }
+.welcome .tour-step.tour-in-back { animation: tour-in .3s ease-out; --from: calc(-1 * var(--drift)); }
+@keyframes tour-out { to { opacity: 0; } }
+@keyframes tour-in { from { opacity: 0; transform: translateX(var(--from, var(--drift))); } }
 .tour-foot { position: fixed; left: 0; right: 0; bottom: max(2rem, calc(env(safe-area-inset-bottom) + 1rem));
   display: flex; justify-content: space-between; align-items: center; width: min(22rem, calc(100% - 3rem)); margin: 0 auto; }
 .tour-dots { color: var(--muted); font-size: .55rem; letter-spacing: .35em; }
@@ -536,7 +546,8 @@ button.quiet-inline { color: var(--muted); }
 .sit-welcome { font: italic 400 1.3rem/1.5 var(--serif); margin: 0 0 1.5rem; animation: fade 2s ease 1.2s both; }
 .sit-done-actions { justify-content: center; animation: fade 2s ease 3s both; }
 @media (prefers-reduced-motion: reduce) {
-  .sit-intro, .sit-welcome, .sit-done-actions, .welcome .tour-step:not([hidden]) { animation: none; }
+  .sit-intro, .sit-welcome, .sit-done-actions { animation: none; }
+  .welcome { --drift: 0px; }
   #view-day .held { transition: none; }
 }
 
