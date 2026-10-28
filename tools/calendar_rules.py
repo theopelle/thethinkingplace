@@ -1,7 +1,7 @@
 """The looping calendar: its rules, and the checks the build runs before writing it.
 
-The calendar is a cycle of 728 days (104 weeks) from Tuesday 20 October 2026: a date shows
-cycle day (days since the start) mod 728, so weekdays never move. Every thought appears
+The calendar is a cycle of 763 days (109 weeks) from Tuesday 20 October 2026: a date shows
+cycle day (days since the start) mod 763, so weekdays never move. Every thought appears
 once per cycle; the other days are revisits of a thought first shown at least six months
 earlier. A few pinned thoughts sit outside the cycle and come back on their date every
 year. On a pinned date, the cycle's thought of that day moves to the next revisit day if
@@ -11,7 +11,7 @@ The app applies the same rules (dayInfo in app.js).
 import collections, datetime as dt, re
 
 START = dt.date(2026, 10, 20)
-CYCLE = 728            # 104 weeks
+CYCLE = 763            # 109 weeks (728 until 28 Oct 2026)
 SIX_MONTHS = 182       # no thought within this many days of another appearance of itself
 REVISIT_GAP = 189      # revisits keep a week more, so a thought moved by a pinned date stays clear
 MOVE_WITHIN = 7        # how far a thought displaced by a pinned date may move

@@ -3,7 +3,7 @@
     python3 tools/fetch_content.py <sources-dir>    # once, downloads the source texts
     python3 tools/build_content.py <sources-dir>
 
-Writes entries.json (the thoughts), calendar.json (the 728-day cycle that loops forever,
+Writes entries.json (the thoughts), calendar.json (the 763-day cycle that loops forever,
 the pinned dates and the evening teasers; see calendar_rules.py) and glossary.json. Every quote is first checked word for word against
 its source by check_quotes.py; the build stops if any quote fails.
 

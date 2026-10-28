@@ -62,7 +62,7 @@ def source_url(t):
 
 
 def read_calendar():
-    """The 728-day cycle (dates are those of cycle 1), read by column name."""
+    """The 763-day cycle (dates are those of cycle 1), read by column name."""
     ws = load_workbook(os.path.join(CONTENT, "calendar.xlsx"), data_only=True)["Calendar"]
     head = [c.value for c in ws[1]]
     col = lambda name: next(i for i, h in enumerate(head) if h and h.startswith(name))

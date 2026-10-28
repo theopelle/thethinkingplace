@@ -2,7 +2,7 @@
 // both always agree. tools/calendar_rules.py applies the same rules and checks them all at
 // build time.
 //
-// A cycle of 728 days (104 weeks) loops forever from calendar.start, so weekdays never
+// A cycle of 763 days (109 weeks) loops forever from calendar.start, so weekdays never
 // move. Each thought appears once per cycle; the other days revisit a thought shown at
 // least six months before. Pinned thoughts come back on their date every year; the cycle's
 // thought of that day moves to the next revisit day within a week, or waits for the next
