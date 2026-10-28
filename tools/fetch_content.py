@@ -15,6 +15,11 @@ from content_io import read_thoughts, source_url, EXTRA_SOURCES
 
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh) ThinkingPlace-factcheck/1.0"}
 
+# archive.org items whose full text is not named after the item.
+ARCHIVE_FILES = {
+    "in.ernet.dli.2015.183333": "2015.183333.Aristotle-The-Nicomachean-Ethics_djvu.txt",  # Rackham
+}
+
 
 def local_name(url):
     return hashlib.sha1(url.encode()).hexdigest()[:12] + ".txt"
@@ -28,7 +33,8 @@ def fetch_url(url):
         return f"https://www.gutenberg.org/cache/epub/{n}/pg{n}.txt"
     m = re.search(r"archive\.org/details/([^/?#]+)", url)
     if m:
-        return f"https://archive.org/download/{m.group(1)}/{m.group(1)}_djvu.txt"
+        item = m.group(1)
+        return f"https://archive.org/download/{item}/{ARCHIVE_FILES.get(item, item + '_djvu.txt')}"
     m = re.search(r"en\.wikisource\.org/wiki/(.+)", url)
     if m:
         return f"https://en.wikisource.org/w/index.php?title={m.group(1)}&action=render"

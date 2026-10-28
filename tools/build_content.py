@@ -89,6 +89,9 @@ def main(srcdir):
         if status not in ("ok", "ok-old", "own"):
             failures.append(f"{t['id']} {status} {t['source']}: {info[:200]}")
             continue
+        bad = check_quotes.check_about(t, srcdir)
+        if bad:
+            failures.append(f"{t['id']} about {t['source']}: " + " | ".join(bad)[:200])
         if t["path"] not in PATHS:
             failures.append(f"{t['id']} unknown path {t['path']!r}")
             continue
@@ -101,6 +104,7 @@ def main(srcdir):
             "text": t["text"],
             "source": t["source"],
             "context": t["context"],
+            "about": (t["about"] or "").strip() or t["context"],
             "prompt": t["prompt"],
             "translation": credit(translation(t)) if translation(t) else prev["translation"],
             "source_url": CREDIT_URL.get(raw_url) or (raw_url if url else prev["source_url"]),
@@ -125,6 +129,12 @@ def main(srcdir):
         if len(same) == 1:
             same[0]["legacy"] = o["id"]
             kept.add(o["id"])
+    # A thought whose wording changed since the last build keeps the old id it had then.
+    last = {e["id"]: e.get("legacy") for e in old if isinstance(e.get("id"), int)}
+    for e in entries:
+        if not e.get("legacy") and last.get(e["id"]) and last[e["id"]] not in kept:
+            e["legacy"] = last[e["id"]]
+            kept.add(e["legacy"])
     for o in legacy_src:  # dropped thoughts stay readable for notes written on them
         if o["id"] not in kept:
             entries.append({"id": o["id"], "path": o["tradition"], "text": o["text"], "source": o["source"],
@@ -202,6 +212,11 @@ def preview(entries, cycle, start):
     return {"start": first.isoformat(), "ids": picks}
 
 
+# Terms matched with their capitals only, so the long About's plain words don't open them
+# ("politics" is not Aristotle's book, "fuller" is not Margaret Fuller).
+EXACT = {"Politics", "Margaret Fuller"}
+
+
 def build_glossary():
     """glossary.json from glossary.xlsx, keeping the matching rules of the old file."""
     old = {g["term"]: g for g in json.load(open(os.path.join(ROOT, "glossary.json"), encoding="utf-8"))}
@@ -215,7 +230,7 @@ def build_glossary():
     for s in sheets["Core concepts"]:
         g = {"term": s["Term"], "match": split_list(s["Appears as"]) or [s["Term"]],
              "scope": [s["School"]], "wiki": wiki_title(s["Wikipedia"]), "def": s["Definition"], "concept": True}
-        if old.get(s["Term"], {}).get("exact"):
+        if old.get(s["Term"], {}).get("exact") or s["Term"] in EXACT:
             g["exact"] = True
         out.append(g)
     for s in sheets["Other terms"]:
@@ -224,7 +239,7 @@ def build_glossary():
         o = old.get(s["Term"], {})
         if o.get("scope"):  # terms that only make sense on some paths (e.g. the Chinese "li")
             g["scope"] = sorted({RENAMED.get(p, p) for p in o["scope"]})
-        if o.get("exact"):
+        if o.get("exact") or s["Term"] in EXACT:
             g["exact"] = True
         out.append(g)
     unknown = {p for g in out for p in g.get("scope", []) if p not in PATHS}

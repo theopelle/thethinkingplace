@@ -113,6 +113,7 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 
 .context { max-width: 28rem; margin: .5rem auto 0; color: var(--muted); font-size: .92rem; text-align: center; }
 .context p { margin: .5rem 0; }
+#day-context-text { white-space: pre-line; text-align: left; }  /* the long About has paragraphs */
 .translation { font-size: .8rem; font-style: italic; }
 .translation a { color: inherit; }
 

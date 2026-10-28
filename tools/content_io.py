@@ -6,7 +6,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, "content")
 
 COLS = ["id", "text", "source", "context", "translation_raw", "prompt", "path", "status",
-        "theme1", "theme2", "difficulty", "value", "to_check"]
+        "theme1", "theme2", "difficulty", "value", "to_check", "about"]
 
 # Better sources for links that point at a blog or a page without the full text.
 # The quote is checked against (and credited to) the replacement.

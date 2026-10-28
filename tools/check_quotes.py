@@ -118,6 +118,33 @@ def check(t, srcdir, old_texts):
     return "words", " | ".join(words_bad)
 
 
+# Phrases in curly quotes in the long About that are glosses, not quotes from the source.
+ABOUT_GLOSSES = {"without", "what good does it do", "know thyself", "the pathos of things"}
+
+
+def check_about(t, srcdir):
+    """Every “…” phrase in the long About must appear in the row's source (words only:
+    case, punctuation and spacing are ignored). Single-quoted phrases are our own
+    wording (e.g. 'This is mine', ROU14) and are not checked. Returns the phrases not
+    found, or None when the row has no English source to check against."""
+    phrases = [p for p in re.findall(r"“([^”]+)”", t.get("about") or "")
+               if loose(p) not in ABOUT_GLOSSES]
+    if not phrases:
+        return []
+    tr = translation(t)
+    url = source_url(t)
+    if tr.startswith(OWN_TRANSLATION) or not url:
+        return None
+    modern = "modernised" in tr
+    extra = MODERNISE.get(t["id"])
+    texts = [x for x in (source(url, srcdir, False, extra), modern and source(url, srcdir, True, extra)) if x]
+    if not texts:
+        return None
+    lsrc = [loose(x) for x in texts]
+    found = lambda piece: any(loose(piece) in x for x in lsrc)
+    return [p for p in phrases if not all(found(q) for q in pieces(p))]
+
+
 def main(srcdir):
     old = json.load(open(os.path.join(ROOT, "entries.json"), encoding="utf-8"))
     old_texts = {e["text"] for e in old}
@@ -128,6 +155,9 @@ def main(srcdir):
         results.setdefault(status, []).append(t["id"])
         if status not in ("ok", "ok-old", "own"):
             lines.append(f"{t['id']:>3} {status:12} {t['source']} :: {info[:300]}")
+        bad = check_about(t, srcdir)
+        if bad:
+            lines.append(f"{t['id']:>3} about        {t['source']} :: " + " | ".join(bad)[:300])
     print("\n".join(lines))
     print({k: len(v) for k, v in results.items()})
     json.dump(results, open(os.path.join(srcdir, "check_results.json"), "w"), indent=1)

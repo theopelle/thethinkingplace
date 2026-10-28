@@ -34,7 +34,9 @@ COORDS = {
     "Shiraz": (52.53, 29.59), "Nishapur": (58.80, 36.21), "Northern India": (84.99, 24.70),
     "Kolkata": (88.36, 22.57), "China": (116.2, 34.7), "Japan": (135.77, 35.01),
     "Concord, Massachusetts": (-71.35, 42.46), "Amherst, Massachusetts": (-72.52, 42.37),
-    "Cambridge, Massachusetts": (-71.11, 42.37),
+    "Cambridge, Massachusetts": (-71.11, 42.37), "Florence": (11.26, 43.77), "Geneva": (6.14, 46.20),
+    # One card for Hobbes (Malmesbury) and Locke (Wrington), 50 km apart: the dot sits between them.
+    "Malmesbury and Wrington": (-2.43, 51.47), "Aix-en-Provence": (5.45, 43.53),
 }
 
 EUROPE = (-11, 32, 48, 62)   # west, south, east, north
@@ -79,7 +81,10 @@ def merged(points):
         if len(g) > 1 and len(tail) == 1 and all(", " in t for t in titles):  # same state: say it once
             titles = [t.rpartition(", ")[0] for t in titles]
             titles[-1] += ", " + tail.pop()
-        title = titles[0] if len(g) == 1 else ", ".join(titles[:-1]) + " and " + titles[-1]
+        if len(g) == 2 and any(" and " in t for t in titles):  # not "London and Malmesbury and Wrington"
+            title = ", ".join(titles)
+        else:
+            title = titles[0] if len(g) == 1 else ", ".join(titles[:-1]) + " and " + titles[-1]
         text = "\n\n".join((p[2] + "\n" if len(g) > 1 else "") + p[3] for p in g)
         out.append((x, y, title, text, g[0][4]))
     return out

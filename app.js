@@ -390,7 +390,7 @@
     passage.classList.toggle("verse", !!lines);
     $("day-source").textContent = e.source;
     $("day-path").textContent = e.path;
-    $("day-context-text").textContent = e.context;
+    $("day-context-text").textContent = e.about || e.context;
     const tr = $("day-translation");
     tr.textContent = (/^(Written in English|Translated)/.test(e.translation) ? "" : "Translation: ") + e.translation + " · ";
     const link = document.createElement("a");

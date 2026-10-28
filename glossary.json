@@ -63,9 +63,9 @@
    "utilitarian"
   ],
   "wiki": "Age_of_Enlightenment",
-  "def": "Moral thought from the 17th to 19th centuries that put reason, evidence and freedom at the centre: Descartes' method of doubt, Spinoza's freedom through understanding, Hume and Adam Smith on feeling, Kant's duty, Mill's greatest happiness, and the case for women's minds made by Émilie du Châtelet and Mary Wollstonecraft.",
+  "def": "Moral and political thought from the 17th to 19th centuries that put reason, evidence and freedom at the centre: Hobbes and Locke on why we need government, Descartes' method of doubt, Spinoza's freedom through understanding, Hume and Adam Smith on feeling, Voltaire's tolerance, Rousseau and Diderot on nature and the passions, Kant's duty, Mill's greatest happiness, and the case for women's minds made by Émilie du Châtelet and Mary Wollstonecraft.",
   "school": {
-   "who": "Descartes, Spinoza, Hume, Adam Smith, Émilie du Châtelet, Kant, Mary Wollstonecraft, Mill",
+   "who": "Descartes, Hobbes, Spinoza, Locke, Hume, Voltaire, Émilie du Châtelet, Adam Smith, Rousseau, Diderot, Kant, Mary Wollstonecraft, Mill",
    "began": "Across Europe, 1630s–1860s",
    "read": {
     "title": "Mill, On Liberty",
@@ -104,9 +104,9 @@
    "Transcendentalists"
   ],
   "wiki": "Renaissance_humanism",
-  "def": "Writers who explored how to live in personal prose and poetry rather than in systems: Petrarch and Erasmus, who revived ancient wisdom; Montaigne's essays and La Rochefoucauld's maxims; and the American Transcendentalists and poets of the 1800s, who trusted intuition, nature and self-reliance.",
+  "def": "Writers who explored how to live in personal prose and poetry rather than in systems: Petrarch and Erasmus, who revived ancient wisdom; Machiavelli's hard look at power; the essays of Montaigne and Bacon; the French moralists La Rochefoucauld, La Bruyère, Vauvenargues and Chamfort; and the American Transcendentalists and poets of the 1800s, who trusted intuition, nature and self-reliance.",
   "school": {
-   "who": "Petrarch, Erasmus, Montaigne, La Rochefoucauld, Emerson, Margaret Fuller, Thoreau, Emily Dickinson, George Eliot",
+   "who": "Petrarch, Erasmus, Machiavelli, Montaigne, Francis Bacon, La Rochefoucauld, La Bruyère, Vauvenargues, Chamfort, Emerson, Margaret Fuller, Thoreau, Emily Dickinson, George Eliot",
    "began": "Italy, 1340s; then France, England and New England",
    "read": {
     "title": "Thoreau, Walden",
@@ -637,7 +637,7 @@
    "Enlightenment Ethics"
   ],
   "wiki": "Utilitarianism",
-  "def": "Enlightenment thinkers disagree. For Mill, happiness means pleasure and the absence of pain, and it is the measure of right and wrong, with everyone counting equally. For Kant, happiness is too vague to guide us: morality is about becoming worthy of it. For du Châtelet, it depends on health, passions and freedom from prejudice.",
+  "def": "Enlightenment thinkers disagree. For Mill, happiness means pleasure and the absence of pain, and it is the measure of right and wrong, with everyone counting equally. For Kant, happiness is too vague to guide us: morality is about becoming worthy of it. For du Châtelet, it depends on health, passions and freedom from prejudice. For Rousseau, lasting happiness is not made for a world that always changes, so we should enjoy contentment when it comes.",
   "concept": true
  },
  {
@@ -663,7 +663,7 @@
    "Enlightenment Ethics"
   ],
   "wiki": "On_Liberty",
-  "def": "In On Liberty, Mill argues that people should be free to think, speak and live as they choose, as long as they do not harm others. Freedom lets each person find their own way, and lets new ideas start anywhere.",
+  "def": "Enlightenment thinkers saw freedom in different ways. For Locke, good laws protect it from other people's arbitrary will; for Rousseau, it means never being made to do what we do not want, and people are born free yet everywhere in chains; for Mill, in On Liberty, people should be free to think, speak and live as they choose, as long as they do not harm others.",
   "concept": true
  },
  {
@@ -703,7 +703,7 @@
    "Enlightenment Ethics"
   ],
   "wiki": "Passions_(philosophy)",
-  "def": "Strong feelings and desires. Spinoza called being ruled by them 'bondage' and believed understanding them sets us free; Hume, by contrast, thought reason can only serve the passions, never rule them.",
+  "def": "Strong feelings and desires. Spinoza called being ruled by them 'bondage' and believed understanding them sets us free; Hume thought reason can only serve the passions, never rule them; Diderot defended them: only great passions, he wrote, raise us to great things.",
   "concept": true
  },
  {
@@ -852,7 +852,7 @@
    "Humanists and Essayists"
   ],
   "wiki": "Essay",
-  "def": "From the French essai, 'attempt' or 'trial'. Montaigne used the word for his short pieces in which he tests his judgment on any subject, starting with himself. He made it a new literary form.",
+  "def": "From the French essai, 'attempt' or 'trial'. Montaigne used the word for his short pieces in which he tests his judgment on any subject, starting with himself, and made it a new literary form. Francis Bacon took up the word for his own Essays, first published in 1597.",
   "concept": true
  },
  {
@@ -865,7 +865,7 @@
    "Humanists and Essayists"
   ],
   "wiki": "François_de_La_Rochefoucauld_(writer)",
-  "def": "A short, sharp saying that sums up a truth about human behaviour. La Rochefoucauld's maxims are famous for exposing vanity and self-love (amour-propre) behind our good actions.",
+  "def": "A short, sharp saying that sums up a truth about human behaviour. La Rochefoucauld's maxims are famous for exposing vanity and self-love (amour-propre) behind our good actions. In the 18th century Vauvenargues gave the form a warmer voice, trusting feeling, while Chamfort sharpened it into social satire.",
   "concept": true
  },
  {
@@ -1372,6 +1372,83 @@
   ],
   "wiki": "Persian_literature",
   "def": "In Persian poetry, wine is rarely only wine. For Khayyam it often stands for enjoying the present while we can; for Sufi poets such as Hafiz it is an image of the joy of spiritual love.",
+  "concept": true
+ },
+ {
+  "term": "Tolerance",
+  "match": [
+   "tolerance"
+  ],
+  "scope": [
+   "Enlightenment Ethics"
+  ],
+  "wiki": "Toleration",
+  "def": "Accepting that others may believe and live differently. It was Voltaire's great cause: after Europe's long wars over doctrine, he argued that since we are all weak and mistaken, we should forgive one another's errors. Mill extended it to unusual characters and ways of life.",
+  "concept": true
+ },
+ {
+  "term": "Prejudice",
+  "match": [
+   "prejudice",
+   "prejudices"
+  ],
+  "scope": [
+   "Enlightenment Ethics"
+  ],
+  "wiki": "Prejudice",
+  "def": "An opinion held without judgement, usually picked up in childhood before we could weigh it. Voltaire adds that some prejudices are good: the ones our judgement confirms once we reason. Du Châtelet counted freedom from prejudice as a source of happiness.",
+  "concept": true
+ },
+ {
+  "term": "Social contract",
+  "match": [
+   "Social Contract",
+   "social contract"
+  ],
+  "scope": [
+   "Enlightenment Ethics"
+  ],
+  "wiki": "Social_contract",
+  "def": "The idea that a state rests on an agreement among the people it governs. Hobbes, Locke and Rousseau gave it different forms: for Hobbes, people give up some freedom for safety; for Locke, government must protect life, liberty and property; for Rousseau, citizens together make the laws they obey.",
+  "concept": true
+ },
+ {
+  "term": "Commonwealth",
+  "match": [
+   "Common-wealth",
+   "Common-wealths",
+   "commonwealth"
+  ],
+  "scope": [
+   "Enlightenment Ethics"
+  ],
+  "wiki": "Commonwealth",
+  "def": "Hobbes's word for an organised state, made when people agree to live under a common power. In Leviathan he argues that only such a power brings peace, and with peace the leisure to think.",
+  "concept": true
+ },
+ {
+  "term": "Citizen of the world",
+  "match": [
+   "citizen of the universe",
+   "citizen of the world"
+  ],
+  "scope": [
+   "Enlightenment Ethics"
+  ],
+  "wiki": "Cosmopolitanism",
+  "def": "Someone loyal to humanity as a whole rather than to one country. Voltaire ends his article on the homeland with this ideal; the phrase goes back to the ancient Greek thinker Diogenes.",
+  "concept": true
+ },
+ {
+  "term": "Diderot effect",
+  "match": [
+   "Diderot effect"
+  ],
+  "scope": [
+   "Enlightenment Ethics"
+  ],
+  "wiki": "Diderot_effect",
+  "def": "The modern name, given long after Diderot, for a chain of new wants: one new possession makes everything around it look shabby, so we replace that too. It comes from his essay on his new dressing gown.",
   "concept": true
  },
  {
@@ -1959,7 +2036,7 @@
   "term": "A Treatise of Human Nature",
   "match": [
    "A Treatise of Human Nature",
-   "Treatise"
+   "Treatise of Human Nature"
   ],
   "wiki": "A_Treatise_of_Human_Nature",
   "def": "Hume's first and most ambitious book (1739–40), written in his twenties. It contains his famous claim that reason is the slave of the passions."
@@ -2461,7 +2538,8 @@
    "Fuller"
   ],
   "wiki": "Margaret_Fuller",
-  "def": "An American journalist, critic and women's rights advocate (1810–1850), born in Cambridgeport, Massachusetts. She was part of the Transcendentalist circle and edited its journal, The Dial."
+  "def": "An American journalist, critic and women's rights advocate (1810–1850), born in Cambridgeport, Massachusetts. She was part of the Transcendentalist circle and edited its journal, The Dial.",
+  "exact": true
  },
  {
   "term": "Woman in the Nineteenth Century",
@@ -2657,7 +2735,8 @@
    "Politics"
   ],
   "wiki": "Politics_(Aristotle)",
-  "def": "Aristotle's work on the city-state: how communities form, the kinds of government, and what makes a good citizen."
+  "def": "Aristotle's work on the city-state: how communities form, the kinds of government, and what makes a good citizen.",
+  "exact": true
  },
  {
   "term": "Paulinus",
@@ -2706,5 +2785,184 @@
   ],
   "wiki": "Mount_Vesuvius",
   "def": "The volcano overlooking the Bay of Naples, which buried Pompeii in 79 CE and is still active."
+ },
+ {
+  "term": "Niccolò Machiavelli",
+  "match": [
+   "Niccolò Machiavelli",
+   "Machiavelli"
+  ],
+  "wiki": "Niccolò_Machiavelli",
+  "def": "A Florentine diplomat and writer (1469–1527). After the Medici returned to power in 1512 and removed him from office, he wrote The Prince, a blunt guide to how rulers win and keep power, published in 1532, after his death."
+ },
+ {
+  "term": "Francis Bacon",
+  "match": [
+   "Francis Bacon",
+   "Bacon"
+  ],
+  "wiki": "Francis_Bacon",
+  "def": "An English statesman and philosopher (1561–1626), born in London, who rose to Lord Chancellor before his fall in 1621. Often called the father of empiricism, he urged that knowledge be built on careful observation. His Essays grew from 10 in 1597 to 58 in 1625."
+ },
+ {
+  "term": "Voltaire",
+  "match": [
+   "Voltaire"
+  ],
+  "wiki": "Voltaire",
+  "def": "The pen name of François-Marie Arouet (1694–1778), the best-known writer of the French Enlightenment, born and died in Paris. He campaigned for tolerance and freedom of thought, and spent most of his last twenty years at Ferney, near Geneva."
+ },
+ {
+  "term": "Jean-Jacques Rousseau",
+  "match": [
+   "Jean-Jacques Rousseau",
+   "Rousseau"
+  ],
+  "wiki": "Jean-Jacques_Rousseau",
+  "def": "A writer and philosopher (1712–1778), born in Geneva, who lived mostly in France. When The Social Contract and Emile came out in 1762, both were banned and burned, and he fled to Switzerland. His ideas later inspired the French Revolution."
+ },
+ {
+  "term": "Thomas Hobbes",
+  "match": [
+   "Thomas Hobbes",
+   "Hobbes"
+  ],
+  "wiki": "Thomas_Hobbes",
+  "def": "An English philosopher (1588–1679), born in Malmesbury. He wrote Leviathan (1651) in exile in Paris, arguing that without a common power life would be 'solitary, poor, nasty, brutish, and short'."
+ },
+ {
+  "term": "John Locke",
+  "match": [
+   "John Locke",
+   "Locke"
+  ],
+  "wiki": "John_Locke",
+  "def": "An English philosopher (1632–1704). He argued that the mind starts as a blank slate filled by experience, and that governments exist to protect people's natural rights to life, liberty and property."
+ },
+ {
+  "term": "Jean de La Bruyère",
+  "match": [
+   "Jean de La Bruyère",
+   "La Bruyère"
+  ],
+  "wiki": "Jean_de_La_Bruyère",
+  "def": "A French writer (1645–1696), born in Paris, who was a tutor in the household of the Prince de Condé. His Characters, first published in 1688, are sharp portraits and remarks on the people of his time."
+ },
+ {
+  "term": "Nicolas Chamfort",
+  "match": [
+   "Nicolas Chamfort",
+   "Chamfort"
+  ],
+  "wiki": "Nicolas_Chamfort",
+  "def": "A French playwright and wit (1741–1794), elected to the Académie française in 1781. He welcomed the Revolution, was later imprisoned for criticising its excesses, and died in Paris in 1794. His maxims were published after his death."
+ },
+ {
+  "term": "Vauvenargues",
+  "match": [
+   "Vauvenargues"
+  ],
+  "wiki": "Luc_de_Clapiers,_marquis_de_Vauvenargues",
+  "def": "Luc de Clapiers, marquis de Vauvenargues (1715–1747), a French soldier and moralist born in Aix-en-Provence. Broken in health by the retreat from Prague in 1742, he turned to writing; his Reflections and Maxims appeared in 1746, a year before his death. Voltaire was a close friend."
+ },
+ {
+  "term": "Denis Diderot",
+  "match": [
+   "Denis Diderot",
+   "Diderot"
+  ],
+  "wiki": "Denis_Diderot",
+  "def": "A French writer and philosopher (1713–1784), born in Langres, and chief editor of the Encyclopédie, the great Enlightenment survey of knowledge. He was jailed at Vincennes in 1749 for his writings."
+ },
+ {
+  "term": "Candide",
+  "match": [
+   "Candide"
+  ],
+  "wiki": "Candide",
+  "def": "Voltaire's comic novel of 1759. Its young hero is taught that all is for the best, then lives through war, shipwreck and earthquake, and ends by tending his garden."
+ },
+ {
+  "term": "Zadig",
+  "match": [
+   "Zadig"
+  ],
+  "wiki": "Zadig",
+  "def": "A philosophical tale by Voltaire (1748) about a wise young man in ancient Babylon whose fortunes rise and fall."
+ },
+ {
+  "term": "Philosophical Dictionary",
+  "match": [
+   "Philosophical Dictionary"
+  ],
+  "wiki": "Dictionnaire_philosophique",
+  "def": "Voltaire's pocket dictionary of short, sharp articles (1764), on subjects from friendship to tolerance."
+ },
+ {
+  "term": "Emile",
+  "match": [
+   "Emile"
+  ],
+  "wiki": "Emile,_or_On_Education",
+  "def": "Rousseau's long book on education (1762), which follows an imaginary boy from birth to adulthood. It was banned and burned soon after it appeared."
+ },
+ {
+  "term": "Discourse on Inequality",
+  "match": [
+   "Discourse on Inequality"
+  ],
+  "wiki": "Discourse_on_Inequality",
+  "def": "Rousseau's essay of 1755 on how inequality began, starting with the first person who fenced off a piece of land and said 'This is mine'."
+ },
+ {
+  "term": "Reveries of the Solitary Walker",
+  "match": [
+   "Reveries of the Solitary Walker",
+   "Reveries"
+  ],
+  "wiki": "Reveries_of_the_Solitary_Walker",
+  "def": "Rousseau's last work: ten 'walks' of reflection, written from 1776 and left unfinished at his death in 1778."
+ },
+ {
+  "term": "Leviathan",
+  "match": [
+   "Leviathan"
+  ],
+  "wiki": "Leviathan_(Hobbes_book)",
+  "def": "Hobbes's book of 1651, named after a giant sea monster, on why people need a strong common power to live in peace."
+ },
+ {
+  "term": "An Essay Concerning Human Understanding",
+  "match": [
+   "An Essay Concerning Human Understanding",
+   "Essay Concerning Human Understanding"
+  ],
+  "wiki": "An_Essay_Concerning_Human_Understanding",
+  "def": "Locke's great book on knowledge (dated 1690), arguing that all our ideas come from experience."
+ },
+ {
+  "term": "Second Treatise of Government",
+  "match": [
+   "Second Treatise of Government",
+   "Second Treatise"
+  ],
+  "wiki": "Two_Treatises_of_Government",
+  "def": "The second of Locke's Two Treatises of Government (dated 1690), on why governments exist: to protect the lives, liberty and property of the people."
+ },
+ {
+  "term": "Philosophical Thoughts",
+  "match": [
+   "Philosophical Thoughts"
+  ],
+  "wiki": "Philosophical_Thoughts",
+  "def": "Diderot's first original book (1746): short numbered thoughts that open with a defence of the passions."
+ },
+ {
+  "term": "Regrets on My Old Dressing Gown",
+  "match": [
+   "Regrets on My Old Dressing Gown"
+  ],
+  "wiki": "Diderot_effect",
+  "def": "A playful essay by Diderot (1772) about how one new possession, a scarlet dressing gown, led him to replace everything around it."
  }
 ]
