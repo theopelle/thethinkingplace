@@ -145,9 +145,9 @@ The *Discourse on Happiness*: short, personal, and honest. She wrote it in the 1
 - Stanford Encyclopedia of Philosophy, "Émilie du Châtelet": https://plato.stanford.edu/entries/emilie-du-chatelet/
 - Project Vox, *Discours sur le bonheur* (1779 edition): https://projectvox.org/?p=109
 
-## Topic page: Friendship
+## Topic page: Friendship and kindness
 
-**Friendship** · theme: Friendship and kindness · \[n\] thoughts so far
+**Friendship and kindness** · theme: Friendship and kindness · \[n\] thoughts so far
 
 ### The question in one line
 
@@ -155,17 +155,19 @@ What makes someone a real friend, and why do we need them?
 
 ### How the traditions see it
 
-**Aristotle (Ancient Greece).** He saw three kinds of friendship: for usefulness, for pleasure, and for character. The first two fade when the use or the fun ends. Only the third lasts, because each friend loves who the other is. Such a friend, he says, is "another self", and good friends make each other better. He thought nobody would choose a life without friends, even with everything else.
+**Aristotle (Classical Greek Philosophy).** He saw three kinds of friendship: for usefulness, for pleasure, and for character. The first two fade when the use or the fun ends. Only the third lasts, because each friend loves who the other is. Such a friend, he says, is "another self", and good friends make each other better. He thought nobody would choose a life without friends, even with everything else.
 
-**Epicurus (Ancient Greece).** For Epicurus, friendship was the greatest help to a happy life, worth more than wealth or power. He lived it: his school, the Garden, was a community of friends outside politics, who shared meals and celebrations, and it welcomed women as students.
+**Epicurus (Epicureanism).** For Epicurus, friendship was the greatest help to a happy life, worth more than wealth or power. He lived it: his school, the Garden, was a community of friends outside politics, who shared meals and celebrations, and it welcomed women as students.
 
-**Confucius (Ancient China).** Friends help each other grow in virtue. A good friend tells you honestly when you are wrong, and does it with tact. But if the friend will not listen, you stop, rather than lose the friendship.
+**Confucius (Confucianism).** Friends help each other grow in virtue. A good friend tells you honestly when you are wrong, and does it with tact. But if the friend will not listen, you stop, rather than lose the friendship.
 
-**Montaigne (the Humanists).** After his friend Étienne de La Boétie died young, Montaigne wrote that true friendship cannot be explained: it happens between these two people, and no others. He believed such a friendship is so complete that a person can have only one, and that it is very rare. In the same essay he says women had never reached this kind of friendship, a view common among writers of his time.
+**Montaigne (Humanists and Essayists).** After his friend Étienne de La Boétie died young, Montaigne wrote that true friendship cannot be explained: it happens between these two people, and no others. He believed such a friendship is so complete that a person can have only one, and that it is very rare. In the same essay he says women had never reached this kind of friendship, a view common among writers of his time.
+
+**Mencius (Confucianism).** Kindness, for Mencius, is in everyone from the start. Anyone who suddenly saw a child about to fall into a well would feel alarm and distress, he said, without thinking of reward. That feeling of compassion is the seed of goodness, and it only needs to grow.
 
 ### Where they agree, and where they don't
 
-All four see friendship as one of the best things in life, and all link it to becoming a better person. They differ on numbers and reasons. Epicurus spoke openly of the safety and pleasure friends give; Aristotle cared most about friends valued for themselves; Montaigne thought the deepest kind happens only once. Nietzsche adds a sharper voice: a true friend should also challenge you.
+All of them see friendship and kindness as among the best things in life, and link them to becoming a better person. They differ on numbers and reasons. Epicurus spoke openly of the safety and pleasure friends give; Aristotle cared most about friends valued for themselves; Montaigne thought the deepest kind happens only once. Nietzsche adds a sharper voice: a true friend should also challenge you.
 
 ### Your thoughts and notes
 
@@ -177,7 +179,7 @@ All four see friendship as one of the best things in life, and all link it to be
 - Wikipedia, "Epicurus": https://en.wikipedia.org/wiki/Epicurus
 - Cambridge University Library, "Of friendship" (Montaigne exhibition): https://wwwe.lib.cam.ac.uk/CUL/exhibitions/Montaigne/c3.html
 - Montaigne, "Of Friendship", Cotton translation (HyperEssays): https://hyperessays.net/essays/on-friendship/ · Wikipedia, "Michel de Montaigne": https://en.wikipedia.org/wiki/Michel\_de\_Montaigne
-- The app's thoughts #58, #112, #115, #117, #211, #280, #502, and #503, with their sources
+- The app's thoughts #58, #112, #115, #117, #211, #280, #502, #503, #511, and #512, with their sources
 
 ## Topic page: Justice (society)
 
@@ -189,13 +191,13 @@ What do we owe each other, and who decides?
 
 ### How the traditions see it
 
-**Plato and Socrates (Ancient Greece).** In Plato's *Republic*, a character called Thrasymachus says justice is simply what serves the strong. Plato's answer is that justice is a kind of harmony: each part of a person, or of a city, doing its proper job. His teacher Socrates went further. He said it is better to suffer an injustice than to do one, and that we should never return harm for harm.
+**Plato and Socrates (Classical Greek Philosophy).** In Plato's *Republic*, a character called Thrasymachus says justice is simply what serves the strong. Plato's answer is that justice is a kind of harmony: each part of a person, or of a city, doing its proper job. His teacher Socrates went further. He said it is better to suffer an injustice than to do one, and that we should never return harm for harm.
 
-**Aristotle (Ancient Greece).** For Aristotle, justice means giving people what they deserve, and good laws are reason without passion. A citizen is someone who takes turns ruling and being ruled. Yet the same book, the *Politics*, argues that some people are slaves by nature. Centuries later, this idea was used to defend the enslavement of Native Americans.
+**Aristotle (Classical Greek Philosophy).** For Aristotle, justice means giving people what they deserve, and good laws are reason without passion. A citizen is someone who takes turns ruling and being ruled. Yet the same book, the *Politics*, argues that some people are slaves by nature. Centuries later, this idea was used to defend the enslavement of Native Americans.
 
-**Epicurus (Ancient Greece).** Epicurus saw no justice written into nature. For him, justice is an agreement between people not to harm each other, and it can change from place to place. It still matters to the individual: the just person lives with the most peace of mind.
+**Epicurus (Epicureanism).** Epicurus saw no justice written into nature. For him, justice is an agreement between people not to harm each other, and it can change from place to place. It still matters to the individual: the just person lives with the most peace of mind.
 
-**Confucius (Ancient China).** Justice begins with the people who lead. A ruler who acts rightly will be followed without needing many orders. When someone wrongs you, answer with justice, not with kindness or revenge. In classical Confucian thought, justice was a personal and public virtue, not a matter of law or equal rights.
+**Confucius (Confucianism).** Justice begins with the people who lead. A ruler who acts rightly will be followed without needing many orders. When someone wrongs you, answer with justice, not with kindness or revenge. In classical Confucian thought, justice was a personal and public virtue, not a matter of law or equal rights.
 
 ### Where they agree, and where they don't
 
@@ -221,15 +223,15 @@ Should the people rule, and what keeps the many from going wrong?
 
 ### How the traditions see it
 
-**Athens and Plato (Ancient Greece).** Democracy began in Athens around 508 BCE. Citizens voted directly in an assembly, and many officials and jurors were chosen by lot. But only adult male citizens took part, perhaps one person in five or fewer: women, slaves, and foreigners were left out.
+**Athens and Plato (Classical Greek Philosophy).** Democracy began in Athens around 508 BCE. Citizens voted directly in an assembly, and many officials and jurors were chosen by lot. But only adult male citizens took part, perhaps one person in five or fewer: women, slaves, and foreigners were left out.
 
 Plato did not trust it. In his parable of the ship, the sailors fight over the helm, while the true pilot, who knows the winds and the stars, is mocked as a stargazer. He had seen a democratic jury sentence his teacher Socrates to death in 399 BCE.
 
-**Aristotle (Ancient Greece).** Aristotle was more open. A citizen, for him, is someone who takes turns governing and being governed, and a crowd can judge many things better than one person. Still, he feared rule by the many could turn into mob rule. He preferred a mixed government, held steady by a strong middle class.
+**Aristotle (Classical Greek Philosophy).** Aristotle was more open. A citizen, for him, is someone who takes turns governing and being governed, and a crowd can judge many things better than one person. Still, he feared rule by the many could turn into mob rule. He preferred a mixed government, held steady by a strong middle class.
 
-**Laozi (Taoists).** The *Tao Te Ching* looks at power from below. The best rulers are those the people hardly notice; worse ones are loved, then feared, then despised. Good government works quietly and lets people feel they did things themselves.
+**Laozi (Taoism).** The *Tao Te Ching* looks at power from below. The best rulers are those the people hardly notice; worse ones are loved, then feared, then despised. Good government works quietly and lets people feel they did things themselves.
 
-**Rousseau and Mill (the Enlightenment and after).** Rousseau put the people at the heart of the state: when citizens stop caring about public affairs, the state is lost. Mill, a century later, saw a new danger. A majority can be a tyrant too, and silencing even one person who disagrees harms everyone. The phrase "tyranny of the majority" comes from Alexis de Tocqueville; Mill made it famous.
+**Rousseau and Mill (Enlightenment Ethics).** Rousseau put the people at the heart of the state: when citizens stop caring about public affairs, the state is lost. Mill, a century later, saw a new danger. A majority can be a tyrant too, and silencing even one person who disagrees harms everyone. The phrase "tyranny of the majority" comes from Alexis de Tocqueville; Mill made it famous.
 
 ### Where they agree, and where they don't
 

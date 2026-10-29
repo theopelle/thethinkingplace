@@ -146,7 +146,14 @@ def main(out, inputs):
             if r[0]:
                 existing[r[0]] = dict(zip(hdr, r))
     for p in inputs:
-        for page in parse(Path(p).read_text(encoding="utf-8"), Path(p).stem):
+        doc = Path(p).stem
+        new_pages = parse(Path(p).read_text(encoding="utf-8"), doc)
+        # A page renamed or removed in a re-exported doc must not linger.
+        keep = {pg["Page ID"] for pg in new_pages}
+        for pid in [k for k, v in existing.items() if v.get("Source doc") == doc and k not in keep]:
+            print("  dropped (no longer in", doc + "):", pid)
+            del existing[pid]
+        for page in new_pages:
             old = existing.get(page["Page ID"])
             if old and old.get("Status") not in (None, "", "Draft"):
                 page["Status"] = old["Status"]  # keep a status Théo set by hand
