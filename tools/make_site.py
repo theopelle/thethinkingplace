@@ -51,7 +51,9 @@ def main():
     # in the app during its first three months. Change the ids to change them.
     import html, json
     by_id = {e["id"]: e for e in json.load(open(os.path.join(ROOT, "entries.json"), encoding="utf-8"))}
-    week = [{k: by_id[i][k] for k in ("path", "text", "source", "context", "prompt")} for i in HOME_THOUGHTS]
+    # "about this thought" uses the long About note, as the app does (its paragraphs kept).
+    week = [{**{k: by_id[i][k] for k in ("path", "text", "source", "prompt")},
+             "context": by_id[i].get("about") or by_id[i]["context"]} for i in HOME_THOUGHTS]
     home = home.replace("{{HOME_THOUGHTS}}", json.dumps(week, ensure_ascii=False).replace("</", "<\\/"))
     first = week[0]  # what shows before the script picks today's weekday (and without scripts)
     for key in ("text", "source", "path", "context", "prompt"):

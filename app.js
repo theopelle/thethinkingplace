@@ -433,17 +433,35 @@
   }
 
   // The note box is as tall as its text (Safari can't do this in CSS yet), up to the space
-  // visible above the keyboard; past that it scrolls inside, where browsers keep the line
-  // being typed in view. Measured from "auto" each time, on typing, opening, and when the
-  // screen, keyboard or text size changes.
+  // visible above the keyboard less three lines; past that it scrolls inside, where browsers
+  // keep the line being typed in view. The text is measured in a hidden copy of the box, so
+  // the real one never shrinks while typing (that made the page jump). When the box first
+  // reaches its cap, the page scrolls once to show it whole; after that only the box scrolls.
+  let noteMirror = null, noteCapped = false;
   function growNote() {
     const ta = $("note-text");
     if (ta.offsetParent === null) return;
-    const visible = (window.visualViewport ? visualViewport.height : window.innerHeight) - 16;
-    ta.style.height = "auto";
-    const full = ta.scrollHeight + 2, max = Math.max(ta.offsetHeight, visible);
-    ta.style.height = Math.min(full, max) + "px";
-    ta.style.overflowY = full > max ? "auto" : "hidden";
+    if (!noteMirror) {
+      noteMirror = document.createElement("textarea");
+      noteMirror.className = "note-mirror";
+      noteMirror.tabIndex = -1;
+      noteMirror.setAttribute("aria-hidden", "true");
+      ta.after(noteMirror);
+    }
+    noteMirror.style.width = ta.offsetWidth + "px";
+    noteMirror.value = ta.value;
+    const cs = getComputedStyle(ta), em = parseFloat(cs.fontSize) || 16;
+    const visible = window.visualViewport ? visualViewport.height : window.innerHeight;
+    const min = parseFloat(cs.minHeight) || 0, cap = Math.max(min, visible - 5 * em);
+    const full = noteMirror.scrollHeight + 2, capped = full > cap;
+    const height = Math.round(Math.min(Math.max(full, min), cap));
+    if (Math.abs(ta.offsetHeight - height) > 1) ta.style.height = height + "px";
+    ta.style.overflowY = capped ? "auto" : "hidden";
+    if (capped && !noteCapped && document.activeElement === ta) {
+      const top = ta.getBoundingClientRect().top - (window.visualViewport ? visualViewport.offsetTop : 0);
+      window.scrollBy(0, top - em);
+    }
+    noteCapped = capped;
   }
 
   function flushNote() {
@@ -1007,19 +1025,27 @@
   async function applyReminder(ask) {
     const LN = plugin("LocalNotifications");
     if (!LN) return;
+    // Settings shows what is really on; the reader's wish ("every day", "once a week") is kept
+    // apart, so a reminder blocked by the phone starts by itself once notifications are allowed.
     const r = reminderPrefs();
+    if (r.freq !== "off") store.set("reminderWanted", JSON.stringify(r));
+    let wanted = null;
+    try { wanted = JSON.parse(store.get("reminderWanted", "null")); } catch {}
     try {
       await LN.cancel({ notifications: [REMINDER_ID, ...Array.from({ length: AHEAD_DAYS + 1 }, (_, i) => DAY_IDS + i)].map((id) => ({ id })) });
-      if (r.freq === "off") return renderReminder("");
+      if (!wanted) return renderReminder("");
       let perm = await LN.checkPermissions();
       if (perm.display !== "granted" && ask) {
         store.set("reminderAsked", "1");
-        perm = await LN.requestPermissions();
+        perm = await LN.requestPermissions();  // asked on every tap: Android shows its prompt when it still can
       }
-      // Declined (now or before): Android won't ask again, so the reader's choice stays as it
-      // is and Settings offers a way to the phone's own settings. Checked again on return.
-      if (perm.display !== "granted") return renderReminder(BLOCKED);
-      await LN.schedule({ notifications: reminderSchedule(r) });
+      // Declined, now or before: "off" is shown, with a way to the phone's own settings.
+      if (perm.display !== "granted") {
+        store.set("reminder", JSON.stringify(Object.assign({}, wanted, { freq: "off" })));
+        return renderReminder(BLOCKED);
+      }
+      store.set("reminder", JSON.stringify(wanted));
+      await LN.schedule({ notifications: reminderSchedule(wanted) });
       renderReminder("");
     } catch { renderReminder("The reminder couldn't be set on this device."); }
   }
@@ -1042,12 +1068,14 @@
         const PS = plugin("PhoneSettings") || (NATIVE && window.Capacitor.registerPlugin && window.Capacitor.registerPlugin("PhoneSettings"));
         if (PS) PS.openNotifications().catch(() => {});
       });
-      $("reminder-status").replaceChildren("Notifications are blocked for The Thinking Place on this phone. ", link);
+      $("reminder-status").replaceChildren("Notifications are blocked for The Thinking Place on this phone. Allow them in your phone's settings and your reminder will start. ", link);
     } else if (status !== undefined) $("reminder-status").textContent = status;
   }
 
   function setReminder(change) {
-    store.set("reminder", JSON.stringify(Object.assign(reminderPrefs(), change)));
+    const r = Object.assign(reminderPrefs(), change);
+    store.set("reminder", JSON.stringify(r));
+    if (r.freq === "off") store.remove("reminderWanted");
     renderReminder();
     applyReminder(true);
   }
@@ -1472,7 +1500,7 @@
     $("tour-path").textContent = e.path;
     $("tour-text").textContent = e.text;
     $("tour-source").textContent = e.source;
-    $("tour-context-text").textContent = e.context;
+    $("tour-context-text").textContent = e.about || e.context;
     $("tour-prompt").textContent = e.prompt;
     markTerms(e.path, ["tour-text", "tour-path", "tour-source", "tour-context-text"]);
   }

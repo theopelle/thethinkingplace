@@ -99,6 +99,7 @@ a { color: var(--fg); }
   border-bottom: 1px solid var(--faint); }
 .today-link:hover, .today-link:focus-visible, .today-link[aria-expanded="true"] { color: var(--fg); border-bottom-color: var(--fg); outline: none; }
 .today-panel { margin: .8rem 0 0; font-size: .92rem; color: var(--muted); max-width: 32rem; animation: open .4s ease; }
+#today-context { white-space: pre-line; text-align: left; }  /* the long About has paragraphs */
 .today-question { font: italic 400 1.08rem/1.5 var(--serif); color: var(--fg); }
 
 /* While the cards are below the first screen, a soft chevron says there is more. */

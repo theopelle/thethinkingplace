@@ -169,6 +169,8 @@ textarea {
 textarea:focus { outline: none; }
 /* The note box grows with the text (app.js growNote): no inner scrolling, no resize corner */
 #note-text { resize: none; overflow: hidden; min-height: 8.5em; }
+/* A hidden copy of the note box, to measure its text without resizing the real one */
+.note-mirror { position: absolute; left: -9999px; top: 0; visibility: hidden; height: 0 !important; min-height: 0 !important; overflow: hidden; pointer-events: none; }
 textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); }
 .note-foot { display: flex; justify-content: space-between; align-items: baseline; margin-top: .35rem; }
 .note-foot button.quiet { margin: 0; }
@@ -505,8 +507,12 @@ button.quiet-inline { color: var(--muted); }
 .welcome .tour-step.tour-in-back { animation: tour-in .3s ease-out; --from: calc(-1 * var(--drift)); }
 @keyframes tour-out { to { opacity: 0; } }
 @keyframes tour-in { from { opacity: 0; transform: translateX(var(--from, var(--drift))); } }
-.tour-foot { position: fixed; left: 0; right: 0; bottom: max(2rem, calc(env(safe-area-inset-bottom) + 1rem));
-  display: flex; justify-content: space-between; align-items: center; width: min(22rem, calc(100% - 3rem)); margin: 0 auto; }
+.tour-foot { position: fixed; left: 0; right: 0; bottom: 0; padding: .5rem 0 max(2rem, calc(env(safe-area-inset-bottom) + 1rem));
+  display: flex; justify-content: space-between; align-items: center; width: min(22rem, calc(100% - 3rem)); margin: 0 auto;
+  background: var(--bg); }
+/* A long card scrolls under the bottom row: a short fade above it, as above the bottom bar */
+.tour-foot::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 1.5rem;
+  background: linear-gradient(transparent, var(--bg)); pointer-events: none; }
 .tour-dots { color: var(--muted); font-size: .55rem; letter-spacing: .35em; }
 .welcome .tour-step { width: 100%; }
 /* The welcome mark: one ray at a time turns teal, with its path's name underneath */
@@ -523,9 +529,9 @@ button.quiet-inline { color: var(--muted); }
 .welcome .sample .actions { margin-top: 1.2rem; }
 .welcome .sample .actions .term { font-size: .9rem; color: var(--fg); }
 .welcome .sample button.quiet { margin-top: .6rem; }
-.welcome .sample .context p { font: 300 .86rem/1.55 var(--sans); color: var(--muted); margin: .6rem auto 0; max-width: 20rem; }
+.welcome .sample .context p { font: 300 .86rem/1.55 var(--sans); color: var(--muted); margin: .6rem auto 0; max-width: 20rem; white-space: pre-line; text-align: left; }
 /* Skip sits quietly in the top corner; back, the dots and next share the bottom */
-.welcome button.tour-skip { position: fixed; top: max(1.25rem, calc(env(safe-area-inset-top) + .75rem)); right: 1.5rem; }
+.welcome button.tour-skip { position: fixed; top: max(1.25rem, calc(env(safe-area-inset-top) + .75rem)); right: 1.5rem; background: var(--bg); padding: .35rem .5rem; margin-right: -.5rem; }
 .tour-foot .hide { visibility: hidden; }
 #welcome-form .name-input { text-align: center; margin: .5rem 0 .75rem; }
 
