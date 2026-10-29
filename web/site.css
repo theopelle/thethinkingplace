@@ -141,3 +141,11 @@ footer a:hover { color: var(--fg); }
   .home .pause { margin: 1.5rem 0; }
   .devices { margin-top: 0; }
 }
+
+/* Questions page: each question in the serif, the answer below it, like a short conversation. */
+.faq h2 { font: 400 1.2rem/1.35 var(--serif); letter-spacing: 0; text-transform: none; color: var(--fg); margin: 2.2rem 0 .5rem; }
+.faq h2:first-child { margin-top: 1.5rem; }
+/* Four footer links: on a narrow phone they wrap as whole links, never mid-link. */
+footer { flex-wrap: wrap; row-gap: .4rem; }
+footer a { white-space: nowrap; }
+@media (max-width: 420px) { footer { gap: .3rem .55rem; letter-spacing: .03em; } }

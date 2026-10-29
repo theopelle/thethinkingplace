@@ -36,6 +36,7 @@ def main():
     shutil.copytree(os.path.join(ROOT, "vendor"), os.path.join(SITE, "app", "vendor"))
     shutil.copy(os.path.join(WEB, "site.css"), SITE)
     shutil.copy(os.path.join(WEB, "iphone.html"), SITE)
+    shutil.copy(os.path.join(WEB, "llms.txt"), SITE)  # a plain summary for AI assistants
     shutil.copy(os.path.join(WEB, ".htaccess"), SITE)  # HTTPS and fresh updates on OVH
     # GitHub Pages: the custom domain, and no Jekyll processing (it would hide some files).
     open(os.path.join(SITE, "CNAME"), "w").write("thinkingplace.app\n")
@@ -70,9 +71,21 @@ def main():
     # Near the end of About too: where the notes live, and how they can be lost (from Terms).
     notes = re.search(r"\s*<h2>Your notes are yours alone</h2>.*?(?=\s*<h2>)", terms_html, re.S).group(0)
     about_html = "".join(keep) + notes + '\n    <p><a href="app/#/about">More in the app: the paths through time and where our thinkers lived →</a></p>'
-    for name, title, body in (("about.html", "About", about_html), ("terms.html", "Terms & privacy", terms_html)):
+    about_desc = ("About The Thinking Place: a free daily-philosophy app with one short passage a day from twelve paths, "
+                  "from Stoicism and Taoism to Buddhist philosophy and Persian and Sufi poetry. No ads, no tracking.")
+    terms_desc = ("Terms and privacy for The Thinking Place: no analytics, no cookies, no tracking, no account. "
+                  "Your notes stay on your device, and every quotation is public domain.")
+    # Questions: plain answers (web/questions.html), with the number of thoughts rounded down.
+    count = len(by_id) // 100 * 100
+    questions_html = open(os.path.join(WEB, "questions.html"), encoding="utf-8").read().replace("{{COUNT}}", str(count))
+    questions_desc = ("Questions about The Thinking Place: what it is, which thinkers you'll read, where the quotes come from, "
+                      "where your notes are kept, and how to get it on Android, iPhone or a computer.")
+    for name, title, desc, body in (("about.html", "About", about_desc, about_html),
+                                    ("questions.html", "Questions", questions_desc, questions_html),
+                                    ("terms.html", "Terms & privacy", terms_desc, terms_html)):
         open(os.path.join(SITE, name), "w", encoding="utf-8").write(
-            tpl.replace("{{TITLE}}", title.replace("&", "&amp;")).replace("{{PATH}}", name).replace("{{BODY}}", body))
+            tpl.replace("{{TITLE}}", title.replace("&", "&amp;")).replace("{{PATH}}", name)
+               .replace("{{DESC}}", desc).replace("{{BODY}}", body))
     print(f"site/ ready: {sum(len(f) for _, _, f in os.walk(SITE))} files")
 
 

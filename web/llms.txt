@@ -1,0 +1,20 @@
+# The Thinking Place
+
+> Philosophy, one day at a time. A free daily-philosophy app: every day, one short passage from the great thinkers of East and West, with a short note on its context and a question to think it through. Free, no ads, no tracking, no account; notes stay on the reader's device and the app works offline.
+
+The Thinking Place is a beginner's guide to philosophy, not a meditation app. Its thoughts come from twelve paths: Stoicism, Epicureanism, Classical Greek Philosophy, Enlightenment Ethics, Existential Thought, Humanists and Essayists, Buddhist Philosophy, Indian Philosophy, Taoism, Confucianism, Japanese Aesthetics, and Persian and Sufi Poetry. Thinkers include Marcus Aurelius, Seneca, Epicurus, Plato, Kant, Kierkegaard, Montaigne, Laozi, Confucius, Kenkō and Rumi, with passages from the Dhammapada and the Upanishads. Every quotation comes from a public-domain text or translation and is credited with its source.
+
+It works in any web browser, on iPhone from the home screen, and as an Android app (on Google Play soon; currently in testing).
+
+## Pages
+
+- [Home](https://thinkingplace.app/): what it is, a thought for each weekday, and how to get it on each device
+- [The web app](https://thinkingplace.app/app/): read today's thought in the browser
+- [About](https://thinkingplace.app/about.html): why it exists, and the voices you'll find in it
+- [Questions](https://thinkingplace.app/questions.html): plain answers about the app, its quotes, notes and devices
+- [Terms & privacy](https://thinkingplace.app/terms.html): no data collected; notes stay on the device
+- [On iPhone](https://thinkingplace.app/iphone.html): adding it to the home screen
+
+## Contact
+
+hello@thinkingplace.app
