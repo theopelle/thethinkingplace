@@ -18,6 +18,7 @@ sys.path.insert(0, HERE)
 from content_io import ROOT, read_thoughts, read_calendar, read_pinned, read_glossary, translation, source_url
 import calendar_rules
 import check_quotes
+import build_questions
 
 PATHS = ["Stoicism", "Epicureanism", "Classical Greek Philosophy", "Enlightenment Ethics",
          "Existential Thought", "Humanists and Essayists", "Buddhist Philosophy", "Indian Philosophy",
@@ -172,6 +173,7 @@ def main(srcdir):
     json.dump(entries, open(os.path.join(ROOT, "entries.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     json.dump(calendar, open(os.path.join(ROOT, "calendar.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     build_glossary()
+    build_questions.main()  # monthly questions: their excerpts and dates checked against what was just written
     live = [e for e in entries if not e.get("retired")]
     print(f"{len(live)} thoughts (+{len(entries) - len(live)} retired) -> entries.json")
     print(f"{len(days)}-day cycle from {days[0]['date']} ({sum(r for _, r in cycle)} revisits), {len(pinned)} pinned dates "

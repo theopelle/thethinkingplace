@@ -418,6 +418,7 @@
     $("note-status").textContent = "";
     setWriting(false);
     $("back-to-today").hidden = key === today;
+    renderQuestionLine(key);
   }
 
   // The note box is open only while writing; otherwise a saved note shows as a one-line preview.
@@ -547,7 +548,7 @@
   // ---------- past thoughts ----------
   // Every day since the calendar began (plus any older day with a note), newest first,
   // ten at a time, optionally narrowed to some paths and some themes.
-  const journal = { path: [], theme: [], saved: false, shown: PAGE_DAYS };
+  const journal = { path: [], theme: [], saved: false, questions: false, shown: PAGE_DAYS };
   const FILTER_ALL = { path: "all paths", theme: "all themes" };
   const FILTER_SOME = { path: "paths", theme: "themes" };
   let filterLists = { path: [], theme: [] };
@@ -627,11 +628,22 @@
       btn.textContent = !picked.length ? FILTER_ALL[kind] : picked.length === 1 ? picked[0] : `${picked.length} ${FILTER_SOME[kind]}`;
       btn.classList.toggle("active", picked.length > 0);
     }
-    const days = journalDays();
+    // Monthly questions sit among the days, on the day each appeared (above that day's thought);
+    // their filter shows only them. The filter appears once there is one.
+    const today = todayKey(), qMonths = appearedQuestions(today);
+    if (!qMonths.length) journal.questions = false;
+    $("filter-questions").hidden = $("filter-questions-dot").hidden = !qMonths.length;
+    $("filter-questions").classList.toggle("active", journal.questions);
+    $("filter-questions").setAttribute("aria-pressed", String(journal.questions));
+    const items = journal.questions ? [] : journalDays().map((key) => ({ key }));
+    if (journal.questions || (!journal.path.length && !journal.theme.length && !journal.saved))
+      for (const m of qMonths) items.push({ key: questionAppeared(m, today), m });
+    items.sort((a, b) => (a.key !== b.key ? (a.key < b.key ? 1 : -1) : a.m ? -1 : 1));
     const list = $("journal-list");
     list.textContent = "";
-    for (const key of days.slice(0, journal.shown)) {
-      const e = entryShown(key);
+    for (const item of items.slice(0, journal.shown)) {
+      if (item.m) { list.appendChild(questionItem(item)); continue; }
+      const key = item.key, e = entryShown(key);
       const note = noteText(key);
       const li = document.createElement("li");
       const a = document.createElement("a");
@@ -648,12 +660,24 @@
       li.appendChild(a);
       list.appendChild(li);
     }
-    $("journal-empty").hidden = days.length > 0;
+    $("journal-empty").hidden = items.length > 0;
     $("journal-empty").textContent = journal.saved ? "Nothing saved yet. Tap “save” under a thought to keep it here." : "No past thoughts here yet.";
-    $("journal-more").hidden = days.length <= journal.shown;
+    $("journal-more").hidden = items.length <= journal.shown;
+  }
+
+  // A monthly question in Past thoughts: its day, the question, and the reader's pick and note.
+  function questionItem({ key, m }) {
+    const d = questionData(m), li = document.createElement("li"), a = document.createElement("a");
+    a.href = "#/question/" + m;
+    a.append(make("div", "j-date", `${formatDate(key)} · A question for ${monthName(m)}`), make("p", "j-text", questions[m].question));
+    if (d.pick) a.append(make("p", "j-pick", `Closest to: ${d.pick}`));
+    if ((d.note || "").trim()) a.append(make("p", "j-note", d.note.trim()));
+    li.appendChild(a);
+    return li;
   }
 
   function setJournalFilter(change) {
+    if (!("questions" in change)) change = { ...change, questions: false };  // the other filters are for thoughts
     Object.assign(journal, change, { shown: PAGE_DAYS });
     renderJournal();
   }
@@ -665,7 +689,8 @@
     const keys = [...new Set([...store.keys("note:").map((k) => k.slice(5)), ...saved.map((x) => x.key)])].sort();
     let read = [];
     try { read = JSON.parse(store.get("days", "[]")) || []; } catch {}
-    if (!keys.length && !read.length) return flash(btn, "nothing yet");
+    const qMonths = store.keys("question:").map((k) => k.slice(9)).sort();
+    if (!keys.length && !read.length && !qMonths.length) return flash(btn, "nothing yet");
     const blocks = keys.flatMap((key) => {
       // A day's thought, then (rarely) the other thought written about that day.
       const n = readNote(key), shown = entryShown(key);
@@ -676,6 +701,13 @@
         return `${key} — ${e.source} (${e.path})${mark}\n“${e.text}”\n${e.prompt}\n\n${text}\n`;
       });
     });
+    // Then the monthly questions: the pick and the note, with the date.
+    for (const m of qMonths) {
+      const d = questionData(m), q = questions[m];
+      blocks.push(`Monthly question ${m} (${d.date || m}) — A question for ${monthName(m)}\n` +
+        (q ? `“${q.question}”\n` : "") + (d.pick ? `Closest to: ${d.pick}\n` : "") +
+        ((d.note || "").trim() ? `\n${d.note.trim()}\n` : ""));
+    }
     // Last, every day a thought was read (with or without a note), so the count and
     // "you first met this thought" carry over to a new phone.
     if (read.length) blocks.push(`Days you read: ${[...read].sort().join(", ")}\n`);
@@ -730,6 +762,21 @@
           added += dayCount() - before;
           continue;
         }
+        // A monthly question: the pick (if none here yet) and the note, added like any note.
+        const mq = block.trim().match(/^Monthly question (\d{4}-\d{2}) \((\d{4}-\d{2}-\d{2})?/);
+        if (mq) {
+          const body = block.trim(), split = body.indexOf("\n\n"), head = split < 0 ? body : body.slice(0, split);
+          const pick = (head.match(/^Closest to: (.+)$/m) || [])[1], note = split < 0 ? "" : body.slice(split + 2).trim();
+          const had = questionData(mq[1]), change = {};
+          if (pick && !had.pick) change.pick = pick;
+          const old = (had.note || "").trim();
+          if (note && old !== note && !old.includes(note)) change.note = old ? old + "\n\n" + note : note;
+          if (Object.keys(change).length) {
+            saveQuestion(mq[1], Object.assign(change, had.date ? {} : { date: mq[2] || todayKey() }));
+            added++;
+          }
+          continue;
+        }
         const key = (block.trim().match(/^(\d{4}-\d{2}-\d{2}) —/) || [])[1];
         const gap = block.indexOf("\n\n");
         if (!key || gap < 0) continue;
@@ -756,7 +803,140 @@
   function clearNotes() {
     if (!confirm("Erase all your notes from this device? This cannot be undone.")) return;
     store.keys("note:").forEach((k) => store.remove(k));
+    store.keys("question:").forEach((k) => store.remove(k));  // monthly question picks and notes too
     flash($("clear-notes"), "erased");
+  }
+
+  // ---------- monthly questions ----------
+  // Once a month, one question that 2-4 of that month's thoughts answer differently (content in
+  // questions.json, built and checked from content/monthly-questions.xlsx). It appears on the
+  // month's last day and stays at the top of Today for a week, then lives in Past thoughts.
+  // Every voice shows, whether or not the reader opened the app that day. The pick and the note
+  // stay on the phone, saved per month. Only "Ready" months show; test APKs show drafts too,
+  // and the next one at once.
+  const QUESTION_PREVIEW = false;  // make_apk.sh turns this on in test APKs, never in the Play bundle
+  const questionPreview = () => QUESTION_PREVIEW || !!(TEST && TEST.get("question"));
+  const NUMBER_WORDS = ["", "One", "Two", "Three", "Four", "Five"];
+  let questions = {}, questionMonth = null, questionFrom = "day", lastView = "day";
+  const make = (tag, cls, text) => {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  };
+  const monthName = (m) => new Date(Date.UTC(+m.slice(0, 4), +m.slice(5, 7) - 1, 15))
+    .toLocaleDateString("en-GB", { month: "long", timeZone: "UTC" });
+  function questionDay(m) {  // the month's last day
+    const y = +m.slice(0, 4), mo = +m.slice(5, 7);
+    return addDays(`${mo === 12 ? y + 1 : y}-${String(mo % 12 + 1).padStart(2, "0")}-01`, -1);
+  }
+  const questionShown = (m) => !!questions[m] && (questions[m].status === "Ready" || questionPreview());
+  function currentQuestion(today) {
+    const months = Object.keys(questions).filter(questionShown).sort();
+    const live = months.find((m) => today >= questionDay(m) && today <= addDays(questionDay(m), 6));
+    if (live || !questionPreview()) return live || null;
+    return months.find((m) => addDays(questionDay(m), 6) >= today) || null;
+  }
+  function questionData(m) {
+    try { return JSON.parse(store.get("question:" + m, "null")) || {}; } catch { return {}; }
+  }
+  function saveQuestion(m, change) {
+    const d = Object.assign(questionData(m), change);
+    d.date = d.date || todayKey();
+    if ((d.note || "").trim()) askToKeep();
+    if (!d.pick && !(d.note || "").trim()) { store.remove("question:" + m); return true; }
+    return store.set("question:" + m, JSON.stringify(d));
+  }
+
+  // When a month's question appeared (its last day). Test APKs show the current one at once,
+  // so it is listed from today.
+  function questionAppeared(m, today) {
+    if (questionDay(m) <= today) return questionDay(m);
+    return questionPreview() && m === currentQuestion(today) ? today : null;
+  }
+  const appearedQuestions = (today) => Object.keys(questions).filter((m) => questionShown(m) && questionAppeared(m, today));
+
+  function renderQuestionLine(key) {
+    const m = key === todayKey() ? currentQuestion(key) : null;
+    $("mq-line").hidden = !m;
+    if (!m) return;
+    const q = questions[m], n = q.voices.length;
+    $("mq-line").href = "#/question/" + m;
+    $("mq-line-label").textContent = `A question for ${monthName(m)}`;
+    $("mq-line-question").textContent = q.question;
+    $("mq-line-go").textContent = `${NUMBER_WORDS[n] || n} thinkers disagree. Where do you stand?`;
+  }
+
+  // One voice: its path, name, our one-line summary, its own words, then the passage and the
+  // reader's note on it (from any day that month), both folded.
+  function voiceItem(m, v, withNote) {
+    const e = entriesById[v.id], li = make("li", "mq-voice"), links = make("div", "mq-voice-links");
+    li.append(make("p", "mq-voice-path", e.path), make("p", "mq-voice-name", v.voice),
+      make("p", "mq-voice-line", v.line), make("p", "mq-voice-words", `“${v.words}”`), links);
+    const fold = (label, box) => {
+      const b = make("button", "mq-fold", label);
+      b.type = "button";
+      b.setAttribute("aria-expanded", "false");
+      box.hidden = true;
+      b.addEventListener("click", () => { box.hidden = !box.hidden; b.setAttribute("aria-expanded", String(!box.hidden)); });
+      links.append(b);
+      li.append(box);
+    };
+    if (v.whole) links.append(make("p", "mq-source-small", e.source));  // nothing more to read
+    else {
+      const passage = make("div", "mq-folded");
+      passage.append(make("p", "mq-passage", e.text), make("p", "mq-source", e.source));
+      fold("read the passage", passage);
+    }
+    if (withNote) {
+      const day = store.keys("note:").map((k) => k.slice(5)).sort()
+        .find((d) => d.startsWith(m) && ((noteAbout(d, v.id) || {}).text || "").trim());
+      if (day) {
+        const box = make("div", "mq-folded");
+        box.append(make("p", "mq-past-note", noteAbout(day, v.id).text.trim()));
+        fold(`you wrote on ${formatDate(day)}`, box);
+      }
+    }
+    return li;
+  }
+
+  function renderQuestion(m) {
+    const q = questions[m], name = monthName(m), n = q.voices.length;
+    questionMonth = m;
+    $("mq-back").textContent = questionFrom === "journal" ? "← past thoughts" : "← today";
+    $("mq-label").textContent = `A question for ${name}`;
+    $("mq-question").textContent = q.question;
+    $("mq-intro").textContent = `${NUMBER_WORDS[n] || n} thinkers from ${name}'s thoughts answer it differently. Read them, then see where you stand.`;
+    $("mq-voices").replaceChildren(...q.voices.map((v) => voiceItem(m, v, true)));
+    $("mq-ask").textContent = q.question;
+    $("mq-way-in").textContent = q.wayIn;
+    $("mq-note-status").textContent = "";
+    $("mq-picks").replaceChildren(...q.voices.map((v) => v.voice).map((c) => {
+      const b = make("button", "", c);
+      b.type = "button";
+      b.setAttribute("role", "radio");
+      b.dataset.pick = c;
+      return b;
+    }));
+    const saved = questionData(m);
+    showPick(m, saved.pick);
+    $("mq-note").value = saved.note || "";
+  }
+
+  // After a pick (optional): the voice furthest from it, in its own words. Never a word written
+  // in a thinker's voice. (The month's sharpest pair stays in the data, unshown, for later.)
+  function showPick(m, pick) {
+    const q = questions[m], byName = Object.fromEntries(q.voices.map((v) => [v.voice, v]));
+    document.querySelectorAll("#mq-picks [data-pick]").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.pick === pick)));
+    $("mq-pushback").replaceChildren();
+    const v = byName[pick];
+    if (!v) return;
+    const wrap = make("div", "mq-pushback"), list = make("ol", "mq-voices"), other = byName[v.pushedBy];
+    wrap.append(make("h3", "", `Furthest from ${v.voice}: ${other.voice}`),
+      make("p", "mq-why", `Of this month's voices, ${other.voice} disagrees most with ${v.voice}. See if it changes your mind.`));
+    list.append(voiceItem(m, other, false));
+    wrap.append(list);
+    $("mq-pushback").append(wrap);
   }
 
   // ---------- your year: a keepsake ----------
@@ -967,7 +1147,13 @@
   // Each thought has its teaser, in the content team's words; pinned dates have their own,
   // revisits share one. Gentle days, and thoughts without one, get theirs from the thought.
   function teaserFor(today) {
-    const tomorrow = addDays(today, 1);
+    const tomorrow = addDays(today, 1), said = thoughtTeaser(tomorrow);
+    // The evening before a monthly question appears: "…, and a question for November."
+    const m = Object.keys(questions).find((x) => questionShown(x) && questionDay(x) === tomorrow);
+    if (!m) return said;
+    return said ? `${said.replace(/\.$/, "")}, and a question for ${monthName(m)}.` : `Tomorrow: a question for ${monthName(m)}.`;
+  }
+  function thoughtTeaser(tomorrow) {
     if (easyIndex(tomorrow) >= 0) {
       const kind = thoughtKind(entryFor(tomorrow), true);
       return kind ? `Tomorrow: ${kind}.` : "Tomorrow: another gentle thought.";
@@ -1218,7 +1404,7 @@
   function showSitMode() {
     const think = sitNow === "think", started = !!silence.started;
     $("sit-intro").textContent = think ? "Let's think." : "Let's breathe.";
-    $("sit-question").textContent = entryShown(currentKey || todayKey()).prompt;
+    $("sit-question").textContent = silence.question || entryShown(currentKey || todayKey()).prompt;
     $("sit-question").hidden = !think || !started;
     $("breath-box").hidden = think || !started;
   }
@@ -1226,9 +1412,11 @@
   // A soft start: "Let's think" (or breathe) for a few seconds, then the time begins.
   // At the end: welcome back, then write, share, or done for today.
   const INTRO_MS = 3500;
-  function openSilence() {
+  // With a question (from a monthly question's page), that question is shown instead of the day's.
+  function openSilence(question) {
     const minutes = Number(store.get("minutes", "3"));
-    silence = { timers: [] };
+    silence = { timers: [], question: typeof question === "string" ? question : null };
+    $("sit-share").hidden = $("sit-share").previousElementSibling.hidden = !!silence.question;
     $("silence").classList.remove("done", "bye", "leaving");
     $("sit-goodbye").hidden = true;
     $("sit-intro").hidden = false;
@@ -1755,15 +1943,22 @@
       renderLinks(); renderReminder(); renderOfflineStatus();
     }
     else if (hash === "terms") view = "terms";
+    else if (/^question\/\d{4}-\d{2}$/.test(hash) && questionShown(hash.slice(9))) {
+      view = "question";
+      if (lastView !== "question") questionFrom = lastView === "journal" ? "journal" : "day";
+      renderQuestion(hash.slice(9));
+    }
     else {
       const m = hash.match(/^day\/(\d{4}-\d{2}-\d{2})$/);
       renderDay(m ? m[1] : todayKey());
     }
     if (view !== "day") { endReveal(); $("view-day").style.animation = ""; }  // normal fade-in again next time
     document.querySelectorAll(".view").forEach((v) => (v.hidden = v.id !== "view-" + view));
+    updateHint();  // the "more below" arrow belongs to Today only
     document.querySelectorAll("[data-nav]").forEach((a) => {
       if (a.dataset.nav === view) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
+    lastView = view;
     window.scrollTo(0, 0);
     if (view === "day") holdQuestion();
     if (view === "day" && !$("view-day").classList.contains("reveal")) scheduleHomeNote();
@@ -1904,6 +2099,7 @@
     if (!$("home-note").hidden) return closeHomeNote();
     const hash = location.hash.replace(/^#\/?/, "");
     if (hash === "terms") { location.hash = "#/about"; return; }
+    if (hash.startsWith("question/")) { location.hash = questionFrom === "journal" ? "#/journal" : "#/"; return; }
     if (hash) { location.hash = "#/"; return; }
     const App = plugin("App");
     if (App) App.minimizeApp();
@@ -1934,9 +2130,33 @@
     $("back-to-today").addEventListener("click", () => (location.hash = "#/"));
     $("terms-back").addEventListener("click", () => (location.hash = "#/about"));
 
-    $("open-silence").addEventListener("click", openSilence);
+    $("open-silence").addEventListener("click", () => openSilence());
     $("close-silence").addEventListener("click", finishSilence);
-    $("sit-write").addEventListener("click", () => { finishSilence(); setWriting(true); });
+    $("sit-write").addEventListener("click", () => {
+      const fromQuestion = silence && silence.question;
+      finishSilence();
+      if (fromQuestion) $("mq-note").focus(); else setWriting(true);
+    });
+    // Monthly questions
+    $("mq-back").addEventListener("click", () => (location.hash = questionFrom === "journal" ? "#/journal" : "#/"));
+    $("mq-picks").addEventListener("click", (ev) => {
+      const b = ev.target.closest("[data-pick]");
+      if (!b || !questionMonth) return;
+      saveQuestion(questionMonth, { pick: b.dataset.pick });
+      showPick(questionMonth, b.dataset.pick);
+    });
+    let mqTimer;
+    $("mq-note").addEventListener("input", () => {
+      clearTimeout(mqTimer);
+      $("mq-note-status").textContent = "";
+      const m = questionMonth;
+      if (!m) return;
+      saveQuestion(m, { note: $("mq-note").value });
+      mqTimer = setTimeout(() => ($("mq-note-status").textContent = "saved"), 600);
+    });
+    $("filter-questions").addEventListener("click", () =>
+      setJournalFilter(journal.questions ? { questions: false } : { questions: true, path: [], theme: [], saved: false }));
+    $("mq-sit").addEventListener("click", () => questionMonth && openSilence(questions[questionMonth].question));
     $("sit-share").addEventListener("click", share);
     $("sit-finish").addEventListener("click", sitGoodbye);
     $("silence").addEventListener("click", (ev) => {
@@ -2096,7 +2316,7 @@
   function assignSteps() {
     const view = $("view-day");
     view.querySelectorAll("[data-step]").forEach((el) => { delete el.dataset.step; el.style.removeProperty("--step"); });
-    const groups = [["#greeting", "#day-date", "#teaser"],
+    const groups = [["#mq-line", "#greeting", "#day-date", "#teaser"],
       ["#pause-1", "#day-path", ".passage", "#view-day .source", "#context-toggle"],
       ["#pause-2", ".question-label", "#day-prompt", "#memory", "#view-day .actions", "#note-preview"]];
     let step = 0;
@@ -2180,6 +2400,7 @@
     upgradeNotes();
     if (store.get("welcomed") && !store.get("installed")) store.set("installed", todayKey());
     try { glossary = await fetch("glossary.json", { cache: "no-cache" }).then((r) => r.json()); } catch {}
+    try { questions = await fetch("questions.json", { cache: "no-cache" }).then((r) => r.json()); } catch {}
     fillFilters();
     renderTimeline();
     bind();

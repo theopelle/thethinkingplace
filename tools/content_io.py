@@ -88,6 +88,22 @@ def read_pinned():
     return out
 
 
+def read_questions():
+    """Monthly questions: (questions, voices), read by column name. Months are "YYYY-MM"."""
+    wb = load_workbook(os.path.join(CONTENT, "monthly-questions.xlsx"), data_only=True)
+    def rows(name):
+        r = list(wb[name].iter_rows(values_only=True))
+        return [dict(zip(r[0], x)) for x in r[1:] if x and x[0]]
+    questions = [{"month": str(q["Month"]).strip(), "question": q["Question"], "wayIn": q["The way in"],
+                  "pair": [q["Sharpest pair 1"], q["Sharpest pair 2"]],
+                  "disagreement": q["Sharpest disagreement (one line)"], "status": (q["Status"] or "").strip()}
+                 for q in rows("Questions")]
+    voices = [{"month": str(v["Month"]).strip(), "order": int(v["Order"]), "id": int(v["Thought ID"]),
+               "voice": v["Voice"], "line": v["Line"], "words": v["Their words"], "pushedBy": v["Pushed back by"]}
+              for v in rows("Voices")]
+    return questions, voices
+
+
 def read_glossary():
     wb = load_workbook(os.path.join(CONTENT, "glossary.xlsx"), data_only=True)
     out = {}

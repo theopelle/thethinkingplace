@@ -30,6 +30,8 @@
 
     <!-- Today / a single day -->
     <section id="view-day" class="view" hidden>
+      <!-- The month's question, from its last day for a week: the question itself, between short dashes -->
+      <a class="mq-line" id="mq-line" hidden><span class="mq-small" id="mq-line-label"></span><span class="mq-q" id="mq-line-question"></span><span class="mq-go" id="mq-line-go"></span></a>
       <p class="greeting" id="greeting" hidden></p>
       <p class="date" id="day-date"></p>
       <p class="teaser" id="teaser" hidden></p>
@@ -108,6 +110,8 @@
         <button type="button" class="filter" id="filter-theme" data-filter="theme" aria-haspopup="listbox" aria-expanded="false">all themes</button>
         <span class="dot" aria-hidden="true">·</span>
         <button type="button" class="filter filter-toggle" id="filter-saved" aria-pressed="false">saved</button>
+        <span class="dot" aria-hidden="true" id="filter-questions-dot" hidden>·</span>
+        <button type="button" class="filter filter-toggle" id="filter-questions" aria-pressed="false" hidden>monthly questions</button>
       </div>
       <ol class="journal" id="journal-list"></ol>
       <p class="muted journal-empty" id="journal-empty" hidden>No past thoughts here yet.</p>
@@ -115,6 +119,26 @@
     </section>
 
     <!-- Settings -->
+    <!-- A question for the month: the voices that answer it, then where you stand -->
+    <section id="view-question" class="view mq" hidden>
+      <button class="link quiet back mq-back" id="mq-back" type="button">← today</button>
+      <p class="mq-small" id="mq-label"></p>
+      <h1 class="mq-title" id="mq-question"></h1>
+      <p class="mq-intro" id="mq-intro"></p>
+      <ol class="mq-voices" id="mq-voices"></ol>
+      <section class="mq-stand">
+        <p class="mq-ask" id="mq-ask"></p>
+        <h2>Where do you stand?</h2>
+        <p class="mq-way-in" id="mq-way-in"></p>
+        <p class="mq-pick-label" id="mq-pick-label">Who sits closest to you?</p>
+        <div class="mq-picks" id="mq-picks" role="radiogroup" aria-labelledby="mq-pick-label"></div>
+        <div id="mq-pushback"></div>
+        <textarea id="mq-note" rows="4" aria-label="Your note on this question" placeholder="Write freely. Only you can see this."></textarea>
+        <div class="note-foot"><span></span><p class="note-status" id="mq-note-status" aria-live="polite"></p></div>
+        <p class="mq-sit"><button class="link" id="mq-sit" type="button">sit with this question</button></p>
+      </section>
+    </section>
+
     <section id="view-settings" class="view" hidden>
       <h1>Settings</h1>
       <div id="easy-setting" hidden>

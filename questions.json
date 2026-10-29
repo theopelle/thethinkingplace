@@ -1,0 +1,338 @@
+{
+ "2026-11": {
+  "question": "Do we need rules to be good?",
+  "wayIn": "Think of a rule you broke, or kept, this month.",
+  "pair": [
+   "Zhuangzi",
+   "Spinoza"
+  ],
+  "disagreement": "Rules spoil what is natural, or rules we understand set us free.",
+  "status": "Ready",
+  "voices": [
+   {
+    "order": 1,
+    "id": 328,
+    "voice": "Dhammapada",
+    "line": "Being good is each person's own work.",
+    "words": "Purity and impurity belong to oneself, no one can purify another.",
+    "pushedBy": "Spinoza",
+    "dates": [
+     "2026-11-20"
+    ],
+    "whole": false
+   },
+   {
+    "order": 2,
+    "id": 509,
+    "voice": "Mencius",
+    "line": "An inner sense of shame matters most.",
+    "words": "The sense of shame is to a man of great importance.",
+    "pushedBy": "Zhuangzi",
+    "dates": [
+     "2026-11-18"
+    ],
+    "whole": true
+   },
+   {
+    "order": 3,
+    "id": 464,
+    "voice": "Zhuangzi",
+    "line": "Rules spoil what is natural.",
+    "words": "Horses can with their hoofs tread on the hoarfrost and snow, and with their hair withstand the wind and cold; … they prance with their legs and leap:—this is the true nature of horses.",
+    "pushedBy": "Spinoza",
+    "dates": [
+     "2026-11-29"
+    ],
+    "whole": false
+   },
+   {
+    "order": 4,
+    "id": 191,
+    "voice": "Spinoza",
+    "line": "Good laws free us when we understand them.",
+    "words": "The man, who is guided by reason, does not obey through fear.",
+    "pushedBy": "Zhuangzi",
+    "dates": [
+     "2026-11-17"
+    ],
+    "whole": true
+   }
+  ]
+ },
+ "2026-12": {
+  "question": "Is the struggle the best part?",
+  "wayIn": "Think of something you worked hard for this year, and how it felt to get there.",
+  "pair": [
+   "William James",
+   "Omar Khayyam"
+  ],
+  "disagreement": "Striving is what makes us feel alive, or striving steals the sweetness of today.",
+  "status": "Ready",
+  "voices": [
+   {
+    "order": 1,
+    "id": 51,
+    "voice": "Seneca",
+    "line": "Hardship becomes pleasure with habit.",
+    "words": "…by degrees men find pleasure in doing what they were first driven to do by necessity.",
+    "pushedBy": "Omar Khayyam",
+    "dates": [
+     "2026-12-01"
+    ],
+    "whole": true
+   },
+   {
+    "order": 2,
+    "id": 586,
+    "voice": "Omar Khayyam",
+    "line": "Stop fretting and enjoy today.",
+    "words": "Unborn To-morrow, and dead Yesterday / Why fret about them if To-day be sweet!",
+    "pushedBy": "William James",
+    "dates": [
+     "2026-12-08"
+    ],
+    "whole": false
+   },
+   {
+    "order": 3,
+    "id": 227,
+    "voice": "Pascal",
+    "line": "Always striving, we never actually live.",
+    "words": "Thus we never live, but hope to live, and while we always lay ourselves out to be happy, it is inevitable that we can never be so.",
+    "pushedBy": "William James",
+    "dates": [
+     "2026-12-23"
+    ],
+    "whole": true
+   },
+   {
+    "order": 4,
+    "id": 239,
+    "voice": "William James",
+    "line": "Struggle is what makes us feel alive.",
+    "words": "Need and struggle are what excite and inspire us; our hour of triumph is what brings the void.",
+    "pushedBy": "Omar Khayyam",
+    "dates": [
+     "2026-12-11"
+    ],
+    "whole": true
+   }
+  ]
+ },
+ "2027-01": {
+  "question": "Who judges better, the many or the one?",
+  "wayIn": "Think of a time you went along with a group, or stood against one.",
+  "pair": [
+   "Aristotle",
+   "John Stuart Mill"
+  ],
+  "disagreement": "The group sees more together, or the lone voice may be the one who is right.",
+  "status": "Ready",
+  "voices": [
+   {
+    "order": 1,
+    "id": 309,
+    "voice": "Dhammapada",
+    "line": "The wise aren't moved by others' opinions.",
+    "words": "As a solid rock is not shaken by the wind, wise people falter not amidst blame and praise.",
+    "pushedBy": "Aristotle",
+    "dates": [
+     "2027-01-10"
+    ],
+    "whole": true
+   },
+   {
+    "order": 2,
+    "id": 130,
+    "voice": "Aristotle",
+    "line": "Together, the many see more than one.",
+    "words": "…a multitude is a better judge of many things than any individual.",
+    "pushedBy": "John Stuart Mill",
+    "dates": [
+     "2027-01-11"
+    ],
+    "whole": true
+   },
+   {
+    "order": 3,
+    "id": 160,
+    "voice": "John Stuart Mill",
+    "line": "No majority may silence a lone voice.",
+    "words": "If all mankind minus one, were of one opinion, and only one person were of the contrary opinion, mankind would be no more justified in silencing that one person, than he, if he had the power, would be justified in silencing mankind.",
+    "pushedBy": "Aristotle",
+    "dates": [
+     "2027-01-09"
+    ],
+    "whole": true
+   }
+  ]
+ },
+ "2027-02": {
+  "question": "Is a good life a quiet one?",
+  "wayIn": "Think of a risk you took, or turned down, recently.",
+  "pair": [
+   "Kenkō",
+   "William James"
+  ],
+  "disagreement": "Peace and leisure, or risk and commitment.",
+  "status": "Ready",
+  "voices": [
+   {
+    "order": 1,
+    "id": 138,
+    "voice": "Cephalus, in Plato's Republic",
+    "line": "Calm comes when desire lets go.",
+    "words": "Old age has a great sense of calm and freedom; when the passions relax their hold…",
+    "pushedBy": "William James",
+    "dates": [
+     "2027-02-28"
+    ],
+    "whole": false
+   },
+   {
+    "order": 2,
+    "id": 522,
+    "voice": "Kenkō",
+    "line": "Leisure and solitude are good in themselves.",
+    "words": "Free from surrounding cares, it is good merely to be alone.",
+    "pushedBy": "William James",
+    "dates": [
+     "2027-02-25"
+    ],
+    "whole": false
+   },
+   {
+    "order": 3,
+    "id": 240,
+    "voice": "William James",
+    "line": "We only truly live by taking risks.",
+    "words": "It is only by risking our persons from one hour to another that we live at all.",
+    "pushedBy": "Kenkō",
+    "dates": [
+     "2027-02-24"
+    ],
+    "whole": true
+   }
+  ]
+ },
+ "2027-03": {
+  "question": "Should we tend our own garden, or the common one?",
+  "wayIn": "Think of something in your street, workplace or town that nobody takes care of.",
+  "pair": [
+   "Voltaire",
+   "Rousseau"
+  ],
+  "disagreement": "Tend what is within reach, or shared affairs fall to whoever still cares.",
+  "status": "Ready",
+  "voices": [
+   {
+    "order": 1,
+    "id": 118,
+    "voice": "Aristotle",
+    "line": "We flourish only among others.",
+    "words": "Man is by nature a social being.",
+    "pushedBy": "Marcus Aurelius",
+    "dates": [
+     "2027-03-29"
+    ],
+    "whole": true
+   },
+   {
+    "order": 2,
+    "id": 14,
+    "voice": "Marcus Aurelius",
+    "line": "Mind your own conduct, not your neighbour's.",
+    "words": "How much trouble he avoids who does not look to see what his neighbor says or does or thinks, but only to what he does himself.",
+    "pushedBy": "Rousseau",
+    "dates": [
+     "2027-03-03"
+    ],
+    "whole": true
+   },
+   {
+    "order": 3,
+    "id": 611,
+    "voice": "Voltaire",
+    "line": "Tend what is within reach.",
+    "words": "\"I also know,\" said Candide, \"that we must cultivate our garden.\"",
+    "pushedBy": "Rousseau",
+    "dates": [
+     "2027-03-11"
+    ],
+    "whole": true
+   },
+   {
+    "order": 4,
+    "id": 617,
+    "voice": "Rousseau",
+    "line": "Shared affairs need everyone's care.",
+    "words": "As soon as anyone says of public affairs, \"What does it matter to me?\", the state should be counted as lost.",
+    "pushedBy": "Voltaire",
+    "dates": [
+     "2027-03-26"
+    ],
+    "whole": true
+   }
+  ]
+ },
+ "2027-04": {
+  "question": "Does happiness come from getting what we want?",
+  "wayIn": "Think of the last thing you wanted badly, and what happened when you got it, or didn't.",
+  "pair": [
+   "Émilie du Châtelet",
+   "Epicurus"
+  ],
+  "disagreement": "Feed your passions, or learn where desire should stop.",
+  "status": "Ready",
+  "voices": [
+   {
+    "order": 1,
+    "id": 86,
+    "voice": "Epicurus",
+    "line": "Desire has no limit unless the mind sets one.",
+    "words": "The flesh assumes the limits of pleasure to be infinite, and only infinite time would satisfy it.",
+    "pushedBy": "Émilie du Châtelet",
+    "dates": [
+     "2027-04-03"
+    ],
+    "whole": true
+   },
+   {
+    "order": 2,
+    "id": 28,
+    "voice": "Boethius",
+    "line": "Happiness depends on how we see things.",
+    "words": "…nothing is wretched, but thinking makes it so, and conversely every lot is happy if borne with equanimity.",
+    "pushedBy": "Émilie du Châtelet",
+    "dates": [
+     "2027-04-15"
+    ],
+    "whole": false
+   },
+   {
+    "order": 3,
+    "id": 194,
+    "voice": "Émilie du Châtelet",
+    "line": "Satisfied passions are what make us happy.",
+    "words": "We are happy only through tastes or passions that are satisfied.",
+    "pushedBy": "Epicurus",
+    "dates": [
+     "2027-04-04"
+    ],
+    "whole": true
+   },
+   {
+    "order": 4,
+    "id": 156,
+    "voice": "Kant",
+    "line": "We can't even say what would make us happy.",
+    "words": "The notion of happiness is so indefinite that although every man wishes to attain it, yet he never can say definitely and consistently what it is that he really wishes and wills.",
+    "pushedBy": "Émilie du Châtelet",
+    "dates": [
+     "2027-04-22"
+    ],
+    "whole": true
+   }
+  ]
+ }
+}
