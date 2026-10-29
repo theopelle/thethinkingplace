@@ -470,7 +470,7 @@ button.quiet-inline { color: var(--muted); }
 
 /* Links at the end of a block (feedback) */
 .block-links { margin-top: .5rem; }
-.block-links a { color: var(--fg); }
+.block-links a { color: var(--fg); white-space: nowrap; }
 
 /* The paths through time */
 .timeline { list-style: none; margin: 1.25rem 0 1.5rem; padding: 0 0 0 1.1rem; border-left: 1px solid var(--faint); }

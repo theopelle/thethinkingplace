@@ -475,6 +475,18 @@
     else toast("Couldn't copy on this device.");
   }
 
+  // "tell a friend" (About): just a link to the phone's share sheet, never a prompt. It
+  // points to the website, which sends each device to the right place.
+  async function tellFriend() {
+    const text = `${APP_NAME}: one short passage of philosophy a day. https://${SITE}`;
+    const Share = plugin("Share");
+    if (Share || navigator.share) {
+      try { await (Share ? Share.share({ text }) : navigator.share({ text })); } catch {}  // closed: nothing to say
+      return;
+    }
+    toast(await copyText(text) ? "Copied. Paste it anywhere you like." : "Couldn't copy on this device.");
+  }
+
   async function copyText(text) {
     try {
       await navigator.clipboard.writeText(text);
@@ -1938,6 +1950,7 @@
     });
 
     document.addEventListener("click", (ev) => {
+      if (ev.target.closest(".tell-friend")) { ev.preventDefault(); tellFriend(); return; }
       const term = ev.target.closest(".term, .map-dot, .tl-path");
       if (term) {
         ev.preventDefault();
