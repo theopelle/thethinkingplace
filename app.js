@@ -1658,7 +1658,14 @@
   // phone for the next 60 days (rescheduled at every opening); after that comes one last
   // plain reminder, then quiet until the app is opened again.
   const AHEAD_DAYS = 60, DAY_IDS = 100;
+  // On the day a monthly question appears, that morning's reminder says so too (no extra
+  // notification): "A Taoist thought on habits, and a question for November."
   function reminderText(key) {
+    const text = thoughtReminder(key);
+    const m = Object.keys(questions).find((x) => questionShown(x) && questionDay(x) === key);
+    return m ? `${text.replace(/\.$/, "")}, and a question for ${monthName(m)}.` : text;
+  }
+  function thoughtReminder(key) {
     if (easyIndex(key) >= 0) {
       const kind = thoughtKind(entryFor(key), true);
       return kind ? `${kind[0].toUpperCase()}${kind.slice(1)}.` : "A gentle thought for today.";
@@ -1677,7 +1684,9 @@
     const now = new Date(), list = [];
     const note = (id, at, body) => ({ id, title: APP_NAME, body, schedule: { at, allowWhileIdle: true },
       isExactNotification: false, smallIcon: "ic_stat_well", iconColor: "#4E7378" });
-    for (let d = 0; d <= AHEAD_DAYS; d++) {
+    // From tomorrow: this runs whenever the app is open (each opening, a change in Settings, a
+    // return to the app), so today's thought has been seen and today's reminder would only nag.
+    for (let d = 1; d <= AHEAD_DAYS; d++) {
       const at = new Date(now.getFullYear(), now.getMonth(), now.getDate() + d, r.hour, 0, 0);
       if (at <= now || (r.freq === "weekly" && at.getDay() + 1 !== r.weekday)) continue;  // weekday: 1 = Sunday
       const key = `${at.getFullYear()}-${String(at.getMonth() + 1).padStart(2, "0")}-${String(at.getDate()).padStart(2, "0")}`;
