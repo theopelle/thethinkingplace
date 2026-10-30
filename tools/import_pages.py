@@ -40,7 +40,7 @@ SECTION_COLS = [
     # The opening essay
     "Essay",
 ]
-COLUMNS = ["Page ID", "Type", "Title", "Header", "Path", "Era", "Era order", "Theme", "Society topic", "Thought IDs",
+COLUMNS = ["Page ID", "Type", "Title", "Header", "Path", "Era", "Era order", "Theme", "Society topic", "Thought IDs", "Tags", "Search aliases",
            *SECTION_COLS, "Sources", "Status", "Source doc", "Note"]
 
 
@@ -125,13 +125,15 @@ def parse(md_text, doc_name):
             "Society topic": "yes" if society else "",
             "Thought IDs": thought_ids(notes_text) if kind == "topic" and "#" in notes_text else "",
             "Sources": sections.get("Sources", ""),
+            "Tags": ", ".join(t.strip() for t in sections.get("Tags", "").replace("\n", ",").split(",") if t.strip()),
+            "Search aliases": "",
             "Status": "Draft",
             "Source doc": doc_name,
             "Note": "",
         }
         for col in SECTION_COLS:
             row[col] = sections.get(col, "")
-        extra = set(sections) - set(SECTION_COLS) - {"Sources", "Your thoughts and notes", "The thinkers of this era"}
+        extra = set(sections) - set(SECTION_COLS) - {"Sources", "Your thoughts and notes", "The thinkers of this era", "Tags"}
         if extra:
             row["Note"] = "Unmapped sections: " + ", ".join(sorted(extra))
         pages.append(row)
@@ -154,6 +156,41 @@ def sources_rows(page):
             elif part.strip():
                 rows.append([page["Page ID"], part.strip(), ""])
     return rows
+
+
+TAGS_FILE = Path(__file__).resolve().parent.parent / "content" / "page-tags.xlsx"
+
+
+def apply_tags(pages):
+    """Merge content/page-tags.xlsx into the pages: Tags (shown as "Also about",
+    the doc's own ### Tags first) and Search aliases (search only). Returns the
+    glossary card -> page rows, for the "Glossary links" sheet."""
+    if not TAGS_FILE.exists():
+        return []
+    wb = openpyxl.load_workbook(TAGS_FILE)
+    for pid, _title, tags, aliases in wb["Tags"].iter_rows(min_row=2, values_only=True):
+        if pid not in pages:
+            print("  TAGS CHECK: page-tags.xlsx names a page that is not in the sheet yet:", pid)
+            continue
+        page = pages[pid]
+        mine = [t.strip() for t in (page.get("Tags") or "").split(",") if t.strip()]
+        more = [t.strip() for t in (tags or "").split(",") if t.strip()]
+        seen, merged = set(), []
+        for t in mine + more:
+            if t.lower() not in seen:
+                seen.add(t.lower())
+                merged.append(t)
+        page["Tags"] = ", ".join(merged)
+        page["Search aliases"] = aliases or ""
+    links = [list(r) for r in wb["Glossary links"].iter_rows(min_row=2, values_only=True) if r[0]]
+    bad = [r for r in links if r[1] not in pages]
+    for r in bad:
+        print("  TAGS CHECK: glossary card", repr(r[0]), "links to a page not in the sheet yet:", r[1])
+    untagged = [p["Page ID"] for p in pages.values() if not p.get("Tags") and p["Type"] != "essay"]
+    if untagged:
+        print(f"  tags: {len(untagged)} pages have no Tags yet:", ", ".join(untagged[:12]), "…" if len(untagged) > 12 else "")
+    print(f"  tags: {len(links)} glossary cards linked, {len(bad)} to pages not yet imported")
+    return links
 
 
 def _words(s):
@@ -212,6 +249,7 @@ def main(out, inputs):
             existing[page["Page ID"]] = page
 
     assign_eras(existing)
+    card_links = apply_tags(existing)
     if era_list:
         for page in existing.values():
             if page["Type"] == "era":
@@ -232,6 +270,7 @@ def main(out, inputs):
         ["Thought IDs: only for topic pages that pick thoughts by hand. Theme and path pages pick thoughts by theme or path."],
         ["The app shows only thoughts the reader has already met, counted as '[n] thoughts so far'."],
         ["Era: on era pages, the era's own name; on thinker and text pages, the era they belong to (for the 'In their time: [era] →' link). Era order: 1 = oldest, for the timeline."],
+        ["Tags: shown as 'Also about' (first 6) and used by search; Search aliases: search only. Both come from content/page-tags.xlsx plus each doc's '### Tags'. Glossary links: where each concept card's 'More in: [page] →' goes."],
         ["Status: Draft until Théo marks a page Ready. Only Ready pages ship."],
     ]:
         readme.append(line)
@@ -245,7 +284,7 @@ def main(out, inputs):
         c.font = Font(bold=True)
         c.fill = PatternFill("solid", fgColor="E7F1FB")
     widths = {"Page ID": 28, "Type": 9, "Title": 26, "Header": 40, "Path": 22, "Era": 26, "Era order": 8, "Theme": 26, "Society topic": 8,
-              "Thought IDs": 18, "Sources": 60, "Status": 9, "Source doc": 24, "Note": 30}
+              "Thought IDs": 18, "Tags": 40, "Search aliases": 30, "Sources": 60, "Status": 9, "Source doc": 24, "Note": 30}
     for i, col in enumerate(COLUMNS, 1):
         letter = openpyxl.utils.get_column_letter(i)
         ws.column_dimensions[letter].width = widths.get(col, 50)
@@ -264,6 +303,15 @@ def main(out, inputs):
     src.column_dimensions["A"].width = 28
     src.column_dimensions["B"].width = 70
     src.column_dimensions["C"].width = 70
+
+    gl = wb.create_sheet("Glossary links")
+    gl.append(["Concept card", "Page ID", "Page title"])
+    for r in card_links:
+        gl.append(r[:3])
+    for c in gl[1]:
+        c.font = Font(bold=True)
+    for col, w in zip("ABC", (40, 34, 40)):
+        gl.column_dimensions[col].width = w
 
     wb.save(out)
     print(f"{out}: {len(pages)} pages, {src.max_row - 1} source rows")
