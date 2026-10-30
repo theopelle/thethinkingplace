@@ -461,7 +461,7 @@ In 1906, Okakura Kakuzō wrote *The Book of Tea* in English, to explain Japanese
 
 ### Who we read
 
-Sei Shōnagon, Kamo no Chōmei, Kenkō, and Kakuzo Okakura.
+Sei Shōnagon, Kamo no Chōmei, Kenkō, and Okakura Kakuzō.
 
 ### Next to its neighbours
 

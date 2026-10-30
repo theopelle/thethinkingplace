@@ -64,7 +64,7 @@ He also served Nero, and one of his essays praises the young emperor's mercy. Re
 
 - Wikipedia, "Seneca the Younger": https://en.wikipedia.org/wiki/Seneca\_the\_Younger
 - Stanford Encyclopedia of Philosophy, "Seneca": https://plato.stanford.edu/entries/seneca/
-- Britannica, "Why is Seneca important?": https://www.britannica.com/question/Why-is-Seneca-important
+- Britannica, "Seneca": https://www.britannica.com/biography/Lucius-Annaeus-Seneca-Roman-philosopher-and-statesman
 
 ## Thinker page: Zhuangzi
 
@@ -103,7 +103,7 @@ The Inner Chapters, especially chapter 2 (with the butterfly dream) and chapter 
 ### Sources
 
 - Wikipedia, "Zhuang Zhou": https://en.wikipedia.org/wiki/Zhuang\_Zhou
-- Britannica, "Zhuangzi": https://www.britannica.com/biography/Zhuangzi
+- Britannica, "Zhuangzi": https://www.britannica.com/biography/Zhuang-Zhou
 - Stanford Encyclopedia of Philosophy, "Zhuangzi": https://plato.stanford.edu/entries/zhuangzi/ · The app's thoughts #433 and #437 (Zhuangzi, ch. 5 and 18, Giles translation)
 
 ## Thinker page: Émilie du Châtelet

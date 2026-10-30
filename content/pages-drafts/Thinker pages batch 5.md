@@ -160,7 +160,7 @@ A strange legend, recorded by Saint Jerome four centuries later, says Lucretius 
 
 ## Immanuel Kant
 
-**Immanuel Kant** · Königsberg, Russia · 1724 – 1804 · Enlightenment Ethics
+**Immanuel Kant** · Königsberg (now Kaliningrad, Russia) · 1724 – 1804 · Enlightenment Ethics
 
 ### Who he was
 

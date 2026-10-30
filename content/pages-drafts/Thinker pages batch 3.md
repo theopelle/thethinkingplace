@@ -241,7 +241,7 @@ There is also a darker side. In a footnote to his essay "Of National Characters"
 
 ## Arthur Schopenhauer
 
-**Arthur Schopenhauer** · Danzig, Poland · 1788 – 1860 · Existential Thought
+**Arthur Schopenhauer** · Danzig (now Gdańsk, Poland) · 1788 – 1860 · Existential Thought
 
 ### Who he was
 

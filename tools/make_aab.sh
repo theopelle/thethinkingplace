@@ -12,8 +12,8 @@ fi
 export JAVA_HOME="${JAVA_HOME:-$(ls -d "$HOME"/Library/Java/JavaVirtualMachines/jdk-21*/Contents/Home | head -1)}"
 export ANDROID_HOME="${ANDROID_HOME:-$HOME/Library/Android/sdk}"
 sh tools/make_site.sh
-if ! grep -q "const QUESTION_PREVIEW = false;" site/app/app.js; then
-  echo "The monthly-question preview is on: it belongs in test APKs only." >&2
+if ! grep -q "const QUESTION_PREVIEW = false;" site/app/app.js || ! grep -q "const LIBRARY_PREVIEW = false;" site/app/app.js; then
+  echo "A preview (monthly questions or the Library) is on: it belongs in test APKs only." >&2
   exit 1
 fi
 npx cap sync android

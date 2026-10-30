@@ -418,6 +418,7 @@
     $("note-status").textContent = "";
     setWriting(false);
     $("back-to-today").hidden = key === today;
+    $("back-to-today").textContent = dayFromPage ? "← back" : "← today";
     renderQuestionLine(key);
   }
 
@@ -631,6 +632,11 @@
     // Monthly questions sit among the days, on the day each appeared (above that day's thought);
     // their filter shows only them. The filter appears once there is one.
     const today = todayKey(), qMonths = appearedQuestions(today);
+    // One path or one theme picked, with a Library page: "More about Stoicism →".
+    const one = (kind, find) => !journal.questions && journal[kind].length === 1 ? library.pages.find((p) => find(p, journal[kind][0]) && pageShown(p.id)) : null;
+    const topics = [one("path", (p, v) => p.type === "path" && p.title === v), one("theme", (p, v) => p.type === "topic" && p.theme === v)].filter(Boolean);
+    $("journal-topic").hidden = !topics.length;
+    $("journal-topic").replaceChildren(...topics.map((p) => pageLink(p.id, `More about ${p.type === "path" ? p.title : pageTitle(p).toLowerCase()} →`)));
     if (!qMonths.length) journal.questions = false;
     $("filter-questions").hidden = $("filter-questions-dot").hidden = !qMonths.length;
     $("filter-questions").classList.toggle("active", journal.questions);
@@ -871,7 +877,11 @@
   // reader's note on it (from any day that month), both folded.
   function voiceItem(m, v, withNote) {
     const e = entriesById[v.id], li = make("li", "mq-voice"), links = make("div", "mq-voice-links");
-    li.append(make("p", "mq-voice-path", e.path), make("p", "mq-voice-name", v.voice),
+    // A voice's name opens its Library page.
+    const page = library.pages.find((p) => (p.type === "thinker" || p.type === "text") && (p.thoughts || []).includes(v.id) && pageShown(p.id));
+    const name = make("p", "mq-voice-name");
+    if (page) name.append(pageLink(page.id, v.voice, "mq-voice-link")); else name.textContent = v.voice;
+    li.append(make("p", "mq-voice-path", e.path), name,
       make("p", "mq-voice-line", v.line), make("p", "mq-voice-words", `“${v.words}”`), links);
     const fold = (label, box) => {
       const b = make("button", "mq-fold", label);
@@ -894,7 +904,7 @@
       if (day) {
         const box = make("div", "mq-folded");
         box.append(make("p", "mq-past-note", noteAbout(day, v.id).text.trim()));
-        fold(`you wrote on ${formatDate(day)}`, box);
+        fold("your note", box);
       }
     }
     return li;
@@ -937,6 +947,474 @@
     list.append(voiceItem(m, other, false));
     wrap.append(list);
     $("mq-pushback").append(wrap);
+  }
+
+  // ---------- the Library ----------
+  // Pages about the thinkers, texts, paths, eras and themes behind each day's thought (pages.json,
+  // built and checked from content/pages.xlsx). The words are the content team's, shown as written:
+  // light Markdown only (bold, italic, bullets, paragraphs), never rewritten here. Only "Ready" pages
+  // show; test APKs show drafts too. Every page is open to everyone: no locks, no "met" marks.
+  const LIBRARY_PREVIEW = false;  // make_apk.sh turns this on in test APKs, never in the Play bundle
+  const libraryPreview = () => LIBRARY_PREVIEW || !!(TEST && TEST.get("library"));
+  let library = { pages: [], related: {}, links: {}, cards: {}, glossaryLinks: {} }, pageById = {}, routeCount = 0, dayFromPage = false, libraryAnchor = null,
+    libSection = null, mapFromWorld = false;
+  const pageShown = (id) => !!pageById[id] && (pageById[id].status === "Ready" || libraryPreview());
+  const KIND = { thinker: "Thinker", text: "Text", path: "Path", topic: "Theme", era: "Era", essay: "" };
+  const LIB_SECTIONS = [["time", "In their time", "Where history meets philosophy"],
+    ["paths", "Paths", "The twelve schools of thought"], ["people", "Thinkers and texts", "From A to Z"],
+    ["topics", "Themes and topics", "The big questions, across traditions"], ["maps", "Maps and timelines", "Where and when they lived"]];
+  // Maps and timelines: today's About maps and timeline, moved here (more come later).
+  const LIB_MAPS = [["world", "The world", "Every place our thinkers lived and wrote"],
+    ["europe", "Europe and the Mediterranean, closer", "From Athens and Rome to Paris and London"],
+    ["asia", "Asia, closer", "China, Japan, India and Persia"],
+    ["paths-in-time", "The paths through time", "Each path from when it began"],
+    ["thinkers-in-time", "The thinkers through time", "Every thinker on one line, from the Upanishads to Simone Weil"]];
+  const libraryOn = () => library.pages.some((p) => pageShown(p.id));
+  const pageTitle = (p) => p.title.replace(/ \(society\)$/, "");
+  const PATH_ORDER = ["Stoicism", "Epicureanism", "Classical Greek Philosophy", "Enlightenment Ethics", "Existential Thought",
+    "Humanists and Essayists", "Buddhist Philosophy", "Indian Philosophy", "Taoism", "Confucianism", "Japanese Aesthetics",
+    "Persian and Sufi Poetry"];  // as on the About timeline
+  const pageOf = (type, title) => library.pages.find((p) => p.type === type && p.title === title && pageShown(p.id));
+  const plain = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "");
+  // A to Z by surname: Kant under K, du Châtelet under C, the texts by their main word.
+  const SORT_AS = { "Émilie du Châtelet": "Chatelet", "Jean de La Bruyère": "La Bruyere", "Kamo no Chōmei": "Chomei",
+    "Ibn Arabi": "Ibn Arabi", "Omar Khayyam": "Khayyam", "Sei Shōnagon": "Shonagon", "Questions of King Milinda": "Milinda",
+    "Al-Ghazali": "Ghazali", "Bhagavad Gita": "Bhagavad Gita", "Okakura Kakuzō": "Okakura" };  // family name first
+  function sortKey(p) {
+    const t = p.title.replace(/^The /, "");
+    return plain(SORT_AS[t] || (p.type === "thinker" ? t.split(" ").pop() : t));
+  }
+
+  const stripMd = (md) => md.replace(/\*\*|\*/g, "").replace(/^\s*- /gm, "");
+  // The opening words of a page: its "In one line", or its first paragraph.
+  function firstWords(p) {
+    const one = p.sections.find(([t]) => t === "In one line");
+    return stripMd((one || p.sections[0] || ["", ""])[1]).split(/\n\s*\n/)[0];
+  }
+  // Every page comes round in turn, a new one each Monday (from Monday 19 October 2026), in a
+  // fixed shuffled order.
+  function weeklyPage(today) {
+    const hash = (t) => [...t].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+    const list = library.pages.filter((p) => p.type !== "essay" && pageShown(p.id)).sort((a, b) => hash(a.id) - hash(b.id));
+    if (!list.length) return null;
+    const week = Math.floor(daysBetween("2026-10-19", today) / 7);
+    return list[((week % list.length) + list.length) % list.length];
+  }
+
+  // Search: accents and case ignored; a title match first, then keywords, then other names, then
+  // the text. Each result says why it matched.
+  const foldText = (t) => [...t].map((c) => c.normalize("NFD")[0]).join("").toLowerCase();  // one character for each
+  let searchIndex = null;
+  function search(q) {
+    const f = foldText(q.trim());
+    if (f.length < 2) return [];
+    searchIndex = searchIndex || library.pages.filter((p) => p.type !== "essay" && pageShown(p.id)).map((p) => {
+      const text = stripMd(p.sections.map(([, md]) => md).join("\n\n"));
+      return { p, title: foldText(pageTitle(p)), tags: p.tags.map(foldText), aliases: p.aliases.map(foldText), text, folded: foldText(text) };
+    });
+    // A match at the start of a word ("passions") counts before one inside a word ("compassion").
+    const wordAt = (t) => { const m = new RegExp(`(^|[^\\p{L}\\p{N}])${escapeRe(f)}`, "u").exec(t); return m ? m.index + m[1].length : -1; };
+    const hits = [];
+    for (const x of searchIndex) {
+      let rank, why;
+      const tag = (inside) => x.tags.findIndex((t) => (inside ? t.includes(f) : wordAt(t) >= 0));
+      const at = wordAt(x.folded);
+      if (x.title.includes(f)) { rank = x.title.startsWith(f) ? 0 : 1; why = firstWords(x.p); }
+      else if (tag(false) >= 0) { rank = 2 + tag(false) / 100; why = "Keywords: " + x.p.tags.filter((t, i) => wordAt(x.tags[i]) >= 0).join(", "); }  // an earlier keyword counts more
+      else if (x.aliases.some((t) => t.includes(f))) { rank = 3; why = "Also known as " + x.p.aliases.find((t, i) => x.aliases[i].includes(f)); }
+      else if (at >= 0) { rank = 4; why = { text: x.text, at, len: f.length }; }
+      else if (tag(true) >= 0) { rank = 5 + tag(true) / 100; why = "Keywords: " + x.p.tags[tag(true)]; }
+      else {
+        const i = x.folded.indexOf(f);
+        if (i < 0) continue;
+        rank = 6;
+        why = { text: x.text, at: i, len: f.length };
+      }
+      hits.push({ p: x.p, rank, why });
+    }
+    return hits.sort((a, b) => a.rank - b.rank || pageTitle(a.p).localeCompare(pageTitle(b.p))).slice(0, 30);
+  }
+  // A few words around a match in the text, cut on word boundaries, the match in bold.
+  function snippet({ text, at, len }) {
+    let from = Math.max(0, at - 60), to = Math.min(text.length, at + len + 80);
+    if (from > 0) from = text.indexOf(" ", from) + 1;
+    if (to < text.length) to = text.lastIndexOf(" ", to);
+    const span = make("span", "d");
+    span.append((from > 0 ? "…" : "") + text.slice(from, at).replace(/\s+/g, " "), make("mark", "", text.slice(at, at + len)),
+      text.slice(at + len, to).replace(/\s+/g, " ") + (to < text.length ? "…" : ""));
+    return span;
+  }
+  function renderSearch() {
+    const body = $("lib-body"), q = $("lib-search").value;
+    body.replaceChildren();
+    if (!q.trim()) return renderLibrary(null);
+    const hits = search(q), ul = make("ul", "lib-list two");
+    for (const { p, why } of hits) {
+      const li = libRow("#/page/" + p.id, pageTitle(p), typeof why === "string" ? why : null, KIND[p.type]);
+      if (typeof why !== "string") li.querySelector("a > span").append(snippet(why));
+      ul.append(li);
+    }
+    body.append(hits.length ? ul : make("p", "lib-end", "Nothing in the Library matches that yet."));
+  }
+
+  // With the Library, About leaves the bottom bar: its maps and timeline move into the Library,
+  // and its own words, the notes section and the small links move to the bottom of Settings.
+  const mapNodes = {};
+  function moveAbout() {
+    const about = $("view-about"), h2s = [...about.querySelectorAll("h2")];
+    const group = (startText) => {  // an h2 and everything up to the next h2
+      const h = h2s.find((x) => x.textContent.startsWith(startText));
+      const out = [];
+      for (let n = h && h.nextElementSibling; n && n.tagName !== "H2"; n = n.nextElementSibling) out.push(n);
+      return [h, out];
+    };
+    const [, maps] = group("Where our thinkers lived");
+    const intro = maps.find((n) => n.tagName === "P"), fig = (id) => about.querySelector(`.map-figure[data-map="${id}"]`);
+    const hint = make("p", "lib-map-hint", "Tap Europe or Asia on the map to see it closer.");
+    if (fig("world")) mapNodes.world = [intro, fig("world"), hint];
+    if (fig("europe")) mapNodes.europe = [intro.cloneNode(true), fig("europe")];
+    if (fig("asia")) mapNodes.asia = [intro.cloneNode(true), fig("asia")];
+    mapNodes["thinkers-in-time"] = [];  // drawn when opened
+    const [, time] = group("The paths through time");
+    if (time.length) mapNodes["paths-in-time"] = time;
+    const box = $("settings-about"), lead = [...about.children].slice(1, about.querySelector("h2") ? [...about.children].indexOf(about.querySelector("h2")) : 1);
+    const [whyH, why] = group("Why The Thinking Place"), [notesH, notes] = group("Your notes are yours alone");
+    box.append(make("h2", "", "About The Thinking Place"), ...lead, ...(whyH ? [whyH, ...why] : []),
+      ...(notesH ? [notesH, ...notes.filter((n) => !n.dataset.block)] : []), about.querySelector(".fine"));
+    box.hidden = false;
+  }
+
+  // The thinkers through time: one line down the page, oldest first by birth (texts at the start
+  // of their span, in italics), a label for each century, and a dashed stretch where two or more
+  // centuries pass with nobody.
+  const NUMBERS = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"];
+  const ordinal = (n) => n + (n % 100 >= 11 && n % 100 <= 13 ? "th" : ["th", "st", "nd", "rd"][n % 10] || "th");
+  function thinkersInTime() {
+    const century = (y) => (y < 0 ? -Math.ceil(-y / 100) : Math.ceil(y / 100));
+    const step = (c) => (c < 0 ? c + 1 : c);  // 1st century BCE and 1st century CE are neighbours
+    const people = library.pages.filter((p) => (p.type === "thinker" || p.type === "text") && pageShown(p.id))
+      .sort((a, b) => a.start - b.start || a.title.localeCompare(b.title));
+    const ol = make("ol", "ttl");
+    let last = null;
+    for (const p of people) {
+      const c = century(p.start);
+      if (c !== last) {
+        if (last !== null && step(c) - step(last) >= 3) {
+          const n = step(c) - step(last), gap = make("li", "ttl-gap");
+          gap.append(make("span", "", `${NUMBERS[n] || n} centuries later`));
+          ol.append(gap);
+        }
+        const li = make("li", "ttl-century");
+        li.append(make("span", "", `${ordinal(Math.abs(c))} century${c < 0 ? " BCE" : ""}`));
+        ol.append(li);
+        last = c;
+      }
+      const li = make("li", "ttl-row" + (p.type === "text" ? " soft" : "")), a = make("a");
+      a.href = "#/page/" + p.id;
+      a.append(make("span", "t", p.title), make("span", "d", p.header[1] || ""), make("span", "k", p.path));
+      li.append(a);
+      ol.append(li);
+    }
+    return [make("p", "ttl-note", "The texts of ancient India, in italics, grew over centuries in the hands of many authors, so they appear at the start of their span."), ol];
+  }
+
+  // Dots closer than their 44px tap area (Rome, beside Florence) get smaller tap areas, so each
+  // catches only taps on itself; the dot drawn stays the same size.
+  function fitDots(root) {
+    const dots = [...root.querySelectorAll(".map-dot")], at = dots.map((d) => d.getBoundingClientRect());
+    dots.forEach((d, i) => {
+      const near = Math.min(44, ...at.map((r, j) => (j === i ? 44 : Math.hypot(r.x - at[i].x, r.y - at[i].y))));
+      const size = Math.max(14, Math.floor(near));
+      Object.assign(d.style, { width: size + "px", height: size + "px", margin: `${-size / 2}px 0 0 ${-size / 2}px` });
+      d.style.setProperty("--dot-inset", (size - 10) / 2 + "px");
+    });
+  }
+
+  function libRow(href, title, sub, side) {
+    const li = make("li"), a = make("a");
+    a.href = href;
+    const left = make("span");
+    left.append(make("span", "t", title));
+    if (sub) left.append(make("span", "d", sub));
+    a.append(left);
+    if (side) a.append(make("span", "k", side));
+    li.append(a);
+    return li;
+  }
+
+  function renderLibrary(section) {
+    const body = $("lib-body");
+    body.replaceChildren();
+    $("lib-back").hidden = !section;
+    $("lib-search").hidden = !!section;
+    const map = LIB_MAPS.find(([id]) => id === section);
+    const toWorld = map && mapFromWorld;
+    $("lib-back").href = toWorld ? "#/library/world" : map ? "#/library/maps" : "#/library";
+    $("lib-back").textContent = toWorld ? "← the world" : map ? "← maps and timelines" : "← library";
+    if (!section) {
+      $("lib-title").textContent = "Library";
+      $("lib-sub").textContent = "A well of knowledge behind each day's thought: the thinkers, their paths, their times, and the big questions.";
+      if ($("lib-search").value.trim()) return renderSearch();
+      const ul = make("ul", "lib-list two");
+      for (const [id, title, sub] of LIB_SECTIONS) ul.append(libRow("#/library/" + id, title, sub));
+      body.append(ul);
+      // The weekly highlight: one page, the same all week, every page in turn.
+      const hl = weeklyPage(todayKey());
+      if (hl) {
+        const a = make("a", "lib-hl");
+        a.href = "#/page/" + hl.id;
+        a.append(make("span", "kind", KIND[hl.type] || ""), make("span", "t", pageTitle(hl)), make("p", "d", firstWords(hl)), make("span", "go", "read"));
+        body.append(make("p", "lib-hl-label", "Weekly highlight"), a);
+      }
+      return;
+    }
+    if (map) {
+      $("lib-title").textContent = map[1];
+      $("lib-sub").textContent = map[2];
+      body.append(...(map[0] === "thinkers-in-time" ? thinkersInTime() : mapNodes[map[0]] || []));
+      setTimeout(() => fitDots(body), 0);
+      return;
+    }
+    const [, title, sub] = LIB_SECTIONS.find(([id]) => id === section);
+    $("lib-title").textContent = title;
+    $("lib-sub").textContent = sub;
+    const shown = (type) => library.pages.filter((p) => p.type === type && pageShown(p.id));
+    const firstLine = (p) => (p.sections.find(([t]) => t === "In one line") || [])[1] || "";
+    if (section === "time") {
+      // "Before you read": the essay, open on the first visit and folded after (it can be folded there too).
+      const essay = shown("essay")[0];
+      if (essay) {
+        const seen = store.get("essaySeen"), fold = make("button", "lib-fold"), text = make("div", "lib-text");
+        fold.type = "button";
+        fold.setAttribute("aria-expanded", String(!seen));
+        const t = make("span", "t", "Before you read ");
+        t.append(make("span", "lib-chev"));
+        fold.append(t, make("span", "d", "Why it helps to know the world a thinker lived in."));
+        renderMd(text, essay.sections[0][1], makeLinker(essay.id));
+        text.hidden = !!seen;
+        fold.addEventListener("click", () => { text.hidden = !text.hidden; fold.setAttribute("aria-expanded", String(!text.hidden)); });
+        store.set("essaySeen", "1");
+        body.append(fold, text);
+      }
+      // The eras, in order of time, each with its dates.
+      body.append(make("h2", "", "The eras"));
+      const ul = make("ul", "lib-list two");
+      for (const p of shown("era").sort((a, b) => a.start - b.start || a.eraOrder - b.eraOrder)) ul.append(libRow("#/page/" + p.id, p.title, p.header[0]));
+      body.append(ul);
+      // Last, why some voices are missing (from the About page).
+      const about = [...document.querySelectorAll("#view-about h2")].find((h) => h.textContent.startsWith("About the voices"));
+      if (about) {
+        const h = make("h2", "", about.textContent), text = make("div", "lib-text");
+        h.id = "lib-voices";
+        text.append(make("p", "", about.nextElementSibling.textContent));
+        body.append(h, text);
+      }
+    }
+    if (section === "paths") {
+      const ul = make("ul", "lib-list two");
+      for (const p of shown("path").sort((a, b) => PATH_ORDER.indexOf(a.title) - PATH_ORDER.indexOf(b.title))) ul.append(libRow("#/page/" + p.id, p.title, firstLine(p)));
+      body.append(ul);
+    }
+    if (section === "topics") {
+      const ul = make("ul", "lib-list");
+      for (const p of shown("topic").sort((a, b) => pageTitle(a).localeCompare(pageTitle(b)))) ul.append(libRow("#/page/" + p.id, pageTitle(p)));
+      body.append(ul);
+    }
+    if (section === "maps") {
+      const ul = make("ul", "lib-list two");
+      for (const [id, t, d] of LIB_MAPS) if (mapNodes[id]) ul.append(libRow("#/library/" + id, t, d));
+      body.append(ul);
+    }
+    if (section === "people") {
+      const people = library.pages.filter((p) => (p.type === "thinker" || p.type === "text") && pageShown(p.id))
+        .sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
+      let letter = "", ul = null;
+      for (const p of people) {
+        const L = sortKey(p)[0].toUpperCase();
+        if (L !== letter) { body.append(make("p", "lib-letter", L)); ul = make("ul", "lib-list"); body.append(ul); letter = L; }
+        ul.append(libRow("#/page/" + p.id, p.title, null, p.path));
+      }
+      if (shown("essay").length || shown("era").length) {
+        const end = make("p", "lib-end", "Missing a voice you expected? ");
+        end.append(make("a", "", "Here's why →"));
+        end.lastChild.href = "#/library/time/voices";
+        body.append(end);
+      }
+    }
+  }
+
+  // Inside a page's text, the first mention of another thinker, text or path links to its page
+  // (never eras or themes, never the page itself, never a page that doesn't show). A name that is
+  // part of someone else's ("James Mill", "Seneca Falls") is left alone: a capitalised word right
+  // before or after it must belong to the page's own title (common sentence openers aside).
+  const OPENERS = new Set(["The", "A", "An", "In", "On", "At", "For", "And", "But", "Yet", "So", "Then", "When", "While",
+    "After", "Before", "As", "Like", "By", "To", "From", "With", "Of", "His", "Her", "Their", "Its", "Both", "Only", "Even",
+    "Unlike", "Later", "Where", "Here", "There", "Today", "Read", "Start"]);
+  function partOfAnotherName(text, m, id) {
+    const own = new Set(pageById[id].title.split(/\s+/));
+    const before = /([A-Z][\p{L}'’-]*)\s$/u.exec(text.slice(Math.max(0, m.index - 30), m.index));
+    const after = /^\s([A-Z][\p{L}'’-]*)/u.exec(text.slice(m.index + m[1].length, m.index + m[1].length + 30));
+    return (before && !own.has(before[1]) && !OPENERS.has(before[1])) || (after && !own.has(after[1]));
+  }
+  function makeLinker(selfId) {
+    const names = Object.keys(library.links).sort((a, b) => b.length - a.length);
+    if (!names.length) return (t) => [t];
+    const re = new RegExp(`(?<![\\p{L}\\p{N}])(${names.map(escapeRe).join("|")})(?![\\p{L}\\p{N}])`, "gu");
+    const used = new Set([selfId]);
+    return (text) => {
+      const out = [];
+      let last = 0;
+      for (const m of text.matchAll(re)) {
+        const id = library.links[m[1]];
+        if (used.has(id) || !pageShown(id) || partOfAnotherName(text, m, id)) continue;
+        used.add(id);
+        out.push(text.slice(last, m.index), pageLink(id, m[1], "lib-in"));
+        last = m.index + m[1].length;
+      }
+      out.push(text.slice(last));
+      return out.filter((x) => x !== "");
+    };
+  }
+  function pageLink(id, label, cls) {
+    const a = make("a", cls || "", label);
+    a.href = "#/page/" + id;
+    return a;
+  }
+  // Light Markdown, built as elements (never as HTML): **bold**, *italic*, bare links.
+  function inline(el, text, linker) {
+    for (const part of text.split(/(\*\*[^*]+\*\*|\*[^*\s][^*]*\*|https?:\/\/[^\s)]+)/)) {
+      if (!part) continue;
+      if (/^\*\*.+\*\*$/.test(part)) { const b = make("strong"); inline(b, part.slice(2, -2), linker); el.append(b); }
+      else if (/^\*.+\*$/.test(part)) { const i = make("em"); inline(i, part.slice(1, -1), linker); el.append(i); }
+      else if (/^https?:\/\//.test(part)) { const a = make("a", "", part); a.href = part; a.target = "_blank"; a.rel = "noopener"; el.append(a); }
+      else el.append(...linker(part));
+    }
+  }
+  function renderMd(el, md, linker) {
+    for (const block of md.split(/\n\s*\n/)) {
+      const lines = block.split("\n").filter((l) => l.trim());
+      if (lines.length && lines.every((l) => /^\s*- /.test(l))) {
+        const ul = make("ul");
+        for (const l of lines) { const li = make("li"); inline(li, l.replace(/^\s*- /, ""), linker); ul.append(li); }
+        el.append(ul);
+      } else if (lines.length) {
+        const para = make("p");
+        inline(para, lines.join(" "), linker);
+        el.append(para);
+      }
+    }
+  }
+
+  // Every thought of a page shown on a calendar day so far, whether or not the app was opened.
+  function pageThoughts(ids) {
+    const want = new Set(ids), out = [], today = todayKey();
+    for (let k = calendar.start; k <= today; k = addDays(k, 1)) {
+      const e = entryShown(k);
+      if (want.has(e.id)) out.push([k, e]);
+    }
+    return out.reverse();
+  }
+
+  // Thinkers and texts as links (every one, met or not), in the order a sentence names them.
+  function peopleList(match, order) {
+    const at = (x) => {
+      const names = [x.title, x.title.replace(/^The /, ""), ...x.aliases, x.title.split(" ").pop()];
+      const i = Math.min(...names.map((n) => { const k = order.toLowerCase().indexOf(n.toLowerCase()); return k < 0 ? Infinity : k; }));
+      return i;
+    };
+    const ul = make("ul", "lib-list two");
+    library.pages.filter((x) => (x.type === "thinker" || x.type === "text") && pageShown(x.id) && match(x))
+      .sort((a, b) => at(a) - at(b))
+      .forEach((x) => ul.append(libRow("#/page/" + x.id, x.title, x.header[1] || "")));
+    return ul;
+  }
+
+  function renderPage(id) {
+    const p = pageById[id], linker = makeLinker(id);
+    $("page-kind").textContent = KIND[p.type] || "";
+    $("page-title").textContent = pageTitle(p);
+    const header = $("page-header");
+    header.replaceChildren();
+    (p.type === "era" ? p.header.slice(0, 1) : p.header).forEach((part, i) => {
+      if (i) header.append(" · ");
+      const path = part === p.path && p.type !== "path" && pageOf("path", part);
+      header.append(path ? pageLink(path.id, part) : part);
+    });
+    header.hidden = !p.header.length;
+    $("page-also").hidden = !p.tags.length;
+    $("page-also").textContent = "Keywords: " + p.tags.slice(0, 6).join(", ");
+    const text = $("page-text");
+    text.replaceChildren();
+    p.sections.forEach(([title, md], i) => {
+      if (title === "In one line" && i === 0) { const one = make("p", "lib-one-line"); inline(one, md, linker); text.append(one); return; }
+      text.append(make("h2", "", title));
+      // A path's "Who we read" is its thinkers as links, in the order the sentence names them.
+      if (p.type === "path" && title === "Who we read") text.append(peopleList((x) => x.path === p.title, md));
+      else renderMd(text, md, linker);
+    });
+    if (p.type === "era") {
+      text.append(make("h2", "", "The thinkers of this era"), peopleList((x) => x.era === p.title, p.header[1] || ""));
+    }
+
+    const extra = $("page-extra");
+    extra.replaceChildren();
+    const era = (p.type === "thinker" || p.type === "text") && pageOf("era", p.era);
+    if (era) {
+      const box = make("p", "lib-era");
+      box.append(make("span", "k", "In their time"), pageLink(era.id, era.title + " →"));
+      extra.append(box);
+    }
+    // The thoughts so far, newest first: 5, then more on request; a note folded under its thought.
+    const met = p.thoughts ? pageThoughts(p.thoughts) : [];
+    if (met.length) {
+      extra.append(make("h2", "", p.type === "topic" ? `Thoughts on ${pageTitle(p).toLowerCase()} so far` : `Thoughts from ${p.title} so far`));
+      const list = make("ol", "lib-met"), more = make("button", "link quiet journal-more", "show earlier thoughts");
+      let shown = 0;
+      const add = () => {
+        for (const [day, e] of met.slice(shown, shown + 5)) {
+          const li = make("li"), a = make("a");
+          a.href = "#/day/" + day;
+          a.append(make("span", "date", formatDate(day)), make("p", "q", e.text.replace(/ \/ /g, "\n")));
+          li.append(a);
+          const note = ((noteAbout(day, e.id) || {}).text || "").trim();
+          if (note) {
+            const box = make("div", "mq-folded"), b = make("button", "mq-fold", "your note");
+            box.append(make("p", "mq-past-note", note));
+            box.hidden = true;
+            b.type = "button";
+            b.setAttribute("aria-expanded", "false");
+            b.addEventListener("click", () => { box.hidden = !box.hidden; b.setAttribute("aria-expanded", String(!box.hidden)); });
+            li.append(b, box);
+          }
+          list.append(li);
+        }
+        shown += 5;
+        more.hidden = shown >= met.length;
+      };
+      more.type = "button";
+      more.addEventListener("click", add);
+      add();
+      extra.append(list, more);
+    }
+    const related = (library.related[id] || []).filter(pageShown);
+    if (related.length) {
+      extra.append(make("h2", "", "Related"));
+      const box = make("p", "lib-related");
+      box.append(...related.map((r) => pageLink(r, pageTitle(pageById[r]))));
+      extra.append(box);
+    }
+    if (p.sources.length) {
+      extra.append(make("h2", "", "Sources"));
+      const ul = make("ul", "lib-sources");
+      for (const [label, url] of p.sources) {
+        const li = make("li"), a = make(url ? "a" : "span");
+        inline(a, label, (t) => [t]);  // titles in italics, as written
+        if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; }
+        li.append(a);
+        ul.append(li);
+      }
+      extra.append(ul);
+    }
   }
 
   // ---------- your year: a keepsake ----------
@@ -1570,7 +2048,8 @@
     if (btn.dataset.feature) return showCard(btn, ...TOUR_FEATURES[btn.dataset.feature]);
     const g = glossary[+btn.dataset.term];
     if (!g) return;
-    showCard(btn, g.term, g.def, g.wiki, g.school && schoolDetails(g));
+    const page = g.school ? (pageOf("path", g.term) || {}).id : g.concept ? library.glossaryLinks[g.term] : library.cards[g.term];
+    showCard(btn, g.term, g.def, g.wiki, g.school && schoolDetails(g), pageShown(page) ? page : null, g.concept ? "More in: " : "More about ");
   }
 
   // A path's card is a small introduction: who we read, where it began, its key ideas
@@ -1594,13 +2073,22 @@
     return frag;
   }
 
-  function showCard(btn, title, text, wiki, more) {
+  function showCard(btn, title, text, wiki, more, page, lead = "More about ", down = false) {
     const card = $("term-card");
     $("term-title").textContent = title;
     $("term-def").textContent = text;
+    // The Library pages behind the card: "More about Seneca →", one line each.
+    const pages = [].concat(page || []);
+    $("term-page").hidden = !pages.length;
+    $("term-page").replaceChildren(...pages.map((id) => {
+      const a = make("a", "", `${lead}${pageTitle(pageById[id])} →`);
+      a.href = "#/page/" + id;
+      return a;
+    }));
+    page = pages.length ? pages[0] : null;
     $("term-more").replaceChildren(...(more ? [more] : []));
     $("term-more").hidden = !more;
-    $("term-wiki").hidden = !wiki;
+    $("term-wiki").hidden = !wiki || !!page;  // the Library page replaces Wikipedia
     if (wiki) $("term-wiki").href = "https://en.wikipedia.org/wiki/" + encodeURIComponent(wiki).replace(/%2F/g, "/");
     card.hidden = false;
     // Place the card just below the word, or above it if there is no room.
@@ -1609,8 +2097,9 @@
     const below = r.bottom + 10, above = r.top - h - 10;
     card.style.left = left + "px";
     const y = window.scrollY;
-    const top = below + h < window.innerHeight - 64 || above < 16 ? below : above;
-    card.style.top = y + Math.max(16, Math.min(top, window.innerHeight - h - 16)) + "px";  // on screen when it opens
+    // Map cards always open downwards (the page scrolls to read them); others stay on screen.
+    const top = down || below + h < window.innerHeight - 64 || above < 16 ? below : above;
+    card.style.top = y + (down ? top : Math.max(16, Math.min(top, window.innerHeight - h - 16))) + "px";
     openTerm.from = btn;
     // Move focus into the card so screen readers announce the definition.
     card.focus({ preventScroll: true });
@@ -1618,7 +2107,16 @@
 
   // A dot on the About page maps: who lived there.
   function openPlace(btn) {
-    showCard(btn, btn.dataset.title, btn.dataset.text, btn.dataset.wiki);
+    // In the Library, a place's card leads to each thinker or text it names.
+    const named = [];
+    if (libraryOn()) {
+      for (const [name, id] of Object.entries(library.links).sort((a, b) => b[0].length - a[0].length)) {
+        const p = pageById[id];
+        if ((p.type === "thinker" || p.type === "text") && pageShown(id) && !named.includes(id)
+          && new RegExp(`(?<![\\p{L}])${escapeRe(name)}(?![\\p{L}])`, "u").test(btn.dataset.text)) named.push(id);
+      }
+    }
+    showCard(btn, btn.dataset.title, btn.dataset.text, btn.dataset.wiki, null, named, "More about ", true);
     btn.setAttribute("aria-expanded", "true");
   }
 
@@ -1626,7 +2124,7 @@
   function openPath(btn) {
     const g = glossary.find((t) => t.school && t.term === btn.dataset.path);
     if (!g) return;
-    showCard(btn, g.term, g.def, g.wiki, schoolDetails(g));
+    showCard(btn, g.term, g.def, g.wiki, schoolDetails(g), (pageOf("path", g.term) || {}).id);
     btn.setAttribute("aria-expanded", "true");
   }
 
@@ -1649,7 +2147,7 @@
   }
 
   // ---------- first launch: a short tour, then a name ----------
-  // Four cards (welcome, a day in miniature, space to think, privacy), then the name.
+  // Five cards (welcome, a day in miniature, space to think, where it comes from, privacy), then the name.
   // Back, the dots and next sit at the bottom, skip in the top corner; Android's back
   // gesture goes back a card.
   // Cards change in two beats: the old one fades out (0.2 s), then the new one fades in
@@ -1934,6 +2432,7 @@
     const hash = location.hash.replace(/^#\/?/, "");
     let view = "day";
     if (hash === "journal") { view = "journal"; renderJournal(); }
+    else if (hash === "about" && libraryOn()) { location.replace("#/library"); return; }  // About now lives in the Library and Settings
     else if (hash === "about") { view = "about"; renderLinks(); renderOfflineStatus(); }
     else if (hash === "settings") {
       view = "settings";
@@ -1943,6 +2442,16 @@
       renderLinks(); renderReminder(); renderOfflineStatus();
     }
     else if (hash === "terms") view = "terms";
+    else if (/^library(\/[\w-]+){0,2}$/.test(hash) && libraryOn()) {
+      view = "library";
+      const [, section, anchor] = hash.split("/");
+      // Europe or Asia opened from the world map goes back to the world map.
+      if (section !== libSection) mapFromWorld = (section === "europe" || section === "asia") && libSection === "world" && lastView === "library";
+      libSection = section;
+      renderLibrary([...LIB_SECTIONS, ...LIB_MAPS].some(([id]) => id === section) ? section : null);
+      if (anchor === "voices") libraryAnchor = "lib-voices";
+    }
+    else if (/^page\/[\w-]+$/.test(hash) && pageShown(hash.slice(5))) { view = "page"; renderPage(hash.slice(5)); }
     else if (/^question\/\d{4}-\d{2}$/.test(hash) && questionShown(hash.slice(9))) {
       view = "question";
       if (lastView !== "question") questionFrom = lastView === "journal" ? "journal" : "day";
@@ -1950,16 +2459,25 @@
     }
     else {
       const m = hash.match(/^day\/(\d{4}-\d{2}-\d{2})$/);
+      if (!m) dayFromPage = false;
+      else if (lastView !== "day") dayFromPage = lastView === "page";
       renderDay(m ? m[1] : todayKey());
     }
     if (view !== "day") { endReveal(); $("view-day").style.animation = ""; }  // normal fade-in again next time
     document.querySelectorAll(".view").forEach((v) => (v.hidden = v.id !== "view-" + view));
     updateHint();  // the "more below" arrow belongs to Today only
+    const navView = view === "page" ? "library" : view;
     document.querySelectorAll("[data-nav]").forEach((a) => {
-      if (a.dataset.nav === view) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+      if (a.dataset.nav === navView) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
+    routeCount++;
     lastView = view;
     window.scrollTo(0, 0);
+    if (libraryAnchor) {  // "Here's why →": down to that paragraph, once the page has settled
+      const a = $(libraryAnchor);
+      libraryAnchor = null;
+      if (a) setTimeout(() => window.scrollTo(0, a.getBoundingClientRect().top + window.scrollY - 24), 60);
+    }
     if (view === "day") holdQuestion();
     if (view === "day" && !$("view-day").classList.contains("reveal")) scheduleHomeNote();
   }
@@ -2098,8 +2616,13 @@
     if (!$("note").hidden) return setWriting(false);
     if (!$("home-note").hidden) return closeHomeNote();
     const hash = location.hash.replace(/^#\/?/, "");
-    if (hash === "terms") { location.hash = "#/about"; return; }
+    if (hash === "terms") { location.hash = libraryOn() ? "#/settings" : "#/about"; return; }
+    if (hash.startsWith("page/")) { $("page-back").click(); return; }
+    if (mapFromWorld && /^library\/(europe|asia)$/.test(hash)) { location.hash = "#/library/world"; return; }
+    if (LIB_MAPS.some(([id]) => hash === "library/" + id)) { location.hash = "#/library/maps"; return; }
+    if (hash.startsWith("library/")) { location.hash = "#/library"; return; }
     if (hash.startsWith("question/")) { location.hash = questionFrom === "journal" ? "#/journal" : "#/"; return; }
+    if (hash.startsWith("day/") && dayFromPage) { history.back(); return; }  // back to the Library page it came from
     if (hash) { location.hash = "#/"; return; }
     const App = plugin("App");
     if (App) App.minimizeApp();
@@ -2127,8 +2650,8 @@
     $("note-text").addEventListener("focus", () => document.body.classList.add("typing"));
     $("note-text").addEventListener("blur", () => document.body.classList.remove("typing"));
     $("share").addEventListener("click", share);
-    $("back-to-today").addEventListener("click", () => (location.hash = "#/"));
-    $("terms-back").addEventListener("click", () => (location.hash = "#/about"));
+    $("back-to-today").addEventListener("click", () => (dayFromPage ? history.back() : (location.hash = "#/")));
+    $("terms-back").addEventListener("click", () => (location.hash = libraryOn() ? "#/settings" : "#/about"));
 
     $("open-silence").addEventListener("click", () => openSilence());
     $("close-silence").addEventListener("click", finishSilence);
@@ -2137,6 +2660,9 @@
       finishSilence();
       if (fromQuestion) $("mq-note").focus(); else setWriting(true);
     });
+    $("lib-search").addEventListener("input", renderSearch);
+    // The Library: "← back" goes back like a browser, or to the Library when opened directly.
+    $("page-back").addEventListener("click", () => (routeCount > 1 ? history.back() : (location.hash = "#/library")));
     // Monthly questions
     $("mq-back").addEventListener("click", () => (location.hash = questionFrom === "journal" ? "#/journal" : "#/"));
     $("mq-picks").addEventListener("click", (ev) => {
@@ -2401,6 +2927,17 @@
     if (store.get("welcomed") && !store.get("installed")) store.set("installed", todayKey());
     try { glossary = await fetch("glossary.json", { cache: "no-cache" }).then((r) => r.json()); } catch {}
     try { questions = await fetch("questions.json", { cache: "no-cache" }).then((r) => r.json()); } catch {}
+    try {
+      library = await fetch("pages.json", { cache: "no-cache" }).then((r) => r.json());
+      pageById = Object.fromEntries(library.pages.map((p) => [p.id, p]));
+    } catch {}
+    if (libraryOn()) {
+      // The bottom bar: today · past thoughts · library · settings. About leaves it.
+      $("nav-library").hidden = $("nav-library-dot").hidden = false;
+      const about = document.querySelector('.nav [data-nav="about"]');
+      about.hidden = about.nextElementSibling.hidden = true;
+      moveAbout();
+    }
     fillFilters();
     renderTimeline();
     bind();

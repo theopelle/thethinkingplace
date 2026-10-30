@@ -164,7 +164,7 @@ The Gita's advice to act fully while letting go of the outcome still speaks to a
 - [Brihadaranyaka Upanishad](https://en.wikipedia.org/wiki/Brihadaranyaka_Upanishad) (Wikipedia)
 - [Bhagavad Gita](https://en.wikipedia.org/wiki/Bhagavad_Gita) (Wikipedia)
 - [Milinda Panha](https://en.wikipedia.org/wiki/Milinda_Panha) (Wikipedia)
-- [Bhagavadgita](https://www.britannica.com/topic/Bhagavadgita) (Encyclopædia Britannica)
+- [Bhagavad Gita](https://www.britannica.com/topic/Bhagavad-Gita) (Encyclopædia Britannica)
 
 ## Era page: The medieval Islamic world
 

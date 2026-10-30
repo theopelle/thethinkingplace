@@ -199,9 +199,9 @@ His defence of liberty had limits, though. In *On Liberty* he called despotism a
 - John Stuart Mill, *On Liberty*, chapter I (Project Gutenberg): https://www.gutenberg.org/ebooks/34901
 - The app's Mill thoughts (#158–167, #197–205), including #158, #160, #164, and #197
 
-## Kakuzo Okakura
+## Okakura Kakuzō
 
-**Kakuzo Okakura** · Yokohama, Japan · 1863 – 1913 · Japanese Aesthetics
+**Okakura Kakuzō** · Yokohama, Japan · 1863 – 1913 · Japanese Aesthetics
 
 ### Who he was
 

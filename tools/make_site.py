@@ -14,7 +14,7 @@ ROOT = os.path.dirname(HERE)
 WEB = os.path.join(ROOT, "web")
 SITE = os.path.join(ROOT, "site")
 APP_FILES = ["index.html", "style.css", "calendar.js", "app.js", "sw.js", "manifest.webmanifest", "entries.json",
-             "calendar.json", "glossary.json", "questions.json", "icon.svg", "icon-180.png", "icon-192.png", "icon-512.png",
+             "calendar.json", "glossary.json", "questions.json", "pages.json", "icon.svg", "icon-180.png", "icon-192.png", "icon-512.png",
              "icon-maskable-512.png", "mark-400.png"]
 PLAY_URL = "https://play.google.com/store/apps/details?id=app.thinkingplace"  # live once published
 HOME_THOUGHTS = [15, 308, 78, 494, 288, 389, 236]  # Monday to Sunday, see below

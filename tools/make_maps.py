@@ -2,8 +2,9 @@
 
     python3 tools/make_maps.py <ne_50m_land.geojson>
 
-A world map shows where our thinkers lived; Europe, where most of them did, gets a
-closer map of its own below it. The places and their card texts come from the
+A world map shows where our thinkers lived; Europe, where most of them did, and Asia get
+closer maps of their own. In the Library, tapping Europe or Asia on the world map opens its
+closer map. The places and their card texts come from the
 content team's glossary (content/glossary.xlsx, sheet "Map cards"); their positions
 are in COORDS below. Dots too close to tell apart on a phone share one card.
 
@@ -22,6 +23,8 @@ W = 600  # viewBox width; height follows from the region's shape
 MERGE = 26  # dots closer than this (in viewBox units) share one card
 # Places that always share a dot (too close to tap apart on a phone).
 JOIN = [{"Shiraz", "Nishapur"}]
+# Places that keep a dot of their own, even near others (Rome, next to Florence and Arezzo).
+ALONE = {"Rome"}
 
 # Where each place on the Map cards sheet is: (longitude, latitude).
 COORDS = {
@@ -40,10 +43,12 @@ COORDS = {
 }
 
 EUROPE = (-11, 32, 48, 62)   # west, south, east, north
-WORLD = (-82, 14, 146, 63)
+ASIA = (28, 8, 146, 48)       # about Konya to Japan
+WORLD = (-82, 8, 146, 63)
 MAPS = [
-    {"title": "The world", "box": WORLD, "inset": EUROPE, "tol": 0.7},
-    {"title": "Europe and the Mediterranean, closer", "box": EUROPE, "tol": 0.9},
+    {"id": "world", "title": "The world", "box": WORLD, "inset": EUROPE, "zoom": {"asia": ASIA, "europe": EUROPE}, "tol": 0.7},
+    {"id": "europe", "title": "Europe and the Mediterranean, closer", "box": EUROPE, "tol": 0.9},
+    {"id": "asia", "title": "Asia, closer", "box": ASIA, "tol": 0.9},
 ]
 
 
@@ -66,6 +71,8 @@ def merged(points):
     groups = []
     for x, y, title, text, wiki in sorted(points, key=lambda p: (p[1], p[0])):
         for g in groups:
+            if title in ALONE or g[0][2] in ALONE:
+                continue
             joined = any(title in j and g[0][2] in j for j in JOIN)
             if joined or any(math.dist((x, y), (gx, gy)) < MERGE for gx, gy, *_ in g):
                 g.append((x, y, title, text, wiki))
@@ -191,11 +198,19 @@ def figure(m, features, all_places):
         w, s_, e, n = m["inset"]
         (x1, y1), (x2, y2) = proj(w, n), proj(e, s_)
         extra = f'<rect class="map-inset" x="{x1:.0f}" y="{y1:.0f}" width="{x2 - x1:.0f}" height="{y2 - y1:.0f}" rx="4"/>'
-    out = ['      <figure class="map-figure">',
+    out = [f'      <figure class="map-figure" data-map="{m["id"]}">',
            f'        <figcaption>{m["title"]}</figcaption>',
            '        <div class="map-wrap">',
            f'          <svg class="map" viewBox="0 0 {W} {h:.0f}" aria-hidden="true">'
            f'<path class="map-coast" d="{coast_path(features, proj, h, m["tol"])}"/>{extra}</svg>']
+    # Tap zones over the world map that open a closer map (only shown in the Library); before
+    # the dots, so a dot inside a zone still opens its own card.
+    for target, (w, s_, e, n) in m.get("zoom", {}).items():
+        (x1, y1), (x2, y2) = proj(w, n), proj(e, s_)
+        name = "Europe" if target == "europe" else "Asia"
+        out.append(f'          <a class="map-zoom" href="#/library/{target}" aria-label="{name}, closer" '
+                   f'style="left:{x1 / W * 100:.1f}%;top:{max(0, y1) / h * 100:.1f}%;width:{(x2 - x1) / W * 100:.1f}%;'
+                   f'height:{(min(h, y2) - max(0, y1)) / h * 100:.1f}%"></a>')
     pts = []
     for (lon, lat), title, text, wiki in all_places:
         if not inside(m["box"], lon, lat) or ("inset" in m and inside(m["inset"], lon, lat)):
