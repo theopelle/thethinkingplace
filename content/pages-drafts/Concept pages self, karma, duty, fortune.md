@@ -28,7 +28,7 @@ Three of these traditions reach for the same picture, a chariot, which says some
 
 ### Tags
 
-self, soul, Atman, Brahman, not-self, nafs
+Atman, soul, not-self, nafs, Brahman, lower self
 
 ### Your thoughts and notes
 
@@ -63,7 +63,7 @@ Both traditions agree that actions have consequences that reach beyond the momen
 
 ### Tags
 
-karma, dharma, dhamma, yoga, svadharma, rebirth
+dhamma, svadharma, yoga, rebirth, intention
 
 ### Your thoughts and notes
 
@@ -99,7 +99,7 @@ All of them say duty is not just a feeling we wait for. They disagree on where i
 
 ### Tags
 
-duty, moral law, good will, respect, categorical imperative, obligation
+moral law, good will, categorical imperative, obligation, respect, svadharma
 
 ### Your thoughts and notes
 
@@ -135,7 +135,7 @@ They all agree that much of life is out of our hands. They disagree on what to d
 
 ### Tags
 
-fortune, luck, chance, fate, what is in our power, Fortuna
+luck, fate, chance, Fortuna, what is in our power, wheel of fortune
 
 ### Your thoughts and notes
 
