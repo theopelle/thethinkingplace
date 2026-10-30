@@ -348,7 +348,8 @@
   // ---------- text size ----------
   function setTextSize(v) {
     store.set("textSize", String(v));
-    document.documentElement.style.fontSize = Number(v) === 1 ? "" : `${Number(v) * 100}%`;
+    // --desk is 1.125 on wide screens (style.css), so a larger text size grows from there too
+    document.documentElement.style.fontSize = Number(v) === 1 ? "" : `calc(${Number(v) * 100}% * var(--desk, 1))`;
     checkChoice("[data-text-size]", "textSize", v);
     growNote();
   }
@@ -1047,6 +1048,7 @@
   function renderSearch() {
     const body = $("lib-body"), q = $("lib-search").value;
     body.replaceChildren();
+    body.classList.remove("home-grid");
     if (!q.trim()) return renderLibrary(null);
     const hits = search(q), ul = make("ul", "lib-list two");
     for (const { p, why } of hits) {
@@ -1142,9 +1144,76 @@
     return li;
   }
 
+  // Wide screens only (style.css, 1000px and up): a rail beside section pages, Library pages, and the
+  // two timelines, with the Library, a search, the five sections, and the current section's own list.
+  // The home and the three maps have none. Below 1000px it is never shown.
+  const RAIL_OF = { thinker: "people", text: "people", path: "paths", topic: "topics", era: "time", essay: "time" };
+  function renderRail(view, pageId) {
+    const rail = $("rail"), b = document.body.classList;
+    const sec = view === "page" ? RAIL_OF[pageById[pageId].type]
+      : view !== "library" ? null : LIB_MAPS.some(([id]) => id === libSection) ? "maps"
+      : LIB_SECTIONS.some(([id]) => id === libSection) ? libSection : null;
+    const bigMap = view === "library" && ["world", "europe", "asia"].includes(libSection);
+    b.toggle("lib-home", view === "library" && !sec);
+    b.toggle("lib-map", bigMap);
+    b.toggle("lib-rail", !!sec && !bigMap);
+    rail.hidden = !b.contains("lib-rail");
+    if (rail.hidden) return;
+    const cur = (a, on, how = "page") => { if (on) a.setAttribute("aria-current", how); return a; };
+    const link = (href, text, cls) => { const a = make("a", cls || "", text); a.href = href; return a; };
+    const shown = (type) => library.pages.filter((p) => p.type === type && pageShown(p.id));
+    const lists = {  // as on each section page
+      time: () => shown("era").sort((a, b) => a.start - b.start || a.eraOrder - b.eraOrder),
+      paths: () => shown("path").sort((a, b) => PATH_ORDER.indexOf(a.title) - PATH_ORDER.indexOf(b.title)),
+      people: () => library.pages.filter((p) => (p.type === "thinker" || p.type === "text") && pageShown(p.id))
+        .sort((a, b) => sortKey(a).localeCompare(sortKey(b))),
+      topics: () => shown("topic").sort((a, b) => pageTitle(a).localeCompare(pageTitle(b))),
+    };
+    const box = make("input");
+    Object.assign(box, { type: "search", placeholder: "Search", autocomplete: "off" });
+    box.setAttribute("aria-label", "Search the Library");
+    box.addEventListener("keydown", (e) => {
+      if (e.key !== "Enter" || !box.value.trim()) return;
+      $("lib-search").value = box.value;  // the Library home shows the results
+      location.hash = "#/library";
+    });
+    const secs = make("ul", "secs");
+    for (const [id, title] of LIB_SECTIONS) {
+      const li = make("li");
+      li.append(cur(link("#/library/" + id, title), id === sec, "true"));
+      if (id === sec) {
+        const sub = make("ul", "sub");
+        if (id === "maps") {
+          sub.append(...LIB_MAPS.filter(([m]) => mapNodes[m]).map(([m, t]) => {
+            const li2 = make("li"); li2.append(cur(link("#/library/" + m, t.replace(/, closer$/, "")), m === libSection)); return li2;
+          }));
+        } else {
+          let letter = "";
+          for (const p of lists[id]()) {
+            const L = sortKey(p)[0].toUpperCase();
+            if (id === "people" && L !== letter) { sub.append(make("li", "letter", L)); letter = L; }
+            const li2 = make("li");
+            li2.append(cur(link("#/page/" + p.id, id === "people" ? p.title : pageTitle(p)), p.id === pageId));
+            sub.append(li2);
+          }
+        }
+        li.append(sub);
+      }
+      secs.append(li);
+    }
+    rail.replaceChildren(link("#/library", "Library", "home"), box, secs);
+    centreRail();
+  }
+  // The current page sits in the middle of its list.
+  function centreRail() {
+    const on = document.querySelector("#rail .sub [aria-current]"), sub = on && on.closest(".sub");
+    if (sub) sub.scrollTop = on.offsetTop - sub.offsetTop - sub.clientHeight / 2 + on.offsetHeight / 2;
+  }
+
   function renderLibrary(section) {
     const body = $("lib-body");
     body.replaceChildren();
+    body.classList.remove("home-grid");
     $("lib-back").hidden = !section;
     $("lib-search").hidden = !!section;
     const map = LIB_MAPS.find(([id]) => id === section);
@@ -1158,6 +1227,7 @@
       const ul = make("ul", "lib-list two");
       for (const [id, title, sub] of LIB_SECTIONS) ul.append(libRow("#/library/" + id, title, sub));
       body.append(ul);
+      body.classList.add("home-grid");  // wide screens: the sections beside the weekly highlight
       // The weekly highlight: one page, the same all week, every page in turn.
       const hl = weeklyPage(todayKey());
       if (hl) {
@@ -2475,6 +2545,7 @@
     if (view !== "day") { endReveal(); $("view-day").style.animation = ""; }  // normal fade-in again next time
     document.querySelectorAll(".view").forEach((v) => (v.hidden = v.id !== "view-" + view));
     updateHint();  // the "more below" arrow belongs to Today only
+    renderRail(view, view === "page" ? hash.slice(5) : null);
     const navView = view === "page" ? "library" : view;
     document.querySelectorAll("[data-nav]").forEach((a) => {
       if (a.dataset.nav === navView) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
@@ -2670,6 +2741,7 @@
       if (fromQuestion) $("mq-note").focus(); else setWriting(true);
     });
     $("lib-search").addEventListener("input", renderSearch);
+    matchMedia("(min-width: 1000px)").addEventListener("change", (e) => { if (e.matches) setTimeout(centreRail, 0); });
     // The Library: "← back" goes back like a browser, or to the Library when opened directly.
     $("page-back").addEventListener("click", () => (routeCount > 1 ? history.back() : (location.hash = "#/library")));
     // Monthly questions

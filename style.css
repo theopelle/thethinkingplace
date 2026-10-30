@@ -725,3 +725,43 @@ button.mq-back { display: inline-block; margin: 0 0 2rem; }
 .ttl-gap::before { content: ""; position: absolute; left: .3rem; width: 1px; height: 2.2rem; margin-top: -.6rem; background: var(--bg); border-left: 1px dashed var(--muted); }
 .card-more a { display: block; margin: 0 0 .25rem; }
 .mq-voice-link { color: inherit; text-decoration: underline 1px; text-underline-offset: .22em; text-decoration-color: var(--faint); }
+
+/* ---------- Wide screens (the web app on a computer, 1000px and up; phones never get this) ---------- */
+.rail { display: none; }
+@media (min-width: 1000px) {
+  /* A little bigger (16px -> 18px), with a reading column of about 720px. --desk scales the text-size setting too. */
+  html { --desk: 1.125; font-size: 112.5%; }
+  #app { max-width: 40rem; padding-top: 12vh; }
+
+  /* The Library: a rail on the left, the page at reading width on the right */
+  body.lib-rail #app { max-width: 66rem; display: grid; grid-template-columns: 15rem minmax(0, 38rem); gap: 0 5rem;
+    justify-content: center; align-content: start; padding-top: 10vh; }
+  body.lib-rail #app > * { grid-column: 2; }
+  body.lib-rail #app > .rail { grid-column: 1; grid-row: 1 / span 30; }
+  body.lib-rail .lib-back { display: none; }  /* the rail and the browser's back button replace it */
+  body.lib-rail .rail { display: block; position: sticky; top: 2rem; align-self: start; font-size: .88rem; }
+  .rail .home { display: block; font: 400 1.25rem/1.3 var(--serif); color: inherit; text-decoration: none; margin: 0 0 .9rem; }
+  .rail input { box-sizing: border-box; width: 100%; font: inherit; color: var(--fg); background: transparent; border: 0;
+    border-bottom: 1px solid var(--faint); border-radius: 0; padding: .5rem 0; margin: 0 0 1.2rem; }
+  .rail input:focus { outline: none; border-bottom-color: var(--muted); }
+  .rail input::placeholder { color: var(--muted); }
+  .rail ul { list-style: none; margin: 0; padding: 0; }
+  .rail .secs > li > a { display: block; padding: .35rem 0; color: var(--muted); text-decoration: none; }
+  .rail .secs > li > a[aria-current], .rail a:hover { color: var(--fg); }
+  .rail .sub { max-height: calc(90vh - 23rem);  /* clears the bottom bar, at any text size */ overflow-y: auto; scrollbar-width: thin; margin: .1rem 0 .6rem;
+    padding-left: .8rem; border-left: 1px solid var(--faint); }
+  .rail .sub a { display: block; padding: .18rem 0; color: var(--muted); text-decoration: none; font: 400 .92rem/1.35 var(--serif); }
+  .rail .sub a[aria-current] { color: var(--fg); }
+  .rail .sub .letter { margin: .6rem 0 .1rem; font-size: .65rem; letter-spacing: .14em; color: var(--muted); }
+
+  /* The Library home: no rail; the sections and the weekly highlight side by side */
+  body.lib-home #app { max-width: 50rem; }
+  body.lib-home #lib-body.home-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 3.5rem; align-items: start; }
+  body.lib-home .home-grid > ul { grid-column: 1; grid-row: 1 / span 3; margin-top: 0; }
+  body.lib-home .home-grid > :not(ul) { grid-column: 2; }
+  body.lib-home .lib-hl-label { margin-top: 0; }
+
+  /* The maps: no rail, and the map breaks out of the column */
+  body.lib-map #view-library .map-figure { width: min(78vw, 66rem); margin-left: 50%; transform: translateX(-50%); }
+  body.lib-map #view-library .map-figure[data-map="europe"] { width: min(78vw, 52rem); }  /* tall: keep it on screen */
+}

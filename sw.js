@@ -1,7 +1,7 @@
 // Offline support. Everything the app needs is cached on first visit, so it
 // opens with no network at all. Cached files are refreshed in the background
 // whenever the network is available.
-const CACHE = "reflect-v78";
+const CACHE = "reflect-v79";
 const SHELL = ["./", "index.html", "style.css", "calendar.js", "app.js", "entries.json", "calendar.json", "glossary.json", "questions.json", "pages.json", "manifest.webmanifest", "icon.svg", "icon-180.png", "icon-192.png", "icon-512.png", "icon-maskable-512.png",
   "fonts/literata-latin-400-normal.woff2", "fonts/literata-latin-ext-400-normal.woff2", "fonts/literata-latin-400-italic.woff2", "fonts/literata-latin-ext-400-italic.woff2",
   "vendor/jspdf.umd.min.js", "fonts/literata-regular.ttf", "fonts/literata-italic.ttf", "mark-400.png"];
