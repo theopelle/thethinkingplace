@@ -32,6 +32,8 @@
 
     <!-- Today / a single day -->
     <section id="view-day" class="view" hidden>
+      <!-- For screen readers, which jump from heading to heading: every other page starts with one -->
+      <h1 class="sr-only">The day's thought</h1>
       <!-- The month's question, from its last day for a week: the question itself, between short dashes -->
       <a class="mq-line" id="mq-line" hidden><span class="mq-small" id="mq-line-label"></span><span class="mq-q" id="mq-line-question"></span><span class="mq-go" id="mq-line-go"></span></a>
       <p class="greeting" id="greeting" hidden></p>
