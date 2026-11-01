@@ -24,7 +24,7 @@ Nobody knows why. One story says it was an unhappy love; another, grief at the d
 
 *Essays in Idleness* is a collection of 243 short pieces, from a single line to a few pages. He wrote in a "follow the brush" style, letting one thought lead to the next. His main themes:
 
-- **Impermanence:** everything passes, and that is part of its beauty.
+- **Impermanence:** everything passes, and that is part of its beauty. Japanese tradition calls this feeling *mono no aware*.
 - **Death:** it comes sooner than we think, so do not waste your days.
 - **Nature and small things:** flowers before they bloom, a garden strewn with fallen ones, the moon as it wanes.
 - **People:** friendship, manners, and the follies of those around him.
@@ -127,7 +127,7 @@ Read a chapter at a time, in any order; the chapters on thought and on anger are
 
 ## Marcus Aurelius
 
-**Marcus Aurelius** · Rome, Italy · 121 – 180 · Stoicism
+**Marcus Aurelius** · Rome, Italy · 121 – 180 CE · Stoicism
 
 ### Who he was
 
@@ -166,15 +166,17 @@ Persecution of Christians appears to have grown in his time, though historians t
 
 ## Rabindranath Tagore
 
-**Rabindranath Tagore** · Calcutta, India · 1861 – 1941 · Indian Philosophy
+**Rabindranath Tagore** · Calcutta (now Kolkata, India) · 1861 – 1941 · Indian Philosophy
 
 ### Who he was
 
 Tagore was born into a leading family in Calcutta and wrote his first poems at eight. He became a poet, novelist, playwright, composer, painter, and teacher, and one of the key figures of the Bengal Renaissance.
 
-In 1901 he founded a school at Santiniketan, which later grew into Visva-Bharati University. In 1913, after his own English version of *Gitanjali* moved readers like W. B. Yeats, he became the first non-European to win a Nobel Prize. He wrote some two thousand songs; two of them are now the national anthems of India and Bangladesh.
+In 1901 he founded a school at Santiniketan, which later grew into Visva-Bharati University. In 1913, after his own English version of *Gitanjali* moved readers like W. B. Yeats, he became the first non-European to win the Nobel Prize in Literature. He wrote some two thousand songs; two of them are now the national anthems of India and Bangladesh.
 
 ### What he cared about
+
+Tagore's ideas run through his poems, songs, and essays, such as the lectures collected in *Sadhana*. His themes:
 
 - **Love as the way to freedom:** we become free not by escaping the world, but by loving it.
 - **The unity of all life,** drawn from the Upanishads: the self, nature, and the divine are one.
@@ -185,7 +187,7 @@ In 1901 he founded a school at Santiniketan, which later grew into Visva-Bharati
 
 King George V knighted him in 1915. Four years later, after troops under a British general fired on an unarmed crowd at Amritsar, killing hundreds, he gave the knighthood back in protest.
 
-He wanted India free from British rule, yet he also argued with Gandhi, and sometimes criticised his campaigns. He travelled widely and met Einstein, Bergson, and H. G. Wells. At sixty, he also took up drawing and painting, and his works were shown across Europe.
+He wanted India free from British rule, yet he also argued with Gandhi, and sometimes criticised his campaigns. He travelled widely and met Einstein, Bergson, and H. G. Wells. At 60, he also took up drawing and painting, and his works were shown across Europe.
 
 ### Where to start reading
 
@@ -206,11 +208,13 @@ He wanted India free from British rule, yet he also argued with Gandhi, and some
 
 ### Who he was
 
-Confucius, born Kong Qiu, grew up in the small state of Lu, in eastern China. His father died when he was three, and his mother raised him in poverty. He married at nineteen and had a son a year later.
+Confucius, born Kong Qiu, grew up in the small state of Lu, in eastern China. His father died when he was three, and his mother raised him in poverty. He married at 19 and had a son a year later.
 
 In 501 BCE he became governor of a town, and later Minister of Crime in Lu. Later he left his home state for years, looking for a ruler who would put his ideas into practice. He came back to Lu at 68 and spent his last years teaching; tradition speaks of three thousand students.
 
 ### What he cared about
+
+Confucius taught through conversation, and his students wrote down his sayings in the *Analects*. His main ideas:
 
 - **Good character,** built through learning and practice, at any age.
 - **Do not do to others** what you would not want done to you.
@@ -250,6 +254,8 @@ The best-known story says that, at the age of 80, he set off west to live as a h
 
 ### What he cared about
 
+The *Tao Te Ching* has 81 short chapters, many only a few lines long. Its main ideas:
+
 - **The Tao:** the way of all things, which cannot be fully named.
 - **Effortless action:** the wise act without forcing, and things get done.
 - **Water as a model:** soft and low, it serves everything and wears down the hardest stone.
@@ -258,7 +264,7 @@ The best-known story says that, at the age of 80, he set off west to live as a h
 
 ### What might surprise you
 
-The oldest pieces of the *Tao Te Ching* ever found were written on bamboo strips buried around 300 BCE. They hold only about 40 percent of the text we read today, which suggests the book grew over time.
+The oldest pieces of the *Tao Te Ching* ever found were written on bamboo strips buried around 300 BCE. They hold only about 40 per cent of the text we read today, which suggests the book grew over time.
 
 Later, Laozi became far more than a writer. From the Han dynasty on, religious Taoism worshipped him as a god, and the Tang emperors claimed him as their ancestor.
 
@@ -278,11 +284,11 @@ The *Tao Te Ching*: 81 short chapters, best read one at a time. James Legge's 18
 
 ## Blaise Pascal
 
-**Blaise Pascal** · Clermont-Ferrand, France · 1623 – 1662 · Existential Thought
+**Blaise Pascal** · Clermont (now Clermont-Ferrand, France) · 1623 – 1662 · Existential Thought
 
 ### Who he was
 
-Pascal was born in Clermont-Ferrand and lost his mother at three. His father, a tax official, taught him at home. He was a child prodigy: at 16 he wrote an important work on geometry, and at 19 he began building one of the first mechanical calculators.
+Pascal was born in Clermont, today's Clermont-Ferrand, and lost his mother at three. His father, a tax official, taught him at home. He was a child prodigy: at 16 he wrote an important work on geometry, and at 19 he began building one of the first mechanical calculators.
 
 He went on to shape the theory of probability, in letters with the mathematician Fermat, and to clarify how air pressure and the vacuum work; the unit of pressure is named after him. He was often ill, and died in Paris at 39.
 
@@ -363,6 +369,8 @@ Al-Ghazali was born near Tus, in north-eastern Persia, and studied in Nishapur. 
 Four years later, at the height of his fame, he went through a deep personal crisis. He gave away his wealth, left Baghdad, and spent years in Damascus, Jerusalem, and Mecca, then in quiet seclusion back home. He returned to teaching only briefly, and died in Tus in 1111.
 
 ### What he cared about
+
+Al-Ghazali was a great scholar who came to doubt that learning alone was enough. His themes:
 
 - **Honest doubt:** in his autobiography, *Deliverance from Error*, he describes testing every source of knowledge until he found certainty.
 - **Knowing is not enough:** he realised he had chosen status and ego over the inner life he wrote about.

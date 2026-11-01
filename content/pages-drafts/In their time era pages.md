@@ -16,7 +16,7 @@ A huge empire that brought peace to the Mediterranean for two centuries, run on 
 
 In 27 BCE the Senate gave Octavian the title Augustus, and he became the first emperor. The roughly 200 years that followed are known as the Roman Peace. At its height, the empire held perhaps 55 to 60 million people, between a sixth and a quarter of everyone alive.
 
-People spoke Latin in the West and Greek in the East. Rome, Alexandria, and Antioch were the largest cities, each about twice the size of any European city in the early 1600s. Trade routes grew fast in the first two centuries CE.
+People spoke Latin in the West and Greek in the East. Rome, Alexandria, and Antioch were the largest cities; Rome, with perhaps a million people, was larger than any European city would be until about 1800. Trade routes grew fast in the first two centuries CE.
 
 ### What they believed
 
@@ -75,13 +75,13 @@ War grew in size. Iron weapons replaced bronze, and armies of chariots gave way 
 
 Since the Zhou, people believed Heaven gave the right to rule to a virtuous king, and could take it back from a bad one. The big question of the age was practical: how do you end the chaos? Every school had its answer.
 
-Confucius (551–479 BCE) said order begins with good people in right relationships. Mozi argued for equal care for all and against wars of attack. The Daoist texts linked to Laozi advised living with the grain of nature and ruling by doing less. The Legalists said people are selfish, so only strict laws and punishments work.
+Confucius (551–479 BCE) said order begins with good people in right relationships. Mozi argued for equal care for all and against wars of attack. The Taoist texts linked to Laozi advised living with the grain of nature and ruling by doing less. The Legalists said people are selfish, so only strict laws and punishments work.
 
 ### Who counted, and who was left out
 
 Society was strongly patriarchal. The ideal was "men plough, women weave", and a woman's place was inside the home. Girls from about age ten were taught to obey father, then husband, then sons. Daughters were often seen as worth less than sons.
 
-The records still show women advising rulers, judging guests, and writing poetry. One Zhou king even named his wife among his nine ministers. Most of what we know concerns noble families. The lives of ordinary farmers left few traces.
+The records still show women advising rulers, judging guests, and writing poetry. One Zhou king even counted a woman among his ten chief ministers. Most of what we know concerns noble families. The lives of ordinary farmers left few traces.
 
 ### Ahead of their time
 
@@ -93,7 +93,7 @@ Kings claimed to rule with Heaven's favour. Mencius, one of the boldest thinkers
 
 In 221 BCE the state of Qin conquered the others, and its king declared himself the first emperor. In 213 BCE the Qin ordered many books burned, including writings of the Hundred Schools. Historians still argue about how much was really lost.
 
-The Han dynasty that followed blended Confucian and Legalist ideas into a system of government that lasted, in its main lines, until the late 19th century. Questions about merit, duty, and good leadership from these schools are still part of how millions of people think about work and family.
+The Han dynasty that followed blended Confucian and Legalist ideas into a system of government that lasted, in its main lines, until the early 20th century. Questions about merit, duty, and good leadership from these schools are still part of how millions of people think about work and family.
 
 ### The thinkers of this era
 
@@ -231,7 +231,7 @@ After the plague, Europe went back to the books of Greece and Rome to find a bet
 
 ### How people lived
 
-The Black Death reached Europe in 1347. In a few years it killed perhaps 30 to 60 percent of the population, by different estimates. Workers became scarce and wages rose. The old order of lords and peasants began to loosen.
+The Black Death reached Europe in 1347. In a few years it killed perhaps 30 to 60 per cent of the population, by different estimates. Workers became scarce and wages rose. The old order of lords and peasants began to loosen.
 
 Italy was a patchwork of rich, rival city-states. Florence, where the Renaissance began, was run by merchant families such as the Medici, who paid artists like Leonardo and Michelangelo. From about 1440, printing spread from one shop in Mainz to some 270 cities. By 1500, more than 20 million books had been printed.
 
@@ -255,7 +255,7 @@ Writers on government usually told princes how a good ruler should behave. Machi
 
 ### What still echoes today
 
-In 1517 Luther challenged the Pope, and Europe split. In France, wars between Catholics and Protestants ran from 1562 to 1598 and cost perhaps 2 to 4 million lives. In 1572, thousands of Protestants were killed in the St. Bartholomew's Day massacre.
+In 1517 Luther challenged the Pope, and Europe split. In France, wars between Catholics and Protestants ran from 1562 to 1598 and cost perhaps 2 to 4 million lives. In 1572, thousands of Protestants were killed in the St Bartholomew's Day massacre.
 
 Montaigne lived through all of it. He withdrew to his tower in 1571 to write his *Essays*, then served as mayor of Bordeaux, respected by both sides. His habit of doubting his own certainty is the era's most useful gift.
 
@@ -284,7 +284,7 @@ Montaigne lived through all of it. He withdrew to his tower in 1571 to write his
 
 ### In one line
 
-A century of religious war, revolution, and new science, when thinkers looked for a certainty that no church or king could guarantee anymore.
+A century of religious war, revolution, and new science, when thinkers looked for a certainty that no church or king could guarantee any more.
 
 ### How people lived
 
@@ -308,7 +308,7 @@ The new ideas of freedom had blind spots. Locke argued that people have natural 
 
 Most of Europe was ruled by kings with near-total power. In *Leviathan* (1651), Hobbes still defended a strong ruler, but on new grounds: people agree to obey one power to escape the horror of civil war. Locke went further, arguing that government rests on the consent of the governed.
 
-Communities expected their members to share their faith. Spinoza did not, and in 1656, at 23, the Jewish community of Amsterdam expelled him for heresy. He made his living grinding lenses, published his political treatise in 1670 under a false name and place, and left most of his work to be printed after his death.
+Communities expected their members to share their faith. Spinoza did not, and in 1656, at 23, the Jewish community of Amsterdam expelled him for heresy. He made his living grinding lenses, published his political treatise anonymously in 1670, with a false publisher and city on the title page, and left most of his work to be printed after his death.
 
 ### What still echoes today
 
@@ -348,7 +348,7 @@ The century that told people to think for themselves and put reason, rights, and
 
 Most Europeans still lived under kings. Some rulers, such as Frederick the Great of Prussia and Catherine the Great of Russia, took up new ideas and called themselves enlightened. Ideas travelled through salons, coffeehouses, scientific academies, and a fast-growing world of print.
 
-In Paris, elite women such as Madame Geoffrin hosted salons where writers met to argue. From 1751 to 1772, Diderot and d'Alembert, with about 150 others, published the *Encyclopédie*, 35 volumes meant to gather all human knowledge.
+In Paris, elite women such as Madame Geoffrin hosted salons where writers met to argue. From 1751 to 1772, Diderot and d'Alembert, with about 150 others, published the *Encyclopédie*, 28 volumes of text and plates meant to gather all human knowledge.
 
 ### What they believed
 
@@ -457,7 +457,7 @@ A young country that preached freedom while holding millions in slavery, where a
 
 ### How people lived
 
-The United States grew fast and pushed west. Under the Indian Removal Act of 1830, somewhere between 60,000 and 100,000 Native Americans were forced from their lands in the South-East. About 15,000 of them died on the way, on what became known as the Trail of Tears.
+The United States grew fast and pushed west. Under the Indian Removal Act of 1830, somewhere between 60,000 and 100,000 Native Americans were forced from their lands in the south-east. About 15,000 of them died on the way, on what became known as the Trail of Tears.
 
 In 1860 about four million people were enslaved, nearly one American in eight. The country went to war with itself from 1861 to 1865. Slavery was abolished by the Thirteenth Amendment in December 1865.
 
@@ -483,7 +483,7 @@ Women were expected to keep to the home. Margaret Fuller edited the Transcendent
 
 These writers asked how a person keeps their integrity inside a society they disagree with. Thoreau's answer was quiet refusal. Fuller's was to speak up in public.
 
-Emily Dickinson's answer was a private world of words. She wrote nearly 1,800 poems, but only ten were published in her lifetime, altered to fit the taste of the day. The rest were collected only after her death, from 1890.
+Emily Dickinson's answer was a private world of words. She wrote nearly 1,800 poems, but only about ten were published in her lifetime, altered to fit the taste of the day. The rest were collected only after her death, from 1890.
 
 Their ideas about self-reliance, nature, and conscience shaped American culture, and the question they raised is still with us: when should you follow the rules, and when should you follow your own judgement?
 
@@ -574,15 +574,15 @@ This era produced many of the thinkers people know best today, among them Sartre
 
 ### How people lived
 
-The First World War, from 1914 to 1918, killed somewhere between 15 and 22 million people, soldiers and civilians. France alone lost about 1.7 million, more than 4 percent of its population.
+The First World War, from 1914 to 1918, killed somewhere between 15 and 22 million people, soldiers and civilians. France alone lost about 1.7 million, more than 4 per cent of its population.
 
-The peace did not last. The Second World War killed somewhere between 60 and 85 million people, about 3 percent of everyone alive in 1940.
+The peace did not last. The Second World War killed somewhere between 60 and 85 million people, about 3 per cent of everyone alive in 1940.
 
 ### What they believed
 
 After the slaughter of 1914–1918, the belief that the world was steadily getting better was hard to hold. People looked for meaning in politics, in faith, or in neither.
 
-Simone Weil, born in Paris in 1909 to a secular Jewish family, tried more than one of these paths. She studied philosophy at the École Normale Supérieure, taught, and was a pacifist until the rise of the Nazis changed her mind.
+Simone Weil, born in Paris in 1909 to a secular Jewish family, tried more than one of these paths. She studied philosophy at the École Normale Supérieure, taught, and was a pacifist until Hitler's seizure of Prague in 1939 changed her mind.
 
 ### Who counted, and who was left out
 

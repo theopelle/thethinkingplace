@@ -24,7 +24,7 @@ A practical philosophy for living well: train your judgments, act with virtue, a
 
 Zeno of Citium founded the school in Athens around 300 BCE. He taught in the Stoa Poikile, a painted colonnade on the main square, which gave the school its name. Chrysippus, its third head, turned it into a full system of logic, physics, and ethics.
 
-Stoicism then spread across the Greek and Roman world and lasted until the 3rd century CE. Its best-known voices are Roman: Seneca, a statesman; Epictetus, a teacher; and Marcus Aurelius, an emperor. It faded after Christianity became Rome's state religion, then came back in the Renaissance and again today.
+Stoicism then spread across the Greek and Roman world and lasted until the 3rd century CE. Its best-known voices are Roman: Seneca, a statesman; Epictetus, a teacher; and Marcus Aurelius, an emperor. It faded after Christianity became Rome's state religion, then came back in the Renaissance and again today. The app also reads Boethius, a Roman of the early 6th century, who wrote *The Consolation of Philosophy* in prison and found comfort in philosophy rather than in fortune, much as the Stoics did.
 
 ### Key ideas
 
@@ -40,7 +40,7 @@ Marcus Aurelius, Epictetus, Seneca, and Boethius.
 
 ### Next to its neighbours
 
-Stoics and Epicureans both wanted a calm mind, and both lived in the same city at the same time. They disagreed on the goal. For the Stoics it was virtue; for the Epicureans it was pleasure, understood as freedom from pain and fear. The Stoics also expected you to take part in public life, while the Epicureans mostly stayed out of politics.
+Stoics and Epicureans both wanted a calm mind, and both lived in the same city at the same time. They disagreed on the goal. For the Stoics it was virtue; for the Epicureans it was pleasure, understood as freedom from pain and fear. The Stoics also expected you to take part in public life, while the Epicureans mostly stayed out of politics. Far to the east, the *Bhagavad Gita* gives close advice on doing your duty and letting go of its results.
 
 ### Where to start reading
 
@@ -64,7 +64,7 @@ A philosophy of quiet happiness: simple pleasures, good friends, and a mind free
 
 ### Where and when
 
-Epicurus founded the school in Athens in 307 BCE. It met in his garden, so it became known simply as "the Garden", and it welcomed women among its students. In the 1st century BCE, the Roman poet Lucretius set out its ideas in a long poem, *On the Nature of Things*.
+Epicurus founded the school in Athens around 306 BCE. It met in his garden, so it became known simply as "the Garden", and it welcomed women among its students. In the 1st century BCE, the Roman poet Lucretius set out its ideas in a long poem, *On the Nature of Things*.
 
 The school was a rival first of Plato's followers, then of the Stoics. It declined as Christianity spread; Dante even placed the Epicureans in hell. Later thinkers rediscovered it, and Thomas Jefferson called himself an Epicurean.
 
@@ -158,7 +158,7 @@ It peaked in the 18th century, in salons, coffeehouses, academies, and a booming
 - **Why we need government** (Hobbes, Locke, Rousseau): power rests on an agreement among the people, not on birth.
 - **Freedom and tolerance:** of religion, of speech, of how you live.
 - **Morality from feeling or from duty:** Hume and Adam Smith start from sympathy; Kant from duty; Mill from the greatest happiness.
-- **Women's minds** (du Châtelet, Wollstonecraft): women are rational beings and deserve the same education.
+- **Women's minds** (Wollstonecraft): women are rational beings and deserve the same education.
 
 ### Who we read
 
@@ -192,13 +192,13 @@ Writers who faced life's hardest questions head-on: freedom, suffering, meaning,
 
 The word "existentialism" only appeared in the mid-20th century, with Sartre, de Beauvoir, and Camus. These best-known existentialists are still under copyright, so the app reads the writers who came before or alongside them.
 
-The questions are older. Pascal, a French mathematician, asked them in the 1650s. In the 19th century, Schopenhauer, Dostoevsky, Tolstoy, and Nietzsche pushed back against neat systems that explained everything except how to live. In America, William James asked what makes life worth living, and Simone Weil, who died in 1943, brings the path into the 20th century.
+The questions are older. Pascal, a French mathematician, asked them in the 1650s. In the 19th century, Schopenhauer, Dostoevsky, Tolstoy, and Nietzsche pushed back against neat systems that explained everything except how to live. In America, William James asked what makes life worth living. Simone Weil, who died in 1943, brings the path into the 20th century.
 
 ### Key ideas
 
 - **Life comes before theory:** start from real human experience, not abstract systems.
 - **Freedom is a gift and a weight.** We have to choose, and we carry the responsibility.
-- **Anxiety is part of being free:** the dizziness of having to decide.
+- **Suffering shapes us:** Dostoevsky's Underground Man calls it the origin of consciousness.
 - **Meaning is not handed to us;** we have to find it, or make it.
 - **Authenticity:** live your own life, not the one others expect.
 
@@ -233,7 +233,7 @@ Writers who explored how to live in personal prose, short sayings, and poems, ra
 
 ### Where and when
 
-The path spans five centuries. It begins in Renaissance Italy in the 1340s with Petrarch, called the father of humanism, who collected and taught the ancient Greek and Roman writers. Humanism then spread north with printing, to Erasmus and beyond, while Machiavelli took a hard look at power as it is, not as it should be.
+The path spans five centuries. It begins in Renaissance Italy in the 1340s with Petrarch, called the father of humanism, who collected and taught the ancient Roman writers. Humanism then spread north with printing, to Erasmus and beyond, while Machiavelli took a hard look at power as it is, not as it should be.
 
 In France, Montaigne invented the essay in 1580, from the French *essayer*, "to try"; in England, Francis Bacon wrote the first essays in English in 1597. Then came the French moralists, La Rochefoucauld, La Bruyère, Vauvenargues, and Chamfort, masters of the short, sharp maxim.
 
@@ -321,7 +321,7 @@ Philosophy from India's Hindu tradition, asking what our deepest self is, and ho
 
 It begins with the Upanishads, Sanskrit texts composed between about 800 and 300 BCE. They moved away from the rituals of the older Vedas towards meditation and questions about consciousness. The *Bhagavad Gita*, likely composed in the 2nd or 1st century BCE, is a 700-verse dialogue within the great epic, the *Mahabharata*.
 
-Later, six classical schools took shape; one of them, Vedanta, became the most influential. In modern times, Swami Vivekananda brought Vedanta to the West, with a famous speech in Chicago in 1893. In 1913, the poet Rabindranath Tagore became the first non-European to win a Nobel Prize.
+Later, six classical schools took shape; one of them, Vedanta, became the most influential. In modern times, Swami Vivekananda brought Vedanta to the West, with a famous speech in Chicago in 1893. In 1913, the poet Rabindranath Tagore became the first non-European to win the Nobel Prize in Literature.
 
 ### Key ideas
 
@@ -337,7 +337,7 @@ The Upanishads, the *Bhagavad Gita*, Vivekananda, and Tagore.
 
 ### Next to its neighbours
 
-Buddhism shares karma and rebirth with this path but denies a lasting self, while the Upanishads put that self at the centre. The *Gita* also has a hard setting: on a battlefield, the god Krishna, in Hindu tradition, persuades the warrior Arjuna to fight. Readers have taken it very differently since. Gandhi learned verses from its second chapter by heart and treated them as a companion for his non-violent struggle.
+Buddhism shares karma and rebirth with this path but denies a lasting self, while the Upanishads put that self at the centre. The *Gita* also has a hard setting: on a battlefield, the god Krishna, in Hindu tradition, persuades the warrior Arjuna to fight. Readers have taken it very differently since. Its advice to act without clinging to results comes close to the Stoics' line between what is up to us and what is not.
 
 ### Where to start reading
 
@@ -361,7 +361,7 @@ A Chinese tradition of living in harmony with the Tao, the natural way of things
 
 ### Where and when
 
-Taoist thought took shape in China during the Warring States period, between about 450 and 300 BCE. Its two founding texts were compiled then: the *Tao Te Ching*, short poetic chapters traditionally credited to Laozi, and the *Zhuangzi*, full of stories.
+Taoist thought took shape in China during the Warring States period, between about 450 and 300 BCE. Its two founding texts began to take shape then, and kept growing for some time after: the *Tao Te Ching*, short poetic chapters traditionally credited to Laozi, and the *Zhuangzi*, full of stories.
 
 Tradition makes Laozi an archivist at the Zhou court and an older contemporary of Confucius; scholars are divided, and some think he is partly or wholly legendary. Taoism later also became an organised religion, with its own priests, rituals, and scriptures. The *Tao Te Ching* is one of the most translated books in the world, second only to the Bible.
 
@@ -403,7 +403,7 @@ A Chinese tradition built on good character, learning, and harmony in families a
 
 ### Where and when
 
-Confucius (about 551–479 BCE) was born near Qufu, in the small state of Lu, in eastern China. He saw himself not as an inventor but as a transmitter of older values that his age had lost. He taught thousands of students, and his sayings were collected by his followers in the *Analects*, many years after his death.
+Confucius (about 551–479 BCE) was born near Qufu, in the small state of Lu, in eastern China. He saw himself not as an inventor but as a transmitter of older values that his age had lost. Tradition says he taught thousands of students, and his sayings were collected by his followers in the *Analects*, many years after his death.
 
 Mencius developed his ideas a century later. Suppressed under the harsh Qin dynasty, Confucianism became China's official philosophy under the Han, around 130 BCE. For centuries it was the basis of the exams that chose government officials, until they were abolished in 1905.
 
@@ -447,7 +447,7 @@ Finding beauty in what is simple, imperfect, and passing, and paying full attent
 
 The path covers nine centuries of Japanese writing. Around 1000 CE, Sei Shōnagon, a lady at the imperial court in Kyoto, wrote *The Pillow Book*: lists, scenes, and sharp opinions about what is beautiful and what is not.
 
-In 1212, Kamo no Chōmei, a court poet who had lived through fires, famine, and an earthquake in Kyoto, left society for a tiny hut in the mountains and wrote *An Account of a Ten-Foot-Square Hut*. In the early 14th century, the Buddhist monk Kenkō wrote *Essays in Idleness*, still one of the most studied works of medieval Japanese literature.
+Kamo no Chōmei, a court poet who had lived through fires, famine, and an earthquake in Kyoto, left society in 1204. In a tiny hut in the mountains, he wrote *An Account of a Ten-Foot-Square Hut* in 1212. In the early 14th century, the Buddhist monk Kenkō wrote *Essays in Idleness*, still one of the most studied works of medieval Japanese literature.
 
 In 1906, Okakura Kakuzō wrote *The Book of Tea* in English, to explain Japanese culture to Western readers who often caricatured it.
 
@@ -465,7 +465,7 @@ Sei Shōnagon, Kamo no Chōmei, Kenkō, and Okakura Kakuzō.
 
 ### Next to its neighbours
 
-These ideals grew from Shinto's love of nature and Buddhism's teaching that all things are impermanent, with Taoist and Zen influences as well. Where the Buddhists see impermanence as a source of suffering to overcome, these writers often find it a source of beauty to enjoy.
+These ideals grew from Shinto's love of nature and Buddhism's teaching that all things are impermanent, with Taoist and Zen influences as well. Where the Buddhist texts see clinging to what passes as a cause of suffering, these writers often find in passing things a source of beauty.
 
 ### Where to start reading
 
@@ -489,7 +489,7 @@ Wisdom poetry from the Persian-speaking world and from Sufism, on love, longing,
 
 ### Where and when
 
-The path runs from the 11th to the 14th century, across Persia and the wider Islamic world. It opens with Omar Khayyam (1048–1131) of Nishapur, a mathematician and astronomer who designed a calendar still at the root of the Persian one; short four-line poems attributed to him question fate and celebrate the present. Al-Ghazali (about 1058–1111), a leading scholar in Baghdad, gave up his post after a personal crisis in 1095 and turned to the Sufi path.
+The path runs from the 11th to the 14th century, across Persia and the wider Islamic world. It opens with Omar Khayyam (1048–1131) of Nishapur, a mathematician and astronomer who designed a calendar still at the root of the Persian one; short four-line poems attributed to him question fate and celebrate the present. Al-Ghazali (about 1058–1111), a leading scholar in Baghdad, gave up his post after a personal crisis in 1095 and turned to the Sufi path. Sufism is the spiritual and mystical tradition within Islam, centred on the love and remembrance of God; Khayyam was not a Sufi, which is why the path has its wider name.
 
 Ibn Arabi (1165–1240), born in Murcia, in today's Spain, taught that all things are expressions of one single reality. Rumi (1207–1273) settled in Konya, in today's Turkey; his long poem, the *Masnavi*, is among the greatest in Persian. Sa'di (about 1210–1291) and Hafiz (about 1325–1390) both came from Shiraz, and many Persian speakers still know Hafiz's poems by heart.
 
@@ -507,7 +507,7 @@ Omar Khayyam, Sa'di, Rumi, Hafiz, al-Ghazali, and Ibn Arabi.
 
 ### Next to its neighbours
 
-Sufism is the spiritual and mystical tradition within Islam, centred on love of God and remembrance of Him. Khayyam was not a Sufi, which is why the path has its wider name. In the West, these poets are often read through free translations: Edward FitzGerald's 1859 version of Khayyam made him famous in English, but it is free, close to a paraphrase in places.
+Khayyam's call to enjoy today, with a book of verses and a loaf of bread, sits close to Epicurus, and Sa'di's praise of contentment echoes both Epicurus and Laozi. The Sufi road of love has much in common with the devotion of the *Bhagavad Gita*, and Ibn Arabi's single reality behind all things recalls the Brahman of the Upanishads.
 
 ### Where to start reading
 

@@ -122,11 +122,11 @@ The *Mencius*, Book II, Part I, with the child at the well. James Legge's 1895 t
 
 ## Swami Vivekananda
 
-**Swami Vivekananda** · Calcutta, India · 1863 – 1902 · Indian Philosophy
+**Swami Vivekananda** · Calcutta (now Kolkata, India) · 1863 – 1902 · Indian Philosophy
 
 ### Who he was
 
-Vivekananda was born Narendranath Datta into a well-off family in Calcutta, the son of a lawyer. As a young man he was drawn to a reform movement that rejected caste barriers. At eighteen he met the mystic Ramakrishna, became his closest disciple, and later took the vows of a monk.
+Vivekananda was born Narendranath Datta into a well-off family in Calcutta, the son of a lawyer. As a young man he was drawn to a reform movement that rejected caste barriers. At 18 he met the mystic Ramakrishna, became his closest disciple, and later took the vows of a monk.
 
 After Ramakrishna's death he spent five years walking across India, living on alms, and saw for himself the poverty of millions under British rule. In 1893 he sailed to Chicago for the Parliament of the World's Religions. Back in India, he founded the Ramakrishna Mission in 1897, devoted to education and social service. He died in 1902, aged 39.
 
@@ -167,7 +167,7 @@ He was a monk, yet he urged practical action: schools, relief work, and service 
 
 Mill was born in London, the eldest son of the philosopher James Mill, who educated him at home with help from Jeremy Bentham. He learned Greek at three, and by eight had read the whole of the historian Herodotus. From the age of 17, he worked for 35 years for the East India Company, as his father had.
 
-At twenty, the strain caught up with him: he went through months of deep sadness, and the poetry of Wordsworth helped him find joy again. In 1851 he married Harriet Taylor, his close friend of twenty years, whose ideas shaped his work. Later he served as a Member of Parliament, and he died in Avignon, where she is buried, in 1873.
+At 20, the strain caught up with him: he went through months of deep sadness, and the poetry of Wordsworth helped him find joy again. In 1851 he married Harriet Taylor, his close friend of twenty years, whose ideas shaped his work. Later he served as a Member of Parliament, and he died in Avignon, where she is buried, in 1873.
 
 ### What he cared about
 
@@ -207,7 +207,7 @@ His defence of liberty had limits, though. In *On Liberty* he called despotism a
 
 Okakura grew up in Yokohama, studying Western culture at school and Japanese tradition in a Buddhist temple. At the Tokyo Imperial University he studied with the American art historian Ernest Fenollosa, and he went on to work for the Ministry of Education.
 
-In 1887 he helped found the Tokyo School of Fine Arts, and he soon became its director. When it began to favour European methods, he resigned and started a new academy with leading artists, to learn from Western art without losing Japanese inspiration. From 1906 he worked at the Museum of Fine Arts in Boston, where he became curator of Japanese and Chinese art.
+In 1887 he helped found the Tokyo School of Fine Arts, and he soon became its director. When it began to favour European methods, he resigned and started a new academy with leading artists, to learn from Western art without losing Japanese inspiration. From 1904 he worked at the Museum of Fine Arts in Boston, where he became curator of Japanese and Chinese art.
 
 ### What he cared about
 
@@ -223,7 +223,7 @@ He wrote his main works in English, to speak directly to Western readers. In *Th
 
 *The Book of Tea* was partly a reply. Written just after the Russo-Japanese War, it protested Western caricatures of Japan, and the fear that Japan was respected only once it adopted the West's taste for war.
 
-He also spent two years in India and talked with Vivekananda and Tagore, two other voices in the app. In Boston, he once hosted a tea ceremony by candlelight for the art collector Isabella Stewart Gardner.
+He also spent most of a year in India and talked with Vivekananda and Tagore, two other voices in the app. In Boston, he once hosted a tea ceremony by candlelight for the art collector Isabella Stewart Gardner.
 
 ### Where to start reading
 
@@ -337,7 +337,7 @@ Weil wrote about suffering, justice, and attention, and she grew more and more d
 
 ### What might surprise you
 
-She was drawn to Christianity yet long refused baptism, believing that such a step had to come from God, not from her own decision. She may have been baptized only in her last months.
+She was drawn to Christianity yet long refused baptism, believing that such a step had to come from God, not from her own decision. She may have been baptised only in her last months.
 
 During the Second World War she worked for the Free French in London. Ill with tuberculosis, she refused to eat more than people in occupied France, and died of heart failure in 1943, at 34. Almost all her books were published after her death, and later inspired writers from Albert Camus to Iris Murdoch.
 

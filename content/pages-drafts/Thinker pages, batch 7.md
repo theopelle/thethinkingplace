@@ -56,7 +56,7 @@ Diderot was born in 1713 in Langres, in eastern France, the son of a master cutl
 
 In 1749 his *Letter on the Blind* made his name and got him jailed for some months at Vincennes. From 1751 he led the *Encyclopédie* with d'Alembert, the great Enlightenment project to gather all human knowledge, including the crafts and trades. Church and state both banned it, and he kept it going for years.
 
-The work left him poor. In 1766 Catherine the Great of Russia bought his library and paid him to look after it for life, and he later spent five months at her court. He died in Paris in 1784.
+The work left him poor. In 1765 Catherine the Great of Russia bought his library and paid him to look after it for life, and he later spent five months at her court. He died in Paris in 1784.
 
 ### What he cared about
 
@@ -180,7 +180,7 @@ He was, and still is, contested. Many jurists saw him as a heretic, while Sufis 
 
 ### Who he was
 
-Chamfort was born around 1741 in Clermont-Ferrand; sources differ on the date and raised by a grocer. Local tradition said he was the secret child of a noblewoman and a clergyman. At nine he went to Paris on a scholarship, and later lived for years on the hospitality of people who enjoyed his conversation.
+Chamfort was born around 1741 (sources differ on the date) in Clermont-Ferrand, and raised by a grocer. Local tradition said he was the secret child of a noblewoman and a clergyman. At nine he went to Paris on a scholarship, and later lived for years on the hospitality of people who enjoyed his conversation.
 
 Success came slowly, then all at once. His plays were performed before Louis XVI and Marie Antoinette, he received royal pensions, and in 1781 he was elected to the Académie française. But he disliked court life and kept stepping away from it.
 
@@ -284,7 +284,7 @@ Emerson believed each person has direct access to truth, if they dare to trust i
 
 He shocked Harvard. In 1838 he told its divinity students that Jesus was a great man but not God. The address caused such a storm that the university did not invite him back to speak for 30 years.
 
-He was also a quiet but firm opponent of slavery. He disliked the public eye, yet he lectured against it, denounced the Fugitive Slave Act, and welcomed the abolitionist John Brown to his home. Nietzsche called him "the most gifted of the Americans".
+He was also a quiet but firm opponent of slavery. He disliked the public eye, yet he lectured against slavery, denounced the Fugitive Slave Act, and welcomed the abolitionist John Brown to his home. Nietzsche called him "the most gifted of the Americans".
 
 ### Where to start reading
 
@@ -350,7 +350,7 @@ He is remembered with a link to Rotterdam, but he lived there only about four ye
 
 *The Questions of King Milinda* (in Pali, *Milindapañha*) is a Buddhist book in the form of a dialogue. A king asks hard questions about Buddhist teaching, and a monk named Nāgasena answers them, often with a simple image.
 
-The king is real. Milinda is the Indian name of Menander I, a Greek king who ruled a large realm in what is now Pakistan and northwest India in the 2nd century BCE. Nāgasena is known only from this book and from later legend.
+The king is real. Milinda is the Indian name of Menander I, a Greek king who ruled a large realm in what is now Pakistan and north-west India in the 2nd century BCE. Nāgasena is known only from this book and from later legend.
 
 Scholars agree the work grew over time. Its earliest part was probably written between 100 BCE and 200 CE, and later authors added more. In Myanmar it is part of the Buddhist canon; in Thailand and Sri Lanka it is not.
 
@@ -366,7 +366,7 @@ The king wants clear reasons, not just faith, and the monk gives them. Its theme
 
 ### What might surprise you
 
-A Greek and an Indian sit down to argue philosophy. Yet scholars note that the dialogue shows little sign of Greek thought; its ideas trace back to Indian sources such as the Upanishads.
+A Greek and an Indian sit down to argue philosophy. Yet scholars note that the dialogue shows little sign of Greek thought; its ideas trace back to earlier Buddhist texts.
 
 Buddhist tradition says the king was won over, handed his kingdom to his son, and left the world. A Greek source, Plutarch, says instead that he died in camp on campaign and that his cities shared out his ashes. Its 1890 translator, T. W. Rhys Davids, called it "the masterpiece of Indian prose".
 

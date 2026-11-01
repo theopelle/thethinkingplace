@@ -65,7 +65,7 @@ About 108 are known. The dozen or so oldest, called the principal Upanishads, we
 
 They reached Europe by a long road. In 1656, the Mughal prince Dara Shukoh had fifty of them translated from Sanskrit into Persian. A French scholar then turned the Persian into Latin, and that Latin version is what Schopenhauer read. He called them the most rewarding and uplifting reading in the world.
 
-One of the last things the poet W. B. Yeats published, in 1938, was a translation of ten principal Upanishads.
+One of the last things the poet W. B. Yeats published, in 1937, was a translation of ten principal Upanishads.
 
 ### Where to start reading
 
@@ -280,7 +280,7 @@ Chapter II, which sums up the whole teaching. Kashinath Trimbak Telang's 1882 tr
 
 Voltaire, born François-Marie Arouet in Paris, was educated by the Jesuits. His sharp tongue got him into trouble early: a satirical verse about the regent earned him eleven months in the Bastille, and he was later sent into exile in England, where he admired English freedoms and Newton's science.
 
-From 1733 he lived for years with Émilie du Châtelet at Cirey. He spent time at the court of Frederick the Great of Prussia, and later settled at Ferney, near Geneva, on the French border, safely out of reach of the French king. He died in 1778, at 83.
+From 1734 he lived for years with Émilie du Châtelet at Cirey. He spent time at the court of Frederick the Great of Prussia, and later settled at Ferney, near Geneva, on the French border, safely out of reach of the French king. He died in 1778, at 83.
 
 ### What he cared about
 
@@ -288,7 +288,7 @@ Voltaire wrote plays, histories, tales, and thousands of letters, always with wi
 
 - **Tolerance:** we are all weak and wrong, so let us forgive one another.
 - **Freedom of speech and religion,** and the separation of church and state.
-- **Against fanaticism:** he urged his friends to "crush the infamous", the abuses of church and crown.
+- **Against fanaticism:** he urged his friends to "crush the infamous", the abuses of the Church and of religious fanaticism.
 - **Against easy optimism:** in *Candide* (1759) he mocked the idea that all is for the best.
 - **Justice:** better to risk saving a guilty person than to condemn an innocent one.
 

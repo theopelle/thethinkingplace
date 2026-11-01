@@ -347,7 +347,7 @@ The fragments themselves: a few pages that take a lifetime. Arthur Fairbanks's t
 
 ## René Descartes
 
-**René Descartes** · La Haye, France · 1596 – 1650 · Enlightenment Ethics
+**René Descartes** · La Haye (now Descartes, France) · 1596 – 1650 · Enlightenment Ethics
 
 ### Who he was
 

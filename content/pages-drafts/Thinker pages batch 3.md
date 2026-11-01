@@ -51,7 +51,7 @@ Early critics dismissed her as an eccentric recluse who broke the rules of gramm
 
 Epicurus was born on the island of Samos to Athenian parents. Around the age of thirty he began teaching in Mytilene, where his ideas caused enough trouble that he had to leave. He taught next in Lampsacus, then settled in Athens around 306 BCE.
 
-There he bought a garden and founded his school in it. Friends, students, and women lived and studied together and shared their goods. He stayed in Athens for the rest of his life.
+There he bought a garden and founded his school in it. Friends and students, women among them, lived and studied together. He stayed in Athens for the rest of his life.
 
 ### What he cared about
 
@@ -167,7 +167,7 @@ It became one of the most copied books of the Middle Ages. King Alfred translate
 
 ### Who he was
 
-La Rochefoucauld was born in Paris into one of the greatest noble families of France. He was married at fourteen and commanding a regiment at sixteen. As a young courtier he plotted against the powerful Cardinal Richelieu, which earned him eight days in the Bastille and spells of exile from court.
+La Rochefoucauld was born in Paris into one of the greatest noble families of France. He was married at 14 and commanding a regiment at 16. As a young courtier he plotted against the powerful Cardinal Richelieu, which earned him eight days in the Bastille and spells of exile from court.
 
 In the 1640s and 1650s he joined the Fronde, a rebellion of nobles against the crown, and was badly wounded in the fighting. After that he withdrew from politics, wrote his memoirs, and became a regular of the Paris literary salons.
 
@@ -322,15 +322,17 @@ The *Enchiridion*: a short handbook, the essence of his teaching in a few pages.
 
 ### Who he was
 
-Jalal al-Din Rumi was born to Persian parents in Wakhsh, in today's Tajikistan. While he was still a child, the advancing Mongols drove his family west, through Iran, Baghdad, and Damascus. At nineteen he settled with them in Konya, in today's Turkey, a land that had once been Roman, which is where his name, "the Roman", comes from.
+Jalal al-Din Rumi was born to Persian parents in Wakhsh, in today's Tajikistan. While he was still a child, the advancing Mongols drove his family west, through Iran, Baghdad, and Damascus. At 19 he settled with them in Konya, in today's Turkey, a land that had once been Roman, which is where his name, "the Roman", comes from.
 
 Like his father, he became a respected Islamic scholar and teacher. Then, in 1244, he met a wandering dervish, Shams of Tabriz, and his life changed. The two became inseparable. When Shams mysteriously disappeared, Rumi's grief poured out as poetry, and he kept writing until his death in Konya in 1273.
 
 ### What he cared about
 
+Rumi wrote two great works: the *Masnavi*, a long poem of stories, and the lyric poems collected as the *Divani Shamsi Tabriz*. His themes:
+
 - **Love** as the force that moves everything, above all the longing of the soul for God.
-- **Separation and longing:** the Masnavi opens with a reed flute, his favourite instrument, singing of separation.
 - **Stories that teach:** his long poem, the *Masnavi*, is full of fables and everyday scenes.
+- **Separation and longing:** the *Masnavi* opens with a reed flute, his favourite instrument, singing of separation.
 - **Music and movement** as ways to reach the divine.
 
 ### What might surprise you

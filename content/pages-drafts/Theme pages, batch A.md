@@ -52,11 +52,11 @@ What is worth knowing, and how do we know that we know it?
 
 **Laozi and Zhuangzi (Taoism).** The Taoists doubted that more knowledge brings more wisdom. Learning adds something every day, but the Way is found by letting go, day by day. Zhuangzi adds that you cannot explain the ocean to a frog in a well: we all see from a narrow place.
 
-**Hume and Mill (Enlightenment Ethics).** Hume asked for less certainty and more evidence: a wise person matches belief to the evidence. Mill added that you only half know your own view if you have never heard the other side. Even a true belief, never challenged, turns into dead dogma.
+**Hume and Mill (Enlightenment Ethics).** Hume asked for less certainty and more evidence: a wise person matches belief to the evidence. Mill added that if you know only your own side of a case, you know little even of that. Even a true belief, never challenged, turns into dead dogma.
 
 ### Where they agree, and where they don't
 
-Nearly all of them start with humility: Socrates, Confucius, and Laozi all praise knowing the limits of what you know. They part ways on what to do next. Confucius and Mill say study and argue more; Laozi says empty your mind; Hume says follow the evidence and stay modest about the rest.
+Nearly all of them start with humility: Socrates, Confucius, and Laozi all praise knowing the limits of what you know. They part ways on what to do next. Confucius and Mill say study and argue more; Laozi says do less; Hume says follow the evidence and stay modest about the rest.
 
 ### Your thoughts and notes
 
@@ -79,7 +79,7 @@ Should we master our feelings, or listen to them?
 
 **Marcus Aurelius (Stoicism).** For the Stoics, what upsets us is not the event but our judgement about it, and we can learn to judge differently. Marcus Aurelius notes that the mind takes on the colour of its habitual thoughts. The ideal Stoic is free of disturbing passions, though not of all feeling.
 
-**The Dhammapada (Buddhist Philosophy).** The *Dhammapada* opens with the claim that all we are comes from our thoughts. The mind is flighty and hard to hold, and taming it is the greatest good. Hatred never ends hatred; only love does.
+**The Dhammapada (Buddhist Philosophy).** The *Dhammapada* opens with the claim that all we are comes from our thoughts. The mind is flighty and hard to hold, and taming it brings happiness. Hatred never ends hatred; only love does.
 
 **Aristotle (Classical Greek Philosophy).** Aristotle did not want feelings gone, but right. Anyone can get angry. The skill is to be angry with the right person, to the right degree, at the right time, and for the right reason. A good character is one that feels the right amount.
 
@@ -204,7 +204,7 @@ Everything changes, so how should we live with it?
 
 **The Dhammapada (Buddhist Philosophy).** For the *Dhammapada*, seeing clearly that all created things pass away is itself a path out of suffering. We suffer when we cling to what cannot last.
 
-**Epictetus and Marcus Aurelius (Stoicism).** Epictetus advised never saying "I have lost it", only "I have given it back": a child, a wife, an estate were only lent to us. Marcus Aurelius put it in five words: the universe is transformation.
+**Epictetus and Marcus Aurelius (Stoicism).** Epictetus advised never saying "I have lost it", only "I have given it back": a child, a wife, an estate were only lent to us. Marcus Aurelius put it simply: the universe is transformation.
 
 **Kenkō and Okakura (Japanese Aesthetics).** The Japanese writers find beauty in passing things. Kenkō asks whether we should look at the moon only when it is full, or at flowers only in full bloom. Okakura invites us to "dream of evanescence".
 
@@ -260,7 +260,7 @@ Is life short, or do we waste it?
 
 ### How the traditions see it
 
-**Seneca (Stoicism).** Seneca argued that life is not short; we make it short by wasting it. How late, he said, to begin living just when we must leave. Epictetus added that he wanted to be present like the hour, and to pass like the hour.
+**Seneca and Epictetus (Stoicism).** Seneca argued that life is not short; we make it short by wasting it. How late, he said, to begin living just when we must leave. Epictetus added that he wanted to be present like the hour, and to pass like the hour.
 
 **Epicurus (Epicureanism).** Epicurus warned against putting off joy for a tomorrow we do not control. The future is neither fully ours nor fully out of our hands. And remembering the good days we have had is part of a happy life.
 

@@ -52,9 +52,11 @@ Seneca praised a simple life while being one of the richest men in Rome, partly 
 
 He also served Nero, and one of his essays praises the young emperor's mercy. Readers still argue about whether he was a hypocrite or someone who saw his own weaknesses clearly. Some of his remarks about women also reflect the views of his time.
 
+He also wrote tragedies, such as *Medea* and *Thyestes*, which later influenced Shakespeare.
+
 ### Where to start reading
 
-*On the Shortness of Life*: short, clear, and still sharp. Then the *Letters to Lucilius*, 124 letters written in his last years. Aubrey Stewart's translation is free on Project Gutenberg. His tragedies, such as *Medea* and *Thyestes*, later influenced Shakespeare.
+*On the Shortness of Life*: short, clear, and still sharp. Then the *Letters to Lucilius*, 124 letters written in his last years. Aubrey Stewart's translation is free on Project Gutenberg.
 
 ### Your thoughts and notes
 
@@ -80,7 +82,7 @@ We know very little about his life. The historian Sima Qian says he held a minor
 
 Zhuangzi doubted that any single point of view can hold the whole truth. Each of us sees from where we stand, like the frog at the bottom of a well. His main ideas:
 
-- **The Way** (Dao) cannot be fully known or put into words, and it is always changing.
+- **The Way** (Tao) cannot be fully known or put into words, and it is always changing.
 - **Flexible minds** do better than fixed ones: stop clinging to one view and respond to what is in front of you.
 - **Skill** at its best feels effortless, like the cook whose knife never goes dull.
 - **The useless** can thrive: the tree nobody wants to cut down grows old.
@@ -90,7 +92,7 @@ Zhuangzi doubted that any single point of view can hold the whole truth. Each of
 
 Zhuangzi probably did not write most of the book. Only the first seven chapters, the Inner Chapters, are usually credited to him; the rest came from later followers with quite different views.
 
-He is also funny. He puts words in the mouth of Confucius, Taoism's great rival, and lets him say Taoist things. When his wife died, a friend found him drumming on a pot and singing, and was shocked. Even an ancient chapter of the book criticises him for ignoring practical matters.
+He is also funny. He puts words in the mouth of Confucius, Taoism's great rival, and lets him say Taoist things. When his wife died, a friend found him drumming on a pot and singing, and was shocked. Even Xunzi, a younger Confucian thinker, complained that he saw nature but forgot people.
 
 ### Where to start reading
 
@@ -112,7 +114,7 @@ The Inner Chapters, especially chapter 2 (with the butterfly dream) and chapter 
 
 ### Who she was
 
-Émilie du Châtelet was born in Paris into a noble family. Her father let her discuss astronomy with the writer Fontenelle when she was ten, and by twelve she read Latin, Italian, Greek, and German. She married a marquis at eighteen; after three children, the couple agreed to live separate lives.
+Émilie du Châtelet was born in Paris into a noble family. Her father let her discuss astronomy with the writer Fontenelle when she was ten, and by twelve she read Latin, Italian, Greek, and German. She married a marquis at 18; after three children, the couple agreed to live separate lives.
 
 From 1733 she studied mathematics with leading scientists, and from 1734 she lived with Voltaire at Cirey, her family's country house, where they set up a laboratory. In 1738 she secretly entered a science prize of the Académie des Sciences on the nature of fire. Her essay was published by the Académie, the first work by a woman it printed.
 
@@ -120,9 +122,9 @@ From 1733 she studied mathematics with leading scientists, and from 1734 she liv
 
 She wanted to understand how the world works, and to give physics solid foundations. Her main work:
 
-- **Foundations of Physics** (1740) tried to bring together the ideas of Newton and Leibniz.
+- **Physics on firm ground:** her *Foundations of Physics* (1740) tried to bring together the ideas of Newton and Leibniz.
 - **Energy:** she argued that a moving body's force grows with the square of its speed, a key step towards the modern idea of energy.
-- **Newton's Principia:** her French translation, with commentary, is still the standard one.
+- **Newton for French readers:** her translation of his *Principia*, with commentary, is still the standard one in French.
 - **Happiness:** in her *Discourse on Happiness*, she says we need passions we can satisfy and freedom from prejudice, and that the love of study is the most reliable source of joy.
 
 ### What might surprise you
@@ -231,7 +233,7 @@ Plato did not trust it. In his parable of the ship, the sailors fight over the h
 
 **Laozi (Taoism).** The *Tao Te Ching* looks at power from below. The best rulers are those the people hardly notice; worse ones are loved, then feared, then despised. Good government works quietly and lets people feel they did things themselves.
 
-**Rousseau and Mill (Enlightenment Ethics).** Rousseau put the people at the heart of the state: when citizens stop caring about public affairs, the state is lost. Mill, a century later, saw a new danger. A majority can be a tyrant too, and silencing even one person who disagrees harms everyone. The phrase "tyranny of the majority" comes from Alexis de Tocqueville; Mill made it famous.
+**Rousseau and Mill (Enlightenment Ethics).** Rousseau put the people at the heart of the state: when citizens stop caring about public affairs, the state is lost. Mill, a century later, saw a new danger. A majority can be a tyrant too, and silencing even one person who disagrees harms everyone. Alexis de Tocqueville popularised the phrase "tyranny of the majority", and Mill took it up.
 
 ### Where they agree, and where they don't
 
@@ -260,7 +262,7 @@ Are you free when nobody stops you, or when you master yourself?
 
 **The Stoics and the East: freedom inside.** Epictetus taught that some things are in our power and others are not; freedom starts with knowing the difference. Spinoza called being ruled by your emotions a kind of bondage. Confucius said an army can lose its general, but nobody can take away the will of an ordinary person. Here, freedom is something no prison can remove.
 
-**Mill: freedom from others.** For Mill, the only freedom worth the name is to pursue your own good in your own way, as long as you do not stop others from doing the same. Over your own body and mind, you rule. Society may step in only to prevent harm to others. Yet Mill limited this to people "in the maturity of their faculties", and in the same chapter he called despotism legitimate over people he called "barbarians", if it improved them.
+**Mill: freedom from others.** For Mill, the only freedom worth the name is to pursue your own good in your own way, as long as you do not stop others from doing the same. Over your own body and mind, you rule. Society may step in only to prevent harm to others. Yet Mill limited this to adults, and in the same chapter he called despotism legitimate over people he called "barbarians", if it improved them.
 
 **Rousseau and Locke: freedom with others.** Rousseau opens *The Social Contract* by saying people are born free and everywhere in chains. His answer is not fewer laws, but laws the people make together. Locke agrees that law, done well, does not restrain freedom but protects and enlarges it.
 

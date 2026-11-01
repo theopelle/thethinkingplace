@@ -46,7 +46,7 @@ On each thinker page, the link reads "In their time: \[era name\] →".
 
 ## Era page: Ancient Greece
 
-**Ancient Greece** · 6th–3rd centuries BCE · Heraclitus, Plato, Aristotle, Epicurus
+**Ancient Greece** · 6th–3rd century BCE · Heraclitus, Plato, Aristotle, Epicurus
 
 ### In one line
 
@@ -66,9 +66,9 @@ Religion was bound up with the city itself. That is why, in 399 BCE, Socrates wa
 
 ### Who counted, and who was left out
 
-Only adult male citizens could vote. Athenian women had no legal standing of their own: a father, then a husband, acted for them, and girls often married around fourteen, to men twice their age. Religious festivals were almost the only public life open to them. Foreign residents, called metics, paid a special tax and could neither vote nor own land.
+Only adult male citizens could vote. Athenian women had no legal standing of their own: a father, then a husband, acted for them, and girls often married around 14, to men twice their age. Religious festivals were almost the only public life open to them. Foreign residents, called metics, paid a special tax and could neither vote nor own land.
 
-And Athens ran on slavery. There may have been some 80,000 slaves in the city in the 6th and 5th centuries BCE, and most free families owned at least one. The worst work was in the silver mines. Few Greeks questioned this. Aristotle called slaves "living tools"; one of the rare dissenters, the orator Alcidamas, answered that "nature has made nobody a slave".
+And Athens ran on slavery. There may have been some 80,000 slaves in the city in the 6th and 5th centuries BCE, and most free families owned at least one. The worst work was in the silver mines. Few Greeks questioned this. Aristotle called slaves "living tools"; one of the rare dissenters, the orator Alcidamas, answered that nature makes no one a slave.
 
 ### Ahead of their time
 
@@ -93,7 +93,7 @@ The word "democracy", the habit of asking for reasons, and the question of how t
 
 ## Era page: Japan, from the Heian court to the age of the samurai
 
-**Japan, from the Heian court to the age of the samurai** · 10th–14th centuries · Sei Shōnagon, Kamo no Chōmei, Kenkō
+**Japan, from the Heian court to the age of the samurai** · 10th–14th century · Sei Shōnagon, Kamo no Chōmei, Kenkō
 
 ### In one line
 
@@ -109,7 +109,7 @@ Outside the capital, a new class of provincial warriors, the samurai, grew stron
 
 Many Japanese Buddhists believed they lived in *mappō*, the age of decline of the Buddha's teaching, which by their count began around 1052. This belief helped give rise to new schools of Buddhism in the Kamakura years, such as the Pure Land school of Hōnen and the school of Nichiren. Zen also took root, brought by Eisai and Dōgen.
 
-Disaster was never far away. In *Hōjōki*, Chōmei describes a great fire in 1177, a whirlwind and a forced move of the capital in 1180, and a famine in which one monk counted 42,300 bodies in the capital alone.
+Disaster was never far away. In *Hōjōki*, Chōmei describes a great fire in 1177, a whirlwind and a forced move of the capital in 1180, and a famine in which one monk counted 42,300 bodies in part of the capital in just two months.
 
 ### Who counted, and who was left out
 
@@ -117,7 +117,7 @@ The literature of this age was written by and for a tiny elite, a few thousand p
 
 ### Ahead of their time
 
-Women at court were kept from Chinese learning, the writing that carried the most prestige. Sei Shōnagon wrote in Japanese instead, and filled her book with her own opinions, likes, and dislikes, with unusual freedom.
+Writing in Japanese, Sei Shōnagon filled her book with her own opinions, likes, and dislikes, with unusual freedom.
 
 People who turned away from the world usually went to live in a temple. Chōmei took Buddhist vows in 1204, but chose another path: he built a tiny hut in the hills outside the capital and lived there alone. In *Hōjōki* he set down his life in the hut, after the disasters he had seen.
 

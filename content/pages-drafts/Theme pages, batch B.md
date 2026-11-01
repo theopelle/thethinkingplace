@@ -24,7 +24,7 @@ Are we what we repeatedly do?
 
 ### Where they agree, and where they don't
 
-All of them see small, repeated acts as the way a person changes. They differ on the goal. Confucius and Epictetus speak of steady effort; Zhuangzi's cook shows effort turning into ease. Kenkō and Hume add a warning: habits and customs also hold us, and few things are harder to give up.
+All of them see small, repeated acts as the way a person changes. They differ on the goal. Confucius and Epictetus speak of steady effort; Zhuangzi's cook shows effort turning into ease. Kenkō adds a warning: few things are harder to give up than customs. Hume sees custom more kindly, as the great guide of human life.
 
 ### Your thoughts and notes
 
@@ -48,7 +48,7 @@ What do we do with pain we cannot avoid?
 
 **Rumi and Hafiz (Persian and Sufi Poetry).** The Sufi poets see pain as part of the way. Rumi calls it a treasure that holds mercies, and the *Masnavi* opens with a reed flute crying for the reed bed it was cut from. Hafiz says no one reaches joy without passing through hardship.
 
-**Nietzsche and Dostoevsky (Existential Thought).** Nietzsche's answer was *amor fati*, love of fate: wanting nothing to be different, the hard parts included. Dostoevsky went further, calling suffering the origin of consciousness itself.
+**Nietzsche and Dostoevsky (Existential Thought).** Nietzsche's answer was *amor fati*, love of fate: wanting nothing to be different, the hard parts included. Dostoevsky's Underground Man goes further, calling suffering the sole origin of consciousness.
 
 **Weil and Mill (Existential Thought, Enlightenment Ethics).** Others look outward. Simone Weil said those who suffer need, above all, people able to pay them attention. And Mill believed most of the great causes of suffering can be reduced by human care and effort.
 
@@ -108,7 +108,7 @@ What is a life for?
 
 **Tolstoy and William James (Existential Thought).** Tolstoy had fame, family, and wealth when his life "came to a standstill": he could no longer see what any of it was for. William James answered the same fear in a lecture called "Is Life Worth Living?". We live fully, he said, only by risking ourselves on what we believe.
 
-**Mill (Enlightenment Ethics).** At twenty, Mill asked himself whether reaching all his goals would make him happy, and an honest voice said no. He came out of the crisis with a lesson: happiness comes to those who aim at something other than their own happiness.
+**Mill (Enlightenment Ethics).** At 20, Mill asked himself whether reaching all his goals would make him happy, and an honest voice said no. He came out of the crisis with a lesson: happiness comes to those who aim at something other than their own happiness.
 
 **George Eliot, Dickinson, and Tagore (Humanists and Essayists, Indian Philosophy).** Many find meaning in what we do for others. "What do we live for," asks a character in *Middlemarch*, "if it is not to make life less difficult to each other?" Dickinson would not live in vain if she could stop one heart from breaking, and Tagore says we earn our life by giving it.
 

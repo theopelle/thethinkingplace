@@ -24,7 +24,7 @@ Are people equal, and equal in what?
 
 ### Where they agree, and where they don't
 
-Until the 18th century, most thinkers assumed people were unequal by nature; the idea of natural rights changed that. Today most agree people are equal in dignity. The open question is equal in what: rights, chances, or results. Rousseau worried about unequal property; Aristotle, even with his blind spots, about treating like cases alike.
+Until the 18th century, most societies treated people as unequal by nature, despite voices like the Stoics and Confucius; the idea of natural rights changed that. Today most agree people are equal in dignity. The open question is equal in what: rights, chances, or results. Rousseau worried about unequal property; Aristotle, even with his blind spots, about treating like cases alike.
 
 ### Your thoughts and notes
 
@@ -52,7 +52,7 @@ How do we live with people who believe differently?
 
 **Mill (Enlightenment Ethics).** Mill moved the question from religion to every kind of opinion. If all of humanity but one person agreed, they would have no more right to silence that person than the one would have to silence them. Silencing a view, he said, assumes we cannot be wrong.
 
-**Ibn Arabi and Okakura (Persian and Sufi Poetry, Japanese Aesthetics).** Ibn Arabi wrote of a heart that can take on every form: a monastery, a temple, a place of pilgrimage. Okakura, writing in English for Western readers, said East and West had grown along different lines, with no reason why one should not complete the other.
+**Ibn Arabi and Okakura (Persian and Sufi Poetry, Japanese Aesthetics).** Ibn Arabi wrote lines, often read as a hymn to openness, about a heart that can take on every form: a monastery, a temple, a place of pilgrimage. Okakura, writing in English for Western readers, said East and West had grown along different lines, with no reason why one should not complete the other.
 
 ### Where they agree, and where they don't
 
@@ -88,7 +88,7 @@ How much is enough, and what is work for?
 
 ### Where they agree, and where they don't
 
-Most of them warn that wealth beyond need rarely brings peace. They differ on what wealth does for society. Smith saw trade and work as the way whole nations grow richer; Rousseau saw property as the root of inequality; the Stoics and the *Gita* tradition care less about the wealth than about the spirit in which we work.
+Most of them warn that wealth beyond need rarely brings peace. They differ on what wealth does for society. Smith saw trade and work as the way whole nations grow richer; Rousseau saw property as the root of inequality; Marcus Aurelius and Vivekananda care less about the wealth than about the spirit in which we work.
 
 ### Your thoughts and notes
 
@@ -119,7 +119,7 @@ Can war ever be right, and what makes peace last?
 
 ### Where they agree, and where they don't
 
-None of them see war as glorious in itself. They split on whether it can be justified. The *Gita* accepts a just duty to fight, and Hobbes and Kant seek peace through political order; Tolstoy rejects violence altogether. Sa'di adds a quieter thought: a falsehood that brings peace can be better than a truth that stirs up harm.
+None of them see war as glorious in itself. They split on whether it can be justified. The *Gita*, read literally, accepts a duty to fight, and Hobbes and Kant seek peace through political order; Tolstoy rejects violence altogether. Sa'di adds a quieter thought: a falsehood that brings peace can be better than a truth that stirs up harm.
 
 ### Your thoughts and notes
 
