@@ -2,7 +2,7 @@
 
     python3 tools/build_pages.py        (also run at the end of build_content.py)
 
-Design: exports/handover-library-ui-2026-10-30.md and the three handovers it builds on. Page text is
+Design: exports/handovers/handover-library-ui-2026-10-30.md and the three handovers it builds on. Page text is
 copied exactly as written in the sheet (light Markdown); the app never rewrites it. Every page is
 written with its Status; the app shows only "Ready" pages (drafts only in test APKs). Checked:
   - every live thought belongs to exactly one thinker or text page, with the same path;

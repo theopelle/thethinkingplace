@@ -3,7 +3,7 @@
     python3 tools/build_questions.py        (also run at the end of build_content.py)
 
 Once a month, one question that 2-4 of that month's thoughts answer differently (design and rules:
-exports/handover-monthly-questions-2026-10-29.md and the UI note of the same day). Every month is
+exports/handovers/handover-monthly-questions-2026-10-29.md and the UI note of the same day). Every month is
 written with its Status; the app shows only "Ready" months (drafts only in test APKs). Checked:
   - every excerpt ("Their words") is copied word for word from its thought ("…" marks a cut);
   - every voice is a thought the calendar shows in that month (a pinned date may move it, never

@@ -1,4 +1,4 @@
-"""Turn exported Claude Doc markdown (thinker, text, path, topic, and era pages,
+"""Turn the master Markdown files in content/pages-drafts/ (thinker, text, path, topic, and era pages,
 plus the "In their time" opening essay) into content/pages.xlsx.
 
 Usage: python3 tools/import_pages.py OUT.xlsx IN1.md [IN2.md ...]
@@ -266,7 +266,7 @@ def main(out, inputs):
     for line in [
         ["pages.xlsx: the In their time essay, era, path, thinker, text, and topic pages"],
         ["One row per page. Text is markdown: **bold**, *italic*, '- ' bullets, blank line between paragraphs."],
-        ["Built from exported Claude Docs by tools/import_pages.py. Edit the doc, re-export, re-run; or edit here and keep Status other than Draft."],
+        ["Built from the master Markdown files in content/pages-drafts/ by tools/import_pages.py. Fix text in the .md files, then re-run; Status set here by hand (other than Draft) is kept."],
         ["Thought IDs: only for topic pages that pick thoughts by hand. Theme and path pages pick thoughts by theme or path."],
         ["The app shows only thoughts the reader has already met, counted as '[n] thoughts so far'."],
         ["Era: on era pages, the era's own name; on thinker and text pages, the era they belong to (for the 'In their time: [era] →' link). Era order: 1 = oldest, for the timeline."],
