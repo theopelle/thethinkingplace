@@ -106,7 +106,7 @@ The Inner Chapters, especially chapter 2 (with the butterfly dream) and chapter 
 
 - Wikipedia, "Zhuang Zhou": https://en.wikipedia.org/wiki/Zhuang\_Zhou
 - Britannica, "Zhuangzi": https://www.britannica.com/biography/Zhuang-Zhou
-- Stanford Encyclopedia of Philosophy, "Zhuangzi": https://plato.stanford.edu/entries/zhuangzi/ · The app's thoughts #433 and #437 (Zhuangzi, ch. 5 and 18, Giles translation)
+- Stanford Encyclopedia of Philosophy, "Zhuangzi": https://plato.stanford.edu/entries/zhuangzi/ · The app's thoughts from Zhuangzi, ch. 5 and 18, Giles translation
 
 ## Thinker page: Émilie du Châtelet
 
@@ -181,7 +181,7 @@ All of them see friendship and kindness as among the best things in life, and li
 - Wikipedia, "Epicurus": https://en.wikipedia.org/wiki/Epicurus
 - Cambridge University Library, "Of friendship" (Montaigne exhibition): https://wwwe.lib.cam.ac.uk/CUL/exhibitions/Montaigne/c3.html
 - Montaigne, "Of Friendship", Cotton translation (HyperEssays): https://hyperessays.net/essays/on-friendship/ · Wikipedia, "Michel de Montaigne": https://en.wikipedia.org/wiki/Michel\_de\_Montaigne
-- The app's thoughts #58, #112, #115, #117, #211, #280, #502, #503, #511, and #512, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Justice (society)
 
@@ -213,7 +213,7 @@ Most agree that justice is about more than rules: it shapes the kind of person y
 
 - Wikipedia, "Justice": https://en.wikipedia.org/wiki/Justice
 - Wikipedia, "Natural slavery": https://en.wikipedia.org/wiki/Natural\_slavery · Stanford Encyclopedia of Philosophy, "Justice": https://plato.stanford.edu/entries/justice/ · "Epicurus": https://plato.stanford.edu/entries/epicurus/ · "Plato's Ethics and Politics in The Republic": https://plato.stanford.edu/entries/plato-ethics-politics/
-- The app's thoughts #71, #84, #85, #98, #127–129, #135, #491, #500, #504, and #617, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Democracy (society)
 
@@ -280,4 +280,4 @@ In 1958 the philosopher Isaiah Berlin named the split: "negative" freedom, being
 
 - Stanford Encyclopedia of Philosophy, "Positive and Negative Liberty": https://plato.stanford.edu/entries/liberty-positive-negative/
 - John Stuart Mill, *On Liberty* (1859), chapter I (Project Gutenberg): https://www.gutenberg.org/ebooks/34901 · Wikipedia, "Negative liberty": https://en.wikipedia.org/wiki/Negative\_liberty · Stanford Encyclopedia of Philosophy, 2014 version of the same entry (on the Stoics): https://plato.stanford.edu/archives/sum2014/entries/liberty-positive-negative/
-- The app's thoughts #15, #42, #168, #197, #198, and the others listed above, with their sources
+- The app's thoughts listed above, with their sources

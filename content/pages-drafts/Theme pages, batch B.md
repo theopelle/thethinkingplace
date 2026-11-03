@@ -32,7 +32,7 @@ All of them see small, repeated acts as the way a person changes. They differ on
 
 ### Sources
 
-- The app's thoughts #22, #40, #109, #174, #311, #314, #338, #413, #432, #495, #514, and #527, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Suffering and resilience
 
@@ -62,7 +62,7 @@ Many of them say suffering can teach and deepen us, as Vivekananda put it: miser
 
 ### Sources
 
-- The app's thoughts #6, #17, #28, #199, #213, #236, #248, #380, #555, #570, and #596, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Work and action
 
@@ -92,7 +92,7 @@ All of them trust deeds over words. They differ on effort and reward. The *Gita*
 
 ### Sources
 
-- The app's thoughts #10, #12, #360, #368, #381, #432, #449, #472, and #611, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Purpose and meaning
 
@@ -122,7 +122,7 @@ Most of them say meaning comes from something larger than the self, whether virt
 
 ### Sources
 
-- The app's thoughts #116, #144, #163, #166, #214, #240, #243, #288, #296, #385, and #434, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Nature and the universe
 
@@ -153,7 +153,7 @@ All of them say that understanding nature changes how we live in it. They split 
 ### Sources
 
 - Stanford Encyclopedia of Philosophy, "Lucretius": https://plato.stanford.edu/entries/lucretius/ · "Stoicism": https://plato.stanford.edu/entries/stoicism/
-- The app's thoughts #37, #44, #87, #89, #152, #226, #410, #422, #441, #543, and #553, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Death and mortality
 
@@ -183,7 +183,7 @@ Most of them say that facing death honestly makes life clearer and fear smaller.
 
 ### Sources
 
-- The app's thoughts #4, #59, #73, #75, #170, #277, #387, #437, #520, #582, and #583, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Love
 
@@ -214,7 +214,7 @@ All of them see love as more than a feeling: it changes the one who loves. They 
 ### Sources
 
 - Stanford Encyclopedia of Philosophy, "Plato's Aesthetics": https://plato.stanford.edu/entries/plato-aesthetics/
-- The app's thoughts #106, #219, #221, #280, #308, #378, #389, #559, #567, and #577, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Beauty and art
 
@@ -245,7 +245,7 @@ All of them link beauty to the person who sees it, not only to the object. They 
 ### Sources
 
 - Stanford Encyclopedia of Philosophy, "Hume's Aesthetics": https://plato.stanford.edu/entries/hume-aesthetics/
-- The app's thoughts #177, #188, #259, #264, #421, #525, #533, and #534, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Solitude and stillness
 
@@ -275,4 +275,4 @@ All of them see stillness as the place where the mind clears. They differ on how
 
 ### Sources
 
-- The app's thoughts #3, #215, #225, #229, #230, #354, #417, #438, #522, and #541, with their sources
+- The app's thoughts, with their sources

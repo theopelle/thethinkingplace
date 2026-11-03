@@ -44,7 +44,7 @@ He also kept his name off his own revolution. *Two Treatises of Government* and 
 
 - Stanford Encyclopedia of Philosophy, "John Locke": https://plato.stanford.edu/entries/locke/
 - Wikipedia, "John Locke": https://en.wikipedia.org/wiki/John\_Locke
-- The app's Locke thoughts (#624–625), from *An Essay Concerning Human Understanding* and the *Second Treatise of Government* (1690)
+- The app's Locke thoughts, from *An Essay Concerning Human Understanding* and the *Second Treatise of Government* (1690)
 
 ## Denis Diderot
 
@@ -87,7 +87,7 @@ Much of his best writing stayed in a drawer. *Rameau's Nephew*, *Jacques the Fat
 - Stanford Encyclopedia of Philosophy, "Denis Diderot": https://plato.stanford.edu/entries/diderot/
 - Wikipedia, "Denis Diderot": https://en.wikipedia.org/wiki/Denis\_Diderot
 - Wikipedia, "Diderot effect": https://en.wikipedia.org/wiki/Diderot\_effect
-- The app's Diderot thoughts (#634–635), from *Philosophical Thoughts* and "Regrets on My Old Dressing Gown"
+- The app's Diderot thoughts, from *Philosophical Thoughts* and "Regrets on My Old Dressing Gown"
 
 ## Thomas Hobbes
 
@@ -129,7 +129,7 @@ He also kept working late into old age. In his mid-eighties he published an Engl
 
 - Stanford Encyclopedia of Philosophy, "Thomas Hobbes": https://plato.stanford.edu/entries/hobbes/
 - Wikipedia, "Thomas Hobbes": https://en.wikipedia.org/wiki/Thomas\_Hobbes
-- The app's Hobbes thoughts (#623), from *Leviathan* (1651)
+- The app's Hobbes thoughts, from *Leviathan* (1651)
 
 ## Ibn Arabi
 
@@ -172,7 +172,7 @@ He was, and still is, contested. Many jurists saw him as a heretic, while Sufis 
 - Stanford Encyclopedia of Philosophy, "Ibn Arabi": https://plato.stanford.edu/entries/ibn-arabi/
 - Wikipedia, "Ibn Arabi": https://en.wikipedia.org/wiki/Ibn\_Arabi
 - Wikipedia, "Tarjuman al-Ashwaq": https://en.wikipedia.org/wiki/Tarjuman\_al-Ashwaq
-- The app's Ibn Arabi thoughts (#577), from *The Tarjumán al-Ashwáq*, translated by R. A. Nicholson (1911)
+- The app's Ibn Arabi thoughts, from *The Tarjumán al-Ashwáq*, translated by R. A. Nicholson (1911)
 
 ## Nicolas Chamfort
 
@@ -214,7 +214,7 @@ His maxims are often set beside La Rochefoucauld's. They are less polished but m
 
 - Encyclopædia Britannica, "Sébastien-Roch Nicolas Chamfort": https://www.britannica.com/biography/Sebastien-Roch-Nicolas-Chamfort
 - Wikipedia, "Nicolas Chamfort": https://en.wikipedia.org/wiki/Nicolas\_Chamfort
-- The app's Chamfort thoughts (#630), from *Maxims and Thoughts*
+- The app's Chamfort thoughts, from *Maxims and Thoughts*
 
 ## George Eliot
 
@@ -256,7 +256,7 @@ She was also a sharp critic of other women writers. Her essay "Silly Novels by L
 
 - Stanford Encyclopedia of Philosophy, "George Eliot": https://plato.stanford.edu/entries/george-eliot/
 - Wikipedia, "George Eliot": https://en.wikipedia.org/wiki/George\_Eliot
-- The app's George Eliot thoughts (#287–289), from *Middlemarch* (1871–1872)
+- The app's George Eliot thoughts, from *Middlemarch* (1871–1872)
 
 ## Ralph Waldo Emerson
 
@@ -298,7 +298,7 @@ He was also a quiet but firm opponent of slavery. He disliked the public eye, ye
 
 - Stanford Encyclopedia of Philosophy, "Ralph Waldo Emerson": https://plato.stanford.edu/entries/emerson/
 - Wikipedia, "Ralph Waldo Emerson": https://en.wikipedia.org/wiki/Ralph\_Waldo\_Emerson
-- The app's Emerson thoughts (#261–265, #305–306), from "Self-Reliance" and "Compensation" (1841)
+- The app's Emerson thoughts, from "Self-Reliance" and "Compensation" (1841)
 
 ## Erasmus
 
@@ -340,7 +340,7 @@ He is remembered with a link to Rotterdam, but he lived there only about four ye
 
 - Stanford Encyclopedia of Philosophy, "Desiderius Erasmus": https://plato.stanford.edu/entries/erasmus/
 - Wikipedia, "Erasmus": https://en.wikipedia.org/wiki/Erasmus
-- The app's Erasmus thoughts (#290–291), from *The Praise of Folly*
+- The app's Erasmus thoughts, from *The Praise of Folly*
 
 ## The Questions of King Milinda
 
@@ -385,7 +385,7 @@ Book II, the chariot dialogue: a few pages that sum up the Buddhist idea of the 
 - Wikipedia, "Milinda Panha": https://en.wikipedia.org/wiki/Milinda\_Panha
 - Wikipedia, "Menander I": https://en.wikipedia.org/wiki/Menander\_I
 - Wikipedia, "Nāgasena": https://en.wikipedia.org/wiki/N%C4%81gasena
-- The app's thought from this text (#355), translated by T. W. Rhys Davids (1890)
+- The app's thought from this text, translated by T. W. Rhys Davids (1890)
 
 ## Petrarch
 
@@ -427,4 +427,4 @@ He also invented the idea of the "Dark Ages" for the centuries after Rome, a lab
 
 - Encyclopædia Britannica, "Petrarch": https://www.britannica.com/biography/Petrarch
 - Wikipedia, "Petrarch": https://en.wikipedia.org/wiki/Petrarch
-- The app's Petrarch thoughts (#292), from *Petrarch's Secret*, translated by William H. Draper (1911)
+- The app's Petrarch thoughts, from *Petrarch's Secret*, translated by William H. Draper (1911)

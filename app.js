@@ -1150,9 +1150,9 @@
   const RAIL_OF = { thinker: "people", text: "people", path: "paths", topic: "topics", era: "time", essay: "time" };
   function renderRail(view, pageId) {
     const rail = $("rail"), b = document.body.classList;
-    const sec = view === "page" ? RAIL_OF[pageById[pageId].type]
+    const sec = view === "page" ? (pageById[pageId] ? RAIL_OF[pageById[pageId].type] : "compare")  // or a pair page
       : view !== "library" ? null : LIB_MAPS.some(([id]) => id === libSection) ? "maps"
-      : LIB_SECTIONS.some(([id]) => id === libSection) ? libSection : null;
+      : [...LIB_SECTIONS, ...LIB_EXTRAS].some(([id]) => id === libSection) ? libSection : null;
     const bigMap = view === "library" && ["world", "europe", "asia"].includes(libSection);
     b.toggle("lib-home", view === "library" && !sec);
     b.toggle("lib-map", bigMap);
@@ -1178,10 +1178,10 @@
       location.hash = "#/library";
     });
     const secs = make("ul", "secs");
-    for (const [id, title] of LIB_SECTIONS) {
+    for (const [id, title] of [...LIB_SECTIONS, ...libExtras()]) {
       const li = make("li");
       li.append(cur(link("#/library/" + id, title), id === sec, "true"));
-      if (id === sec) {
+      if (id === sec && (id === "maps" || lists[id])) {
         const sub = make("ul", "sub");
         if (id === "maps") {
           sub.append(...LIB_MAPS.filter(([m]) => mapNodes[m]).map(([m, t]) => {
@@ -1225,7 +1225,7 @@
       $("lib-sub").textContent = "A well of knowledge behind each day's thought: the thinkers, their paths, their times, and the big questions.";
       if ($("lib-search").value.trim()) return renderSearch();
       const ul = make("ul", "lib-list two");
-      for (const [id, title, sub] of LIB_SECTIONS) ul.append(libRow("#/library/" + id, title, sub));
+      for (const [id, title, sub] of [...LIB_SECTIONS, ...libExtras()]) ul.append(libRow("#/library/" + id, title, sub));
       body.append(ul);
       body.classList.add("home-grid");  // wide screens: the sections beside the weekly highlight
       // The weekly highlight: one page, the same all week, every page in turn.
@@ -1243,6 +1243,14 @@
       $("lib-sub").textContent = map[2];
       body.append(...(map[0] === "thinkers-in-time" ? thinkersInTime() : mapNodes[map[0]] || []));
       setTimeout(() => fitDots(body), 0);
+      return;
+    }
+    const extra = LIB_EXTRAS.find(([id]) => id === section);
+    if (extra) {
+      $("lib-title").textContent = extra[1];
+      $("lib-sub").textContent = section === "compare"
+        ? "Where two paths agree, and where they part ways, with a few of their thoughts side by side." : extras.conversation.intro;
+      (section === "compare" ? renderCompare : renderConversation)(body);
       return;
     }
     const [, title, sub] = LIB_SECTIONS.find(([id]) => id === section);
@@ -1385,6 +1393,169 @@
     return out.reverse();
   }
 
+  // ---------- Compare two paths, Questions for good conversations ----------
+  // extras.json, built and checked from content/path-pairs.xlsx and content/conversation-questions.xlsx
+  // (tools/build_extras.py). Only "Ready" rows show; test APKs show drafts too. A thought they cite
+  // always appears, but links to its day only once that day has come.
+  let extras = { pairs: [], conversation: { intro: "", groups: [], questions: [] } }, comparePicked = [], convGroup = "all";
+  const extraShown = (x) => x.status === "Ready" || libraryPreview();
+  const pairsShown = () => extras.pairs.filter(extraShown);
+  const pairOf = (a, b) => pairsShown().find((p) => (p.a === a && p.b === b) || (p.a === b && p.b === a));
+  const convShown = () => extras.conversation.questions.filter(extraShown);
+  // On the Library home, under Maps and timelines; no menu item of their own.
+  const LIB_EXTRAS = [["compare", "Compare two paths", "Where they agree, and where they part ways"],
+    ["questions", "Questions for good conversations", "To take to a dinner, a walk, or a long drive"]];
+  const extraOn = (id) => (id === "compare" ? pairsShown() : convShown()).length > 0;
+  const libExtras = () => LIB_EXTRAS.filter(([id]) => extraOn(id));
+  const pathSlug = (p) => p.toLowerCase().replace(/[^a-z]+/g, "-");
+  let shownDays = null;
+  function dayOfThought(id) {  // the last day it was shown so far, or null
+    const today = todayKey();
+    if (!shownDays || shownDays.today !== today) {
+      const days = {};
+      for (let k = calendar.start; k <= today; k = addDays(k, 1)) days[entryShown(k).id] = k;
+      shownDays = { today, days };
+    }
+    return shownDays.days[id] || null;
+  }
+  function citeLink(id, cls, ...children) {
+    const day = dayOfThought(id), el = make(day ? "a" : "span", cls);
+    if (day) el.href = "#/day/" + day;
+    el.append(...children);
+    return el;
+  }
+
+  function renderCompare(body) {
+    const chips = make("ul", "chips"), verdict = make("div", "verdict");
+    verdict.setAttribute("aria-live", "polite");
+    const draw = () => {
+      chips.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(comparePicked.includes(b.textContent))));
+      const [a, b] = comparePicked, pr = a && b && pairOf(a, b);
+      verdict.replaceChildren();
+      if (pr) {
+        const link = make("a", "verdict-pair");
+        link.href = "#/pair/" + pr.id;
+        link.append(make("span", "t", `${pr.a} and ${pr.b}`), make("span", "d", stripMd(pr.line)), make("span", "go", "read"));
+        verdict.append(link);
+      } else verdict.append(make("p", "quiet", !a ? "Pick two paths." : !b ? `${a}, and…` : "We haven't written this pair yet."));
+    };
+    for (const p of PATH_ORDER) {
+      const li = make("li"), b = make("button", "chip", p);
+      b.type = "button";
+      // A third pick replaces the older of the two.
+      b.addEventListener("click", () => {
+        comparePicked = comparePicked.includes(p) ? comparePicked.filter((x) => x !== p) : [...comparePicked, p].slice(-2);
+        draw();
+      });
+      li.append(b);
+      chips.append(li);
+    }
+    draw();
+    const ul = make("ul", "lib-list two");
+    for (const p of pairsShown()) ul.append(libRow("#/pair/" + p.id, `${p.a} and ${p.b}`, stripMd(p.line)));
+    body.append(make("p", "pick-label", "Pick two"), chips, verdict, make("h2", "", "Pairs to read"), ul);
+  }
+
+  function renderPair(id) {
+    const p = pairsShown().find((x) => x.id === id), linker = makeLinker(null);
+    $("page-kind").textContent = "Two paths";
+    $("page-title").textContent = `${p.a} and ${p.b}`;
+    const header = $("page-header");
+    header.replaceChildren();
+    [p.a, p.b].forEach((name, i) => {
+      const page = pageOf("path", name);
+      if (i) header.append(" · ");
+      header.append(page ? pageLink(page.id, name) : name);
+    });
+    header.hidden = false;
+    $("page-also").hidden = true;
+    const text = $("page-text");
+    text.replaceChildren();
+    const one = make("p", "lib-one-line");
+    inline(one, p.line, linker);
+    text.append(one);
+    for (const [title, points] of [["Where they agree", p.agree], ["Where they part ways", p.part]]) {
+      const ul = make("ul", "lib-points");
+      for (const [head, body] of points) {
+        const li = make("li");
+        li.append(make("strong", "", head), " ");
+        inline(li, body, linker);
+        ul.append(li);
+      }
+      text.append(make("h2", "", title), ul);
+    }
+    const cites = make("div", "lib-cites");
+    for (const t of p.thoughts) {
+      cites.append(citeLink(t.id, "lib-cite", make("span", "p", t.path),
+        make("span", "q", entriesById[t.id].text.replace(/ \/ /g, "\n")), make("span", "s", t.gloss)));
+    }
+    const again = make("p", "pair-links"), a = make("a", "", "pick two other paths");
+    a.href = "#/library/compare";
+    again.append(a);
+    $("page-extra").replaceChildren(make("h2", "", "From our thoughts"), cites, make("h2", "", "Compare"), again);
+  }
+
+  // On a path page, under "Next to its neighbours": its written pairs, then the picker.
+  function comparePathLinks(path) {
+    if (!extraOn("compare")) return [];
+    const mine = pairsShown().filter((x) => x.a === path || x.b === path), out = [];
+    if (mine.length) {
+      const links = make("p", "pair-links");
+      for (const x of mine) { const a = make("a", "", x.a === path ? x.b : x.a); a.href = "#/pair/" + x.id; links.append(a); }
+      out.push(make("p", "compare-k", `Compare ${path} with`), links);
+    }
+    const pick = make("p", "pair-links"), a = make("a", "go", mine.length ? "or pick another path" : `Compare ${path} with another path`);
+    a.href = "#/library/compare/" + pathSlug(path);
+    pick.append(a);
+    out.push(pick);
+    return out;
+  }
+
+  function renderConversation(body) {
+    const qs = convShown(), groups = extras.conversation.groups.filter((g) => qs.some((q) => q.groups.includes(g.key)));
+    const inGroup = () => qs.filter((q) => convGroup === "all" || q.groups.includes(convGroup));
+    const from = (q) => {
+      const e = entriesById[q.id];
+      return citeLink(q.id, "conv-from", "from " + e.source.split(",")[0], make("span", "p", e.path));
+    };
+    // "Give me one" picks from the group on screen, never the one just shown.
+    const one = make("div", "conv-one"), give = make("button", "link conv-give", "give me one");
+    let current = null;
+    give.type = "button";
+    give.addEventListener("click", () => {
+      const pool = inGroup().filter((q) => q !== current);
+      if (pool.length) current = pool[Math.floor(Math.random() * pool.length)];
+      const card = make("div", "conv-card");
+      card.append(make("p", "q", current.question), from(current));
+      one.replaceChildren(card);
+      give.textContent = "another";
+    });
+    one.setAttribute("aria-live", "polite");
+    // Who you're with: one group at a time, or all of them.
+    const filter = make("div", "choice conv-filter"), list = make("ul", "conv-list");
+    filter.setAttribute("role", "radiogroup");
+    filter.setAttribute("aria-label", "Who you're with");
+    const draw = () => {
+      filter.querySelectorAll("button").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.group === convGroup)));
+      list.replaceChildren(...inGroup().map((q) => { const li = make("li"); li.append(make("p", "q", q.question), from(q)); return li; }));
+    };
+    [["all", "all"], ...groups.map((g) => [g.key, g.label.replace(/^(With|On|In) /, "")])].forEach(([key, label], i) => {
+      if (i) { const dot = make("span", "dot", "·"); dot.setAttribute("aria-hidden", "true"); filter.append(dot); }
+      const b = make("button", "link", label);
+      b.type = "button";
+      b.dataset.group = key;
+      b.setAttribute("role", "radio");
+      b.addEventListener("click", () => {
+        convGroup = key;
+        if (current && !inGroup().includes(current)) { current = null; one.replaceChildren(); give.textContent = "give me one"; }
+        draw();
+      });
+      filter.append(b);
+    });
+    draw();
+    body.append(one, give, make("h2", "", "Who you're with"), filter, list);
+  }
+
   // Thinkers and texts as links (every one, met or not), in the order a sentence names them.
   function peopleList(match, order) {
     const at = (x) => {
@@ -1421,6 +1592,7 @@
       // A path's "Who we read" is its thinkers as links, in the order the sentence names them.
       if (p.type === "path" && title === "Who we read") text.append(peopleList((x) => x.path === p.title, md));
       else renderMd(text, md, linker);
+      if (p.type === "path" && title === "Next to its neighbours") text.append(...comparePathLinks(p.title));
     });
     if (p.type === "era") {
       text.append(make("h2", "", "The thinkers of this era"), peopleList((x) => x.era === p.title, p.header[1] || ""));
@@ -2527,10 +2699,13 @@
       // Europe or Asia opened from the world map goes back to the world map.
       if (section !== libSection) mapFromWorld = (section === "europe" || section === "asia") && libSection === "world" && lastView === "library";
       libSection = section;
-      renderLibrary([...LIB_SECTIONS, ...LIB_MAPS].some(([id]) => id === section) ? section : null);
+      // "or pick another path" on a path page comes with that path picked
+      if (section === "compare" && anchor) comparePicked = PATH_ORDER.filter((p) => pathSlug(p) === anchor);
+      renderLibrary([...LIB_SECTIONS, ...LIB_MAPS, ...libExtras()].some(([id]) => id === section) ? section : null);
       if (anchor === "voices") libraryAnchor = "lib-voices";
     }
     else if (/^page\/[\w-]+$/.test(hash) && pageShown(hash.slice(5))) { view = "page"; renderPage(hash.slice(5)); }
+    else if (/^pair\/[\w-]+$/.test(hash) && pairsShown().some((p) => p.id === hash.slice(5))) { view = "page"; renderPair(hash.slice(5)); }
     else if (/^question\/\d{4}-\d{2}$/.test(hash) && questionShown(hash.slice(9))) {
       view = "question";
       if (lastView !== "question") questionFrom = lastView === "journal" ? "journal" : "day";
@@ -2539,7 +2714,7 @@
     else {
       const m = hash.match(/^day\/(\d{4}-\d{2}-\d{2})$/);
       if (!m) dayFromPage = false;
-      else if (lastView !== "day") dayFromPage = lastView === "page";
+      else if (lastView !== "day") dayFromPage = lastView === "page" || lastView === "library";
       renderDay(m ? m[1] : todayKey());
     }
     if (view !== "day") { endReveal(); $("view-day").style.animation = ""; }  // normal fade-in again next time
@@ -2697,7 +2872,7 @@
     if (!$("home-note").hidden) return closeHomeNote();
     const hash = location.hash.replace(/^#\/?/, "");
     if (hash === "terms") { location.hash = libraryOn() ? "#/settings" : "#/about"; return; }
-    if (hash.startsWith("page/")) { $("page-back").click(); return; }
+    if (hash.startsWith("page/") || hash.startsWith("pair/")) { $("page-back").click(); return; }
     if (mapFromWorld && /^library\/(europe|asia)$/.test(hash)) { location.hash = "#/library/world"; return; }
     if (LIB_MAPS.some(([id]) => hash === "library/" + id)) { location.hash = "#/library/maps"; return; }
     if (hash.startsWith("library/")) { location.hash = "#/library"; return; }
@@ -3012,6 +3187,7 @@
       library = await fetch("pages.json", { cache: "no-cache" }).then((r) => r.json());
       pageById = Object.fromEntries(library.pages.map((p) => [p.id, p]));
     } catch {}
+    try { extras = await fetch("extras.json", { cache: "no-cache" }).then((r) => r.json()); } catch {}
     if (libraryOn()) {
       // The bottom bar: today · past thoughts · library · settings. About leaves it.
       $("nav-library").hidden = $("nav-library-dot").hidden = false;

@@ -46,7 +46,7 @@ Gertrude Bell's *Poems from the Divan of Hafiz* (1897): a small selection in gra
 - Wikipedia, "Hafez": https://en.wikipedia.org/wiki/Hafez
 - Wikipedia, "West–östlicher Divan": https://en.wikipedia.org/wiki/West%E2%80%93%C3%B6stlicher\_Divan
 - Wikipedia, "Gertrude Bell": https://en.wikipedia.org/wiki/Gertrude\_Bell
-- The app's Hafiz thoughts (#567–572, #598–599), from the *Divan*, translated by Gertrude Bell (1897)
+- The app's Hafiz thoughts, from the *Divan*, translated by Gertrude Bell (1897)
 
 ## Jean-Jacques Rousseau
 
@@ -89,7 +89,7 @@ His picture of the family also rested on women serving men. In *Emile* he argued
 - Stanford Encyclopedia of Philosophy, "Jean Jacques Rousseau": https://plato.stanford.edu/entries/rousseau/
 - Wikipedia, "Jean-Jacques Rousseau": https://en.wikipedia.org/wiki/Jean-Jacques\_Rousseau
 - Wikipedia, "A Vindication of the Rights of Woman": https://en.wikipedia.org/wiki/A\_Vindication\_of\_the\_Rights\_of\_Woman
-- The app's Rousseau thoughts (#617–622), from *The Social Contract*, *Emile*, the *Reveries*, and the *Discourse on Inequality*
+- The app's Rousseau thoughts, from *The Social Contract*, *Emile*, the *Reveries*, and the *Discourse on Inequality*
 
 ## Sei Shōnagon
 
@@ -132,7 +132,7 @@ The passages W. G. Aston translated in *A History of Japanese Literature* (1899)
 - Encyclopædia Britannica, "Sei Shōnagon": https://www.britannica.com/biography/Sei-Shonagon
 - Wikipedia, "Sei Shōnagon": https://en.wikipedia.org/wiki/Sei\_Sh%C5%8Dnagon
 - Wikipedia, "The Pillow Book": https://en.wikipedia.org/wiki/The\_Pillow\_Book
-- The app's Sei Shōnagon thoughts (#542–545, #548–549), from *The Pillow Book*, translated by W. G. Aston (1899)
+- The app's Sei Shōnagon thoughts, from *The Pillow Book*, translated by W. G. Aston (1899)
 
 ## Jean de La Bruyère
 
@@ -174,7 +174,7 @@ He mocked people who invented noble ancestors, and he signed his name as one wor
 
 - Encyclopædia Britannica, "Jean de La Bruyère": https://www.britannica.com/biography/Jean-de-La-Bruyere
 - Wikipedia, "Jean de La Bruyère": https://en.wikipedia.org/wiki/Jean\_de\_La\_Bruy%C3%A8re
-- The app's La Bruyère thoughts (#626–629), from *The Characters*
+- The app's La Bruyère thoughts, from *The Characters*
 
 ## Leo Tolstoy
 
@@ -217,7 +217,7 @@ His home life suffered as his views hardened. His wish to give away his wealth a
 - Encyclopædia Britannica, "Leo Tolstoy": https://www.britannica.com/biography/Leo-Tolstoy
 - Wikipedia, "Leo Tolstoy": https://en.wikipedia.org/wiki/Leo\_Tolstoy
 - Wikipedia, "A Confession": https://en.wikipedia.org/wiki/A\_Confession
-- The app's Tolstoy thoughts (#243–244), from *A Confession*, translated by Aylmer Maude
+- The app's Tolstoy thoughts, from *A Confession*, translated by Aylmer Maude
 
 ## Niccolò Machiavelli
 
@@ -259,7 +259,7 @@ Still, the book's hard edges are real. He admired Cesare Borgia and held that fr
 
 - Stanford Encyclopedia of Philosophy, "Niccolò Machiavelli": https://plato.stanford.edu/entries/machiavelli/
 - Wikipedia, "Niccolò Machiavelli": https://en.wikipedia.org/wiki/Niccol%C3%B2\_Machiavelli
-- The app's Machiavelli thoughts (#605–608), from *The Prince*, translated by W. K. Marriott (1908)
+- The app's Machiavelli thoughts, from *The Prince*, translated by W. K. Marriott (1908)
 
 ## Vauvenargues
 
@@ -301,7 +301,7 @@ He is often set beside La Rochefoucauld, but they look at people from opposite s
 
 - Encyclopædia Britannica, "Luc de Clapiers, marquis de Vauvenargues": https://www.britannica.com/biography/Luc-de-Clapiers-marquis-de-Vauvenargues
 - Wikipedia, "Luc de Clapiers, marquis de Vauvenargues": https://en.wikipedia.org/wiki/Luc\_de\_Clapiers,\_marquis\_de\_Vauvenargues
-- The app's Vauvenargues thoughts (#631–633), from *Reflections and Maxims*
+- The app's Vauvenargues thoughts, from *Reflections and Maxims*
 
 ## Heraclitus
 
@@ -343,7 +343,7 @@ The fragments themselves: a few pages that take a lifetime. Arthur Fairbanks's t
 
 - Stanford Encyclopedia of Philosophy, "Heraclitus": https://plato.stanford.edu/entries/heraclitus/
 - Wikipedia, "Heraclitus": https://en.wikipedia.org/wiki/Heraclitus
-- The app's Heraclitus thoughts (#121–125, #132–134), from the *Fragments*, translated by Arthur Fairbanks (1898)
+- The app's Heraclitus thoughts, from the *Fragments*, translated by Arthur Fairbanks (1898)
 
 ## René Descartes
 
@@ -385,7 +385,7 @@ His private life was more ordinary than his reputation. With a servant, Helena J
 
 - Stanford Encyclopedia of Philosophy, "René Descartes": https://plato.stanford.edu/entries/descartes/
 - Wikipedia, "René Descartes": https://en.wikipedia.org/wiki/Ren%C3%A9\_Descartes
-- The app's Descartes thoughts (#180–183), from *Discourse on Method*, translated by John Veitch (1850)
+- The app's Descartes thoughts, from *Discourse on Method*, translated by John Veitch (1850)
 
 ## Francis Bacon
 
@@ -427,4 +427,4 @@ The *Essays* (final edition, 1625): 58 short pieces, a few pages each. "Of Studi
 
 - Stanford Encyclopedia of Philosophy, "Francis Bacon": https://plato.stanford.edu/entries/francis-bacon/
 - Wikipedia, "Francis Bacon": https://en.wikipedia.org/wiki/Francis\_Bacon
-- The app's Bacon thoughts (#609–610), from the *Essays* (1625)
+- The app's Bacon thoughts, from the *Essays* (1625)

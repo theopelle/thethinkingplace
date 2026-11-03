@@ -8,16 +8,16 @@
   <meta name="theme-color" content="#FBFAF7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#262626" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://thinkingplace.app/{{PATH}}">
-  <link rel="icon" href="app/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="site.css">
+  <link rel="icon" href="{{ROOT}}app/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ROOT}}site.css">{{HEAD}}
 </head>
 <body>
   <main>
 {{BODY}}
-    <a class="back" href="./">← back</a>
+    {{BACK}}
   </main>
   <footer>
-    <a href="about.html">About</a><span class="dot" aria-hidden="true">·</span><a href="questions.html">Questions</a><span class="dot" aria-hidden="true">·</span><a href="terms.html">Terms &amp; privacy</a><span class="dot" aria-hidden="true">·</span><a href="mailto:hello@thinkingplace.app">Contact</a>
+    <a href="{{ROOT}}library/">Library</a><span class="dot" aria-hidden="true">·</span><a href="{{ROOT}}about.html">About</a><span class="dot" aria-hidden="true">·</span><a href="{{ROOT}}questions.html">Questions</a><span class="dot" aria-hidden="true">·</span><a href="{{ROOT}}terms.html">Terms &amp; privacy</a><span class="dot" aria-hidden="true">·</span><a href="mailto:hello@thinkingplace.app">Contact</a>
   </footer>
 </body>
 </html>

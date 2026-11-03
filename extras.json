@@ -1,0 +1,2153 @@
+{
+ "pairs": [
+  {
+   "id": "stoicism--epicureanism",
+   "a": "Stoicism",
+   "b": "Epicureanism",
+   "line": "Two schools from the same city and the same century, both after a calm mind: the Stoics through virtue, the Epicureans through pleasure, rightly understood.",
+   "agree": [
+    [
+     "Peace of mind is the aim.",
+     "Both say we suffer less from events than from our fears and opinions about them."
+    ],
+    [
+     "Death is nothing to fear.",
+     "Epictetus calls the fear of death the only terrible thing about it; Epicurus says that where death is, we are not."
+    ],
+    [
+     "Want little.",
+     "Both see endless wanting as a trap and value a simple life."
+    ]
+   ],
+   "part": [
+    [
+     "What makes a life good.",
+     "For the Stoics, only virtue; health, wealth, and pleasure do not decide it. For the Epicureans, pleasure, meaning freedom from pain in the body and fear in the mind."
+    ],
+    [
+     "Public life.",
+     "The Stoics expected you to serve your city and work with others. The Epicureans kept out of politics and lived among friends."
+    ],
+    [
+     "The world.",
+     "The Stoics saw the universe as one living, ordered whole. The Epicureans saw atoms moving in empty space, with no plan behind them."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Stoicism",
+     "id": 16,
+     "gloss": "Epictetus: we are disturbed by our opinions about things, not by things"
+    },
+    {
+     "path": "Stoicism",
+     "id": 37,
+     "gloss": "Marcus Aurelius: the universe as one living being"
+    },
+    {
+     "path": "Epicureanism",
+     "id": 59,
+     "gloss": "Epicurus: death is nothing to us"
+    },
+    {
+     "path": "Epicureanism",
+     "id": 67,
+     "gloss": "Epicurus: what pleasure really means"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "epicureanism--japanese-aesthetics",
+   "a": "Epicureanism",
+   "b": "Japanese Aesthetics",
+   "line": "More than thirteen centuries and half the world apart, both find the good life in simple things, but they feel very differently about the fact that everything passes.",
+   "agree": [
+    [
+     "Simple things are enough.",
+     "Epicurus says plain bread and water give as much pleasure as a feast; Kenkō calls a life spent chasing riches and fame foolish."
+    ],
+    [
+     "Don't wait to live.",
+     "Epicurus warns against putting off joy; the Japanese writers pay close attention to small moments as they happen."
+    ],
+    [
+     "Step back from the race.",
+     "Both prefer a quiet life to ambition and display."
+    ]
+   ],
+   "part": [
+    [
+     "What passing things mean.",
+     "The Epicureans accept change calmly, as atoms endlessly moving, and aim to be free of the fear it brings. The Japanese writers find beauty in it, with a gentle sadness they value rather than avoid."
+    ],
+    [
+     "Company.",
+     "For Epicurus, friends are the greatest help to a happy life. Kenkō and Chōmei often found their peace in solitude, and in friends met through books."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Epicureanism",
+     "id": 66,
+     "gloss": "Epicurus: plain fare and bread and water"
+    },
+    {
+     "path": "Epicureanism",
+     "id": 77,
+     "gloss": "Epicurus: you postpone joy"
+    },
+    {
+     "path": "Japanese Aesthetics",
+     "id": 521,
+     "gloss": "Kenkō: the fool who chases riches and fame"
+    },
+    {
+     "path": "Japanese Aesthetics",
+     "id": 547,
+     "gloss": "Kenkō: it is change that touches us"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "stoicism--buddhist-philosophy",
+   "a": "Stoicism",
+   "b": "Buddhist Philosophy",
+   "line": "Both trace our suffering to the mind rather than to events, and both treat philosophy as daily training; they part on the self and on where the training leads.",
+   "agree": [
+    [
+     "The trouble starts in the mind.",
+     "Marcus Aurelius says it is our judgment about a thing that pains us, not the thing itself; the *Dhammapada* opens by saying that all we are is the result of what we have thought."
+    ],
+    [
+     "Train it every day.",
+     "Seneca looked back each evening at how he had spent his day; the *Dhammapada* asks us to straighten a wavering thought the way a fletcher straightens an arrow."
+    ],
+    [
+     "Stand firm.",
+     "Marcus pictures a headland that the waves break against; the *Dhammapada*, a rock the wind cannot shake, unmoved by blame or praise."
+    ]
+   ],
+   "part": [
+    [
+     "The self.",
+     "The Stoics look within for a reason that is truly ours, to guard and train. Buddhism says there is no fixed self behind our thoughts and feelings at all."
+    ],
+    [
+     "The goal.",
+     "For the Stoics, virtue is the only good, lived out among others and in public life. For the Buddhist texts, the aim is the end of suffering, through ethics, meditation, and wisdom, with karma and rebirth as part of the picture."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Stoicism",
+     "id": 9,
+     "gloss": "Marcus Aurelius: not the thing, but your judgment about it"
+    },
+    {
+     "path": "Stoicism",
+     "id": 6,
+     "gloss": "Marcus Aurelius: be like the promontory"
+    },
+    {
+     "path": "Buddhist Philosophy",
+     "id": 314,
+     "gloss": "Dhammapada: as a fletcher makes straight his arrow"
+    },
+    {
+     "path": "Buddhist Philosophy",
+     "id": 309,
+     "gloss": "Dhammapada: a solid rock not shaken by the wind"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "stoicism--taoism",
+   "a": "Stoicism",
+   "b": "Taoism",
+   "line": "Both say live in agreement with nature and stop fighting what you cannot change; but for the Stoics nature means reason and duty, and for the Taoists it means yielding and doing less.",
+   "agree": [
+    [
+     "Accept what comes.",
+     "Epictetus asks us to wish for things to happen as they do; Laozi praises water, which takes the low place without striving."
+    ],
+    [
+     "Anger is ours to drop.",
+     "Epictetus says it is our own opinion that insults us; Zhuangzi notes that no one is angry with an empty boat that bumps into him."
+    ],
+    [
+     "Want little.",
+     "Boethius, read with the Stoics, says nature is content with very little; Laozi calls discontent with one's lot the greatest calamity."
+    ]
+   ],
+   "part": [
+    [
+     "What \"nature\" means.",
+     "For the Stoics, nature is a rational order, so to live by nature is to live by reason. For the Taoists, the Tao is the way of things, which no name can fully hold."
+    ],
+    [
+     "Effort.",
+     "Marcus Aurelius gets up \"to the work of a human being\", and the Stoics expected you to serve your city. The Taoists distrust that effort and prefer fewer rules: the follower of the Tao does a little less each day."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Stoicism",
+     "id": 17,
+     "gloss": "Epictetus: wish things to happen as they do"
+    },
+    {
+     "path": "Stoicism",
+     "id": 12,
+     "gloss": "Marcus Aurelius: rising to the work of a human being"
+    },
+    {
+     "path": "Taoism",
+     "id": 410,
+     "gloss": "Laozi: the highest excellence is like water"
+    },
+    {
+     "path": "Taoism",
+     "id": 457,
+     "gloss": "Zhuangzi: the empty boat"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "epicureanism--buddhist-philosophy",
+   "a": "Epicureanism",
+   "b": "Buddhist Philosophy",
+   "line": "Both say we suffer from wanting too much, and both aim at a calm mind; they part on pleasure, and on what happens when a life ends.",
+   "agree": [
+    [
+     "Sort your desires.",
+     "Epicurus splits them into natural and necessary, natural only, and empty; the *Dhammapada* says there is no torrent like greed."
+    ],
+    [
+     "Choose the greater good.",
+     "Epicurus passes over a pleasure when more trouble follows from it; the *Dhammapada* tells the wise to give up a small pleasure to see a great one."
+    ],
+    [
+     "Calm is the aim.",
+     "Epicurus wants a body without pain and a mind without fear; the *Dhammapada* likens the wise to a deep, still lake."
+    ]
+   ],
+   "part": [
+    [
+     "Pleasure.",
+     "For Epicurus, pleasure rightly understood is the goal of life. The Buddhist texts aim past pleasure, at the end of craving itself: the *Dhammapada* calls Nirvana \"the highest happiness\"."
+    ],
+    [
+     "After death.",
+     "For Epicurus, the world is atoms and empty space, and when death comes, we are not. Buddhism teaches karma and rebirth: what we do shapes what follows."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Epicureanism",
+     "id": 72,
+     "gloss": "Epicurus: three kinds of desire"
+    },
+    {
+     "path": "Epicureanism",
+     "id": 65,
+     "gloss": "Epicurus: we pass over many pleasures"
+    },
+    {
+     "path": "Buddhist Philosophy",
+     "id": 336,
+     "gloss": "Dhammapada: leave a small pleasure for a great one"
+    },
+    {
+     "path": "Buddhist Philosophy",
+     "id": 331,
+     "gloss": "Dhammapada: contentedness the best riches"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "epicureanism--enlightenment-ethics",
+   "a": "Epicureanism",
+   "b": "Enlightenment Ethics",
+   "line": "About two thousand years apart, Epicurus and Mill both put happiness at the centre of ethics, and both had to defend it against the charge of mere indulgence; they part on which pleasures count.",
+   "agree": [
+    [
+     "Happiness is the measure.",
+     "Epicurus calls pleasure the goal of life; Mill held that the right action is the one that brings the most happiness."
+    ],
+    [
+     "Misread from the start.",
+     "Epicurus wrote that he did not mean the pleasures of the wasteful; Mill answered critics who said his view made people no better than pigs."
+    ]
+   ],
+   "part": [
+    [
+     "Which pleasures.",
+     "For Epicurus, pleasure is at its height once all pain is gone, and simple things are enough. Mill ranks pleasures: better a human being dissatisfied than a pig satisfied."
+    ],
+    [
+     "Passions.",
+     "Epicurus wants to calm the \"tempest of the soul\". Émilie du Châtelet says we are happy only through passions that are satisfied, and Diderot, that only great passions raise the soul to great things."
+    ],
+    [
+     "Whose happiness.",
+     "Epicurus kept out of politics and lived among friends. Mill found happiness by aiming at something else: the happiness of others, and the improvement of mankind."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Epicureanism",
+     "id": 67,
+     "gloss": "Epicurus: what pleasure really means"
+    },
+    {
+     "path": "Epicureanism",
+     "id": 68,
+     "gloss": "Epicurus: pleasure reaches its limit when pain is gone"
+    },
+    {
+     "path": "Enlightenment Ethics",
+     "id": 158,
+     "gloss": "Mill: better Socrates dissatisfied than a fool satisfied"
+    },
+    {
+     "path": "Enlightenment Ethics",
+     "id": 194,
+     "gloss": "du Châtelet: happy only through passions that are satisfied"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "persian-and-sufi-poetry--epicureanism",
+   "a": "Persian and Sufi Poetry",
+   "b": "Epicureanism",
+   "line": "Khayyam and Epicurus both say enjoy today, with little; but Epicurus seeks a mind free of longing, while the Persian poets live with it, and for the Sufis it leads towards the divine.",
+   "agree": [
+    [
+     "Today is what we have.",
+     "Khayyam calls tomorrow unborn and yesterday dead; Epicurus says we don't control tomorrow, yet we put off joy."
+    ],
+    [
+     "A little is enough.",
+     "Khayyam asks only for a book of verses, bread, wine, and the one he loves; Epicurus, for bread and water once hunger is gone. Sa'di calls contentment an immense treasure."
+    ],
+    [
+     "Good company.",
+     "Khayyam's paradise has someone in it, singing beside him; Epicurus calls friends the greatest help to a happy life."
+    ]
+   ],
+   "part": [
+    [
+     "Longing.",
+     "Epicurus wants calm, with no storm in the soul. The Persian poets put longing at the heart of life: Rumi's reed flute sings of its lost home, and \"no sickness is there like sickness of heart\"."
+    ],
+    [
+     "What lies beyond.",
+     "For Epicurus, the gods, if they exist, do not interfere in human life. Khayyam finds a veil he cannot see past. For the Sufi poets, the soul longs to return to its source, and love is the way back to God."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Persian and Sufi Poetry",
+     "id": 586,
+     "gloss": "Khayyam: unborn tomorrow, and dead yesterday"
+    },
+    {
+     "path": "Persian and Sufi Poetry",
+     "id": 555,
+     "gloss": "Rumi: the reed flute"
+    },
+    {
+     "path": "Epicureanism",
+     "id": 77,
+     "gloss": "Epicurus: you postpone joy"
+    },
+    {
+     "path": "Epicureanism",
+     "id": 66,
+     "gloss": "Epicurus: bread and water"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "classical-greek-philosophy--confucianism",
+   "a": "Classical Greek Philosophy",
+   "b": "Confucianism",
+   "line": "Confucius died about the time Socrates was born; on opposite sides of the world, both built an ethics of character, and they part on where good character is formed.",
+   "agree": [
+    [
+     "Aim for the middle.",
+     "For Aristotle, virtue is a mean between too much and too little; Confucius says going too far is as wrong as falling short."
+    ],
+    [
+     "Character is made by practice.",
+     "We become just by doing just acts, says Aristotle; for Confucius, people start out nearly alike and grow apart by practice."
+    ],
+    [
+     "Know what you don't know.",
+     "Socrates was wise in not thinking he knew what he didn't; Confucius calls this knowledge itself."
+    ]
+   ],
+   "part": [
+    [
+     "Where it is learned.",
+     "For Aristotle, a good life is lived in the city, among citizens who share in governing and being governed. For Confucius, it starts at home: respect for parents is the root of a good society."
+    ],
+    [
+     "Question or carry on.",
+     "Socrates questioned everything, his own city's beliefs included. Confucius saw himself as a transmitter of older values, kept alive through ritual and good manners."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Classical Greek Philosophy",
+     "id": 111,
+     "gloss": "Aristotle: angry with the right person, to the right amount"
+    },
+    {
+     "path": "Classical Greek Philosophy",
+     "id": 96,
+     "gloss": "Socrates: I neither know nor think that I know"
+    },
+    {
+     "path": "Confucianism",
+     "id": 487,
+     "gloss": "Confucius: to go beyond is as wrong as to fall short"
+    },
+    {
+     "path": "Confucianism",
+     "id": 471,
+     "gloss": "Confucius: to allow that you do not know is knowledge"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "classical-greek-philosophy--enlightenment-ethics",
+   "a": "Classical Greek Philosophy",
+   "b": "Enlightenment Ethics",
+   "line": "Aristotle asks what kind of person to be; the Enlightenment adds two more questions, what is my duty and what brings the most happiness: between them, three of the main ways people still judge right and wrong.",
+   "agree": [
+    [
+     "Reason should lead.",
+     "Aristotle calls the law \"reason unaffected by desire\"; Kant grounds duty in reason, binding on every rational being."
+    ],
+    [
+     "Test ideas in argument.",
+     "Socrates said the unexamined life is not worth living; Mill, that whoever knows only their own side of a case knows little even of that."
+    ]
+   ],
+   "part": [
+    [
+     "What makes an act right.",
+     "For Aristotle, what a person of good character and practical wisdom would do. For Kant, the will behind it: only a good will is good without condition. For Mill, its results: the most happiness."
+    ],
+    [
+     "Happiness and morality.",
+     "Aristotle calls happiness the one thing we choose for its own sake. Kant says morality is not about making ourselves happy, but about becoming worthy of happiness."
+    ],
+    [
+     "Who counts.",
+     "Aristotle argued that some people are slaves by nature. The Enlightenment spoke of freedom for all and of women's minds, while many of its colonies still ran on slave labour."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Classical Greek Philosophy",
+     "id": 116,
+     "gloss": "Aristotle: happiness, chosen for its own sake"
+    },
+    {
+     "path": "Classical Greek Philosophy",
+     "id": 95,
+     "gloss": "Socrates: the unexamined life"
+    },
+    {
+     "path": "Enlightenment Ethics",
+     "id": 154,
+     "gloss": "Kant: nothing good without qualification but a good will"
+    },
+    {
+     "path": "Enlightenment Ethics",
+     "id": 162,
+     "gloss": "Mill: he who knows only his own side"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "confucianism--taoism",
+   "a": "Confucianism",
+   "b": "Taoism",
+   "line": "China's classic pair, grown side by side: the Confucians build a good life through learning, ritual, and duty; the Taoists trust the natural way and doing less.",
+   "agree": [
+    [
+     "Lead without force.",
+     "Confucius says a ruler whose own conduct is correct governs without giving orders; Laozi's best rulers are the ones the people barely know are there."
+    ],
+    [
+     "Put yourself aside.",
+     "Confucius was free of obstinacy and egoism; Laozi's sage puts himself last, and is found in front."
+    ]
+   ],
+   "part": [
+    [
+     "Learning.",
+     "Confucius asks for learning with steady perseverance, and thought to go with it. Laozi turns this around: learning adds something every day, while the Tao takes something away."
+    ],
+    [
+     "Rules and ritual.",
+     "For the Confucians, ritual and good manners make respect visible and hold families and states together. The Taoists distrust that effort, and prefer fewer rules and more trust in nature."
+    ],
+    [
+     "A rivalry with humour.",
+     "Zhuangzi often puts Taoist words into Confucius's mouth, so that the rival school's master speaks up for stillness."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Confucianism",
+     "id": 470,
+     "gloss": "Confucius: learning without thought is labour lost"
+    },
+    {
+     "path": "Confucianism",
+     "id": 504,
+     "gloss": "Confucius: correct conduct governs without orders"
+    },
+    {
+     "path": "Taoism",
+     "id": 420,
+     "gloss": "Laozi: learning adds each day, the Tao takes away"
+    },
+    {
+     "path": "Taoism",
+     "id": 433,
+     "gloss": "Zhuangzi's Confucius: we see ourselves in still water"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "taoism--japanese-aesthetics",
+   "a": "Taoism",
+   "b": "Japanese Aesthetics",
+   "line": "Okakura Kakuzō explains Japanese beauty partly through Taoism; the Japanese writers take Laozi's emptiness and simplicity and turn them into a way of looking.",
+   "agree": [
+    [
+     "Emptiness is useful.",
+     "Laozi points to the hollow of a pot and the space inside a room; Okakura applies the image to a water pitcher and the almost empty tea room."
+    ],
+    [
+     "Leave it unfinished.",
+     "Laozi says the partial becomes complete; Okakura finds true beauty in completing the incomplete in the mind, and Kenkō would rather leave a little imperfection."
+    ],
+    [
+     "Want little.",
+     "Frugality is one of Laozi's three treasures; Chōmei lived in a ten-foot-square hut."
+    ]
+   ],
+   "part": [
+    [
+     "How passing feels.",
+     "Zhuangzi, though moved by his wife's death, comes to see it as one phase giving way to the next, like the seasons. For Kenkō, change is what touches us, with a gentle sadness he values."
+    ],
+    [
+     "Refinement.",
+     "Laozi distrusts fine words and polish. The Japanese writers made an art of taste: Sei Shōnagon's lists of what is and isn't beautiful, the careful forms of the tea ceremony."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Taoism",
+     "id": 412,
+     "gloss": "Laozi: the empty space makes the wheel, the pot, and the room useful"
+    },
+    {
+     "path": "Taoism",
+     "id": 416,
+     "gloss": "Laozi: the partial becomes complete"
+    },
+    {
+     "path": "Japanese Aesthetics",
+     "id": 532,
+     "gloss": "Okakura: the emptiness of the water pitcher"
+    },
+    {
+     "path": "Japanese Aesthetics",
+     "id": 533,
+     "gloss": "Okakura: completing the incomplete"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "buddhist-philosophy--japanese-aesthetics",
+   "a": "Buddhist Philosophy",
+   "b": "Japanese Aesthetics",
+   "line": "Both start from the same fact, that everything passes, and two of the Japanese writers, Chōmei and Kenkō, became Buddhist monks; but Buddhism teaches us to stop clinging, while they linger over passing things as beauty.",
+   "agree": [
+    [
+     "All things change.",
+     "The *Dhammapada* says all created things perish; Chōmei sees people and their houses as foam on a stream."
+    ],
+    [
+     "Death does not wait.",
+     "The *Dhammapada*'s fool plans to stay through rain, winter, and summer, and forgets his death; Kenkō says death comes not from in front, but from behind."
+    ],
+    [
+     "Step away from the crowd.",
+     "Chōmei and Kenkō both left public life to live as Buddhist hermits."
+    ]
+   ],
+   "part": [
+    [
+     "What to do with passing things.",
+     "For the *Dhammapada*, seeing that all things perish lets us bear pain without being thrown by it. Kenkō watches the full moon wane, and finds that change is what moves us."
+    ],
+    [
+     "Small pleasures.",
+     "The *Dhammapada* asks the wise to give up small pleasures for a greater one. Sei Shōnagon keeps lists of them: a river boat going downstream, a drink of water in the night."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Buddhist Philosophy",
+     "id": 345,
+     "gloss": "Dhammapada: all created things perish"
+    },
+    {
+     "path": "Buddhist Philosophy",
+     "id": 342,
+     "gloss": "Dhammapada: the fool who does not think of his death"
+    },
+    {
+     "path": "Japanese Aesthetics",
+     "id": 520,
+     "gloss": "Kenkō: death presses on from behind"
+    },
+    {
+     "path": "Japanese Aesthetics",
+     "id": 544,
+     "gloss": "Sei Shōnagon: cheerful things"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "buddhist-philosophy--existential-thought",
+   "a": "Buddhist Philosophy",
+   "b": "Existential Thought",
+   "line": "Both begin with suffering rather than with theory; the Buddhist texts offer a way out of it, while these writers mostly stay with it, and some learn to say yes to it.",
+   "agree": [
+    [
+     "Life is restless.",
+     "Buddhism names the unease of relying on things that do not last; Pascal says we never live, but only hope to live."
+    ],
+    [
+     "Wanting feeds it.",
+     "The *Dhammapada* says there is no torrent like greed; Schopenhauer, that riches and fame are like sea water: the more you drink, the thirstier you get."
+    ],
+    [
+     "Start from experience.",
+     "The Buddha teaches a training of the mind, not a system; these writers start from real human experience, not abstract theory."
+    ]
+   ],
+   "part": [
+    [
+     "The way out.",
+     "Buddhism offers one: the Middle Way, and a tamed mind that brings happiness. These writers disagree among themselves: Pascal, Tolstoy, and Weil answered through faith, while Nietzsche chose love of fate, a yes to life as it is."
+    ],
+    [
+     "The self.",
+     "Buddhism says there is no fixed self. Nietzsche says: become what you are, and live your own life, not the one others expect."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Buddhist Philosophy",
+     "id": 315,
+     "gloss": "Dhammapada: a tamed mind brings happiness"
+    },
+    {
+     "path": "Buddhist Philosophy",
+     "id": 353,
+     "gloss": "Dhammapada: no torrent like greed"
+    },
+    {
+     "path": "Existential Thought",
+     "id": 252,
+     "gloss": "Schopenhauer: riches are like sea water"
+    },
+    {
+     "path": "Existential Thought",
+     "id": 213,
+     "gloss": "Nietzsche: amor fati"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "humanists-and-essayists--japanese-aesthetics",
+   "a": "Humanists and Essayists",
+   "b": "Japanese Aesthetics",
+   "line": "Montaigne and Kenkō, about 250 years and half the world apart, both left public life to write short, wandering pieces about themselves, death, and small things.",
+   "agree": [
+    [
+     "Write what comes.",
+     "Montaigne made himself the subject of his book; Kenkō wrote in a \"follow the brush\" style, letting one thought lead to the next."
+    ],
+    [
+     "Think of death to live better.",
+     "Montaigne says that learning to die is learning to be free; Kenkō, that it is far better not to know how long life will last."
+    ],
+    [
+     "Friends in books.",
+     "Kenkō makes friends with people long gone, by an open book and a lamp; Montaigne runs to his books to escape a troubling thought."
+    ]
+   ],
+   "part": [
+    [
+     "Where they look for help.",
+     "Montaigne drew on the ancients, and took his thoughts on death from the Stoics. Kenkō became a Buddhist monk, and impermanence is his great theme."
+    ],
+    [
+     "Doubt and taste.",
+     "Montaigne's question is \"What do I know?\", and he doubts even his own certainties. Kenkō has firm views, especially on taste: a little imperfection beats perfect sameness."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Humanists and Essayists",
+     "id": 282,
+     "gloss": "Montaigne: others form man; I only report him"
+    },
+    {
+     "path": "Humanists and Essayists",
+     "id": 277,
+     "gloss": "Montaigne: the premeditation of death"
+    },
+    {
+     "path": "Japanese Aesthetics",
+     "id": 519,
+     "gloss": "Kenkō: friends through an open book"
+    },
+    {
+     "path": "Japanese Aesthetics",
+     "id": 518,
+     "gloss": "Kenkō: far better to have no certainty as to the length of life"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "indian-philosophy--buddhist-philosophy",
+   "a": "Indian Philosophy",
+   "b": "Buddhist Philosophy",
+   "line": "Born in the same world and sharing karma and rebirth, the two part on the self: the Upanishads look for a deep, lasting self, and Buddhism says there is none.",
+   "agree": [
+    [
+     "What we want, we become.",
+     "The *Brihadaranyaka Upanishad* says a person is made of desires, which become will, then deeds; the *Dhammapada* says all that we are is the result of what we have thought."
+    ],
+    [
+     "Neither too much nor too little.",
+     "The *Gita* says discipline is not for one who eats too much, or not at all; Buddhism calls its path the Middle Way."
+    ],
+    [
+     "The mind can be tamed.",
+     "The *Gita* says the heart is hard to restrain but grows steady by habit; the *Dhammapada* holds the mind as a rider holds a wild elephant."
+    ]
+   ],
+   "part": [
+    [
+     "The same chariot.",
+     "The *Katha Upanishad* pictures the body as a chariot, with the Self sitting in it. In *The Questions of King Milinda*, the monk Nāgasena uses a chariot to make the opposite point: there is no chariot beyond its parts, and no lasting self behind a name."
+    ],
+    [
+     "The road to freedom.",
+     "The Indian path offers several, through action, knowledge, and devotion, ending in liberation through self-knowledge. Buddhism's runs through ethics, meditation, and wisdom, to the end of suffering."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Indian Philosophy",
+     "id": 364,
+     "gloss": "Katha Upanishad: the Self sitting in the chariot"
+    },
+    {
+     "path": "Indian Philosophy",
+     "id": 367,
+     "gloss": "Brihadaranyaka Upanishad: as is his desire, so is his will"
+    },
+    {
+     "path": "Buddhist Philosophy",
+     "id": 355,
+     "gloss": "King Milinda: \"chariot\" is a mere empty sound"
+    },
+    {
+     "path": "Buddhist Philosophy",
+     "id": 359,
+     "gloss": "Dhammapada: the rider who holds in the elephant"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "indian-philosophy--stoicism",
+   "a": "Indian Philosophy",
+   "b": "Stoicism",
+   "line": "Do your work and let go of the results: the *Bhagavad Gita* and the Stoics come strikingly close here, for different reasons.",
+   "agree": [
+    [
+     "Act, but let go of the outcome.",
+     "The *Gita* says your business is with the action, never with its fruit; Epictetus divides things into those in our power and those that are not."
+    ],
+    [
+     "Your own task.",
+     "The *Gita* says it is better to do your own task, even if you fail, than to take on another's; Marcus Aurelius asks us to love the art we have learned, poor as it may be."
+    ],
+    [
+     "Steady in good and bad fortune.",
+     "The *Gita* praises the person who stays the same in honour and dishonour, heat and cold; Seneca says it matters not what you bear, but how you bear it."
+    ]
+   ],
+   "part": [
+    [
+     "Why let go.",
+     "For the Stoics, results are not up to us, and only virtue is good. For the *Gita*, clinging to results binds us; letting go is part of a path towards liberation."
+    ],
+    [
+     "Who is speaking.",
+     "The Stoic teachers were people speaking to people: an emperor in his notebook, a freed slave who became a teacher. In Hindu tradition, the *Gita*'s teaching is spoken by the god Krishna to the warrior Arjuna, on a battlefield."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Indian Philosophy",
+     "id": 368,
+     "gloss": "Bhagavad Gita: your business is with action alone"
+    },
+    {
+     "path": "Indian Philosophy",
+     "id": 360,
+     "gloss": "Bhagavad Gita: better your own task, even though you fail"
+    },
+    {
+     "path": "Stoicism",
+     "id": 15,
+     "gloss": "Epictetus: some things are in our power, others are not"
+    },
+    {
+     "path": "Stoicism",
+     "id": 35,
+     "gloss": "Marcus Aurelius: love the art you have learned"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "indian-philosophy--existential-thought",
+   "a": "Indian Philosophy",
+   "b": "Existential Thought",
+   "line": "Schopenhauer called the Upanishads the solace of his life; beyond him, the two paths ask the same questions about freedom and meaning, and answer them very differently.",
+   "agree": [
+    [
+     "Become yourself.",
+     "Tagore says we gain our freedom when we attain our truest nature; Nietzsche, \"You shall become what you are.\""
+    ],
+    [
+     "Look inward.",
+     "Tagore says our wants are endless until we become conscious of the soul; Schopenhauer, that what a person has in themselves matters most for their happiness."
+    ]
+   ],
+   "part": [
+    [
+     "What \"yourself\" means.",
+     "For Tagore, drawing on the Upanishads, our truest nature is one with all life, and with the divine. For Nietzsche, with the old certainties gone, we must create our own path and our own values."
+    ],
+    [
+     "Calm or fire.",
+     "The *Gita* praises a heart not shaken by calamity, free of longing for pleasures, fear, and anger. Nietzsche asks us to be ready to burn in our own flame, so as to become new."
+    ],
+    [
+     "Meaning.",
+     "For the Upanishads, meaning is already there, in a self waiting to be known. For these writers, meaning is not handed to us: we find it or make it, and some, like Pascal and Tolstoy, found it in faith."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Indian Philosophy",
+     "id": 377,
+     "gloss": "Tagore: we gain our freedom when we attain our truest nature"
+    },
+    {
+     "path": "Indian Philosophy",
+     "id": 369,
+     "gloss": "Bhagavad Gita: a heart not agitated in calamity"
+    },
+    {
+     "path": "Existential Thought",
+     "id": 214,
+     "gloss": "Nietzsche: you shall become what you are"
+    },
+    {
+     "path": "Existential Thought",
+     "id": 209,
+     "gloss": "Nietzsche: burn yourself in your own flame"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "indian-philosophy--persian-and-sufi-poetry",
+   "a": "Indian Philosophy",
+   "b": "Persian and Sufi Poetry",
+   "line": "Both see love and devotion as a road to the divine, and both ask us to master the lower self; they part on whether the end of the road is knowing or longing.",
+   "agree": [
+    [
+     "Master yourself.",
+     "The *Gita* says your own self is your friend, and also your enemy; al-Ghazali pictures the soul as a king, with reason as his minister and passion and anger as his officers."
+    ],
+    [
+     "One reality in every form.",
+     "The *Isha Upanishad* sees the Self in all beings; Ibn Arabi's heart becomes capable of every form, a convent, a temple, and the pilgrim's Ka'ba."
+    ],
+    [
+     "Love as a way.",
+     "Devotion is one of the Indian paths, and Tagore calls a person \"a lover\"; for the Sufi poets, love of God is the deepest force in a life."
+    ]
+   ],
+   "part": [
+    [
+     "Knowing or longing.",
+     "In the Upanishads, liberation comes through self-knowledge: seeing that the deepest self is one with Brahman. For the Sufis, the road runs through the heart: al-Ghazali found that reading about the Sufi path could not take him along it."
+    ],
+    [
+     "Calm or fire.",
+     "The *Gita* praises a heart unshaken by calamity. For Rumi and Hafiz, love brings pain of the heart, and a true lover is known by it."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Indian Philosophy",
+     "id": 366,
+     "gloss": "Isha Upanishad: the Self in all beings"
+    },
+    {
+     "path": "Indian Philosophy",
+     "id": 371,
+     "gloss": "Bhagavad Gita: your own self is your friend and your enemy"
+    },
+    {
+     "path": "Persian and Sufi Poetry",
+     "id": 577,
+     "gloss": "Ibn Arabi: a heart capable of every form"
+    },
+    {
+     "path": "Persian and Sufi Poetry",
+     "id": 559,
+     "gloss": "Rumi: no sickness like sickness of heart"
+    }
+   ],
+   "status": "Ready"
+  },
+  {
+   "id": "indian-philosophy--classical-greek-philosophy",
+   "a": "Indian Philosophy",
+   "b": "Classical Greek Philosophy",
+   "line": "Both pictured the self as the driver of a chariot, and both asked whether we choose the good or the pleasant; they part on what the self finally is.",
+   "agree": [
+    [
+     "The self drives the chariot.",
+     "The *Katha Upanishad* seats the Self in a chariot, with the intellect as driver and the mind as reins; Plato's Socrates pictures the soul as a charioteer with one noble horse and one unruly one."
+    ],
+    [
+     "The good is not the pleasant.",
+     "In the *Katha Upanishad*, Death tells a boy that the good and the pleasant are two different things; Socrates says that not life, but a good life, is what we should value most."
+    ],
+    [
+     "Neither too much nor too little.",
+     "The *Gita* says discipline belongs to one who eats and rests in moderation; Aristotle sees every virtue as a mean between too much and too little."
+    ]
+   ],
+   "part": [
+    [
+     "What the self is.",
+     "For the Upanishads, the deepest self is one with Brahman, the reality behind everything, and seeing this ends sorrow. For Plato, the soul has parts to put in order, and the just person is \"at peace with himself\"."
+    ],
+    [
+     "Where the good life leads.",
+     "Aristotle places it in this life, in the city, among citizens. The Indian texts look further: liberation from the cycle of rebirth, through self-knowledge."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Indian Philosophy",
+     "id": 364,
+     "gloss": "Katha Upanishad: the Self sitting in the chariot"
+    },
+    {
+     "path": "Indian Philosophy",
+     "id": 363,
+     "gloss": "Katha Upanishad: the good is one thing, the pleasant another"
+    },
+    {
+     "path": "Classical Greek Philosophy",
+     "id": 107,
+     "gloss": "Plato: the charioteer and his two horses"
+    },
+    {
+     "path": "Classical Greek Philosophy",
+     "id": 100,
+     "gloss": "Socrates: not life, but a good life"
+    }
+   ],
+   "status": "Draft"
+  },
+  {
+   "id": "stoicism--enlightenment-ethics",
+   "a": "Stoicism",
+   "b": "Enlightenment Ethics",
+   "line": "Several Enlightenment thinkers came close to the Stoics on mastering our desires through reason; they part on whether the passions are to be corrected or are the very force that moves us.",
+   "agree": [
+    [
+     "Change yourself, not the world.",
+     "Descartes resolved to conquer himself rather than fortune, and to change his desires rather than the order of the world; Epictetus divides things into those in our power and those that are not."
+    ],
+    [
+     "Understanding frees us.",
+     "Spinoza says an emotion stops being a passion once we understand it clearly; Marcus Aurelius says it is our judgment about a thing, not the thing, that pains us."
+    ],
+    [
+     "Happiness should depend on us.",
+     "Hume advises placing our happiness chiefly on things that depend on ourselves, as the Stoics did."
+    ]
+   ],
+   "part": [
+    [
+     "Reason and the passions.",
+     "For the Stoics, strong emotions come from false judgments, and reason can correct them. Hume turns this around: reason, he says, serves the passions and can never rule them."
+    ],
+    [
+     "A reasonable universe?",
+     "The Stoics trusted that the universe itself is one ordered, living whole, so living by nature means living by reason. The Enlightenment asked for evidence first: for Hume, a wise person proportions belief to the evidence."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Stoicism",
+     "id": 15,
+     "gloss": "Epictetus: some things are in our power, others are not"
+    },
+    {
+     "path": "Stoicism",
+     "id": 37,
+     "gloss": "Marcus Aurelius: the universe as one living being"
+    },
+    {
+     "path": "Enlightenment Ethics",
+     "id": 182,
+     "gloss": "Descartes: conquer myself rather than fortune"
+    },
+    {
+     "path": "Enlightenment Ethics",
+     "id": 173,
+     "gloss": "Hume: reason is the slave of the passions"
+    }
+   ],
+   "status": "Draft"
+  },
+  {
+   "id": "stoicism--classical-greek-philosophy",
+   "a": "Stoicism",
+   "b": "Classical Greek Philosophy",
+   "line": "The Stoics grew out of the Greek world after Aristotle and kept Socrates as an example; they agree that virtue is the heart of a good life, and part on whether it is enough.",
+   "agree": [
+    [
+     "Never return a wrong.",
+     "Socrates says we must not repay evil with evil; Marcus Aurelius, that the best revenge is not to become like the wrongdoer."
+    ],
+    [
+     "Wrongdoing is worse than death.",
+     "Socrates says the hard thing is not to avoid death but to avoid wrongdoing; Epictetus points to Socrates to show that death is not terrible in itself."
+    ],
+    [
+     "Steady in good and bad times.",
+     "Aristotle's great-souled person neither rejoices too much in prosperity nor grieves too much in adversity; Seneca says the invulnerable is not what is never struck, but what is never wounded."
+    ]
+   ],
+   "part": [
+    [
+     "Is virtue enough?",
+     "For the Stoics, virtue is the only good. For Aristotle, happiness is a whole life lived well, and no one would choose to live without friends, even with every other good thing."
+    ],
+    [
+     "Anger.",
+     "Aristotle wants anger at the right person, to the right degree, at the right time. For the Stoics, strong emotions like anger come from false judgments, to be corrected rather than measured."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Stoicism",
+     "id": 2,
+     "gloss": "Marcus Aurelius: the best way of avenging yourself"
+    },
+    {
+     "path": "Stoicism",
+     "id": 52,
+     "gloss": "Seneca: the invulnerable is never wounded"
+    },
+    {
+     "path": "Classical Greek Philosophy",
+     "id": 135,
+     "gloss": "Socrates: we ought not to render evil for evil"
+    },
+    {
+     "path": "Classical Greek Philosophy",
+     "id": 112,
+     "gloss": "Aristotle: no one would choose to live without friends"
+    }
+   ],
+   "status": "Draft"
+  },
+  {
+   "id": "stoicism--confucianism",
+   "a": "Stoicism",
+   "b": "Confucianism",
+   "line": "Two ethics of daily self-examination, one Roman and one Chinese; they part on where our duties come from, and on how to answer a wrong.",
+   "agree": [
+    [
+     "Look at yourself every day.",
+     "A disciple of Confucius asks himself three questions each day; Seneca looked back each evening at how he had spent his day."
+    ],
+    [
+     "Deeds before words.",
+     "Confucius says the superior person acts first and speaks afterwards; Marcus Aurelius tells himself to stop talking about what a good person is, and to be one."
+    ],
+    [
+     "A clear conscience is calm.",
+     "Confucius asks what there is to fear when looking inside finds nothing wrong; for the Stoics, only our own judgments and actions are truly ours to worry about."
+    ]
+   ],
+   "part": [
+    [
+     "Where duty comes from.",
+     "The Stoics root it in a reason all humans share: we are made for co-operation, like hands and feet. Confucius roots it in the family and in ritual: respect for parents is where a good society begins."
+    ],
+    [
+     "Answering a wrong.",
+     "Confucius says repay injury with justice, and kindness with kindness. Epictetus asks us to take a brother's wrong by its other handle: he is still our brother."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Stoicism",
+     "id": 10,
+     "gloss": "Marcus Aurelius: no longer talk about a good man, but be one"
+    },
+    {
+     "path": "Stoicism",
+     "id": 21,
+     "gloss": "Epictetus: everything has two handles"
+    },
+    {
+     "path": "Confucianism",
+     "id": 513,
+     "gloss": "Analects: I daily examine myself on three points"
+    },
+    {
+     "path": "Confucianism",
+     "id": 491,
+     "gloss": "Confucius: recompense injury with justice"
+    }
+   ],
+   "status": "Draft"
+  },
+  {
+   "id": "taoism--buddhist-philosophy",
+   "a": "Taoism",
+   "b": "Buddhist Philosophy",
+   "line": "Both say still the mind, let go, and stop clinging; the Taoists follow the natural way of things, the Buddhist texts a path out of suffering.",
+   "agree": [
+    [
+     "Still water clears.",
+     "Laozi says muddy water clears if we let it be still; the *Dhammapada* says the wise become serene, like a deep, still lake."
+    ],
+    [
+     "Hold nothing.",
+     "Zhuangzi's perfect person uses the mind like a mirror, which receives but does not keep; the *Dhammapada* says no suffering comes to one who calls nothing his own."
+    ],
+    [
+     "Give up winning.",
+     "The *Dhammapada* says victory breeds hatred, and happy is the one who gives up both victory and defeat; Laozi's sage puts himself last, and is found in front."
+    ]
+   ],
+   "part": [
+    [
+     "Where they start.",
+     "Taoism starts from the Tao, the way of nature, and asks us to trust it. Buddhism starts from the unease of relying on things that do not last, and offers a way to end it."
+    ],
+    [
+     "Effort.",
+     "The Buddhist texts call for earnestness and restraint, to make the mind an island no flood can overwhelm. The Taoists distrust effort: act without forcing, like water finding its way around a stone."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Taoism",
+     "id": 417,
+     "gloss": "Laozi: let muddy water be still"
+    },
+    {
+     "path": "Taoism",
+     "id": 438,
+     "gloss": "Zhuangzi: the mind as a mirror"
+    },
+    {
+     "path": "Buddhist Philosophy",
+     "id": 322,
+     "gloss": "Dhammapada: serene like a deep, still lake"
+    },
+    {
+     "path": "Buddhist Philosophy",
+     "id": 330,
+     "gloss": "Dhammapada: victory breeds hatred"
+    }
+   ],
+   "status": "Draft"
+  },
+  {
+   "id": "epicureanism--classical-greek-philosophy",
+   "a": "Epicureanism",
+   "b": "Classical Greek Philosophy",
+   "line": "Epicurus taught in Athens a generation after Aristotle; both ask what makes a life go well, and they part on pleasure, the gods, and public life.",
+   "agree": [
+    [
+     "Goodness and a happy life go together.",
+     "Epicurus says you cannot live pleasantly without living wisely, well, and justly; Aristotle calls the happy person one who lives well and does well."
+    ],
+    [
+     "Pleasure is tied to pain.",
+     "Socrates, released from his chains, remarks how curiously pleasure follows pain; Epicurus says pleasure reaches its limit once pain is gone."
+    ],
+    [
+     "Friends matter.",
+     "Aristotle says sorrow is lightened by the sympathy of friends; Epicurus calls friendship by far the most important means to a happy life."
+    ]
+   ],
+   "part": [
+    [
+     "The goal.",
+     "For Epicurus, pleasure, meaning freedom from pain and fear. For Aristotle, happiness is the active use of our abilities in line with virtue, over a whole life."
+    ],
+    [
+     "The world.",
+     "Lucretius says fear comes from imagining gods at work where we don't know the causes, and the world is atoms and empty space. For Plato, the changing world is an imperfect copy of perfect, unchanging Forms."
+    ],
+    [
+     "Public life.",
+     "Aristotle calls us social beings, and a citizen one who shares in governing. The Epicureans kept out of politics and lived among friends."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Epicureanism",
+     "id": 69,
+     "gloss": "Epicurus: no pleasant life without living wisely, well, and justly"
+    },
+    {
+     "path": "Epicureanism",
+     "id": 89,
+     "gloss": "Lucretius: fear holds dominion over mortality"
+    },
+    {
+     "path": "Classical Greek Philosophy",
+     "id": 141,
+     "gloss": "Socrates: how singular is the thing called pleasure"
+    },
+    {
+     "path": "Classical Greek Philosophy",
+     "id": 128,
+     "gloss": "Aristotle: a citizen shares in governing and being governed"
+    }
+   ],
+   "status": "Draft"
+  },
+  {
+   "id": "persian-and-sufi-poetry--stoicism",
+   "a": "Persian and Sufi Poetry",
+   "b": "Stoicism",
+   "line": "Both teach patience with fortune, which gives and takes away; the Stoics meet it with reason, the Sufi poets with love.",
+   "agree": [
+    [
+     "Fortune turns.",
+     "Boethius says a wheel of Fortune that stood still would not be Fortune's wheel; Hafiz, that the powers of the world endure for an hour."
+    ],
+    [
+     "Bear what comes.",
+     "Sa'di says patience is bitter, yet it yields sweet fruit; Marcus Aurelius, that nothing happens to anyone that they are not formed by nature to bear."
+    ],
+    [
+     "Hardship has its use.",
+     "Seneca says fire tests gold, and misfortune tests the brave; Rumi calls pain a treasure, because it holds mercies."
+    ]
+   ],
+   "part": [
+    [
+     "Reason or the heart.",
+     "The Stoics accept what comes by judging it rightly: what disturbs us is our opinion of it. For the Sufi poets, the heart does the work, and love, above all the soul's longing for God, carries a person through."
+    ],
+    [
+     "Calm or longing.",
+     "The Stoic wants a mind free of disturbing passions. For Rumi and Hafiz, longing is part of the way, and a true lover is known by the pain of the heart."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Persian and Sufi Poetry",
+     "id": 574,
+     "gloss": "Sa'di: patience is bitter, yet it will yield sweet fruit"
+    },
+    {
+     "path": "Persian and Sufi Poetry",
+     "id": 596,
+     "gloss": "Rumi: pain is a treasure"
+    },
+    {
+     "path": "Stoicism",
+     "id": 31,
+     "gloss": "Boethius: the wheel of Fortune"
+    },
+    {
+     "path": "Stoicism",
+     "id": 48,
+     "gloss": "Seneca: fire tries gold"
+    }
+   ],
+   "status": "Draft"
+  },
+  {
+   "id": "persian-and-sufi-poetry--buddhist-philosophy",
+   "a": "Persian and Sufi Poetry",
+   "b": "Buddhist Philosophy",
+   "line": "Both see our own cravings as the real enemy and ask for a heart wiped clean; they part on where that leads: for the Buddhist texts to calm, for the Sufi poets to love.",
+   "agree": [
+    [
+     "The enemy is within.",
+     "Rumi says a person ruled by cravings blames this enemy and that foe, while the real foe is his own lower self; the *Dhammapada* says no one but ourselves can be master of the self."
+    ],
+    [
+     "Clean the mirror.",
+     "Rumi says a mirror reflects only once its rust is scoured away; the *Dhammapada* asks the wise to blow off the impurities of the self, as a smith refines silver, little by little."
+    ],
+    [
+     "No room for hatred.",
+     "The *Dhammapada* says hatred ceases only by love; Sa'di, that all people are members of one another, with one common origin."
+    ]
+   ],
+   "part": [
+    [
+     "The end of the road.",
+     "Buddhism teaches that there is no fixed self, and aims at the end of suffering. For the Sufi poets, the soul longs to return to its source: Rumi pictures snow that melts into the earth and rises as mist."
+    ],
+    [
+     "Calm or longing.",
+     "The *Dhammapada* likens the wise to a still lake. For Rumi, love is a sickness of the heart, and the longing itself is part of the way."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Persian and Sufi Poetry",
+     "id": 597,
+     "gloss": "Rumi: his own body is his enemy and foe"
+    },
+    {
+     "path": "Persian and Sufi Poetry",
+     "id": 556,
+     "gloss": "Rumi: the mirror that does not reflect"
+    },
+    {
+     "path": "Buddhist Philosophy",
+     "id": 327,
+     "gloss": "Dhammapada: self is the lord of self"
+    },
+    {
+     "path": "Buddhist Philosophy",
+     "id": 334,
+     "gloss": "Dhammapada: as a smith blows off the impurities of silver"
+    }
+   ],
+   "status": "Draft"
+  },
+  {
+   "id": "indian-philosophy--taoism",
+   "a": "Indian Philosophy",
+   "b": "Taoism",
+   "line": "Both teach a way of acting without strain: the *Gita* and Vivekananda act fully but let go of the results, the Taoists act without forcing at all.",
+   "agree": [
+    [
+     "The trouble is clinging.",
+     "Vivekananda says misery comes from attachment, not from work; Zhuangzi's archer shoots well for a piece of pottery but goes blind with nerves when the prize is gold."
+    ],
+    [
+     "Skill without strain.",
+     "Zhuangzi's cook carves with his mind, not his eye, after years of practice; Vivekananda says the best work is done without any motive, for money, fame, or anything else."
+    ],
+    [
+     "No one simply stops.",
+     "The *Gita* says nobody stays even an instant without acting; for the Taoists, effortless action is still action, like water finding its way around a stone."
+    ]
+   ],
+   "part": [
+    [
+     "How hard to work.",
+     "Vivekananda says work incessantly, but without attachment. Laozi says the follower of the Tao does a little less each day."
+    ],
+    [
+     "Duty or nature.",
+     "The *Gita* asks each person to do their own task, their duty. The Taoists distrust duties and rules, and prefer to let things be what they are."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Indian Philosophy",
+     "id": 404,
+     "gloss": "Vivekananda: misery comes through attachment"
+    },
+    {
+     "path": "Indian Philosophy",
+     "id": 381,
+     "gloss": "Vivekananda: work incessantly, but be not attached"
+    },
+    {
+     "path": "Taoism",
+     "id": 432,
+     "gloss": "Zhuangzi: the cook who works with his mind"
+    },
+    {
+     "path": "Taoism",
+     "id": 459,
+     "gloss": "Zhuangzi: the archer shooting for earthenware"
+    }
+   ],
+   "status": "Draft"
+  },
+  {
+   "id": "epicureanism--taoism",
+   "a": "Epicureanism",
+   "b": "Taoism",
+   "line": "Both praise a simple life with few desires and distrust fame and wealth; they part on company and on knowledge.",
+   "agree": [
+    [
+     "Need little.",
+     "Epicurus says what nature needs is limited and easy to get, while the wealth of empty fancies has no end; Laozi asks which is dearer, fame or your life."
+    ],
+    [
+     "Persuade, don't force.",
+     "Epicurus says nature must be persuaded, not forced; the Taoists act without forcing, like water around a stone."
+    ],
+    [
+     "Fame is a trap.",
+     "For Epicurus, desires for fame and honours are picked up from others and never end; Laozi says whoever is content needs fear no shame."
+    ]
+   ],
+   "part": [
+    [
+     "Company.",
+     "For Epicurus, friendship is by far the most important means to a happy life, and his school lived together in a garden. The Taoists step back from society into a simpler life closer to nature."
+    ],
+    [
+     "Knowledge.",
+     "The Epicureans studied nature to free people from fear: once we understand how the world works, Lucretius says, imagined powers lose their hold. Zhuangzi warns that life has a limit and knowledge has none, so chasing it all leads nowhere."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Epicureanism",
+     "id": 61,
+     "gloss": "Epicurus: nature's wealth has its bounds"
+    },
+    {
+     "path": "Epicureanism",
+     "id": 81,
+     "gloss": "Epicurus: nature must be persuaded, not forced"
+    },
+    {
+     "path": "Taoism",
+     "id": 444,
+     "gloss": "Laozi: fame or life, which do you hold more dear?"
+    },
+    {
+     "path": "Taoism",
+     "id": 436,
+     "gloss": "Zhuangzi: my life has a limit, but my knowledge is without limit"
+    }
+   ],
+   "status": "Draft"
+  },
+  {
+   "id": "confucianism--enlightenment-ethics",
+   "a": "Confucianism",
+   "b": "Enlightenment Ethics",
+   "line": "Both build ethics on how we treat one another and how power should behave; Confucius starts from roles, ritual, and family, the Enlightenment from free individuals and their agreement.",
+   "agree": [
+    [
+     "Treat others as people.",
+     "Confucius says do not do to others what you would not want done to yourself; Kant, that we must treat every person always as an end, never only as a means."
+    ],
+    [
+     "Power must deserve obedience.",
+     "Confucius says to govern is to set things right, starting with the ruler's own conduct; for Spinoza, a person guided by reason keeps the law because they understand it, not out of fear."
+    ]
+   ],
+   "part": [
+    [
+     "Where good government comes from.",
+     "For Confucius, from the ruler's example: lead with correctness, and the people follow. For Locke and Rousseau, from an agreement among the people; Rousseau says people are born free, yet everywhere in chains."
+    ],
+    [
+     "Harmony or liberty.",
+     "The Confucians value harmony in families and states, with duties set by each person's role. Mill says the only freedom worth the name is pursuing our own good in our own way."
+    ],
+    [
+     "Tradition.",
+     "Confucius saw himself as passing on older values that his age had lost. The Enlightenment asked people to test beliefs by reason and evidence, not by tradition alone."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Confucianism",
+     "id": 494,
+     "gloss": "Confucius: what you do not want done to yourself"
+    },
+    {
+     "path": "Confucianism",
+     "id": 500,
+     "gloss": "Confucius: to govern means to rectify"
+    },
+    {
+     "path": "Enlightenment Ethics",
+     "id": 153,
+     "gloss": "Kant: humanity as an end, never as means only"
+    },
+    {
+     "path": "Enlightenment Ethics",
+     "id": 197,
+     "gloss": "Mill: pursuing our own good in our own way"
+    }
+   ],
+   "status": "Draft"
+  },
+  {
+   "id": "indian-philosophy--confucianism",
+   "a": "Indian Philosophy",
+   "b": "Confucianism",
+   "line": "Both say our duties depend on our place in life, and both prize self-mastery and example; they part on where those duties finally lead.",
+   "agree": [
+    [
+     "Your own task.",
+     "The *Gita* says it is better to do your own task, even if you fail, than another's; Confucius cares less about having a place than about being fit for one."
+    ],
+    [
+     "Lead by example.",
+     "The *Gita* says whatever a great person does, others do too; Confucius tells a man in power that if his desires are for what is good, the people will be good."
+    ],
+    [
+     "Neither too much nor too little.",
+     "The *Gita* asks for food and rest in due measure; Confucius says going too far is as wrong as falling short."
+    ]
+   ],
+   "part": [
+    [
+     "Where duty comes from.",
+     "For Confucius, from relationships: parents, rulers, friends, kept up through ritual. For the *Gita*, from each person's own station, which in its world was tied to birth."
+    ],
+    [
+     "Where it leads.",
+     "Confucius aims at a good person in a well-ordered society, in this life. The Indian texts look beyond it: letting go of the fruits of action is part of a path towards liberation from rebirth."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Indian Philosophy",
+     "id": 360,
+     "gloss": "Bhagavad Gita: better your own task, even though you fail"
+    },
+    {
+     "path": "Indian Philosophy",
+     "id": 401,
+     "gloss": "Bhagavad Gita: whatever a great man does, others also do"
+    },
+    {
+     "path": "Confucianism",
+     "id": 473,
+     "gloss": "Confucius: fit myself for a place"
+    },
+    {
+     "path": "Confucianism",
+     "id": 501,
+     "gloss": "Confucius: let your desires be for what is good"
+    }
+   ],
+   "status": "Draft"
+  },
+  {
+   "id": "indian-philosophy--enlightenment-ethics",
+   "a": "Indian Philosophy",
+   "b": "Enlightenment Ethics",
+   "line": "Vivekananda and Kant both say do good because it is good, not for a reward; they part on what grounds that duty, and on what freedom means.",
+   "agree": [
+    [
+     "Good for its own sake.",
+     "Vivekananda says let us do good because it is good to do good; Kant, that morality is not about making ourselves happy but about becoming worthy of happiness."
+    ],
+    [
+     "Others matter to us.",
+     "Vivekananda says that in helping the world we really help ourselves; Adam Smith, that however selfish we are, the happiness of others is necessary to us."
+    ]
+   ],
+   "part": [
+    [
+     "What grounds duty.",
+     "For the Upanishads, the deepest self is one with all beings, and whoever sees the Self in all beings turns away from none of them. For Kant, duty comes from reason, which binds every rational being; for Mill, from the happiness our actions bring."
+    ],
+    [
+     "What freedom means.",
+     "For Vivekananda, freedom comes from working without attachment to the work and its rewards. For Mill, freedom is the individual's rule over their own body and mind."
+    ]
+   ],
+   "thoughts": [
+    {
+     "path": "Indian Philosophy",
+     "id": 407,
+     "gloss": "Vivekananda: do good because it is good"
+    },
+    {
+     "path": "Indian Philosophy",
+     "id": 383,
+     "gloss": "Vivekananda: in helping the world we help ourselves"
+    },
+    {
+     "path": "Enlightenment Ethics",
+     "id": 155,
+     "gloss": "Kant: worthy of happiness"
+    },
+    {
+     "path": "Enlightenment Ethics",
+     "id": 184,
+     "gloss": "Adam Smith: the happiness of others is necessary to us"
+    }
+   ],
+   "status": "Draft"
+  }
+ ],
+ "conversation": {
+  "intro": "A good question can carry a whole evening. Each one here grew from a thought in the app, and needs no quote to work. Choose by who you'll be with, or let us pick one for you.",
+  "groups": [
+   {
+    "key": "friends",
+    "label": "With friends"
+   },
+   {
+    "key": "family",
+    "label": "With family"
+   },
+   {
+    "key": "kids",
+    "label": "With kids"
+   },
+   {
+    "key": "teens",
+    "label": "With teens"
+   },
+   {
+    "key": "date",
+    "label": "On a date"
+   },
+   {
+    "key": "colleagues",
+    "label": "With colleagues"
+   },
+   {
+    "key": "group",
+    "label": "In a big group"
+   }
+  ],
+  "questions": [
+   {
+    "question": "What's a good day from long ago that you still think about?",
+    "id": 79,
+    "groups": [
+     "family",
+     "friends"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "What upset you once that you can laugh about now?",
+    "id": 9,
+    "groups": [
+     "friends",
+     "family"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Could you spend a whole day alone, with no phone, and enjoy it?",
+    "id": 230,
+    "groups": [
+     "friends",
+     "teens"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "If you had to live for a year in one tiny room, what three things would you take?",
+    "id": 539,
+    "groups": [
+     "date",
+     "kids",
+     "group"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Would you do your work the same way if nobody ever saw the result?",
+    "id": 368,
+    "groups": [
+     "colleagues"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Would you take a pill that made you happy forever?",
+    "id": 158,
+    "groups": [
+     "group",
+     "friends",
+     "teens"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Do your best friends make you more yourself, or more like them?",
+    "id": 115,
+    "groups": [
+     "teens",
+     "friends"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Is “treat others the way you want to be treated” always a good rule?",
+    "id": 494,
+    "groups": [
+     "teens",
+     "colleagues"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Which is stronger, water or a rock?",
+    "id": 422,
+    "groups": [
+     "kids",
+     "family",
+     "group"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Would you try harder if you only had one go?",
+    "id": 516,
+    "groups": [
+     "kids",
+     "colleagues",
+     "teens"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Would you rather have a leader who is loved or one who is feared?",
+    "id": 605,
+    "groups": [
+     "friends",
+     "group",
+     "teens"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Does a leader's private life matter if they do the job well?",
+    "id": 504,
+    "groups": [
+     "group",
+     "friends"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Can you ever really explain why you like someone?",
+    "id": 280,
+    "groups": [
+     "date",
+     "friends"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "What keeps a friendship going for years?",
+    "id": 612,
+    "groups": [
+     "friends",
+     "family"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Have you ever felt at home in a place of worship that wasn't your own?",
+    "id": 577,
+    "groups": [
+     "friends",
+     "group"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Can anyone promise to love someone forever?",
+    "id": 619,
+    "groups": [
+     "group",
+     "date"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Which is harder: winning against someone else, or winning against a bad habit?",
+    "id": 310,
+    "groups": [
+     "teens",
+     "friends"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Is there anyone that everybody likes?",
+    "id": 340,
+    "groups": [
+     "kids",
+     "teens",
+     "group"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "What small thing, done every day, would change your life most in a year?",
+    "id": 357,
+    "groups": [
+     "colleagues",
+     "friends"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "When the best dish comes round, do you take the biggest piece, or wait your turn?",
+    "id": 19,
+    "groups": [
+     "kids",
+     "family"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Do you get ready for difficult people before a meeting, or take them as they come?",
+    "id": 1,
+    "groups": [
+     "colleagues"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "What are you putting off until “later” that you'd love to start now?",
+    "id": 26,
+    "groups": [
+     "friends",
+     "date"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "What would you like to be good at, and when did you last practise it?",
+    "id": 22,
+    "groups": [
+     "teens",
+     "colleagues"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Would you rather have lots of money or lots of good friends?",
+    "id": 58,
+    "groups": [
+     "kids",
+     "teens"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Who is the wisest person you've ever met, and how old were they?",
+    "id": 60,
+    "groups": [
+     "family",
+     "date"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "What's the best simple meal in the world?",
+    "id": 66,
+    "groups": [
+     "kids",
+     "family",
+     "group"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Should a good friend tell you when you're wrong?",
+    "id": 211,
+    "groups": [
+     "teens",
+     "friends"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "What's one good thing from this week that we'd forget to mention?",
+    "id": 223,
+    "groups": [
+     "family",
+     "group",
+     "friends",
+     "colleagues"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "If you pretend to be someone for long enough, do you become them?",
+    "id": 245,
+    "groups": [
+     "teens",
+     "date"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "What's on your list of small things that make you happy?",
+    "id": 544,
+    "groups": [
+     "kids",
+     "family",
+     "date"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Do you like the start of something, the middle, or the end best?",
+    "id": 517,
+    "groups": [
+     "date",
+     "friends"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Would you rather be the one who plays the game or the one who watches?",
+    "id": 373,
+    "groups": [
+     "kids",
+     "teens"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Which do you enjoy more, giving a present or getting one?",
+    "id": 384,
+    "groups": [
+     "kids",
+     "family",
+     "group"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Do you rest so you can work, or work so you can rest?",
+    "id": 390,
+    "groups": [
+     "colleagues",
+     "friends"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "How do you know you're not dreaming right now?",
+    "id": 430,
+    "groups": [
+     "kids",
+     "teens",
+     "group"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Would you rather have three sweets now and four later, or four now and three later?",
+    "id": 456,
+    "groups": [
+     "kids",
+     "family"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Is it ever an advantage to be the one nobody notices?",
+    "id": 434,
+    "groups": [
+     "colleagues",
+     "teens"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "What have you learned from someone at work without them knowing?",
+    "id": 480,
+    "groups": [
+     "colleagues"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Are people born kind, or do they learn it?",
+    "id": 511,
+    "groups": [
+     "family",
+     "teens",
+     "group"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "If everyone around you believed something untrue, how would you ever find out?",
+    "id": 104,
+    "groups": [
+     "teens",
+     "group"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Is a river the same river tomorrow?",
+    "id": 121,
+    "groups": [
+     "kids",
+     "group"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Do phones make us remember less?",
+    "id": 108,
+    "groups": [
+     "teens",
+     "colleagues",
+     "family"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Have you ever bought one new thing and then wanted to change everything around it?",
+    "id": 635,
+    "groups": [
+     "friends",
+     "group",
+     "date"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Is beauty in the thing, or in the person looking at it?",
+    "id": 177,
+    "groups": [
+     "date",
+     "friends"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Who is the best person you know at making others feel interesting?",
+    "id": 629,
+    "groups": [
+     "date",
+     "colleagues"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "What's the last thing that made you laugh until it hurt?",
+    "id": 630,
+    "groups": [
+     "friends",
+     "family",
+     "kids",
+     "group"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "What do children know about being happy that grown-ups forget?",
+    "id": 627,
+    "groups": [
+     "family",
+     "kids",
+     "group"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "If you touched an elephant in the dark, what would you guess it was?",
+    "id": 562,
+    "groups": [
+     "kids",
+     "family",
+     "group"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "What's something that always goes wrong when you rush it?",
+    "id": 594,
+    "groups": [
+     "colleagues",
+     "family",
+     "kids"
+    ],
+    "status": "Ready"
+   },
+   {
+    "question": "Do the words you use matter, or only what you mean by them?",
+    "id": 558,
+    "groups": [
+     "family",
+     "date"
+    ],
+    "status": "Ready"
+   }
+  ]
+ }
+}

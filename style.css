@@ -732,6 +732,49 @@ button.mq-back { display: inline-block; margin: 0 0 2rem; }
 .card-more a { display: block; margin: 0 0 .25rem; }
 .mq-voice-link { color: inherit; text-decoration: underline 1px; text-underline-offset: .22em; text-decoration-color: var(--faint); }
 
+/* ---------- Compare two paths, Questions for good conversations ---------- */
+/* The picker: tap two paths; a picked one is ticked, bold, and outlined (never colour alone) */
+.lib .pick-label { color: var(--muted); font-size: .85rem; margin: 0 0 .6rem; }
+.lib .chips { display: flex; flex-wrap: wrap; gap: .5rem .55rem; margin: 0 0 1.4rem; padding: 0; list-style: none; }
+.lib .chip { font: inherit; font-size: .9rem; color: var(--fg); background: none; border: 1px solid var(--faint);
+  border-radius: 999px; padding: .4rem .8rem; cursor: pointer; }
+.lib .chip[aria-pressed="true"] { border-color: var(--fg); font-weight: 500; }
+.lib .chip[aria-pressed="true"]::before { content: "✓ "; }
+.lib .chip:focus-visible { outline: 1px solid var(--muted); outline-offset: 3px; }
+.lib .verdict { border-top: 1px solid var(--faint); border-bottom: 1px solid var(--faint); padding: 1rem 0 1.1rem; margin: 0 0 1rem; }
+.lib .verdict-pair { display: block; color: inherit; text-decoration: none; }
+.lib .verdict .t { display: block; font: 400 1.25rem/1.3 var(--serif); }
+.lib .verdict .d { display: block; color: var(--muted); font-size: .9rem; margin: .35rem 0 .45rem; }
+.lib .verdict .go, .lib .pair-links .go { font-size: .85rem; border-bottom: 1px solid var(--faint); }
+.lib .verdict .go::after, .lib .pair-links .go::after { content: " →"; }
+.lib .verdict .quiet { color: var(--muted); font: italic 400 1rem/1.5 var(--serif); margin: 0; }
+/* A pair page: each point a bold heading, then its text; the thoughts with our gloss */
+.lib-text .lib-points { list-style: none; padding: 0; margin: 0; }
+.lib-text .lib-points li { margin: 0 0 .8rem; }
+.lib-cite { display: block; color: inherit; text-decoration: none; padding: .85rem 0; border-top: 1px solid var(--faint); }
+.lib-cite:last-child { border-bottom: 1px solid var(--faint); }
+.lib-cite .p, .conv-from .p { color: var(--accent); font: 600 .6rem/1.4 var(--sans); letter-spacing: .18em; text-transform: uppercase; }
+.lib-cite .q { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  font: 400 1.02rem/1.5 var(--serif); margin: .25rem 0 .2rem; white-space: pre-line; }
+.lib-cite .s { display: block; color: var(--muted); font-size: .8rem; }
+.lib .pair-links { margin: .2rem 0 0; display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; }
+.lib .pair-links a:not(.go) { color: inherit; text-decoration: underline 1px; text-underline-offset: .22em; text-decoration-color: var(--faint); }
+.lib .pair-links + .pair-links { margin-top: .6rem; }
+.lib .pair-links .go { color: inherit; text-decoration: none; }
+.lib .compare-k { color: var(--muted); font-size: .85rem; margin: 1rem 0 .3rem; }
+/* Questions: "give me one" underlined like the other text buttons, a filter by who you're with */
+.lib .conv-give { border-bottom-color: var(--faint); margin: 0 0 .5rem; }
+.lib .conv-card { border-top: 1px solid var(--faint); border-bottom: 1px solid var(--faint); padding: 1rem 0; margin: 0 0 .9rem; }
+.lib .conv-card .q { font: italic 400 1.25rem/1.45 var(--serif); margin: 0 0 .5rem; }
+.lib .conv-filter { margin: 0 0 1.2rem; }
+.lib .conv-list { list-style: none; padding: 0; margin: 0; }
+.lib .conv-list li { padding: .8rem 0; border-top: 1px solid var(--faint); }
+.lib .conv-list li:last-child { border-bottom: 1px solid var(--faint); }
+.lib .conv-list .q { font: 400 1.05rem/1.45 var(--serif); margin: 0 0 .25rem; }
+.conv-from { color: var(--muted); font-size: .8rem; text-decoration: none; }
+a.conv-from::after { content: " →"; }
+.conv-from .p { font-size: .58rem; margin-left: .3rem; }
+
 /* ---------- Wide screens (the web app on a computer, 1000px and up; phones never get this) ---------- */
 .rail { display: none; }
 @media (min-width: 1000px) {

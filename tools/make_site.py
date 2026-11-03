@@ -14,7 +14,7 @@ ROOT = os.path.dirname(HERE)
 WEB = os.path.join(ROOT, "web")
 SITE = os.path.join(ROOT, "site")
 APP_FILES = ["index.html", "style.css", "calendar.js", "app.js", "sw.js", "manifest.webmanifest", "entries.json",
-             "calendar.json", "glossary.json", "questions.json", "pages.json", "icon.svg", "icon-180.png", "icon-192.png", "icon-512.png",
+             "calendar.json", "glossary.json", "questions.json", "pages.json", "extras.json", "icon.svg", "icon-180.png", "icon-192.png", "icon-512.png",
              "icon-maskable-512.png", "mark-400.png"]
 PLAY_URL = "https://play.google.com/store/apps/details?id=app.thinkingplace"  # live once published
 HOME_THOUGHTS = [15, 308, 78, 494, 288, 389, 236]  # Monday to Sunday, see below
@@ -85,7 +85,11 @@ def main():
                                     ("terms.html", "Terms & privacy", terms_desc, terms_html)):
         open(os.path.join(SITE, name), "w", encoding="utf-8").write(
             tpl.replace("{{TITLE}}", title.replace("&", "&amp;")).replace("{{PATH}}", name)
-               .replace("{{DESC}}", desc).replace("{{BODY}}", body))
+               .replace("{{DESC}}", desc).replace("{{BODY}}", body).replace("{{HEAD}}", "")
+               .replace("{{BACK}}", '<a class="back" href="./">← back</a>').replace("{{ROOT}}", ""))
+    # The Library as real pages (site/library/), for readers who arrive from a search
+    import make_library_site
+    make_library_site.main(tpl, by_id)
     print(f"site/ ready: {sum(len(f) for _, _, f in os.walk(SITE))} files")
 
 

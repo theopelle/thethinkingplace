@@ -34,7 +34,7 @@ All four say goodness takes effort and is not simply given at birth. They split 
 
 - Stanford Encyclopedia of Philosophy, "Virtue Ethics": https://plato.stanford.edu/entries/ethics-virtue/
 - Stanford Encyclopedia of Philosophy, "Kant's Moral Philosophy": https://plato.stanford.edu/entries/kant-moral/ · "Confucius": https://plato.stanford.edu/entries/confucius/
-- The app's thoughts #109, #113, #119, #154, #155, #208, #328, #333, #339, #357, #475, #487, #492, #495, and #504, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Learning and knowledge
 
@@ -65,7 +65,7 @@ Nearly all of them start with humility: Socrates, Confucius, and Laozi all prais
 ### Sources
 
 - Stanford Encyclopedia of Philosophy, "Socrates": https://plato.stanford.edu/entries/socrates/ · "Laozi": https://plato.stanford.edu/entries/laozi/
-- The app's thoughts #96, #97, #104, #162, #167, #175, #418, #420, #429, #470, #471, #480, and #482, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Mind and emotions
 
@@ -96,7 +96,7 @@ Most of them believe the mind can be trained, and that much suffering comes from
 ### Sources
 
 - Stanford Encyclopedia of Philosophy, "Stoicism": https://plato.stanford.edu/entries/stoicism/ · "Aristotle's Ethics": https://plato.stanford.edu/entries/aristotle-ethics/ · "Hume's Moral Philosophy": https://plato.stanford.edu/entries/hume-moral/
-- The app's thoughts #7, #9, #111, #168, #169, #173, #228, #307, #308, and #315, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Self-knowledge
 
@@ -127,7 +127,7 @@ They all say the work begins inside, not in other people's opinions. They differ
 ### Sources
 
 - Stanford Encyclopedia of Philosophy, "Socrates": https://plato.stanford.edu/entries/socrates/
-- The app's thoughts #95, #214, #273, #283, #355, #364, #366, #493, and #513, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Happiness and the good life
 
@@ -158,7 +158,7 @@ Most agree that happiness is not pleasure piled up, and that wanting less helps.
 ### Sources
 
 - Stanford Encyclopedia of Philosophy, "Aristotle's Ethics": https://plato.stanford.edu/entries/aristotle-ethics/
-- The app's thoughts #58, #64, #66, #67, #110, #116, #155, #158, #159, #331, and #479, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Ego, pride, and humility
 
@@ -188,7 +188,7 @@ All of them see pride as a blind spot that keeps us from learning and from seein
 
 ### Sources
 
-- The app's thoughts #23, #44, #290, #301, #410, #411, #415, #468, #483, and #490, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Change and impermanence
 
@@ -218,7 +218,7 @@ All of them start from the same fact: nothing stays as it is. They differ on wha
 
 ### Sources
 
-- The app's thoughts #18, #33, #88, #121, #209, #345, #515, #517, and #529, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Desire and simplicity
 
@@ -248,7 +248,7 @@ Most agree that endless wanting makes us unhappy, and that it is better to chang
 
 ### Sources
 
-- The app's thoughts #5, #25, #41, #61, #72, #182, #194, #254, #267, #268, #353, #368, #370, and #419, with their sources
+- The app's thoughts, with their sources
 
 ## Topic page: Time and the present
 
@@ -278,4 +278,4 @@ All of them say the present is the only time we truly have. They differ on what 
 
 ### Sources
 
-- The app's thoughts #24, #26, #43, #63, #77, #79, #227, #278, #520, #579, and #583, with their sources
+- The app's thoughts, with their sources

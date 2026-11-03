@@ -1,10 +1,14 @@
 # Builds the website (tools/make_site.py) and publishes it on GitHub Pages at
-# thinkingplace.app, on every upload to main. site/ itself stays out of git.
+# thinkingplace.app, on every upload to main, and once a day so the Library pages show each
+# thought once its day has passed. site/ itself stays out of git. GitHub pauses scheduled runs
+# after 60 days without a commit to the repository; an upload starts them again.
 name: Website
 
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: "20 0 * * *"  # every day at 00:20 UTC
   workflow_dispatch:
 
 permissions:

@@ -41,7 +41,7 @@ The *Gulistan*, chapter I, "On the Manners of Kings". Short stories with a lesso
 ### Sources
 
 - Wikipedia, "Saadi Shirazi": https://en.wikipedia.org/wiki/Saadi\_Shirazi
-- The app's Sa'di thoughts (#573–576, #587–592), from the *Gulistan*
+- The app's Sa'di thoughts, from the *Gulistan*
 
 ## The Upanishads
 
@@ -78,7 +78,7 @@ The *Katha Upanishad*: short, and built around a story: a boy, Nachiketa, meets 
 ### Sources
 
 - Wikipedia, "Upanishads": https://en.wikipedia.org/wiki/Upanishads
-- The app's Upanishad thoughts (#363–367, #373, #409), from the *Katha*, *Isha*, *Brihadaranyaka*, and *Mundaka*
+- The app's Upanishad thoughts, from the *Katha*, *Isha*, *Brihadaranyaka*, and *Mundaka*
 
 ## Friedrich Nietzsche
 
@@ -117,7 +117,7 @@ He never married. He proposed three times to the writer Lou Salomé, and was tur
 ### Sources
 
 - Wikipedia, "Friedrich Nietzsche": https://en.wikipedia.org/wiki/Friedrich\_Nietzsche
-- The app's Nietzsche thoughts (#209–216, #245, #256–260), from *Zarathustra*, *The Joyful Wisdom*, *Beyond Good and Evil*, and *Human, All-Too-Human*
+- The app's Nietzsche thoughts, from *Zarathustra*, *The Joyful Wisdom*, *Beyond Good and Evil*, and *Human, All-Too-Human*
 
 ## Lucretius
 
@@ -156,7 +156,7 @@ A strange legend, recorded by Saint Jerome four centuries later, says Lucretius 
 ### Sources
 
 - Wikipedia, "Lucretius": https://en.wikipedia.org/wiki/Lucretius
-- The app's Lucretius thoughts (#74–76, #87–94), from *On the Nature of Things*
+- The app's Lucretius thoughts, from *On the Nature of Things*
 
 ## Immanuel Kant
 
@@ -195,7 +195,7 @@ He also thought hard about peace. In *Towards Perpetual Peace* (1795) he argued 
 ### Sources
 
 - Wikipedia, "Immanuel Kant": https://en.wikipedia.org/wiki/Immanuel\_Kant
-- The app's Kant thoughts (#152–157, #206–208), from the *Groundwork* and the *Critique of Practical Reason*
+- The app's Kant thoughts, from the *Groundwork* and the *Critique of Practical Reason*
 
 ## Margaret Fuller
 
@@ -233,7 +233,7 @@ In 1850 she sailed home with Ossoli and their child. The ship sank off Fire Isla
 ### Sources
 
 - Wikipedia, "Margaret Fuller": https://en.wikipedia.org/wiki/Margaret\_Fuller
-- The app's Fuller thoughts (#293–295), from *Woman in the Nineteenth Century*
+- The app's Fuller thoughts, from *Woman in the Nineteenth Century*
 
 ## The Bhagavad Gita
 
@@ -270,7 +270,7 @@ Chapter II, which sums up the whole teaching. Kashinath Trimbak Telang's 1882 tr
 ### Sources
 
 - Wikipedia, "Bhagavad Gita": https://en.wikipedia.org/wiki/Bhagavad\_Gita
-- The app's Gita thoughts (#360–362, #368–372, #401–403)
+- The app's Gita thoughts
 
 ## Voltaire
 
@@ -309,7 +309,7 @@ The champion of tolerance also had blind spots. He wrote with open hostility abo
 ### Sources
 
 - Wikipedia, "Voltaire": https://en.wikipedia.org/wiki/Voltaire
-- The app's Voltaire thoughts (#611–616), from *Candide*, *Zadig*, and the *Philosophical Dictionary*
+- The app's Voltaire thoughts, from *Candide*, *Zadig*, and the *Philosophical Dictionary*
 
 ## Kamo no Chōmei
 
@@ -348,7 +348,7 @@ He is also more human than his serene book suggests. He still held a grudge agai
 
 - Wikipedia, "Kamo no Chōmei": https://en.wikipedia.org/wiki/Kamo\_no\_Ch%C5%8Dmei
 - Wikipedia, "Hōjōki": https://en.wikipedia.org/wiki/H%C5%8Dj%C5%8Dki
-- The app's Chōmei thoughts (#538–541), from *Hōjōki*
+- The app's Chōmei thoughts, from *Hōjōki*
 
 ## Mary Wollstonecraft
 
@@ -395,4 +395,4 @@ After her death, Godwin published a frank memoir of her unconventional life. It 
 - Wikipedia, "Mary Wollstonecraft": https://en.wikipedia.org/wiki/Mary\_Wollstonecraft
 - Wikipedia, "A Vindication of the Rights of Woman": https://en.wikipedia.org/wiki/A\_Vindication\_of\_the\_Rights\_of\_Woman
 - Stanford Encyclopedia of Philosophy, "Mary Wollstonecraft": https://plato.stanford.edu/entries/wollstonecraft/
-- The app's Wollstonecraft thoughts (#178–179, #192–193), from *A Vindication of the Rights of Woman*
+- The app's Wollstonecraft thoughts, from *A Vindication of the Rights of Woman*

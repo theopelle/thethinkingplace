@@ -41,7 +41,7 @@ Early critics dismissed her as an eccentric recluse who broke the rules of gramm
 ### Sources
 
 - Wikipedia, "Emily Dickinson": https://en.wikipedia.org/wiki/Emily\_Dickinson
-- The app's Dickinson thoughts (#296–298), from *Poems, Series One*
+- The app's Dickinson thoughts, from *Poems, Series One*
 
 ## Epicurus
 
@@ -81,7 +81,7 @@ The *Letter to Menoeceus*: a few pages that hold his whole view of a good life. 
 
 - Wikipedia, "Epicurus": https://en.wikipedia.org/wiki/Epicurus
 - Stanford Encyclopedia of Philosophy, "Epicurus": https://plato.stanford.edu/entries/epicurus/
-- The app's Epicurus thoughts (#58–73, #77–86), including #59 and #73
+- The app's Epicurus thoughts
 
 ## Plato
 
@@ -120,7 +120,7 @@ The *Apology*: Socrates' speech at his trial. Short, clear, and moving. Benjamin
 ### Sources
 
 - Wikipedia, "Plato": https://en.wikipedia.org/wiki/Plato
-- The app's Plato thoughts (#95–108, #135–143), including #95, #96, #105, #106, and #108
+- The app's Plato thoughts
 
 ## Boethius
 
@@ -159,7 +159,7 @@ It became one of the most copied books of the Middle Ages. King Alfred translate
 ### Sources
 
 - Wikipedia, "Boethius": https://en.wikipedia.org/wiki/Boethius
-- The app's Boethius thoughts (#28–31, #55–57), from *The Consolation of Philosophy*, Book II
+- The app's Boethius thoughts, from *The Consolation of Philosophy*, Book II
 
 ## La Rochefoucauld
 
@@ -198,7 +198,7 @@ The *Maxims*: open them anywhere and read three or four at a time. The 1871 tran
 
 - Wikipedia, "François de La Rochefoucauld (writer)": https://en.wikipedia.org/wiki/Fran%C3%A7ois\_de\_La\_Rochefoucauld\_(writer)
 - Wikipedia, "French moralists": https://en.wikipedia.org/wiki/French\_moralists
-- The app's La Rochefoucauld thoughts (#271–275, #286, #299–302), from the *Maxims*
+- The app's La Rochefoucauld thoughts, from the *Maxims*
 
 ## David Hume
 
@@ -237,7 +237,7 @@ There is also a darker side. In a footnote to his essay "Of National Characters"
 ### Sources
 
 - Wikipedia, "David Hume": https://en.wikipedia.org/wiki/David\_Hume
-- The app's Hume thoughts (#173–177, #187–189)
+- The app's Hume thoughts
 
 ## Arthur Schopenhauer
 
@@ -276,7 +276,7 @@ He also held openly hostile views of women. His 1851 essay "On Women" mocked wha
 ### Sources
 
 - Wikipedia, "Arthur Schopenhauer": https://en.wikipedia.org/wiki/Arthur\_Schopenhauer
-- The app's Schopenhauer thoughts (#230–234, #250–253)
+- The app's Schopenhauer thoughts
 
 ## Epictetus
 
@@ -314,7 +314,7 @@ The *Enchiridion*: a short handbook, the essence of his teaching in a few pages.
 ### Sources
 
 - Wikipedia, "Epictetus": https://en.wikipedia.org/wiki/Epictetus
-- The app's Epictetus thoughts (#15–23, #40–46), including #15, #21, and #42
+- The app's Epictetus thoughts
 
 ## Rumi
 
@@ -352,7 +352,7 @@ The *Masnavi*, Book I, which opens with the song of the reed. E. H. Whinfield's 
 ### Sources
 
 - Wikipedia, "Rumi": https://en.wikipedia.org/wiki/Rumi
-- The app's Rumi thoughts (#555–559, #562–566, #593–597, #603–604), from the *Masnavi* and the *Divani Shamsi Tabriz*
+- The app's Rumi thoughts, from the *Masnavi* and the *Divani Shamsi Tabriz*
 
 ## Aristotle
 
@@ -392,4 +392,4 @@ The *Nicomachean Ethics*, Books I and II: what a good life is, and how good char
 
 - Wikipedia, "Aristotle": https://en.wikipedia.org/wiki/Aristotle
 - Wikipedia, "Natural slavery": https://en.wikipedia.org/wiki/Natural\_slavery
-- The app's Aristotle thoughts (#109–120, #126–131, #144–151), including #109, #118, and #129
+- The app's Aristotle thoughts

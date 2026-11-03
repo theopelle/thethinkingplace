@@ -41,7 +41,7 @@ From 1578 he suffered from painful kidney stones, and still avoided doctors and 
 ### Sources
 
 - Wikipedia, "Michel de Montaigne": https://en.wikipedia.org/wiki/Michel\_de\_Montaigne
-- The app's Montaigne thoughts (#276–285, #303–304), including #277, #278, #281, and #304
+- The app's Montaigne thoughts
 
 ## Baruch Spinoza
 
@@ -80,7 +80,7 @@ The *Ethics*, Parts IV and V, on human bondage and freedom. Hard going, but wort
 ### Sources
 
 - Wikipedia, "Baruch Spinoza": https://en.wikipedia.org/wiki/Baruch\_Spinoza
-- The app's Spinoza thoughts (#168–172, #190–191), from the *Ethics*
+- The app's Spinoza thoughts, from the *Ethics*
 
 ## Mencius
 
@@ -118,7 +118,7 @@ The *Mencius*, Book II, Part I, with the child at the well. James Legge's 1895 t
 ### Sources
 
 - Wikipedia, "Mencius": https://en.wikipedia.org/wiki/Mencius
-- The app's Mencius thoughts (#508–512)
+- The app's Mencius thoughts
 
 ## Swami Vivekananda
 
@@ -157,7 +157,7 @@ He was a monk, yet he urged practical action: schools, relief work, and service 
 ### Sources
 
 - Wikipedia, "Swami Vivekananda": https://en.wikipedia.org/wiki/Swami\_Vivekananda
-- The app's Vivekananda thoughts (#380–384, #404–408), from *Karma-Yoga*
+- The app's Vivekananda thoughts, from *Karma-Yoga*
 
 ## John Stuart Mill
 
@@ -197,7 +197,7 @@ His defence of liberty had limits, though. In *On Liberty* he called despotism a
 
 - Wikipedia, "John Stuart Mill": https://en.wikipedia.org/wiki/John\_Stuart\_Mill
 - John Stuart Mill, *On Liberty*, chapter I (Project Gutenberg): https://www.gutenberg.org/ebooks/34901
-- The app's Mill thoughts (#158–167, #197–205), including #158, #160, #164, and #197
+- The app's Mill thoughts
 
 ## Okakura Kakuzō
 
@@ -236,7 +236,7 @@ He also spent most of a year in India and talked with Vivekananda and Tagore, tw
 ### Sources
 
 - Wikipedia, "Okakura Kakuzō": https://en.wikipedia.org/wiki/Okakura\_Kakuz%C5%8D
-- The app's Okakura thoughts (#528–537, #550–554), from *The Book of Tea*
+- The app's Okakura thoughts, from *The Book of Tea*
 
 ## Omar Khayyam
 
@@ -275,7 +275,7 @@ FitzGerald's *Rubáiyát of Omar Khayyám*, first edition (1859): 75 quatrains, 
 ### Sources
 
 - Wikipedia, "Omar Khayyam": https://en.wikipedia.org/wiki/Omar\_Khayyam
-- The app's Omar Khayyam thoughts (#579–586), from FitzGerald's *Rubáiyát*
+- The app's Omar Khayyam thoughts, from FitzGerald's *Rubáiyát*
 
 ## William James
 
@@ -314,7 +314,7 @@ His idea of a "stream of consciousness" travelled far beyond psychology: it shap
 ### Sources
 
 - Wikipedia, "William James": https://en.wikipedia.org/wiki/William\_James
-- The app's William James thoughts (#239–242), from *The Will to Believe*
+- The app's William James thoughts, from *The Will to Believe*
 
 ## Simone Weil
 
@@ -352,7 +352,7 @@ During the Second World War she worked for the Free French in London. Ill with t
 ### Sources
 
 - Wikipedia, "Simone Weil": https://en.wikipedia.org/wiki/Simone\_Weil
-- The app's Simone Weil thoughts (#235–238, #254–255)
+- The app's Simone Weil thoughts
 
 ## Henry David Thoreau
 
@@ -392,4 +392,4 @@ He was also an active abolitionist and helped people escaping slavery on the Und
 
 - Wikipedia, "Henry David Thoreau": https://en.wikipedia.org/wiki/Henry\_David\_Thoreau
 - Wikipedia, "Walden": https://en.wikipedia.org/wiki/Walden
-- The app's Thoreau thoughts (#266–270), from *Walden*
+- The app's Thoreau thoughts, from *Walden*

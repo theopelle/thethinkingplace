@@ -47,7 +47,7 @@ The book was not published in his lifetime and was not even divided into numbere
 
 - Wikipedia, "Yoshida Kenkō": https://en.wikipedia.org/wiki/Yoshida\_Kenk%C5%8D
 - Wikipedia, "Tsurezuregusa": https://en.wikipedia.org/wiki/Tsurezuregusa
-- The app's Kenkō thoughts (#515–527, #546–547) and their translations
+- The app's Kenkō thoughts and their translations
 
 ## Fyodor Dostoevsky
 
@@ -85,7 +85,7 @@ His writings also contain negative stereotypes of Jews and other groups, and he 
 ### Sources
 
 - Wikipedia, "Fyodor Dostoevsky": https://en.wikipedia.org/wiki/Fyodor\_Dostoevsky
-- The app's Dostoevsky thoughts (#217–224, #246–249), from *Notes from Underground* and *The Brothers Karamazov*
+- The app's Dostoevsky thoughts, from *Notes from Underground* and *The Brothers Karamazov*
 
 ## The Dhammapada
 
@@ -123,7 +123,7 @@ Read a chapter at a time, in any order; the chapters on thought and on anger are
 
 - Wikipedia, "Dhammapada": https://en.wikipedia.org/wiki/Dhammapada
 - Wikipedia, "Max Müller": https://en.wikipedia.org/wiki/Max\_M%C3%BCller
-- The app's Dhammapada thoughts (#307–336 and others), from Müller's translation
+- The app's Dhammapada thoughts, from Müller's translation
 
 ## Marcus Aurelius
 
@@ -162,7 +162,7 @@ Persecution of Christians appears to have grown in his time, though historians t
 
 - Wikipedia, "Marcus Aurelius": https://en.wikipedia.org/wiki/Marcus\_Aurelius
 - Wikipedia, "Meditations": https://en.wikipedia.org/wiki/Meditations
-- The app's Marcus Aurelius thoughts (#1–14, #32–39), including #32 (Meditations 2.1)
+- The app's Marcus Aurelius thoughts, including Meditations 2.1
 
 ## Rabindranath Tagore
 
@@ -200,7 +200,7 @@ He wanted India free from British rule, yet he also argued with Gandhi, and some
 ### Sources
 
 - Wikipedia, "Rabindranath Tagore": https://en.wikipedia.org/wiki/Rabindranath\_Tagore · "Jallianwala Bagh massacre": https://en.wikipedia.org/wiki/Jallianwala\_Bagh\_massacre
-- The app's Tagore thoughts (#374–379, #385–400), from *Sadhana* and *Stray Birds*
+- The app's Tagore thoughts, from *Sadhana* and *Stray Birds*
 
 ## Confucius
 
@@ -240,7 +240,7 @@ The *Analects*: short sayings and conversations with his students, collected aft
 
 - Wikipedia, "Confucius": https://en.wikipedia.org/wiki/Confucius
 - Wikipedia, "Confucianism": https://en.wikipedia.org/wiki/Confucianism
-- The app's Confucius thoughts (#467–513), including #467 (Analects 1.1) and #494 (Analects 15.23)
+- The app's Confucius thoughts, including Analects 1.1 and Analects 15.23
 
 ## Laozi
 
@@ -280,7 +280,7 @@ The *Tao Te Ching*: 81 short chapters, best read one at a time. James Legge's 18
 
 - Wikipedia, "Laozi": https://en.wikipedia.org/wiki/Laozi
 - Wikipedia, "Tao Te Ching": https://en.wikipedia.org/wiki/Tao\_Te\_Ching
-- The app's Laozi thoughts (#410–428, #441–451), including #410, #422, and #442
+- The app's Laozi thoughts
 
 ## Blaise Pascal
 
@@ -318,7 +318,7 @@ The *Pensées*: short fragments, some just a sentence, others a page. C. Kegan P
 ### Sources
 
 - Wikipedia, "Blaise Pascal": https://en.wikipedia.org/wiki/Blaise\_Pascal
-- The app's Pascal thoughts (#225–229), from the *Pensées*
+- The app's Pascal thoughts, from the *Pensées*
 
 ## Adam Smith
 
@@ -356,7 +356,7 @@ His friends also found him comically absent-minded. He had odd habits of speech 
 ### Sources
 
 - Wikipedia, "Adam Smith": https://en.wikipedia.org/wiki/Adam\_Smith
-- The app's Adam Smith thoughts (#184–186), from *The Theory of Moral Sentiments*
+- The app's Adam Smith thoughts, from *The Theory of Moral Sentiments*
 
 ## Al-Ghazali
 
@@ -394,4 +394,4 @@ Scholars still argue about its effect. Some blame it for a later decline of scie
 ### Sources
 
 - Wikipedia, "Al-Ghazali": https://en.wikipedia.org/wiki/Al-Ghazali
-- The app's al-Ghazali thoughts (#560–561, #578, #600–602), from *The Confessions* and *The Alchemy of Happiness*
+- The app's al-Ghazali thoughts, from *The Confessions* and *The Alchemy of Happiness*

@@ -54,7 +54,7 @@ Marcus Aurelius, *Meditations*: private notes, written in short entries that you
 
 - Wikipedia, "Stoicism": https://en.wikipedia.org/wiki/Stoicism
 - Stanford Encyclopedia of Philosophy, "Stoicism": https://plato.stanford.edu/entries/stoicism/
-- Stanford Encyclopedia of Philosophy, "Seneca" (on the evening review): https://plato.stanford.edu/entries/seneca/ · The app's thought #15 (Epictetus, Enchiridion 1)
+- Stanford Encyclopedia of Philosophy, "Seneca" (on the evening review): https://plato.stanford.edu/entries/seneca/ · The app's thought from Epictetus, Enchiridion 1
 
 ## Epicureanism
 
@@ -138,7 +138,7 @@ Plato, *Apology*: Socrates' defence speech at his trial. It is short, and it sho
 
 - Wikipedia, "Ancient Greek philosophy": https://en.wikipedia.org/wiki/Ancient\_Greek\_philosophy
 - Wikipedia, "Heraclitus": https://en.wikipedia.org/wiki/Heraclitus · "Socrates": https://en.wikipedia.org/wiki/Socrates
-- Wikipedia, "Natural slavery": https://en.wikipedia.org/wiki/Natural\_slavery · The app's thought #109 (Aristotle, Nicomachean Ethics, Book II)
+- Wikipedia, "Natural slavery": https://en.wikipedia.org/wiki/Natural\_slavery · The app's thought from Aristotle, Nicomachean Ethics, Book II
 
 ## Enlightenment Ethics
 
@@ -393,7 +393,7 @@ Laozi, *Tao Te Ching*: 81 short chapters, best read slowly, one at a time.
 
 - Wikipedia, "Taoism": https://en.wikipedia.org/wiki/Taoism
 - Wikipedia, "Tao Te Ching": https://en.wikipedia.org/wiki/Tao\_Te\_Ching · "Laozi": https://en.wikipedia.org/wiki/Laozi
-- Stanford Encyclopedia of Philosophy, "Zhuangzi": https://plato.stanford.edu/entries/zhuangzi/ · The app's thoughts #410, #422, and #425 (Tao Te Ching 8, 43, and 76)
+- Stanford Encyclopedia of Philosophy, "Zhuangzi": https://plato.stanford.edu/entries/zhuangzi/ · The app's thoughts from Tao Te Ching 8, 43, and 76
 
 ## Confucianism
 
@@ -435,7 +435,7 @@ Confucius, *Analects*: short sayings and exchanges with his students. Open it an
 
 - Wikipedia, "Confucianism": https://en.wikipedia.org/wiki/Confucianism
 - Wikipedia, "Confucius": https://en.wikipedia.org/wiki/Confucius
-- The app's thoughts #500 and #504 (Analects 12.17 and 13.6)
+- The app's thoughts from Analects 12.17 and 13.6
 
 ## Japanese Aesthetics
 
@@ -503,7 +503,7 @@ Ibn Arabi (1165–1240), born in Murcia, in today's Spain, taught that all thing
 
 ### Who we read
 
-Omar Khayyam, Sa'di, Rumi, Hafiz, al-Ghazali, and Ibn Arabi.
+Omar Khayyam, al-Ghazali, Ibn Arabi, Rumi, Sa'di, and Hafiz.
 
 ### Next to its neighbours
 
@@ -522,4 +522,4 @@ Sa'di, *Gulistan* (*The Rose Garden*): short stories with a lesson, in prose and
 - Wikipedia, "Sufism": https://en.wikipedia.org/wiki/Sufism · "Persian literature": https://en.wikipedia.org/wiki/Persian\_literature
 - Wikipedia, "Omar Khayyam": https://en.wikipedia.org/wiki/Omar\_Khayyam · "Al-Ghazali": https://en.wikipedia.org/wiki/Al-Ghazali · "Ibn Arabi": https://en.wikipedia.org/wiki/Ibn\_Arabi
 - Wikipedia, "Rumi": https://en.wikipedia.org/wiki/Rumi · "Saadi Shirazi": https://en.wikipedia.org/wiki/Saadi\_Shirazi · "Hafez": https://en.wikipedia.org/wiki/Hafez
-- The app's thought #573 (Sa'di, Gulistan)
+- The app's thought from Sa'di, Gulistan
