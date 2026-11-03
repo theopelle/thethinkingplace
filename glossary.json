@@ -212,7 +212,7 @@
   "wiki": "Persian_literature",
   "def": "Wisdom poetry from the Persian-speaking world and from Sufism, the mystical tradition of Islam. Omar Khayyam questions and celebrates the present; Sa'di teaches through stories; Rumi and Hafiz write of love and longing; al-Ghazali and Ibn Arabi map the inner path.",
   "school": {
-   "who": "Omar Khayyam, Sa'di, Rumi, Hafiz, al-Ghazali, Ibn Arabi",
+   "who": "Omar Khayyam, al-Ghazali, Ibn Arabi, Rumi, Sa'di, and Hafiz",
    "began": "Persia and the wider Islamic world, 11th–14th century",
    "read": {
     "title": "Sa'di, Gulistan",
@@ -1907,7 +1907,7 @@
    "Kenkō"
   ],
   "wiki": "Yoshida_Kenkō",
-  "def": "Yoshida Kenkō (around 1283–1350), a Japanese poet and Buddhist monk whose Essays in Idleness reflect on beauty, impermanence and everyday life."
+  "def": "Kenkō (around 1283–1350), a Japanese poet and Buddhist monk whose Essays in Idleness reflect on beauty, impermanence and everyday life."
  },
  {
   "term": "Essays in Idleness",
@@ -2208,8 +2208,9 @@
   "def": "Sanskrit texts composed in ancient India, roughly between 800 and 300 BCE for the oldest. They turn from ritual to the inner questions of self and reality, and are the foundation of Vedanta."
  },
  {
-  "term": "Nachiketas",
+  "term": "Nachiketa",
   "match": [
+   "Nachiketa",
    "Nachiketas"
   ],
   "wiki": "Nachiketa",
