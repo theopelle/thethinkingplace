@@ -1009,7 +1009,7 @@
      "gloss": "Socrates: not life, but a good life"
     }
    ],
-   "status": "Draft"
+   "status": "Ready"
   },
   {
    "id": "stoicism--enlightenment-ethics",
@@ -1062,7 +1062,7 @@
      "gloss": "Hume: reason is the slave of the passions"
     }
    ],
-   "status": "Draft"
+   "status": "Ready"
   },
   {
    "id": "stoicism--classical-greek-philosophy",
@@ -1115,7 +1115,7 @@
      "gloss": "Aristotle: no one would choose to live without friends"
     }
    ],
-   "status": "Draft"
+   "status": "Ready"
   },
   {
    "id": "stoicism--confucianism",
@@ -1168,7 +1168,7 @@
      "gloss": "Confucius: recompense injury with justice"
     }
    ],
-   "status": "Draft"
+   "status": "Ready"
   },
   {
    "id": "taoism--buddhist-philosophy",
@@ -1221,7 +1221,7 @@
      "gloss": "Dhammapada: victory breeds hatred"
     }
    ],
-   "status": "Draft"
+   "status": "Ready"
   },
   {
    "id": "epicureanism--classical-greek-philosophy",
@@ -1278,7 +1278,7 @@
      "gloss": "Aristotle: a citizen shares in governing and being governed"
     }
    ],
-   "status": "Draft"
+   "status": "Ready"
   },
   {
    "id": "persian-and-sufi-poetry--stoicism",
@@ -1331,7 +1331,7 @@
      "gloss": "Seneca: fire tries gold"
     }
    ],
-   "status": "Draft"
+   "status": "Ready"
   },
   {
    "id": "persian-and-sufi-poetry--buddhist-philosophy",
@@ -1384,7 +1384,7 @@
      "gloss": "Dhammapada: as a smith blows off the impurities of silver"
     }
    ],
-   "status": "Draft"
+   "status": "Ready"
   },
   {
    "id": "indian-philosophy--taoism",
@@ -1437,7 +1437,7 @@
      "gloss": "Zhuangzi: the archer shooting for earthenware"
     }
    ],
-   "status": "Draft"
+   "status": "Ready"
   },
   {
    "id": "epicureanism--taoism",
@@ -1490,7 +1490,7 @@
      "gloss": "Zhuangzi: my life has a limit, but my knowledge is without limit"
     }
    ],
-   "status": "Draft"
+   "status": "Ready"
   },
   {
    "id": "confucianism--enlightenment-ethics",
@@ -1543,7 +1543,7 @@
      "gloss": "Mill: pursuing our own good in our own way"
     }
    ],
-   "status": "Draft"
+   "status": "Ready"
   },
   {
    "id": "indian-philosophy--confucianism",
@@ -1596,7 +1596,7 @@
      "gloss": "Confucius: let your desires be for what is good"
     }
    ],
-   "status": "Draft"
+   "status": "Ready"
   },
   {
    "id": "indian-philosophy--enlightenment-ethics",
@@ -1645,7 +1645,7 @@
      "gloss": "Adam Smith: the happiness of others is necessary to us"
     }
    ],
-   "status": "Draft"
+   "status": "Ready"
   }
  ],
  "conversation": {
