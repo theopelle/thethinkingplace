@@ -14,6 +14,16 @@ It works in any web browser, on iPhone from the home screen, and as an Android a
 - [Questions](https://thinkingplace.app/questions.html): plain answers about the app, its quotes, notes and devices
 - [Terms & privacy](https://thinkingplace.app/terms.html): no data collected; notes stay on the device
 - [On iPhone](https://thinkingplace.app/iphone.html): adding it to the home screen
+- [The Library](https://thinkingplace.app/library/): pages on the thinkers, texts, paths, eras, and themes behind the daily thoughts, free to read, each with its sources
+
+## The Library
+
+Short pages in plain words on each thinker and text (who they were, what they cared about, where to start reading), each of the twelve paths, the eras they lived in, and themes such as death, duty, and friendship, across traditions. Every page lists its sources. The quotes on them are past daily thoughts, always in the translators' own words.
+
+- [In their time](https://thinkingplace.app/library/time/): the eras, from ancient India to Europe in the age of world wars
+- [Paths](https://thinkingplace.app/library/paths/): the twelve schools of thought
+- [Thinkers and texts](https://thinkingplace.app/library/people/): from A to Z
+- [Themes and topics](https://thinkingplace.app/library/topics/): the big questions, across traditions
 
 ## Contact
 

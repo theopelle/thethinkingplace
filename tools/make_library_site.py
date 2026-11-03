@@ -369,4 +369,11 @@ def main(tpl, by_id):
         body = '<div class="libwrap">\n' + rail(key) + "\n" + "\n".join(out) + "\n</div>"
         write(f"library/{key}/", f"{title} · Library", sub + ": the Library of The Thinking Place.", body, "",
               '<a class="back" href="../">← the Library</a>')
-    print(f"library/ ready: {len(shown)} pages, thoughts up to {last}")
+    # The sitemap: the website's own pages, the Library home, its sections, and every page (the web
+    # app itself is one page with hash routes, so only its address is listed).
+    urls = ["", "app/", "about.html", "questions.html", "terms.html", "iphone.html", "library/"]
+    urls += [f"library/{k}/" for k, _ in SECTIONS] + [f"library/{slugs[pid]}/" for pid in sorted(shown, key=lambda i: slugs[i])]
+    open(os.path.join(SITE, "sitemap.xml"), "w", encoding="utf-8").write(
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "".join(f"  <url><loc>{URL}{u}</loc></url>\n" for u in urls) + "</urlset>\n")
+    print(f"library/ ready: {len(shown)} pages, thoughts up to {last}; sitemap.xml: {len(urls)} addresses")

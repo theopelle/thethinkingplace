@@ -1,0 +1,5 @@
+# Every page may be read; the sitemap lists the website and the Library.
+User-agent: *
+Allow: /
+
+Sitemap: https://thinkingplace.app/sitemap.xml

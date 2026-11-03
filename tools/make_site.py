@@ -37,6 +37,7 @@ def main():
     shutil.copy(os.path.join(WEB, "site.css"), SITE)
     shutil.copy(os.path.join(WEB, "iphone.html"), SITE)
     shutil.copy(os.path.join(WEB, "llms.txt"), SITE)  # a plain summary for AI assistants
+    shutil.copy(os.path.join(WEB, "robots.txt"), SITE)  # everything open; points to sitemap.xml
     shutil.copy(os.path.join(WEB, ".htaccess"), SITE)  # HTTPS and fresh updates on OVH
     # GitHub Pages: the custom domain, and no Jekyll processing (it would hide some files).
     open(os.path.join(SITE, "CNAME"), "w").write("thinkingplace.app\n")
