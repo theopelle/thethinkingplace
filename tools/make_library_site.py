@@ -158,11 +158,11 @@ def main(tpl, by_id):
     IN_APP = [("maps", "Maps and timelines"), ("compare", "Compare two paths"), ("questions", "Questions for good conversations")]
     SECTION_OF = {"era": "time", "path": "paths", "thinker": "people", "text": "people", "topic": "topics"}
 
-    def rail(p):
-        sec, out = SECTION_OF[p["type"]], ['<nav class="librail" aria-label="Library contents">', '<a class="home" href="../">Library</a>', '<ul class="secs">']
+    def rail(sec, current=None):
+        out = ['<nav class="librail" aria-label="Library contents">', '<a class="home" href="../">Library</a>', '<ul class="secs">']
         for key, label in SECTIONS:
             here = ' aria-current="true"' if key == sec else ""
-            out.append(f'<li><a href="../#{key}"{here}>{label}</a>')
+            out.append(f'<li><a href="../{key}/"{here}>{label}</a>')
             if key == sec:
                 out.append('<ul class="sub">')
                 letter = ""
@@ -170,7 +170,7 @@ def main(tpl, by_id):
                     if key == "people" and sort_key(x)[0].upper() != letter:
                         letter = sort_key(x)[0].upper()
                         out.append(f'<li class="letter" aria-hidden="true">{letter}</li>')
-                    mark = ' aria-current="page"' if x["id"] == p["id"] else ""
+                    mark = ' aria-current="page"' if x["id"] == current else ""
                     out.append(f'<li><a href="../{slugs[x["id"]]}/"{mark}>{esc(x["title"] if key == "people" else title_of(x))}</a></li>')
                 out.append("</ul>")
             out.append("</li>")
@@ -183,7 +183,7 @@ def main(tpl, by_id):
         href = lambda pid: f"../{slugs[pid]}/"
         linker = Linker(lib["links"], shown, p["id"], href)
         path_page = lambda name: next((x for x in shown.values() if x["type"] == "path" and x["title"] == name), None)
-        out = [f'<article class="libpage">', f'<p class="libpage-kind">{esc(KIND[p["type"]])}</p>',
+        out = [f'<article class="libpage">', '<a class="libpage-back" href="../">← the Library</a>', f'<p class="libpage-kind">{esc(KIND[p["type"]])}</p>',
                f"<h1>{esc(title_of(p))}</h1>"]
         parts = p["header"][:1] if p["type"] == "era" else p["header"]
         head = []
@@ -247,7 +247,7 @@ def main(tpl, by_id):
         # The current page in the middle of its list (wide screens; a no-op elsewhere)
         centre = ("<script>(function(){var a=document.querySelector('.librail .sub [aria-current]');if(a){var s=a.closest('.sub');"
                   "s.scrollTop=a.offsetTop-s.offsetTop-s.clientHeight/2+a.offsetHeight/2;}})();</script>")
-        return '<div class="libwrap">\n' + rail(p) + "\n" + "\n".join(out) + "\n</div>\n" + centre
+        return '<div class="libwrap">\n' + rail(SECTION_OF[p["type"]], p["id"]) + "\n" + "\n".join(out) + "\n</div>\n" + centre
 
     def head(p, path):
         desc = description(p)
@@ -272,25 +272,101 @@ def main(tpl, by_id):
         write(path, f"{title_of(p)} · Library", description(p), page_html(p), head(p, path),
               '<a class="back" href="../">← the Library</a>')
 
-    # The index: the four sections of the app's Library, with the rest (maps and timelines, comparing
-    # paths, conversation questions, search) one tap away in the web app.
-    row = lambda p, d="": (f'<li><a href="{slugs[p["id"]]}/"><span class="t">{esc(title_of(p))}</span>'
-                           f'<span class="d">{esc(d)}</span></a></li>')
-    body = ['<article class="libpage">', "<h1>Library</h1>",
-            '<p class="libpage-intro">A well of knowledge behind each day’s thought in The Thinking Place: the thinkers, '
-            "their paths, their times, and the big questions.</p>",
-            '<h2 id="time">In their time</h2>', '<ul class="libpage-list">' + "".join(
-                row(p, p["header"][0]) for p in sorted(by("era"), key=lambda p: (p["start"], p.get("eraOrder") or 0))) + "</ul>",
-            '<h2 id="paths">Paths</h2>', '<ul class="libpage-list">' + "".join(
-                row(p) for p in sorted(by("path"), key=lambda p: PATH_ORDER.index(p["title"]))) + "</ul>",
-            '<h2 id="people">Thinkers and texts</h2>', '<ul class="libpage-list">' + "".join(
-                row(p, p["path"]) for p in sorted(by("thinker") + by("text"), key=sort_key)) + "</ul>",
-            '<h2 id="topics">Themes and topics</h2>', '<ul class="libpage-list">' + "".join(
-                row(p) for p in sorted(by("topic"), key=title_of)) + "</ul>",
-            '<aside class="libpage-app"><p>In the app, the Library also has maps and timelines, a way to compare two '
-            'paths, and questions for good conversations.</p><p><a href="../app/#/library">Open the Library in the app →</a></p></aside>',
-            "</article>"]
+    # The Library home and its four sections, as in the app (LIB_SECTIONS, LIB_EXTRAS in app.js); maps
+    # and timelines, comparing two paths, and the conversation questions open in the web app.
+    assert not set(slugs.values()) & {k for k, _ in SECTIONS}, "a page's address is taken by a section"
+    ROWS = [("time", "In their time", "Where history meets philosophy"), ("paths", "Paths", "The twelve schools of thought"),
+            ("people", "Thinkers and texts", "From A to Z"), ("topics", "Themes and topics", "The big questions, across traditions"),
+            ("maps", "Maps and timelines", "Where and when they lived"),
+            ("compare", "Compare two paths", "Where they agree, and where they part ways"),
+            ("questions", "Questions for good conversations", "To take to a dinner, a walk, or a long drive")]
+    in_app = {k for k, _ in IN_APP}
+    row = lambda href, t, d="", k="": (f'<li><a href="{href}"><span><span class="t">{esc(t)}</span>'
+                                       + (f'<span class="d">{esc(d)}</span>' if d else "") + "</span>"
+                                       + (f'<span class="k">{esc(k)}</span>' if k else "") + "</a></li>")
+
+    # The weekly highlight: every page in turn, a new one each Monday from 19 October 2026, in the
+    # app's fixed shuffled order (app.js weeklyPage), so the site and the app show the same page.
+    def hash_of(t):
+        h = 7
+        for c in t:
+            h = (h * 31 + ord(c)) & 0xFFFFFFFF
+        return h
+    order = sorted(shown.values(), key=lambda p: hash_of(p["id"]))
+    week = (dt.datetime.now(dt.timezone.utc).date() - dt.date(2026, 10, 19)).days // 7
+    hl = order[week % len(order)]
+    first = next((md for t, md in hl["sections"] if t == "In one line"), None) or hl["sections"][0][1]
+    first = strip_md(re.split(r"\n\s*\n", first)[0])
+    home = ['<article class="libpage libhome">', "<h1>Library</h1>",
+            '<p class="libpage-intro">A well of knowledge behind each day’s thought: the thinkers, their paths, their times, '
+            "and the big questions.</p>",
+            '<input class="libsearch" id="libsearch" type="search" placeholder="Search the Library" aria-label="Search the Library" autocomplete="off" hidden>',
+            '<ul class="libpage-list libsearch-hits" id="libsearch-hits" aria-live="polite" hidden></ul>',
+            '<div class="libhome-grid" id="libhome-grid">',
+            '<ul class="libpage-list">' + "".join(row(f"../app/#/library/{k}" if k in in_app else f"{k}/", t, d) for k, t, d in ROWS) + "</ul>",
+            f'<div><p class="libhl-label">Weekly highlight</p><a class="libhl" href="{slugs[hl["id"]]}/">'
+            f'<span class="kind">{esc(KIND[hl["type"]])}</span><span class="t">{esc(title_of(hl))}</span>'
+            f'<span class="d">{esc(first)}</span><span class="go">read</span></a></div>', "</div>",
+            '<aside class="libpage-app"><p>The Library is part of The Thinking Place: one short thought from philosophy each '
+            'day, free, with no ads and no tracking.</p><p><a href="../app/#/library">Open the Library in the app →</a> · '
+            '<a href="../">About the app</a></p></aside>', "</article>"]
+    # Search, in the page itself (nothing is sent anywhere): titles first, then other names, then
+    # keywords; accents and case ignored. Without scripts the box stays hidden.
+    index = [[title_of(p), f"{slugs[p['id']]}/", KIND[p["type"]], plain(title_of(p)).lower(),
+              plain(" ".join(p.get("aliases", []))).lower(), plain(" ".join(p["tags"])).lower()]
+             for p in sorted(shown.values(), key=title_of)]
+    home.append("<script>(function(){var I=" + json.dumps(index, ensure_ascii=False).replace("</", "<\\/") + ";"
+                "var box=document.getElementById('libsearch'),hits=document.getElementById('libsearch-hits'),"
+                "grid=document.getElementById('libhome-grid');box.hidden=false;"
+                "var fold=function(t){return t.normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().trim();};"
+                "var esc=function(t){return t.replace(/[&<>\"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c];});};"
+                "box.addEventListener('input',function(){var q=fold(box.value);grid.hidden=!!q;hits.hidden=!q;if(!q)return;"
+                "var r=I.map(function(x){var at=function(t){var i=t.indexOf(q);return i<0?-1:(i===0||t[i-1]===' '?0:1);};"
+                "var s=[at(x[3]),at(x[4]),at(x[5])],k=s[0]>=0?s[0]:s[1]>=0?2+s[1]:s[2]>=0?4+s[2]:-1;return[k,x];})"
+                ".filter(function(y){return y[0]>=0;}).sort(function(a,b){return a[0]-b[0];});"
+                "hits.innerHTML=r.length?r.map(function(y){return'<li><a href=\"'+y[1][1]+'\"><span><span class=\"t\">'+esc(y[1][0])+"
+                "'</span><span class=\"d\">'+y[1][2]+'</span></span></a></li>';}).join(''):'<li class=\"none\">Nothing found.</li>';});"
+                "})();</script>")
     write("library/", "Library", "The thinkers, texts, paths, eras, and big questions behind each day’s thought in "
-          "The Thinking Place: free to read, with no ads and no tracking.", "\n".join(body), "",
+          "The Thinking Place: free to read, with no ads and no tracking.", "\n".join(home), "",
           '<a class="back" href="../">← back</a>')
+
+    # The four sections, each its own page, in the app's order and wording.
+    first_line = lambda p: strip_md(next((md for t, md in p["sections"] if t == "In one line"), ""))
+    app_page = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
+    voices = re.search(r"<h2>(About the voices[^<]*)</h2>\s*<p>(.*?)</p>", app_page, re.S)
+    essay = next((p for p in lib["pages"] if p["type"] == "essay" and p["status"] == "Ready"), None)
+    for key, title, sub in ROWS[:4]:
+        out = ['<article class="libpage">', '<a class="libpage-back" href="../">← the Library</a>', f"<h1>{esc(title)}</h1>", f'<p class="libpage-intro">{esc(sub)}</p>']
+        if key == "time":
+            if essay:  # "Before you read", folded, as in the app after the first visit
+                out.append('<details class="libpage-fold"><summary><span class="t">Before you read</span>'
+                           '<span class="d">Why it helps to know the world a thinker lived in.</span></summary>'
+                           + render_md(essay["sections"][0][1], Linker(lib["links"], shown, essay["id"], lambda pid: f"../{slugs[pid]}/"))
+                           + "</details>")
+            out += ["<h2>The eras</h2>", '<ul class="libpage-list">' + "".join(
+                row(f"../{slugs[p['id']]}/", p["title"], p["header"][0]) for p in lists["time"]) + "</ul>"]
+            if voices:
+                out += [f'<h2 id="voices">{voices.group(1)}</h2>', f"<p>{voices.group(2)}</p>"]
+        elif key == "paths":
+            out.append('<ul class="libpage-list">' + "".join(row(f"../{slugs[p['id']]}/", p["title"], first_line(p)) for p in lists["paths"]) + "</ul>")
+        elif key == "topics":
+            out.append('<ul class="libpage-list">' + "".join(row(f"../{slugs[p['id']]}/", title_of(p)) for p in lists["topics"]) + "</ul>")
+        else:  # A to Z, by family name, with letters
+            letter, ul = "", []
+            for p in lists["people"]:
+                L = sort_key(p)[0].upper()
+                if L != letter:
+                    if ul:
+                        out.append('<ul class="libpage-list">' + "".join(ul) + "</ul>")
+                    out.append(f'<p class="libpage-letter">{L}</p>')
+                    letter, ul = L, []
+                ul.append(row(f"../{slugs[p['id']]}/", p["title"], "", p["path"]))
+            out.append('<ul class="libpage-list">' + "".join(ul) + "</ul>")
+            if voices:
+                out.append('<p class="libpage-end">Missing a voice you expected? <a href="../time/#voices">Here’s why →</a></p>')
+        out.append("</article>")
+        body = '<div class="libwrap">\n' + rail(key) + "\n" + "\n".join(out) + "\n</div>"
+        write(f"library/{key}/", f"{title} · Library", sub + ": the Library of The Thinking Place.", body, "",
+              '<a class="back" href="../">← the Library</a>')
     print(f"library/ ready: {len(shown)} pages, thoughts up to {last}")
