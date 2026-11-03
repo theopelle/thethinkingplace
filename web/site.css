@@ -245,3 +245,101 @@ footer a { white-space: nowrap; }
 .libpage-back { display: inline-block; color: var(--muted); font-size: .85rem; text-decoration: none; margin: 0 0 1.6rem; }
 .libpage-back:hover { color: var(--fg); }
 @media (min-width: 1000px) { .libpage-back { display: none; } }
+
+/* Maps and timelines, Compare two paths, Questions for good conversations (as in the app) */
+.libpage-hint { color: var(--muted); font-size: .85rem; }
+.libpage .libpage-go a, .libpage-compare-k + .libpage-related a { color: inherit; }
+.libpage .libpage-go a { font-size: .9rem; text-decoration: none; border-bottom: 1px solid var(--faint); }
+.libpage .libpage-go a::after { content: " →"; }
+.libpage .libpage-compare-k { color: var(--muted); font-size: .85rem; margin: 1rem 0 .3rem; }
+.map-figure { margin: 1.5rem 0; }
+.map-wrap { position: relative; }
+.map { display: block; width: 100%; height: auto; }
+.map-coast { fill: none; stroke: var(--fg); stroke-width: 1; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.map-inset { fill: none; stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; opacity: .7; }
+.map-dot { position: absolute; display: block; width: 44px; height: 44px; margin: -22px 0 0 -22px; }
+.map-dot::before { content: ""; position: absolute; inset: 17px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg);
+  transition: transform .2s ease; }
+.map-dot::after { content: ""; position: absolute; inset: 17px; border-radius: 50%; border: 1px solid var(--accent); opacity: 0;
+  animation: map-pulse 3.6s ease-out infinite; pointer-events: none; }
+.map-dot:nth-of-type(4n+2)::after { animation-delay: .9s; }
+.map-dot:nth-of-type(4n+3)::after { animation-delay: 1.8s; }
+.map-dot:nth-of-type(4n)::after { animation-delay: 2.7s; }
+@keyframes map-pulse { 0% { transform: scale(1); opacity: .7; } 70%, 100% { transform: scale(2.6); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .map-dot::after { animation: none; } }
+.map-dot:hover::before, .map-dot:focus-visible::before { transform: scale(1.35); }
+.map-zoom { display: block; position: absolute; border-radius: 4px; }
+.libplace { padding: .9rem 0; border-top: 1px solid var(--faint); scroll-margin-top: 1rem; }
+.libplace:target h3 { color: var(--accent); }
+.libplace h3 { font: 400 1.1rem/1.35 var(--serif); margin: 0 0 .4rem; }
+.libpage .libplace p { margin: 0 0 .5rem; font-size: .95rem; }
+.libpage .libplace .where { font-weight: 500; margin-top: .8rem; }
+.libpage .libplace .who { color: var(--muted); font-size: .88rem; margin-bottom: .2rem; }
+.timeline { list-style: none; margin: 1.25rem 0 1.5rem; padding: 0 0 0 1.1rem; border-left: 1px solid var(--faint); }
+.libpage .timeline li { margin-bottom: 0; }
+.tl-item { position: relative; }
+.tl-item::before { content: ""; position: absolute; left: calc(-1.1rem - 4px); top: .45rem; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 0 3px var(--bg); }
+.tl-year { display: block; color: var(--muted); font-size: .72rem; line-height: 1.4; letter-spacing: .06em; }
+.tl-path { display: block; font: 400 1rem/1.4 var(--serif); color: var(--fg); text-decoration: underline 1px;
+  text-decoration-color: color-mix(in srgb, var(--muted) 70%, transparent); text-underline-offset: .22em; }
+.libpage .timeline .tl-break { position: relative; margin: 1.1rem 0 1.1rem -1.1rem; padding: .2rem 0; background: var(--bg);
+  color: var(--muted); font-size: .75rem; display: flex; gap: .6rem; align-items: center; }
+.tl-mark { font: 400 1rem/1 var(--serif); letter-spacing: -.1em; margin-left: -.3rem; }
+.tl-gap { font-style: italic; }
+.ttl-note { color: var(--muted); font-size: .85rem; }
+.libpage ol.ttl { list-style: none; margin: 1rem 0 0; padding: 0 0 0 1.4rem; position: relative; }
+.ttl::before { content: ""; position: absolute; left: .3rem; top: .4rem; bottom: .4rem; width: 1px; background: var(--faint); }
+.libpage .ttl li { margin: 0; }
+.libpage .ttl .ttl-century { margin: 1.4rem 0 .3rem; }
+.ttl-century span { color: var(--muted); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; }
+.ttl-century::before { content: ""; position: absolute; left: calc(.3rem - 4px); width: 9px; height: 1px; margin-top: .55rem; background: var(--muted); }
+.libpage .ttl .ttl-gap { margin: 1.2rem 0 .2rem; }
+.ttl-gap span { color: var(--muted); font: italic 400 .9rem/1.4 var(--serif); }
+.ttl-row { position: relative; }
+.ttl-row::before { content: ""; position: absolute; left: calc(-1.1rem - 3px); top: 1.05rem; width: 7px; height: 7px; border-radius: 50%; background: var(--fg); }
+.ttl-row.soft::before { background: var(--bg); border: 1px dashed var(--muted); width: 6px; height: 6px; }
+.ttl-row a { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 .8rem; padding: .55rem 0; color: inherit; text-decoration: none; border-bottom: 1px solid var(--faint); }
+.ttl-row .t { font: 400 1.05rem/1.35 var(--serif); overflow-wrap: break-word; }
+.ttl-row.soft .t { font-style: italic; }
+.ttl-row .d { grid-column: 1; color: var(--muted); font-size: .8rem; }
+.ttl-row .k { grid-column: 2; grid-row: 1 / span 2; align-self: center; color: var(--accent); font: 600 .6rem/1.4 var(--sans);
+  letter-spacing: .16em; text-transform: uppercase; text-align: right; max-width: 7.5rem; min-width: min-content; }
+.libpage ul.libpage-points { list-style: none; padding: 0; }
+.libpage .libpage-points li { margin: 0 0 .8rem; }
+.libcite { display: block; color: inherit; text-decoration: none; padding: .85rem 0; border-top: 1px solid var(--faint); }
+.libcite:last-child { border-bottom: 1px solid var(--faint); }
+.libcite .p, .libfrom .p { color: var(--accent); font: 600 .6rem/1.4 var(--sans); letter-spacing: .18em; text-transform: uppercase; }
+.libcite .q { display: block; font: 400 1.02rem/1.5 var(--serif); margin: .25rem 0 .2rem; }
+.libcite .s { display: block; color: var(--muted); font-size: .85rem; }
+.libpage ul.libqs { list-style: none; padding: 0; margin: 0; }
+.libpage .libqs li { padding: .8rem 0; margin: 0; border-top: 1px solid var(--faint); }
+.libqs li:last-child { border-bottom: 1px solid var(--faint); }
+.libpage .libqs .q { font: 400 1.05rem/1.45 var(--serif); margin: 0 0 .25rem; }
+.libfrom { color: var(--muted); font-size: .8rem; text-decoration: none; }
+a.libfrom::after { content: " →"; }
+.libfrom .p { font-size: .58rem; margin-left: .3rem; }
+@media (min-width: 1000px) {
+  .libmap .map-figure { width: min(78vw, 66rem); margin-left: 50%; transform: translateX(-50%); }
+  .libmap .map-figure[data-map="europe"] { width: min(78vw, 52rem); }
+}
+.libq-give { font: inherit; font-size: .95rem; color: var(--fg); background: none; border: 0; border-bottom: 1px solid var(--faint);
+  padding: 0 0 .1rem; margin: 0 0 .5rem; cursor: pointer; }
+.libq-card { border-top: 1px solid var(--faint); border-bottom: 1px solid var(--faint); padding: 1rem 0; margin: 0 0 .9rem; }
+.libpage .libq-card .q { font: italic 400 1.25rem/1.45 var(--serif); margin: 0 0 .5rem; }
+/* Compare two paths: the picker, as in the app (a picked path is ticked, bold, and outlined; never colour alone) */
+.libpage .libpick-label { color: var(--muted); font-size: .85rem; margin: 0 0 .6rem; }
+.libpage ul.libchips { display: flex; flex-wrap: wrap; gap: .5rem .55rem; margin: 0 0 1.4rem; padding: 0; list-style: none; }
+.libpage .libchips li { margin: 0; }
+.libchip { font: inherit; font-size: .9rem; color: var(--fg); background: none; border: 1px solid var(--faint);
+  border-radius: 999px; padding: .4rem .8rem; cursor: pointer; }
+.libchip[aria-pressed="true"] { border-color: var(--fg); font-weight: 500; }
+.libchip[aria-pressed="true"]::before { content: "✓ "; }
+.libchip:focus-visible { outline: 1px solid var(--muted); outline-offset: 3px; }
+.libverdict { border-top: 1px solid var(--faint); border-bottom: 1px solid var(--faint); padding: 1rem 0 1.1rem; margin: 0 0 1rem; }
+.libverdict-pair { display: block; color: inherit; text-decoration: none; }
+.libverdict .t { display: block; font: 400 1.25rem/1.3 var(--serif); }
+.libverdict .d { display: block; color: var(--muted); font-size: .9rem; margin: .35rem 0 .45rem; }
+.libverdict .go { font-size: .85rem; border-bottom: 1px solid var(--faint); }
+.libverdict .go::after { content: " →"; }
+.libpage .libverdict .quiet { color: var(--muted); font: italic 400 1rem/1.5 var(--serif); margin: 0; }

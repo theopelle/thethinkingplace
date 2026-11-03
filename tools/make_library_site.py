@@ -147,35 +147,66 @@ def main(tpl, by_id):
         days.setdefault(tid, []).insert(0, calendar_rules.date_of(k))
 
     # Wide screens only: the app's rail beside each page (the sections, and the current section's
-    # pages with this one marked). Maps and timelines, comparing paths, and the conversation
-    # questions live in the web app.
+    # pages with this one marked).
     by = lambda t: [p for p in shown.values() if p["type"] == t]
     lists = {"time": sorted(by("era"), key=lambda p: (p["start"], p.get("eraOrder") or 0)),
              "paths": sorted(by("path"), key=lambda p: PATH_ORDER.index(p["title"])),
              "people": sorted(by("thinker") + by("text"), key=sort_key),
              "topics": sorted(by("topic"), key=title_of)}
-    SECTIONS = [("time", "In their time"), ("paths", "Paths"), ("people", "Thinkers and texts"), ("topics", "Themes and topics")]
-    IN_APP = [("maps", "Maps and timelines"), ("compare", "Compare two paths"), ("questions", "Questions for good conversations")]
+    SECTIONS = [("time", "In their time"), ("paths", "Paths"), ("people", "Thinkers and texts"), ("topics", "Themes and topics"),
+                ("maps", "Maps and timelines"), ("compare", "Compare two paths"), ("questions", "Questions for good conversations")]
     SECTION_OF = {"era": "time", "path": "paths", "thinker": "people", "text": "people", "topic": "topics"}
+    # Maps and timelines (as app.js LIB_MAPS), the written pairs, and the conversation questions
+    # (extras.json, only "Ready" rows)
+    MAPS = [("world", "The world", "Every place our thinkers lived and wrote"),
+            ("europe", "Europe and the Mediterranean, closer", "From Athens and Rome to Paris and London"),
+            ("asia", "Asia, closer", "China, Japan, India and Persia"),
+            ("paths-in-time", "The paths through time", "Each path from when it began"),
+            ("thinkers-in-time", "The thinkers through time", "Every thinker on one line, from the Upanishads to Simone Weil")]
+    extras = json.load(open(os.path.join(ROOT, "extras.json"), encoding="utf-8"))
+    pairs = [x for x in extras["pairs"] if x["status"] == "Ready"]
+    conv = extras["conversation"]
+    conv_qs = [q for q in conv["questions"] if q["status"] == "Ready"]
+    taken = set(slugs.values())
+    assert not taken & ({k for k, _ in SECTIONS} | {k for k, _, _ in MAPS} | {x["id"] for x in pairs}), \
+        "a page's address is taken by a section, a map, or a pair"
+    subs = {k: [(x["id"], slugs[x["id"]], x["title"] if k == "people" else title_of(x),
+                 sort_key(x)[0].upper() if k == "people" else None) for x in v] for k, v in lists.items()}
+    subs["maps"] = [(k, k, t.replace(", closer", ""), None) for k, t, _ in MAPS]
 
     def rail(sec, current=None):
         out = ['<nav class="librail" aria-label="Library contents">', '<a class="home" href="../">Library</a>', '<ul class="secs">']
         for key, label in SECTIONS:
             here = ' aria-current="true"' if key == sec else ""
             out.append(f'<li><a href="../{key}/"{here}>{label}</a>')
-            if key == sec:
+            if key == sec and subs.get(key):
                 out.append('<ul class="sub">')
                 letter = ""
-                for x in lists[key]:
-                    if key == "people" and sort_key(x)[0].upper() != letter:
-                        letter = sort_key(x)[0].upper()
+                for xid, xslug, xlabel, L in subs[key]:
+                    if L and L != letter:
+                        letter = L
                         out.append(f'<li class="letter" aria-hidden="true">{letter}</li>')
-                    mark = ' aria-current="page"' if x["id"] == current else ""
-                    out.append(f'<li><a href="../{slugs[x["id"]]}/"{mark}>{esc(x["title"] if key == "people" else title_of(x))}</a></li>')
+                    mark = ' aria-current="page"' if xid == current else ""
+                    out.append(f'<li><a href="../{xslug}/"{mark}>{esc(xlabel)}</a></li>')
                 out.append("</ul>")
             out.append("</li>")
-        out += [f'<li><a href="../../app/#/library/{key}">{label}</a></li>' for key, label in IN_APP]
         out += ["</ul>", "</nav>"]
+        return "\n".join(out)
+
+    # The current page in the middle of its list (wide screens; a no-op elsewhere)
+    CENTRE = ("<script>(function(){var a=document.querySelector('.librail .sub [aria-current]');if(a){var s=a.closest('.sub');"
+              "s.scrollTop=a.offsetTop-s.offsetTop-s.clientHeight/2+a.offsetHeight/2;}})();</script>")
+
+    def wrap(sec, current, out):
+        return '<div class="libwrap">\n' + rail(sec, current) + "\n" + "\n".join(out) + "\n</div>\n" + CENTRE
+
+    def compare_links(path):  # under a path page's "Next to its neighbours", as in the app
+        mine = [x for x in pairs if path in (x["a"], x["b"])]
+        out = []
+        if mine:
+            out.append(f'<p class="libpage-compare-k">Compare {esc(path)} with</p><p class="libpage-related">' + "".join(
+                f'<a href="../{x["id"]}/">{esc(x["b"] if x["a"] == path else x["a"])}</a>' for x in mine) + "</p>")
+        out.append('<p class="libpage-go"><a href="../compare/">' + ("or see every pair" if mine else "Compare two paths") + "</a></p>")
         return "\n".join(out)
 
     def page_html(p):
@@ -214,6 +245,8 @@ def main(tpl, by_id):
                 out.append(people(lambda x: x["path"] == p["title"], md))
             else:
                 out.append(render_md(md, linker))
+            if p["type"] == "path" and t == "Next to its neighbours" and pairs:
+                out.append(compare_links(p["title"]))
         if p["type"] == "era":
             out += ["<h2>The thinkers of this era</h2>", people(lambda x: x.get("era") == p["title"], p["header"][1] if len(p["header"]) > 1 else "")]
         era = p["type"] in ("thinker", "text") and next((x for x in shown.values() if x["type"] == "era" and x["title"] == p.get("era")), None)
@@ -244,10 +277,7 @@ def main(tpl, by_id):
                    f'thought from philosophy each day, free, with no ads and no tracking.</p>'
                    f'<p><a href="{up}app/#/page/{p["id"]}">Read it in the app →</a> · <a href="{up}">About the app</a></p></aside>')
         out.append("</article>")
-        # The current page in the middle of its list (wide screens; a no-op elsewhere)
-        centre = ("<script>(function(){var a=document.querySelector('.librail .sub [aria-current]');if(a){var s=a.closest('.sub');"
-                  "s.scrollTop=a.offsetTop-s.offsetTop-s.clientHeight/2+a.offsetHeight/2;}})();</script>")
-        return '<div class="libwrap">\n' + rail(SECTION_OF[p["type"]], p["id"]) + "\n" + "\n".join(out) + "\n</div>\n" + centre
+        return wrap(SECTION_OF[p["type"]], p["id"], out)
 
     def head(p, path):
         desc = description(p)
@@ -274,13 +304,11 @@ def main(tpl, by_id):
 
     # The Library home and its four sections, as in the app (LIB_SECTIONS, LIB_EXTRAS in app.js); maps
     # and timelines, comparing two paths, and the conversation questions open in the web app.
-    assert not set(slugs.values()) & {k for k, _ in SECTIONS}, "a page's address is taken by a section"
     ROWS = [("time", "In their time", "Where history meets philosophy"), ("paths", "Paths", "The twelve schools of thought"),
             ("people", "Thinkers and texts", "From A to Z"), ("topics", "Themes and topics", "The big questions, across traditions"),
             ("maps", "Maps and timelines", "Where and when they lived"),
             ("compare", "Compare two paths", "Where they agree, and where they part ways"),
             ("questions", "Questions for good conversations", "To take to a dinner, a walk, or a long drive")]
-    in_app = {k for k, _ in IN_APP}
     row = lambda href, t, d="", k="": (f'<li><a href="{href}"><span><span class="t">{esc(t)}</span>'
                                        + (f'<span class="d">{esc(d)}</span>' if d else "") + "</span>"
                                        + (f'<span class="k">{esc(k)}</span>' if k else "") + "</a></li>")
@@ -303,7 +331,7 @@ def main(tpl, by_id):
             '<input class="libsearch" id="libsearch" type="search" placeholder="Search the Library" aria-label="Search the Library" autocomplete="off" hidden>',
             '<ul class="libpage-list libsearch-hits" id="libsearch-hits" aria-live="polite" hidden></ul>',
             '<div class="libhome-grid" id="libhome-grid">',
-            '<ul class="libpage-list">' + "".join(row(f"../app/#/library/{k}" if k in in_app else f"{k}/", t, d) for k, t, d in ROWS) + "</ul>",
+            '<ul class="libpage-list">' + "".join(row(f"{k}/", t, d) for k, t, d in ROWS) + "</ul>",
             f'<div><p class="libhl-label">Weekly highlight</p><a class="libhl" href="{slugs[hl["id"]]}/">'
             f'<span class="kind">{esc(KIND[hl["type"]])}</span><span class="t">{esc(title_of(hl))}</span>'
             f'<span class="d">{esc(first)}</span><span class="go">read</span></a></div>', "</div>",
@@ -366,13 +394,198 @@ def main(tpl, by_id):
             if voices:
                 out.append('<p class="libpage-end">Missing a voice you expected? <a href="../time/#voices">Here’s why →</a></p>')
         out.append("</article>")
-        body = '<div class="libwrap">\n' + rail(key) + "\n" + "\n".join(out) + "\n</div>"
-        write(f"library/{key}/", f"{title} · Library", sub + ": the Library of The Thinking Place.", body, "",
+        write(f"library/{key}/", f"{title} · Library", sub + ": the Library of The Thinking Place.", wrap(key, None, out), "",
               '<a class="back" href="../">← the Library</a>')
+    # ---- Maps and timelines, Compare two paths, and Questions for good conversations, as in the app
+    # but as pages: each map's place notes written out below it, and the list of pairs instead of a
+    # picker. A cited thought shows its quote only once its day has passed (our gloss always shows).
+    extra_urls = []
+    app_js = open(os.path.join(ROOT, "app.js"), encoding="utf-8").read()
+    page_link = lambda pid: f"../{slugs[pid]}/"
+    path_slug = {p["title"]: slugs[p["id"]] for p in lists["paths"]}
+
+    def sectioned(title, sub, body):
+        return ['<article class="libpage">', '<a class="libpage-back" href="../">← the Library</a>', f"<h1>{esc(title)}</h1>",
+                f'<p class="libpage-intro">{esc(sub)}</p>', *body, "</article>"]
+
+    def app_block(hash_route, label="Read it in the app →"):
+        return (f'<aside class="libpage-app"><p>This page is part of the Library in The Thinking Place: one short thought '
+                f'from philosophy each day, free, with no ads and no tracking.</p><p><a href="../../app/#/{hash_route}">{label}</a>'
+                f' · <a href="../../">About the app</a></p></aside>')
+
+    write("library/maps/", "Maps and timelines · Library", "Where and when the thinkers of The Thinking Place lived: maps and timelines.",
+          wrap("maps", None, sectioned("Maps and timelines", "Where and when they lived",
+                                       ['<ul class="libpage-list">' + "".join(row(f"../{k}/", t, d) for k, t, d in MAPS) + "</ul>"])),
+          "", '<a class="back" href="../">← the Library</a>')
+
+    # The three maps: the app's own drawing (index.html), each dot a link to its place's note below.
+    for key, title, sub in MAPS[:3]:
+        m = re.search(rf'<figure class="map-figure" data-map="{key}">(.*?)</figure>', app_page, re.S)
+        inner, places = re.sub(r"\s*<figcaption>.*?</figcaption>", "", m.group(1), flags=re.S), []
+
+        def dot(mm):
+            a = dict(re.findall(r'([\w-]+)="([^"]*)"', mm.group(1)))
+            places.append((html.unescape(a["data-title"]), html.unescape(a["data-text"])))
+            return f'<a class="map-dot" style="{a["style"]}" href="#place-{len(places)}" aria-label="{a["aria-label"]}"></a>'
+        inner = re.sub(r'<button type="button" class="map-dot"([^>]*)>\s*</button>', dot, inner)
+        inner = re.sub(r'href="#/library/([\w-]+)"', r'href="../\1/"', inner)
+        assert places and "<button" not in inner, f"the {key} map's dots were not all read"
+        body = ['<article class="libpage libmap">', '<a class="libpage-back" href="../maps/">← maps and timelines</a>',
+                f"<h1>{esc(title)}</h1>", f'<p class="libpage-intro">{esc(sub)}</p>',
+                "<p>Each dot marks where our thinkers lived and wrote. Tap one to read about the place below.</p>",
+                f'<figure class="map-figure" data-map="{key}">{inner}</figure>']
+        if key == "world":
+            body.append('<p class="libpage-hint">Tap Europe or Asia on the map to see it closer.</p>')
+        body.append("<h2>The places</h2>")
+        for i, (ptitle, text) in enumerate(places, 1):
+            lk = Linker(lib["links"], shown, None, page_link)  # each place links the thinkers it names
+            parts = []
+            for block in text.split("\n\n"):
+                lines = block.split("\n")
+                if lines[0] != ptitle:
+                    parts.append(f'<p class="where">{esc(lines[0])}</p>')
+                if len(lines) > 1:
+                    parts.append(f'<p class="who">{lk(lines[1])}</p>')
+                if len(lines) > 2:
+                    parts.append(f"<p>{lk(' '.join(lines[2:]))}</p>")
+            body.append(f'<section class="libplace" id="place-{i}"><h3>{esc(ptitle)}</h3>{"".join(parts)}</section>')
+        body += [app_block(f"library/{key}", "See it in the app →"), "</article>"]
+        write(f"library/{key}/", f"{title.replace(', closer', '')} · Library", f"{sub}: a map of where the thinkers of "
+              "The Thinking Place lived, with a note on each place.", "\n".join(body), "", '<a class="back" href="../maps/">← maps and timelines</a>')
+        extra_urls.append(f"library/{key}/")
+
+    # The paths through time: the app's TIMELINE (app.js), to scale within each era, long gaps cut short.
+    timeline = [(int(y), lab, path) for y, lab, path in
+                re.findall(r'\[(-?\d+), "([^"]+)", "([^"]+)"\]', re.search(r"const TIMELINE = \[(.*?)\];", app_js, re.S).group(1))]
+    gap_years = int(re.search(r"const GAP_YEARS = (\d+)", app_js).group(1))
+    rem_per_year = float(re.search(r"const REM_PER_YEAR = ([\d.]+)", app_js).group(1))
+    li = []
+    for i, (year, label, path) in enumerate(timeline):
+        gap = year - timeline[i - 1][0] if i else 0
+        if gap > gap_years:
+            li.append(f'<li class="tl-break"><span class="tl-mark" aria-hidden="true">//</span><span class="tl-gap">about {round(gap / 100) * 100} years</span></li>')
+        top = f' style="margin-top:{min(4, max(0.35, gap * rem_per_year)):.2f}rem"' if i and gap <= gap_years else ""
+        link = f'<a class="tl-path" href="../{path_slug[path]}/">{esc(path)}</a>' if path in path_slug else f'<span class="tl-path">{esc(path)}</span>'
+        li.append(f'<li class="tl-item"{top}><span class="tl-year">{esc(label)}</span>{link}</li>')
+    axial = re.search(r'<ol class="timeline" id="timeline"></ol>\s*<p>(.*?)</p>', app_page, re.S)
+    k, t, d = MAPS[3]
+    write(f"library/{k}/", f"{t} · Library", f"{d}: when each of the twelve paths of The Thinking Place began.",
+          wrap("maps", k, sectioned(t, d, ["<p>When each path began.</p>", '<ol class="timeline">' + "".join(li) + "</ol>",
+                                           f"<p>{axial.group(1)}</p>" if axial else "", app_block(f"library/{k}", "See it in the app →")])),
+          "", '<a class="back" href="../maps/">← maps and timelines</a>')
+    extra_urls.append(f"library/{k}/")
+
+    # The thinkers through time (app.js thinkersInTime): oldest first, a label per century, a dashed
+    # stretch where three or more centuries pass with nobody.
+    NUMBERS = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
+    ordinal = lambda n: f"{n}{'th' if 11 <= n % 100 <= 13 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
+    century = lambda y: -((-y + 99) // 100) if y < 0 else (y + 99) // 100
+    step = lambda c: c + 1 if c < 0 else c
+    rows, prev = [], None
+    for x in sorted(lists["people"], key=lambda x: (x["start"], x["title"])):
+        c = century(x["start"])
+        if c != prev:
+            if prev is not None and step(c) - step(prev) >= 3:
+                n = step(c) - step(prev)
+                rows.append(f'<li class="ttl-gap"><span>{NUMBERS[n] if n < len(NUMBERS) else n} centuries later</span></li>')
+            rows.append(f'<li class="ttl-century"><span>{ordinal(abs(c))} century{" BCE" if c < 0 else ""}</span></li>')
+            prev = c
+        rows.append(f'<li class="ttl-row{" soft" if x["type"] == "text" else ""}"><a href="{page_link(x["id"])}"><span class="t">{esc(x["title"])}</span>'
+                    f'<span class="d">{esc(x["header"][1] if len(x["header"]) > 1 else "")}</span><span class="k">{esc(x["path"])}</span></a></li>')
+    k, t, d = MAPS[4]
+    write(f"library/{k}/", f"{t} · Library", f"{d}: every thinker and text of The Thinking Place in order of time.",
+          wrap("maps", k, sectioned(t, d, ['<p class="ttl-note">The texts of ancient India, in italics, grew over centuries in the hands '
+                                           "of many authors, so they appear at the start of their span.</p>",
+                                           '<ol class="ttl">' + "".join(rows) + "</ol>", app_block(f"library/{k}", "See it in the app →")])),
+          "", '<a class="back" href="../maps/">← maps and timelines</a>')
+    extra_urls.append(f"library/{k}/")
+
+    # Compare two paths: the app's picker (two of the twelve paths; a third pick replaces the older
+    # one), then the list, then a page per written pair. The picker runs inside the page and stays
+    # hidden without scripts, which leaves the list.
+    if pairs:
+        chips = "".join(f'<li><button type="button" class="libchip" aria-pressed="false">{esc(t)}</button></li>' for t in PATH_ORDER)
+        picker = ('<div id="libpick" hidden><p class="libpick-label">Pick two</p><ul class="libchips">' + chips + "</ul>"
+                  '<div class="libverdict" id="libverdict" aria-live="polite"></div></div>')
+        data = json.dumps([[x["a"], x["b"], x["id"], strip_md(x["line"])] for x in pairs], ensure_ascii=False).replace("</", "<\\/")
+        script = ("<script>(function(){var P=" + data + ",pick=[],box=document.getElementById('libpick'),"
+                  "v=document.getElementById('libverdict'),chips=[].slice.call(box.querySelectorAll('.libchip'));box.hidden=false;"
+                  "var esc=function(t){return t.replace(/[&<>\"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c];});};"
+                  "function draw(){chips.forEach(function(c){c.setAttribute('aria-pressed',String(pick.indexOf(c.textContent)>=0));});"
+                  "var a=pick[0],b=pick[1],p=a&&b&&P.filter(function(x){return(x[0]===a&&x[1]===b)||(x[0]===b&&x[1]===a);})[0];"
+                  "v.innerHTML=p?'<a class=\"libverdict-pair\" href=\"../'+p[2]+'/\"><span class=\"t\">'+esc(p[0])+' and '+esc(p[1])+"
+                  "'</span><span class=\"d\">'+esc(p[3])+'</span><span class=\"go\">read</span></a>':'<p class=\"quiet\">'+"
+                  "(!a?'Pick two paths.':!b?esc(a)+', and…':'We haven\\u2019t written this pair yet.')+'</p>';}"
+                  "chips.forEach(function(c){c.addEventListener('click',function(){var t=c.textContent,i=pick.indexOf(t);"
+                  "if(i>=0)pick.splice(i,1);else{pick.push(t);if(pick.length>2)pick.shift();}draw();});});draw();})();</script>")
+        write("library/compare/", "Compare two paths · Library", "Where two paths of philosophy agree, and where they part ways, "
+              "with a few of their thoughts side by side.",
+              wrap("compare", None, sectioned("Compare two paths", "Where two paths agree, and where they part ways, with a few of "
+                                              "their thoughts side by side.", [picker, "<h2>Pairs to read</h2>", '<ul class="libpage-list">' + "".join(
+                                                  row(f"../{x['id']}/", f"{x['a']} and {x['b']}", strip_md(x["line"])) for x in pairs) + "</ul>",
+                                                  script])),
+              "", '<a class="back" href="../">← the Library</a>')
+        extra_urls.append("library/compare/")
+    for x in pairs:
+        lk = Linker(lib["links"], shown, None, page_link)
+        out = ['<article class="libpage">', '<a class="libpage-back" href="../compare/">← compare two paths</a>',
+               '<p class="libpage-kind">Two paths</p>', f"<h1>{esc(x['a'])} and {esc(x['b'])}</h1>",
+               '<p class="libpage-header">' + " · ".join(f'<a href="../{path_slug[n]}/">{esc(n)}</a>' if n in path_slug else esc(n)
+                                                         for n in (x["a"], x["b"])) + "</p>",
+               f'<p class="libpage-one">{inline(x["line"], lk)}</p>']
+        for head_, pts in (("Where they agree", x["agree"]), ("Where they part ways", x["part"])):
+            out += [f"<h2>{head_}</h2>", '<ul class="libpage-points">' + "".join(
+                f"<li><strong>{esc(h)}</strong> {inline(tx, lk)}</li>" for h, tx in pts) + "</ul>"]
+        quotes, cites = False, []
+        for c in x["thoughts"]:
+            seen = days.get(c["id"])
+            q = (f'<span class="q">{esc(by_id[c["id"]]["text"]).replace(" / ", "<br>")}</span>') if seen else ""
+            quotes = quotes or bool(seen)
+            inner = f'<span class="p">{esc(c["path"])}</span>{q}<span class="s">{esc(c["gloss"])}</span>'
+            cites.append(f'<a class="libcite" href="../../app/#/day/{seen[0]}">{inner}</a>' if seen else f'<div class="libcite">{inner}</div>')
+        out += ["<h2>From our thoughts</h2>", '<div class="libcites">' + "".join(cites) + "</div>",
+                "<h2>Compare</h2>", '<p class="libpage-go"><a href="../compare/">every pair</a></p>']
+        if quotes:
+            out.append('<p class="libpage-ai">The quotes are always the translators’ own words.</p>')
+        out += [app_block(f"pair/{x['id']}"), "</article>"]
+        write(f"library/{x['id']}/", f"{x['a']} and {x['b']} · Library", strip_md(x["line"])[:160], wrap("compare", x["id"], out), "",
+              '<a class="back" href="../compare/">← compare two paths</a>')
+        extra_urls.append(f"library/{x['id']}/")
+
+    # Questions for good conversations: one page, a section per group, each question from a thought
+    # (a link to its day once that day has passed).
+    if conv_qs:
+        body = []
+        for g in conv["groups"]:
+            qs = [q for q in conv_qs if g["key"] in q["groups"]]
+            if not qs:
+                continue
+            items = []
+            for q in qs:
+                e, seen = by_id[q["id"]], days.get(q["id"])
+                who = f'from {esc(e["source"].split(",")[0])}<span class="p">{esc(e["path"])}</span>'
+                src = f'<a class="libfrom" href="../../app/#/day/{seen[0]}">{who}</a>' if seen else f'<span class="libfrom">{who}</span>'
+                items.append(f'<li><p class="q">{esc(q["question"])}</p>{src}</li>')
+            body += [f'<h2 id="{g["key"]}">{esc(g["label"])}</h2>', '<ul class="libqs">' + "".join(items) + "</ul>"]
+        # "Give me one" (the intro promises it): picks from the questions on the page, never the one
+        # just shown; inside the page only, and hidden without scripts.
+        body.insert(0, '<div class="libq-one" id="libq-one" aria-live="polite"></div>'
+                       '<button type="button" class="libq-give" id="libq-give" hidden>give me one</button>')
+        body.append(app_block("library/questions", "Open them in the app →"))
+        body.append("<script>(function(){var b=document.getElementById('libq-give'),box=document.getElementById('libq-one'),"
+                    "seen={},last=-1,qs=[].slice.call(document.querySelectorAll('.libqs li')).filter(function(li){"
+                    "var t=li.querySelector('.q').textContent;if(seen[t])return false;seen[t]=1;return true;});"
+                    "b.hidden=false;b.addEventListener('click',function(){var i;do{i=Math.floor(Math.random()*qs.length);}"
+                    "while(qs.length>1&&i===last);last=i;var d=document.createElement('div');d.className='libq-card';"
+                    "d.innerHTML=qs[i].innerHTML;box.replaceChildren(d);b.textContent='another';});})();</script>")
+        write("library/questions/", "Questions for good conversations · Library", conv["intro"],
+              wrap("questions", None, sectioned("Questions for good conversations", conv["intro"], body)), "",
+              '<a class="back" href="../">← the Library</a>')
+        extra_urls.append("library/questions/")
     # The sitemap: the website's own pages, the Library home, its sections, and every page (the web
     # app itself is one page with hash routes, so only its address is listed).
     urls = ["", "app/", "about.html", "questions.html", "terms.html", "iphone.html", "library/"]
-    urls += [f"library/{k}/" for k, _ in SECTIONS] + [f"library/{slugs[pid]}/" for pid in sorted(shown, key=lambda i: slugs[i])]
+    urls += [f"library/{k}/" for k, _ in SECTIONS if f"library/{k}/" not in extra_urls] + extra_urls + [f"library/{slugs[pid]}/" for pid in sorted(shown, key=lambda i: slugs[i])]
     open(os.path.join(SITE, "sitemap.xml"), "w", encoding="utf-8").write(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"  <url><loc>{URL}{u}</loc></url>\n" for u in urls) + "</urlset>\n")

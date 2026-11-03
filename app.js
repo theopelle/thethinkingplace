@@ -550,7 +550,7 @@
   // ---------- past thoughts ----------
   // Every day since the calendar began (plus any older day with a note), newest first,
   // ten at a time, optionally narrowed to some paths and some themes.
-  const journal = { path: [], theme: [], saved: false, questions: false, shown: PAGE_DAYS };
+  const journal = { path: [], theme: [], saved: false, notes: false, questions: false, shown: PAGE_DAYS };
   const FILTER_ALL = { path: "all paths", theme: "all themes" };
   const FILTER_SOME = { path: "paths", theme: "themes" };
   let filterLists = { path: [], theme: [] };
@@ -612,7 +612,8 @@
       const e = entryShown(key);
       return (!journal.path.length || journal.path.includes(e.path)) &&
         (!journal.theme.length || (e.themes || []).some((t) => journal.theme.includes(t))) &&
-        (!journal.saved || isSaved(e.id));
+        (!journal.saved || isSaved(e.id)) &&
+        (!journal.notes || !!noteText(key).trim());  // "my notes": the days with a note (a note never saves a thought)
     }).filter((key, i, all) => !journal.saved || all.findIndex((k) => entryShown(k).id === entryShown(key).id) === i);
   }
 
@@ -624,6 +625,8 @@
     renderKeepsake();
     $("filter-saved").classList.toggle("active", journal.saved);
     $("filter-saved").setAttribute("aria-pressed", String(journal.saved));
+    $("filter-notes").classList.toggle("active", journal.notes);
+    $("filter-notes").setAttribute("aria-pressed", String(journal.notes));
     for (const kind of ["path", "theme"]) {
       const btn = $("filter-" + kind);
       const picked = journal[kind];
@@ -644,7 +647,10 @@
     $("filter-questions").setAttribute("aria-pressed", String(journal.questions));
     const items = journal.questions ? [] : journalDays().map((key) => ({ key }));
     if (journal.questions || (!journal.path.length && !journal.theme.length && !journal.saved))
-      for (const m of qMonths) items.push({ key: questionAppeared(m, today), m });
+      for (const m of qMonths) {
+        if (journal.notes && !(questionData(m).note || "").trim()) continue;  // with "my notes": only those with a note
+        items.push({ key: questionAppeared(m, today), m });
+      }
     items.sort((a, b) => (a.key !== b.key ? (a.key < b.key ? 1 : -1) : a.m ? -1 : 1));
     const list = $("journal-list");
     list.textContent = "";
@@ -668,7 +674,8 @@
       list.appendChild(li);
     }
     $("journal-empty").hidden = items.length > 0;
-    $("journal-empty").textContent = journal.saved ? "Nothing saved yet. Tap “save” under a thought to keep it here." : "No past thoughts here yet.";
+    $("journal-empty").textContent = journal.notes ? "No notes yet. Write about a thought, and it will wait for you here."
+      : journal.saved ? "Nothing saved yet. Tap “save” under a thought to keep it here." : "No past thoughts here yet.";
     $("journal-more").hidden = items.length <= journal.shown;
   }
 
@@ -3038,6 +3045,7 @@
     document.querySelectorAll("[data-filter]").forEach((b) => b.addEventListener("click", () => openPicker(b)));
     $("picker-back").addEventListener("click", closePicker);
     $("filter-saved").addEventListener("click", () => setJournalFilter({ saved: !journal.saved }));
+    $("filter-notes").addEventListener("click", () => setJournalFilter({ notes: !journal.notes }));
     $("save").addEventListener("click", toggleSaved);
     document.querySelectorAll("[data-text-size]").forEach((b) =>
       b.addEventListener("click", () => setTextSize(b.dataset.textSize)));
