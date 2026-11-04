@@ -888,7 +888,7 @@
     // A voice's name opens its Library page.
     const page = library.pages.find((p) => (p.type === "thinker" || p.type === "text") && (p.thoughts || []).includes(v.id) && pageShown(p.id));
     const name = make("p", "mq-voice-name");
-    if (page) name.append(pageLink(page.id, v.voice, "mq-voice-link")); else name.textContent = v.voice;
+    if (page) name.append(pageLink(page.id, v.voice, "mq-voice-link lib-card")); else name.textContent = v.voice;
     li.append(make("p", "mq-voice-path", e.path), name,
       make("p", "mq-voice-line", v.line), make("p", "mq-voice-words", `“${v.words}”`), links);
     const fold = (label, box) => {
@@ -1353,7 +1353,7 @@
         const id = library.links[m[1]];
         if (used.has(id) || !pageShown(id) || partOfAnotherName(text, m, id)) continue;
         used.add(id);
-        out.push(text.slice(last, m.index), pageLink(id, m[1], "lib-in"));
+        out.push(text.slice(last, m.index), pageLink(id, m[1], "lib-in lib-card"));
         last = m.index + m[1].length;
       }
       out.push(text.slice(last));
@@ -1363,6 +1363,7 @@
   function pageLink(id, label, cls) {
     const a = make("a", cls || "", label);
     a.href = "#/page/" + id;
+    a.dataset.page = id;
     return a;
   }
   // Light Markdown, built as elements (never as HTML): **bold**, *italic*, bare links.
@@ -1472,7 +1473,7 @@
     [p.a, p.b].forEach((name, i) => {
       const page = pageOf("path", name);
       if (i) header.append(" · ");
-      header.append(page ? pageLink(page.id, name) : name);
+      header.append(page ? pageLink(page.id, name, "lib-card") : name);
     });
     header.hidden = false;
     $("page-also").hidden = true;
@@ -1586,7 +1587,7 @@
     (p.type === "era" ? p.header.slice(0, 1) : p.header).forEach((part, i) => {
       if (i) header.append(" · ");
       const path = part === p.path && p.type !== "path" && pageOf("path", part);
-      header.append(path ? pageLink(path.id, part) : part);
+      header.append(path ? pageLink(path.id, part, "lib-card") : part);
     });
     header.hidden = !p.header.length;
     $("page-also").hidden = !p.tags.length;
@@ -2333,6 +2334,7 @@
 
   function showCard(btn, title, text, wiki, more, page, lead = "More about ", down = false) {
     const card = $("term-card");
+    $("term-kind").hidden = $("term-sub").hidden = true;  // a Library page's card fills them (showPageCard)
     $("term-title").textContent = title;
     $("term-def").textContent = text;
     // The Library pages behind the card: "More about Seneca →", one line each.
@@ -2351,7 +2353,9 @@
     card.hidden = false;
     // Place the card just below the word, or above it if there is no room.
     const r = btn.getBoundingClientRect(), w = card.offsetWidth, h = card.offsetHeight;
-    const left = Math.min(Math.max(16, r.left + r.width / 2 - w / 2), window.innerWidth - w - 16);
+    // On the wide layout the card stays over the page, never over the rail beside it.
+    const edge = document.body.classList.contains("lib-rail") && matchMedia("(min-width: 1000px)").matches ? document.querySelector(".view:not([hidden])").getBoundingClientRect().left : 16;
+    const left = Math.min(Math.max(edge, r.left + r.width / 2 - w / 2), window.innerWidth - w - 16);
     const below = r.bottom + 10, above = r.top - h - 10;
     card.style.left = left + "px";
     const y = window.scrollY;
@@ -2359,8 +2363,76 @@
     const top = down || below + h < window.innerHeight - 64 || above < 16 ? below : above;
     card.style.top = y + (down ? top : Math.max(16, Math.min(top, window.innerHeight - h - 16))) + "px";
     openTerm.from = btn;
-    // Move focus into the card so screen readers announce the definition.
-    card.focus({ preventScroll: true });
+    // Move focus into the card so screen readers announce the definition (not when it opened on
+    // hover or on keyboard focus: the reader stays where they are).
+    if (!cardQuiet) card.focus({ preventScroll: true });
+  }
+
+  // ---------- Library links inside running text: a preview card ----------
+  // The names inside a Library page's text, the path in its header line, and a monthly question's
+  // voices open a small card (type, title, header line, "In one line", "read the page →") instead
+  // of leaving mid-reading. Menus (Related, lists, the rail, "More about →") stay plain links.
+  // Touch: a tap opens it. Mouse: hover opens it, a click goes to the page. Keyboard: focus opens
+  // it, Enter goes to the page. With a mouse, the dotted glossary words open on hover too.
+  let cardQuiet = false, cardByHover = false, hoverOpen = 0, hoverClose = 0, lastPointer = 0;
+  const fineMouse = matchMedia("(hover: hover) and (pointer: fine)");
+  function showPageCard(link, quiet) {
+    const p = pageById[link.dataset.page];
+    if (!p) return;
+    const one = p.sections.find(([t]) => t === "In one line");
+    const text = one ? stripMd(one[1]) : (stripMd((p.sections[0] || ["", ""])[1]).split(/\n\s*\n/)[0].match(/^.*?[.!?](?=\s|$)/) || [""])[0];
+    cardQuiet = quiet;
+    showCard(link, pageTitle(p), text, null, null, p.id, "");
+    cardQuiet = false;
+    $("term-page").firstChild.textContent = "read the page →";
+    $("term-kind").textContent = KIND[p.type] || "";
+    $("term-kind").hidden = !KIND[p.type];
+    const sub = (p.type === "era" ? p.header.slice(0, 1) : p.header).join(" · ");
+    $("term-sub").textContent = sub;
+    $("term-sub").hidden = !sub;
+    link.setAttribute("aria-expanded", "true");
+  }
+  function openHovered(el) {
+    cardByHover = true;
+    if (el.classList.contains("lib-card")) return showPageCard(el, true);
+    cardQuiet = true;
+    if (el.classList.contains("term")) openTerm(el);
+    cardQuiet = false;
+  }
+  function bindLinkCards() {
+    document.addEventListener("pointerdown", () => (lastPointer = Date.now()), true);
+    document.addEventListener("mouseover", (ev) => {
+      if (!fineMouse.matches) return;
+      if (ev.target.closest("#term-card")) { clearTimeout(hoverClose); return; }
+      const el = ev.target.closest(".lib-card, .term:not([data-feature])");
+      if (!el) return;
+      clearTimeout(hoverClose);
+      if (openTerm.from === el && !$("term-card").hidden) return;
+      clearTimeout(hoverOpen);
+      hoverOpen = setTimeout(() => openHovered(el), 300);  // no flicker as the mouse crosses the text
+    });
+    document.addEventListener("mouseout", (ev) => {
+      if (!fineMouse.matches) return;
+      const from = ev.target.closest(".lib-card, .term, #term-card");
+      if (!from) return;
+      const to = ev.relatedTarget && ev.relatedTarget.closest ? ev.relatedTarget.closest(".lib-card, .term, #term-card") : null;
+      if (to === from) return;
+      clearTimeout(hoverOpen);
+      if (to && (to.id === "term-card" || to === openTerm.from)) return;
+      clearTimeout(hoverClose);
+      hoverClose = setTimeout(() => { if (cardByHover) closeTerm(); }, 200);
+    });
+    // Keyboard: focusing a link shows its card; Enter follows the link. (Not after a tap or click.)
+    document.addEventListener("focusin", (ev) => {
+      const el = ev.target.closest && ev.target.closest(".lib-card");
+      if (!el || Date.now() - lastPointer < 800) return;
+      cardByHover = false;
+      showPageCard(el, true);
+    });
+    document.addEventListener("focusout", (ev) => {
+      const el = ev.target.closest && ev.target.closest(".lib-card");
+      if (el && openTerm.from === el && !(ev.relatedTarget && ev.relatedTarget.closest && ev.relatedTarget.closest("#term-card"))) closeTerm();
+    });
   }
 
   // A dot on the About page maps: who lived there.
@@ -2389,6 +2461,7 @@
   function closeTerm() {
     const card = $("term-card");
     if (!card || card.hidden) return;
+    cardByHover = false;
     const hadFocus = card.contains(document.activeElement);
     card.hidden = true;
     if (openTerm.from) openTerm.from.removeAttribute("aria-expanded");
@@ -2988,9 +3061,19 @@
 
     document.addEventListener("click", (ev) => {
       if (ev.target.closest(".tell-friend")) { ev.preventDefault(); tellFriend(); return; }
+      const link = ev.target.closest(".lib-card");
+      if (link) {
+        if (fineMouse.matches || ev.detail === 0) return;  // a click or Enter goes to the page
+        ev.preventDefault();
+        cardByHover = false;
+        if (openTerm.from === link && !$("term-card").hidden) closeTerm(); else showPageCard(link, false);
+        return;
+      }
       const term = ev.target.closest(".term, .map-dot, .tl-path");
       if (term) {
         ev.preventDefault();
+        if (cardByHover && openTerm.from === term && !$("term-card").hidden) { cardByHover = false; return; }  // hovered open: a click keeps it
+        cardByHover = false;
         if (openTerm.from === term && !$("term-card").hidden) closeTerm();
         else if (term.classList.contains("map-dot")) openPlace(term);
         else if (term.classList.contains("tl-path")) openPath(term);
@@ -3206,6 +3289,7 @@
     fillFilters();
     renderTimeline();
     bind();
+    bindLinkCards();
     route();
     const welcoming = maybeWelcome();
     const revealing = !welcoming && prepareReveal();
