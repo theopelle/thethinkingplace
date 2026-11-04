@@ -99,7 +99,11 @@
       </section>
       <section class="device" data-device="ios">
         <div class="device-head"><svg class="device-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg><h2>iPhone</h2><span class="yours">this device</span></div>
-        <p class="device-sum">Read it in <span class="ios-browser">Safari</span>, then <b>add it to your home screen</b>: it opens like an app, full screen, even offline. It also keeps your notes safe: in a normal browser tab, they may be erased if you don't visit for a week.</p>
+        <!-- Until the app is on the App Store: shown, not a link. Once it's in TestFlight,
+             "Currently being built" becomes "Currently in testing". -->
+        <div class="way soon"><b>Get it on the App Store <em>coming soon</em></b><span>Currently being built</span></div>
+        <!-- Once the app is on the App Store, "Until then" becomes "Or read it in Safari". -->
+        <p class="device-lead">Until then, read it in <span class="ios-browser">Safari</span> and <b>add it to your home screen</b>: it opens like an app, full screen, even offline. It also keeps your notes safe: in a normal browser tab, they may be erased if you don't visit for a week.</p>
         <a class="cta" href="app/">Open The Thinking Place</a>
         <details class="guide" id="iphone">
           <summary>Add it to your home screen</summary>
