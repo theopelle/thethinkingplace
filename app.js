@@ -278,6 +278,10 @@
     if (choice === "auto") document.documentElement.removeAttribute("data-theme");
     else document.documentElement.setAttribute("data-theme", choice);
     checkChoice("[data-theme-choice]", "themeChoice", choice);
+    // The phone's clock and battery follow the app's theme, not only the phone's ("DARK" means
+    // light text, for a dark page).
+    const bars = plugin("SystemBars");
+    if (bars) bars.setStyle({ style: { light: "LIGHT", dark: "DARK" }[choice] || "DEFAULT" }).catch(() => {});
   }
 
   // Marks the chosen option in a row of radio-like text buttons.
@@ -735,7 +739,9 @@
         const { uri } = await Filesystem.writeFile({ path: name, data: body, directory: "CACHE", encoding: "utf8" });
         await Share.share({ title: "Your notes", files: [uri] });
         store.set("lastExport", todayKey());
-      } catch { flash(btn, "not saved"); }
+      } catch (e) {
+        if (!/cancel/i.test((e && e.message) || "")) flash(btn, "not saved");  // closing the sheet is fine
+      }
       renderBackupNudge();
       return;
     }

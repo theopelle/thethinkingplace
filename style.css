@@ -371,6 +371,13 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 .map-dot:focus-visible { outline: none; }
 .map-dot:focus-visible::before { outline: 1px solid var(--fg); outline-offset: 3px; }
 
+/* Under the phone's clock and battery, text scrolling up fades into the page instead of
+   running behind them. Only where the app draws under that bar (the phone apps, the home-screen
+   web app); in a browser tab the inset is 0 and nothing shows. Below the pickers and the launch. */
+body::before { content: ""; position: fixed; top: 0; left: 0; right: 0; z-index: 28; pointer-events: none;
+  height: calc(env(safe-area-inset-top) * 1.6);
+  background: linear-gradient(var(--bg) 62%, transparent); }
+
 /* Launch screen: the well sits exactly where Android's own splash icon was (a 288dp box,
    centred), so the hand-over is invisible; only the name fades in. */
 .launch { position: fixed; inset: 0; z-index: 100; background: var(--bg); transition: opacity .9s ease; }
