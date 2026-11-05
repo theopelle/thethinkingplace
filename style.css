@@ -94,7 +94,7 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 .moon circle { fill: none; stroke: var(--muted); stroke-width: 1.2; }
 .moon path { fill: var(--muted); }
 
-.passage { margin: 0; text-align: center; }
+.passage { margin: 0; text-align: center; overflow-wrap: break-word; }  /* a word breaks only if it alone is wider than the phone (largest text) */
 .passage p {
   font: 400 clamp(1.32rem, 4.7vw, 1.75rem)/1.45 var(--serif);  /* Literata runs large */
   margin: 0;
@@ -107,7 +107,8 @@ h2 { font: 400 .75rem/1 var(--sans); letter-spacing: .14em; text-transform: uppe
 .journal .j-text { white-space: pre-line; }  /* verse keeps its line breaks */
 .passage.verse p { font-size: clamp(1.05rem, 3.9vw, 1.25rem); line-height: 1.5; }
 .verse-line { display: block; padding-left: 1.4em; text-indent: -1.4em; }
-.school { text-align: center; color: var(--accent); font: 600 .82rem/1.4 var(--sans); letter-spacing: .2em; text-transform: uppercase; margin: 0 0 1.6rem; }
+.school { text-align: center; color: var(--accent); font: 600 .82rem/1.4 var(--sans); letter-spacing: .2em; text-transform: uppercase; margin: 0 0 1.6rem;
+  overflow-wrap: anywhere; }  /* "ENLIGHTENMENT" alone is wider than a phone at the largest text sizes */
 .source { text-align: center; color: var(--muted); font-size: .9rem; margin: 2rem 0 1rem; }
 .full-verse { text-align: center; margin: 0 0 .5rem; font-size: .75rem; }
 .full-verse a { color: var(--muted); }
@@ -218,7 +219,6 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
   text-underline-offset: .22em;
 }
 .term:focus-visible { outline: 1px solid var(--muted); outline-offset: 2px; }
-.term-glue { white-space: nowrap; }
 .term-card {
   position: absolute; z-index: 30;  /* scrolls with the page */
   width: min(20rem, calc(100vw - 2rem));
@@ -602,10 +602,10 @@ button.mq-back { display: inline-block; margin: 0 0 2rem; }
 .mq-intro { color: var(--muted); font-size: .95rem; margin: 0 0 2.2rem; }
 .mq-voices { list-style: none; margin: 0; padding: 0; position: relative; }
 .mq-voices::before { content: ""; position: absolute; left: .2rem; top: 1rem; bottom: 1.5rem; width: 1px; background: var(--faint); }
-.mq-voice { position: relative; padding: 0 0 2.1rem 1.6rem; }
+.mq-voice { position: relative; padding: 0 0 2.1rem 1.6rem; overflow-wrap: break-word; }  /* the largest text sizes */
 .mq-voice::before { content: ""; position: absolute; left: calc(.2rem - 3px); top: .35rem; width: 7px; height: 7px; border-radius: 50%;
   background: var(--bg); border: 1px solid var(--muted); }
-.mq-voice-path { color: var(--accent); font: 600 .68rem/1.4 var(--sans); letter-spacing: .2em; text-transform: uppercase; margin: 0 0 .2rem; }
+.mq-voice-path { color: var(--accent); font: 600 .68rem/1.4 var(--sans); letter-spacing: .2em; text-transform: uppercase; margin: 0 0 .2rem; overflow-wrap: anywhere; }
 .mq-voice-name { font: 400 1.15rem/1.3 var(--serif); margin: 0 0 .45rem; }
 .mq-voice-line { margin: 0 0 .45rem; font-size: .98rem; }
 .mq-voice-words { font: italic 400 1.02rem/1.5 var(--serif); margin: 0 0 .4rem; }

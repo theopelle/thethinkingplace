@@ -278,11 +278,17 @@
     if (choice === "auto") document.documentElement.removeAttribute("data-theme");
     else document.documentElement.setAttribute("data-theme", choice);
     checkChoice("[data-theme-choice]", "themeChoice", choice);
-    // The phone's clock and battery follow the app's theme, not only the phone's ("DARK" means
-    // light text, for a dark page).
+    // The phone's clock and battery, and Android's buttons at the bottom, follow the theme the app
+    // shows, not only the phone's ("DARK" means light icons, for a dark page). Always the theme
+    // worked out here: the plugin's "DEFAULT" keeps the phone's theme of the moment it was called.
     const bars = plugin("SystemBars");
-    if (bars) bars.setStyle({ style: { light: "LIGHT", dark: "DARK" }[choice] || "DEFAULT" }).catch(() => {});
+    const dark = choice === "dark" || (choice !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+    if (bars) bars.setStyle({ style: dark ? "DARK" : "LIGHT" }).catch(() => {});
   }
+  // In "auto", the bars follow when the phone switches between light and dark.
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+    if (store.get("theme", "auto") === "auto") applyTheme("auto");
+  });
 
   // Marks the chosen option in a row of radio-like text buttons.
   function checkChoice(selector, key, value) {
@@ -2313,23 +2319,18 @@
       if (!m) continue;
       const word = node.splitText(m.index);
       word.splitText(m[1].length);
-      const btn = document.createElement("button");
-      btn.type = "button";
+      // Inline text acting as a button (not a <button>, whose box can't break across lines: a long
+      // title like "An Enquiry Concerning Human Understanding" ran off a phone with large text).
+      // As plain text, it wraps word by word, the dotted line follows it, and the punctuation after
+      // it never starts a line on its own. Enter and Space open it (bindTermKeys).
+      const btn = document.createElement("span");
       btn.className = "term";
       btn.dataset.term = index;
+      btn.setAttribute("role", "button");
+      btn.tabIndex = 0;
       btn.setAttribute("aria-haspopup", "dialog");
       word.replaceWith(btn);
       btn.appendChild(word);
-      // Punctuation right after the word stays on its line (", and others are not." never
-      // starts a line on its own): the word is a button, so the browser could break there.
-      const next = btn.nextSibling, punct = next && next.nodeType === 3 && next.data.match(/^[,.;:!?…’”)\]]+/);
-      if (punct) {
-        const glue = document.createElement("span");
-        glue.className = "term-glue";
-        next.data = next.data.slice(punct[0].length);
-        btn.replaceWith(glue);
-        glue.append(btn, punct[0]);
-      }
       return true;
     }
     return false;
@@ -2418,6 +2419,13 @@
     cardQuiet = true;
     if (el.classList.contains("term")) openTerm(el);
     cardQuiet = false;  // (openTerm passes it on to the card)
+  }
+  function bindTermKeys() {
+    document.addEventListener("keydown", (e) => {
+      if ((e.key !== "Enter" && e.key !== " ") || !e.target.matches || !e.target.matches("span.term")) return;
+      e.preventDefault();
+      e.target.click();
+    });
   }
   function bindLinkCards() {
     document.addEventListener("pointerdown", () => (lastPointer = Date.now()), true);
@@ -3311,6 +3319,7 @@
     renderTimeline();
     bind();
     bindLinkCards();
+    bindTermKeys();
     route();
     const welcoming = maybeWelcome();
     const revealing = !welcoming && prepareReveal();
