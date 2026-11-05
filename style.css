@@ -213,7 +213,7 @@ textarea::placeholder { color: var(--muted); font: 300 .85rem/1.55 var(--sans); 
 .term {
   font: inherit; color: inherit; letter-spacing: inherit; text-transform: inherit;
   background: none; border: 0; padding: 0; margin: 0; cursor: pointer;
-  text-decoration: underline dotted 1px;
+  text-decoration-line: underline; text-decoration-style: dotted; text-decoration-thickness: 1px;
   text-decoration-color: color-mix(in srgb, var(--muted) 70%, transparent);
   text-underline-offset: .22em;
 }
@@ -493,7 +493,7 @@ button.quiet-inline { color: var(--muted); }
   border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); }
 .tl-year { display: block; color: var(--muted); font-size: .72rem; line-height: 1.4; letter-spacing: .06em; }
 .tl-path { display: block; background: none; border: 0; padding: .1rem 0 0; text-align: left; font: 400 1rem/1.4 var(--serif); color: var(--fg); cursor: pointer;
-  text-decoration: underline dotted 1px; text-decoration-color: color-mix(in srgb, var(--muted) 70%, transparent); text-underline-offset: .22em; }
+  text-decoration-line: underline; text-decoration-style: dotted; text-decoration-thickness: 1px; text-decoration-color: color-mix(in srgb, var(--muted) 70%, transparent); text-underline-offset: .22em; }
 .tl-path:focus-visible { outline: 1px solid var(--muted); outline-offset: 2px; }
 .tl-break { position: relative; margin: 1.1rem 0 1.1rem -1.1rem; padding: .2rem 0 .2rem 0; background: var(--bg);
   color: var(--muted); font-size: .75rem; display: flex; gap: .6rem; align-items: center; }

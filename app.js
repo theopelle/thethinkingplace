@@ -2026,6 +2026,37 @@
     } catch { return null; }
   }
 
+  // Leaving the app during a sit stops the sound (Android would play on in the background);
+  // coming back starts it afresh, fading in. An iPhone cuts the old sound off for good and
+  // only lets a new one play after a touch, so there it starts again at the first tap.
+  document.addEventListener("visibilitychange", () => {
+    if (!silence) return;
+    if (document.hidden) {
+      if (!silence.sound) return;
+      const old = silence.audio;
+      silence.sound = silence.soundStops = silence.audio = null;
+      silence.soundPaused = true;
+      try { old.close(); } catch {}
+      return;
+    }
+    if (!silence.soundPaused) return;
+    silence.soundPaused = false;
+    startSound();
+    const ctx = silence.audio;
+    if (!ctx || ctx.state === "running") return;
+    // Not allowed to play yet (iPhone): drop it and build the sound inside the next tap, at
+    // the finger's lift (touchend or click; a touch going down doesn't count as permission).
+    silence.sound = silence.soundStops = silence.audio = null;
+    try { ctx.close(); } catch {}
+    const wake = () => {
+      ["touchend", "click"].forEach((t) => document.removeEventListener(t, wake, true));
+      if (!silence || silence.sound) return;
+      startSound();
+      if (silence.audio) silence.audio.resume().catch(() => {});
+    };
+    ["touchend", "click"].forEach((t) => document.addEventListener(t, wake, true));
+  });
+
   function bell() {
     const ctx = silence && audioCtx();
     if (!ctx) return;
