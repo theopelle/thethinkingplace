@@ -21,6 +21,7 @@ import check_quotes
 import build_questions
 import build_pages
 import build_extras
+import build_cards
 
 PATHS = ["Stoicism", "Epicureanism", "Classical Greek Philosophy", "Enlightenment Ethics",
          "Existential Thought", "Humanists and Essayists", "Buddhist Philosophy", "Indian Philosophy",
@@ -178,6 +179,7 @@ def main(srcdir):
     build_questions.main()  # monthly questions: their excerpts and dates checked against what was just written
     build_pages.main()  # the Library: every thought on its thinker or text page
     build_extras.main()  # Compare two paths, Questions for good conversations: their thoughts checked
+    build_cards.main()  # one card per item (glossary words and Library pages), shown the same everywhere
     live = [e for e in entries if not e.get("retired")]
     print(f"{len(live)} thoughts (+{len(entries) - len(live)} retired) -> entries.json")
     print(f"{len(days)}-day cycle from {days[0]['date']} ({sum(r for _, r in cycle)} revisits), {len(pinned)} pinned dates "
@@ -223,6 +225,9 @@ def preview(entries, cycle, start):
 EXACT = {"Politics", "Margaret Fuller"}
 
 
+CARD_TYPES = {"Path", "Thinker", "Text", "Idea", "Book", "Person", "Character", "Place", "Word"}
+
+
 def build_glossary():
     """glossary.json from glossary.xlsx, keeping the matching rules of the old file."""
     old = {g["term"]: g for g in json.load(open(os.path.join(ROOT, "glossary.json"), encoding="utf-8"))}
@@ -230,18 +235,19 @@ def build_glossary():
     out = []
     for s in sheets["Schools"]:
         out.append({"term": s["School"], "match": split_list(s["Appears as"]) or [s["School"]],
-                    "wiki": wiki_title(s["Wikipedia"]), "def": s["Definition"],
+                    "wiki": wiki_title(s["Wikipedia"]), "def": s["Definition"], "type": "Path",
                     "school": {"who": s["We read"], "began": s["Began"],
                                "read": {"title": s["Start reading"], "url": START_READING[s["School"]]}}})
     for s in sheets["Core concepts"]:
         g = {"term": s["Term"], "match": split_list(s["Appears as"]) or [s["Term"]],
-             "scope": [s["School"]], "wiki": wiki_title(s["Wikipedia"]), "def": s["Definition"], "concept": True}
+             "scope": [s["School"]], "wiki": wiki_title(s["Wikipedia"]), "def": s["Definition"], "concept": True,
+             "type": s.get("Type")}
         if old.get(s["Term"], {}).get("exact") or s["Term"] in EXACT:
             g["exact"] = True
         out.append(g)
     for s in sheets["Other terms"]:
         g = {"term": s["Term"], "match": split_list(s["Appears as"]) or [s["Term"]],
-             "wiki": wiki_title(s["Wikipedia"]), "def": s["Definition"]}
+             "wiki": wiki_title(s["Wikipedia"]), "def": s["Definition"], "type": s.get("Type")}
         o = old.get(s["Term"], {})
         if o.get("scope"):  # terms that only make sense on some paths (e.g. the Chinese "li")
             g["scope"] = sorted({RENAMED.get(p, p) for p in o["scope"]})
@@ -251,6 +257,10 @@ def build_glossary():
     unknown = {p for g in out for p in g.get("scope", []) if p not in PATHS}
     if unknown:
         sys.exit(f"glossary scopes that are not paths: {unknown}")
+    # Each term's type, shown on its card (the Type column; Schools are Paths)
+    bad = [f"{g['term']}: {g.get('type')!r}" for g in out if g.get("type") not in CARD_TYPES]
+    if bad:
+        sys.exit("glossary terms without a known Type:\n" + "\n".join(bad))
     json.dump(out, open(os.path.join(ROOT, "glossary.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"{len(out)} glossary entries -> glossary.json")
 

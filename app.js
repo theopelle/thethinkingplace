@@ -982,6 +982,7 @@
   const PATH_ORDER = ["Stoicism", "Epicureanism", "Classical Greek Philosophy", "Enlightenment Ethics", "Existential Thought",
     "Humanists and Essayists", "Buddhist Philosophy", "Indian Philosophy", "Taoism", "Confucianism", "Japanese Aesthetics",
     "Persian and Sufi Poetry"];  // as on the About timeline
+  const LIB_PATHS = [...PATH_ORDER].sort((a, b) => a.localeCompare(b));  // the Library lists the paths A to Z (5 Nov 2026)
   const pageOf = (type, title) => library.pages.find((p) => p.type === type && p.title === title && pageShown(p.id));
   const plain = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "");
   // A to Z by surname: Kant under K, du Châtelet under C, the texts by their main word.
@@ -1171,7 +1172,7 @@
     const shown = (type) => library.pages.filter((p) => p.type === type && pageShown(p.id));
     const lists = {  // as on each section page
       time: () => shown("era").sort((a, b) => a.start - b.start || a.eraOrder - b.eraOrder),
-      paths: () => shown("path").sort((a, b) => PATH_ORDER.indexOf(a.title) - PATH_ORDER.indexOf(b.title)),
+      paths: () => shown("path").sort((a, b) => LIB_PATHS.indexOf(a.title) - LIB_PATHS.indexOf(b.title)),
       people: () => library.pages.filter((p) => (p.type === "thinker" || p.type === "text") && pageShown(p.id))
         .sort((a, b) => sortKey(a).localeCompare(sortKey(b))),
       topics: () => shown("topic").sort((a, b) => pageTitle(a).localeCompare(pageTitle(b))),
@@ -1297,7 +1298,7 @@
     }
     if (section === "paths") {
       const ul = make("ul", "lib-list two");
-      for (const p of shown("path").sort((a, b) => PATH_ORDER.indexOf(a.title) - PATH_ORDER.indexOf(b.title))) ul.append(libRow("#/page/" + p.id, p.title, firstLine(p)));
+      for (const p of shown("path").sort((a, b) => LIB_PATHS.indexOf(a.title) - LIB_PATHS.indexOf(b.title))) ul.append(libRow("#/page/" + p.id, p.title, firstLine(p)));
       body.append(ul);
     }
     if (section === "topics") {
@@ -1447,7 +1448,7 @@
         verdict.append(link);
       } else verdict.append(make("p", "quiet", !a ? "Pick two paths." : !b ? `${a}, and…` : "We haven't written this pair yet."));
     };
-    for (const p of PATH_ORDER) {
+    for (const p of LIB_PATHS) {
       const li = make("li"), b = make("button", "chip", p);
       b.type = "button";
       // A third pick replaces the older of the two.
@@ -2305,31 +2306,23 @@
 
   function openTerm(btn) {
     if (btn.dataset.feature) return showCard(btn, ...TOUR_FEATURES[btn.dataset.feature]);
-    const g = glossary[+btn.dataset.term];
-    if (!g) return;
-    const page = g.school ? (pageOf("path", g.term) || {}).id : g.concept ? library.glossaryLinks[g.term] : library.cards[g.term];
-    showCard(btn, g.term, g.def, g.wiki, g.school && schoolDetails(g), pageShown(page) ? page : null, g.concept ? "More in: " : "More about ");
+    const c = itemCards.term[+btn.dataset.term];
+    if (c) showItemCard(btn, c, cardQuiet);
   }
 
-  // A path's card is a small introduction: who we read, where it began, its key ideas
-  // (the concepts scoped to it in the glossary) and a free book to start with.
-  function schoolDetails(g) {
-    const ideas = glossary.filter((t) => t.concept && t.scope.includes(g.term)).map((t) => t.term);
-    const rows = [["We read", g.school.who], ["Began", g.school.began]];
-    if (ideas.length) rows.push(["Key ideas", ideas.join(", ")]);
-    const frag = document.createDocumentFragment();
-    for (const [label, value] of rows) {
-      const dt = document.createElement("dt"), dd = document.createElement("dd");
-      dt.textContent = label; dd.textContent = value;
-      frag.append(dt, dd);
-    }
-    const dt = document.createElement("dt"), dd = document.createElement("dd"), a = document.createElement("a");
-    dt.textContent = "Start reading";
-    a.href = g.school.read.url; a.target = "_blank"; a.rel = "noopener";
-    a.textContent = g.school.read.title + " (free)";
-    dd.append(a);
-    frag.append(dt, dd);
-    return frag;
+  // One card per item, the same everywhere (cards.json, built by tools/build_cards.py): its type, its
+  // title, the header line for thinkers, texts, and eras, its body, and its Library page ("More
+  // about …", "More in: …" for ideas) or, with no page, a quiet Wikipedia link.
+  let itemCards = { term: [], page: {} };
+  function showItemCard(btn, c, quiet) {
+    const page = c.page && pageShown(c.page) ? c.page : null;
+    cardQuiet = !!quiet;
+    showCard(btn, c.title, c.body, page ? null : c.wiki, null, page, c.lead);
+    cardQuiet = false;
+    $("term-kind").textContent = c.type;
+    $("term-kind").hidden = !c.type;
+    $("term-sub").textContent = c.header;
+    $("term-sub").hidden = !c.header;
   }
 
   function showCard(btn, title, text, wiki, more, page, lead = "More about ", down = false) {
@@ -2370,26 +2363,16 @@
 
   // ---------- Library links inside running text: a preview card ----------
   // The names inside a Library page's text, the path in its header line, and a monthly question's
-  // voices open a small card (type, title, header line, "In one line", "read the page →") instead
+  // voices open the item's card (cards.json: the same card as everywhere else) instead
   // of leaving mid-reading. Menus (Related, lists, the rail, "More about →") stay plain links.
   // Touch: a tap opens it. Mouse: hover opens it, a click goes to the page. Keyboard: focus opens
   // it, Enter goes to the page. With a mouse, the dotted glossary words open on hover too.
   let cardQuiet = false, cardByHover = false, hoverOpen = 0, hoverClose = 0, lastPointer = 0;
   const fineMouse = matchMedia("(hover: hover) and (pointer: fine)");
   function showPageCard(link, quiet) {
-    const p = pageById[link.dataset.page];
-    if (!p) return;
-    const one = p.sections.find(([t]) => t === "In one line");
-    const text = one ? stripMd(one[1]) : (stripMd((p.sections[0] || ["", ""])[1]).split(/\n\s*\n/)[0].match(/^.*?[.!?](?=\s|$)/) || [""])[0];
-    cardQuiet = quiet;
-    showCard(link, pageTitle(p), text, null, null, p.id, "");
-    cardQuiet = false;
-    $("term-page").firstChild.textContent = "read the page →";
-    $("term-kind").textContent = KIND[p.type] || "";
-    $("term-kind").hidden = !KIND[p.type];
-    const sub = (p.type === "era" ? p.header.slice(0, 1) : p.header).join(" · ");
-    $("term-sub").textContent = sub;
-    $("term-sub").hidden = !sub;
+    const c = itemCards.page[link.dataset.page];
+    if (!c) return;
+    showItemCard(link, c, quiet);
     link.setAttribute("aria-expanded", "true");
   }
   function openHovered(el) {
@@ -2397,7 +2380,7 @@
     if (el.classList.contains("lib-card")) return showPageCard(el, true);
     cardQuiet = true;
     if (el.classList.contains("term")) openTerm(el);
-    cardQuiet = false;
+    cardQuiet = false;  // (openTerm passes it on to the card)
   }
   function bindLinkCards() {
     document.addEventListener("pointerdown", () => (lastPointer = Date.now()), true);
@@ -2452,9 +2435,9 @@
 
   // A path on the About page timeline: its card, as on the daily page.
   function openPath(btn) {
-    const g = glossary.find((t) => t.school && t.term === btn.dataset.path);
-    if (!g) return;
-    showCard(btn, g.term, g.def, g.wiki, schoolDetails(g), (pageOf("path", g.term) || {}).id);
+    const i = glossary.findIndex((t) => t.school && t.term === btn.dataset.path);
+    if (i < 0 || !itemCards.term[i]) return;
+    showItemCard(btn, itemCards.term[i]);
     btn.setAttribute("aria-expanded", "true");
   }
 
@@ -3279,6 +3262,7 @@
       pageById = Object.fromEntries(library.pages.map((p) => [p.id, p]));
     } catch {}
     try { extras = await fetch("extras.json", { cache: "no-cache" }).then((r) => r.json()); } catch {}
+    try { itemCards = await fetch("cards.json", { cache: "no-cache" }).then((r) => r.json()); } catch {}
     if (libraryOn()) {
       // The bottom bar: today · past thoughts · library · settings. About leaves it.
       $("nav-library").hidden = $("nav-library-dot").hidden = false;

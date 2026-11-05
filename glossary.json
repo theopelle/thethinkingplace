@@ -8,6 +8,7 @@
   ],
   "wiki": "Stoicism",
   "def": "A school of philosophy founded in Athens around 300 BCE. It teaches that a good life comes from virtue and from accepting calmly what lies outside our control.",
+  "type": "Path",
   "school": {
    "who": "Marcus Aurelius, Epictetus, Seneca, Boethius",
    "began": "Athens, around 300 BCE",
@@ -25,6 +26,7 @@
   ],
   "wiki": "Epicureanism",
   "def": "A school of philosophy founded by Epicurus in Athens around 307 BCE. It holds that a happy life comes from simple pleasures, friendship and freedom from fear.",
+  "type": "Path",
   "school": {
    "who": "Epicurus, Lucretius",
    "began": "Athens, around 307 BCE",
@@ -45,6 +47,7 @@
   ],
   "wiki": "Ancient_Greek_philosophy",
   "def": "Greek philosophy from its beginnings to Aristotle. Heraclitus asked how a world of constant change holds together; Socrates and Plato turned to how we should live; Aristotle made ethics a practice of building good character.",
+  "type": "Path",
   "school": {
    "who": "Heraclitus, Socrates, Plato, Aristotle",
    "began": "Ephesus and Athens, 6th–4th century BCE",
@@ -64,6 +67,7 @@
   ],
   "wiki": "Age_of_Enlightenment",
   "def": "Moral and political thought from the 17th to 19th centuries that put reason, evidence and freedom at the centre: Hobbes and Locke on why we need government, Descartes' method of doubt, Spinoza's freedom through understanding, Hume and Adam Smith on feeling, Voltaire's tolerance, Rousseau and Diderot on nature and the passions, Kant's duty, Mill's greatest happiness, and the case for women's minds made by Émilie du Châtelet and Mary Wollstonecraft.",
+  "type": "Path",
   "school": {
    "who": "Descartes, Hobbes, Spinoza, Locke, Hume, Voltaire, Émilie du Châtelet, Adam Smith, Rousseau, Diderot, Kant, Mary Wollstonecraft, Mill",
    "began": "Across Europe, 1630s–1860s",
@@ -83,6 +87,7 @@
   ],
   "wiki": "Existentialism",
   "def": "Writers who faced the big questions of human existence: freedom, suffering, meaning and how to live with them, from Pascal to Simone Weil (1650s–1940s). They came before or alongside existentialism; its best-known figures, such as Sartre and Camus, are still under copyright.",
+  "type": "Path",
   "school": {
    "who": "Pascal, Schopenhauer, Dostoevsky, Tolstoy, Nietzsche, William James, Simone Weil",
    "began": "Paris, 1650s, then across Europe and America",
@@ -105,6 +110,7 @@
   ],
   "wiki": "Renaissance_humanism",
   "def": "Writers who explored how to live in personal prose and poetry rather than in systems: Petrarch and Erasmus, who revived ancient wisdom; Machiavelli's hard look at power; the essays of Montaigne and Bacon; the French moralists La Rochefoucauld, La Bruyère, Vauvenargues and Chamfort; and the American Transcendentalists and poets of the 1800s, who trusted intuition, nature and self-reliance.",
+  "type": "Path",
   "school": {
    "who": "Petrarch, Erasmus, Machiavelli, Montaigne, Francis Bacon, La Rochefoucauld, La Bruyère, Vauvenargues, Chamfort, Emerson, Margaret Fuller, Thoreau, Emily Dickinson, George Eliot",
    "began": "Italy, 1340s; then France, England and New England",
@@ -123,6 +129,7 @@
   ],
   "wiki": "Buddhism",
   "def": "The teachings of the Buddha (India, around the 5th century BCE) read as practical philosophy: an ethics and a training of the mind aimed at ending suffering.",
+  "type": "Path",
   "school": {
    "who": "The Buddha (the Dhammapada), The Questions of King Milinda",
    "began": "Northern India, 5th century BCE",
@@ -142,6 +149,7 @@
   ],
   "wiki": "Hindu_philosophy",
   "def": "Philosophy from India's Hindu tradition, built on the Upanishads and the Bhagavad Gita and carried into modern times by Vivekananda and Tagore. Its central idea, from the Vedanta school, is that the deepest self (Atman) is one with ultimate reality (Brahman). Buddhist philosophy, also born in India, has its own path.",
+  "type": "Path",
   "school": {
    "who": "The Upanishads, the Bhagavad Gita, Vivekananda, Tagore",
    "began": "Northern India, 1st millennium BCE",
@@ -159,6 +167,7 @@
   ],
   "wiki": "Taoism",
   "def": "A Chinese tradition of thought going back to Laozi and Zhuangzi, in the 4th century BCE or earlier. It teaches living in harmony with the Tao, the natural way of things, through simplicity and effortless action.",
+  "type": "Path",
   "school": {
    "who": "Laozi, Zhuangzi",
    "began": "Central China, 4th century BCE or earlier",
@@ -176,6 +185,7 @@
   ],
   "wiki": "Confucianism",
   "def": "A Chinese tradition of thought founded on the teachings of Confucius in the 6th–5th century BCE. It centres on cultivating good character, learning, and harmony in families and society.",
+  "type": "Path",
   "school": {
    "who": "Confucius and his students, Mencius",
    "began": "Qufu, China, 6th–5th century BCE",
@@ -192,6 +202,7 @@
   ],
   "wiki": "Japanese_aesthetics",
   "def": "Japanese ideals of beauty: finding it in what is simple, imperfect and passing, and paying full attention to small moments.",
+  "type": "Path",
   "school": {
    "who": "Sei Shōnagon, Kamo no Chōmei, Kenkō, Okakura Kakuzō",
    "began": "Kyoto, from around 1000 CE",
@@ -211,6 +222,7 @@
   ],
   "wiki": "Persian_literature",
   "def": "Wisdom poetry from the Persian-speaking world and from Sufism, the mystical tradition of Islam. Omar Khayyam questions and celebrates the present; Sa'di teaches through stories; Rumi and Hafiz write of love and longing; al-Ghazali and Ibn Arabi map the inner path.",
+  "type": "Path",
   "school": {
    "who": "Omar Khayyam, al-Ghazali, Ibn Arabi, Rumi, Sa'di, and Hafiz",
    "began": "Persia and the wider Islamic world, 11th–14th century",
@@ -230,7 +242,8 @@
   ],
   "wiki": "Memento_mori",
   "def": "The Stoics kept death in view on purpose. Remembering that life is short was meant not to frighten but to sharpen attention to the present and to what matters.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Discourses",
@@ -242,7 +255,8 @@
   ],
   "wiki": "Discourses_of_Epictetus",
   "def": "Records of Epictetus' lectures, written down by his student Arrian in the 2nd century CE. Four of the original eight books survive.",
-  "concept": true
+  "concept": true,
+  "type": "Book"
  },
  {
   "term": "Fortune",
@@ -255,7 +269,8 @@
   ],
   "wiki": "Rota_Fortunae",
   "def": "For Boethius, as for the Stoics before him, Fortune is the goddess of luck whose wheel never stops turning. Wealth, rank and fame are her gifts and she can take them back; only what is within us is truly ours.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Judgment",
@@ -270,7 +285,8 @@
   ],
   "wiki": "Stoic_passions",
   "def": "For the Stoics, what upsets us is not events but our judgment about them. An impression arrives and we decide whether to agree with it; fear and anger follow from that agreement, so changing the judgment changes the feeling.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Tranquillity",
@@ -283,7 +299,8 @@
   ],
   "wiki": "De_Tranquillitate_Animi",
   "def": "The steady, untroubled mind the Stoics aimed for. Seneca, in On Tranquillity of Mind, borrows the Greek word euthymia: a mind at peace with itself, reached through right judgment rather than outside comfort.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Virtue",
@@ -296,7 +313,8 @@
   ],
   "wiki": "Stoicism",
   "def": "For the Stoics, virtue (wisdom, justice, courage and self-control) is the only true good. Health, wealth and reputation are 'indifferent': pleasant to have, but they cannot make a life good or bad.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "What is in our power",
@@ -310,7 +328,8 @@
   ],
   "wiki": "Enchiridion_of_Epictetus",
   "def": "Epictetus' basic division of life. Our judgments, intentions and actions are up to us; our body, possessions, reputation and other people's choices are not. Peace comes from caring most about the first and accepting the second.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Death",
@@ -322,7 +341,8 @@
   ],
   "wiki": "Epicurus",
   "def": "Epicurus' best-known teaching: death is nothing to us. Where death is, we are not; where we are, death is not. Fearing it only spoils the life we have now.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Desire",
@@ -335,7 +355,8 @@
   ],
   "wiki": "Epicureanism",
   "def": "Epicurus sorted desires into three kinds: natural and necessary (food, shelter, friends), natural but unnecessary (luxuries), and empty ones (fame, power, endless wealth). Only the first need satisfying; the empty ones never can be.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Friendship",
@@ -348,7 +369,8 @@
   ],
   "wiki": "Epicurus",
   "def": "Epicurus counted friendship among the greatest goods of a pleasant life. He lived with his friends in a shared garden and saw them as our best security in an uncertain world.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Pleasure",
@@ -361,7 +383,8 @@
   ],
   "wiki": "Epicureanism",
   "def": "For Epicurus, pleasure is the goal of life, but he meant above all the absence of pain in the body and of trouble in the mind, not indulgence. Simple pleasures, wisely chosen, are enough.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Soul",
@@ -373,7 +396,8 @@
   ],
   "wiki": "Epicureanism",
   "def": "For Epicurus and Lucretius, the soul is made of fine atoms spread through the body. It feels and thinks, but it scatters when we die, which is why death is 'nothing to us'.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "The Garden",
@@ -385,7 +409,8 @@
   ],
   "wiki": "Epicureanism",
   "def": "Epicurus' school and community in Athens, named after the garden where its members lived and studied. Unusually for its time, it welcomed women and slaves.",
-  "concept": true
+  "concept": true,
+  "type": "Place"
  },
  {
   "term": "Apology",
@@ -397,7 +422,8 @@
   ],
   "wiki": "Apology_(Plato)",
   "def": "Plato's account of Socrates' speech in his own defence at his trial in 399 BCE. 'Apology' here means a defence, not saying sorry.",
-  "concept": true
+  "concept": true,
+  "type": "Book"
  },
  {
   "term": "Change",
@@ -410,7 +436,8 @@
   ],
   "wiki": "Heraclitus",
   "def": "Heraclitus taught that everything is in constant change, like a river whose water is always new. What looks stable is really a balance of opposing forces, always becoming rather than simply being.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Daimon",
@@ -423,7 +450,8 @@
   ],
   "wiki": "Daimon",
   "def": "A guiding spirit in Greek belief. When Heraclitus says character is a person's guardian divinity (daimon), he means what shapes our life is who we are, not the gods. It is often translated 'character is fate'.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Friendship",
@@ -437,7 +465,8 @@
   ],
   "wiki": "Philia",
   "def": "Aristotle's philia covers friendship and affection. He names three kinds: friendships of usefulness, of pleasure and of goodness. Only the last lasts, because each loves the other for who they are.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Habit",
@@ -450,7 +479,8 @@
   ],
   "wiki": "Hexis",
   "def": "Aristotle held that character is formed by habit: we become just by doing just acts. The result is a hexis, a stable disposition, which is why early training matters so much.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Happiness",
@@ -462,7 +492,8 @@
   ],
   "wiki": "Eudaimonia",
   "def": "Aristotle's word is eudaimonia, often translated 'flourishing'. It is not a passing mood but a whole life lived well, in line with virtue, and the one thing we want purely for its own sake.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Justice",
@@ -476,7 +507,8 @@
   ],
   "wiki": "Republic_(Plato)",
   "def": "In the Republic, justice is not only fair dealing with others but order within: each part of the soul doing its own work, with reason in charge. Socrates argues it is better to suffer wrong than to do it.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Laws",
@@ -488,7 +520,8 @@
   ],
   "wiki": "Laws_(dialogue)",
   "def": "Plato's last and longest dialogue, designing the laws of an imagined city. It is the only one in which Socrates does not appear.",
-  "concept": true
+  "concept": true,
+  "type": "Book"
  },
  {
   "term": "Love",
@@ -500,7 +533,8 @@
   ],
   "wiki": "Platonic_love",
   "def": "Love (eros) in Plato's Symposium is a longing for what we lack. Diotima describes it as a ladder, from one beautiful body to beautiful souls and ideas, and finally to beauty itself. This is the origin of 'Platonic love'.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Philosophy",
@@ -513,7 +547,8 @@
   ],
   "wiki": "Philosophy",
   "def": "From the Greek for 'love of wisdom'. For Plato's Socrates, a philosopher does not possess wisdom but longs for it, and philosophy is a way of life: examining oneself and turning the soul toward what is true.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Pleasure",
@@ -526,7 +561,8 @@
   ],
   "wiki": "Nicomachean_Ethics",
   "def": "For Aristotle, pleasure is not the aim but what completes a good activity. A good person enjoys acting well, so training what we take pleasure and pain in lies at the heart of ethics.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Socratic wisdom",
@@ -538,7 +574,8 @@
   ],
   "wiki": "I_know_that_I_know_nothing",
   "def": "When the oracle called Socrates the wisest man in Athens, he concluded that his only wisdom was knowing that he did not know. Others thought they knew; he did not pretend to.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Soul",
@@ -550,7 +587,8 @@
   ],
   "wiki": "Plato's_theory_of_soul",
   "def": "For Plato, the soul (psyche) is the true self: what thinks, chooses and, he believed, outlives the body. In the Republic he divides it into reason, spirit and appetite; a healthy soul is one where reason leads.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "The mean",
@@ -564,7 +602,8 @@
   ],
   "wiki": "Golden_mean_(philosophy)",
   "def": "Aristotle's idea that each virtue lies between two vices, one of excess and one of deficiency: courage sits between recklessness and cowardice. The mean is not an exact midpoint but what fits the person and the moment.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Virtue",
@@ -576,7 +615,8 @@
   ],
   "wiki": "Arete",
   "def": "Virtue (aretē) means excellence: being good at being human. Socrates held that virtue is a kind of knowledge, so no one does wrong knowingly. Aristotle added that it is a settled trait of character, built by practice the way a skill is: we become brave by doing brave things.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Custom",
@@ -589,7 +629,8 @@
   ],
   "wiki": "Problem_of_induction",
   "def": "Hume's name for habit in our thinking. We expect the future to be like the past not because we have proven it, but because experience has trained us to.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Duty",
@@ -602,7 +643,8 @@
   ],
   "wiki": "Kantian_ethics",
   "def": "For Kant, an action has moral worth only when done from duty, out of respect for the moral law, not merely from inclination or self-interest. Duty is what reason says we must do, whatever we happen to feel.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Good will",
@@ -614,7 +656,8 @@
   ],
   "wiki": "Kantian_ethics",
   "def": "Kant's starting point: nothing is good without qualification except a good will. Talents, courage and even happiness can be misused; a will set on doing right stays good even if it fails.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Groundwork",
@@ -626,7 +669,8 @@
   ],
   "wiki": "Groundwork_of_the_Metaphysics_of_Morals",
   "def": "Kant's short book of 1785, the Groundwork of the Metaphysic of Morals, which sets out the foundations of his ethics, including the categorical imperative.",
-  "concept": true
+  "concept": true,
+  "type": "Book"
  },
  {
   "term": "Happiness",
@@ -638,7 +682,8 @@
   ],
   "wiki": "Utilitarianism",
   "def": "Enlightenment thinkers disagree. For Mill, happiness means pleasure and the absence of pain, and it is the measure of right and wrong, with everyone counting equally. For Kant, happiness is too vague to guide us: morality is about becoming worthy of it. For du Châtelet, it depends on health, passions and freedom from prejudice. For Rousseau, lasting happiness is not made for a world that always changes, so we should enjoy contentment when it comes.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Individuality",
@@ -651,7 +696,8 @@
   ],
   "wiki": "On_Liberty",
   "def": "Mill saw individuality, developing your own character, desires and judgment rather than copying custom, as part of happiness itself. People are not machines built to a pattern but trees that grow in their own way.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Liberty",
@@ -664,7 +710,8 @@
   ],
   "wiki": "On_Liberty",
   "def": "Enlightenment thinkers saw freedom in different ways. For Locke, good laws protect it from other people's arbitrary will; for Rousseau, it means never being made to do what we do not want, and people are born free yet everywhere in chains; for Mill, in On Liberty, people should be free to think, speak and live as they choose, as long as they do not harm others.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Mill's Autobiography",
@@ -676,7 +723,8 @@
   ],
   "wiki": "John_Stuart_Mill",
   "def": "Mill's account of his unusual education and of the mental crisis he went through at twenty, published in 1873, the year he died.",
-  "concept": true
+  "concept": true,
+  "type": "Book"
  },
  {
   "term": "Moral law",
@@ -689,7 +737,8 @@
   ],
   "wiki": "Categorical_imperative",
   "def": "The principle reason gives every rational being, which Kant calls the categorical imperative: act only on a rule you could will everyone to follow, and treat people always as ends, never merely as means.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Passions",
@@ -704,7 +753,8 @@
   ],
   "wiki": "Passions_(philosophy)",
   "def": "Strong feelings and desires. Spinoza called being ruled by them 'bondage' and believed understanding them sets us free; Hume thought reason can only serve the passions, never rule them; Diderot defended them: only great passions, he wrote, raise us to great things.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Reason",
@@ -716,7 +766,8 @@
   ],
   "wiki": "Age_of_Enlightenment",
   "def": "Enlightenment thinkers disagreed about reason's power. Kant made it the source of morality; Hume said it only serves our feelings; Wollstonecraft argued that women deserve to develop it as fully as men.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Respect",
@@ -728,7 +779,8 @@
   ],
   "wiki": "Kantian_ethics",
   "def": "In Kant, respect is the feeling produced by reason itself: being humbled by the moral law, and by people who live up to it. Acting from duty means acting out of this respect.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Sympathy",
@@ -740,7 +792,8 @@
   ],
   "wiki": "The_Theory_of_Moral_Sentiments",
   "def": "Adam Smith's word for our ability to share in others' feelings by imagining ourselves in their place. In The Theory of Moral Sentiments he makes it the root of morality.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Active love",
@@ -752,7 +805,8 @@
   ],
   "wiki": "The_Brothers_Karamazov",
   "def": "Zosima's ideal in The Brothers Karamazov: love shown in patient, daily deeds toward real and difficult people, rather than in dreams of loving humanity. It is slow and costly, and it is what heals.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Attention",
@@ -764,7 +818,8 @@
   ],
   "wiki": "Simone_Weil",
   "def": "For Simone Weil, attention means emptying our mind of its own opinions so that we can truly receive what is in front of us: a problem, a person, or God. She called it the rarest and purest form of generosity.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Become who you are",
@@ -776,7 +831,8 @@
   ],
   "wiki": "Ecce_Homo_(book)",
   "def": "A line Nietzsche took from the Greek poet Pindar. It asks us to grow into our own nature instead of living by borrowed values. He later subtitled his autobiography 'How One Becomes What One Is'.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Boredom",
@@ -788,7 +844,8 @@
   ],
   "wiki": "Arthur_Schopenhauer",
   "def": "Schopenhauer saw life swinging between pain, when we lack things, and boredom, when we have them. Freedom from both is about as much happiness as he thought we can expect.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Diversion",
@@ -801,7 +858,8 @@
   ],
   "wiki": "Pensées",
   "def": "Pascal's word (divertissement) for everything we do to avoid being alone with our thoughts: games, busyness, noise. It consoles us, he says, but keeps us from facing our condition.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Self-deception",
@@ -815,7 +873,8 @@
   ],
   "wiki": "Self-deception",
   "def": "Lying to oneself: hiding from a truth we half know. Dostoevsky saw it as a root of unhappiness, and later existentialists made it a central theme: we flee our freedom by pretending things are fixed.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Solitude",
@@ -828,7 +887,8 @@
   ],
   "wiki": "Arthur_Schopenhauer",
   "def": "Schopenhauer, who lived alone for most of his later life, valued solitude as the condition for thinking freely. In company we adjust to others; alone we can be ourselves.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "The heart's reasons",
@@ -840,7 +900,8 @@
   ],
   "wiki": "Pensées",
   "def": "Pascal's claim that not all knowing is logical: some truths are grasped by intuition and feeling, which he calls the heart, before reason can prove them.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Essay",
@@ -853,7 +914,8 @@
   ],
   "wiki": "Essay",
   "def": "From the French essai, 'attempt' or 'trial'. Montaigne used the word for his short pieces in which he tests his judgment on any subject, starting with himself, and made it a new literary form. Francis Bacon took up the word for his own Essays, first published in 1597.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Maxim",
@@ -866,7 +928,8 @@
   ],
   "wiki": "François_de_La_Rochefoucauld_(writer)",
   "def": "A short, sharp saying that sums up a truth about human behaviour. La Rochefoucauld's maxims are famous for exposing vanity and self-love (amour-propre) behind our good actions. In the 18th century Vauvenargues gave the form a warmer voice, trusting feeling, while Chamfort sharpened it into social satire.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Self-reliance",
@@ -880,7 +943,8 @@
   ],
   "wiki": "Self-Reliance",
   "def": "Emerson's ideal: trusting your own thought and conscience instead of conforming. It is not selfishness but the courage to be an original rather than a copy.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Simplicity",
@@ -894,7 +958,8 @@
   ],
   "wiki": "Walden",
   "def": "Thoreau's answer to a life 'frittered away by detail': fewer possessions, fewer affairs and fewer demands, so that there is room to live deliberately.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Craving",
@@ -906,7 +971,8 @@
   ],
   "wiki": "Taṇhā",
   "def": "Taṇhā, literally 'thirst': the restless wanting of pleasure, of being, or of not-being. Buddhism names it as the main cause of suffering; letting it go is the way to peace.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Dhamma (the law)",
@@ -920,7 +986,8 @@
   ],
   "wiki": "Dharma_(Buddhism)",
   "def": "In the Dhammapada, 'the law' translates Dhamma: the Buddha's teaching and the truth about how things are. It is not law in the legal sense.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Hatred",
@@ -932,7 +999,8 @@
   ],
   "wiki": "Three_poisons",
   "def": "One of the three 'poisons' or unwholesome roots in Buddhism, with greed and delusion. Hatred keeps the cycle of harm turning; the Dhammapada says it ends only through its opposite.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Mind",
@@ -944,7 +1012,8 @@
   ],
   "wiki": "Citta",
   "def": "In the Dhammapada the mind (citta) comes first: as we think, so we become. It is restless by nature but can be trained, and a well-trained mind is the greatest help we have.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Self",
@@ -956,7 +1025,8 @@
   ],
   "wiki": "Anattā",
   "def": "Buddhism teaches anattā, 'non-self': nothing in us is a fixed, permanent essence. When the Dhammapada calls the self its own master, it means our own effort and conduct, which no one else can tend for us.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Suffering",
@@ -970,7 +1040,8 @@
   ],
   "wiki": "Dukkha",
   "def": "Dukkha means suffering, but also unease and unsatisfactoriness: the sense that nothing we grasp stays or fully satisfies. Seeing it clearly is the first of the Four Noble Truths.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "The wise",
@@ -985,7 +1056,8 @@
   ],
   "wiki": "Dhammapada",
   "def": "A whole chapter of the Dhammapada is about the wise (paṇḍita). It means not the learned but those who see clearly, train themselves, stay steady through praise and blame, and do no harm.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Brahman",
@@ -998,7 +1070,8 @@
   ],
   "wiki": "Brahman",
   "def": "The ultimate reality behind all things, beyond what the senses can grasp. The Upanishads call it 'the True' and say: you are it.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Dharma",
@@ -1011,7 +1084,8 @@
   ],
   "wiki": "Dharma",
   "def": "One's rightful duty or path, fitting one's nature and place in life. The Gita says it is better to follow your own dharma imperfectly than someone else's perfectly.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Karma",
@@ -1026,7 +1100,8 @@
   ],
   "wiki": "Karma",
   "def": "Literally 'action'. Every act shapes the one who does it and has consequences that come back to them. Karma yoga is the path of acting well without clinging to the results.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Non-attachment",
@@ -1040,7 +1115,8 @@
   ],
   "wiki": "Nishkam_Karma",
   "def": "The Gita's central teaching: do your work fully, but without depending on its 'fruit', the reward or result. Vivekananda saw it as the secret of working without stress.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Self (Atman)",
@@ -1053,7 +1129,8 @@
   ],
   "wiki": "Ātman_(Hinduism)",
   "def": "In Vedanta, Atman is the deepest self: not the body or the passing mind, but the awareness behind them. The Upanishads teach that it is one with Brahman, the reality behind everything.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Yoga",
@@ -1067,7 +1144,8 @@
   ],
   "wiki": "Yoga",
   "def": "From a root meaning 'to join'. In the Gita it means a discipline that unites us with the divine, through action, knowledge or devotion. Telang's translation often renders it as 'devotion'.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Emptiness",
@@ -1080,7 +1158,8 @@
   ],
   "wiki": "Tao_Te_Ching",
   "def": "Laozi's image: a wheel, a bowl or a room is useful because of its empty space. Emptiness is not lack but room, an openness that lets things happen.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Great knowledge",
@@ -1093,7 +1172,8 @@
   ],
   "wiki": "Zhuangzi_(book)",
   "def": "Zhuangzi distrusts knowledge that is sure of itself. Small knowledge sees a part and takes it for the whole; great knowledge holds its views lightly, knowing a limited life cannot master a limitless world.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Li",
@@ -1106,6 +1186,7 @@
   "wiki": "Li_(unit)",
   "def": "A traditional Chinese measure of distance. It varied over the centuries, but was usually about a third of a mile; today it is half a kilometre.",
   "concept": true,
+  "type": "Word",
   "exact": true
  },
  {
@@ -1120,7 +1201,8 @@
   ],
   "wiki": "Tao_Te_Ching",
   "def": "A recurring Taoist teaching: the soft and yielding outlast the hard and rigid. Water wears down stone; a living plant bends where a dead one breaks.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Stillness",
@@ -1134,7 +1216,8 @@
   ],
   "wiki": "Wu_wei",
   "def": "Muddy water clears when left alone. Taoists prize stillness and not forcing things, letting them settle by themselves, close to the ideal of wu wei, effortless action.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "The useless tree",
@@ -1147,7 +1230,8 @@
   ],
   "wiki": "Zhuangzi_(book)",
   "def": "Zhuangzi's old tree is worthless to the carpenter, and that is why it lived so long. What the world calls useless may be what lets something flourish on its own terms.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Water",
@@ -1159,7 +1243,8 @@
   ],
   "wiki": "Tao_Te_Ching",
   "def": "Taoism's favourite image of the Tao. Water benefits all things without competing, settles in the low places others avoid, and yet nothing overcomes the hard so well.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Learning",
@@ -1172,7 +1257,8 @@
   ],
   "wiki": "Analects",
   "def": "For Confucius, learning is the path to becoming fully human: not collecting facts, but studying, reflecting and practising until what we know shapes who we are.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Mean man",
@@ -1185,7 +1271,8 @@
   ],
   "wiki": "Junzi",
   "def": "Legge's translation of xiaoren, the 'small person': not poor or low-born, but petty, concerned with gain and comfort, and quick to blame others. The opposite of the superior man.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Reciprocity",
@@ -1197,7 +1284,8 @@
   ],
   "wiki": "Golden_Rule",
   "def": "Shu in Chinese: treating others as you would wish to be treated or, as Confucius put it, not doing to others what you would not want done to yourself.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Superior man",
@@ -1210,7 +1298,8 @@
   ],
   "wiki": "Junzi",
   "def": "Legge's translation of junzi, a person of noble character. For Confucius, nobility comes not from birth but from cultivating virtue, learning and integrity, so anyone can become one.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "The mean",
@@ -1223,7 +1312,8 @@
   ],
   "wiki": "Doctrine_of_the_Mean",
   "def": "The Confucian ideal of zhongyong, steady balance in feeling and action: neither too much nor too little. Aristotle reached a similar idea in Greece.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Virtue",
@@ -1237,7 +1327,8 @@
   ],
   "wiki": "Ren_(philosophy)",
   "def": "Often Legge's word for ren, Confucius' highest virtue: humaneness, the goodness that shows in how we treat others. It includes kindness, trustworthiness, courage and reciprocity.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Beauty",
@@ -1250,7 +1341,8 @@
   ],
   "wiki": "The_Book_of_Tea",
   "def": "For Okakura, Teaism is the adoration of the beautiful in everyday life: beauty found in small, ordinary things given full attention, rather than in display.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Emptiness",
@@ -1263,7 +1355,8 @@
   ],
   "wiki": "Ma_(negative_space)",
   "def": "Okakura, echoing Laozi, says the use of a pitcher lies in its emptiness. Japanese aesthetics calls this meaningful open space or pause ma: room that lets things breathe.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Imperfection",
@@ -1276,7 +1369,8 @@
   ],
   "wiki": "Wabi-sabi",
   "def": "Okakura calls Teaism a worship of the Imperfect. The related ideal of wabi-sabi finds beauty in what is incomplete, worn or passing, leaving room for the imagination to finish it.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Impermanence",
@@ -1289,7 +1383,8 @@
   ],
   "wiki": "Mono_no_aware",
   "def": "The passing of all things (mujō) runs through Japanese writing. Mono no aware, 'the pathos of things', is the gentle feeling it brings: things are dearer because they do not last.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Seasons",
@@ -1303,7 +1398,8 @@
   ],
   "wiki": "The_Pillow_Book",
   "def": "In Japanese writing each season has its own moods and images. Sei Shōnagon's Pillow Book opens by naming the most beautiful moment of each, a lesson in noticing the present.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Divine love",
@@ -1317,7 +1413,8 @@
   ],
   "wiki": "Sufi_poetry",
   "def": "For Sufi poets, love (ishq) is the path to God and God himself. Human love, wine and longing in their poems are often images of the soul's love for the divine.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Halting-station",
@@ -1331,7 +1428,8 @@
   ],
   "wiki": "Caravanserai",
   "def": "A rest stop on a caravan route, where travellers spent the night; a caravanserai was the roadside inn built for them. Persian poets use both for life as a short stay on a longer journey.",
-  "concept": true
+  "concept": true,
+  "type": "Word"
  },
  {
   "term": "Heart",
@@ -1344,7 +1442,8 @@
   ],
   "wiki": "Qalb",
   "def": "In Sufism the heart (qalb) is the organ of spiritual knowledge. It is pictured as a mirror: rusted by pride and desire, it must be polished until it reflects the light of God.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "The lower self",
@@ -1357,7 +1456,8 @@
   ],
   "wiki": "Nafs",
   "def": "The nafs: the ego, with its pride and cravings. Much of the Sufi path is about taming it so that the true self can emerge; Rumi calls it being 'free from self'.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Wine",
@@ -1372,7 +1472,8 @@
   ],
   "wiki": "Persian_literature",
   "def": "In Persian poetry, wine is rarely only wine. For Khayyam it often stands for enjoying the present while we can; for Sufi poets such as Hafiz it is an image of the joy of spiritual love.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Tolerance",
@@ -1384,7 +1485,8 @@
   ],
   "wiki": "Toleration",
   "def": "Accepting that others may believe and live differently. It was Voltaire's great cause: after Europe's long wars over doctrine, he argued that since we are all weak and mistaken, we should forgive one another's errors. Mill extended it to unusual characters and ways of life.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Prejudice",
@@ -1397,7 +1499,8 @@
   ],
   "wiki": "Prejudice",
   "def": "An opinion held without judgement, usually picked up in childhood before we could weigh it. Voltaire adds that some prejudices are good: the ones our judgement confirms once we reason. Du Châtelet counted freedom from prejudice as a source of happiness.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Social contract",
@@ -1410,7 +1513,8 @@
   ],
   "wiki": "Social_contract",
   "def": "The idea that a state rests on an agreement among the people it governs. Hobbes, Locke and Rousseau gave it different forms: for Hobbes, people give up some freedom for safety; for Locke, government must protect life, liberty and property; for Rousseau, citizens together make the laws they obey.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Commonwealth",
@@ -1424,7 +1528,8 @@
   ],
   "wiki": "Commonwealth",
   "def": "Hobbes's word for an organised state, made when people agree to live under a common power. In Leviathan he argues that only such a power brings peace, and with peace the leisure to think.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Citizen of the world",
@@ -1437,7 +1542,8 @@
   ],
   "wiki": "Cosmopolitanism",
   "def": "Someone loyal to humanity as a whole rather than to one country. Voltaire ends his article on the homeland with this ideal; the phrase goes back to the ancient Greek thinker Diogenes.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Diderot effect",
@@ -1449,7 +1555,8 @@
   ],
   "wiki": "Diderot_effect",
   "def": "The modern name, given long after Diderot, for a chain of new wants: one new possession makes everything around it look shabby, so we replace that too. It comes from his essay on his new dressing gown.",
-  "concept": true
+  "concept": true,
+  "type": "Idea"
  },
  {
   "term": "Dhammapada",
@@ -1457,7 +1564,8 @@
    "Dhammapada"
   ],
   "wiki": "Dhammapada",
-  "def": "A collection of 423 verses attributed to the Buddha, one of the best-loved Buddhist scriptures. Its name means roughly 'path of the teaching'."
+  "def": "A collection of 423 verses attributed to the Buddha, one of the best-loved Buddhist scriptures. Its name means roughly 'path of the teaching'.",
+  "type": "Text"
  },
  {
   "term": "Buddha",
@@ -1466,7 +1574,8 @@
    "Buddha"
   ],
   "wiki": "The_Buddha",
-  "def": "Siddhartha Gautama, a spiritual teacher in ancient India and the founder of Buddhism. 'Buddha' is a title meaning 'awakened one'."
+  "def": "Siddhartha Gautama, a spiritual teacher in ancient India and the founder of Buddhism. 'Buddha' is a title meaning 'awakened one'.",
+  "type": "Person"
  },
  {
   "term": "Nirvana",
@@ -1474,7 +1583,8 @@
    "Nirvana"
   ],
   "wiki": "Nirvana_(Buddhism)",
-  "def": "In Buddhism, the final freedom from craving and suffering. The word means 'blowing out', as of a flame."
+  "def": "In Buddhism, the final freedom from craving and suffering. The word means 'blowing out', as of a flame.",
+  "type": "Idea"
  },
  {
   "term": "Marcus Aurelius",
@@ -1483,7 +1593,8 @@
    "Marcus"
   ],
   "wiki": "Marcus_Aurelius",
-  "def": "Roman emperor from 161 to 180 CE and a devoted Stoic. His private notes to himself became the Meditations."
+  "def": "Roman emperor from 161 to 180 CE and a devoted Stoic. His private notes to himself became the Meditations.",
+  "type": "Thinker"
  },
  {
   "term": "Meditations",
@@ -1491,7 +1602,8 @@
    "Meditations"
   ],
   "wiki": "Meditations",
-  "def": "The personal notebook of Marcus Aurelius, written in Greek during his military campaigns. It was never meant for publication."
+  "def": "The personal notebook of Marcus Aurelius, written in Greek during his military campaigns. It was never meant for publication.",
+  "type": "Book"
  },
  {
   "term": "Epictetus",
@@ -1499,7 +1611,8 @@
    "Epictetus"
   ],
   "wiki": "Epictetus",
-  "def": "A Stoic teacher (around 50–135 CE) who was born a slave and later freed. His teachings were written down by his student Arrian."
+  "def": "A Stoic teacher who was born a slave and later freed. His teachings were written down by his student Arrian.",
+  "type": "Thinker"
  },
  {
   "term": "Enchiridion",
@@ -1507,7 +1620,8 @@
    "Enchiridion"
   ],
   "wiki": "Enchiridion_of_Epictetus",
-  "def": "A short 'handbook' of Epictetus' teachings, compiled by his student Arrian. Its title means 'ready at hand'."
+  "def": "A short 'handbook' of Epictetus' teachings, compiled by his student Arrian. Its title means 'ready at hand'.",
+  "type": "Book"
  },
  {
   "term": "Seneca",
@@ -1515,7 +1629,8 @@
    "Seneca"
   ],
   "wiki": "Seneca_the_Younger",
-  "def": "A Roman Stoic philosopher, statesman and playwright (around 4 BCE–65 CE). He advised the emperor Nero and wrote essays and letters on how to live."
+  "def": "A Roman Stoic philosopher, statesman and playwright. He advised the emperor Nero and wrote essays and letters on how to live.",
+  "type": "Thinker"
  },
  {
   "term": "Democritus",
@@ -1523,7 +1638,8 @@
    "Democritus"
   ],
   "wiki": "Democritus",
-  "def": "A Greek philosopher of the 5th century BCE who taught that everything is made of tiny atoms. He was known as 'the laughing philosopher' for his cheerfulness."
+  "def": "A Greek philosopher of the 5th century BCE who taught that everything is made of tiny atoms. He was known as 'the laughing philosopher' for his cheerfulness.",
+  "type": "Person"
  },
  {
   "term": "Epicurus",
@@ -1531,7 +1647,8 @@
    "Epicurus"
   ],
   "wiki": "Epicurus",
-  "def": "A Greek philosopher (341–270 BCE) who founded the school called the Garden in Athens. He taught that peace of mind and friendship are the heart of a happy life."
+  "def": "A Greek philosopher who founded the school called the Garden in Athens. He taught that peace of mind and friendship are the heart of a happy life.",
+  "type": "Thinker"
  },
  {
   "term": "Principal Doctrines",
@@ -1539,7 +1656,8 @@
    "Principal Doctrines"
   ],
   "wiki": "Principal_Doctrines",
-  "def": "Forty short sayings summing up the philosophy of Epicurus and his school, which his followers memorised. They survive in Diogenes Laërtius' life of Epicurus."
+  "def": "Forty short sayings summing up the philosophy of Epicurus and his school, which his followers memorised. They survive in Diogenes Laërtius' life of Epicurus.",
+  "type": "Book"
  },
  {
   "term": "Letter to Menoeceus",
@@ -1547,7 +1665,8 @@
    "Letter to Menoeceus"
   ],
   "wiki": "Letter_to_Menoeceus",
-  "def": "A letter in which Epicurus summarises his ethics for a student named Menoeceus. It covers death, desire and the good life."
+  "def": "A letter in which Epicurus summarises his ethics for a student named Menoeceus. It covers death, desire and the good life.",
+  "type": "Book"
  },
  {
   "term": "Ataraxia",
@@ -1555,7 +1674,8 @@
    "ataraxia"
   ],
   "wiki": "Ataraxia",
-  "def": "A Greek word for a calm, untroubled state of mind. For Epicureans and Stoics alike, it was a central aim of the good life."
+  "def": "A Greek word for a calm, untroubled state of mind. For Epicureans and Stoics alike, it was a central aim of the good life.",
+  "type": "Idea"
  },
  {
   "term": "Lucretius",
@@ -1563,7 +1683,8 @@
    "Lucretius"
   ],
   "wiki": "Lucretius",
-  "def": "A Roman poet of the 1st century BCE who set out Epicurus' philosophy in a long poem. Little is known about his life."
+  "def": "A Roman poet of the 1st century BCE who set out Epicurus' philosophy in a long poem. Little is known about his life.",
+  "type": "Thinker"
  },
  {
   "term": "On the Nature of Things",
@@ -1571,7 +1692,8 @@
    "On the Nature of Things"
   ],
   "wiki": "De_rerum_natura",
-  "def": "Lucretius' poem explaining Epicurean philosophy, from atoms to the fear of death. Its Latin title is De rerum natura."
+  "def": "Lucretius' poem explaining Epicurean philosophy, from atoms to the fear of death. Its Latin title is De rerum natura.",
+  "type": "Book"
  },
  {
   "term": "Plato",
@@ -1579,7 +1701,8 @@
    "Plato"
   ],
   "wiki": "Plato",
-  "def": "An Athenian philosopher (around 428–348 BCE), student of Socrates and teacher of Aristotle. He wrote his philosophy as dialogues, usually starring Socrates; references like 38a are standard page numbers in his works."
+  "def": "An Athenian philosopher, student of Socrates and teacher of Aristotle. He wrote his philosophy as dialogues, usually starring Socrates; references like 38a are standard page numbers in his works.",
+  "type": "Thinker"
  },
  {
   "term": "Socrates",
@@ -1587,7 +1710,8 @@
    "Socrates"
   ],
   "wiki": "Socrates",
-  "def": "An Athenian philosopher (around 470–399 BCE) who wrote nothing, but questioned everyone. He was sentenced to death for impiety and corrupting the youth, and we know him mainly through Plato."
+  "def": "An Athenian philosopher (around 470–399 BCE) who wrote nothing, but questioned everyone. He was sentenced to death for impiety and corrupting the youth, and we know him mainly through Plato.",
+  "type": "Person"
  },
  {
   "term": "Crito",
@@ -1595,7 +1719,8 @@
    "Crito"
   ],
   "wiki": "Crito",
-  "def": "A dialogue set in Socrates' prison cell, where his friend Crito urges him to escape. Socrates explains why he will not."
+  "def": "A dialogue set in Socrates' prison cell, where his friend Crito urges him to escape. Socrates explains why he will not.",
+  "type": "Book"
  },
  {
   "term": "Phaedo",
@@ -1603,7 +1728,8 @@
    "Phaedo"
   ],
   "wiki": "Phaedo",
-  "def": "A dialogue describing Socrates' last day and death, in which he discusses the soul with his friends. It is told by his follower Phaedo."
+  "def": "A dialogue describing Socrates' last day and death, in which he discusses the soul with his friends. It is told by his follower Phaedo.",
+  "type": "Book"
  },
  {
   "term": "Republic",
@@ -1611,7 +1737,8 @@
    "Republic"
   ],
   "wiki": "Republic_(Plato)",
-  "def": "Plato's best-known dialogue, asking what justice is in a city and in a person. It contains the famous Allegory of the Cave."
+  "def": "Plato's best-known dialogue, asking what justice is in a city and in a person. It contains the famous Allegory of the Cave.",
+  "type": "Book"
  },
  {
   "term": "Symposium",
@@ -1619,7 +1746,8 @@
    "Symposium"
   ],
   "wiki": "Symposium_(Plato)",
-  "def": "A dialogue set at a drinking party where the guests each give a speech in praise of love. Socrates retells what he learned from the wise woman Diotima."
+  "def": "A dialogue set at a drinking party where the guests each give a speech in praise of love. Socrates retells what he learned from the wise woman Diotima.",
+  "type": "Book"
  },
  {
   "term": "Phaedrus",
@@ -1627,7 +1755,8 @@
    "Phaedrus"
   ],
   "wiki": "Phaedrus_(dialogue)",
-  "def": "A dialogue in which Socrates and Phaedrus discuss love, the soul and the art of speaking. It contains the image of the soul as a charioteer."
+  "def": "A dialogue in which Socrates and Phaedrus discuss love, the soul and the art of speaking. It contains the image of the soul as a charioteer.",
+  "type": "Book"
  },
  {
   "term": "Gorgias",
@@ -1635,7 +1764,8 @@
    "Gorgias"
   ],
   "wiki": "Gorgias_(dialogue)",
-  "def": "A dialogue about rhetoric and how to live, named after a famous teacher of persuasion. Socrates argues that doing wrong is worse than suffering it."
+  "def": "A dialogue about rhetoric and how to live, named after a famous teacher of persuasion. Socrates argues that doing wrong is worse than suffering it.",
+  "type": "Book"
  },
  {
   "term": "Theaetetus",
@@ -1643,7 +1773,8 @@
    "Theaetetus"
   ],
   "wiki": "Theaetetus_(dialogue)",
-  "def": "A dialogue in which Socrates and the young mathematician Theaetetus ask: what is knowledge? It ends without a final answer."
+  "def": "A dialogue in which Socrates and the young mathematician Theaetetus ask: what is knowledge? It ends without a final answer.",
+  "type": "Book"
  },
  {
   "term": "Meno",
@@ -1651,7 +1782,8 @@
    "Meno"
   ],
   "wiki": "Meno",
-  "def": "A dialogue asking whether virtue can be taught. Socrates shows that learning may be a kind of remembering."
+  "def": "A dialogue asking whether virtue can be taught. Socrates shows that learning may be a kind of remembering.",
+  "type": "Book"
  },
  {
   "term": "Allegory of the Cave",
@@ -1659,7 +1791,8 @@
    "Allegory of the Cave"
   ],
   "wiki": "Allegory_of_the_cave",
-  "def": "A story in Plato's Republic about prisoners who mistake shadows on a wall for reality. It pictures philosophy as the turn toward the light of truth."
+  "def": "A story in Plato's Republic about prisoners who mistake shadows on a wall for reality. It pictures philosophy as the turn toward the light of truth.",
+  "type": "Idea"
  },
  {
   "term": "Friedrich Nietzsche",
@@ -1668,7 +1801,8 @@
    "Nietzsche"
   ],
   "wiki": "Friedrich_Nietzsche",
-  "def": "A German philosopher (1844–1900) who questioned traditional values and asked how to affirm life without them. His aphoristic style inspired the existentialists."
+  "def": "A German philosopher who questioned traditional values and asked how to affirm life without them. His aphoristic style inspired the existentialists.",
+  "type": "Thinker"
  },
  {
   "term": "Thus Spake Zarathustra",
@@ -1677,7 +1811,8 @@
    "Zarathustra"
   ],
   "wiki": "Thus_Spoke_Zarathustra",
-  "def": "Nietzsche's philosophical novel (1883–85) about a prophet who comes down from the mountains to teach. Its Zarathustra is loosely named after the ancient Persian prophet."
+  "def": "Nietzsche's philosophical novel (1883–85) about a prophet who comes down from the mountains to teach. Its Zarathustra is loosely named after the ancient Persian prophet.",
+  "type": "Book"
  },
  {
   "term": "Superman (Übermensch)",
@@ -1685,7 +1820,8 @@
    "Superman"
   ],
   "wiki": "Übermensch",
-  "def": "Nietzsche's Übermensch, often translated 'overman': a human being who creates their own values and fully affirms life. It has nothing to do with the comic-book hero."
+  "def": "Nietzsche's Übermensch, often translated 'overman': a human being who creates their own values and fully affirms life. It has nothing to do with the comic-book hero.",
+  "type": "Idea"
  },
  {
   "term": "Amor fati",
@@ -1693,7 +1829,8 @@
    "Amor fati"
   ],
   "wiki": "Amor_fati",
-  "def": "Latin for 'love of fate'. Nietzsche used it for embracing everything that happens, including suffering, as necessary and even good."
+  "def": "Latin for 'love of fate'. Nietzsche used it for embracing everything that happens, including suffering, as necessary and even good.",
+  "type": "Idea"
  },
  {
   "term": "Beyond Good and Evil",
@@ -1701,7 +1838,8 @@
    "Beyond Good and Evil"
   ],
   "wiki": "Beyond_Good_and_Evil",
-  "def": "A book by Nietzsche (1886) that criticises past philosophers and conventional morality. It is written largely in short sections and aphorisms."
+  "def": "A book by Nietzsche (1886) that criticises past philosophers and conventional morality. It is written largely in short sections and aphorisms.",
+  "type": "Book"
  },
  {
   "term": "The Joyful Wisdom",
@@ -1709,7 +1847,8 @@
    "The Joyful Wisdom"
   ],
   "wiki": "The_Gay_Science",
-  "def": "A book by Nietzsche (1882), also translated as 'The Gay Science', where 'gay' means joyful. It contains his famous ideas of eternal recurrence and amor fati."
+  "def": "A book by Nietzsche (1882), also translated as 'The Gay Science', where 'gay' means joyful. It contains his famous ideas of eternal recurrence and amor fati.",
+  "type": "Book"
  },
  {
   "term": "Fyodor Dostoevsky",
@@ -1718,7 +1857,8 @@
    "Dostoevsky"
   ],
   "wiki": "Fyodor_Dostoevsky",
-  "def": "A Russian novelist (1821–1881) whose books explore freedom, faith, guilt and suffering. He is often seen as a forerunner of existentialism."
+  "def": "A Russian novelist whose books explore freedom, faith, guilt and suffering. He is often seen as a forerunner of existentialism.",
+  "type": "Thinker"
  },
  {
   "term": "The Brothers Karamazov",
@@ -1726,7 +1866,8 @@
    "The Brothers Karamazov"
   ],
   "wiki": "The_Brothers_Karamazov",
-  "def": "Dostoevsky's final novel (1880), about three brothers and the murder of their father. It wrestles with faith, doubt, freedom and love."
+  "def": "Dostoevsky's final novel (1880), about three brothers and the murder of their father. It wrestles with faith, doubt, freedom and love.",
+  "type": "Book"
  },
  {
   "term": "Zosima",
@@ -1734,7 +1875,8 @@
    "Zosima"
   ],
   "wiki": "The_Brothers_Karamazov",
-  "def": "A wise and gentle elder monk in The Brothers Karamazov and spiritual guide to the youngest brother, Alyosha. His teachings centre on active love and humility."
+  "def": "A wise and gentle elder monk in The Brothers Karamazov and spiritual guide to the youngest brother, Alyosha. His teachings centre on active love and humility.",
+  "type": "Character"
  },
  {
   "term": "Notes from Underground",
@@ -1743,7 +1885,8 @@
    "Underground Man"
   ],
   "wiki": "Notes_from_Underground",
-  "def": "A short novel by Dostoevsky (1864), the bitter confession of an unnamed narrator known as the Underground Man. It is often called the first existentialist novel."
+  "def": "A short novel by Dostoevsky (1864), the bitter confession of an unnamed narrator known as the Underground Man. It is often called the first existentialist novel.",
+  "type": "Book"
  },
  {
   "term": "Blaise Pascal",
@@ -1752,7 +1895,8 @@
    "Pascal"
   ],
   "wiki": "Blaise_Pascal",
-  "def": "A French mathematician, physicist and religious thinker (1623–1662). His unfinished notes on the human condition became the Pensées."
+  "def": "A French mathematician, physicist and religious thinker. His unfinished notes on the human condition became the Pensées.",
+  "type": "Thinker"
  },
  {
   "term": "Pensées",
@@ -1760,7 +1904,8 @@
    "Pensées"
   ],
   "wiki": "Pensées",
-  "def": "French for 'thoughts': the fragments Pascal left unfinished at his death, published in 1670. They explore human greatness, misery and the search for meaning."
+  "def": "French for 'thoughts': the fragments Pascal left unfinished at his death, published in 1670. They explore human greatness, misery and the search for meaning.",
+  "type": "Book"
  },
  {
   "term": "Tao",
@@ -1769,6 +1914,7 @@
   ],
   "wiki": "Tao",
   "def": "Chinese for 'the Way': the natural order underlying all things. Taoists say it can be followed, but never fully put into words.",
+  "type": "Idea",
   "exact": true
  },
  {
@@ -1779,7 +1925,8 @@
    "Laotse"
   ],
   "wiki": "Laozi",
-  "def": "A legendary Chinese sage, traditionally the author of the Tao Te Ching. Almost nothing is known of his life, and historians debate whether he was a single real person."
+  "def": "A legendary Chinese sage, traditionally the author of the Tao Te Ching. Almost nothing is known of his life, and historians debate whether he was a single real person.",
+  "type": "Thinker"
  },
  {
   "term": "Tao Te Ching",
@@ -1788,7 +1935,8 @@
    "Tao-teking"
   ],
   "wiki": "Tao_Te_Ching",
-  "def": "The founding text of Taoism: 81 short chapters, probably compiled around the 4th century BCE. It is one of the most translated books in the world."
+  "def": "The founding text of Taoism: 81 short chapters, probably compiled around the 4th century BCE. It is one of the most translated books in the world.",
+  "type": "Book"
  },
  {
   "term": "Zhuangzi",
@@ -1797,7 +1945,8 @@
    "Chuang Tzŭ"
   ],
   "wiki": "Zhuangzi_(book)",
-  "def": "A Chinese philosopher of the 4th century BCE, and the book named after him, full of playful stories and paradoxes about freedom and the limits of knowledge."
+  "def": "A Chinese philosopher of the 4th century BCE, and the book named after him, full of playful stories and paradoxes about freedom and the limits of knowledge.",
+  "type": "Thinker"
  },
  {
   "term": "Hui Shi",
@@ -1806,7 +1955,8 @@
    "Hui Shi"
   ],
   "wiki": "Hui_Shi",
-  "def": "A Chinese logician and statesman of the 4th century BCE. He was Zhuangzi's friend and favourite partner in debate."
+  "def": "A Chinese logician and statesman of the 4th century BCE. He was Zhuangzi's friend and favourite partner in debate.",
+  "type": "Person"
  },
  {
   "term": "Confucius",
@@ -1815,7 +1965,8 @@
    "Confucians"
   ],
   "wiki": "Confucius",
-  "def": "A Chinese teacher and philosopher (551–479 BCE) whose teachings on virtue, family and good government shaped East Asian culture. Taoist writers often use him as a character in their stories."
+  "def": "A Chinese teacher and philosopher whose teachings on virtue, family and good government shaped East Asian culture. Taoist writers often use him as a character in their stories.",
+  "type": "Thinker"
  },
  {
   "term": "Aristotle",
@@ -1823,7 +1974,8 @@
    "Aristotle"
   ],
   "wiki": "Aristotle",
-  "def": "A Greek philosopher (384–322 BCE), student of Plato and tutor of Alexander the Great. He wrote on nearly everything, from ethics and politics to biology and logic."
+  "def": "A Greek philosopher, student of Plato and tutor of Alexander the Great. He wrote on nearly everything, from ethics and politics to biology and logic.",
+  "type": "Thinker"
  },
  {
   "term": "Nicomachean Ethics",
@@ -1831,7 +1983,8 @@
    "Nicomachean Ethics"
   ],
   "wiki": "Nicomachean_Ethics",
-  "def": "Aristotle's main work on ethics, traditionally said to be named after his son Nicomachus. It asks what a good human life is and how character is formed."
+  "def": "Aristotle's main work on ethics, traditionally said to be named after his son Nicomachus. It asks what a good human life is and how character is formed.",
+  "type": "Book"
  },
  {
   "term": "Eudaimonia",
@@ -1839,7 +1992,8 @@
    "eudaimonia"
   ],
   "wiki": "Eudaimonia",
-  "def": "Greek for flourishing or living well, usually translated 'happiness'. For Aristotle it is the aim of life, reached through a lifetime of virtuous activity."
+  "def": "Greek for flourishing or living well, usually translated 'happiness'. For Aristotle it is the aim of life, reached through a lifetime of virtuous activity.",
+  "type": "Idea"
  },
  {
   "term": "Immanuel Kant",
@@ -1847,7 +2001,8 @@
    "Kant"
   ],
   "wiki": "Immanuel_Kant",
-  "def": "A German philosopher (1724–1804), one of the most influential thinkers of modern times. He argued that morality rests on reason and on respect for every person."
+  "def": "A German philosopher, one of the most influential thinkers of modern times. He argued that morality rests on reason and on respect for every person.",
+  "type": "Thinker"
  },
  {
   "term": "Critique of Practical Reason",
@@ -1855,7 +2010,8 @@
    "Critique of Practical Reason"
   ],
   "wiki": "Critique_of_Practical_Reason",
-  "def": "Kant's 1788 book on morality and freedom. It ends with his famous lines on the starry heavens and the moral law."
+  "def": "Kant's 1788 book on morality and freedom. It ends with his famous lines on the starry heavens and the moral law.",
+  "type": "Book"
  },
  {
   "term": "John Stuart Mill",
@@ -1863,7 +2019,8 @@
    "Mill"
   ],
   "wiki": "John_Stuart_Mill",
-  "def": "An English philosopher and reformer (1806–1873), a champion of individual liberty and of women's rights. A breakdown at twenty taught him the value of feeling alongside reason."
+  "def": "An English philosopher and reformer, a champion of individual liberty and of women's rights. A breakdown at twenty taught him the value of feeling alongside reason.",
+  "type": "Thinker"
  },
  {
   "term": "On Liberty",
@@ -1871,7 +2028,8 @@
    "On Liberty"
   ],
   "wiki": "On_Liberty",
-  "def": "An 1859 essay on the limits of society's power over the individual, published under John Stuart Mill's name and written with his wife, Harriet Taylor Mill. It remains a classic defence of free speech and personal freedom."
+  "def": "An 1859 essay on the limits of society's power over the individual, published under John Stuart Mill's name and written with his wife, Harriet Taylor Mill. It remains a classic defence of free speech and personal freedom.",
+  "type": "Book"
  },
  {
   "term": "Okakura Kakuzō",
@@ -1881,7 +2039,8 @@
    "Okakura"
   ],
   "wiki": "Okakura_Kakuzō",
-  "def": "A Japanese scholar and art critic (1862–1913) who wrote The Book of Tea in English to introduce Japanese culture to the West."
+  "def": "A Japanese scholar and art critic who wrote The Book of Tea in English to introduce Japanese culture to the West.",
+  "type": "Thinker"
  },
  {
   "term": "The Book of Tea",
@@ -1890,7 +2049,8 @@
    "Book of Tea"
   ],
   "wiki": "The_Book_of_Tea",
-  "def": "Okakura's short book (1906) on the tea ceremony and the ideas behind it: simplicity, imperfection and beauty in everyday life."
+  "def": "Okakura's short book (1906) on the tea ceremony and the ideas behind it: simplicity, imperfection and beauty in everyday life.",
+  "type": "Book"
  },
  {
   "term": "Sen no Rikyū",
@@ -1899,7 +2059,8 @@
    "Rikyū"
   ],
   "wiki": "Sen_no_Rikyū",
-  "def": "Sen no Rikyū (1522–1591), the most celebrated Japanese tea master, who shaped the tea ceremony's ideal of rustic simplicity."
+  "def": "Sen no Rikyū (1522–1591), the most celebrated Japanese tea master, who shaped the tea ceremony's ideal of rustic simplicity.",
+  "type": "Person"
  },
  {
   "term": "Kenkō",
@@ -1907,7 +2068,8 @@
    "Kenkō"
   ],
   "wiki": "Yoshida_Kenkō",
-  "def": "Kenkō (around 1283–1350), a Japanese poet and Buddhist monk whose Essays in Idleness reflect on beauty, impermanence and everyday life."
+  "def": "Kenkō, a Japanese poet and Buddhist monk whose Essays in Idleness reflect on beauty, impermanence and everyday life.",
+  "type": "Thinker"
  },
  {
   "term": "Essays in Idleness",
@@ -1915,7 +2077,8 @@
    "Essays in Idleness"
   ],
   "wiki": "Tsurezuregusa",
-  "def": "Kenkō's collection of short essays (Tsurezuregusa), written around 1330 and one of the classics of Japanese literature."
+  "def": "Kenkō's collection of short essays (Tsurezuregusa), written around 1330 and one of the classics of Japanese literature.",
+  "type": "Book"
  },
  {
   "term": "Kamo no Chōmei",
@@ -1924,7 +2087,8 @@
    "Chōmei"
   ],
   "wiki": "Kamo_no_Chōmei",
-  "def": "A Japanese poet (around 1155–1216) who, after years of disaster and disappointment, withdrew to a tiny hut in the hills near Kyoto."
+  "def": "A Japanese poet who, after years of disaster and disappointment, withdrew to a tiny hut in the hills near Kyoto.",
+  "type": "Thinker"
  },
  {
   "term": "Hōjōki",
@@ -1932,7 +2096,8 @@
    "Hōjōki"
   ],
   "wiki": "Hōjōki",
-  "def": "Chōmei's short book of 1212, 'An Account of My Ten-Foot Hut', on impermanence and the joys of a simple life."
+  "def": "Chōmei's short book of 1212, 'An Account of My Ten-Foot Hut', on impermanence and the joys of a simple life.",
+  "type": "Book"
  },
  {
   "term": "Analects",
@@ -1940,7 +2105,8 @@
    "Analects"
   ],
   "wiki": "Analects",
-  "def": "The sayings of Confucius and his students, collected by his followers after his death: short conversations and maxims, arranged in twenty books."
+  "def": "The sayings of Confucius and his students, collected by his followers after his death: short conversations and maxims, arranged in twenty books.",
+  "type": "Book"
  },
  {
   "term": "Heraclitus",
@@ -1948,7 +2114,8 @@
    "Heraclitus"
   ],
   "wiki": "Heraclitus",
-  "def": "A Greek philosopher from Ephesus, active around 500 BCE, known for his cryptic sayings about constant change and the unity of opposites. Ancient writers called him 'the Obscure'."
+  "def": "A Greek philosopher from Ephesus, active around 500 BCE, known for his cryptic sayings about constant change and the unity of opposites. Ancient writers called him 'the Obscure'.",
+  "type": "Thinker"
  },
  {
   "term": "Ephesus",
@@ -1956,7 +2123,8 @@
    "Ephesus"
   ],
   "wiki": "Ephesus",
-  "def": "An ancient Greek port city on the coast of what is now Turkey, home of Heraclitus."
+  "def": "An ancient Greek port city on the coast of what is now Turkey, home of Heraclitus.",
+  "type": "Place"
  },
  {
   "term": "Hesiod",
@@ -1964,7 +2132,8 @@
    "Hesiod"
   ],
   "wiki": "Hesiod",
-  "def": "An early Greek poet (around 700 BCE) who wrote about the gods and farming life."
+  "def": "An early Greek poet (around 700 BCE) who wrote about the gods and farming life.",
+  "type": "Person"
  },
  {
   "term": "Pythagoras",
@@ -1972,7 +2141,8 @@
    "Pythagoras"
   ],
   "wiki": "Pythagoras",
-  "def": "A Greek philosopher and mathematician of the 6th century BCE who taught that numbers lie behind the order of the world."
+  "def": "A Greek philosopher and mathematician of the 6th century BCE who taught that numbers lie behind the order of the world.",
+  "type": "Person"
  },
  {
   "term": "Xenophanes",
@@ -1980,7 +2150,8 @@
    "Xenophanes"
   ],
   "wiki": "Xenophanes",
-  "def": "A Greek thinker and poet (around 570–478 BCE) from Colophon who criticised the idea of human-like gods."
+  "def": "A Greek thinker and poet (around 570–478 BCE) from Colophon who criticised the idea of human-like gods.",
+  "type": "Person"
  },
  {
   "term": "Hekataios",
@@ -1988,7 +2159,8 @@
    "Hekataios"
   ],
   "wiki": "Hecataeus_of_Miletus",
-  "def": "Hecataeus of Miletus (around 550–476 BCE), an early Greek historian often called the father of geography."
+  "def": "Hecataeus of Miletus (around 550–476 BCE), an early Greek historian often called the father of geography.",
+  "type": "Person"
  },
  {
   "term": "Know thyself",
@@ -1996,7 +2168,8 @@
    "Know thyself"
   ],
   "wiki": "Know_thyself",
-  "def": "A maxim inscribed on the Temple of Apollo at Delphi. It first meant 'know your limits'; Plato's Socrates read it as 'know your soul'."
+  "def": "A maxim inscribed on the Temple of Apollo at Delphi. It first meant 'know your limits'; Plato's Socrates read it as 'know your soul'.",
+  "type": "Idea"
  },
  {
   "term": "Boethius",
@@ -2004,7 +2177,8 @@
    "Boethius"
   ],
   "wiki": "Boethius",
-  "def": "A Roman senator and philosopher (around 480–524 CE). Accused of treason, he wrote The Consolation of Philosophy in prison while awaiting execution."
+  "def": "A Roman senator and philosopher. Accused of treason, he wrote The Consolation of Philosophy in prison while awaiting execution.",
+  "type": "Thinker"
  },
  {
   "term": "The Consolation of Philosophy",
@@ -2013,7 +2187,8 @@
    "Consolation of Philosophy"
   ],
   "wiki": "The_Consolation_of_Philosophy",
-  "def": "Boethius' last work, written in prison in 523: a dialogue with Philosophy, who appears as a woman and teaches him that true happiness cannot be taken away. One of the most read books of the Middle Ages."
+  "def": "Boethius' last work, written in prison in 523: a dialogue with Philosophy, who appears as a woman and teaches him that true happiness cannot be taken away. One of the most read books of the Middle Ages.",
+  "type": "Book"
  },
  {
   "term": "Baruch Spinoza",
@@ -2022,7 +2197,8 @@
    "Spinoza"
   ],
   "wiki": "Baruch_Spinoza",
-  "def": "A Dutch philosopher (1632–1677), born in Amsterdam, who earned his living grinding lenses. Expelled from his Jewish community in 1656, he wrote the Ethics, published after his death."
+  "def": "A Dutch philosopher, born in Amsterdam, who earned his living grinding lenses. Expelled from his Jewish community in 1656, he wrote the Ethics, published after his death.",
+  "type": "Thinker"
  },
  {
   "term": "David Hume",
@@ -2031,7 +2207,8 @@
    "Hume"
   ],
   "wiki": "David_Hume",
-  "def": "A Scottish philosopher and historian (1711–1776), born in Edinburgh, and a leading figure of the Scottish Enlightenment. He argued that our knowledge rests on experience and habit."
+  "def": "A Scottish philosopher and historian, born in Edinburgh, and a leading figure of the Scottish Enlightenment. He argued that our knowledge rests on experience and habit.",
+  "type": "Thinker"
  },
  {
   "term": "A Treatise of Human Nature",
@@ -2040,7 +2217,8 @@
    "Treatise of Human Nature"
   ],
   "wiki": "A_Treatise_of_Human_Nature",
-  "def": "Hume's first and most ambitious book (1739–40), written in his twenties. It contains his famous claim that reason is the slave of the passions."
+  "def": "Hume's first and most ambitious book (1739–40), written in his twenties. It contains his famous claim that reason is the slave of the passions.",
+  "type": "Book"
  },
  {
   "term": "An Enquiry Concerning Human Understanding",
@@ -2049,7 +2227,8 @@
    "Enquiry"
   ],
   "wiki": "An_Enquiry_Concerning_Human_Understanding",
-  "def": "Hume's shorter, clearer reworking of his ideas on knowledge, written around 1748. It includes his essay on miracles."
+  "def": "Hume's shorter, clearer reworking of his ideas on knowledge, written around 1748. It includes his essay on miracles.",
+  "type": "Book"
  },
  {
   "term": "Mary Wollstonecraft",
@@ -2058,7 +2237,8 @@
    "Wollstonecraft"
   ],
   "wiki": "Mary_Wollstonecraft",
-  "def": "An English writer and philosopher (1759–1797) and an early champion of women's rights. Her daughter was Mary Shelley, author of Frankenstein."
+  "def": "An English writer and philosopher and an early champion of women's rights. Her daughter was Mary Shelley, author of Frankenstein.",
+  "type": "Thinker"
  },
  {
   "term": "A Vindication of the Rights of Woman",
@@ -2066,7 +2246,8 @@
    "A Vindication of the Rights of Woman"
   ],
   "wiki": "A_Vindication_of_the_Rights_of_Woman",
-  "def": "Wollstonecraft's book of 1792 arguing that women should receive the same education as men and be treated as rational beings. One of the founding texts of feminism."
+  "def": "Wollstonecraft's book of 1792 arguing that women should receive the same education as men and be treated as rational beings. One of the founding texts of feminism.",
+  "type": "Book"
  },
  {
   "term": "Arthur Schopenhauer",
@@ -2075,7 +2256,8 @@
    "Schopenhauer"
   ],
   "wiki": "Arthur_Schopenhauer",
-  "def": "A German philosopher (1788–1860), born in Danzig, who lived in Frankfurt from 1833. His main work is The World as Will and Representation; his later essays, including The Wisdom of Life, made him famous."
+  "def": "A German philosopher, born in Danzig, who lived in Frankfurt from 1833. His main work is The World as Will and Representation; his later essays, including The Wisdom of Life, made him famous.",
+  "type": "Thinker"
  },
  {
   "term": "Parerga and Paralipomena",
@@ -2086,7 +2268,8 @@
    "The Wisdom of Life"
   ],
   "wiki": "Parerga_and_Paralipomena",
-  "def": "Schopenhauer's collection of essays and aphorisms (1851), the book that made him popular. 'The Wisdom of Life', 'Counsels and Maxims', 'Studies in Pessimism' and 'The Art of Literature' are English selections from it."
+  "def": "Schopenhauer's collection of essays and aphorisms (1851), the book that made him popular. 'The Wisdom of Life', 'Counsels and Maxims', 'Studies in Pessimism' and 'The Art of Literature' are English selections from it.",
+  "type": "Book"
  },
  {
   "term": "Simone Weil",
@@ -2095,7 +2278,8 @@
    "Weil"
   ],
   "wiki": "Simone_Weil",
-  "def": "A French philosopher and activist (1909–1943), born in Paris. She worked in factories and fields to share workers' lives, and wrote on attention, suffering and justice. She died in England, aged 34."
+  "def": "A French philosopher and activist, born in Paris. She worked in factories and fields to share workers' lives, and wrote on attention, suffering and justice. She died in England, aged 34.",
+  "type": "Thinker"
  },
  {
   "term": "Michel de Montaigne",
@@ -2104,7 +2288,8 @@
    "Montaigne"
   ],
   "wiki": "Michel_de_Montaigne",
-  "def": "A French writer (1533–1592) who lived at his château near Bordeaux and served as the city's mayor. His Essays, first published in 1580, created the essay as a form."
+  "def": "A French writer who lived at his château near Bordeaux and served as the city's mayor. His Essays, first published in 1580, created the essay as a form.",
+  "type": "Thinker"
  },
  {
   "term": "Étienne de La Boétie",
@@ -2113,7 +2298,8 @@
    "La Boétie"
   ],
   "wiki": "Étienne_de_La_Boétie",
-  "def": "A French writer and judge (1530–1563), Montaigne's closest friend. His early death inspired Montaigne's essay 'Of Friendship'."
+  "def": "A French writer and judge (1530–1563), Montaigne's closest friend. His early death inspired Montaigne's essay 'Of Friendship'.",
+  "type": "Person"
  },
  {
   "term": "François de La Rochefoucauld",
@@ -2122,7 +2308,8 @@
    "La Rochefoucauld"
   ],
   "wiki": "François_de_La_Rochefoucauld_(writer)",
-  "def": "A French nobleman, soldier and writer (1613–1680). His Maxims, published anonymously in 1665, expose the self-love hiding behind our virtues."
+  "def": "A French nobleman, soldier and writer. His Maxims, published anonymously in 1665, expose the self-love hiding behind our virtues.",
+  "type": "Thinker"
  },
  {
   "term": "Ralph Waldo Emerson",
@@ -2131,7 +2318,8 @@
    "Emerson"
   ],
   "wiki": "Ralph_Waldo_Emerson",
-  "def": "An American essayist and poet (1803–1882) who led the Transcendentalist movement from Concord, Massachusetts. 'Self-Reliance' appeared in his Essays: First Series (1841)."
+  "def": "An American essayist and poet who led the Transcendentalist movement from Concord, Massachusetts. 'Self-Reliance' appeared in his Essays: First Series.",
+  "type": "Thinker"
  },
  {
   "term": "Henry David Thoreau",
@@ -2140,7 +2328,8 @@
    "Thoreau"
   ],
   "wiki": "Henry_David_Thoreau",
-  "def": "An American writer and naturalist (1817–1862) from Concord, Massachusetts, a friend of Emerson. He is known for Walden and for his essay on civil disobedience."
+  "def": "An American writer and naturalist from Concord, Massachusetts, a friend of Emerson. He is known for Walden and for his essay on civil disobedience.",
+  "type": "Thinker"
  },
  {
   "term": "Walden",
@@ -2148,7 +2337,8 @@
    "Walden"
   ],
   "wiki": "Walden",
-  "def": "Thoreau's book (1854) about the two years, two months and two days he lived in a cabin he built by Walden Pond, on land owned by Emerson."
+  "def": "Thoreau's book (1854) about the two years, two months and two days he lived in a cabin he built by Walden Pond, on land owned by Emerson.",
+  "type": "Book"
  },
  {
   "term": "George Eliot",
@@ -2156,7 +2346,8 @@
    "George Eliot"
   ],
   "wiki": "George_Eliot",
-  "def": "The pen name of Mary Ann Evans (1819–1880), one of the great English novelists. She chose a man's name so that her fiction would be taken seriously."
+  "def": "The pen name of Mary Ann Evans, one of the great English novelists. She chose a man's name so that her fiction would be taken seriously.",
+  "type": "Thinker"
  },
  {
   "term": "Middlemarch",
@@ -2164,7 +2355,8 @@
    "Middlemarch"
   ],
   "wiki": "Middlemarch",
-  "def": "George Eliot's novel (1871–72) about the lives of people in an English country town, often called one of the greatest novels in English."
+  "def": "George Eliot's novel (1871–72) about the lives of people in an English country town, often called one of the greatest novels in English.",
+  "type": "Book"
  },
  {
   "term": "Dorothea",
@@ -2172,7 +2364,8 @@
    "Dorothea"
   ],
   "wiki": "Middlemarch",
-  "def": "Dorothea Brooke, the idealistic heroine of Middlemarch, who longs to do good in the world."
+  "def": "Dorothea Brooke, the idealistic heroine of Middlemarch, who longs to do good in the world.",
+  "type": "Character"
  },
  {
   "term": "Bhagavad Gita",
@@ -2180,7 +2373,8 @@
    "Bhagavad Gita"
   ],
   "wiki": "Bhagavad_Gita",
-  "def": "'The Song of God': a 700-verse dialogue in 18 chapters, part of the Indian epic the Mahabharata, usually dated to the last centuries BCE. Prince Arjuna, about to go into battle, receives teaching from Krishna."
+  "def": "'The Song of God': a 700-verse dialogue in 18 chapters, part of the Indian epic the Mahabharata, usually dated to the last centuries BCE. Prince Arjuna, about to go into battle, receives teaching from Krishna.",
+  "type": "Text"
  },
  {
   "term": "Arjuna",
@@ -2188,7 +2382,8 @@
    "Arjuna"
   ],
   "wiki": "Arjuna",
-  "def": "A warrior prince and hero of the Mahabharata. In the Bhagavad Gita, his doubts on the battlefield lead to Krishna's teaching."
+  "def": "A warrior prince and hero of the Mahabharata. In the Bhagavad Gita, his doubts on the battlefield lead to Krishna's teaching.",
+  "type": "Character"
  },
  {
   "term": "Krishna",
@@ -2196,7 +2391,8 @@
    "Krishna"
   ],
   "wiki": "Krishna",
-  "def": "A major Hindu god. In the Bhagavad Gita he serves as Arjuna's charioteer and teacher."
+  "def": "A major Hindu god. In the Bhagavad Gita he serves as Arjuna's charioteer and teacher.",
+  "type": "Character"
  },
  {
   "term": "Upanishads",
@@ -2205,7 +2401,8 @@
    "Upanishad"
   ],
   "wiki": "Upanishads",
-  "def": "Sanskrit texts composed in ancient India, roughly between 800 and 300 BCE for the oldest. They turn from ritual to the inner questions of self and reality, and are the foundation of Vedanta."
+  "def": "Sanskrit texts composed in ancient India, roughly between 800 and 300 BCE for the oldest. They turn from ritual to the inner questions of self and reality, and are the foundation of Vedanta.",
+  "type": "Text"
  },
  {
   "term": "Nachiketa",
@@ -2214,7 +2411,8 @@
    "Nachiketas"
   ],
   "wiki": "Nachiketa",
-  "def": "The boy in the Katha Upanishad who goes to the house of Death and asks him what happens after we die."
+  "def": "The boy in the Katha Upanishad who goes to the house of Death and asks him what happens after we die.",
+  "type": "Character"
  },
  {
   "term": "Rabindranath Tagore",
@@ -2223,7 +2421,8 @@
    "Tagore"
   ],
   "wiki": "Rabindranath_Tagore",
-  "def": "A Bengali poet, writer and thinker (1861–1941), born in Calcutta. In 1913 he became the first non-European to win the Nobel Prize in Literature."
+  "def": "A Bengali poet, writer and thinker, born in Calcutta. In 1913 he became the first non-European to win the Nobel Prize in Literature.",
+  "type": "Thinker"
  },
  {
   "term": "Sadhana",
@@ -2231,7 +2430,8 @@
    "Sadhana"
   ],
   "wiki": "Rabindranath_Tagore",
-  "def": "Tagore's book of essays in English (1913) on the Upanishads and the spiritual life."
+  "def": "Tagore's book of essays in English (1913) on the Upanishads and the spiritual life.",
+  "type": "Book"
  },
  {
   "term": "Swami Vivekananda",
@@ -2240,7 +2440,8 @@
    "Vivekananda"
   ],
   "wiki": "Swami_Vivekananda",
-  "def": "An Indian monk and teacher (1863–1902), born in Calcutta and a disciple of Ramakrishna. His 1893 speech at the Parliament of the World's Religions in Chicago introduced Vedanta to the West."
+  "def": "An Indian monk and teacher, born in Calcutta and a disciple of Ramakrishna. His 1893 speech at the Parliament of the World's Religions in Chicago introduced Vedanta to the West.",
+  "type": "Thinker"
  },
  {
   "term": "Somerset Maugham",
@@ -2248,7 +2449,8 @@
    "Somerset Maugham"
   ],
   "wiki": "W._Somerset_Maugham",
-  "def": "An English novelist and playwright (1874–1965). His novel The Razor's Edge takes its title from the Katha Upanishad."
+  "def": "An English novelist and playwright (1874–1965). His novel The Razor's Edge takes its title from the Katha Upanishad.",
+  "type": "Person"
  },
  {
   "term": "Rumi",
@@ -2256,7 +2458,8 @@
    "Rumi"
   ],
   "wiki": "Rumi",
-  "def": "A Persian poet and Sufi teacher (1207–1273) who lived most of his life in Konya, in present-day Turkey. His meeting with the wandering dervish Shams of Tabriz transformed his life and poetry."
+  "def": "A Persian poet and Sufi teacher who lived most of his life in Konya, in present-day Turkey. His meeting with the wandering dervish Shams of Tabriz transformed his life and poetry.",
+  "type": "Thinker"
  },
  {
   "term": "Masnavi",
@@ -2264,7 +2467,8 @@
    "Masnavi"
   ],
   "wiki": "Masnavi",
-  "def": "Rumi's great poem in Persian: six books, about 25,000 verses, full of stories with spiritual lessons."
+  "def": "Rumi's great poem in Persian: six books, about 25,000 verses, full of stories with spiritual lessons.",
+  "type": "Book"
  },
  {
   "term": "Hafiz",
@@ -2272,7 +2476,8 @@
    "Hafiz"
   ],
   "wiki": "Hafez",
-  "def": "A Persian poet of Shiraz (around 1325–1390), the most loved poet in Iran. His lyric poems use love and wine to speak of mystical experience."
+  "def": "A Persian poet of Shiraz, the most loved poet in Iran. His lyric poems use love and wine to speak of mystical experience.",
+  "type": "Thinker"
  },
  {
   "term": "Divan",
@@ -2280,7 +2485,8 @@
    "Divan"
   ],
   "wiki": "Divan_(poetry)",
-  "def": "A collection of a poet's lyric poems, often put together after their death."
+  "def": "A collection of a poet's lyric poems, often put together after their death.",
+  "type": "Word"
  },
  {
   "term": "Gertrude Bell",
@@ -2288,7 +2494,8 @@
    "Gertrude Bell"
   ],
   "wiki": "Gertrude_Bell",
-  "def": "An English writer, traveller and archaeologist (1868–1926) who translated Hafiz in 1897 and later helped shape modern Iraq."
+  "def": "An English writer, traveller and archaeologist (1868–1926) who translated Hafiz in 1897 and later helped shape modern Iraq.",
+  "type": "Person"
  },
  {
   "term": "Sa'di",
@@ -2296,7 +2503,8 @@
    "Sa'di"
   ],
   "wiki": "Saadi_Shirazi",
-  "def": "A Persian poet and writer of Shiraz (around 1210–1291), author of the Gulistan and the Bustan."
+  "def": "A Persian poet and writer of Shiraz, author of the Gulistan and the Bustan.",
+  "type": "Thinker"
  },
  {
   "term": "Gulistan",
@@ -2304,7 +2512,8 @@
    "Gulistan"
   ],
   "wiki": "Gulistan_(book)",
-  "def": "'The Rose Garden' (1258): Sa'di's book of short stories in prose mixed with verse maxims, still a classic of Persian wisdom."
+  "def": "'The Rose Garden' (1258): Sa'di's book of short stories in prose mixed with verse maxims, still a classic of Persian wisdom.",
+  "type": "Book"
  },
  {
   "term": "Al-Ghazali",
@@ -2313,7 +2522,8 @@
    "al-Ghazali"
   ],
   "wiki": "Al-Ghazali",
-  "def": "A Persian theologian, philosopher and mystic (around 1058–1111). He left his professorship in Baghdad in 1095 after a spiritual crisis and turned to the Sufi path."
+  "def": "A Persian theologian, philosopher and mystic. He left his professorship in Baghdad in 1095 after a spiritual crisis and turned to the Sufi path.",
+  "type": "Thinker"
  },
  {
   "term": "The Alchemy of Happiness",
@@ -2322,7 +2532,8 @@
    "Alchemy of Happiness"
   ],
   "wiki": "The_Alchemy_of_Happiness",
-  "def": "Al-Ghazali's book in Persian on how to live a good, spiritual life, a shorter version of his great Arabic work, The Revival of the Religious Sciences."
+  "def": "Al-Ghazali's book in Persian on how to live a good, spiritual life, a shorter version of his great Arabic work, The Revival of the Religious Sciences.",
+  "type": "Book"
  },
  {
   "term": "Deliverance from Error",
@@ -2331,7 +2542,8 @@
    "The Confessions"
   ],
   "wiki": "Al-Munqidh_min_al-Dalal",
-  "def": "Al-Ghazali's spiritual autobiography, written late in life, describing his journey through doubt to Sufism. Translated by Claud Field as 'The Confessions'."
+  "def": "Al-Ghazali's spiritual autobiography, written late in life, describing his journey through doubt to Sufism. Translated by Claud Field as 'The Confessions'.",
+  "type": "Book"
  },
  {
   "term": "Vizier",
@@ -2339,7 +2551,8 @@
    "vizier"
   ],
   "wiki": "Vizier",
-  "def": "A chief minister or adviser to a ruler in the Islamic world."
+  "def": "A chief minister or adviser to a ruler in the Islamic world.",
+  "type": "Word"
  },
  {
   "term": "Ibn Arabi",
@@ -2347,7 +2560,8 @@
    "Ibn Arabi"
   ],
   "wiki": "Ibn_Arabi",
-  "def": "A Sufi mystic, poet and philosopher (1165–1240), born in Murcia in Spain and buried in Damascus. Sufis call him 'the Greatest Shaykh' (al-Shaykh al-Akbar)."
+  "def": "A Sufi mystic, poet and philosopher, born in Murcia in Spain and buried in Damascus. Sufis call him 'the Greatest Shaykh' (al-Shaykh al-Akbar).",
+  "type": "Thinker"
  },
  {
   "term": "Tarjuman al-Ashwaq",
@@ -2355,7 +2569,8 @@
    "Tarjuman al-Ashwaq"
   ],
   "wiki": "Ibn_Arabi",
-  "def": "'The Interpreter of Desires' (1215): Ibn Arabi's collection of love poems, which he later explained as images of divine love."
+  "def": "'The Interpreter of Desires' (1215): Ibn Arabi's collection of love poems, which he later explained as images of divine love.",
+  "type": "Book"
  },
  {
   "term": "Ka'ba",
@@ -2363,7 +2578,8 @@
    "Ka'ba"
   ],
   "wiki": "Kaaba",
-  "def": "The cube-shaped building at the centre of the Great Mosque of Mecca, the holiest site in Islam, towards which Muslims pray."
+  "def": "The cube-shaped building at the centre of the Great Mosque of Mecca, the holiest site in Islam, towards which Muslims pray.",
+  "type": "Place"
  },
  {
   "term": "Sei Shōnagon",
@@ -2371,7 +2587,8 @@
    "Sei Shōnagon"
   ],
   "wiki": "Sei_Shōnagon",
-  "def": "A Japanese writer (born around 966) who served Empress Teishi at the imperial court in Kyoto. She wrote The Pillow Book."
+  "def": "A Japanese writer who served Empress Teishi at the imperial court in Kyoto. She wrote The Pillow Book.",
+  "type": "Thinker"
  },
  {
   "term": "The Pillow Book",
@@ -2381,7 +2598,8 @@
    "Makura no Sōshi"
   ],
   "wiki": "The_Pillow_Book",
-  "def": "Sei Shōnagon's book of lists, observations and memories of court life, completed around 1002. It is one of the first examples of the Japanese zuihitsu, 'following the brush'."
+  "def": "Sei Shōnagon's book of lists, observations and memories of court life, completed around 1002. It is one of the first examples of the Japanese zuihitsu, 'following the brush'.",
+  "type": "Book"
  },
  {
   "term": "Hamlet",
@@ -2389,7 +2607,8 @@
    "Hamlet"
   ],
   "wiki": "Hamlet",
-  "def": "Shakespeare's tragedy (around 1600). Hamlet's line 'there is nothing either good or bad, but thinking makes it so' echoes Boethius."
+  "def": "Shakespeare's tragedy (around 1600). Hamlet's line 'there is nothing either good or bad, but thinking makes it so' echoes Boethius.",
+  "type": "Book"
  },
  {
   "term": "René Descartes",
@@ -2398,7 +2617,8 @@
    "Descartes"
   ],
   "wiki": "René_Descartes",
-  "def": "A French philosopher and mathematician (1596–1650) who lived for about twenty years in the Dutch Republic. He began by doubting everything he could, and found one certainty: 'I think, therefore I am.'"
+  "def": "A French philosopher and mathematician who lived for about twenty years in the Dutch Republic. He began by doubting everything he could, and found one certainty: 'I think, therefore I am.'",
+  "type": "Thinker"
  },
  {
   "term": "Discourse on Method",
@@ -2406,7 +2626,8 @@
    "Discourse on Method"
   ],
   "wiki": "Discourse_on_the_Method",
-  "def": "Descartes' short book of 1637, written in French rather than the scholars' Latin and published in Leiden. It sets out his rules for thinking clearly, starting from doubt."
+  "def": "Descartes' short book of 1637, written in French rather than the scholars' Latin and published in Leiden. It sets out his rules for thinking clearly, starting from doubt.",
+  "type": "Book"
  },
  {
   "term": "Adam Smith",
@@ -2414,7 +2635,8 @@
    "Adam Smith"
   ],
   "wiki": "Adam_Smith",
-  "def": "A Scottish philosopher and economist (1723–1790). Before The Wealth of Nations (1776) made him the father of economics, he wrote a book on morality, The Theory of Moral Sentiments."
+  "def": "A Scottish philosopher and economist. Before The Wealth of Nations made him the father of economics, he wrote a book on morality, The Theory of Moral Sentiments.",
+  "type": "Thinker"
  },
  {
   "term": "The Theory of Moral Sentiments",
@@ -2422,7 +2644,8 @@
    "The Theory of Moral Sentiments"
   ],
   "wiki": "The_Theory_of_Moral_Sentiments",
-  "def": "Adam Smith's book of 1759 on how we judge right and wrong. He argues that morality grows from sympathy and from imagining how an 'impartial spectator' would see us."
+  "def": "Adam Smith's book of 1759 on how we judge right and wrong. He argues that morality grows from sympathy and from imagining how an 'impartial spectator' would see us.",
+  "type": "Book"
  },
  {
   "term": "Émilie du Châtelet",
@@ -2431,7 +2654,8 @@
    "du Châtelet"
   ],
   "wiki": "Émilie_du_Châtelet",
-  "def": "A French mathematician and physicist (1706–1749), born in Paris. Her French translation of Newton's Principia, with her commentary, is still the standard one in French."
+  "def": "A French mathematician and physicist, born in Paris. Her French translation of Newton's Principia, with her commentary, is still the standard one in French.",
+  "type": "Thinker"
  },
  {
   "term": "Discourse on Happiness",
@@ -2439,7 +2663,8 @@
    "Discourse on Happiness"
   ],
   "wiki": "Émilie_du_Châtelet",
-  "def": "Émilie du Châtelet's short essay on how to be happy. She argues that we must first free ourselves of prejudice, and that passions, illusions and the love of study all have their place."
+  "def": "Émilie du Châtelet's short essay on how to be happy. She argues that we must first free ourselves of prejudice, and that passions, illusions and the love of study all have their place.",
+  "type": "Book"
  },
  {
   "term": "Isaac Newton",
@@ -2447,7 +2672,8 @@
    "Newton"
   ],
   "wiki": "Isaac_Newton",
-  "def": "An English mathematician and physicist (1642–1727) whose laws of motion and gravity, set out in the Principia (1687), shaped modern science."
+  "def": "An English mathematician and physicist (1642–1727) whose laws of motion and gravity, set out in the Principia (1687), shaped modern science.",
+  "type": "Person"
  },
  {
   "term": "William James",
@@ -2455,7 +2681,8 @@
    "William James"
   ],
   "wiki": "William_James",
-  "def": "An American philosopher and psychologist (1842–1910) who taught at Harvard. A founder of pragmatism, he judged ideas by the difference they make to how we live."
+  "def": "An American philosopher and psychologist who taught at Harvard. A founder of pragmatism, he judged ideas by the difference they make to how we live.",
+  "type": "Thinker"
  },
  {
   "term": "The Will to Believe",
@@ -2463,7 +2690,8 @@
    "The Will to Believe"
   ],
   "wiki": "The_Will_to_Believe",
-  "def": "William James's lecture of 1896, which gave its name to a book of his essays. He argues that some beliefs we may hold before the evidence is complete, because life does not wait for proof."
+  "def": "William James's lecture of 1896, which gave its name to a book of his essays. He argues that some beliefs we may hold before the evidence is complete, because life does not wait for proof.",
+  "type": "Book"
  },
  {
   "term": "Is Life Worth Living?",
@@ -2471,7 +2699,8 @@
    "Is Life Worth Living"
   ],
   "wiki": "William_James",
-  "def": "A lecture William James gave at Harvard in 1895 on how to answer despair. His answer: believe that life is worth living, and the belief itself helps make it so."
+  "def": "A lecture William James gave at Harvard in 1895 on how to answer despair. His answer: believe that life is worth living, and the belief itself helps make it so.",
+  "type": "Book"
  },
  {
   "term": "Leo Tolstoy",
@@ -2480,7 +2709,8 @@
    "Tolstoy"
   ],
   "wiki": "Leo_Tolstoy",
-  "def": "A Russian novelist (1828–1910), author of War and Peace and Anna Karenina. At the height of his fame he fell into a crisis about the meaning of life."
+  "def": "A Russian novelist, author of War and Peace and Anna Karenina. At the height of his fame he fell into a crisis about the meaning of life.",
+  "type": "Thinker"
  },
  {
   "term": "A Confession",
@@ -2488,7 +2718,8 @@
    "A Confession"
   ],
   "wiki": "A_Confession",
-  "def": "Tolstoy's short account, written in 1879–80, of the crisis he went through in his early fifties, when success no longer gave his life any meaning."
+  "def": "Tolstoy's short account, written in 1879–80, of the crisis he went through in his early fifties, when success no longer gave his life any meaning.",
+  "type": "Book"
  },
  {
   "term": "Human, All Too Human",
@@ -2497,7 +2728,8 @@
    "All Too Human"
   ],
   "wiki": "Human,_All_Too_Human",
-  "def": "Nietzsche's book of short aphorisms (1878), written as he broke away from his early influences. Its subtitle is 'A Book for Free Spirits'."
+  "def": "Nietzsche's book of short aphorisms (1878), written as he broke away from his early influences. Its subtitle is 'A Book for Free Spirits'.",
+  "type": "Book"
  },
  {
   "term": "Erasmus",
@@ -2505,7 +2737,8 @@
    "Erasmus"
   ],
   "wiki": "Erasmus",
-  "def": "Desiderius Erasmus (around 1466–1536), a Dutch scholar born in Rotterdam and the best-known humanist of his age. He wrote in Latin and corresponded with thinkers across Europe."
+  "def": "Desiderius Erasmus, a Dutch scholar born in Rotterdam and the best-known humanist of his age. He wrote in Latin and corresponded with thinkers across Europe.",
+  "type": "Thinker"
  },
  {
   "term": "In Praise of Folly",
@@ -2514,7 +2747,8 @@
    "Praise of Folly"
   ],
   "wiki": "In_Praise_of_Folly",
-  "def": "Erasmus's satire of 1511, in which Folly herself gives a speech praising her own role in human life. It mocks vanity, scholars and church leaders alike."
+  "def": "Erasmus's satire of 1511, in which Folly herself gives a speech praising her own role in human life. It mocks vanity, scholars and church leaders alike.",
+  "type": "Book"
  },
  {
   "term": "Petrarch",
@@ -2523,7 +2757,8 @@
    "Petrarca"
   ],
   "wiki": "Petrarch",
-  "def": "Francesco Petrarca (1304–1374), an Italian poet and scholar often called the father of humanism. He searched old libraries for lost Latin texts and wrote love poems that shaped European poetry."
+  "def": "Francesco Petrarca, an Italian poet and scholar often called the father of humanism. He searched old libraries for lost Latin texts and wrote love poems that shaped European poetry.",
+  "type": "Thinker"
  },
  {
   "term": "Petrarch's Secret",
@@ -2531,7 +2766,8 @@
    "Secretum"
   ],
   "wiki": "Secretum_(book)",
-  "def": "The Secretum, an imagined conversation between Petrarch and Saint Augustine about Petrarch's own faults, ambitions and unhappiness. He wrote it for himself, not for publication."
+  "def": "The Secretum, an imagined conversation between Petrarch and Saint Augustine about Petrarch's own faults, ambitions and unhappiness. He wrote it for himself, not for publication.",
+  "type": "Book"
  },
  {
   "term": "Margaret Fuller",
@@ -2540,7 +2776,8 @@
    "Fuller"
   ],
   "wiki": "Margaret_Fuller",
-  "def": "An American journalist, critic and women's rights advocate (1810–1850), born in Cambridgeport, Massachusetts. She was part of the Transcendentalist circle and edited its journal, The Dial.",
+  "def": "An American journalist, critic and women's rights advocate, born in Cambridgeport, Massachusetts. She was part of the Transcendentalist circle and edited its journal, The Dial.",
+  "type": "Thinker",
   "exact": true
  },
  {
@@ -2549,7 +2786,8 @@
    "Woman in the Nineteenth Century"
   ],
   "wiki": "Woman_in_the_Nineteenth_Century",
-  "def": "Margaret Fuller's book of 1845, one of the first major feminist works in the United States. It argues that every person needs room to develop."
+  "def": "Margaret Fuller's book of 1845, one of the first major feminist works in the United States. It argues that every person needs room to develop.",
+  "type": "Book"
  },
  {
   "term": "Emily Dickinson",
@@ -2558,7 +2796,8 @@
    "Dickinson"
   ],
   "wiki": "Emily_Dickinson",
-  "def": "An American poet (1830–1886) who lived almost her whole life in Amherst, Massachusetts. She wrote nearly 1,800 poems, but only about ten were published in her lifetime."
+  "def": "An American poet who lived almost her whole life in Amherst, Massachusetts. She wrote nearly 1,800 poems, but only about ten were published in her lifetime.",
+  "type": "Thinker"
  },
  {
   "term": "The Questions of King Milinda",
@@ -2567,7 +2806,8 @@
    "Nagasena"
   ],
   "wiki": "Milinda_Panha",
-  "def": "A Buddhist text (Milindapañha), written down sometime between 100 BCE and 200 CE, in which the monk Nagasena answers the questions of King Milinda, the Indo-Greek king Menander I."
+  "def": "A Buddhist text (Milindapañha), written down sometime between 100 BCE and 200 CE, in which the monk Nagasena answers the questions of King Milinda, the Indo-Greek king Menander I.",
+  "type": "Text"
  },
  {
   "term": "Shantideva",
@@ -2575,7 +2815,8 @@
    "Shantideva"
   ],
   "wiki": "Shantideva",
-  "def": "An Indian Buddhist monk and poet of the 8th century, traditionally linked to the great monastery of Nalanda. His guide to living with compassion is the Bodhicaryāvatāra."
+  "def": "An Indian Buddhist monk and poet of the 8th century, traditionally linked to the great monastery of Nalanda. His guide to living with compassion is the Bodhicaryāvatāra.",
+  "type": "Person"
  },
  {
   "term": "The Path of Light",
@@ -2583,7 +2824,8 @@
    "The Path of Light"
   ],
   "wiki": "Bodhicaryavatara",
-  "def": "Lionel Barnett's English title (1909) for Shantideva's Bodhicaryāvatāra, 'Entering the Path of Awakening', a poem on patience, generosity and compassion."
+  "def": "Lionel Barnett's English title (1909) for Shantideva's Bodhicaryāvatāra, 'Entering the Path of Awakening', a poem on patience, generosity and compassion.",
+  "type": "Book"
  },
  {
   "term": "Karma-Yoga",
@@ -2591,7 +2833,8 @@
    "Karma-Yoga"
   ],
   "wiki": "Karma_yoga",
-  "def": "Vivekananda's book (1896) on 'the yoga of action', based on talks he gave in New York. It teaches working hard and well without attachment to the results."
+  "def": "Vivekananda's book (1896) on 'the yoga of action', based on talks he gave in New York. It teaches working hard and well without attachment to the results.",
+  "type": "Book"
  },
  {
   "term": "Stray Birds",
@@ -2599,7 +2842,8 @@
    "Stray Birds"
   ],
   "wiki": "Stray_Birds",
-  "def": "Tagore's collection of short poems and sayings, published in English in 1916. Most are only a line or two long."
+  "def": "Tagore's collection of short poems and sayings, published in English in 1916. Most are only a line or two long.",
+  "type": "Book"
  },
  {
   "term": "Mencius",
@@ -2607,7 +2851,8 @@
    "Mencius"
   ],
   "wiki": "Mencius",
-  "def": "A Chinese philosopher (around 371–289 BCE), the most important Confucian thinker after Confucius. He taught that human nature is good, and that goodness grows like a seed if cared for."
+  "def": "A Chinese philosopher, the most important Confucian thinker after Confucius. He taught that human nature is good, and that goodness grows like a seed if cared for.",
+  "type": "Thinker"
  },
  {
   "term": "Zengzi",
@@ -2615,7 +2860,8 @@
    "Zengzi"
   ],
   "wiki": "Zengzi",
-  "def": "One of Confucius' students (505–435 BCE), known for his care for his parents and for examining himself every day."
+  "def": "One of Confucius' students (505–435 BCE), known for his care for his parents and for examining himself every day.",
+  "type": "Person"
  },
  {
   "term": "Zilu",
@@ -2623,7 +2869,8 @@
    "Zilu"
   ],
   "wiki": "Zilu",
-  "def": "One of Confucius' longest-serving students, brave and quick to speak. Confucius often had to slow him down."
+  "def": "One of Confucius' longest-serving students, brave and quick to speak. Confucius often had to slow him down.",
+  "type": "Person"
  },
  {
   "term": "Zigong",
@@ -2631,7 +2878,8 @@
    "Zigong"
   ],
   "wiki": "Duanmu_Ci",
-  "def": "One of Confucius' most gifted students (520–456 BCE), a skilled speaker, a wealthy merchant and a diplomat."
+  "def": "One of Confucius' most gifted students (520–456 BCE), a skilled speaker, a wealthy merchant and a diplomat.",
+  "type": "Person"
  },
  {
   "term": "Yan Hui",
@@ -2639,7 +2887,8 @@
    "Yan Hui"
   ],
   "wiki": "Yan_Hui",
-  "def": "Confucius' favourite student, praised for his love of learning and his contentment in poverty. His early death left Confucius deeply grieved."
+  "def": "Confucius' favourite student, praised for his love of learning and his contentment in poverty. His early death left Confucius deeply grieved.",
+  "type": "Person"
  },
  {
   "term": "Omar Khayyam",
@@ -2648,7 +2897,8 @@
    "Khayyam"
   ],
   "wiki": "Omar_Khayyam",
-  "def": "A Persian mathematician, astronomer and poet (1048–1131) from Nishapur. He worked on a reform of the calendar; in the West he is famous for his short four-line poems."
+  "def": "A Persian mathematician, astronomer and poet from Nishapur. He worked on a reform of the calendar; in the West he is famous for his short four-line poems.",
+  "type": "Thinker"
  },
  {
   "term": "Rubáiyát",
@@ -2656,7 +2906,8 @@
    "Rubáiyát"
   ],
   "wiki": "Rubaiyat_of_Omar_Khayyam",
-  "def": "Persian for 'quatrains', four-line poems. Edward FitzGerald's free English version of Khayyam's quatrains (1859) became one of the best-loved poems in English."
+  "def": "Persian for 'quatrains', four-line poems. Edward FitzGerald's free English version of Khayyam's quatrains (1859) became one of the best-loved poems in English.",
+  "type": "Book"
  },
  {
   "term": "Divan-e Shams",
@@ -2665,7 +2916,8 @@
    "Shams"
   ],
   "wiki": "Divan-e_Shams-e_Tabrizi",
-  "def": "Rumi's collection of lyric poems, named after his friend and teacher Shams of Tabriz, whose disappearance inspired much of it."
+  "def": "Rumi's collection of lyric poems, named after his friend and teacher Shams of Tabriz, whose disappearance inspired much of it.",
+  "type": "Book"
  },
  {
   "term": "Shiraz",
@@ -2673,7 +2925,8 @@
    "Shiraz"
   ],
   "wiki": "Shiraz",
-  "def": "A city in south-western Iran, famous for its gardens and as the home of the poets Sa'di and Hafiz."
+  "def": "A city in south-western Iran, famous for its gardens and as the home of the poets Sa'di and Hafiz.",
+  "type": "Place"
  },
  {
   "term": "Vatican Sayings",
@@ -2681,7 +2934,8 @@
    "Vatican Sayings"
   ],
   "wiki": "Epicurus",
-  "def": "A collection of 81 short Epicurean sayings, found in a manuscript in the Vatican Library in 1888."
+  "def": "A collection of 81 short Epicurean sayings, found in a manuscript in the Vatican Library in 1888.",
+  "type": "Book"
  },
  {
   "term": "Fragment",
@@ -2689,7 +2943,8 @@
    "Fragment"
   ],
   "wiki": "Heraclitus",
-  "def": "Heraclitus' book is lost. What survives are about a hundred short quotations, or fragments, preserved by later writers; the numbers are an editor's."
+  "def": "Heraclitus' book is lost. What survives are about a hundred short quotations, or fragments, preserved by later writers; the numbers are an editor's.",
+  "type": "Word"
  },
  {
   "term": "Brunschvicg numbering",
@@ -2697,7 +2952,8 @@
    "Brunschvicg"
   ],
   "wiki": "Pensées",
-  "def": "Pascal left his notes unsorted. The numbers used here come from Léon Brunschvicg's edition, still one of the most common ways to refer to them."
+  "def": "Pascal left his notes unsorted. The numbers used here come from Léon Brunschvicg's edition, still one of the most common ways to refer to them.",
+  "type": "Word"
  },
  {
   "term": "Cephalus",
@@ -2705,7 +2961,8 @@
    "Cephalus"
   ],
   "wiki": "Republic_(Plato)",
-  "def": "A rich old man in the opening of Plato's Republic, at whose house the conversation about justice begins."
+  "def": "A rich old man in the opening of Plato's Republic, at whose house the conversation about justice begins.",
+  "type": "Character"
  },
  {
   "term": "Aristophanes",
@@ -2713,7 +2970,8 @@
    "Aristophanes"
   ],
   "wiki": "Aristophanes",
-  "def": "An Athenian comic playwright (around 446–386 BCE). In Plato's Symposium he tells a famous myth about the origin of love."
+  "def": "An Athenian comic playwright (around 446–386 BCE). In Plato's Symposium he tells a famous myth about the origin of love.",
+  "type": "Person"
  },
  {
   "term": "Sophocles",
@@ -2721,7 +2979,8 @@
    "Sophocles"
   ],
   "wiki": "Sophocles",
-  "def": "An Athenian playwright (around 497–406 BCE), author of Oedipus the King and Antigone."
+  "def": "An Athenian playwright (around 497–406 BCE), author of Oedipus the King and Antigone.",
+  "type": "Person"
  },
  {
   "term": "Pindar",
@@ -2729,7 +2988,8 @@
    "Pindar"
   ],
   "wiki": "Pindar",
-  "def": "A Greek lyric poet (around 518–438 BCE), famous for his odes to athletes. Nietzsche took his motto 'become what you are' from him."
+  "def": "A Greek lyric poet (around 518–438 BCE), famous for his odes to athletes. Nietzsche took his motto 'become what you are' from him.",
+  "type": "Person"
  },
  {
   "term": "Politics",
@@ -2738,6 +2998,7 @@
   ],
   "wiki": "Politics_(Aristotle)",
   "def": "Aristotle's work on the city-state: how communities form, the kinds of government, and what makes a good citizen.",
+  "type": "Book",
   "exact": true
  },
  {
@@ -2746,7 +3007,8 @@
    "Paulinus"
   ],
   "wiki": "De_Brevitate_Vitae_(Seneca)",
-  "def": "Seneca's father-in-law, who was in charge of Rome's grain supply. Seneca addressed On the Shortness of Life to him."
+  "def": "Seneca's father-in-law, who was in charge of Rome's grain supply. Seneca addressed On the Shortness of Life to him.",
+  "type": "Person"
  },
  {
   "term": "Idomeneus",
@@ -2754,7 +3016,8 @@
    "Idomeneus"
   ],
   "wiki": "Idomeneus_of_Lampsacus",
-  "def": "A friend and follower of Epicurus, to whom Epicurus wrote one of his last letters."
+  "def": "A friend and follower of Epicurus, to whom Epicurus wrote one of his last letters.",
+  "type": "Person"
  },
  {
   "term": "Markel",
@@ -2762,7 +3025,8 @@
    "Markel"
   ],
   "wiki": "The_Brothers_Karamazov",
-  "def": "Zosima's older brother in The Brothers Karamazov, who dies young and, in his last days, discovers a joyful love for everyone."
+  "def": "Zosima's older brother in The Brothers Karamazov, who dies young and, in his last days, discovers a joyful love for everyone.",
+  "type": "Character"
  },
  {
   "term": "Moses",
@@ -2770,7 +3034,8 @@
    "Moses"
   ],
   "wiki": "Moses_in_Islam",
-  "def": "A prophet in the Jewish, Christian and Islamic traditions. Rumi often retells stories about him to make a point about the inner life."
+  "def": "A prophet in the Jewish, Christian and Islamic traditions. Rumi often retells stories about him to make a point about the inner life.",
+  "type": "Person"
  },
  {
   "term": "Kyoto",
@@ -2778,7 +3043,8 @@
    "Kyoto"
   ],
   "wiki": "Kyoto",
-  "def": "Japan's imperial capital from 794 to 1868, and the centre of court culture, poetry and the tea ceremony."
+  "def": "Japan's imperial capital from 794 to 1868, and the centre of court culture, poetry and the tea ceremony.",
+  "type": "Place"
  },
  {
   "term": "Vesuvius",
@@ -2786,7 +3052,8 @@
    "Vesuvius"
   ],
   "wiki": "Mount_Vesuvius",
-  "def": "The volcano overlooking the Bay of Naples, which buried Pompeii in 79 CE and is still active."
+  "def": "The volcano overlooking the Bay of Naples, which buried Pompeii in 79 CE and is still active.",
+  "type": "Place"
  },
  {
   "term": "Niccolò Machiavelli",
@@ -2795,7 +3062,8 @@
    "Machiavelli"
   ],
   "wiki": "Niccolò_Machiavelli",
-  "def": "A Florentine diplomat and writer (1469–1527). After the Medici returned to power in 1512 and removed him from office, he wrote The Prince, a blunt guide to how rulers win and keep power, published in 1532, after his death."
+  "def": "A Florentine diplomat and writer. After the Medici returned to power in 1512 and removed him from office, he wrote The Prince, a blunt guide to how rulers win and keep power, published in 1532, after his death.",
+  "type": "Thinker"
  },
  {
   "term": "Francis Bacon",
@@ -2804,7 +3072,8 @@
    "Bacon"
   ],
   "wiki": "Francis_Bacon",
-  "def": "An English statesman and philosopher (1561–1626), born in London, who rose to Lord Chancellor before his fall in 1621. Often called the father of empiricism, he urged that knowledge be built on careful observation. His Essays grew from 10 in 1597 to 58 in 1625."
+  "def": "An English statesman and philosopher, born in London, who rose to Lord Chancellor before his fall in 1621. Often called the father of empiricism, he urged that knowledge be built on careful observation. His Essays grew from 10 in 1597 to 58 in 1625.",
+  "type": "Thinker"
  },
  {
   "term": "Voltaire",
@@ -2812,7 +3081,8 @@
    "Voltaire"
   ],
   "wiki": "Voltaire",
-  "def": "The pen name of François-Marie Arouet (1694–1778), the best-known writer of the French Enlightenment, born and died in Paris. He campaigned for tolerance and freedom of thought, and spent most of his last twenty years at Ferney, near Geneva."
+  "def": "The pen name of François-Marie Arouet, the best-known writer of the French Enlightenment, born and died in Paris. He campaigned for tolerance and freedom of thought, and spent most of his last twenty years at Ferney, near Geneva.",
+  "type": "Thinker"
  },
  {
   "term": "Jean-Jacques Rousseau",
@@ -2821,7 +3091,8 @@
    "Rousseau"
   ],
   "wiki": "Jean-Jacques_Rousseau",
-  "def": "A writer and philosopher (1712–1778), born in Geneva, who lived mostly in France. When The Social Contract and Emile came out in 1762, both were banned and burned, and he fled to Switzerland. His ideas later inspired the French Revolution."
+  "def": "A writer and philosopher, born in Geneva, who lived mostly in France. When The Social Contract and Emile came out in 1762, both were banned and burned, and he fled to Switzerland. His ideas later inspired the French Revolution.",
+  "type": "Thinker"
  },
  {
   "term": "Thomas Hobbes",
@@ -2830,7 +3101,8 @@
    "Hobbes"
   ],
   "wiki": "Thomas_Hobbes",
-  "def": "An English philosopher (1588–1679), born in Malmesbury. He wrote Leviathan (1651) in exile in Paris, arguing that without a common power life would be 'solitary, poor, nasty, brutish, and short'."
+  "def": "An English philosopher, born in Malmesbury. He wrote Leviathan in exile in Paris, arguing that without a common power life would be 'solitary, poor, nasty, brutish, and short'.",
+  "type": "Thinker"
  },
  {
   "term": "John Locke",
@@ -2839,7 +3111,8 @@
    "Locke"
   ],
   "wiki": "John_Locke",
-  "def": "An English philosopher (1632–1704). He argued that the mind starts as a blank slate filled by experience, and that governments exist to protect people's natural rights to life, liberty and property."
+  "def": "An English philosopher. He argued that the mind starts as a blank slate filled by experience, and that governments exist to protect people's natural rights to life, liberty and property.",
+  "type": "Thinker"
  },
  {
   "term": "Jean de La Bruyère",
@@ -2848,7 +3121,8 @@
    "La Bruyère"
   ],
   "wiki": "Jean_de_La_Bruyère",
-  "def": "A French writer (1645–1696), born in Paris, who was a tutor in the household of the Prince de Condé. His Characters, first published in 1688, are sharp portraits and remarks on the people of his time."
+  "def": "A French writer, born in Paris, who was a tutor in the household of the Prince de Condé. His Characters, first published in 1688, are sharp portraits and remarks on the people of his time.",
+  "type": "Thinker"
  },
  {
   "term": "Nicolas Chamfort",
@@ -2857,7 +3131,8 @@
    "Chamfort"
   ],
   "wiki": "Nicolas_Chamfort",
-  "def": "A French playwright and wit (1741–1794), elected to the Académie française in 1781. He welcomed the Revolution, was later imprisoned for criticising its excesses, and died in Paris in 1794. His maxims were published after his death."
+  "def": "A French playwright and wit, elected to the Académie française in 1781. He welcomed the Revolution, was later imprisoned for criticising its excesses, and died in Paris in 1794. His maxims were published after his death.",
+  "type": "Thinker"
  },
  {
   "term": "Vauvenargues",
@@ -2865,7 +3140,8 @@
    "Vauvenargues"
   ],
   "wiki": "Luc_de_Clapiers,_marquis_de_Vauvenargues",
-  "def": "Luc de Clapiers, marquis de Vauvenargues (1715–1747), a French soldier and moralist born in Aix-en-Provence. Broken in health by the retreat from Prague in 1742, he turned to writing; his Reflections and Maxims appeared in 1746, a year before his death. Voltaire was a close friend."
+  "def": "Luc de Clapiers, marquis de Vauvenargues, a French soldier and moralist born in Aix-en-Provence. Broken in health by the retreat from Prague in 1742, he turned to writing; his Reflections and Maxims appeared in 1746, a year before his death. Voltaire was a close friend.",
+  "type": "Thinker"
  },
  {
   "term": "Denis Diderot",
@@ -2874,7 +3150,8 @@
    "Diderot"
   ],
   "wiki": "Denis_Diderot",
-  "def": "A French writer and philosopher (1713–1784), born in Langres, and chief editor of the Encyclopédie, the great Enlightenment survey of knowledge. He was jailed at Vincennes in 1749 for his writings."
+  "def": "A French writer and philosopher, born in Langres, and chief editor of the Encyclopédie, the great Enlightenment survey of knowledge. He was jailed at Vincennes in 1749 for his writings.",
+  "type": "Thinker"
  },
  {
   "term": "Candide",
@@ -2882,7 +3159,8 @@
    "Candide"
   ],
   "wiki": "Candide",
-  "def": "Voltaire's comic novel of 1759. Its young hero is taught that all is for the best, then lives through war, shipwreck and earthquake, and ends by tending his garden."
+  "def": "Voltaire's comic novel of 1759. Its young hero is taught that all is for the best, then lives through war, shipwreck and earthquake, and ends by tending his garden.",
+  "type": "Book"
  },
  {
   "term": "Zadig",
@@ -2890,7 +3168,8 @@
    "Zadig"
   ],
   "wiki": "Zadig",
-  "def": "A philosophical tale by Voltaire (1748) about a wise young man in ancient Babylon whose fortunes rise and fall."
+  "def": "A philosophical tale by Voltaire (1748) about a wise young man in ancient Babylon whose fortunes rise and fall.",
+  "type": "Book"
  },
  {
   "term": "Philosophical Dictionary",
@@ -2898,7 +3177,8 @@
    "Philosophical Dictionary"
   ],
   "wiki": "Dictionnaire_philosophique",
-  "def": "Voltaire's pocket dictionary of short, sharp articles (1764), on subjects from friendship to tolerance."
+  "def": "Voltaire's pocket dictionary of short, sharp articles (1764), on subjects from friendship to tolerance.",
+  "type": "Book"
  },
  {
   "term": "Emile",
@@ -2906,7 +3186,8 @@
    "Emile"
   ],
   "wiki": "Emile,_or_On_Education",
-  "def": "Rousseau's long book on education (1762), which follows an imaginary boy from birth to adulthood. It was banned and burned soon after it appeared."
+  "def": "Rousseau's long book on education (1762), which follows an imaginary boy from birth to adulthood. It was banned and burned soon after it appeared.",
+  "type": "Book"
  },
  {
   "term": "Discourse on Inequality",
@@ -2914,7 +3195,8 @@
    "Discourse on Inequality"
   ],
   "wiki": "Discourse_on_Inequality",
-  "def": "Rousseau's essay of 1755 on how inequality began, starting with the first person who fenced off a piece of land and said 'This is mine'."
+  "def": "Rousseau's essay of 1755 on how inequality began, starting with the first person who fenced off a piece of land and said 'This is mine'.",
+  "type": "Book"
  },
  {
   "term": "Reveries of the Solitary Walker",
@@ -2923,7 +3205,8 @@
    "Reveries"
   ],
   "wiki": "Reveries_of_the_Solitary_Walker",
-  "def": "Rousseau's last work: ten 'walks' of reflection, written from 1776 and left unfinished at his death in 1778."
+  "def": "Rousseau's last work: ten 'walks' of reflection, written from 1776 and left unfinished at his death in 1778.",
+  "type": "Book"
  },
  {
   "term": "Leviathan",
@@ -2931,7 +3214,8 @@
    "Leviathan"
   ],
   "wiki": "Leviathan_(Hobbes_book)",
-  "def": "Hobbes's book of 1651, named after a giant sea monster, on why people need a strong common power to live in peace."
+  "def": "Hobbes's book of 1651, named after a giant sea monster, on why people need a strong common power to live in peace.",
+  "type": "Book"
  },
  {
   "term": "An Essay Concerning Human Understanding",
@@ -2940,7 +3224,8 @@
    "Essay Concerning Human Understanding"
   ],
   "wiki": "An_Essay_Concerning_Human_Understanding",
-  "def": "Locke's great book on knowledge (dated 1690), arguing that all our ideas come from experience."
+  "def": "Locke's great book on knowledge (dated 1690), arguing that all our ideas come from experience.",
+  "type": "Book"
  },
  {
   "term": "Second Treatise of Government",
@@ -2949,7 +3234,8 @@
    "Second Treatise"
   ],
   "wiki": "Two_Treatises_of_Government",
-  "def": "The second of Locke's Two Treatises of Government (dated 1690), on why governments exist: to protect the lives, liberty and property of the people."
+  "def": "The second of Locke's Two Treatises of Government (dated 1690), on why governments exist: to protect the lives, liberty and property of the people.",
+  "type": "Book"
  },
  {
   "term": "Philosophical Thoughts",
@@ -2957,7 +3243,8 @@
    "Philosophical Thoughts"
   ],
   "wiki": "Philosophical_Thoughts",
-  "def": "Diderot's first original book (1746): short numbered thoughts that open with a defence of the passions."
+  "def": "Diderot's first original book (1746): short numbered thoughts that open with a defence of the passions.",
+  "type": "Book"
  },
  {
   "term": "Regrets on My Old Dressing Gown",
@@ -2965,6 +3252,7 @@
    "Regrets on My Old Dressing Gown"
   ],
   "wiki": "Diderot_effect",
-  "def": "A playful essay by Diderot (1772) about how one new possession, a scarlet dressing gown, led him to replace everything around it."
+  "def": "A playful essay by Diderot (1772) about how one new possession, a scarlet dressing gown, led him to replace everything around it.",
+  "type": "Book"
  }
 ]

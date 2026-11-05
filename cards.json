@@ -1,0 +1,3669 @@
+{
+ "term": [
+  {
+   "type": "Path",
+   "title": "Stoicism",
+   "header": "",
+   "body": "A practical philosophy for living well: train your judgments, act with virtue, and accept calmly what you cannot control.",
+   "page": "path-stoicism",
+   "lead": "More about ",
+   "wiki": "Stoicism"
+  },
+  {
+   "type": "Path",
+   "title": "Epicureanism",
+   "header": "",
+   "body": "A philosophy of quiet happiness: simple pleasures, good friends, and a mind free from fear.",
+   "page": "path-epicureanism",
+   "lead": "More about ",
+   "wiki": "Epicureanism"
+  },
+  {
+   "type": "Path",
+   "title": "Classical Greek Philosophy",
+   "header": "",
+   "body": "Where Western philosophy began: asking what the world is made of, and then how we should live.",
+   "page": "path-classical-greek-philosophy",
+   "lead": "More about ",
+   "wiki": "Ancient_Greek_philosophy"
+  },
+  {
+   "type": "Path",
+   "title": "Enlightenment Ethics",
+   "header": "",
+   "body": "The age that put reason, evidence, and freedom at the centre of how we live and govern ourselves.",
+   "page": "path-enlightenment-ethics",
+   "lead": "More about ",
+   "wiki": "Age_of_Enlightenment"
+  },
+  {
+   "type": "Path",
+   "title": "Existential Thought",
+   "header": "",
+   "body": "Writers who faced life's hardest questions head-on: freedom, suffering, meaning, and how to live with them.",
+   "page": "path-existential-thought",
+   "lead": "More about ",
+   "wiki": "Existentialism"
+  },
+  {
+   "type": "Path",
+   "title": "Humanists and Essayists",
+   "header": "",
+   "body": "Writers who explored how to live in personal prose, short sayings, and poems, rather than in grand systems.",
+   "page": "path-humanists-and-essayists",
+   "lead": "More about ",
+   "wiki": "Renaissance_humanism"
+  },
+  {
+   "type": "Path",
+   "title": "Buddhist Philosophy",
+   "header": "",
+   "body": "The Buddha's teachings read as a practical philosophy: an ethics and a training of the mind to end suffering.",
+   "page": "path-buddhist-philosophy",
+   "lead": "More about ",
+   "wiki": "Buddhism"
+  },
+  {
+   "type": "Path",
+   "title": "Indian Philosophy",
+   "header": "",
+   "body": "Philosophy from India's Hindu tradition, asking what our deepest self is, and how to act well in the world.",
+   "page": "path-indian-philosophy",
+   "lead": "More about ",
+   "wiki": "Hindu_philosophy"
+  },
+  {
+   "type": "Path",
+   "title": "Taoism",
+   "header": "",
+   "body": "A Chinese tradition of living in harmony with the Tao, the natural way of things, through simplicity and effortless action.",
+   "page": "path-taoism",
+   "lead": "More about ",
+   "wiki": "Taoism"
+  },
+  {
+   "type": "Path",
+   "title": "Confucianism",
+   "header": "",
+   "body": "A Chinese tradition built on good character, learning, and harmony in families and society.",
+   "page": "path-confucianism",
+   "lead": "More about ",
+   "wiki": "Confucianism"
+  },
+  {
+   "type": "Path",
+   "title": "Japanese Aesthetics",
+   "header": "",
+   "body": "Finding beauty in what is simple, imperfect, and passing, and paying full attention to small moments.",
+   "page": "path-japanese-aesthetics",
+   "lead": "More about ",
+   "wiki": "Japanese_aesthetics"
+  },
+  {
+   "type": "Path",
+   "title": "Persian and Sufi Poetry",
+   "header": "",
+   "body": "Wisdom poetry from the Persian-speaking world and from Sufism, on love, longing, the present moment, and how to treat one another.",
+   "page": "path-persian-and-sufi-poetry",
+   "lead": "More about ",
+   "wiki": "Persian_literature"
+  },
+  {
+   "type": "Idea",
+   "title": "Death",
+   "header": "",
+   "body": "The Stoics kept death in view on purpose. Remembering that life is short was meant not to frighten but to sharpen attention to the present and to what matters.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Memento_mori"
+  },
+  {
+   "type": "Book",
+   "title": "Discourses",
+   "header": "",
+   "body": "Records of Epictetus' lectures, written down by his student Arrian in the 2nd century CE. Four of the original eight books survive.",
+   "page": "thinker-epictetus",
+   "lead": "More in: ",
+   "wiki": "Discourses_of_Epictetus"
+  },
+  {
+   "type": "Idea",
+   "title": "Fortune",
+   "header": "",
+   "body": "For Boethius, as for the Stoics before him, Fortune is the goddess of luck whose wheel never stops turning. Wealth, rank and fame are her gifts and she can take them back; only what is within us is truly ours.",
+   "page": "topic-fortune",
+   "lead": "More in: ",
+   "wiki": "Rota_Fortunae"
+  },
+  {
+   "type": "Idea",
+   "title": "Judgment",
+   "header": "",
+   "body": "For the Stoics, what upsets us is not events but our judgment about them. An impression arrives and we decide whether to agree with it; fear and anger follow from that agreement, so changing the judgment changes the feeling.",
+   "page": "topic-mind-and-emotions",
+   "lead": "More in: ",
+   "wiki": "Stoic_passions"
+  },
+  {
+   "type": "Idea",
+   "title": "Tranquillity",
+   "header": "",
+   "body": "The steady, untroubled mind the Stoics aimed for. Seneca, in On Tranquillity of Mind, borrows the Greek word euthymia: a mind at peace with itself, reached through right judgment rather than outside comfort.",
+   "page": "path-stoicism",
+   "lead": "More in: ",
+   "wiki": "De_Tranquillitate_Animi"
+  },
+  {
+   "type": "Idea",
+   "title": "Virtue",
+   "header": "",
+   "body": "For the Stoics, virtue (wisdom, justice, courage and self-control) is the only true good. Health, wealth and reputation are 'indifferent': pleasant to have, but they cannot make a life good or bad.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Stoicism"
+  },
+  {
+   "type": "Idea",
+   "title": "What is in our power",
+   "header": "",
+   "body": "Epictetus' basic division of life. Our judgments, intentions and actions are up to us; our body, possessions, reputation and other people's choices are not. Peace comes from caring most about the first and accepting the second.",
+   "page": "topic-fortune",
+   "lead": "More in: ",
+   "wiki": "Enchiridion_of_Epictetus"
+  },
+  {
+   "type": "Idea",
+   "title": "Death",
+   "header": "",
+   "body": "Epicurus' best-known teaching: death is nothing to us. Where death is, we are not; where we are, death is not. Fearing it only spoils the life we have now.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Epicurus"
+  },
+  {
+   "type": "Idea",
+   "title": "Desire",
+   "header": "",
+   "body": "Epicurus sorted desires into three kinds: natural and necessary (food, shelter, friends), natural but unnecessary (luxuries), and empty ones (fame, power, endless wealth). Only the first need satisfying; the empty ones never can be.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Epicureanism"
+  },
+  {
+   "type": "Idea",
+   "title": "Friendship",
+   "header": "",
+   "body": "Epicurus counted friendship among the greatest goods of a pleasant life. He lived with his friends in a shared garden and saw them as our best security in an uncertain world.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Epicurus"
+  },
+  {
+   "type": "Idea",
+   "title": "Pleasure",
+   "header": "",
+   "body": "For Epicurus, pleasure is the goal of life, but he meant above all the absence of pain in the body and of trouble in the mind, not indulgence. Simple pleasures, wisely chosen, are enough.",
+   "page": "topic-happiness-and-the-good-life",
+   "lead": "More in: ",
+   "wiki": "Epicureanism"
+  },
+  {
+   "type": "Idea",
+   "title": "Soul",
+   "header": "",
+   "body": "For Epicurus and Lucretius, the soul is made of fine atoms spread through the body. It feels and thinks, but it scatters when we die, which is why death is 'nothing to us'.",
+   "page": "topic-the-self-and-the-soul",
+   "lead": "More in: ",
+   "wiki": "Epicureanism"
+  },
+  {
+   "type": "Place",
+   "title": "The Garden",
+   "header": "",
+   "body": "Epicurus' school and community in Athens, named after the garden where its members lived and studied. Unusually for its time, it welcomed women and slaves.",
+   "page": "thinker-epicurus",
+   "lead": "More in: ",
+   "wiki": "Epicureanism"
+  },
+  {
+   "type": "Book",
+   "title": "Apology",
+   "header": "",
+   "body": "Plato's account of Socrates' speech in his own defence at his trial in 399 BCE. 'Apology' here means a defence, not saying sorry.",
+   "page": "thinker-plato",
+   "lead": "More in: ",
+   "wiki": "Apology_(Plato)"
+  },
+  {
+   "type": "Idea",
+   "title": "Change",
+   "header": "",
+   "body": "Heraclitus taught that everything is in constant change, like a river whose water is always new. What looks stable is really a balance of opposing forces, always becoming rather than simply being.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Heraclitus"
+  },
+  {
+   "type": "Idea",
+   "title": "Daimon",
+   "header": "",
+   "body": "A guiding spirit in Greek belief. When Heraclitus says character is a person's guardian divinity (daimon), he means what shapes our life is who we are, not the gods. It is often translated 'character is fate'.",
+   "page": "thinker-heraclitus",
+   "lead": "More in: ",
+   "wiki": "Daimon"
+  },
+  {
+   "type": "Idea",
+   "title": "Friendship",
+   "header": "",
+   "body": "Aristotle's philia covers friendship and affection. He names three kinds: friendships of usefulness, of pleasure and of goodness. Only the last lasts, because each loves the other for who they are.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Philia"
+  },
+  {
+   "type": "Idea",
+   "title": "Habit",
+   "header": "",
+   "body": "Aristotle held that character is formed by habit: we become just by doing just acts. The result is a hexis, a stable disposition, which is why early training matters so much.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Hexis"
+  },
+  {
+   "type": "Idea",
+   "title": "Happiness",
+   "header": "",
+   "body": "Aristotle's word is eudaimonia, often translated 'flourishing'. It is not a passing mood but a whole life lived well, in line with virtue, and the one thing we want purely for its own sake.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Eudaimonia"
+  },
+  {
+   "type": "Idea",
+   "title": "Justice",
+   "header": "",
+   "body": "In the Republic, justice is not only fair dealing with others but order within: each part of the soul doing its own work, with reason in charge. Socrates argues it is better to suffer wrong than to do it.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Republic_(Plato)"
+  },
+  {
+   "type": "Book",
+   "title": "Laws",
+   "header": "",
+   "body": "Plato's last and longest dialogue, designing the laws of an imagined city. It is the only one in which Socrates does not appear.",
+   "page": "thinker-plato",
+   "lead": "More in: ",
+   "wiki": "Laws_(dialogue)"
+  },
+  {
+   "type": "Idea",
+   "title": "Love",
+   "header": "",
+   "body": "Love (eros) in Plato's Symposium is a longing for what we lack. Diotima describes it as a ladder, from one beautiful body to beautiful souls and ideas, and finally to beauty itself. This is the origin of 'Platonic love'.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Platonic_love"
+  },
+  {
+   "type": "Idea",
+   "title": "Philosophy",
+   "header": "",
+   "body": "From the Greek for 'love of wisdom'. For Plato's Socrates, a philosopher does not possess wisdom but longs for it, and philosophy is a way of life: examining oneself and turning the soul toward what is true.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Philosophy"
+  },
+  {
+   "type": "Idea",
+   "title": "Pleasure",
+   "header": "",
+   "body": "For Aristotle, pleasure is not the aim but what completes a good activity. A good person enjoys acting well, so training what we take pleasure and pain in lies at the heart of ethics.",
+   "page": "topic-happiness-and-the-good-life",
+   "lead": "More in: ",
+   "wiki": "Nicomachean_Ethics"
+  },
+  {
+   "type": "Idea",
+   "title": "Socratic wisdom",
+   "header": "",
+   "body": "When the oracle called Socrates the wisest man in Athens, he concluded that his only wisdom was knowing that he did not know. Others thought they knew; he did not pretend to.",
+   "page": "thinker-plato",
+   "lead": "More in: ",
+   "wiki": "I_know_that_I_know_nothing"
+  },
+  {
+   "type": "Idea",
+   "title": "Soul",
+   "header": "",
+   "body": "For Plato, the soul (psyche) is the true self: what thinks, chooses and, he believed, outlives the body. In the Republic he divides it into reason, spirit and appetite; a healthy soul is one where reason leads.",
+   "page": "topic-the-self-and-the-soul",
+   "lead": "More in: ",
+   "wiki": "Plato's_theory_of_soul"
+  },
+  {
+   "type": "Idea",
+   "title": "The mean",
+   "header": "",
+   "body": "Aristotle's idea that each virtue lies between two vices, one of excess and one of deficiency: courage sits between recklessness and cowardice. The mean is not an exact midpoint but what fits the person and the moment.",
+   "page": "thinker-confucius",
+   "lead": "More in: ",
+   "wiki": "Golden_mean_(philosophy)"
+  },
+  {
+   "type": "Idea",
+   "title": "Virtue",
+   "header": "",
+   "body": "Virtue (aretē) means excellence: being good at being human. Socrates held that virtue is a kind of knowledge, so no one does wrong knowingly. Aristotle added that it is a settled trait of character, built by practice the way a skill is: we become brave by doing brave things.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Arete"
+  },
+  {
+   "type": "Idea",
+   "title": "Custom",
+   "header": "",
+   "body": "Hume's name for habit in our thinking. We expect the future to be like the past not because we have proven it, but because experience has trained us to.",
+   "page": "thinker-david-hume",
+   "lead": "More in: ",
+   "wiki": "Problem_of_induction"
+  },
+  {
+   "type": "Idea",
+   "title": "Duty",
+   "header": "",
+   "body": "For Kant, an action has moral worth only when done from duty, out of respect for the moral law, not merely from inclination or self-interest. Duty is what reason says we must do, whatever we happen to feel.",
+   "page": "topic-duty",
+   "lead": "More in: ",
+   "wiki": "Kantian_ethics"
+  },
+  {
+   "type": "Idea",
+   "title": "Good will",
+   "header": "",
+   "body": "Kant's starting point: nothing is good without qualification except a good will. Talents, courage and even happiness can be misused; a will set on doing right stays good even if it fails.",
+   "page": "thinker-immanuel-kant",
+   "lead": "More in: ",
+   "wiki": "Kantian_ethics"
+  },
+  {
+   "type": "Book",
+   "title": "Groundwork",
+   "header": "",
+   "body": "Kant's short book of 1785, the Groundwork of the Metaphysic of Morals, which sets out the foundations of his ethics, including the categorical imperative.",
+   "page": "thinker-immanuel-kant",
+   "lead": "More in: ",
+   "wiki": "Groundwork_of_the_Metaphysics_of_Morals"
+  },
+  {
+   "type": "Idea",
+   "title": "Happiness",
+   "header": "",
+   "body": "Enlightenment thinkers disagree. For Mill, happiness means pleasure and the absence of pain, and it is the measure of right and wrong, with everyone counting equally. For Kant, happiness is too vague to guide us: morality is about becoming worthy of it. For du Châtelet, it depends on health, passions and freedom from prejudice. For Rousseau, lasting happiness is not made for a world that always changes, so we should enjoy contentment when it comes.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Utilitarianism"
+  },
+  {
+   "type": "Idea",
+   "title": "Individuality",
+   "header": "",
+   "body": "Mill saw individuality, developing your own character, desires and judgment rather than copying custom, as part of happiness itself. People are not machines built to a pattern but trees that grow in their own way.",
+   "page": "topic-freedom",
+   "lead": "More in: ",
+   "wiki": "On_Liberty"
+  },
+  {
+   "type": "Idea",
+   "title": "Liberty",
+   "header": "",
+   "body": "Enlightenment thinkers saw freedom in different ways. For Locke, good laws protect it from other people's arbitrary will; for Rousseau, it means never being made to do what we do not want, and people are born free yet everywhere in chains; for Mill, in On Liberty, people should be free to think, speak and live as they choose, as long as they do not harm others.",
+   "page": "topic-freedom",
+   "lead": "More in: ",
+   "wiki": "On_Liberty"
+  },
+  {
+   "type": "Book",
+   "title": "Mill's Autobiography",
+   "header": "",
+   "body": "Mill's account of his unusual education and of the mental crisis he went through at twenty, published in 1873, the year he died.",
+   "page": "thinker-john-stuart-mill",
+   "lead": "More in: ",
+   "wiki": "John_Stuart_Mill"
+  },
+  {
+   "type": "Idea",
+   "title": "Moral law",
+   "header": "",
+   "body": "The principle reason gives every rational being, which Kant calls the categorical imperative: act only on a rule you could will everyone to follow, and treat people always as ends, never merely as means.",
+   "page": "thinker-immanuel-kant",
+   "lead": "More in: ",
+   "wiki": "Categorical_imperative"
+  },
+  {
+   "type": "Idea",
+   "title": "Passions",
+   "header": "",
+   "body": "Strong feelings and desires. Spinoza called being ruled by them 'bondage' and believed understanding them sets us free; Hume thought reason can only serve the passions, never rule them; Diderot defended them: only great passions, he wrote, raise us to great things.",
+   "page": "topic-mind-and-emotions",
+   "lead": "More in: ",
+   "wiki": "Passions_(philosophy)"
+  },
+  {
+   "type": "Idea",
+   "title": "Reason",
+   "header": "",
+   "body": "Enlightenment thinkers disagreed about reason's power. Kant made it the source of morality; Hume said it only serves our feelings; Wollstonecraft argued that women deserve to develop it as fully as men.",
+   "page": "topic-mind-and-emotions",
+   "lead": "More in: ",
+   "wiki": "Age_of_Enlightenment"
+  },
+  {
+   "type": "Idea",
+   "title": "Respect",
+   "header": "",
+   "body": "In Kant, respect is the feeling produced by reason itself: being humbled by the moral law, and by people who live up to it. Acting from duty means acting out of this respect.",
+   "page": "thinker-immanuel-kant",
+   "lead": "More in: ",
+   "wiki": "Kantian_ethics"
+  },
+  {
+   "type": "Idea",
+   "title": "Sympathy",
+   "header": "",
+   "body": "Adam Smith's word for our ability to share in others' feelings by imagining ourselves in their place. In The Theory of Moral Sentiments he makes it the root of morality.",
+   "page": "thinker-adam-smith",
+   "lead": "More in: ",
+   "wiki": "The_Theory_of_Moral_Sentiments"
+  },
+  {
+   "type": "Idea",
+   "title": "Active love",
+   "header": "",
+   "body": "Zosima's ideal in The Brothers Karamazov: love shown in patient, daily deeds toward real and difficult people, rather than in dreams of loving humanity. It is slow and costly, and it is what heals.",
+   "page": "thinker-fyodor-dostoevsky",
+   "lead": "More in: ",
+   "wiki": "The_Brothers_Karamazov"
+  },
+  {
+   "type": "Idea",
+   "title": "Attention",
+   "header": "",
+   "body": "For Simone Weil, attention means emptying our mind of its own opinions so that we can truly receive what is in front of us: a problem, a person, or God. She called it the rarest and purest form of generosity.",
+   "page": "thinker-simone-weil",
+   "lead": "More in: ",
+   "wiki": "Simone_Weil"
+  },
+  {
+   "type": "Idea",
+   "title": "Become who you are",
+   "header": "",
+   "body": "A line Nietzsche took from the Greek poet Pindar. It asks us to grow into our own nature instead of living by borrowed values. He later subtitled his autobiography 'How One Becomes What One Is'.",
+   "page": "thinker-friedrich-nietzsche",
+   "lead": "More in: ",
+   "wiki": "Ecce_Homo_(book)"
+  },
+  {
+   "type": "Idea",
+   "title": "Boredom",
+   "header": "",
+   "body": "Schopenhauer saw life swinging between pain, when we lack things, and boredom, when we have them. Freedom from both is about as much happiness as he thought we can expect.",
+   "page": "thinker-arthur-schopenhauer",
+   "lead": "More in: ",
+   "wiki": "Arthur_Schopenhauer"
+  },
+  {
+   "type": "Idea",
+   "title": "Diversion",
+   "header": "",
+   "body": "Pascal's word (divertissement) for everything we do to avoid being alone with our thoughts: games, busyness, noise. It consoles us, he says, but keeps us from facing our condition.",
+   "page": "thinker-blaise-pascal",
+   "lead": "More in: ",
+   "wiki": "Pensées"
+  },
+  {
+   "type": "Idea",
+   "title": "Self-deception",
+   "header": "",
+   "body": "Lying to oneself: hiding from a truth we half know. Dostoevsky saw it as a root of unhappiness, and later existentialists made it a central theme: we flee our freedom by pretending things are fixed.",
+   "page": "thinker-fyodor-dostoevsky",
+   "lead": "More in: ",
+   "wiki": "Self-deception"
+  },
+  {
+   "type": "Idea",
+   "title": "Solitude",
+   "header": "",
+   "body": "Schopenhauer, who lived alone for most of his later life, valued solitude as the condition for thinking freely. In company we adjust to others; alone we can be ourselves.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Arthur_Schopenhauer"
+  },
+  {
+   "type": "Idea",
+   "title": "The heart's reasons",
+   "header": "",
+   "body": "Pascal's claim that not all knowing is logical: some truths are grasped by intuition and feeling, which he calls the heart, before reason can prove them.",
+   "page": "thinker-blaise-pascal",
+   "lead": "More in: ",
+   "wiki": "Pensées"
+  },
+  {
+   "type": "Idea",
+   "title": "Essay",
+   "header": "",
+   "body": "From the French essai, 'attempt' or 'trial'. Montaigne used the word for his short pieces in which he tests his judgment on any subject, starting with himself, and made it a new literary form. Francis Bacon took up the word for his own Essays, first published in 1597.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Essay"
+  },
+  {
+   "type": "Idea",
+   "title": "Maxim",
+   "header": "",
+   "body": "A short, sharp saying that sums up a truth about human behaviour. La Rochefoucauld's maxims are famous for exposing vanity and self-love (amour-propre) behind our good actions. In the 18th century Vauvenargues gave the form a warmer voice, trusting feeling, while Chamfort sharpened it into social satire.",
+   "page": "thinker-la-rochefoucauld",
+   "lead": "More in: ",
+   "wiki": "François_de_La_Rochefoucauld_(writer)"
+  },
+  {
+   "type": "Idea",
+   "title": "Self-reliance",
+   "header": "",
+   "body": "Emerson's ideal: trusting your own thought and conscience instead of conforming. It is not selfishness but the courage to be an original rather than a copy.",
+   "page": "thinker-ralph-waldo-emerson",
+   "lead": "More in: ",
+   "wiki": "Self-Reliance"
+  },
+  {
+   "type": "Idea",
+   "title": "Simplicity",
+   "header": "",
+   "body": "Thoreau's answer to a life 'frittered away by detail': fewer possessions, fewer affairs and fewer demands, so that there is room to live deliberately.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Walden"
+  },
+  {
+   "type": "Idea",
+   "title": "Craving",
+   "header": "",
+   "body": "Taṇhā, literally 'thirst': the restless wanting of pleasure, of being, or of not-being. Buddhism names it as the main cause of suffering; letting it go is the way to peace.",
+   "page": "topic-desire-and-simplicity",
+   "lead": "More in: ",
+   "wiki": "Taṇhā"
+  },
+  {
+   "type": "Idea",
+   "title": "Dhamma (the law)",
+   "header": "",
+   "body": "In the Dhammapada, 'the law' translates Dhamma: the Buddha's teaching and the truth about how things are. It is not law in the legal sense.",
+   "page": "topic-karma-and-dharma",
+   "lead": "More in: ",
+   "wiki": "Dharma_(Buddhism)"
+  },
+  {
+   "type": "Idea",
+   "title": "Hatred",
+   "header": "",
+   "body": "One of the three 'poisons' or unwholesome roots in Buddhism, with greed and delusion. Hatred keeps the cycle of harm turning; the Dhammapada says it ends only through its opposite.",
+   "page": "topic-mind-and-emotions",
+   "lead": "More in: ",
+   "wiki": "Three_poisons"
+  },
+  {
+   "type": "Idea",
+   "title": "Mind",
+   "header": "",
+   "body": "In the Dhammapada the mind (citta) comes first: as we think, so we become. It is restless by nature but can be trained, and a well-trained mind is the greatest help we have.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Citta"
+  },
+  {
+   "type": "Idea",
+   "title": "Self",
+   "header": "",
+   "body": "Buddhism teaches anattā, 'non-self': nothing in us is a fixed, permanent essence. When the Dhammapada calls the self its own master, it means our own effort and conduct, which no one else can tend for us.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Anattā"
+  },
+  {
+   "type": "Idea",
+   "title": "Suffering",
+   "header": "",
+   "body": "Dukkha means suffering, but also unease and unsatisfactoriness: the sense that nothing we grasp stays or fully satisfies. Seeing it clearly is the first of the Four Noble Truths.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Dukkha"
+  },
+  {
+   "type": "Idea",
+   "title": "The wise",
+   "header": "",
+   "body": "A whole chapter of the Dhammapada is about the wise (paṇḍita). It means not the learned but those who see clearly, train themselves, stay steady through praise and blame, and do no harm.",
+   "page": "text-the-dhammapada",
+   "lead": "More in: ",
+   "wiki": "Dhammapada"
+  },
+  {
+   "type": "Idea",
+   "title": "Brahman",
+   "header": "",
+   "body": "The ultimate reality behind all things, beyond what the senses can grasp. The Upanishads call it 'the True' and say: you are it.",
+   "page": "topic-the-self-and-the-soul",
+   "lead": "More in: ",
+   "wiki": "Brahman"
+  },
+  {
+   "type": "Idea",
+   "title": "Dharma",
+   "header": "",
+   "body": "One's rightful duty or path, fitting one's nature and place in life. The Gita says it is better to follow your own dharma imperfectly than someone else's perfectly.",
+   "page": "topic-karma-and-dharma",
+   "lead": "More in: ",
+   "wiki": "Dharma"
+  },
+  {
+   "type": "Idea",
+   "title": "Karma",
+   "header": "",
+   "body": "Literally 'action'. Every act shapes the one who does it and has consequences that come back to them. Karma yoga is the path of acting well without clinging to the results.",
+   "page": "topic-karma-and-dharma",
+   "lead": "More in: ",
+   "wiki": "Karma"
+  },
+  {
+   "type": "Idea",
+   "title": "Non-attachment",
+   "header": "",
+   "body": "The Gita's central teaching: do your work fully, but without depending on its 'fruit', the reward or result. Vivekananda saw it as the secret of working without stress.",
+   "page": "text-the-bhagavad-gita",
+   "lead": "More in: ",
+   "wiki": "Nishkam_Karma"
+  },
+  {
+   "type": "Idea",
+   "title": "Self (Atman)",
+   "header": "",
+   "body": "In Vedanta, Atman is the deepest self: not the body or the passing mind, but the awareness behind them. The Upanishads teach that it is one with Brahman, the reality behind everything.",
+   "page": "topic-the-self-and-the-soul",
+   "lead": "More in: ",
+   "wiki": "Ātman_(Hinduism)"
+  },
+  {
+   "type": "Idea",
+   "title": "Yoga",
+   "header": "",
+   "body": "From a root meaning 'to join'. In the Gita it means a discipline that unites us with the divine, through action, knowledge or devotion. Telang's translation often renders it as 'devotion'.",
+   "page": "topic-karma-and-dharma",
+   "lead": "More in: ",
+   "wiki": "Yoga"
+  },
+  {
+   "type": "Idea",
+   "title": "Emptiness",
+   "header": "",
+   "body": "Laozi's image: a wheel, a bowl or a room is useful because of its empty space. Emptiness is not lack but room, an openness that lets things happen.",
+   "page": "path-japanese-aesthetics",
+   "lead": "More in: ",
+   "wiki": "Tao_Te_Ching"
+  },
+  {
+   "type": "Idea",
+   "title": "Great knowledge",
+   "header": "",
+   "body": "Zhuangzi distrusts knowledge that is sure of itself. Small knowledge sees a part and takes it for the whole; great knowledge holds its views lightly, knowing a limited life cannot master a limitless world.",
+   "page": "thinker-zhuangzi",
+   "lead": "More in: ",
+   "wiki": "Zhuangzi_(book)"
+  },
+  {
+   "type": "Word",
+   "title": "Li",
+   "header": "",
+   "body": "A traditional Chinese measure of distance. It varied over the centuries, but was usually about a third of a mile; today it is half a kilometre.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Li_(unit)"
+  },
+  {
+   "type": "Idea",
+   "title": "Softness",
+   "header": "",
+   "body": "A recurring Taoist teaching: the soft and yielding outlast the hard and rigid. Water wears down stone; a living plant bends where a dead one breaks.",
+   "page": "path-taoism",
+   "lead": "More in: ",
+   "wiki": "Tao_Te_Ching"
+  },
+  {
+   "type": "Idea",
+   "title": "Stillness",
+   "header": "",
+   "body": "Muddy water clears when left alone. Taoists prize stillness and not forcing things, letting them settle by themselves, close to the ideal of wu wei, effortless action.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Wu_wei"
+  },
+  {
+   "type": "Idea",
+   "title": "The useless tree",
+   "header": "",
+   "body": "Zhuangzi's old tree is worthless to the carpenter, and that is why it lived so long. What the world calls useless may be what lets something flourish on its own terms.",
+   "page": "thinker-zhuangzi",
+   "lead": "More in: ",
+   "wiki": "Zhuangzi_(book)"
+  },
+  {
+   "type": "Idea",
+   "title": "Water",
+   "header": "",
+   "body": "Taoism's favourite image of the Tao. Water benefits all things without competing, settles in the low places others avoid, and yet nothing overcomes the hard so well.",
+   "page": "path-taoism",
+   "lead": "More in: ",
+   "wiki": "Tao_Te_Ching"
+  },
+  {
+   "type": "Idea",
+   "title": "Learning",
+   "header": "",
+   "body": "For Confucius, learning is the path to becoming fully human: not collecting facts, but studying, reflecting and practising until what we know shapes who we are.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Analects"
+  },
+  {
+   "type": "Idea",
+   "title": "Mean man",
+   "header": "",
+   "body": "Legge's translation of xiaoren, the 'small person': not poor or low-born, but petty, concerned with gain and comfort, and quick to blame others. The opposite of the superior man.",
+   "page": "thinker-confucius",
+   "lead": "More in: ",
+   "wiki": "Junzi"
+  },
+  {
+   "type": "Idea",
+   "title": "Reciprocity",
+   "header": "",
+   "body": "Shu in Chinese: treating others as you would wish to be treated or, as Confucius put it, not doing to others what you would not want done to yourself.",
+   "page": "thinker-confucius",
+   "lead": "More in: ",
+   "wiki": "Golden_Rule"
+  },
+  {
+   "type": "Idea",
+   "title": "Superior man",
+   "header": "",
+   "body": "Legge's translation of junzi, a person of noble character. For Confucius, nobility comes not from birth but from cultivating virtue, learning and integrity, so anyone can become one.",
+   "page": "thinker-confucius",
+   "lead": "More in: ",
+   "wiki": "Junzi"
+  },
+  {
+   "type": "Idea",
+   "title": "The mean",
+   "header": "",
+   "body": "The Confucian ideal of zhongyong, steady balance in feeling and action: neither too much nor too little. Aristotle reached a similar idea in Greece.",
+   "page": "thinker-confucius",
+   "lead": "More in: ",
+   "wiki": "Doctrine_of_the_Mean"
+  },
+  {
+   "type": "Idea",
+   "title": "Virtue",
+   "header": "",
+   "body": "Often Legge's word for ren, Confucius' highest virtue: humaneness, the goodness that shows in how we treat others. It includes kindness, trustworthiness, courage and reciprocity.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Ren_(philosophy)"
+  },
+  {
+   "type": "Idea",
+   "title": "Beauty",
+   "header": "",
+   "body": "For Okakura, Teaism is the adoration of the beautiful in everyday life: beauty found in small, ordinary things given full attention, rather than in display.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "The_Book_of_Tea"
+  },
+  {
+   "type": "Idea",
+   "title": "Emptiness",
+   "header": "",
+   "body": "Okakura, echoing Laozi, says the use of a pitcher lies in its emptiness. Japanese aesthetics calls this meaningful open space or pause ma: room that lets things breathe.",
+   "page": "path-japanese-aesthetics",
+   "lead": "More in: ",
+   "wiki": "Ma_(negative_space)"
+  },
+  {
+   "type": "Idea",
+   "title": "Imperfection",
+   "header": "",
+   "body": "Okakura calls Teaism a worship of the Imperfect. The related ideal of wabi-sabi finds beauty in what is incomplete, worn or passing, leaving room for the imagination to finish it.",
+   "page": "path-japanese-aesthetics",
+   "lead": "More in: ",
+   "wiki": "Wabi-sabi"
+  },
+  {
+   "type": "Idea",
+   "title": "Impermanence",
+   "header": "",
+   "body": "The passing of all things (mujō) runs through Japanese writing. Mono no aware, 'the pathos of things', is the gentle feeling it brings: things are dearer because they do not last.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Mono_no_aware"
+  },
+  {
+   "type": "Idea",
+   "title": "Seasons",
+   "header": "",
+   "body": "In Japanese writing each season has its own moods and images. Sei Shōnagon's Pillow Book opens by naming the most beautiful moment of each, a lesson in noticing the present.",
+   "page": "path-japanese-aesthetics",
+   "lead": "More in: ",
+   "wiki": "The_Pillow_Book"
+  },
+  {
+   "type": "Idea",
+   "title": "Divine love",
+   "header": "",
+   "body": "For Sufi poets, love (ishq) is the path to God and God himself. Human love, wine and longing in their poems are often images of the soul's love for the divine.",
+   "page": "path-persian-and-sufi-poetry",
+   "lead": "More in: ",
+   "wiki": "Sufi_poetry"
+  },
+  {
+   "type": "Word",
+   "title": "Halting-station",
+   "header": "",
+   "body": "A rest stop on a caravan route, where travellers spent the night; a caravanserai was the roadside inn built for them. Persian poets use both for life as a short stay on a longer journey.",
+   "page": "path-persian-and-sufi-poetry",
+   "lead": "More in: ",
+   "wiki": "Caravanserai"
+  },
+  {
+   "type": "Idea",
+   "title": "Heart",
+   "header": "",
+   "body": "In Sufism the heart (qalb) is the organ of spiritual knowledge. It is pictured as a mirror: rusted by pride and desire, it must be polished until it reflects the light of God.",
+   "page": "path-persian-and-sufi-poetry",
+   "lead": "More in: ",
+   "wiki": "Qalb"
+  },
+  {
+   "type": "Idea",
+   "title": "The lower self",
+   "header": "",
+   "body": "The nafs: the ego, with its pride and cravings. Much of the Sufi path is about taming it so that the true self can emerge; Rumi calls it being 'free from self'.",
+   "page": "topic-the-self-and-the-soul",
+   "lead": "More in: ",
+   "wiki": "Nafs"
+  },
+  {
+   "type": "Idea",
+   "title": "Wine",
+   "header": "",
+   "body": "In Persian poetry, wine is rarely only wine. For Khayyam it often stands for enjoying the present while we can; for Sufi poets such as Hafiz it is an image of the joy of spiritual love.",
+   "page": "path-persian-and-sufi-poetry",
+   "lead": "More in: ",
+   "wiki": "Persian_literature"
+  },
+  {
+   "type": "Idea",
+   "title": "Tolerance",
+   "header": "",
+   "body": "Accepting that others may believe and live differently. It was Voltaire's great cause: after Europe's long wars over doctrine, he argued that since we are all weak and mistaken, we should forgive one another's errors. Mill extended it to unusual characters and ways of life.",
+   "page": null,
+   "lead": "More in: ",
+   "wiki": "Toleration"
+  },
+  {
+   "type": "Idea",
+   "title": "Prejudice",
+   "header": "",
+   "body": "An opinion held without judgement, usually picked up in childhood before we could weigh it. Voltaire adds that some prejudices are good: the ones our judgement confirms once we reason. Du Châtelet counted freedom from prejudice as a source of happiness.",
+   "page": "topic-tolerance",
+   "lead": "More in: ",
+   "wiki": "Prejudice"
+  },
+  {
+   "type": "Idea",
+   "title": "Social contract",
+   "header": "",
+   "body": "The idea that a state rests on an agreement among the people it governs. Hobbes, Locke and Rousseau gave it different forms: for Hobbes, people give up some freedom for safety; for Locke, government must protect life, liberty and property; for Rousseau, citizens together make the laws they obey.",
+   "page": "topic-justice",
+   "lead": "More in: ",
+   "wiki": "Social_contract"
+  },
+  {
+   "type": "Idea",
+   "title": "Commonwealth",
+   "header": "",
+   "body": "Hobbes's word for an organised state, made when people agree to live under a common power. In Leviathan he argues that only such a power brings peace, and with peace the leisure to think.",
+   "page": "thinker-thomas-hobbes",
+   "lead": "More in: ",
+   "wiki": "Commonwealth"
+  },
+  {
+   "type": "Idea",
+   "title": "Citizen of the world",
+   "header": "",
+   "body": "Someone loyal to humanity as a whole rather than to one country. Voltaire ends his article on the homeland with this ideal; the phrase goes back to the ancient Greek thinker Diogenes.",
+   "page": "thinker-voltaire",
+   "lead": "More in: ",
+   "wiki": "Cosmopolitanism"
+  },
+  {
+   "type": "Idea",
+   "title": "Diderot effect",
+   "header": "",
+   "body": "The modern name, given long after Diderot, for a chain of new wants: one new possession makes everything around it look shabby, so we replace that too. It comes from his essay on his new dressing gown.",
+   "page": "thinker-denis-diderot",
+   "lead": "More in: ",
+   "wiki": "Diderot_effect"
+  },
+  {
+   "type": "Text",
+   "title": "Dhammapada",
+   "header": "India · sayings of the Buddha, 5th century BCE · Buddhist Philosophy",
+   "body": "A collection of 423 verses attributed to the Buddha, one of the best-loved Buddhist scriptures. Its name means roughly 'path of the teaching'.",
+   "page": "text-the-dhammapada",
+   "lead": "More about ",
+   "wiki": "Dhammapada"
+  },
+  {
+   "type": "Person",
+   "title": "Buddha",
+   "header": "",
+   "body": "Siddhartha Gautama, a spiritual teacher in ancient India and the founder of Buddhism. 'Buddha' is a title meaning 'awakened one'.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "The_Buddha"
+  },
+  {
+   "type": "Idea",
+   "title": "Nirvana",
+   "header": "",
+   "body": "In Buddhism, the final freedom from craving and suffering. The word means 'blowing out', as of a flame.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Nirvana_(Buddhism)"
+  },
+  {
+   "type": "Thinker",
+   "title": "Marcus Aurelius",
+   "header": "Rome, Italy · 121 – 180 CE · Stoicism",
+   "body": "Roman emperor from 161 to 180 CE and a devoted Stoic. His private notes to himself became the Meditations.",
+   "page": "thinker-marcus-aurelius",
+   "lead": "More about ",
+   "wiki": "Marcus_Aurelius"
+  },
+  {
+   "type": "Book",
+   "title": "Meditations",
+   "header": "",
+   "body": "The personal notebook of Marcus Aurelius, written in Greek during his military campaigns. It was never meant for publication.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Meditations"
+  },
+  {
+   "type": "Thinker",
+   "title": "Epictetus",
+   "header": "Hierapolis, Turkey · about 50 – 135 CE · Stoicism",
+   "body": "A Stoic teacher who was born a slave and later freed. His teachings were written down by his student Arrian.",
+   "page": "thinker-epictetus",
+   "lead": "More about ",
+   "wiki": "Epictetus"
+  },
+  {
+   "type": "Book",
+   "title": "Enchiridion",
+   "header": "",
+   "body": "A short 'handbook' of Epictetus' teachings, compiled by his student Arrian. Its title means 'ready at hand'.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Enchiridion_of_Epictetus"
+  },
+  {
+   "type": "Thinker",
+   "title": "Seneca",
+   "header": "Córdoba, Spain · about 4 BCE – 65 CE · Stoicism",
+   "body": "A Roman Stoic philosopher, statesman and playwright. He advised the emperor Nero and wrote essays and letters on how to live.",
+   "page": "thinker-seneca",
+   "lead": "More about ",
+   "wiki": "Seneca_the_Younger"
+  },
+  {
+   "type": "Person",
+   "title": "Democritus",
+   "header": "",
+   "body": "A Greek philosopher of the 5th century BCE who taught that everything is made of tiny atoms. He was known as 'the laughing philosopher' for his cheerfulness.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Democritus"
+  },
+  {
+   "type": "Thinker",
+   "title": "Epicurus",
+   "header": "Samos, Greece · 341 – 270 BCE · Epicureanism",
+   "body": "A Greek philosopher who founded the school called the Garden in Athens. He taught that peace of mind and friendship are the heart of a happy life.",
+   "page": "thinker-epicurus",
+   "lead": "More about ",
+   "wiki": "Epicurus"
+  },
+  {
+   "type": "Book",
+   "title": "Principal Doctrines",
+   "header": "",
+   "body": "Forty short sayings summing up the philosophy of Epicurus and his school, which his followers memorised. They survive in Diogenes Laërtius' life of Epicurus.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Principal_Doctrines"
+  },
+  {
+   "type": "Book",
+   "title": "Letter to Menoeceus",
+   "header": "",
+   "body": "A letter in which Epicurus summarises his ethics for a student named Menoeceus. It covers death, desire and the good life.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Letter_to_Menoeceus"
+  },
+  {
+   "type": "Idea",
+   "title": "Ataraxia",
+   "header": "",
+   "body": "A Greek word for a calm, untroubled state of mind. For Epicureans and Stoics alike, it was a central aim of the good life.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Ataraxia"
+  },
+  {
+   "type": "Thinker",
+   "title": "Lucretius",
+   "header": "Italy · about 99 – 55 BCE · Epicureanism",
+   "body": "A Roman poet of the 1st century BCE who set out Epicurus' philosophy in a long poem. Little is known about his life.",
+   "page": "thinker-lucretius",
+   "lead": "More about ",
+   "wiki": "Lucretius"
+  },
+  {
+   "type": "Book",
+   "title": "On the Nature of Things",
+   "header": "",
+   "body": "Lucretius' poem explaining Epicurean philosophy, from atoms to the fear of death. Its Latin title is De rerum natura.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "De_rerum_natura"
+  },
+  {
+   "type": "Thinker",
+   "title": "Plato",
+   "header": "Athens, Greece · about 428 – 347 BCE · Classical Greek Philosophy",
+   "body": "An Athenian philosopher, student of Socrates and teacher of Aristotle. He wrote his philosophy as dialogues, usually starring Socrates; references like 38a are standard page numbers in his works.",
+   "page": "thinker-plato",
+   "lead": "More about ",
+   "wiki": "Plato"
+  },
+  {
+   "type": "Person",
+   "title": "Socrates",
+   "header": "",
+   "body": "An Athenian philosopher (around 470–399 BCE) who wrote nothing, but questioned everyone. He was sentenced to death for impiety and corrupting the youth, and we know him mainly through Plato.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Socrates"
+  },
+  {
+   "type": "Book",
+   "title": "Crito",
+   "header": "",
+   "body": "A dialogue set in Socrates' prison cell, where his friend Crito urges him to escape. Socrates explains why he will not.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Crito"
+  },
+  {
+   "type": "Book",
+   "title": "Phaedo",
+   "header": "",
+   "body": "A dialogue describing Socrates' last day and death, in which he discusses the soul with his friends. It is told by his follower Phaedo.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Phaedo"
+  },
+  {
+   "type": "Book",
+   "title": "Republic",
+   "header": "",
+   "body": "Plato's best-known dialogue, asking what justice is in a city and in a person. It contains the famous Allegory of the Cave.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Republic_(Plato)"
+  },
+  {
+   "type": "Book",
+   "title": "Symposium",
+   "header": "",
+   "body": "A dialogue set at a drinking party where the guests each give a speech in praise of love. Socrates retells what he learned from the wise woman Diotima.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Symposium_(Plato)"
+  },
+  {
+   "type": "Book",
+   "title": "Phaedrus",
+   "header": "",
+   "body": "A dialogue in which Socrates and Phaedrus discuss love, the soul and the art of speaking. It contains the image of the soul as a charioteer.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Phaedrus_(dialogue)"
+  },
+  {
+   "type": "Book",
+   "title": "Gorgias",
+   "header": "",
+   "body": "A dialogue about rhetoric and how to live, named after a famous teacher of persuasion. Socrates argues that doing wrong is worse than suffering it.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Gorgias_(dialogue)"
+  },
+  {
+   "type": "Book",
+   "title": "Theaetetus",
+   "header": "",
+   "body": "A dialogue in which Socrates and the young mathematician Theaetetus ask: what is knowledge? It ends without a final answer.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Theaetetus_(dialogue)"
+  },
+  {
+   "type": "Book",
+   "title": "Meno",
+   "header": "",
+   "body": "A dialogue asking whether virtue can be taught. Socrates shows that learning may be a kind of remembering.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Meno"
+  },
+  {
+   "type": "Idea",
+   "title": "Allegory of the Cave",
+   "header": "",
+   "body": "A story in Plato's Republic about prisoners who mistake shadows on a wall for reality. It pictures philosophy as the turn toward the light of truth.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Allegory_of_the_cave"
+  },
+  {
+   "type": "Thinker",
+   "title": "Friedrich Nietzsche",
+   "header": "Röcken, Germany · 1844 – 1900 · Existential Thought",
+   "body": "A German philosopher who questioned traditional values and asked how to affirm life without them. His aphoristic style inspired the existentialists.",
+   "page": "thinker-friedrich-nietzsche",
+   "lead": "More about ",
+   "wiki": "Friedrich_Nietzsche"
+  },
+  {
+   "type": "Book",
+   "title": "Thus Spake Zarathustra",
+   "header": "",
+   "body": "Nietzsche's philosophical novel (1883–85) about a prophet who comes down from the mountains to teach. Its Zarathustra is loosely named after the ancient Persian prophet.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Thus_Spoke_Zarathustra"
+  },
+  {
+   "type": "Idea",
+   "title": "Superman (Übermensch)",
+   "header": "",
+   "body": "Nietzsche's Übermensch, often translated 'overman': a human being who creates their own values and fully affirms life. It has nothing to do with the comic-book hero.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Übermensch"
+  },
+  {
+   "type": "Idea",
+   "title": "Amor fati",
+   "header": "",
+   "body": "Latin for 'love of fate'. Nietzsche used it for embracing everything that happens, including suffering, as necessary and even good.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Amor_fati"
+  },
+  {
+   "type": "Book",
+   "title": "Beyond Good and Evil",
+   "header": "",
+   "body": "A book by Nietzsche (1886) that criticises past philosophers and conventional morality. It is written largely in short sections and aphorisms.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Beyond_Good_and_Evil"
+  },
+  {
+   "type": "Book",
+   "title": "The Joyful Wisdom",
+   "header": "",
+   "body": "A book by Nietzsche (1882), also translated as 'The Gay Science', where 'gay' means joyful. It contains his famous ideas of eternal recurrence and amor fati.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "The_Gay_Science"
+  },
+  {
+   "type": "Thinker",
+   "title": "Fyodor Dostoevsky",
+   "header": "Moscow, Russia · 1821 – 1881 · Existential Thought",
+   "body": "A Russian novelist whose books explore freedom, faith, guilt and suffering. He is often seen as a forerunner of existentialism.",
+   "page": "thinker-fyodor-dostoevsky",
+   "lead": "More about ",
+   "wiki": "Fyodor_Dostoevsky"
+  },
+  {
+   "type": "Book",
+   "title": "The Brothers Karamazov",
+   "header": "",
+   "body": "Dostoevsky's final novel (1880), about three brothers and the murder of their father. It wrestles with faith, doubt, freedom and love.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "The_Brothers_Karamazov"
+  },
+  {
+   "type": "Character",
+   "title": "Zosima",
+   "header": "",
+   "body": "A wise and gentle elder monk in The Brothers Karamazov and spiritual guide to the youngest brother, Alyosha. His teachings centre on active love and humility.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "The_Brothers_Karamazov"
+  },
+  {
+   "type": "Book",
+   "title": "Notes from Underground",
+   "header": "",
+   "body": "A short novel by Dostoevsky (1864), the bitter confession of an unnamed narrator known as the Underground Man. It is often called the first existentialist novel.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Notes_from_Underground"
+  },
+  {
+   "type": "Thinker",
+   "title": "Blaise Pascal",
+   "header": "Clermont (now Clermont-Ferrand, France) · 1623 – 1662 · Existential Thought",
+   "body": "A French mathematician, physicist and religious thinker. His unfinished notes on the human condition became the Pensées.",
+   "page": "thinker-blaise-pascal",
+   "lead": "More about ",
+   "wiki": "Blaise_Pascal"
+  },
+  {
+   "type": "Book",
+   "title": "Pensées",
+   "header": "",
+   "body": "French for 'thoughts': the fragments Pascal left unfinished at his death, published in 1670. They explore human greatness, misery and the search for meaning.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Pensées"
+  },
+  {
+   "type": "Idea",
+   "title": "Tao",
+   "header": "",
+   "body": "Chinese for 'the Way': the natural order underlying all things. Taoists say it can be followed, but never fully put into words.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Tao"
+  },
+  {
+   "type": "Thinker",
+   "title": "Laozi",
+   "header": "China · traditionally 6th century BCE · Taoism",
+   "body": "A legendary Chinese sage, traditionally the author of the Tao Te Ching. Almost nothing is known of his life, and historians debate whether he was a single real person.",
+   "page": "thinker-laozi",
+   "lead": "More about ",
+   "wiki": "Laozi"
+  },
+  {
+   "type": "Book",
+   "title": "Tao Te Ching",
+   "header": "",
+   "body": "The founding text of Taoism: 81 short chapters, probably compiled around the 4th century BCE. It is one of the most translated books in the world.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Tao_Te_Ching"
+  },
+  {
+   "type": "Thinker",
+   "title": "Zhuangzi",
+   "header": "China · about 369 – 286 BCE · Taoism",
+   "body": "A Chinese philosopher of the 4th century BCE, and the book named after him, full of playful stories and paradoxes about freedom and the limits of knowledge.",
+   "page": "thinker-zhuangzi",
+   "lead": "More about ",
+   "wiki": "Zhuangzi_(book)"
+  },
+  {
+   "type": "Person",
+   "title": "Hui Shi",
+   "header": "",
+   "body": "A Chinese logician and statesman of the 4th century BCE. He was Zhuangzi's friend and favourite partner in debate.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Hui_Shi"
+  },
+  {
+   "type": "Thinker",
+   "title": "Confucius",
+   "header": "Qufu, China · about 551 – 479 BCE · Confucianism",
+   "body": "A Chinese teacher and philosopher whose teachings on virtue, family and good government shaped East Asian culture. Taoist writers often use him as a character in their stories.",
+   "page": "thinker-confucius",
+   "lead": "More about ",
+   "wiki": "Confucius"
+  },
+  {
+   "type": "Thinker",
+   "title": "Aristotle",
+   "header": "Stagira, Greece · 384 – 322 BCE · Classical Greek Philosophy",
+   "body": "A Greek philosopher, student of Plato and tutor of Alexander the Great. He wrote on nearly everything, from ethics and politics to biology and logic.",
+   "page": "thinker-aristotle",
+   "lead": "More about ",
+   "wiki": "Aristotle"
+  },
+  {
+   "type": "Book",
+   "title": "Nicomachean Ethics",
+   "header": "",
+   "body": "Aristotle's main work on ethics, traditionally said to be named after his son Nicomachus. It asks what a good human life is and how character is formed.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Nicomachean_Ethics"
+  },
+  {
+   "type": "Idea",
+   "title": "Eudaimonia",
+   "header": "",
+   "body": "Greek for flourishing or living well, usually translated 'happiness'. For Aristotle it is the aim of life, reached through a lifetime of virtuous activity.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Eudaimonia"
+  },
+  {
+   "type": "Thinker",
+   "title": "Immanuel Kant",
+   "header": "Königsberg (now Kaliningrad, Russia) · 1724 – 1804 · Enlightenment Ethics",
+   "body": "A German philosopher, one of the most influential thinkers of modern times. He argued that morality rests on reason and on respect for every person.",
+   "page": "thinker-immanuel-kant",
+   "lead": "More about ",
+   "wiki": "Immanuel_Kant"
+  },
+  {
+   "type": "Book",
+   "title": "Critique of Practical Reason",
+   "header": "",
+   "body": "Kant's 1788 book on morality and freedom. It ends with his famous lines on the starry heavens and the moral law.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Critique_of_Practical_Reason"
+  },
+  {
+   "type": "Thinker",
+   "title": "John Stuart Mill",
+   "header": "London, England · 1806 – 1873 · Enlightenment Ethics",
+   "body": "An English philosopher and reformer, a champion of individual liberty and of women's rights. A breakdown at twenty taught him the value of feeling alongside reason.",
+   "page": "thinker-john-stuart-mill",
+   "lead": "More about ",
+   "wiki": "John_Stuart_Mill"
+  },
+  {
+   "type": "Book",
+   "title": "On Liberty",
+   "header": "",
+   "body": "An 1859 essay on the limits of society's power over the individual, published under John Stuart Mill's name and written with his wife, Harriet Taylor Mill. It remains a classic defence of free speech and personal freedom.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "On_Liberty"
+  },
+  {
+   "type": "Thinker",
+   "title": "Okakura Kakuzō",
+   "header": "Yokohama, Japan · 1863 – 1913 · Japanese Aesthetics",
+   "body": "A Japanese scholar and art critic who wrote The Book of Tea in English to introduce Japanese culture to the West.",
+   "page": "thinker-okakura-kakuzo",
+   "lead": "More about ",
+   "wiki": "Okakura_Kakuzō"
+  },
+  {
+   "type": "Book",
+   "title": "The Book of Tea",
+   "header": "",
+   "body": "Okakura's short book (1906) on the tea ceremony and the ideas behind it: simplicity, imperfection and beauty in everyday life.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "The_Book_of_Tea"
+  },
+  {
+   "type": "Person",
+   "title": "Sen no Rikyū",
+   "header": "",
+   "body": "Sen no Rikyū (1522–1591), the most celebrated Japanese tea master, who shaped the tea ceremony's ideal of rustic simplicity.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Sen_no_Rikyū"
+  },
+  {
+   "type": "Thinker",
+   "title": "Kenkō",
+   "header": "Japan · about 1283 – 1350 · Japanese Aesthetics",
+   "body": "Kenkō, a Japanese poet and Buddhist monk whose Essays in Idleness reflect on beauty, impermanence and everyday life.",
+   "page": "thinker-kenko",
+   "lead": "More about ",
+   "wiki": "Yoshida_Kenkō"
+  },
+  {
+   "type": "Book",
+   "title": "Essays in Idleness",
+   "header": "",
+   "body": "Kenkō's collection of short essays (Tsurezuregusa), written around 1330 and one of the classics of Japanese literature.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Tsurezuregusa"
+  },
+  {
+   "type": "Thinker",
+   "title": "Kamo no Chōmei",
+   "header": "Japan · about 1155 – 1216 · Japanese Aesthetics",
+   "body": "A Japanese poet who, after years of disaster and disappointment, withdrew to a tiny hut in the hills near Kyoto.",
+   "page": "thinker-kamo-no-chomei",
+   "lead": "More about ",
+   "wiki": "Kamo_no_Chōmei"
+  },
+  {
+   "type": "Book",
+   "title": "Hōjōki",
+   "header": "",
+   "body": "Chōmei's short book of 1212, 'An Account of My Ten-Foot Hut', on impermanence and the joys of a simple life.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Hōjōki"
+  },
+  {
+   "type": "Book",
+   "title": "Analects",
+   "header": "",
+   "body": "The sayings of Confucius and his students, collected by his followers after his death: short conversations and maxims, arranged in twenty books.",
+   "page": "thinker-confucius",
+   "lead": "More about ",
+   "wiki": "Analects"
+  },
+  {
+   "type": "Thinker",
+   "title": "Heraclitus",
+   "header": "Ephesus, Turkey · active about 500 BCE · Classical Greek Philosophy",
+   "body": "A Greek philosopher from Ephesus, active around 500 BCE, known for his cryptic sayings about constant change and the unity of opposites. Ancient writers called him 'the Obscure'.",
+   "page": "thinker-heraclitus",
+   "lead": "More about ",
+   "wiki": "Heraclitus"
+  },
+  {
+   "type": "Place",
+   "title": "Ephesus",
+   "header": "",
+   "body": "An ancient Greek port city on the coast of what is now Turkey, home of Heraclitus.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Ephesus"
+  },
+  {
+   "type": "Person",
+   "title": "Hesiod",
+   "header": "",
+   "body": "An early Greek poet (around 700 BCE) who wrote about the gods and farming life.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Hesiod"
+  },
+  {
+   "type": "Person",
+   "title": "Pythagoras",
+   "header": "",
+   "body": "A Greek philosopher and mathematician of the 6th century BCE who taught that numbers lie behind the order of the world.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Pythagoras"
+  },
+  {
+   "type": "Person",
+   "title": "Xenophanes",
+   "header": "",
+   "body": "A Greek thinker and poet (around 570–478 BCE) from Colophon who criticised the idea of human-like gods.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Xenophanes"
+  },
+  {
+   "type": "Person",
+   "title": "Hekataios",
+   "header": "",
+   "body": "Hecataeus of Miletus (around 550–476 BCE), an early Greek historian often called the father of geography.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Hecataeus_of_Miletus"
+  },
+  {
+   "type": "Idea",
+   "title": "Know thyself",
+   "header": "",
+   "body": "A maxim inscribed on the Temple of Apollo at Delphi. It first meant 'know your limits'; Plato's Socrates read it as 'know your soul'.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Know_thyself"
+  },
+  {
+   "type": "Thinker",
+   "title": "Boethius",
+   "header": "Rome, Italy · about 480 – 524 CE · Stoicism",
+   "body": "A Roman senator and philosopher. Accused of treason, he wrote The Consolation of Philosophy in prison while awaiting execution.",
+   "page": "thinker-boethius",
+   "lead": "More about ",
+   "wiki": "Boethius"
+  },
+  {
+   "type": "Book",
+   "title": "The Consolation of Philosophy",
+   "header": "",
+   "body": "Boethius' last work, written in prison in 523: a dialogue with Philosophy, who appears as a woman and teaches him that true happiness cannot be taken away. One of the most read books of the Middle Ages.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "The_Consolation_of_Philosophy"
+  },
+  {
+   "type": "Thinker",
+   "title": "Baruch Spinoza",
+   "header": "Amsterdam, Netherlands · 1632 – 1677 · Enlightenment Ethics",
+   "body": "A Dutch philosopher, born in Amsterdam, who earned his living grinding lenses. Expelled from his Jewish community in 1656, he wrote the Ethics, published after his death.",
+   "page": "thinker-baruch-spinoza",
+   "lead": "More about ",
+   "wiki": "Baruch_Spinoza"
+  },
+  {
+   "type": "Thinker",
+   "title": "David Hume",
+   "header": "Edinburgh, Scotland · 1711 – 1776 · Enlightenment Ethics",
+   "body": "A Scottish philosopher and historian, born in Edinburgh, and a leading figure of the Scottish Enlightenment. He argued that our knowledge rests on experience and habit.",
+   "page": "thinker-david-hume",
+   "lead": "More about ",
+   "wiki": "David_Hume"
+  },
+  {
+   "type": "Book",
+   "title": "A Treatise of Human Nature",
+   "header": "",
+   "body": "Hume's first and most ambitious book (1739–40), written in his twenties. It contains his famous claim that reason is the slave of the passions.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "A_Treatise_of_Human_Nature"
+  },
+  {
+   "type": "Book",
+   "title": "An Enquiry Concerning Human Understanding",
+   "header": "",
+   "body": "Hume's shorter, clearer reworking of his ideas on knowledge, written around 1748. It includes his essay on miracles.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "An_Enquiry_Concerning_Human_Understanding"
+  },
+  {
+   "type": "Thinker",
+   "title": "Mary Wollstonecraft",
+   "header": "London, England · 1759 – 1797 · Enlightenment Ethics",
+   "body": "An English writer and philosopher and an early champion of women's rights. Her daughter was Mary Shelley, author of Frankenstein.",
+   "page": "thinker-mary-wollstonecraft",
+   "lead": "More about ",
+   "wiki": "Mary_Wollstonecraft"
+  },
+  {
+   "type": "Book",
+   "title": "A Vindication of the Rights of Woman",
+   "header": "",
+   "body": "Wollstonecraft's book of 1792 arguing that women should receive the same education as men and be treated as rational beings. One of the founding texts of feminism.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "A_Vindication_of_the_Rights_of_Woman"
+  },
+  {
+   "type": "Thinker",
+   "title": "Arthur Schopenhauer",
+   "header": "Danzig (now Gdańsk, Poland) · 1788 – 1860 · Existential Thought",
+   "body": "A German philosopher, born in Danzig, who lived in Frankfurt from 1833. His main work is The World as Will and Representation; his later essays, including The Wisdom of Life, made him famous.",
+   "page": "thinker-arthur-schopenhauer",
+   "lead": "More about ",
+   "wiki": "Arthur_Schopenhauer"
+  },
+  {
+   "type": "Book",
+   "title": "Parerga and Paralipomena",
+   "header": "",
+   "body": "Schopenhauer's collection of essays and aphorisms (1851), the book that made him popular. 'The Wisdom of Life', 'Counsels and Maxims', 'Studies in Pessimism' and 'The Art of Literature' are English selections from it.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Parerga_and_Paralipomena"
+  },
+  {
+   "type": "Thinker",
+   "title": "Simone Weil",
+   "header": "Paris, France · 1909 – 1943 · Existential Thought",
+   "body": "A French philosopher and activist, born in Paris. She worked in factories and fields to share workers' lives, and wrote on attention, suffering and justice. She died in England, aged 34.",
+   "page": "thinker-simone-weil",
+   "lead": "More about ",
+   "wiki": "Simone_Weil"
+  },
+  {
+   "type": "Thinker",
+   "title": "Michel de Montaigne",
+   "header": "Saint-Michel-de-Montaigne, France · 1533 – 1592 · Humanists and Essayists",
+   "body": "A French writer who lived at his château near Bordeaux and served as the city's mayor. His Essays, first published in 1580, created the essay as a form.",
+   "page": "thinker-michel-de-montaigne",
+   "lead": "More about ",
+   "wiki": "Michel_de_Montaigne"
+  },
+  {
+   "type": "Person",
+   "title": "Étienne de La Boétie",
+   "header": "",
+   "body": "A French writer and judge (1530–1563), Montaigne's closest friend. His early death inspired Montaigne's essay 'Of Friendship'.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Étienne_de_La_Boétie"
+  },
+  {
+   "type": "Thinker",
+   "title": "François de La Rochefoucauld",
+   "header": "Paris, France · 1613 – 1680 · Humanists and Essayists",
+   "body": "A French nobleman, soldier and writer. His Maxims, published anonymously in 1665, expose the self-love hiding behind our virtues.",
+   "page": "thinker-la-rochefoucauld",
+   "lead": "More about ",
+   "wiki": "François_de_La_Rochefoucauld_(writer)"
+  },
+  {
+   "type": "Thinker",
+   "title": "Ralph Waldo Emerson",
+   "header": "Boston, United States · 1803 – 1882 · Humanists and Essayists",
+   "body": "An American essayist and poet who led the Transcendentalist movement from Concord, Massachusetts. 'Self-Reliance' appeared in his Essays: First Series.",
+   "page": "thinker-ralph-waldo-emerson",
+   "lead": "More about ",
+   "wiki": "Ralph_Waldo_Emerson"
+  },
+  {
+   "type": "Thinker",
+   "title": "Henry David Thoreau",
+   "header": "Concord, United States · 1817 – 1862 · Humanists and Essayists",
+   "body": "An American writer and naturalist from Concord, Massachusetts, a friend of Emerson. He is known for Walden and for his essay on civil disobedience.",
+   "page": "thinker-henry-david-thoreau",
+   "lead": "More about ",
+   "wiki": "Henry_David_Thoreau"
+  },
+  {
+   "type": "Book",
+   "title": "Walden",
+   "header": "",
+   "body": "Thoreau's book (1854) about the two years, two months and two days he lived in a cabin he built by Walden Pond, on land owned by Emerson.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Walden"
+  },
+  {
+   "type": "Thinker",
+   "title": "George Eliot",
+   "header": "Nuneaton, England · 1819 – 1880 · Humanists and Essayists",
+   "body": "The pen name of Mary Ann Evans, one of the great English novelists. She chose a man's name so that her fiction would be taken seriously.",
+   "page": "thinker-george-eliot",
+   "lead": "More about ",
+   "wiki": "George_Eliot"
+  },
+  {
+   "type": "Book",
+   "title": "Middlemarch",
+   "header": "",
+   "body": "George Eliot's novel (1871–72) about the lives of people in an English country town, often called one of the greatest novels in English.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Middlemarch"
+  },
+  {
+   "type": "Character",
+   "title": "Dorothea",
+   "header": "",
+   "body": "Dorothea Brooke, the idealistic heroine of Middlemarch, who longs to do good in the world.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Middlemarch"
+  },
+  {
+   "type": "Text",
+   "title": "Bhagavad Gita",
+   "header": "India · likely 2nd or 1st century BCE · Indian Philosophy",
+   "body": "'The Song of God': a 700-verse dialogue in 18 chapters, part of the Indian epic the Mahabharata, usually dated to the last centuries BCE. Prince Arjuna, about to go into battle, receives teaching from Krishna.",
+   "page": "text-the-bhagavad-gita",
+   "lead": "More about ",
+   "wiki": "Bhagavad_Gita"
+  },
+  {
+   "type": "Character",
+   "title": "Arjuna",
+   "header": "",
+   "body": "A warrior prince and hero of the Mahabharata. In the Bhagavad Gita, his doubts on the battlefield lead to Krishna's teaching.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Arjuna"
+  },
+  {
+   "type": "Character",
+   "title": "Krishna",
+   "header": "",
+   "body": "A major Hindu god. In the Bhagavad Gita he serves as Arjuna's charioteer and teacher.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Krishna"
+  },
+  {
+   "type": "Text",
+   "title": "Upanishads",
+   "header": "India · about 800 – 300 BCE and later · Indian Philosophy",
+   "body": "Sanskrit texts composed in ancient India, roughly between 800 and 300 BCE for the oldest. They turn from ritual to the inner questions of self and reality, and are the foundation of Vedanta.",
+   "page": "text-the-upanishads",
+   "lead": "More about ",
+   "wiki": "Upanishads"
+  },
+  {
+   "type": "Character",
+   "title": "Nachiketa",
+   "header": "",
+   "body": "The boy in the Katha Upanishad who goes to the house of Death and asks him what happens after we die.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Nachiketa"
+  },
+  {
+   "type": "Thinker",
+   "title": "Rabindranath Tagore",
+   "header": "Calcutta (now Kolkata, India) · 1861 – 1941 · Indian Philosophy",
+   "body": "A Bengali poet, writer and thinker, born in Calcutta. In 1913 he became the first non-European to win the Nobel Prize in Literature.",
+   "page": "thinker-rabindranath-tagore",
+   "lead": "More about ",
+   "wiki": "Rabindranath_Tagore"
+  },
+  {
+   "type": "Book",
+   "title": "Sadhana",
+   "header": "",
+   "body": "Tagore's book of essays in English (1913) on the Upanishads and the spiritual life.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Rabindranath_Tagore"
+  },
+  {
+   "type": "Thinker",
+   "title": "Swami Vivekananda",
+   "header": "Calcutta (now Kolkata, India) · 1863 – 1902 · Indian Philosophy",
+   "body": "An Indian monk and teacher, born in Calcutta and a disciple of Ramakrishna. His 1893 speech at the Parliament of the World's Religions in Chicago introduced Vedanta to the West.",
+   "page": "thinker-swami-vivekananda",
+   "lead": "More about ",
+   "wiki": "Swami_Vivekananda"
+  },
+  {
+   "type": "Person",
+   "title": "Somerset Maugham",
+   "header": "",
+   "body": "An English novelist and playwright (1874–1965). His novel The Razor's Edge takes its title from the Katha Upanishad.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "W._Somerset_Maugham"
+  },
+  {
+   "type": "Thinker",
+   "title": "Rumi",
+   "header": "Wakhsh, Tajikistan · 1207 – 1273 · Persian and Sufi Poetry",
+   "body": "A Persian poet and Sufi teacher who lived most of his life in Konya, in present-day Turkey. His meeting with the wandering dervish Shams of Tabriz transformed his life and poetry.",
+   "page": "thinker-rumi",
+   "lead": "More about ",
+   "wiki": "Rumi"
+  },
+  {
+   "type": "Book",
+   "title": "Masnavi",
+   "header": "",
+   "body": "Rumi's great poem in Persian: six books, about 25,000 verses, full of stories with spiritual lessons.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Masnavi"
+  },
+  {
+   "type": "Thinker",
+   "title": "Hafiz",
+   "header": "Shiraz, Iran · about 1325 – 1390 · Persian and Sufi Poetry",
+   "body": "A Persian poet of Shiraz, the most loved poet in Iran. His lyric poems use love and wine to speak of mystical experience.",
+   "page": "thinker-hafiz",
+   "lead": "More about ",
+   "wiki": "Hafez"
+  },
+  {
+   "type": "Word",
+   "title": "Divan",
+   "header": "",
+   "body": "A collection of a poet's lyric poems, often put together after their death.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Divan_(poetry)"
+  },
+  {
+   "type": "Person",
+   "title": "Gertrude Bell",
+   "header": "",
+   "body": "An English writer, traveller and archaeologist (1868–1926) who translated Hafiz in 1897 and later helped shape modern Iraq.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Gertrude_Bell"
+  },
+  {
+   "type": "Thinker",
+   "title": "Sa'di",
+   "header": "Shiraz, Iran · about 1210 – 1291 · Persian and Sufi Poetry",
+   "body": "A Persian poet and writer of Shiraz, author of the Gulistan and the Bustan.",
+   "page": "thinker-sa-di",
+   "lead": "More about ",
+   "wiki": "Saadi_Shirazi"
+  },
+  {
+   "type": "Book",
+   "title": "Gulistan",
+   "header": "",
+   "body": "'The Rose Garden' (1258): Sa'di's book of short stories in prose mixed with verse maxims, still a classic of Persian wisdom.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Gulistan_(book)"
+  },
+  {
+   "type": "Thinker",
+   "title": "Al-Ghazali",
+   "header": "Tus, Iran · about 1058 – 1111 · Persian and Sufi Poetry",
+   "body": "A Persian theologian, philosopher and mystic. He left his professorship in Baghdad in 1095 after a spiritual crisis and turned to the Sufi path.",
+   "page": "thinker-al-ghazali",
+   "lead": "More about ",
+   "wiki": "Al-Ghazali"
+  },
+  {
+   "type": "Book",
+   "title": "The Alchemy of Happiness",
+   "header": "",
+   "body": "Al-Ghazali's book in Persian on how to live a good, spiritual life, a shorter version of his great Arabic work, The Revival of the Religious Sciences.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "The_Alchemy_of_Happiness"
+  },
+  {
+   "type": "Book",
+   "title": "Deliverance from Error",
+   "header": "",
+   "body": "Al-Ghazali's spiritual autobiography, written late in life, describing his journey through doubt to Sufism. Translated by Claud Field as 'The Confessions'.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Al-Munqidh_min_al-Dalal"
+  },
+  {
+   "type": "Word",
+   "title": "Vizier",
+   "header": "",
+   "body": "A chief minister or adviser to a ruler in the Islamic world.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Vizier"
+  },
+  {
+   "type": "Thinker",
+   "title": "Ibn Arabi",
+   "header": "Murcia, Spain · 1165 – 1240 · Persian and Sufi Poetry",
+   "body": "A Sufi mystic, poet and philosopher, born in Murcia in Spain and buried in Damascus. Sufis call him 'the Greatest Shaykh' (al-Shaykh al-Akbar).",
+   "page": "thinker-ibn-arabi",
+   "lead": "More about ",
+   "wiki": "Ibn_Arabi"
+  },
+  {
+   "type": "Book",
+   "title": "Tarjuman al-Ashwaq",
+   "header": "",
+   "body": "'The Interpreter of Desires' (1215): Ibn Arabi's collection of love poems, which he later explained as images of divine love.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Ibn_Arabi"
+  },
+  {
+   "type": "Place",
+   "title": "Ka'ba",
+   "header": "",
+   "body": "The cube-shaped building at the centre of the Great Mosque of Mecca, the holiest site in Islam, towards which Muslims pray.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Kaaba"
+  },
+  {
+   "type": "Thinker",
+   "title": "Sei Shōnagon",
+   "header": "Japan · about 966 – after 1017 · Japanese Aesthetics",
+   "body": "A Japanese writer who served Empress Teishi at the imperial court in Kyoto. She wrote The Pillow Book.",
+   "page": "thinker-sei-shonagon",
+   "lead": "More about ",
+   "wiki": "Sei_Shōnagon"
+  },
+  {
+   "type": "Book",
+   "title": "The Pillow Book",
+   "header": "",
+   "body": "Sei Shōnagon's book of lists, observations and memories of court life, completed around 1002. It is one of the first examples of the Japanese zuihitsu, 'following the brush'.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "The_Pillow_Book"
+  },
+  {
+   "type": "Book",
+   "title": "Hamlet",
+   "header": "",
+   "body": "Shakespeare's tragedy (around 1600). Hamlet's line 'there is nothing either good or bad, but thinking makes it so' echoes Boethius.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Hamlet"
+  },
+  {
+   "type": "Thinker",
+   "title": "René Descartes",
+   "header": "La Haye (now Descartes, France) · 1596 – 1650 · Enlightenment Ethics",
+   "body": "A French philosopher and mathematician who lived for about twenty years in the Dutch Republic. He began by doubting everything he could, and found one certainty: 'I think, therefore I am.'",
+   "page": "thinker-rene-descartes",
+   "lead": "More about ",
+   "wiki": "René_Descartes"
+  },
+  {
+   "type": "Book",
+   "title": "Discourse on Method",
+   "header": "",
+   "body": "Descartes' short book of 1637, written in French rather than the scholars' Latin and published in Leiden. It sets out his rules for thinking clearly, starting from doubt.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Discourse_on_the_Method"
+  },
+  {
+   "type": "Thinker",
+   "title": "Adam Smith",
+   "header": "Kirkcaldy, Scotland · 1723 – 1790 · Enlightenment Ethics",
+   "body": "A Scottish philosopher and economist. Before The Wealth of Nations made him the father of economics, he wrote a book on morality, The Theory of Moral Sentiments.",
+   "page": "thinker-adam-smith",
+   "lead": "More about ",
+   "wiki": "Adam_Smith"
+  },
+  {
+   "type": "Book",
+   "title": "The Theory of Moral Sentiments",
+   "header": "",
+   "body": "Adam Smith's book of 1759 on how we judge right and wrong. He argues that morality grows from sympathy and from imagining how an 'impartial spectator' would see us.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "The_Theory_of_Moral_Sentiments"
+  },
+  {
+   "type": "Thinker",
+   "title": "Émilie du Châtelet",
+   "header": "Paris, France · 1706 – 1749 · Enlightenment Ethics",
+   "body": "A French mathematician and physicist, born in Paris. Her French translation of Newton's Principia, with her commentary, is still the standard one in French.",
+   "page": "thinker-emilie-du-chatelet",
+   "lead": "More about ",
+   "wiki": "Émilie_du_Châtelet"
+  },
+  {
+   "type": "Book",
+   "title": "Discourse on Happiness",
+   "header": "",
+   "body": "Émilie du Châtelet's short essay on how to be happy. She argues that we must first free ourselves of prejudice, and that passions, illusions and the love of study all have their place.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Émilie_du_Châtelet"
+  },
+  {
+   "type": "Person",
+   "title": "Isaac Newton",
+   "header": "",
+   "body": "An English mathematician and physicist (1642–1727) whose laws of motion and gravity, set out in the Principia (1687), shaped modern science.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Isaac_Newton"
+  },
+  {
+   "type": "Thinker",
+   "title": "William James",
+   "header": "New York, United States · 1842 – 1910 · Existential Thought",
+   "body": "An American philosopher and psychologist who taught at Harvard. A founder of pragmatism, he judged ideas by the difference they make to how we live.",
+   "page": "thinker-william-james",
+   "lead": "More about ",
+   "wiki": "William_James"
+  },
+  {
+   "type": "Book",
+   "title": "The Will to Believe",
+   "header": "",
+   "body": "William James's lecture of 1896, which gave its name to a book of his essays. He argues that some beliefs we may hold before the evidence is complete, because life does not wait for proof.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "The_Will_to_Believe"
+  },
+  {
+   "type": "Book",
+   "title": "Is Life Worth Living?",
+   "header": "",
+   "body": "A lecture William James gave at Harvard in 1895 on how to answer despair. His answer: believe that life is worth living, and the belief itself helps make it so.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "William_James"
+  },
+  {
+   "type": "Thinker",
+   "title": "Leo Tolstoy",
+   "header": "Yasnaya Polyana, Russia · 1828 – 1910 · Existential Thought",
+   "body": "A Russian novelist, author of War and Peace and Anna Karenina. At the height of his fame he fell into a crisis about the meaning of life.",
+   "page": "thinker-leo-tolstoy",
+   "lead": "More about ",
+   "wiki": "Leo_Tolstoy"
+  },
+  {
+   "type": "Book",
+   "title": "A Confession",
+   "header": "",
+   "body": "Tolstoy's short account, written in 1879–80, of the crisis he went through in his early fifties, when success no longer gave his life any meaning.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "A_Confession"
+  },
+  {
+   "type": "Book",
+   "title": "Human, All Too Human",
+   "header": "",
+   "body": "Nietzsche's book of short aphorisms (1878), written as he broke away from his early influences. Its subtitle is 'A Book for Free Spirits'.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Human,_All_Too_Human"
+  },
+  {
+   "type": "Thinker",
+   "title": "Erasmus",
+   "header": "Rotterdam, Netherlands · about 1466 – 1536 · Humanists and Essayists",
+   "body": "Desiderius Erasmus, a Dutch scholar born in Rotterdam and the best-known humanist of his age. He wrote in Latin and corresponded with thinkers across Europe.",
+   "page": "thinker-erasmus",
+   "lead": "More about ",
+   "wiki": "Erasmus"
+  },
+  {
+   "type": "Book",
+   "title": "In Praise of Folly",
+   "header": "",
+   "body": "Erasmus's satire of 1511, in which Folly herself gives a speech praising her own role in human life. It mocks vanity, scholars and church leaders alike.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "In_Praise_of_Folly"
+  },
+  {
+   "type": "Thinker",
+   "title": "Petrarch",
+   "header": "Arezzo, Italy · 1304 – 1374 · Humanists and Essayists",
+   "body": "Francesco Petrarca, an Italian poet and scholar often called the father of humanism. He searched old libraries for lost Latin texts and wrote love poems that shaped European poetry.",
+   "page": "thinker-petrarch",
+   "lead": "More about ",
+   "wiki": "Petrarch"
+  },
+  {
+   "type": "Book",
+   "title": "Petrarch's Secret",
+   "header": "",
+   "body": "The Secretum, an imagined conversation between Petrarch and Saint Augustine about Petrarch's own faults, ambitions and unhappiness. He wrote it for himself, not for publication.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Secretum_(book)"
+  },
+  {
+   "type": "Thinker",
+   "title": "Margaret Fuller",
+   "header": "Cambridge, United States · 1810 – 1850 · Humanists and Essayists",
+   "body": "An American journalist, critic and women's rights advocate, born in Cambridgeport, Massachusetts. She was part of the Transcendentalist circle and edited its journal, The Dial.",
+   "page": "thinker-margaret-fuller",
+   "lead": "More about ",
+   "wiki": "Margaret_Fuller"
+  },
+  {
+   "type": "Book",
+   "title": "Woman in the Nineteenth Century",
+   "header": "",
+   "body": "Margaret Fuller's book of 1845, one of the first major feminist works in the United States. It argues that every person needs room to develop.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Woman_in_the_Nineteenth_Century"
+  },
+  {
+   "type": "Thinker",
+   "title": "Emily Dickinson",
+   "header": "Amherst, United States · 1830 – 1886 · Humanists and Essayists",
+   "body": "An American poet who lived almost her whole life in Amherst, Massachusetts. She wrote nearly 1,800 poems, but only about ten were published in her lifetime.",
+   "page": "thinker-emily-dickinson",
+   "lead": "More about ",
+   "wiki": "Emily_Dickinson"
+  },
+  {
+   "type": "Text",
+   "title": "The Questions of King Milinda",
+   "header": "India · about 100 BCE – 200 CE · Buddhist Philosophy",
+   "body": "A Buddhist text (Milindapañha), written down sometime between 100 BCE and 200 CE, in which the monk Nagasena answers the questions of King Milinda, the Indo-Greek king Menander I.",
+   "page": "text-the-questions-of-king-milinda",
+   "lead": "More about ",
+   "wiki": "Milinda_Panha"
+  },
+  {
+   "type": "Person",
+   "title": "Shantideva",
+   "header": "",
+   "body": "An Indian Buddhist monk and poet of the 8th century, traditionally linked to the great monastery of Nalanda. His guide to living with compassion is the Bodhicaryāvatāra.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Shantideva"
+  },
+  {
+   "type": "Book",
+   "title": "The Path of Light",
+   "header": "",
+   "body": "Lionel Barnett's English title (1909) for Shantideva's Bodhicaryāvatāra, 'Entering the Path of Awakening', a poem on patience, generosity and compassion.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Bodhicaryavatara"
+  },
+  {
+   "type": "Book",
+   "title": "Karma-Yoga",
+   "header": "",
+   "body": "Vivekananda's book (1896) on 'the yoga of action', based on talks he gave in New York. It teaches working hard and well without attachment to the results.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Karma_yoga"
+  },
+  {
+   "type": "Book",
+   "title": "Stray Birds",
+   "header": "",
+   "body": "Tagore's collection of short poems and sayings, published in English in 1916. Most are only a line or two long.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Stray_Birds"
+  },
+  {
+   "type": "Thinker",
+   "title": "Mencius",
+   "header": "Zoucheng, China · about 371 – 289 BCE · Confucianism",
+   "body": "A Chinese philosopher, the most important Confucian thinker after Confucius. He taught that human nature is good, and that goodness grows like a seed if cared for.",
+   "page": "thinker-mencius",
+   "lead": "More about ",
+   "wiki": "Mencius"
+  },
+  {
+   "type": "Person",
+   "title": "Zengzi",
+   "header": "",
+   "body": "One of Confucius' students (505–435 BCE), known for his care for his parents and for examining himself every day.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Zengzi"
+  },
+  {
+   "type": "Person",
+   "title": "Zilu",
+   "header": "",
+   "body": "One of Confucius' longest-serving students, brave and quick to speak. Confucius often had to slow him down.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Zilu"
+  },
+  {
+   "type": "Person",
+   "title": "Zigong",
+   "header": "",
+   "body": "One of Confucius' most gifted students (520–456 BCE), a skilled speaker, a wealthy merchant and a diplomat.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Duanmu_Ci"
+  },
+  {
+   "type": "Person",
+   "title": "Yan Hui",
+   "header": "",
+   "body": "Confucius' favourite student, praised for his love of learning and his contentment in poverty. His early death left Confucius deeply grieved.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Yan_Hui"
+  },
+  {
+   "type": "Thinker",
+   "title": "Omar Khayyam",
+   "header": "Nishapur, Iran · 1048 – 1131 · Persian and Sufi Poetry",
+   "body": "A Persian mathematician, astronomer and poet from Nishapur. He worked on a reform of the calendar; in the West he is famous for his short four-line poems.",
+   "page": "thinker-omar-khayyam",
+   "lead": "More about ",
+   "wiki": "Omar_Khayyam"
+  },
+  {
+   "type": "Book",
+   "title": "Rubáiyát",
+   "header": "",
+   "body": "Persian for 'quatrains', four-line poems. Edward FitzGerald's free English version of Khayyam's quatrains (1859) became one of the best-loved poems in English.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Rubaiyat_of_Omar_Khayyam"
+  },
+  {
+   "type": "Book",
+   "title": "Divan-e Shams",
+   "header": "",
+   "body": "Rumi's collection of lyric poems, named after his friend and teacher Shams of Tabriz, whose disappearance inspired much of it.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Divan-e_Shams-e_Tabrizi"
+  },
+  {
+   "type": "Place",
+   "title": "Shiraz",
+   "header": "",
+   "body": "A city in south-western Iran, famous for its gardens and as the home of the poets Sa'di and Hafiz.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Shiraz"
+  },
+  {
+   "type": "Book",
+   "title": "Vatican Sayings",
+   "header": "",
+   "body": "A collection of 81 short Epicurean sayings, found in a manuscript in the Vatican Library in 1888.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Epicurus"
+  },
+  {
+   "type": "Word",
+   "title": "Fragment",
+   "header": "",
+   "body": "Heraclitus' book is lost. What survives are about a hundred short quotations, or fragments, preserved by later writers; the numbers are an editor's.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Heraclitus"
+  },
+  {
+   "type": "Word",
+   "title": "Brunschvicg numbering",
+   "header": "",
+   "body": "Pascal left his notes unsorted. The numbers used here come from Léon Brunschvicg's edition, still one of the most common ways to refer to them.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Pensées"
+  },
+  {
+   "type": "Character",
+   "title": "Cephalus",
+   "header": "",
+   "body": "A rich old man in the opening of Plato's Republic, at whose house the conversation about justice begins.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Republic_(Plato)"
+  },
+  {
+   "type": "Person",
+   "title": "Aristophanes",
+   "header": "",
+   "body": "An Athenian comic playwright (around 446–386 BCE). In Plato's Symposium he tells a famous myth about the origin of love.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Aristophanes"
+  },
+  {
+   "type": "Person",
+   "title": "Sophocles",
+   "header": "",
+   "body": "An Athenian playwright (around 497–406 BCE), author of Oedipus the King and Antigone.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Sophocles"
+  },
+  {
+   "type": "Person",
+   "title": "Pindar",
+   "header": "",
+   "body": "A Greek lyric poet (around 518–438 BCE), famous for his odes to athletes. Nietzsche took his motto 'become what you are' from him.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Pindar"
+  },
+  {
+   "type": "Book",
+   "title": "Politics",
+   "header": "",
+   "body": "Aristotle's work on the city-state: how communities form, the kinds of government, and what makes a good citizen.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Politics_(Aristotle)"
+  },
+  {
+   "type": "Person",
+   "title": "Paulinus",
+   "header": "",
+   "body": "Seneca's father-in-law, who was in charge of Rome's grain supply. Seneca addressed On the Shortness of Life to him.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "De_Brevitate_Vitae_(Seneca)"
+  },
+  {
+   "type": "Person",
+   "title": "Idomeneus",
+   "header": "",
+   "body": "A friend and follower of Epicurus, to whom Epicurus wrote one of his last letters.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Idomeneus_of_Lampsacus"
+  },
+  {
+   "type": "Character",
+   "title": "Markel",
+   "header": "",
+   "body": "Zosima's older brother in The Brothers Karamazov, who dies young and, in his last days, discovers a joyful love for everyone.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "The_Brothers_Karamazov"
+  },
+  {
+   "type": "Person",
+   "title": "Moses",
+   "header": "",
+   "body": "A prophet in the Jewish, Christian and Islamic traditions. Rumi often retells stories about him to make a point about the inner life.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Moses_in_Islam"
+  },
+  {
+   "type": "Place",
+   "title": "Kyoto",
+   "header": "",
+   "body": "Japan's imperial capital from 794 to 1868, and the centre of court culture, poetry and the tea ceremony.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Kyoto"
+  },
+  {
+   "type": "Place",
+   "title": "Vesuvius",
+   "header": "",
+   "body": "The volcano overlooking the Bay of Naples, which buried Pompeii in 79 CE and is still active.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Mount_Vesuvius"
+  },
+  {
+   "type": "Thinker",
+   "title": "Niccolò Machiavelli",
+   "header": "Florence, Italy · 1469 – 1527 · Humanists and Essayists",
+   "body": "A Florentine diplomat and writer. After the Medici returned to power in 1512 and removed him from office, he wrote The Prince, a blunt guide to how rulers win and keep power, published in 1532, after his death.",
+   "page": "thinker-niccolo-machiavelli",
+   "lead": "More about ",
+   "wiki": "Niccolò_Machiavelli"
+  },
+  {
+   "type": "Thinker",
+   "title": "Francis Bacon",
+   "header": "London, England · 1561 – 1626 · Humanists and Essayists",
+   "body": "An English statesman and philosopher, born in London, who rose to Lord Chancellor before his fall in 1621. Often called the father of empiricism, he urged that knowledge be built on careful observation. His Essays grew from 10 in 1597 to 58 in 1625.",
+   "page": "thinker-francis-bacon",
+   "lead": "More about ",
+   "wiki": "Francis_Bacon"
+  },
+  {
+   "type": "Thinker",
+   "title": "Voltaire",
+   "header": "Paris, France · 1694 – 1778 · Enlightenment Ethics",
+   "body": "The pen name of François-Marie Arouet, the best-known writer of the French Enlightenment, born and died in Paris. He campaigned for tolerance and freedom of thought, and spent most of his last twenty years at Ferney, near Geneva.",
+   "page": "thinker-voltaire",
+   "lead": "More about ",
+   "wiki": "Voltaire"
+  },
+  {
+   "type": "Thinker",
+   "title": "Jean-Jacques Rousseau",
+   "header": "Geneva, Switzerland · 1712 – 1778 · Enlightenment Ethics",
+   "body": "A writer and philosopher, born in Geneva, who lived mostly in France. When The Social Contract and Emile came out in 1762, both were banned and burned, and he fled to Switzerland. His ideas later inspired the French Revolution.",
+   "page": "thinker-jean-jacques-rousseau",
+   "lead": "More about ",
+   "wiki": "Jean-Jacques_Rousseau"
+  },
+  {
+   "type": "Thinker",
+   "title": "Thomas Hobbes",
+   "header": "Malmesbury, England · 1588 – 1679 · Enlightenment Ethics",
+   "body": "An English philosopher, born in Malmesbury. He wrote Leviathan in exile in Paris, arguing that without a common power life would be 'solitary, poor, nasty, brutish, and short'.",
+   "page": "thinker-thomas-hobbes",
+   "lead": "More about ",
+   "wiki": "Thomas_Hobbes"
+  },
+  {
+   "type": "Thinker",
+   "title": "John Locke",
+   "header": "Wrington, England · 1632 – 1704 · Enlightenment Ethics",
+   "body": "An English philosopher. He argued that the mind starts as a blank slate filled by experience, and that governments exist to protect people's natural rights to life, liberty and property.",
+   "page": "thinker-john-locke",
+   "lead": "More about ",
+   "wiki": "John_Locke"
+  },
+  {
+   "type": "Thinker",
+   "title": "Jean de La Bruyère",
+   "header": "Paris, France · 1645 – 1696 · Humanists and Essayists",
+   "body": "A French writer, born in Paris, who was a tutor in the household of the Prince de Condé. His Characters, first published in 1688, are sharp portraits and remarks on the people of his time.",
+   "page": "thinker-jean-de-la-bruyere",
+   "lead": "More about ",
+   "wiki": "Jean_de_La_Bruyère"
+  },
+  {
+   "type": "Thinker",
+   "title": "Nicolas Chamfort",
+   "header": "Clermont-Ferrand, France · about 1741 – 1794 · Humanists and Essayists",
+   "body": "A French playwright and wit, elected to the Académie française in 1781. He welcomed the Revolution, was later imprisoned for criticising its excesses, and died in Paris in 1794. His maxims were published after his death.",
+   "page": "thinker-nicolas-chamfort",
+   "lead": "More about ",
+   "wiki": "Nicolas_Chamfort"
+  },
+  {
+   "type": "Thinker",
+   "title": "Vauvenargues",
+   "header": "Aix-en-Provence, France · 1715 – 1747 · Humanists and Essayists",
+   "body": "Luc de Clapiers, marquis de Vauvenargues, a French soldier and moralist born in Aix-en-Provence. Broken in health by the retreat from Prague in 1742, he turned to writing; his Reflections and Maxims appeared in 1746, a year before his death. Voltaire was a close friend.",
+   "page": "thinker-vauvenargues",
+   "lead": "More about ",
+   "wiki": "Luc_de_Clapiers,_marquis_de_Vauvenargues"
+  },
+  {
+   "type": "Thinker",
+   "title": "Denis Diderot",
+   "header": "Langres, France · 1713 – 1784 · Enlightenment Ethics",
+   "body": "A French writer and philosopher, born in Langres, and chief editor of the Encyclopédie, the great Enlightenment survey of knowledge. He was jailed at Vincennes in 1749 for his writings.",
+   "page": "thinker-denis-diderot",
+   "lead": "More about ",
+   "wiki": "Denis_Diderot"
+  },
+  {
+   "type": "Book",
+   "title": "Candide",
+   "header": "",
+   "body": "Voltaire's comic novel of 1759. Its young hero is taught that all is for the best, then lives through war, shipwreck and earthquake, and ends by tending his garden.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Candide"
+  },
+  {
+   "type": "Book",
+   "title": "Zadig",
+   "header": "",
+   "body": "A philosophical tale by Voltaire (1748) about a wise young man in ancient Babylon whose fortunes rise and fall.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Zadig"
+  },
+  {
+   "type": "Book",
+   "title": "Philosophical Dictionary",
+   "header": "",
+   "body": "Voltaire's pocket dictionary of short, sharp articles (1764), on subjects from friendship to tolerance.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Dictionnaire_philosophique"
+  },
+  {
+   "type": "Book",
+   "title": "Emile",
+   "header": "",
+   "body": "Rousseau's long book on education (1762), which follows an imaginary boy from birth to adulthood. It was banned and burned soon after it appeared.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Emile,_or_On_Education"
+  },
+  {
+   "type": "Book",
+   "title": "Discourse on Inequality",
+   "header": "",
+   "body": "Rousseau's essay of 1755 on how inequality began, starting with the first person who fenced off a piece of land and said 'This is mine'.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Discourse_on_Inequality"
+  },
+  {
+   "type": "Book",
+   "title": "Reveries of the Solitary Walker",
+   "header": "",
+   "body": "Rousseau's last work: ten 'walks' of reflection, written from 1776 and left unfinished at his death in 1778.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Reveries_of_the_Solitary_Walker"
+  },
+  {
+   "type": "Book",
+   "title": "Leviathan",
+   "header": "",
+   "body": "Hobbes's book of 1651, named after a giant sea monster, on why people need a strong common power to live in peace.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Leviathan_(Hobbes_book)"
+  },
+  {
+   "type": "Book",
+   "title": "An Essay Concerning Human Understanding",
+   "header": "",
+   "body": "Locke's great book on knowledge (dated 1690), arguing that all our ideas come from experience.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "An_Essay_Concerning_Human_Understanding"
+  },
+  {
+   "type": "Book",
+   "title": "Second Treatise of Government",
+   "header": "",
+   "body": "The second of Locke's Two Treatises of Government (dated 1690), on why governments exist: to protect the lives, liberty and property of the people.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Two_Treatises_of_Government"
+  },
+  {
+   "type": "Book",
+   "title": "Philosophical Thoughts",
+   "header": "",
+   "body": "Diderot's first original book (1746): short numbered thoughts that open with a defence of the passions.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Philosophical_Thoughts"
+  },
+  {
+   "type": "Book",
+   "title": "Regrets on My Old Dressing Gown",
+   "header": "",
+   "body": "A playful essay by Diderot (1772) about how one new possession, a scarlet dressing gown, led him to replace everything around it.",
+   "page": null,
+   "lead": "More about ",
+   "wiki": "Diderot_effect"
+  }
+ ],
+ "page": {
+  "path-stoicism": {
+   "type": "Path",
+   "title": "Stoicism",
+   "header": "",
+   "body": "A practical philosophy for living well: train your judgments, act with virtue, and accept calmly what you cannot control.",
+   "page": "path-stoicism",
+   "lead": "More about ",
+   "wiki": "Stoicism"
+  },
+  "path-epicureanism": {
+   "type": "Path",
+   "title": "Epicureanism",
+   "header": "",
+   "body": "A philosophy of quiet happiness: simple pleasures, good friends, and a mind free from fear.",
+   "page": "path-epicureanism",
+   "lead": "More about ",
+   "wiki": "Epicureanism"
+  },
+  "path-classical-greek-philosophy": {
+   "type": "Path",
+   "title": "Classical Greek Philosophy",
+   "header": "",
+   "body": "Where Western philosophy began: asking what the world is made of, and then how we should live.",
+   "page": "path-classical-greek-philosophy",
+   "lead": "More about ",
+   "wiki": "Ancient_Greek_philosophy"
+  },
+  "path-enlightenment-ethics": {
+   "type": "Path",
+   "title": "Enlightenment Ethics",
+   "header": "",
+   "body": "The age that put reason, evidence, and freedom at the centre of how we live and govern ourselves.",
+   "page": "path-enlightenment-ethics",
+   "lead": "More about ",
+   "wiki": "Age_of_Enlightenment"
+  },
+  "path-existential-thought": {
+   "type": "Path",
+   "title": "Existential Thought",
+   "header": "",
+   "body": "Writers who faced life's hardest questions head-on: freedom, suffering, meaning, and how to live with them.",
+   "page": "path-existential-thought",
+   "lead": "More about ",
+   "wiki": "Existentialism"
+  },
+  "path-humanists-and-essayists": {
+   "type": "Path",
+   "title": "Humanists and Essayists",
+   "header": "",
+   "body": "Writers who explored how to live in personal prose, short sayings, and poems, rather than in grand systems.",
+   "page": "path-humanists-and-essayists",
+   "lead": "More about ",
+   "wiki": "Renaissance_humanism"
+  },
+  "path-buddhist-philosophy": {
+   "type": "Path",
+   "title": "Buddhist Philosophy",
+   "header": "",
+   "body": "The Buddha's teachings read as a practical philosophy: an ethics and a training of the mind to end suffering.",
+   "page": "path-buddhist-philosophy",
+   "lead": "More about ",
+   "wiki": "Buddhism"
+  },
+  "path-indian-philosophy": {
+   "type": "Path",
+   "title": "Indian Philosophy",
+   "header": "",
+   "body": "Philosophy from India's Hindu tradition, asking what our deepest self is, and how to act well in the world.",
+   "page": "path-indian-philosophy",
+   "lead": "More about ",
+   "wiki": "Hindu_philosophy"
+  },
+  "path-taoism": {
+   "type": "Path",
+   "title": "Taoism",
+   "header": "",
+   "body": "A Chinese tradition of living in harmony with the Tao, the natural way of things, through simplicity and effortless action.",
+   "page": "path-taoism",
+   "lead": "More about ",
+   "wiki": "Taoism"
+  },
+  "path-confucianism": {
+   "type": "Path",
+   "title": "Confucianism",
+   "header": "",
+   "body": "A Chinese tradition built on good character, learning, and harmony in families and society.",
+   "page": "path-confucianism",
+   "lead": "More about ",
+   "wiki": "Confucianism"
+  },
+  "path-japanese-aesthetics": {
+   "type": "Path",
+   "title": "Japanese Aesthetics",
+   "header": "",
+   "body": "Finding beauty in what is simple, imperfect, and passing, and paying full attention to small moments.",
+   "page": "path-japanese-aesthetics",
+   "lead": "More about ",
+   "wiki": "Japanese_aesthetics"
+  },
+  "path-persian-and-sufi-poetry": {
+   "type": "Path",
+   "title": "Persian and Sufi Poetry",
+   "header": "",
+   "body": "Wisdom poetry from the Persian-speaking world and from Sufism, on love, longing, the present moment, and how to treat one another.",
+   "page": "path-persian-and-sufi-poetry",
+   "lead": "More about ",
+   "wiki": "Persian_literature"
+  },
+  "text-the-dhammapada": {
+   "type": "Text",
+   "title": "Dhammapada",
+   "header": "India · sayings of the Buddha, 5th century BCE · Buddhist Philosophy",
+   "body": "A collection of 423 verses attributed to the Buddha, one of the best-loved Buddhist scriptures. Its name means roughly 'path of the teaching'.",
+   "page": "text-the-dhammapada",
+   "lead": "More about ",
+   "wiki": "Dhammapada"
+  },
+  "thinker-marcus-aurelius": {
+   "type": "Thinker",
+   "title": "Marcus Aurelius",
+   "header": "Rome, Italy · 121 – 180 CE · Stoicism",
+   "body": "Roman emperor from 161 to 180 CE and a devoted Stoic. His private notes to himself became the Meditations.",
+   "page": "thinker-marcus-aurelius",
+   "lead": "More about ",
+   "wiki": "Marcus_Aurelius"
+  },
+  "thinker-epictetus": {
+   "type": "Thinker",
+   "title": "Epictetus",
+   "header": "Hierapolis, Turkey · about 50 – 135 CE · Stoicism",
+   "body": "A Stoic teacher who was born a slave and later freed. His teachings were written down by his student Arrian.",
+   "page": "thinker-epictetus",
+   "lead": "More about ",
+   "wiki": "Epictetus"
+  },
+  "thinker-seneca": {
+   "type": "Thinker",
+   "title": "Seneca",
+   "header": "Córdoba, Spain · about 4 BCE – 65 CE · Stoicism",
+   "body": "A Roman Stoic philosopher, statesman and playwright. He advised the emperor Nero and wrote essays and letters on how to live.",
+   "page": "thinker-seneca",
+   "lead": "More about ",
+   "wiki": "Seneca_the_Younger"
+  },
+  "thinker-epicurus": {
+   "type": "Thinker",
+   "title": "Epicurus",
+   "header": "Samos, Greece · 341 – 270 BCE · Epicureanism",
+   "body": "A Greek philosopher who founded the school called the Garden in Athens. He taught that peace of mind and friendship are the heart of a happy life.",
+   "page": "thinker-epicurus",
+   "lead": "More about ",
+   "wiki": "Epicurus"
+  },
+  "thinker-lucretius": {
+   "type": "Thinker",
+   "title": "Lucretius",
+   "header": "Italy · about 99 – 55 BCE · Epicureanism",
+   "body": "A Roman poet of the 1st century BCE who set out Epicurus' philosophy in a long poem. Little is known about his life.",
+   "page": "thinker-lucretius",
+   "lead": "More about ",
+   "wiki": "Lucretius"
+  },
+  "thinker-plato": {
+   "type": "Thinker",
+   "title": "Plato",
+   "header": "Athens, Greece · about 428 – 347 BCE · Classical Greek Philosophy",
+   "body": "An Athenian philosopher, student of Socrates and teacher of Aristotle. He wrote his philosophy as dialogues, usually starring Socrates; references like 38a are standard page numbers in his works.",
+   "page": "thinker-plato",
+   "lead": "More about ",
+   "wiki": "Plato"
+  },
+  "thinker-friedrich-nietzsche": {
+   "type": "Thinker",
+   "title": "Friedrich Nietzsche",
+   "header": "Röcken, Germany · 1844 – 1900 · Existential Thought",
+   "body": "A German philosopher who questioned traditional values and asked how to affirm life without them. His aphoristic style inspired the existentialists.",
+   "page": "thinker-friedrich-nietzsche",
+   "lead": "More about ",
+   "wiki": "Friedrich_Nietzsche"
+  },
+  "thinker-fyodor-dostoevsky": {
+   "type": "Thinker",
+   "title": "Fyodor Dostoevsky",
+   "header": "Moscow, Russia · 1821 – 1881 · Existential Thought",
+   "body": "A Russian novelist whose books explore freedom, faith, guilt and suffering. He is often seen as a forerunner of existentialism.",
+   "page": "thinker-fyodor-dostoevsky",
+   "lead": "More about ",
+   "wiki": "Fyodor_Dostoevsky"
+  },
+  "thinker-blaise-pascal": {
+   "type": "Thinker",
+   "title": "Blaise Pascal",
+   "header": "Clermont (now Clermont-Ferrand, France) · 1623 – 1662 · Existential Thought",
+   "body": "A French mathematician, physicist and religious thinker. His unfinished notes on the human condition became the Pensées.",
+   "page": "thinker-blaise-pascal",
+   "lead": "More about ",
+   "wiki": "Blaise_Pascal"
+  },
+  "thinker-laozi": {
+   "type": "Thinker",
+   "title": "Laozi",
+   "header": "China · traditionally 6th century BCE · Taoism",
+   "body": "A legendary Chinese sage, traditionally the author of the Tao Te Ching. Almost nothing is known of his life, and historians debate whether he was a single real person.",
+   "page": "thinker-laozi",
+   "lead": "More about ",
+   "wiki": "Laozi"
+  },
+  "thinker-zhuangzi": {
+   "type": "Thinker",
+   "title": "Zhuangzi",
+   "header": "China · about 369 – 286 BCE · Taoism",
+   "body": "A Chinese philosopher of the 4th century BCE, and the book named after him, full of playful stories and paradoxes about freedom and the limits of knowledge.",
+   "page": "thinker-zhuangzi",
+   "lead": "More about ",
+   "wiki": "Zhuangzi_(book)"
+  },
+  "thinker-confucius": {
+   "type": "Thinker",
+   "title": "Confucius",
+   "header": "Qufu, China · about 551 – 479 BCE · Confucianism",
+   "body": "A Chinese teacher and philosopher whose teachings on virtue, family and good government shaped East Asian culture. Taoist writers often use him as a character in their stories.",
+   "page": "thinker-confucius",
+   "lead": "More about ",
+   "wiki": "Confucius"
+  },
+  "thinker-aristotle": {
+   "type": "Thinker",
+   "title": "Aristotle",
+   "header": "Stagira, Greece · 384 – 322 BCE · Classical Greek Philosophy",
+   "body": "A Greek philosopher, student of Plato and tutor of Alexander the Great. He wrote on nearly everything, from ethics and politics to biology and logic.",
+   "page": "thinker-aristotle",
+   "lead": "More about ",
+   "wiki": "Aristotle"
+  },
+  "thinker-immanuel-kant": {
+   "type": "Thinker",
+   "title": "Immanuel Kant",
+   "header": "Königsberg (now Kaliningrad, Russia) · 1724 – 1804 · Enlightenment Ethics",
+   "body": "A German philosopher, one of the most influential thinkers of modern times. He argued that morality rests on reason and on respect for every person.",
+   "page": "thinker-immanuel-kant",
+   "lead": "More about ",
+   "wiki": "Immanuel_Kant"
+  },
+  "thinker-john-stuart-mill": {
+   "type": "Thinker",
+   "title": "John Stuart Mill",
+   "header": "London, England · 1806 – 1873 · Enlightenment Ethics",
+   "body": "An English philosopher and reformer, a champion of individual liberty and of women's rights. A breakdown at twenty taught him the value of feeling alongside reason.",
+   "page": "thinker-john-stuart-mill",
+   "lead": "More about ",
+   "wiki": "John_Stuart_Mill"
+  },
+  "thinker-okakura-kakuzo": {
+   "type": "Thinker",
+   "title": "Okakura Kakuzō",
+   "header": "Yokohama, Japan · 1863 – 1913 · Japanese Aesthetics",
+   "body": "A Japanese scholar and art critic who wrote The Book of Tea in English to introduce Japanese culture to the West.",
+   "page": "thinker-okakura-kakuzo",
+   "lead": "More about ",
+   "wiki": "Okakura_Kakuzō"
+  },
+  "thinker-kenko": {
+   "type": "Thinker",
+   "title": "Kenkō",
+   "header": "Japan · about 1283 – 1350 · Japanese Aesthetics",
+   "body": "Kenkō, a Japanese poet and Buddhist monk whose Essays in Idleness reflect on beauty, impermanence and everyday life.",
+   "page": "thinker-kenko",
+   "lead": "More about ",
+   "wiki": "Yoshida_Kenkō"
+  },
+  "thinker-kamo-no-chomei": {
+   "type": "Thinker",
+   "title": "Kamo no Chōmei",
+   "header": "Japan · about 1155 – 1216 · Japanese Aesthetics",
+   "body": "A Japanese poet who, after years of disaster and disappointment, withdrew to a tiny hut in the hills near Kyoto.",
+   "page": "thinker-kamo-no-chomei",
+   "lead": "More about ",
+   "wiki": "Kamo_no_Chōmei"
+  },
+  "thinker-heraclitus": {
+   "type": "Thinker",
+   "title": "Heraclitus",
+   "header": "Ephesus, Turkey · active about 500 BCE · Classical Greek Philosophy",
+   "body": "A Greek philosopher from Ephesus, active around 500 BCE, known for his cryptic sayings about constant change and the unity of opposites. Ancient writers called him 'the Obscure'.",
+   "page": "thinker-heraclitus",
+   "lead": "More about ",
+   "wiki": "Heraclitus"
+  },
+  "thinker-boethius": {
+   "type": "Thinker",
+   "title": "Boethius",
+   "header": "Rome, Italy · about 480 – 524 CE · Stoicism",
+   "body": "A Roman senator and philosopher. Accused of treason, he wrote The Consolation of Philosophy in prison while awaiting execution.",
+   "page": "thinker-boethius",
+   "lead": "More about ",
+   "wiki": "Boethius"
+  },
+  "thinker-baruch-spinoza": {
+   "type": "Thinker",
+   "title": "Baruch Spinoza",
+   "header": "Amsterdam, Netherlands · 1632 – 1677 · Enlightenment Ethics",
+   "body": "A Dutch philosopher, born in Amsterdam, who earned his living grinding lenses. Expelled from his Jewish community in 1656, he wrote the Ethics, published after his death.",
+   "page": "thinker-baruch-spinoza",
+   "lead": "More about ",
+   "wiki": "Baruch_Spinoza"
+  },
+  "thinker-david-hume": {
+   "type": "Thinker",
+   "title": "David Hume",
+   "header": "Edinburgh, Scotland · 1711 – 1776 · Enlightenment Ethics",
+   "body": "A Scottish philosopher and historian, born in Edinburgh, and a leading figure of the Scottish Enlightenment. He argued that our knowledge rests on experience and habit.",
+   "page": "thinker-david-hume",
+   "lead": "More about ",
+   "wiki": "David_Hume"
+  },
+  "thinker-mary-wollstonecraft": {
+   "type": "Thinker",
+   "title": "Mary Wollstonecraft",
+   "header": "London, England · 1759 – 1797 · Enlightenment Ethics",
+   "body": "An English writer and philosopher and an early champion of women's rights. Her daughter was Mary Shelley, author of Frankenstein.",
+   "page": "thinker-mary-wollstonecraft",
+   "lead": "More about ",
+   "wiki": "Mary_Wollstonecraft"
+  },
+  "thinker-arthur-schopenhauer": {
+   "type": "Thinker",
+   "title": "Arthur Schopenhauer",
+   "header": "Danzig (now Gdańsk, Poland) · 1788 – 1860 · Existential Thought",
+   "body": "A German philosopher, born in Danzig, who lived in Frankfurt from 1833. His main work is The World as Will and Representation; his later essays, including The Wisdom of Life, made him famous.",
+   "page": "thinker-arthur-schopenhauer",
+   "lead": "More about ",
+   "wiki": "Arthur_Schopenhauer"
+  },
+  "thinker-simone-weil": {
+   "type": "Thinker",
+   "title": "Simone Weil",
+   "header": "Paris, France · 1909 – 1943 · Existential Thought",
+   "body": "A French philosopher and activist, born in Paris. She worked in factories and fields to share workers' lives, and wrote on attention, suffering and justice. She died in England, aged 34.",
+   "page": "thinker-simone-weil",
+   "lead": "More about ",
+   "wiki": "Simone_Weil"
+  },
+  "thinker-michel-de-montaigne": {
+   "type": "Thinker",
+   "title": "Michel de Montaigne",
+   "header": "Saint-Michel-de-Montaigne, France · 1533 – 1592 · Humanists and Essayists",
+   "body": "A French writer who lived at his château near Bordeaux and served as the city's mayor. His Essays, first published in 1580, created the essay as a form.",
+   "page": "thinker-michel-de-montaigne",
+   "lead": "More about ",
+   "wiki": "Michel_de_Montaigne"
+  },
+  "thinker-la-rochefoucauld": {
+   "type": "Thinker",
+   "title": "François de La Rochefoucauld",
+   "header": "Paris, France · 1613 – 1680 · Humanists and Essayists",
+   "body": "A French nobleman, soldier and writer. His Maxims, published anonymously in 1665, expose the self-love hiding behind our virtues.",
+   "page": "thinker-la-rochefoucauld",
+   "lead": "More about ",
+   "wiki": "François_de_La_Rochefoucauld_(writer)"
+  },
+  "thinker-ralph-waldo-emerson": {
+   "type": "Thinker",
+   "title": "Ralph Waldo Emerson",
+   "header": "Boston, United States · 1803 – 1882 · Humanists and Essayists",
+   "body": "An American essayist and poet who led the Transcendentalist movement from Concord, Massachusetts. 'Self-Reliance' appeared in his Essays: First Series.",
+   "page": "thinker-ralph-waldo-emerson",
+   "lead": "More about ",
+   "wiki": "Ralph_Waldo_Emerson"
+  },
+  "thinker-henry-david-thoreau": {
+   "type": "Thinker",
+   "title": "Henry David Thoreau",
+   "header": "Concord, United States · 1817 – 1862 · Humanists and Essayists",
+   "body": "An American writer and naturalist from Concord, Massachusetts, a friend of Emerson. He is known for Walden and for his essay on civil disobedience.",
+   "page": "thinker-henry-david-thoreau",
+   "lead": "More about ",
+   "wiki": "Henry_David_Thoreau"
+  },
+  "thinker-george-eliot": {
+   "type": "Thinker",
+   "title": "George Eliot",
+   "header": "Nuneaton, England · 1819 – 1880 · Humanists and Essayists",
+   "body": "The pen name of Mary Ann Evans, one of the great English novelists. She chose a man's name so that her fiction would be taken seriously.",
+   "page": "thinker-george-eliot",
+   "lead": "More about ",
+   "wiki": "George_Eliot"
+  },
+  "text-the-bhagavad-gita": {
+   "type": "Text",
+   "title": "Bhagavad Gita",
+   "header": "India · likely 2nd or 1st century BCE · Indian Philosophy",
+   "body": "'The Song of God': a 700-verse dialogue in 18 chapters, part of the Indian epic the Mahabharata, usually dated to the last centuries BCE. Prince Arjuna, about to go into battle, receives teaching from Krishna.",
+   "page": "text-the-bhagavad-gita",
+   "lead": "More about ",
+   "wiki": "Bhagavad_Gita"
+  },
+  "text-the-upanishads": {
+   "type": "Text",
+   "title": "Upanishads",
+   "header": "India · about 800 – 300 BCE and later · Indian Philosophy",
+   "body": "Sanskrit texts composed in ancient India, roughly between 800 and 300 BCE for the oldest. They turn from ritual to the inner questions of self and reality, and are the foundation of Vedanta.",
+   "page": "text-the-upanishads",
+   "lead": "More about ",
+   "wiki": "Upanishads"
+  },
+  "thinker-rabindranath-tagore": {
+   "type": "Thinker",
+   "title": "Rabindranath Tagore",
+   "header": "Calcutta (now Kolkata, India) · 1861 – 1941 · Indian Philosophy",
+   "body": "A Bengali poet, writer and thinker, born in Calcutta. In 1913 he became the first non-European to win the Nobel Prize in Literature.",
+   "page": "thinker-rabindranath-tagore",
+   "lead": "More about ",
+   "wiki": "Rabindranath_Tagore"
+  },
+  "thinker-swami-vivekananda": {
+   "type": "Thinker",
+   "title": "Swami Vivekananda",
+   "header": "Calcutta (now Kolkata, India) · 1863 – 1902 · Indian Philosophy",
+   "body": "An Indian monk and teacher, born in Calcutta and a disciple of Ramakrishna. His 1893 speech at the Parliament of the World's Religions in Chicago introduced Vedanta to the West.",
+   "page": "thinker-swami-vivekananda",
+   "lead": "More about ",
+   "wiki": "Swami_Vivekananda"
+  },
+  "thinker-rumi": {
+   "type": "Thinker",
+   "title": "Rumi",
+   "header": "Wakhsh, Tajikistan · 1207 – 1273 · Persian and Sufi Poetry",
+   "body": "A Persian poet and Sufi teacher who lived most of his life in Konya, in present-day Turkey. His meeting with the wandering dervish Shams of Tabriz transformed his life and poetry.",
+   "page": "thinker-rumi",
+   "lead": "More about ",
+   "wiki": "Rumi"
+  },
+  "thinker-hafiz": {
+   "type": "Thinker",
+   "title": "Hafiz",
+   "header": "Shiraz, Iran · about 1325 – 1390 · Persian and Sufi Poetry",
+   "body": "A Persian poet of Shiraz, the most loved poet in Iran. His lyric poems use love and wine to speak of mystical experience.",
+   "page": "thinker-hafiz",
+   "lead": "More about ",
+   "wiki": "Hafez"
+  },
+  "thinker-sa-di": {
+   "type": "Thinker",
+   "title": "Sa'di",
+   "header": "Shiraz, Iran · about 1210 – 1291 · Persian and Sufi Poetry",
+   "body": "A Persian poet and writer of Shiraz, author of the Gulistan and the Bustan.",
+   "page": "thinker-sa-di",
+   "lead": "More about ",
+   "wiki": "Saadi_Shirazi"
+  },
+  "thinker-al-ghazali": {
+   "type": "Thinker",
+   "title": "Al-Ghazali",
+   "header": "Tus, Iran · about 1058 – 1111 · Persian and Sufi Poetry",
+   "body": "A Persian theologian, philosopher and mystic. He left his professorship in Baghdad in 1095 after a spiritual crisis and turned to the Sufi path.",
+   "page": "thinker-al-ghazali",
+   "lead": "More about ",
+   "wiki": "Al-Ghazali"
+  },
+  "thinker-ibn-arabi": {
+   "type": "Thinker",
+   "title": "Ibn Arabi",
+   "header": "Murcia, Spain · 1165 – 1240 · Persian and Sufi Poetry",
+   "body": "A Sufi mystic, poet and philosopher, born in Murcia in Spain and buried in Damascus. Sufis call him 'the Greatest Shaykh' (al-Shaykh al-Akbar).",
+   "page": "thinker-ibn-arabi",
+   "lead": "More about ",
+   "wiki": "Ibn_Arabi"
+  },
+  "thinker-sei-shonagon": {
+   "type": "Thinker",
+   "title": "Sei Shōnagon",
+   "header": "Japan · about 966 – after 1017 · Japanese Aesthetics",
+   "body": "A Japanese writer who served Empress Teishi at the imperial court in Kyoto. She wrote The Pillow Book.",
+   "page": "thinker-sei-shonagon",
+   "lead": "More about ",
+   "wiki": "Sei_Shōnagon"
+  },
+  "thinker-rene-descartes": {
+   "type": "Thinker",
+   "title": "René Descartes",
+   "header": "La Haye (now Descartes, France) · 1596 – 1650 · Enlightenment Ethics",
+   "body": "A French philosopher and mathematician who lived for about twenty years in the Dutch Republic. He began by doubting everything he could, and found one certainty: 'I think, therefore I am.'",
+   "page": "thinker-rene-descartes",
+   "lead": "More about ",
+   "wiki": "René_Descartes"
+  },
+  "thinker-adam-smith": {
+   "type": "Thinker",
+   "title": "Adam Smith",
+   "header": "Kirkcaldy, Scotland · 1723 – 1790 · Enlightenment Ethics",
+   "body": "A Scottish philosopher and economist. Before The Wealth of Nations made him the father of economics, he wrote a book on morality, The Theory of Moral Sentiments.",
+   "page": "thinker-adam-smith",
+   "lead": "More about ",
+   "wiki": "Adam_Smith"
+  },
+  "thinker-emilie-du-chatelet": {
+   "type": "Thinker",
+   "title": "Émilie du Châtelet",
+   "header": "Paris, France · 1706 – 1749 · Enlightenment Ethics",
+   "body": "A French mathematician and physicist, born in Paris. Her French translation of Newton's Principia, with her commentary, is still the standard one in French.",
+   "page": "thinker-emilie-du-chatelet",
+   "lead": "More about ",
+   "wiki": "Émilie_du_Châtelet"
+  },
+  "thinker-william-james": {
+   "type": "Thinker",
+   "title": "William James",
+   "header": "New York, United States · 1842 – 1910 · Existential Thought",
+   "body": "An American philosopher and psychologist who taught at Harvard. A founder of pragmatism, he judged ideas by the difference they make to how we live.",
+   "page": "thinker-william-james",
+   "lead": "More about ",
+   "wiki": "William_James"
+  },
+  "thinker-leo-tolstoy": {
+   "type": "Thinker",
+   "title": "Leo Tolstoy",
+   "header": "Yasnaya Polyana, Russia · 1828 – 1910 · Existential Thought",
+   "body": "A Russian novelist, author of War and Peace and Anna Karenina. At the height of his fame he fell into a crisis about the meaning of life.",
+   "page": "thinker-leo-tolstoy",
+   "lead": "More about ",
+   "wiki": "Leo_Tolstoy"
+  },
+  "thinker-erasmus": {
+   "type": "Thinker",
+   "title": "Erasmus",
+   "header": "Rotterdam, Netherlands · about 1466 – 1536 · Humanists and Essayists",
+   "body": "Desiderius Erasmus, a Dutch scholar born in Rotterdam and the best-known humanist of his age. He wrote in Latin and corresponded with thinkers across Europe.",
+   "page": "thinker-erasmus",
+   "lead": "More about ",
+   "wiki": "Erasmus"
+  },
+  "thinker-petrarch": {
+   "type": "Thinker",
+   "title": "Petrarch",
+   "header": "Arezzo, Italy · 1304 – 1374 · Humanists and Essayists",
+   "body": "Francesco Petrarca, an Italian poet and scholar often called the father of humanism. He searched old libraries for lost Latin texts and wrote love poems that shaped European poetry.",
+   "page": "thinker-petrarch",
+   "lead": "More about ",
+   "wiki": "Petrarch"
+  },
+  "thinker-margaret-fuller": {
+   "type": "Thinker",
+   "title": "Margaret Fuller",
+   "header": "Cambridge, United States · 1810 – 1850 · Humanists and Essayists",
+   "body": "An American journalist, critic and women's rights advocate, born in Cambridgeport, Massachusetts. She was part of the Transcendentalist circle and edited its journal, The Dial.",
+   "page": "thinker-margaret-fuller",
+   "lead": "More about ",
+   "wiki": "Margaret_Fuller"
+  },
+  "thinker-emily-dickinson": {
+   "type": "Thinker",
+   "title": "Emily Dickinson",
+   "header": "Amherst, United States · 1830 – 1886 · Humanists and Essayists",
+   "body": "An American poet who lived almost her whole life in Amherst, Massachusetts. She wrote nearly 1,800 poems, but only about ten were published in her lifetime.",
+   "page": "thinker-emily-dickinson",
+   "lead": "More about ",
+   "wiki": "Emily_Dickinson"
+  },
+  "text-the-questions-of-king-milinda": {
+   "type": "Text",
+   "title": "The Questions of King Milinda",
+   "header": "India · about 100 BCE – 200 CE · Buddhist Philosophy",
+   "body": "A Buddhist text (Milindapañha), written down sometime between 100 BCE and 200 CE, in which the monk Nagasena answers the questions of King Milinda, the Indo-Greek king Menander I.",
+   "page": "text-the-questions-of-king-milinda",
+   "lead": "More about ",
+   "wiki": "Milinda_Panha"
+  },
+  "thinker-mencius": {
+   "type": "Thinker",
+   "title": "Mencius",
+   "header": "Zoucheng, China · about 371 – 289 BCE · Confucianism",
+   "body": "A Chinese philosopher, the most important Confucian thinker after Confucius. He taught that human nature is good, and that goodness grows like a seed if cared for.",
+   "page": "thinker-mencius",
+   "lead": "More about ",
+   "wiki": "Mencius"
+  },
+  "thinker-omar-khayyam": {
+   "type": "Thinker",
+   "title": "Omar Khayyam",
+   "header": "Nishapur, Iran · 1048 – 1131 · Persian and Sufi Poetry",
+   "body": "A Persian mathematician, astronomer and poet from Nishapur. He worked on a reform of the calendar; in the West he is famous for his short four-line poems.",
+   "page": "thinker-omar-khayyam",
+   "lead": "More about ",
+   "wiki": "Omar_Khayyam"
+  },
+  "thinker-niccolo-machiavelli": {
+   "type": "Thinker",
+   "title": "Niccolò Machiavelli",
+   "header": "Florence, Italy · 1469 – 1527 · Humanists and Essayists",
+   "body": "A Florentine diplomat and writer. After the Medici returned to power in 1512 and removed him from office, he wrote The Prince, a blunt guide to how rulers win and keep power, published in 1532, after his death.",
+   "page": "thinker-niccolo-machiavelli",
+   "lead": "More about ",
+   "wiki": "Niccolò_Machiavelli"
+  },
+  "thinker-francis-bacon": {
+   "type": "Thinker",
+   "title": "Francis Bacon",
+   "header": "London, England · 1561 – 1626 · Humanists and Essayists",
+   "body": "An English statesman and philosopher, born in London, who rose to Lord Chancellor before his fall in 1621. Often called the father of empiricism, he urged that knowledge be built on careful observation. His Essays grew from 10 in 1597 to 58 in 1625.",
+   "page": "thinker-francis-bacon",
+   "lead": "More about ",
+   "wiki": "Francis_Bacon"
+  },
+  "thinker-voltaire": {
+   "type": "Thinker",
+   "title": "Voltaire",
+   "header": "Paris, France · 1694 – 1778 · Enlightenment Ethics",
+   "body": "The pen name of François-Marie Arouet, the best-known writer of the French Enlightenment, born and died in Paris. He campaigned for tolerance and freedom of thought, and spent most of his last twenty years at Ferney, near Geneva.",
+   "page": "thinker-voltaire",
+   "lead": "More about ",
+   "wiki": "Voltaire"
+  },
+  "thinker-jean-jacques-rousseau": {
+   "type": "Thinker",
+   "title": "Jean-Jacques Rousseau",
+   "header": "Geneva, Switzerland · 1712 – 1778 · Enlightenment Ethics",
+   "body": "A writer and philosopher, born in Geneva, who lived mostly in France. When The Social Contract and Emile came out in 1762, both were banned and burned, and he fled to Switzerland. His ideas later inspired the French Revolution.",
+   "page": "thinker-jean-jacques-rousseau",
+   "lead": "More about ",
+   "wiki": "Jean-Jacques_Rousseau"
+  },
+  "thinker-thomas-hobbes": {
+   "type": "Thinker",
+   "title": "Thomas Hobbes",
+   "header": "Malmesbury, England · 1588 – 1679 · Enlightenment Ethics",
+   "body": "An English philosopher, born in Malmesbury. He wrote Leviathan in exile in Paris, arguing that without a common power life would be 'solitary, poor, nasty, brutish, and short'.",
+   "page": "thinker-thomas-hobbes",
+   "lead": "More about ",
+   "wiki": "Thomas_Hobbes"
+  },
+  "thinker-john-locke": {
+   "type": "Thinker",
+   "title": "John Locke",
+   "header": "Wrington, England · 1632 – 1704 · Enlightenment Ethics",
+   "body": "An English philosopher. He argued that the mind starts as a blank slate filled by experience, and that governments exist to protect people's natural rights to life, liberty and property.",
+   "page": "thinker-john-locke",
+   "lead": "More about ",
+   "wiki": "John_Locke"
+  },
+  "thinker-jean-de-la-bruyere": {
+   "type": "Thinker",
+   "title": "Jean de La Bruyère",
+   "header": "Paris, France · 1645 – 1696 · Humanists and Essayists",
+   "body": "A French writer, born in Paris, who was a tutor in the household of the Prince de Condé. His Characters, first published in 1688, are sharp portraits and remarks on the people of his time.",
+   "page": "thinker-jean-de-la-bruyere",
+   "lead": "More about ",
+   "wiki": "Jean_de_La_Bruyère"
+  },
+  "thinker-nicolas-chamfort": {
+   "type": "Thinker",
+   "title": "Nicolas Chamfort",
+   "header": "Clermont-Ferrand, France · about 1741 – 1794 · Humanists and Essayists",
+   "body": "A French playwright and wit, elected to the Académie française in 1781. He welcomed the Revolution, was later imprisoned for criticising its excesses, and died in Paris in 1794. His maxims were published after his death.",
+   "page": "thinker-nicolas-chamfort",
+   "lead": "More about ",
+   "wiki": "Nicolas_Chamfort"
+  },
+  "thinker-vauvenargues": {
+   "type": "Thinker",
+   "title": "Vauvenargues",
+   "header": "Aix-en-Provence, France · 1715 – 1747 · Humanists and Essayists",
+   "body": "Luc de Clapiers, marquis de Vauvenargues, a French soldier and moralist born in Aix-en-Provence. Broken in health by the retreat from Prague in 1742, he turned to writing; his Reflections and Maxims appeared in 1746, a year before his death. Voltaire was a close friend.",
+   "page": "thinker-vauvenargues",
+   "lead": "More about ",
+   "wiki": "Luc_de_Clapiers,_marquis_de_Vauvenargues"
+  },
+  "thinker-denis-diderot": {
+   "type": "Thinker",
+   "title": "Denis Diderot",
+   "header": "Langres, France · 1713 – 1784 · Enlightenment Ethics",
+   "body": "A French writer and philosopher, born in Langres, and chief editor of the Encyclopédie, the great Enlightenment survey of knowledge. He was jailed at Vincennes in 1749 for his writings.",
+   "page": "thinker-denis-diderot",
+   "lead": "More about ",
+   "wiki": "Denis_Diderot"
+  },
+  "era-ancient-greece": {
+   "type": "Era",
+   "title": "Ancient Greece",
+   "header": "6th–3rd century BCE",
+   "body": "Small, proud cities where a few free men argued about everything, and most people had no say at all.",
+   "page": "era-ancient-greece",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "era-rome-from-the-republic-to-its-fall": {
+   "type": "Era",
+   "title": "Rome, from the Republic to its fall",
+   "header": "1st century BCE–6th century CE",
+   "body": "A huge empire that brought peace to the Mediterranean for two centuries, run on slave labour, where philosophy became a practical guide for living well under powers you could not control.",
+   "page": "era-rome-from-the-republic-to-its-fall",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "era-china-of-the-hundred-schools": {
+   "type": "Era",
+   "title": "China of the Hundred Schools",
+   "header": "6th–3rd century BCE",
+   "body": "Centuries of war between rival states, when rulers hired wandering thinkers to tell them how to bring back order, and China produced more schools of thought than at almost any other time.",
+   "page": "era-china-of-the-hundred-schools",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "era-ancient-india": {
+   "type": "Era",
+   "title": "Ancient India",
+   "header": "about 7th century BCE–2nd century CE",
+   "body": "An age of forest teachers, wandering monks, and royal debates, when India asked who we really are beneath our roles, and how to act well in a world of endless rebirth.",
+   "page": "era-ancient-india",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "era-the-medieval-islamic-world": {
+   "type": "Era",
+   "title": "The medieval Islamic world",
+   "header": "11th–14th century",
+   "body": "A world of great cities, schools, and libraries, broken by the Mongol invasions, where scholars weighed reason against faith and poets turned the love of God into some of the most loved verse ever written.",
+   "page": "era-the-medieval-islamic-world",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "era-japan-from-the-heian-court-to-the-age-of-the-samurai": {
+   "type": "Era",
+   "title": "Japan, from the Heian court to the age of the samurai",
+   "header": "10th–14th century",
+   "body": "A refined court that prized beauty, a country slowly taken over by warriors, and a Buddhism that believed the world was in decline.",
+   "page": "era-japan-from-the-heian-court-to-the-age-of-the-samurai",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "era-renaissance-europe": {
+   "type": "Era",
+   "title": "Renaissance Europe",
+   "header": "14th–16th century",
+   "body": "After the plague, Europe went back to the books of Greece and Rome to find a better way to live, and found itself questioning the Church, the prince, and its own customs.",
+   "page": "era-renaissance-europe",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "era-europe-in-the-17th-century": {
+   "type": "Era",
+   "title": "Europe in the 17th century",
+   "header": "about 1600–1700",
+   "body": "A century of religious war, revolution, and new science, when thinkers looked for a certainty that no church or king could guarantee any more.",
+   "page": "era-europe-in-the-17th-century",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "era-the-enlightenment": {
+   "type": "Era",
+   "title": "The Enlightenment",
+   "header": "18th century",
+   "body": "The century that told people to think for themselves and put reason, rights, and freedom at the centre of public life, while leaving out much of humanity.",
+   "page": "era-the-enlightenment",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "era-europe-and-russia-in-the-19th-century": {
+   "type": "Era",
+   "title": "Europe and Russia in the 19th century",
+   "header": "about 1800–1900",
+   "body": "Factories, revolutions, and new science shook the old certainties, and thinkers asked what a person should live by once faith, rank, and tradition no longer held.",
+   "page": "era-europe-and-russia-in-the-19th-century",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "era-america-in-the-19th-century": {
+   "type": "Era",
+   "title": "America in the 19th century",
+   "header": "about 1830–1900",
+   "body": "A young country that preached freedom while holding millions in slavery, where a small circle of New England writers told people to trust their own conscience over custom and the crowd.",
+   "page": "era-america-in-the-19th-century",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "era-asia-meets-the-west": {
+   "type": "Era",
+   "title": "Asia meets the West",
+   "header": "late 19th–early 20th century",
+   "body": "As Western empires and Western ideas pressed on Asia, three thinkers spoke to the West in its own language, and asked it to listen as well as teach.",
+   "page": "era-asia-meets-the-west",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "era-europe-in-the-age-of-world-wars": {
+   "type": "Era",
+   "title": "Europe in the age of world wars",
+   "header": "about 1914–1945",
+   "body": "Thirty years of total war, mass murder, and broken faith in progress, when philosophers asked what a human life is worth and what we owe one another.",
+   "page": "era-europe-in-the-age-of-world-wars",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-beauty-and-art": {
+   "type": "Theme",
+   "title": "Beauty and art",
+   "header": "",
+   "body": "Is beauty out there, or in the eye of the beholder?",
+   "page": "topic-beauty-and-art",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-change-and-impermanence": {
+   "type": "Theme",
+   "title": "Change and impermanence",
+   "header": "",
+   "body": "Everything changes, so how should we live with it?",
+   "page": "topic-change-and-impermanence",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-character-and-virtue": {
+   "type": "Theme",
+   "title": "Character and virtue",
+   "header": "",
+   "body": "What makes a person good, and can you become one?",
+   "page": "topic-character-and-virtue",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-death-and-mortality": {
+   "type": "Theme",
+   "title": "Death and mortality",
+   "header": "",
+   "body": "Should we think about death, and can we stop fearing it?",
+   "page": "topic-death-and-mortality",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-democracy": {
+   "type": "Theme",
+   "title": "Democracy",
+   "header": "",
+   "body": "Should the people rule, and what keeps the many from going wrong?",
+   "page": "topic-democracy",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-desire-and-simplicity": {
+   "type": "Theme",
+   "title": "Desire and simplicity",
+   "header": "",
+   "body": "Would we be happier wanting less?",
+   "page": "topic-desire-and-simplicity",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-duty": {
+   "type": "Theme",
+   "title": "Duty",
+   "header": "",
+   "body": "Should we do what is right even when we don't feel like it, and even when it costs us?",
+   "page": "topic-duty",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-ego-pride-and-humility": {
+   "type": "Theme",
+   "title": "Ego, pride, and humility",
+   "header": "",
+   "body": "How much should we think of ourselves?",
+   "page": "topic-ego-pride-and-humility",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-equality": {
+   "type": "Theme",
+   "title": "Equality",
+   "header": "",
+   "body": "Are people equal, and equal in what?",
+   "page": "topic-equality",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-fortune": {
+   "type": "Theme",
+   "title": "Fortune",
+   "header": "",
+   "body": "When luck turns against us, should we accept it, or fight it?",
+   "page": "topic-fortune",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-freedom": {
+   "type": "Theme",
+   "title": "Freedom",
+   "header": "",
+   "body": "Are you free when nobody stops you, or when you master yourself?",
+   "page": "topic-freedom",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-friendship-and-kindness": {
+   "type": "Theme",
+   "title": "Friendship and kindness",
+   "header": "",
+   "body": "What makes someone a real friend, and why do we need them?",
+   "page": "topic-friendship-and-kindness",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-habit-and-practice": {
+   "type": "Theme",
+   "title": "Habit and practice",
+   "header": "",
+   "body": "Are we what we repeatedly do?",
+   "page": "topic-habit-and-practice",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-happiness-and-the-good-life": {
+   "type": "Theme",
+   "title": "Happiness and the good life",
+   "header": "",
+   "body": "What does a good life need, and is happiness the point?",
+   "page": "topic-happiness-and-the-good-life",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-justice": {
+   "type": "Theme",
+   "title": "Justice",
+   "header": "",
+   "body": "What do we owe each other, and who decides?",
+   "page": "topic-justice",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-karma-and-dharma": {
+   "type": "Theme",
+   "title": "Karma and dharma",
+   "header": "",
+   "body": "Do our actions shape who we become, and is there a right path for each of us?",
+   "page": "topic-karma-and-dharma",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-law-and-rights": {
+   "type": "Theme",
+   "title": "Law and rights",
+   "header": "",
+   "body": "Where do laws get their authority, and what rights do we have?",
+   "page": "topic-law-and-rights",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-learning-and-knowledge": {
+   "type": "Theme",
+   "title": "Learning and knowledge",
+   "header": "",
+   "body": "What is worth knowing, and how do we know that we know it?",
+   "page": "topic-learning-and-knowledge",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-love": {
+   "type": "Theme",
+   "title": "Love",
+   "header": "",
+   "body": "What is love, and what does it ask of us?",
+   "page": "topic-love",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-mind-and-emotions": {
+   "type": "Theme",
+   "title": "Mind and emotions",
+   "header": "",
+   "body": "Should we master our feelings, or listen to them?",
+   "page": "topic-mind-and-emotions",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-nature-and-the-universe": {
+   "type": "Theme",
+   "title": "Nature and the universe",
+   "header": "",
+   "body": "What is the world made of, and where do we fit in it?",
+   "page": "topic-nature-and-the-universe",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-purpose-and-meaning": {
+   "type": "Theme",
+   "title": "Purpose and meaning",
+   "header": "",
+   "body": "What is a life for?",
+   "page": "topic-purpose-and-meaning",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-self-knowledge": {
+   "type": "Theme",
+   "title": "Self-knowledge",
+   "header": "",
+   "body": "Who are you, really, and can you ever know?",
+   "page": "topic-self-knowledge",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-solitude-and-stillness": {
+   "type": "Theme",
+   "title": "Solitude and stillness",
+   "header": "",
+   "body": "Why is it so hard to sit still, and what do we find when we do?",
+   "page": "topic-solitude-and-stillness",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-suffering-and-resilience": {
+   "type": "Theme",
+   "title": "Suffering and resilience",
+   "header": "",
+   "body": "What do we do with pain we cannot avoid?",
+   "page": "topic-suffering-and-resilience",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-the-self-and-the-soul": {
+   "type": "Theme",
+   "title": "The self and the soul",
+   "header": "",
+   "body": "Is there a lasting \"you\" behind your body, your thoughts, and your moods?",
+   "page": "topic-the-self-and-the-soul",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-time-and-the-present": {
+   "type": "Theme",
+   "title": "Time and the present",
+   "header": "",
+   "body": "Is life short, or do we waste it?",
+   "page": "topic-time-and-the-present",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-tolerance": {
+   "type": "Theme",
+   "title": "Tolerance",
+   "header": "",
+   "body": "How do we live with people who believe differently?",
+   "page": "topic-tolerance",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-war-and-peace": {
+   "type": "Theme",
+   "title": "War and peace",
+   "header": "",
+   "body": "Can war ever be right, and what makes peace last?",
+   "page": "topic-war-and-peace",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-work-and-action": {
+   "type": "Theme",
+   "title": "Work and action",
+   "header": "",
+   "body": "How should we act, and what should we expect from it?",
+   "page": "topic-work-and-action",
+   "lead": "More about ",
+   "wiki": ""
+  },
+  "topic-work-and-wealth": {
+   "type": "Theme",
+   "title": "Work and wealth",
+   "header": "",
+   "body": "How much is enough, and what is work for?",
+   "page": "topic-work-and-wealth",
+   "lead": "More about ",
+   "wiki": ""
+  }
+ }
+}

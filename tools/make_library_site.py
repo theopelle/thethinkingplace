@@ -24,6 +24,7 @@ KIND = {"thinker": "Thinker", "text": "Text", "path": "Path", "topic": "Theme", 
 PATH_ORDER = ["Stoicism", "Epicureanism", "Classical Greek Philosophy", "Enlightenment Ethics", "Existential Thought",
               "Humanists and Essayists", "Buddhist Philosophy", "Indian Philosophy", "Taoism", "Confucianism",
               "Japanese Aesthetics", "Persian and Sufi Poetry"]  # as app.js
+LIB_PATHS = sorted(PATH_ORDER)  # the Library lists the paths A to Z (5 Nov 2026)
 SORT_AS = {"Émilie du Châtelet": "Chatelet", "Jean de La Bruyère": "La Bruyere", "Kamo no Chōmei": "Chomei",
            "Ibn Arabi": "Ibn Arabi", "Omar Khayyam": "Khayyam", "Sei Shōnagon": "Shonagon",
            "Questions of King Milinda": "Milinda", "Al-Ghazali": "Ghazali", "Bhagavad Gita": "Bhagavad Gita",
@@ -150,7 +151,7 @@ def main(tpl, by_id):
     # pages with this one marked).
     by = lambda t: [p for p in shown.values() if p["type"] == t]
     lists = {"time": sorted(by("era"), key=lambda p: (p["start"], p.get("eraOrder") or 0)),
-             "paths": sorted(by("path"), key=lambda p: PATH_ORDER.index(p["title"])),
+             "paths": sorted(by("path"), key=lambda p: LIB_PATHS.index(p["title"])),
              "people": sorted(by("thinker") + by("text"), key=sort_key),
              "topics": sorted(by("topic"), key=title_of)}
     SECTIONS = [("time", "In their time"), ("paths", "Paths"), ("people", "Thinkers and texts"), ("topics", "Themes and topics"),
@@ -504,7 +505,7 @@ def main(tpl, by_id):
     # one), then the list, then a page per written pair. The picker runs inside the page and stays
     # hidden without scripts, which leaves the list.
     if pairs:
-        chips = "".join(f'<li><button type="button" class="libchip" aria-pressed="false">{esc(t)}</button></li>' for t in PATH_ORDER)
+        chips = "".join(f'<li><button type="button" class="libchip" aria-pressed="false">{esc(t)}</button></li>' for t in LIB_PATHS)
         picker = ('<div id="libpick" hidden><p class="libpick-label">Pick two</p><ul class="libchips">' + chips + "</ul>"
                   '<div class="libverdict" id="libverdict" aria-live="polite"></div></div>')
         data = json.dumps([[x["a"], x["b"], x["id"], strip_md(x["line"])] for x in pairs], ensure_ascii=False).replace("</", "<\\/")
