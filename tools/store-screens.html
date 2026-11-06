@@ -1,0 +1,90 @@
+<!doctype html>
+<!-- One store screenshot: a caption above the real app in a phone frame. Opened by
+     tools/make_store_screens.py through the local server (python3 server.py), which sets the
+     size, the caption, the app's address, and what to tap. Not part of the app or the site. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "Literata"; src: url("../fonts/literata-latin-400-normal.woff2") format("woff2"); }
+  :root { --paper: #FBFAF7; --ink: #262626; --stone: #E3DFD7; --teal: #4E7378; }
+  html, body { margin: 0; background: var(--paper); overflow: hidden; }
+  .canvas { position: relative; overflow: hidden; background: var(--paper); }
+  .caption { position: absolute; left: 0; right: 0; text-align: center; color: var(--ink);
+    font: 400 var(--cap)/1.18 "Literata", Georgia, serif; letter-spacing: -.005em; padding: 0 8%; box-sizing: border-box; margin: 0; text-wrap: balance; }
+  .rule { position: absolute; left: 50%; width: 2.2em; height: 2px; margin-left: -1.1em; background: var(--teal); opacity: .55; }
+  .frame { position: absolute; left: 50%; overflow: hidden; background: var(--paper);
+    border: 1.5px solid var(--stone); border-radius: 38px; box-shadow: 0 10px 40px rgba(38, 38, 38, .07); }
+  .frame iframe { position: absolute; top: 0; border: 0; transform-origin: 0 0; }
+  .half { position: absolute; top: 0; bottom: 0; overflow: hidden; }
+  .half.right { border-left: 1.5px solid var(--stone); }
+</style>
+</head>
+<body>
+<div class="canvas" id="canvas"><p class="caption" id="caption"></p><div class="rule" id="rule"></div><div class="frame" id="frame"></div></div>
+<script>
+  const q = new URLSearchParams(location.search);
+  const W = +q.get("w"), H = +q.get("h");            // canvas, CSS pixels
+  const PW = 393, PH = +(q.get("ph") || 852);        // the phone's screen, CSS pixels (an iPhone 16)
+  const FW = +q.get("fw");                           // frame width on the canvas
+  const s = FW / PW, FH = Math.round(PH * s);
+  const capTop = +q.get("ct"), cap = +q.get("cs");
+  const canvas = document.getElementById("canvas");
+  canvas.style.width = W + "px"; canvas.style.height = H + "px";
+  const c = document.getElementById("caption");
+  c.textContent = q.get("caption"); c.style.setProperty("--cap", cap + "px"); c.style.top = capTop + "px";
+  const frame = document.getElementById("frame");
+  const frameTop = +q.get("ft");
+  Object.assign(frame.style, { width: FW + "px", height: FH + "px", top: frameTop + "px", marginLeft: -FW / 2 + "px" });
+  const rule = document.getElementById("rule");
+  // The short teal line: just under the caption, however many lines it has.
+  rule.style.top = Math.round(capTop + c.offsetHeight + cap * 0.55) + "px";
+
+  // The app reads its state from this origin's storage: a reader who has been here a few days.
+  const st = (k, v) => localStorage.setItem("reflect:" + k, v);
+  localStorage.clear();
+  const today = q.get("today");
+  const days = [];
+  for (let i = 9; i >= 0; i--) { const d = new Date(today + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() - i); days.push(d.toISOString().slice(0, 10)); }
+  st("welcomed", "1"); st("revealed", "1"); st("homeNote", "1"); st("reminderAsked", "1"); st("persistAsked", "1");
+  st("installed", "1"); st("easy", "no"); st("lastExport", today); st("days", JSON.stringify(days));
+  st("sound", "rain"); st("textSize", "normal"); st("theme", q.get("theme") || "light");
+  try { sessionStorage.setItem("reflect:launched", "1"); } catch {}
+
+  const src = "../index.html?today=" + today + "&hour=" + (q.get("hour") || 9) + "&device=ios" + (q.get("hash") || "");
+  const actions = (q.get("do") || "").split(",").filter(Boolean);
+  const split = actions.includes("split");
+
+  function phone(theme, left, width) {
+    const box = document.createElement("div");
+    box.className = "half" + (left ? " right" : "");
+    Object.assign(box.style, { left: left + "px", width: width + "px" });
+    const f = document.createElement("iframe");
+    Object.assign(f.style, { width: PW + "px", height: PH + "px", transform: `scale(${s})`, left: -left + "px" });
+    f.src = src;
+    f.addEventListener("load", () => setTimeout(() => act(f.contentWindow, theme), 1200));
+    box.append(f); frame.append(box);
+  }
+  function act(w, theme) {
+    const d = w.document, $ = (id) => d.getElementById(id);
+    // No fades in a screenshot (a theme change would be caught halfway), and no bar for the
+    // phone's clock (there is no clock here).
+    const still = d.createElement("style");
+    still.textContent = "*,*::before,*::after{transition:none!important;animation:none!important}body::before{display:none}";
+    d.head.append(still);
+    if ($("launch")) $("launch").remove();  // the opening screen, if it hasn't stepped aside yet
+    if (theme) d.documentElement.setAttribute("data-theme", theme);
+    for (const a of actions) {
+      if (a === "about" && $("context-toggle")) $("context-toggle").click();
+      if (a === "write" && $("open-note")) $("open-note").click();
+      if (a === "sit" && $("open-silence")) $("open-silence").click();
+      if (a === "type" && $("note-text")) { $("note-text").value = q.get("note"); $("note-text").dispatchEvent(new w.Event("input", { bubbles: true })); }
+      if (a.startsWith("scroll")) w.scrollTo(0, +a.slice(6));
+    }
+    if (d.activeElement && d.activeElement.blur) d.activeElement.blur();
+  }
+  if (split) { phone("light", 0, FW / 2); phone("dark", FW / 2, FW / 2); }
+  else phone(q.get("theme") || "light", 0, FW);
+</script>
+</body>
+</html>
