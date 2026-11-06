@@ -1,5 +1,6 @@
 """Draw the store screenshots from the real app: a caption above the app in a phone frame,
-for the App Store (1320 x 2868) and Google Play (1080 x 1920). No platform names anywhere.
+for the App Store (1320 x 2868, and 1206 x 2622 for the 6.3-inch size) and Google Play
+(1080 x 1920). No platform names anywhere.
 
     python3 server.py &                          # the local server, port 8770
     python3 tools/make_store_screens.py           # every shot, both stores
@@ -34,6 +35,9 @@ STORES = {
     # canvas (CSS px, drawn at 3x), frame width, phone screen height, caption top and size, frame top
     "appstore": dict(w=440, h=956, fw=330, ph=852, ct=74, cs=31, ft=210,
                      out=os.path.join(ROOT, "exports", "app-store", "screenshots")),
+    # The 6.3-inch iPhone size App Store Connect asks for (1206 x 2622)
+    "appstore63": dict(w=402, h=874, fw=302, ph=852, ct=66, cs=28, ft=192,
+                       out=os.path.join(ROOT, "exports", "app-store", "screenshots-6.3")),
     "play": dict(w=360, h=640, fw=262, ph=720, ct=40, cs=24, ft=146,
                  out=os.path.join(ROOT, "exports", "store-listing", "new")),
 }
