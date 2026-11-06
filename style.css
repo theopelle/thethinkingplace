@@ -417,6 +417,8 @@ body.typing .nav { display: none; }
 .nav-gear { display: inline-flex; color: var(--muted); }
 .nav-gear svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linejoin: round; }
 .nav-gear[aria-current="page"] { color: var(--fg); }
+/* The gear stays small, but its tap area is a full 48×48 (Android's minimum; iOS asks for 44) */
+.nav a.nav-gear::after { inset: auto; left: 50%; top: 50%; width: 48px; height: 48px; transform: translate(-50%, -50%); }
 
 /* A large, soft opening quotation mark above each thought: a sign, not punctuation,
    so it needs no closing partner. */

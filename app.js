@@ -2533,6 +2533,8 @@
     $("tour-dots").classList.toggle("hide", last);
     $("tour-skip").hidden = last;
     $("tour-dots").textContent = steps.slice(0, -1).map((_, n) => (n === tourStep ? "●" : "○")).join(" ");
+    // The dots are hidden from screen readers: they hear "Step 2 of 5" instead (not on the name card)
+    $("tour-step").textContent = last ? "" : `Step ${tourStep + 1} of ${steps.length - 1}`;
     closeTerm();
   }
 
